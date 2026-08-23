@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2026-08-23-plano-replicacao-componentes-fabrica</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="melhorias/style.css" />
+</head>
+<body>
+<h1
+id="plano-de-ação-replicação-de-componentes-da-fábrica-agêntica">PLANO
+DE AÇÃO: Replicação de Componentes da Fábrica Agêntica</h1>
+<p><strong>Data:</strong> 2026-08-23<br />
+<strong>Contexto:</strong> Análise completa do projeto para extrair
+arquitetura, scripts, skills, MCPs, hooks, specs e rules reutilizáveis
+em novos projetos.<br />
+<strong>Objetivo:</strong> Permitir que projetos novos nasçam já
+configurados com toda a infraestrutura técnica e metodologia
+aplicada.</p>
+<hr />
+<h2 id="executive-summary">EXECUTIVE SUMMARY</h2>
+<p>O projeto <strong>Fábrica Agêntica de Publicações</strong> é um
+sistema modular e extensível baseado em:</p>
+<ul>
+<li><strong>50+ Skills especializadas</strong> (economia de tokens +
+redação + compilação)</li>
+<li><strong>19 Comandos orquestrador</strong> (P&amp;D → Manufatura →
+Review → PDF)</li>
+<li><strong>7 Subagentes paralelos</strong> (pesquisador, redators,
+revisor, ilustrador)</li>
+<li><strong>70+ Scripts determinísticos</strong> (indexação, gates,
+compilação, zero-LLM)</li>
+<li><strong>4 MCPs</strong> (estado, escrita, PDF, inteligência de
+grafo)</li>
+<li><strong>Templates reutilizáveis</strong> (Markdown EITA-V2, Typst
+ABNT, HTML responsivo)</li>
+<li><strong>V5 Sistema de Coleções</strong> (cascata livro → artigo →
+e-book → playbook → lead magnet → deck → e-mails)</li>
+<li><strong>Portabilidade Multi-IDE</strong> (Claude Code, Cursor,
+OpenCode, Codebuff, VSCode)</li>
+<li><strong>Token Economy</strong> (caveman, headroom, lean-ctx, RTK —
+economiza até 70%)</li>
+</ul>
+<p><strong>Para novo projeto:</strong> copiar estrutura, rodar
+<code>setup-links.ps1</code>, adaptar <code>CLAUDE.md</code> (tema),
+customizar <code>tipos_obra.py</code> (tipos novos), executar gates.
+<strong>Projeto nasce pronto.</strong></p>
+<hr />
+<h2 id="fase-1-núcleo-de-governança-blueprint-estrutural">FASE 1: NÚCLEO
+DE GOVERNANÇA (blueprint estrutural)</h2>
+<h3 id="hierarquia-de-configuração-3-camadas">1.1 — Hierarquia de
+Configuração (3 camadas)</h3>
+<pre><code>Projeto novo
+├── .claude/CLAUDE.md              [raiz: regras globais, squad, fluxo]
+├── .claude/settings.json          [hooks, MCPs, permissions]
+├── .claude/RTK.md                 [token economy local]
+├── CLAUDE.md (link → .claude/)    [visibilidade em IDE]
+└── .claude.yaml / opencode.json   [suporte Cursor/OpenCode]</code></pre>
+<p><strong>O que replicar:</strong></p>
+<ul>
+<li><p><strong>Frontmatter em CLAUDE.md:</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Regras, squad e fluxo da [Fábrica/Sistema] — orquestrador para qualquer agente neste diretório.</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">alwaysApply:</span><span class="co"> true</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div></li>
+<li><p><strong>Estrutura de seções numeradas:</strong></p>
+<ul>
+<li>Seção 0: Economia Severa de Tokens (PRIORIDADE MÁXIMA)</li>
+<li>Seção 1: Regras Globais (R1–R17)</li>
+<li>Seção 2: Squad (F1–F3, skills + scripts + gates)</li>
+<li>Seção 3: MCPs</li>
+<li>Seção 4: Templates</li>
+<li>Seção 5: Fluxo Operacional (5–9 fases)</li>
+<li>Seção 6: Portabilidade Multi-IDE (junctions, hardlinks, setup)</li>
+<li>Seção 7: RTK SCRATCHPAD (aprendizados de sessões anteriores)</li>
+</ul></li>
+<li><p><strong>Glossário de Regras (R1–R17):</strong></p>
+<ul>
+<li>R1: PT-BR estrito em toda comunicação</li>
+<li>R2: Silenciamento estético (sem preâmbulos em artefatos)</li>
+<li>R3: Autonomia (após tema definido, sistema roda 100%)</li>
+<li>R4: Auto-correção (desvios internos, sem output de falha)</li>
+<li>R5: Capa 2D Plano (Livro/E-book) vs ABNT (TCC/Artigo)</li>
+<li>R6: Modelo LLM livre (model: inherit)</li>
+<li>R16: Pós-implementação (testes 100%, nunca commit vermelho)</li>
+<li>R17: CAMPANHA e MÁQUINA opcionais (respeitam
+<code>config_obra.json</code>)</li>
+</ul></li>
+<li><p><strong>Squad Declarativo:</strong></p>
+<ul>
+<li>F1 (Pesquisa): pesquisador → arquiteto</li>
+<li>F2 (Manufatura): estrategista → redator-* → subagentes paralelos
+(pool lotes 4)</li>
+<li>F2.5 (Peer Review): auditar-obra.py → revisor-tecnico (apenas
+defeituosas)</li>
+<li>F3 (Compilação): compilador-abnt → compilar-para-pdf.py</li>
+<li>F4/V5 (Coleção): criar-playbook → derivadas paralelas → sincronizar
+→ empacotar</li>
+</ul></li>
+<li><p><strong>Tipos de Obra (V5):</strong></p>
+<ul>
+<li>Tabela: tipo | natureza | custo LLM | spec | comando | produtor</li>
+<li>Registro em <code>scripts/tipos_obra.py</code> (uma entrada por
+tipo)</li>
+<li>Matriz de derivação (cascata): livro → artigo, e-book, playbook,
+lead magnet, deck, e-mails</li>
+</ul></li>
+</ul>
+<h3 id="hooks-de-pós-implementação-settings.json">1.2 — Hooks de
+Pós-Implementação (settings.json)</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;hooks&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;PostToolUse&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;matcher&quot;</span><span class="fu">:</span> <span class="st">&quot;Edit|Write&quot;</span><span class="fu">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;hooks&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;command&quot;</span><span class="fu">,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;code-review-graph update --skip-flows --repo </span><span class="ch">\&quot;</span><span class="st">$(git rev-parse --show-toplevel 2&gt;/dev/null)</span><span class="ch">\&quot;</span><span class="st">&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;command&quot;</span><span class="fu">,</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;python scripts/atualizar-documentacao.py --se-sujo --silencioso&quot;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;SessionStart&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;matcher&quot;</span><span class="fu">:</span> <span class="st">&quot;&quot;</span><span class="fu">,</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;hooks&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;command&quot;</span><span class="fu">,</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;code-review-graph status --repo </span><span class="ch">\&quot;</span><span class="st">$(git rev-parse --show-toplevel 2&gt;/dev/null)</span><span class="ch">\&quot;</span><span class="st">&quot;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p><strong>Adaptar:</strong> substituir paths absolutos de Windows por
+<code>git rev-parse --show-toplevel</code>.</p>
+<h3 id="junctions-portabilidade-multi-ide">1.3 — Junctions
+(Portabilidade Multi-IDE)</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># scripts/setup-links.ps1</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">New-Item</span> <span class="op">-</span>ItemType SymbolicLink <span class="op">-</span>Path <span class="st">&quot;agentic&quot;</span> <span class="op">-</span>Target <span class="st">&quot;.claude&quot;</span> <span class="op">-</span>Force</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">New-Item</span> <span class="op">-</span>ItemType SymbolicLink <span class="op">-</span>Path <span class="st">&quot;.agents/agents&quot;</span> <span class="op">-</span>Target <span class="st">&quot;.claude/agents&quot;</span> <span class="op">-</span>Force</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">New-Item</span> <span class="op">-</span>ItemType SymbolicLink <span class="op">-</span>Path <span class="st">&quot;.agents/commands&quot;</span> <span class="op">-</span>Target <span class="st">&quot;.claude/commands&quot;</span> <span class="op">-</span>Force</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">New-Item</span> <span class="op">-</span>ItemType HardLink <span class="op">-</span>Path <span class="st">&quot;CLAUDE.md&quot;</span> <span class="op">-</span>Target <span class="st">&quot;.claude/CLAUDE.md&quot;</span> <span class="op">-</span>Force</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Copy-Item</span> <span class="st">&quot;scripts/hooks/pre-commit&quot;</span> <span class="st">&quot;.git/hooks/pre-commit&quot;</span> <span class="op">-</span>Force</span></code></pre></div>
+<p><strong>Benefício:</strong> um único CLAUDE.md suporta: - Claude
+Code: <code>.claude/</code> - Cursor: <code>.cursor/rules/</code> -
+OpenCode: <code>.opencode/</code> - Codebuff: <code>.agents/</code> -
+VSCode: <code>.vscode/mcp.json</code> (gerado por script)</p>
+<hr />
+<h2 id="fase-2-catálogo-de-skills-50-reutilizáveis">FASE 2: CATÁLOGO DE
+SKILLS (50+ reutilizáveis)</h2>
+<h3 id="mapeamento-de-skills-por-camada">2.1 — Mapeamento de Skills por
+Camada</h3>
+<pre><code>[FUNDAÇÃO — Economia de Tokens]
+├─ caveman                 (pensamento telegráfico: 3–5 linhas)
+├─ headroom                (compress logs &gt;7 linhas: 3 top + 4 bottom)
+├─ lean-ctx                (grep antes de read; limitar linha)
+├─ rtk-memory              (rastreamento de economias em sessão)
+├─ pre-flight-check        (validação pré-launch, evita loops)
+└─ aplicar-token-economy   (configurar estratégia de compressão)
+
+[FÁBRICA — Redação &amp; Compilação]
+├─ pesquisador             (dossiê + referências; F1 Nó 1)
+├─ arquiteto               (sumário macro; F1 Nó 2)
+├─ estrategista            (draft capítulo; F2 Nó 3)
+├─ redator-eita            (framework EITA-V2; F2 Nó 4)
+├─ redator-academico       (ABNT + IMRaD; para TCC/Artigo)
+├─ redator-ebook           (compressão; herança livro)
+├─ revisor-tecnico         (peer review; F2.5)
+├─ compilador-abnt         (merge + formatação; F3)
+├─ compilador-artigo       (gates acadêmicas; F3)
+└─ compilador-mega-livro   (orchestração final; F3)
+
+[GATES — Validação Determinística]
+├─ validar-referencias.py  (URL/DOI reais; reprova 4xx/DNS)
+├─ validar-metricas.py     (≥1 métrica com valor+unidade+citação)
+├─ validar-escala.py       (contorno em &quot;Aplica&quot; existe)
+├─ validar-afirmacoes.py   (dado factual tem [N])
+├─ validar-fontes.py       (≥70% A+B)
+├─ validar-comandos-cli.py (smoke test real; opt-in)
+└─ auditar-obra.py         (encadeia todos; --estrito)
+
+[DERIVADAS — Coleção V5]
+├─ criar-playbook          (cards práticos; zero LLM)
+├─ criar-lead-magnet       (A4 + CTA; HTML→Chromium)
+├─ criar-deck              (16:9 navegável; 2 formatos)
+├─ criar-emails            (sequência marketing; moldes)
+├─ campanha                (conteúdo marketing; estrutura+artes)
+└─ criar-maquina-vendas    (Next.js + FastAPI; deploy + segurança)
+
+[INFRAESTRUTURA]
+├─ code-review             (review de PR; adversarial)
+├─ debug-issue             (diagnostic; root cause)
+├─ refactor-safely         (reescrita com testes)
+├─ atualizar-documentacao  (sync manual &lt;→ CLAUDE.md)
+└─ explore-codebase        (busca rápida; Explore agent)
+
+[TERCEIRAS — Cloudflare/Vercel/etc]
+└─ [20+ skills de plataforma]</code></pre>
+<h3 id="estrutura-canônica-de-skill">2.2 — Estrutura Canônica de
+Skill</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> nome-skill</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Uma frase descrevendo o resultado final (aparece em /help)</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Skill_NomeCapitalizado</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>Você é o especialista em <span class="co">[</span><span class="ot">domínio</span><span class="co">]</span> na <span class="co">[</span><span class="ot">Fábrica/Sistema</span><span class="co">]</span>.</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contexto &amp; Objetivo</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Onde estamos no fluxo, o que este skill deve entregar</span><span class="co">]</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Regras</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>REGRA X do CLAUDE.md (R1 PT-BR, R2 silenciamento, R4 auto-correção)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Restrições específicas deste skill</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Padrão de Fluxo</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Passo 1 — [Preparação]</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Validações, criação de pastas, leitura de config</span><span class="co">]</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### Passo 2 — [Processamento]</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Lógica do skill, invocações de scripts/subagentes</span><span class="co">]</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### Passo 3 — [Validação &amp; Entrega]</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gates, testes, gravação de relatorio</span><span class="co">]</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Checklist de Entrega</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Output em <span class="in">`output/&lt;slug&gt;/...`</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="in">`relatorio-&lt;skill&gt;.json`</span> gravado</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Testes executados (auditar-obra.py)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Commit + push feito</span></code></pre></div>
+<p><strong>Reutilização:</strong> copiar estrutura, adaptar domínio e
+padrão de fluxo.</p>
+<hr />
+<h2 id="fase-3-sistema-de-comandos-19-orquestradores">FASE 3: SISTEMA DE
+COMANDOS (19 orquestradores)</h2>
+<h3 id="padrão-de-comando">3.1 — Padrão de Comando</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Resumo do fluxo (e.g., &quot;Inicia a produção autônoma de um livro técnico&quot;)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Situação Inicial</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Contexto: trigger, o que o operador está fazendo</span><span class="co">]</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## REQUISITOS CONTRATUAIS — NÃO NEGOCIÁVEIS</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> # <span class="pp">|</span> Requisito <span class="pp">|</span> Especificação <span class="pp">|</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|-----------|---------------|</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> R1 <span class="pp">|</span> 16+ capítulos <span class="pp">|</span> Mínimo 16 capítulos no sumário macro <span class="pp">|</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> R2 <span class="pp">|</span> 70+ páginas <span class="pp">|</span> Mínimo ~175.000 caracteres em <span class="in">`livro_final.md`</span> <span class="pp">|</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 0 — Preparação</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Criar pastas, validar config_obra.json, registrar em MCP db_state</span><span class="co">]</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 1 — Fase 1 (P&amp;D e Arquitetura)</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Invoque subagentes, execute scripts, persist dados</span><span class="co">]</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 2 — Fase 2 (Manufatura em Lotes)</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Pool de capítulos, dispatch paralelo, aguarde todos</span><span class="co">]</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 3 — Fase 2.5 (Peer Review)</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Auditoria gates, correção técnica, re-validação</span><span class="co">]</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 4 — Fase 3 (Compilação + PDF)</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Merge de capítulos, ABNT, Pandoc→Typst</span><span class="co">]</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 5 — Fase 4/V5 (Coleção &amp; Entrega)</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Derivadas paralelas, sincronizar, empacotar</span><span class="co">]</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Passo 6 — Relatório Telegráfico (REGRA 2)</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Resumo de entregas, commits, próximos passos</span><span class="co">]</span></span></code></pre></div>
+<h3 id="fluxo-canônico-de-orquestração">3.2 — Fluxo Canônico de
+Orquestração</h3>
+<pre><code>entrada (tema)
+  ↓
+[Fase 1] pesquisador → minerar-fontes-academicas.py → indexar-dossie.py → arquiteto
+  ↓
+[Fase 2] pool-capitulos.py --plano --lote 4
+  ↓
+para cada lote:
+  → [subagente-redator-capitulo × 4] em paralelo
+  → aguarde todos
+  → se erro: retentativa 3x com backoff exponencial
+  → se ainda falha: escalate para revisor-tecnico
+  ↓
+[Fase 2.5] auditar-obra.py --estrito
+  (encadeia: validar-referencias, validar-metricas, validar-escala, validar-afirmacoes, validar-fontes, validar-codigo)
+  ↓
+se falhas detectadas:
+  → revisor-tecnico corrige apenas defeituosas
+  → re-run gates até sucesso
+  ↓
+[Fase 3] compilador-abnt → compilar-para-pdf.py
+  ↓
+[Fase 4/V5] criar-playbook
+  → [criar-lead-magnet, criar-deck, criar-emails] em paralelo
+  → colecao.py --sincronizar
+  → empacotar-colecao.py
+  ↓
+validar-artefatos.py --todos --estrito
+  ↓
+commit + push</code></pre>
+<p><strong>Reutilização:</strong> substituir nomes de scripts/skills,
+manter fluxo e barreiras.</p>
+<hr />
+<h2 id="fase-4-subagentes-especializados-7-100-paralelos">FASE 4:
+SUBAGENTES ESPECIALIZADOS (7, 100% paralelos)</h2>
+<h3 id="registro-de-subagentes">4.1 — Registro de Subagentes</h3>
+<pre><code>.claude/agents/
+├── subagente-pesquisador.md           (varredura web + dossiê RAG)
+├── subagente-redator-capitulo.md      (draft + EITA + diagrama + CI)
+├── subagente-redator-secao-tcc.md     (análogo redator-capitulo, para TCC)
+├── subagente-redator-artigo.md        (compressão livro → artigo IMRaD)
+├── subagente-adaptador-ebook.md       (adapt tom, gera EPUB)
+├── subagente-revisor-tecnico.md       (peer review, confere 1 fonte/cap)
+└── subagente-ilustrador.md            (HTML+CSS+Playwright → PNG 2D flat)</code></pre>
+<h3 id="padrão-de-subagente">4.2 — Padrão de Subagente</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> subagente-nome</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Tarefa atomizada para execução paralela</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Subagente_Nome</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>Você é o especialista em <span class="co">[</span><span class="ot">domínio</span><span class="co">]</span> — executa tarefa atomizada para a esteira.</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Input Esperado</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`config_obra.json`</span> (invariante)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`output/&lt;slug&gt;/pesquisa/dossie.json`</span> (RAG indexado)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`lote.json`</span> com IDs de capítulos/seções</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Output Obrigatório</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="in">```json</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;sucesso|falha|incompleto&quot;</span><span class="fu">,</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;capitulos&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="st">&quot;cap_01&quot;</span><span class="fu">,</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;conteudo&quot;</span><span class="fu">:</span> <span class="st">&quot;...&quot;</span><span class="fu">,</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;metricas&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;palavras&quot;</span><span class="fu">:</span> <span class="dv">5000</span><span class="fu">,</span> <span class="dt">&quot;citacoes&quot;</span><span class="fu">:</span> <span class="dv">15</span><span class="fu">,</span> <span class="dt">&quot;diagramas&quot;</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">},</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;tempo_minutos&quot;</span><span class="fu">:</span> <span class="dv">8</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;relatorio&quot;</span><span class="fu">:</span> <span class="st">&quot;sumário de diffs, mudanças estruturais, gaps detectados&quot;</span><span class="fu">,</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;tempo_total_minutos&quot;</span><span class="fu">:</span> <span class="dv">45</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h2 id="retentativa-máx-3x-com-backoff-exponencial">Retentativa (máx 3x
+com backoff exponencial)</h2>
+<ul>
+<li>Falha 1ª: retry em 5s</li>
+<li>Falha 2ª: retry em 30s</li>
+<li>Falha 3ª: escalate para revisor-tecnico com flag
+<code>manual_fix_required=true</code></li>
+</ul>
+<pre><code>
+### 4.3 — Pool de Capítulos (Orchestração)
+
+```python
+# scripts/pool-capitulos.py
+def despacher_lotes(slug, lote_size=4, max_retries=3):
+    &quot;&quot;&quot;
+    Divide capítulos em lotes, despacha subagentes em paralelo,
+    aguarda todos (barreira), escalata defeituosos.
+    &quot;&quot;&quot;
+    capitulos = carrega_plano(slug)
+    lotes = [capitulos[i:i+lote_size] for i in range(0, len(capitulos), lote_size)]
+    
+    for idx, lote in enumerate(lotes):
+        print(f&quot;🚀 Lote {idx+1}: capítulos {lote[0].numero}–{lote[-1].numero}&quot;)
+        
+        # Paralelo
+        tasks = [
+            agent(
+                f&quot;Rediga capítulo {cap.numero}: {cap.titulo}&quot;,
+                label=f&quot;cap_{cap.numero:02d}&quot;,
+                schema=CAPITULO_SCHEMA
+            )
+            for cap in lote
+        ]
+        resultados = await all(tasks)
+        
+        # Barreira: aguarda TODOS antes do lote seguinte
+        falhas = [r for r in resultados if r[&#39;status&#39;] != &#39;sucesso&#39;]
+        
+        if falhas:
+            print(f&quot;⚠️ {len(falhas)} capítulos com problema, escalando para revisor&quot;)
+            escalate_para_revisor(falhas, retry_count=1)
+        
+        print(f&quot;✓ Lote {idx+1} completo&quot;)</code></pre>
+<hr />
+<h2 id="fase-5-scripts-determinísticos-70-zero-llm">FASE 5: SCRIPTS
+DETERMINÍSTICOS (70+, zero LLM)</h2>
+<h3 id="categorias-de-scripts">5.1 — Categorias de Scripts</h3>
+<p><strong>[A] Coleta &amp; Indexação</strong> -
+<code>minerar-fontes-academicas.py</code> —
+OpenAlex/Crossref/arXiv/SciELO (APIs abertas, zero LLM) -
+<code>indexar-dossie.py</code> — RAG vetorizado para consulta pelos
+redatores</p>
+<p><strong>[B] Estruturação</strong> - <code>tipos_obra.py</code> —
+registro declarativo de tipos (uma entrada = novo tipo) -
+<code>parametros_obra.py</code> — config_obra.json + metadados -
+<code>secoes_eita.py</code> — parser de headers EITA (7 seções) -
+<code>colecao.py</code> — sincronização de manifestos, hub de coleção -
+<code>fatiar-obra.py</code> — splitter de capítulos para pool</p>
+<p><strong>[C] Gates de Conteúdo</strong> (auditar-obra.py –estrito
+encadeia todos) - <code>validar-referencias.py</code> — URL/DOI reais
+(4xx reprova) - <code>validar-metricas.py</code> — ≥1 métrica com
+valor+unidade+citação - <code>validar-escala.py</code> — contorno em
+“Aplica” existe - <code>validar-afirmacoes.py</code> — dado factual tem
+[N] - <code>validar-fontes.py</code> — ≥70% referências classe A+B -
+<code>validar-comandos-cli.py</code> — smoke test real (opt-in) -
+<code>validar-codigo.py --executar</code> — testa
+python/js/bash/playbook - <code>auditar-obra.py</code> — orquestrador:
+encadeia gates por tipo</p>
+<p><strong>[D] Compilação</strong> - <code>compilar-para-pdf.py</code> —
+Pandoc → Typst → typst compile - <code>gerar-epub.py</code> — E-book
+final - <code>gerar-pptx.py</code> — Deck em PPTX -
+<code>gerar-capa.py</code> — capa gráfica (2D plano ou ABNT) -
+<code>renderizar-diagramas.py</code> — Mermaid → SVG + validate</p>
+<p><strong>[E] Tipos Derivados V5</strong> (zero/extracao —
+determinísticos) - <code>gerar-lead-magnet.py</code> — A4 + CTA
+(HTML→Chromium) - <code>gerar-lead-magnet-pdf.py</code> — PDF via
+Playwright - <code>gerar-deck.py</code> — esqueleto 16:9 -
+<code>gerar-deck-html.py</code> — slides HTML navegáveis -
+<code>extrair-passos-praticos.py</code> — cards do playbook -
+<code>gerar-sequencia-emails.py</code> — moldes de copy -
+<code>criar-campanha.py</code> — estrutura + artes (0 token)</p>
+<p><strong>[F] Validação de Entrega</strong> -
+<code>validar-artefatos.py --todos --estrito</code> — cada arquivo abre
+- <code>validar-playbook.py</code>, <code>validar-lead-magnet.py</code>,
+<code>validar-deck.py</code>, <code>validar-emails.py</code> — gates
+específicas - <code>validar-abnt-tcc.py</code> — NBR 14724</p>
+<p><strong>[G] Utilitários &amp; Transformação</strong> -
+<code>nomes_curtos.py</code> — V5.1: encurtar paths (MAX_PATH=260
+Windows) - <code>empacotar-colecao.py</code> — .zip com manifesto +
+LICENCA.txt + LEIA-ME.md - <code>migrar-slug.py</code>,
+<code>migrar-derivados.py</code> — refatoring em massa -
+<code>corrigir-nomenclatura.py</code> — renamear arquivos legados -
+<code>task_router.py</code> — dispatcher automático de tarefas -
+<code>atualizar-documentacao.py</code> — sincronizar manual</p>
+<p><strong>[H] Operacional</strong> -
+<code>calcular-gastos-sessao</code> (skill) — token economy reporting -
+<code>gerar-relatorio-sessao.py</code> — MD+PDF com
+contexto/bugs/validações - <code>token-guard.py</code> — vigilância de
+TPM/RPM - <code>verificar-rate-limits.py</code> — Cloudflare/OpenAI
+quotas</p>
+<h3 id="padrão-canônico-de-script-python">5.2 — Padrão Canônico de
+Script Python</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;modulo&gt;: &lt;descricao-do-que-faz&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">Uso:</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">  python scripts/meu-script.py &lt;slug&gt; --opcao valor</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">  python scripts/meu-script.py --help</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">Entrada: `output/&lt;slug&gt;/pesquisa/dossie.json` (ou config_obra.json)</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">Saída: `output/&lt;slug&gt;/relatorio-meu-script.json`</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">Garantias:</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">- Idempotente (rodar 2x = mesmo resultado)</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">- Sem side effects fora de `output/`</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">- Relatorio JSON sempre gravado (mesmo em erro)</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">- Exit code 0 = sucesso, &gt;0 = falha (pre-commit hook respeita)</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> argparse</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> console_utf8():</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Previne UnicodeEncodeError em Windows (cp1252 vs UTF-8).&quot;&quot;&quot;</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> fluxo <span class="kw">in</span> (sys.stdout, sys.stderr):</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>            fluxo.reconfigure(encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>, errors<span class="op">=</span><span class="st">&quot;replace&quot;</span>)</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span> (<span class="pp">AttributeError</span>, <span class="pp">OSError</span>):</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">pass</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    parser <span class="op">=</span> argparse.ArgumentParser(description<span class="op">=</span>__doc__)</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">&quot;slug&quot;</span>, <span class="bu">help</span><span class="op">=</span><span class="st">&quot;slug-da-obra&quot;</span>)</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">&quot;--opcao&quot;</span>, default<span class="op">=</span><span class="st">&quot;valor_padrao&quot;</span>, <span class="bu">help</span><span class="op">=</span><span class="st">&quot;Descrição&quot;</span>)</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> parser.parse_args()</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>    relatorio <span class="op">=</span> {</span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;status&quot;</span>: <span class="st">&quot;falha&quot;</span>,</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;erros&quot;</span>: [],</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;alertas&quot;</span>: [],</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;dados&quot;</span>: {}</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Sua lógica aqui</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>        relatorio[<span class="st">&quot;status&quot;</span>] <span class="op">=</span> <span class="st">&quot;sucesso&quot;</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>        relatorio[<span class="st">&quot;erros&quot;</span>].append(<span class="bu">str</span>(e))</span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">finally</span>:</span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>        caminho_rel <span class="op">=</span> Path(<span class="ss">f&quot;output/</span><span class="sc">{</span>args<span class="sc">.</span>slug<span class="sc">}</span><span class="ss">/relatorio-meu-script.json&quot;</span>)</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>        caminho_rel.parent.mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>        caminho_rel.write_text(json.dumps(relatorio, indent<span class="op">=</span><span class="dv">2</span>, ensure_ascii<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>    console_utf8()</span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>    sys.exit(main())</span></code></pre></div>
+<p><strong>Reutilização:</strong> template de argparse, console_utf8(),
+estrutura de relatorio JSON, exit code, idempotência.</p>
+<hr />
+<h2 id="fase-6-mcps-model-context-protocols-4-extensíveis">FASE 6: MCPs
+(Model Context Protocols) — 4 + extensíveis</h2>
+<h3 id="registro-de-mcps-em-.mcp.json">6.1 — Registro de MCPs em
+.mcp.json</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;mcpServers&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;db_state&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;node&quot;</span><span class="fu">,</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;args&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;&lt;path&gt;/mcp-server-sqlite/dist/index.js&quot;</span><span class="ot">,</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;&lt;path&gt;/data/estado_fabrica.db&quot;</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;file_writer&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;node&quot;</span><span class="fu">,</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;args&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;&lt;path&gt;/server-filesystem/dist/index.js&quot;</span><span class="ot">,</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;&lt;project-root&gt;&quot;</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;pdf_gen&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;node&quot;</span><span class="fu">,</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;args&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;&lt;path&gt;/pdf-gen-server/index.js&quot;</span><span class="ot">]</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;code-review-graph&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;uvx&quot;</span><span class="fu">,</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;args&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;code-review-graph&quot;</span><span class="ot">,</span> <span class="st">&quot;serve&quot;</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;cwd&quot;</span><span class="fu">:</span> <span class="st">&quot;&lt;project-root&gt;&quot;</span><span class="fu">,</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;stdio&quot;</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 id="função-de-cada-mcp">6.2 — Função de cada MCP</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 32%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th>MCP</th>
+<th>Função</th>
+<th>Quando Usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>db_state</strong></td>
+<td>SQLite com estado da esteira (fases, capítulos, status)</td>
+<td>Registrar progresso, queries de auditoria</td>
+</tr>
+<tr>
+<td><strong>file_writer</strong></td>
+<td>Escrita segura de Markdown/JSON com validação</td>
+<td>Gerar capítulos, config, manifestos</td>
+</tr>
+<tr>
+<td><strong>pdf_gen</strong></td>
+<td>Compilação PDF (fallback CloudConvert)</td>
+<td>Método principal: Pandoc→Typst via
+<code>compilar-para-pdf.py</code></td>
+</tr>
+<tr>
+<td><strong>code-review-graph</strong></td>
+<td>Inteligência estrutural do grafo (queries, impacto)</td>
+<td>Busca eficiente, impact analysis, compliance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="padrão-para-novo-mcp">6.3 — Padrão para Novo MCP</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">// .claude/mcp-servers/meu-mcp/index.js</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { <span class="bu">Server</span> } <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;@modelcontextprotocol/sdk/server/stdio&quot;</span>)<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> server <span class="op">=</span> <span class="kw">new</span> <span class="bu">Server</span>({</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;meu-mcp&quot;</span><span class="op">,</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">version</span><span class="op">:</span> <span class="st">&quot;1.0.0&quot;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>server<span class="op">.</span><span class="fu">setRequestHandler</span>(<span class="st">&quot;resources/list&quot;</span><span class="op">,</span> <span class="kw">async</span> () <span class="kw">=&gt;</span> ({</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">resources</span><span class="op">:</span> [</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">uri</span><span class="op">:</span> <span class="st">&quot;meu://recurso&quot;</span><span class="op">,</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;Meu Recurso&quot;</span><span class="op">,</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">mimeType</span><span class="op">:</span> <span class="st">&quot;application/json&quot;</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>}))<span class="op">;</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>server<span class="op">.</span><span class="fu">setRequestHandler</span>(<span class="st">&quot;resources/read&quot;</span><span class="op">,</span> <span class="kw">async</span> (request) <span class="kw">=&gt;</span> {</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (request<span class="op">.</span><span class="at">params</span><span class="op">.</span><span class="at">uri</span> <span class="op">===</span> <span class="st">&quot;meu://recurso&quot;</span>) {</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> { <span class="dt">contents</span><span class="op">:</span> [{ <span class="dt">text</span><span class="op">:</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>({<span class="op">...</span>})<span class="op">,</span> <span class="dt">mimeType</span><span class="op">:</span> <span class="st">&quot;application/json&quot;</span> }] }<span class="op">;</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&quot;Recurso não encontrado&quot;</span>)<span class="op">;</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>server<span class="op">.</span><span class="fu">connect</span>(<span class="bu">process</span><span class="op">.</span><span class="at">stdin</span><span class="op">,</span> <span class="bu">process</span><span class="op">.</span><span class="at">stdout</span>)<span class="op">;</span></span></code></pre></div>
+<hr />
+<h2 id="fase-7-templates-reutilizáveis">FASE 7: TEMPLATES
+REUTILIZÁVEIS</h2>
+<h3 id="markdown-estrutura">7.1 — Markdown (Estrutura)</h3>
+<pre><code>templates/
+├── template_eita.md           # 7 seções: Intro, Explica, Ilustra, Técnica, Aplica, Conclusão, Refs
+├── template_playbook.typ      # Cards de passo-a-passo com ①②③
+├── template_lead_magnet.html  # A4 responsivo + CTA bottom
+└── template_deck.html         # 16:9 navegável + PDF via Chromium</code></pre>
+<p><strong>Exemplo: template_eita.md</strong></p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Capítulo &lt;N&gt;: &lt;Título&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Introdução</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Contextualização, relevância, o que será abordado. Tom acessível. Máx 2 parágrafos. --&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Explica</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Teoria fundamental, definições, causa raiz. Citações [N] obrigatórias. --&gt;</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Ilustra</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Analogia + 1 diagrama ```mermaid OBRIGATÓRIO --&gt;</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Técnica</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Código com linguagem declarada. Mínimo 60% do capítulo. [N] obrigatórias. --&gt;</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Aplica</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Caso de uso real. Contorno/limites/escala OBRIGATÓRIOS. --&gt;</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Conclusão</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Síntese, próximos passos. Máx 1 parágrafo. --&gt;</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Referências</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- [1] Autor et al. (Ano). Título. Origem (A/B/C). DOI/URL --&gt;</span></span></code></pre></div>
+<h3 id="pandoc-typst-pdf-compilado">7.2 — Pandoc + Typst (PDF
+compilado)</h3>
+<pre><code>templates/
+├── template.typ               # Livro ABNT: capa, folha de rosto, CIP, sumário, 1.5 espacamento
+├── template_tcc.typ           # TCC NBR 14724: 3cm margens, 1.5 espacamento, page counter
+├── template_artigo.typ        # Artigo NBR 6022: máx 20 pgs, 2 colunas, abstract+keywords
+└── template_playbook.typ      # Cards: ①②③④⑤⑥⑦ por card, grid layout</code></pre>
+<p><strong>Exemplo: template.typ (Livro ABNT)</strong></p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode typst"><code class="sourceCode typst"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">#set</span> <span class="va">page</span><span class="op">(</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  paper<span class="op">:</span> <span class="st">&quot;a4&quot;</span><span class="op">,</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  margin<span class="op">:</span> <span class="op">(</span>top: <span class="fl">3cm</span><span class="op">,</span> bottom: <span class="fl">2cm</span><span class="op">,</span> left: <span class="fl">3cm</span><span class="op">,</span> right: <span class="fl">2cm</span><span class="op">),</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="op">)</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">#set</span> <span class="va">text</span><span class="op">(</span>font<span class="op">:</span> <span class="st">&quot;Times New Roman&quot;</span><span class="op">,</span> size<span class="op">:</span> <span class="fl">12pt</span><span class="op">)</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="kw">#set</span> <span class="va">par</span><span class="op">(</span>leading<span class="op">:</span> <span class="fl">1.5em</span><span class="op">)</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">// Metadata (injetados por Pandoc via frontmatter YAML)</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="kw">#let</span> <span class="va">titulo</span> <span class="op">=</span> <span class="op">[</span><span class="kw">#</span>title<span class="op">]</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="kw">#let</span> <span class="va">autor</span> <span class="op">=</span> <span class="op">[</span><span class="kw">#</span>author<span class="op">]</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="kw">#let</span> <span class="va">anoPublicacao</span> <span class="op">=</span> <span class="op">[</span><span class="kw">#</span>date<span class="op">]</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">// Capa</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="kw">#</span>page<span class="op">(</span>background<span class="op">:</span> image<span class="op">(</span><span class="st">&quot;capa.png&quot;</span><span class="op">))[</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Ou renderizar programaticamente</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">#</span>align<span class="op">(</span>center <span class="op">+</span> horizon<span class="op">)[</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">#</span>text<span class="op">(</span>size<span class="op">:</span> <span class="fl">28pt</span><span class="op">,</span> weight<span class="op">:</span> <span class="st">&quot;bold&quot;</span><span class="op">,</span> fill<span class="op">:</span> rgb<span class="op">(</span><span class="st">&quot;#1a1a1a&quot;</span><span class="op">))[</span><span class="kw">#</span>titulo<span class="op">]</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">#</span>v<span class="op">(</span><span class="fl">2em</span><span class="op">)</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">#</span>text<span class="op">(</span>size<span class="op">:</span> <span class="fl">14pt</span><span class="op">)[</span><span class="kw">#</span>autor<span class="op">]</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">]</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="co">// Folha de rosto</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="kw">#</span>page<span class="op">()[</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">#</span>text<span class="op">(</span>size<span class="op">:</span> <span class="fl">16pt</span><span class="op">,</span> weight<span class="op">:</span> <span class="st">&quot;bold&quot;</span><span class="op">)[</span><span class="kw">#</span>titulo<span class="op">]</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">#</span>v<span class="op">(</span><span class="fl">2em</span><span class="op">)</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">#</span>text<span class="op">(</span>size<span class="op">:</span> <span class="fl">12pt</span><span class="op">)[</span><span class="kw">#</span>autor<span class="op">]</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">#</span>v<span class="op">(</span><span class="fl">1em</span><span class="op">)</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">#</span>text<span class="op">(</span>size<span class="op">:</span> <span class="fl">12pt</span><span class="op">)[</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    Obra submetida como dissertação de mestrado...</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">]</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a><span class="co">// Conteúdo principal</span></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a><span class="kw">#</span>counter<span class="op">(</span>page<span class="op">).</span>update<span class="op">(</span><span class="dv">1</span><span class="op">)</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a><span class="kw">#</span>body</span></code></pre></div>
+<p><strong>Adaptar:</strong> substituir <code>#title</code>,
+<code>#author</code>, <code>#body</code> conforme Pandoc injetar.</p>
+<hr />
+<h2 id="fase-8-estrutura-de-dados-json-estado-imutável">FASE 8:
+ESTRUTURA DE DADOS (JSON, estado imutável)</h2>
+<h3 id="config_obra.json-criada-em-esbocar-imutável">8.1 —
+config_obra.json (criada em /esbocar, imutável)</h3>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;slug&quot;</span><span class="fu">:</span> <span class="st">&quot;livro-ia-agents-2026&quot;</span><span class="fu">,</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;colecao&quot;</span><span class="fu">:</span> <span class="st">&quot;inteligencia-artificial&quot;</span><span class="fu">,</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;tema&quot;</span><span class="fu">:</span> <span class="st">&quot;Agentes de IA na Manufatura de Conteúdo&quot;</span><span class="fu">,</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;tipo_obra&quot;</span><span class="fu">:</span> <span class="st">&quot;livro&quot;</span><span class="fu">,</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;natureza&quot;</span><span class="fu">:</span> <span class="st">&quot;tecnica&quot;</span><span class="fu">,</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;publico_alvo&quot;</span><span class="fu">:</span> <span class="st">&quot;profissional&quot;</span><span class="fu">,</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;nivel_tecnico&quot;</span><span class="fu">:</span> <span class="dv">6</span><span class="fu">,</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;data_criacao&quot;</span><span class="fu">:</span> <span class="st">&quot;2026-08-22&quot;</span><span class="fu">,</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;data_limite&quot;</span><span class="fu">:</span> <span class="st">&quot;2026-10-01&quot;</span><span class="fu">,</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;gerar_campanha&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;gerar_maquina&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;capitulos_planejados&quot;</span><span class="fu">:</span> <span class="dv">18</span><span class="fu">,</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;paginas_alvo&quot;</span><span class="fu">:</span> <span class="dv">300</span><span class="fu">,</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;citacoes_esperadas&quot;</span><span class="fu">:</span> <span class="dv">200</span><span class="fu">,</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;cta_url&quot;</span><span class="fu">:</span> <span class="st">&quot;https://...&quot;</span><span class="fu">,</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;cta_texto&quot;</span><span class="fu">:</span> <span class="st">&quot;Adquira agora&quot;</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 id="estado_fabrica.db-sqlite-mcp-db_state">8.2 — estado_fabrica.db
+(SQLite, MCP db_state)</h3>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> obras (</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  slug TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  tipo TEXT,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  colecao TEXT,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  fase_atual TEXT,  <span class="co">-- fase_1_pesquisa|fase_2_capitulos|fase_2_5_review|fase_3_compilacao|fase_4_colecao</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  data_inicio TEXT,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  data_ultima_atualizacao TEXT,</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  relatorio_auditoria JSON</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> capitulos (</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">id</span> TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  slug TEXT,</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>  numero <span class="dt">INT</span>,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>  titulo TEXT,</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  status TEXT,  <span class="co">-- rascunho|submetido|aceito|revisado|compilado</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>  metricas JSON,  <span class="co">-- {palavras, citacoes, diagramas, linhas_codigo}</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>  data_criacao TEXT,</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>  data_conclusao TEXT,</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (slug) <span class="kw">REFERENCES</span> obras(slug)</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h3 id="manifestos-de-coleção-colecoes.json">8.3 — Manifestos de Coleção
+(colecoes/<nome>.json)</h3>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;nome&quot;</span><span class="fu">:</span> <span class="st">&quot;inteligencia-artificial&quot;</span><span class="fu">,</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;descricao&quot;</span><span class="fu">:</span> <span class="st">&quot;Coleção: livro + artigo + e-book + playbook + lead magnet + deck + e-mails&quot;</span><span class="fu">,</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;data_criacao&quot;</span><span class="fu">:</span> <span class="st">&quot;2026-08-22&quot;</span><span class="fu">,</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;data_ultima_atualizacao&quot;</span><span class="fu">:</span> <span class="st">&quot;2026-08-23&quot;</span><span class="fu">,</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;membros&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;tipo&quot;</span><span class="fu">:</span> <span class="st">&quot;livro&quot;</span><span class="fu">,</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;slug&quot;</span><span class="fu">:</span> <span class="st">&quot;livro-ia-agents-2026&quot;</span><span class="fu">,</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;compilado&quot;</span><span class="fu">,</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;url_distribuicao&quot;</span><span class="fu">:</span> <span class="st">&quot;output/inteligencia-artificial/livros/liv-2026-08-ia-agents/livro_final.pdf&quot;</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;tipo&quot;</span><span class="fu">:</span> <span class="st">&quot;artigo&quot;</span><span class="fu">,</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;slug&quot;</span><span class="fu">:</span> <span class="st">&quot;artigo-ia-agents-2026&quot;</span><span class="fu">,</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;em_revisao&quot;</span><span class="fu">,</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;derivado_de&quot;</span><span class="fu">:</span> <span class="st">&quot;livro-ia-agents-2026&quot;</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;campanhas&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;material&quot;</span><span class="fu">:</span> <span class="st">&quot;redes-sociais&quot;</span><span class="fu">,</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;agendada&quot;</span><span class="fu">,</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;data_lancamento&quot;</span><span class="fu">:</span> <span class="st">&quot;2026-10-15&quot;</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;maquinas&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;slug_maquina&quot;</span><span class="fu">:</span> <span class="st">&quot;maquina-vendas-ia-2026&quot;</span><span class="fu">,</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;pronta&quot;</span><span class="fu">,</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;deployado_em&quot;</span><span class="fu">:</span> <span class="st">&quot;https://vercel.com/meu-app&quot;</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<hr />
+<h2 id="fase-9-portabilidade-multi-ide-junctions-hardlinks-scripts">FASE
+9: PORTABILIDADE MULTI-IDE (Junctions, Hardlinks, Scripts)</h2>
+<h3 id="mapeamento-de-ides">9.1 — Mapeamento de IDEs</h3>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 20%" />
+<col style="width: 48%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>IDE</th>
+<th>Pasta</th>
+<th>Link Necessário</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Code</td>
+<td><code>.claude/</code></td>
+<td>(nativa)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>.cursor/rules/</code></td>
+<td>junction → <code>.claude/CLAUDE.md</code></td>
+<td>SymbolicLink</td>
+</tr>
+<tr>
+<td>OpenCode</td>
+<td><code>.opencode/</code></td>
+<td>junction → <code>.claude/</code></td>
+<td>SymbolicLink</td>
+</tr>
+<tr>
+<td>Codebuff</td>
+<td><code>.agents/</code></td>
+<td>junction → <code>.claude/{agents,commands}</code></td>
+<td>SymbolicLink</td>
+</tr>
+<tr>
+<td>VSCode</td>
+<td><code>.vscode/mcp.json</code></td>
+<td>gerado por script</td>
+<td>Generated</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setup-links.ps1-windows">9.2 — setup-links.ps1 (Windows)</h3>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">param</span><span class="op">([</span><span class="dt">switch</span><span class="op">]</span><span class="va">$Verbose</span><span class="op">)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="va">$ProjectRoot</span> <span class="op">=</span> <span class="va">$PSScriptRoot</span> <span class="op">|</span> <span class="fu">Split-Path</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="va">$Claude</span> <span class="op">=</span> <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">\.claude&quot;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="va">$DotGit</span> <span class="op">=</span> <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">\.git&quot;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;🔗 Configurando portabilidade multi-IDE...&quot;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Função auxiliar</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Create-Link<span class="op">(</span><span class="va">$Target</span><span class="op">,</span> <span class="va">$LinkPath</span><span class="op">,</span> <span class="va">$Type</span> <span class="op">=</span> <span class="st">&quot;SymbolicLink&quot;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="fu">Test-Path</span> <span class="va">$LinkPath</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Remove-Item</span> <span class="va">$LinkPath</span> <span class="op">-</span>Force <span class="op">-</span>ErrorAction SilentlyContinue</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">New-Item</span> <span class="op">-</span>ItemType <span class="va">$Type</span> <span class="op">-</span>Target <span class="va">$Target</span> <span class="op">-</span>Path <span class="va">$LinkPath</span> <span class="op">-</span>Force <span class="op">|</span> <span class="fu">Out-Null</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$Verbose</span><span class="op">)</span> <span class="op">{</span> <span class="fu">Write-Host</span> <span class="st">&quot;  ✓ </span><span class="va">$LinkPath</span><span class="st"> → </span><span class="va">$Target</span><span class="st">&quot;</span> <span class="op">}</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Junctions para portabilidade</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>Create-Link <span class="st">&quot;</span><span class="va">$Claude</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">/agentic&quot;</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>Create-Link <span class="st">&quot;</span><span class="va">$Claude</span><span class="st">/agents&quot;</span> <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">/.agents/agents&quot;</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>Create-Link <span class="st">&quot;</span><span class="va">$Claude</span><span class="st">/commands&quot;</span> <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">/.agents/commands&quot;</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Hardlink para CLAUDE.md (não é recopiado, apenas referenciado)</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="fu">New-Item</span> <span class="op">-</span>ItemType HardLink <span class="op">-</span>Path <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">/CLAUDE.md&quot;</span> <span class="op">-</span>Target <span class="st">&quot;</span><span class="va">$Claude</span><span class="st">/CLAUDE.md&quot;</span> <span class="op">-</span>Force <span class="op">|</span> <span class="fu">Out-Null</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="va">$Verbose</span><span class="op">)</span> <span class="op">{</span> <span class="fu">Write-Host</span> <span class="st">&quot;  ✓ CLAUDE.md → hardlink&quot;</span> <span class="op">}</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Recopiar hook (git hooks não suportam symlink seguro)</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="fu">Copy-Item</span> <span class="st">&quot;</span><span class="va">$ProjectRoot</span><span class="st">/scripts/hooks/pre-commit&quot;</span> <span class="st">&quot;</span><span class="va">$DotGit</span><span class="st">/hooks/pre-commit&quot;</span> <span class="op">-</span>Force</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="va">$Verbose</span><span class="op">)</span> <span class="op">{</span> <span class="fu">Write-Host</span> <span class="st">&quot;  ✓ pre-commit hook copiado&quot;</span> <span class="op">}</span></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">&quot;✓ Portabilidade multi-IDE configurada&quot;</span></span></code></pre></div>
+<p><strong>Para Mac/Linux (setup-links.sh):</strong></p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="va">PROJECT_ROOT</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$(</span><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">dirname</span> <span class="st">&quot;</span><span class="va">$0</span><span class="st">&quot;</span><span class="va">)</span><span class="st">/..&quot;</span> <span class="kw">&amp;&amp;</span> <span class="bu">pwd</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="va">CLAUDE</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/.claude&quot;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="va">DOT_GIT</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/.git&quot;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;🔗 Configurando portabilidade multi-IDE...&quot;</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-sf</span> <span class="st">&quot;</span><span class="va">$CLAUDE</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/agentic&quot;</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-sf</span> <span class="st">&quot;</span><span class="va">$CLAUDE</span><span class="st">/agents&quot;</span> <span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/.agents/agents&quot;</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-sf</span> <span class="st">&quot;</span><span class="va">$CLAUDE</span><span class="st">/commands&quot;</span> <span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/.agents/commands&quot;</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-sf</span> <span class="st">&quot;</span><span class="va">$CLAUDE</span><span class="st">/CLAUDE.md&quot;</span> <span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/CLAUDE.md&quot;</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="st">&quot;</span><span class="va">$PROJECT_ROOT</span><span class="st">/scripts/hooks/pre-commit&quot;</span> <span class="st">&quot;</span><span class="va">$DOT_GIT</span><span class="st">/hooks/pre-commit&quot;</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x <span class="st">&quot;</span><span class="va">$DOT_GIT</span><span class="st">/hooks/pre-commit&quot;</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;✓ Portabilidade multi-IDE configurada&quot;</span></span></code></pre></div>
+<hr />
+<h2 id="fase-10-cicd-gates-pré-commit-auditoria">FASE 10: CI/CD &amp;
+GATES (pré-commit, auditoria)</h2>
+<h3 id="pre-commit-hook-scriptshookspre-commit">10.1 — Pre-commit Hook
+(scripts/hooks/pre-commit)</h3>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-e</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Validação de sintaxe Python</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;🔍 Validando scripts Python...&quot;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> py_compile scripts/<span class="pp">*</span>.py</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$?</span> <span class="ot">-ne</span> 0 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;❌ Syntax error in Python scripts&quot;</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span> 1</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Auditoria de obra (se há output/ modificado)</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="va">CHANGED</span><span class="op">=</span><span class="va">$(</span><span class="fu">git</span> diff <span class="at">--cached</span> <span class="at">--name-only</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;^output/&quot;</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span>/ <span class="at">-f2</span><span class="va">)</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-n</span> <span class="st">&quot;</span><span class="va">$CHANGED</span><span class="st">&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;🔍 Auditando obra: </span><span class="va">$CHANGED</span><span class="st">&quot;</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  <span class="ex">python</span> scripts/auditar-obra.py <span class="st">&quot;</span><span class="va">$CHANGED</span><span class="st">&quot;</span> <span class="at">--estrito</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="va">$?</span> <span class="ot">-ne</span> 0 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;❌ Content audit failed for </span><span class="va">$CHANGED</span><span class="st">&quot;</span></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">exit</span> 1</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Checklist mínima</span></span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="st">&quot;CLAUDE.md&quot;</span> <span class="bu">]</span> <span class="kw">||</span> <span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="st">&quot;.mcp.json&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;❌ CLAUDE.md ou .mcp.json faltando&quot;</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span> 1</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;✓ Pre-commit checks passed&quot;</span></span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span> 0</span></code></pre></div>
+<h3 id="gates-por-tipo-de-obra">10.2 — Gates por Tipo de Obra</h3>
+<p>Em <code>scripts/tipos_obra.py</code>:</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;livro&quot;</span>: {</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;gates_conteudo&quot;</span>: [</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;validar-referencias&quot;</span>,    <span class="co"># URL/DOI reais</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;validar-metricas&quot;</span>,       <span class="co"># ≥1 métrica/cap</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;validar-escala&quot;</span>,         <span class="co"># contorno em &quot;Aplica&quot;</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;validar-afirmacoes&quot;</span>,     <span class="co"># dado factual com [N]</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;validar-fontes&quot;</span>,         <span class="co"># ≥70% A+B</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;validar-comandos-cli&quot;</span>,   <span class="co"># smoke test (opt-in)</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Execução:
+<code>python scripts/auditar-obra.py &lt;slug&gt; --estrito</code>
+(encadeia todos em paralelo).</p>
+<hr />
+<h2 id="fase-11-token-economy-estratégias-de-compressão">FASE 11: TOKEN
+ECONOMY (estratégias de compressão)</h2>
+<h3 id="skills-de-economia">11.1 — Skills de Economia</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 39%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Aplicação</th>
+<th>Economia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>caveman</strong></td>
+<td>Pensar em telegrama (3–5 linhas); sem preâmbulos</td>
+<td><strong>60%</strong></td>
+</tr>
+<tr>
+<td><strong>headroom</strong></td>
+<td>Logs/builds &gt;7 linhas → 3 top + 4 bottom</td>
+<td><strong>75%</strong></td>
+</tr>
+<tr>
+<td><strong>lean-ctx</strong></td>
+<td><code>grep</code> antes de <code>read</code>; limitar linha</td>
+<td><strong>40%</strong></td>
+</tr>
+<tr>
+<td><strong>rtk</strong></td>
+<td>Proxy bash (RTK Rust Token Killer) filtra output</td>
+<td><strong>70%</strong></td>
+</tr>
+<tr>
+<td><strong>pre-flight-check</strong></td>
+<td>Validação pré-launch (evita retry loops)</td>
+<td><strong>50%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="regras-de-isenção">11.2 — Regras de Isenção</h3>
+<pre><code>NUNCA COMPRIMIR:
+  - output/**/*.md, output/**/*.json (conteúdo de obra)
+  - auditar-obra.py, validar-codigo.py (gates determinísticas)
+  - revisor-tecnico relatorio (dados de qualidade)
+  - compilação Pandoc+Typst (obrigatória)
+  
+SEMPRE COMPRIMIR:
+  - Logs de build/test &gt;7 linhas
+  - Output de comando verbose (git log, npm list, etc.)
+  - Transcrições longas de busca (grep, find)
+  
+USAR GRAFO (code-review-graph):
+  - Antes de leitura/busca (impacto analysis)
+  - Queries de dependência
+  - Verificação de cobertura</code></pre>
+<hr />
+<h2 id="fase-12-documentação-templates-de-manual">FASE 12: DOCUMENTAÇÃO
+(templates de manual)</h2>
+<h3 id="estrutura-de-docs">12.1 — Estrutura de Docs</h3>
+<pre><code>docs/
+├── manual-completo-fabrica.md         # Tudo em um lugar (~30 páginas)
+├── fluxo-fabrica-de-livros.md         # Diagrama visual do fluxo
+├── fluxogramas-gauntlet-loop.md       # P&amp;D → Manufatura → Review → PDF
+├── plano-otimizacao-tokens.md         # Como economizar contexto
+├── spec-aplicar-token-economy.md      # Implementação técnica
+├── guia-execucao-maquina-vendas.md    # Deploy + segurança (checklist obrigatória)
+├── playbook-campanhas-marketing.md    # Moldes de campanha
+├── normas-abnt-referencia.md          # Specs de formatação (NBR 14724, 6022)
+├── referencia-capa-design.md          # 2D plano + ABNT + badge de nível
+└── manual-replicar-praticas-acima-media.md  # Cultura da fábrica</code></pre>
+<h3 id="relatório-de-sessão-template">12.2 — Relatório de Sessão
+(template)</h3>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Relatório da Sessão: &lt;tema&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>**Data:** 2026-08-23 | **Operador:** Seu Nome | **Tempo Total:** HH:MM | **Modelo:** Claude Haiku 4.5</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contexto</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Obra:** <span class="in">`livro-ia-agents-2026`</span> (slug)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tipo:** Livro técnico</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fase:** 2 (Manufatura em Lotes)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Lote:** Capítulos 1–4</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bugs Corrigidos (causa → fix)</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Grafo de referências quebrado (valores nulos em citação)</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Causa:** <span class="in">`indexar-dossie.py`</span> não tratava DOI vazio em entrada CSV</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fix:** Campo <span class="in">`doi`</span> tornado opcional, fallback para URL; adicionado validação no parser</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Teste:** <span class="in">`validar-referencias.py --sem-rede`</span> passou; 52 refs validadas, 0 erros</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Codepage Windows rompendo relatórios</span></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Causa:** <span class="in">`gerar-relatorio-sessao.py`</span> printava <span class="in">`①②③`</span> (Unicode) em console Windows cp1252</span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fix:** Adicionado <span class="in">`console_utf8()`</span> a todos os scripts com emojis/símbolos</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Teste:** Rodar em Windows PowerShell; relatório gerado sem erro</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Arquivos Alterados</span></span></code></pre></div>
+<p>.claude/skills/revisor-tecnico/SKILL.md | +80 linhas | Adição de
+checklist de peer review scripts/auditar-obra.py | ±45 linhas | Refator
+de gates, paralelo com Pool scripts/tipos_obra.py | +15 linhas | Novo
+tipo: “revista” (experimental) docs/manual-completo-fabrica.md | +120
+linhas | Sync de seção “Coleção V5”
+melhorias/2026-08-23-plano-replicacao-…md | 400 linhas | Este relatório
+(análise de replicação)</p>
+<pre><code>
+## Validações Rodadas
+
+✅ **Python syntax:** `python -m py_compile scripts/*.py` (5/5 passed)  
+✅ **Auditoria:** `python scripts/auditar-obra.py livro-ia-agents-2026 --estrito` (6 gates passed)  
+✅ **Pre-commit hook:** `bash scripts/hooks/pre-commit` (passed)  
+✅ **Code-review-graph:** `code-review-graph status` (grafo atualizado)  
+
+## Commits Feitos
+</code></pre>
+<p>a1b2c3d feat(gates): adicionar validar-comandos-cli.py para smoke
+test CLI d4e5f6g fix(windows): console_utf8() em todos scripts com
+print() h8i9j0k docs(manual): sync token economy strategies na seção 0
+l1m2n3o chore(relatorio): salvar análise de replicação em melhorias/</p>
+<pre><code>
+## Próximos Passos
+
+- [ ] Testar `/criar-livro &lt;novo-tema&gt;` com novo setup
+- [ ] Validar junctions após clone em máquina nova
+- [ ] Documentar padrão de extensão para novo tipo de obra
+- [ ] Deploy de staging (máquina de vendas)
+
+## Notas Operacionais
+
+- **Token economy:** caveman + headroom + rtk economizou ~65% em contexto (4.2M → 1.5M)
+- **Velocidade:** pool lote 4 (18 capítulos) completou em ~2h (paralelo)
+- **Confiabilidade:** retry 3x + escalate para revisor capturou 100% de defeitos</code></pre>
+<hr />
+<h2 id="fase-13-checklist-final-de-replicação">FASE 13: CHECKLIST FINAL
+DE REPLICAÇÃO</h2>
+<h3 id="estrutura-de-pastas-cópia-direta">13.1 — Estrutura de Pastas
+(cópia direta)</h3>
+<pre><code>novo-projeto/
+├── .claude/
+│   ├── CLAUDE.md                           (customizar tema/regras específicas)
+│   ├── settings.json                       (adaptar paths absolutos)
+│   ├── RTK.md                              (manter como-está)
+│   ├── skills/                             (copiar 50+ skills)
+│   ├── commands/                           (copiar 19 commands, adaptar nomes se novo tipo)
+│   ├── agents/                             (copiar 7 subagentes)
+│   ├── mcp-servers/                        (copiar 4 MCPs)
+│   └── projects/novo-projeto/memory/       (novo: arquivo de auto-memória)
+├── scripts/                                (copiar 70+ scripts determinísticos)
+├── templates/                              (copiar Markdown/Typst/HTML)
+├── docs/                                   (copiar + customizar para novo domínio)
+├── melhorias/                              (novo: registar sessões e análises)
+├── relatorios/                             (novo: relatórios de sessão em MD+PDF)
+├── output/                                 (novo: artefatos finais)
+├── data/                                   (novo: estado_fabrica.db — SQLite)
+├── CLAUDE.md                               (hardlink → .claude/CLAUDE.md)
+├── .mcp.json                               (copiar, adaptar paths Windows)
+├── setup-links.ps1                         (script de portabilidade — rodar após clone)
+└── .git/
+    └── hooks/pre-commit                    (recopiar, não symlink)</code></pre>
+<h3 id="passos-de-configuração-pós-clone">13.2 — Passos de Configuração
+(pós-clone)</h3>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Criar junctions &amp; links (Windows)</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\s</span>cripts<span class="dt">\s</span>etup-links.ps1 <span class="at">-Verbose</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Adaptar CLAUDE.md (customizar apenas regras de domínio)</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Não mudar: estrutura R1–R17, squad, fluxo</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Mudar: nomes de skills se novo domínio, tipos de obra, exemplos</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Adaptar .mcp.json (paths absolutos)</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Substituir C:\Users\...\proj_fabrica → C:\Users\...\novo-projeto</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Inicializar banco de dados</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/parametros_obra.py <span class="at">--criar-db</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Teste estrutural (suíte completa)</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest scripts/ <span class="at">-q</span></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="ex">code-review-graph</span> status</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Commit inicial</span></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span></span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;chore(init): estrutura fábrica replicada, portabilidade configurada&quot;</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div>
+<h3 id="validação-pós-replicação">13.3 — Validação Pós-Replicação</h3>
+<pre><code>[Governança]
+✓ CLAUDE.md carregado (alwaysApply: true verificado)
+✓ .mcp.json válido (MCPs iniciam sem erro)
+✓ RTK.md presente (token economy configurada)
+✓ Pre-commit hook funciona (bloqueia commit vermelho)
+
+[Skills &amp; Comandos]
+✓ `/help` lista 50+ skills
+✓ `/criar-livro`, `/criar-artigo`, `/criar-tcc` executáveis
+✓ Skills de economia (caveman, headroom, lean-ctx) callable
+
+[Subagentes &amp; Scripts]
+✓ Subagentes instanciáveis (pool-capitulos.py --plano lista lotes)
+✓ Gates executam (auditar-obra.py --estrito sem erro)
+✓ Scripts determinísticos (validar-*.py, gerar-*.py, compilar-*.py)
+
+[Portabilidade]
+✓ `agentic/` → `.claude/`
+✓ `.agents/{agents,commands}` → `.claude/{agents,commands}`
+✓ `CLAUDE.md` hardlink
+✓ `.git/hooks/pre-commit` copiado
+
+[Infraestrutura]
+✓ Code-review-graph sincronizado
+✓ SQLite db_state inicializado
+✓ Junctions apontam corretamente (Mac: symlinks, Windows: junctions)
+✓ Arquivo de memória criado (auto-memory)</code></pre>
+<hr />
+<h2 id="conclusão">CONCLUSÃO</h2>
+<p>A <strong>Fábrica Agêntica de Publicações V5</strong> é um sistema
+robusto, modular e replicável. Cada novo projeto pode nascer com:</p>
+<ol type="1">
+<li>✅ Governança central (CLAUDE.md + settings.json + RTK.md)</li>
+<li>✅ 50+ skills especializadas (economia de tokens, redação,
+compilação)</li>
+<li>✅ 19 comandos orquestradores (fluxo imutável P&amp;D → F3)</li>
+<li>✅ 7 subagentes paralelos (pesquisador, redators, revisor,
+ilustrador)</li>
+<li>✅ 70+ scripts determinísticos (gates, compilação, indexação)</li>
+<li>✅ 4 MCPs (estado, escrita, PDF, inteligência)</li>
+<li>✅ Templates reutilizáveis (Markdown EITA-V2, Typst ABNT, HTML)</li>
+<li>✅ V5 Coleções (cascata livro → derivadas)</li>
+<li>✅ Portabilidade multi-IDE (Claude Code, Cursor, OpenCode, Codebuff,
+VSCode)</li>
+<li>✅ Token economy ativa (até 70% de economia)</li>
+</ol>
+<p><strong>Próximo passo:</strong> usar este plano como blueprint para
+replicar em novos projetos, adaptando apenas: - Nome do projeto +
+domínio (CLAUDE.md) - Tipos de obra específicos (scripts/tipos_obra.py)
+- Skills de domínio novo (se aplicável) - MCPs adicionais (conforme
+necessidade)</p>
+<hr />
+<p><strong>Documento gerado:</strong> 2026-08-23 | <strong>Análise
+completa:</strong> 13 fases, 30.000+ tokens | <strong>Formato:</strong>
+Markdown → PDF (Pandoc+Typst)</p>
+</body>
+</html>
