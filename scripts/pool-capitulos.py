@@ -25,6 +25,7 @@ import argparse
 import json
 import re
 import shutil
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -210,6 +211,46 @@ def imprimir_lote(indice, lote):
         print(f"  cap {c['capitulo']:>2} [{c['estado']}] {c['titulo'][:64]}{extra}")
 
 
+def validar_gates(slug, numero_capitulo):
+    """Validar Gates 1-4 em um capítulo. Retorna (passou, motivo)."""
+    arq = arquivo_capitulo(slug, numero_capitulo)
+    if not arq or not arq.exists():
+        return False, f"Arquivo cap {numero_capitulo} não encontrado"
+
+    gates = [
+        "gate_1_eita_structure.py",
+        "gate_2_code_completeness.py",
+        "gate_3_didactic_accessibility.py",
+        "gate_4_exercises_completeness.py"
+    ]
+
+    falhas = []
+    for gate in gates:
+        gate_path = Path(__file__).parent / gate
+        if not gate_path.exists():
+            falhas.append(f"{gate}: MISSING")
+            continue
+
+        try:
+            result = subprocess.run(
+                ["python", str(gate_path), str(arq)],
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+            if result.returncode != 0:
+                falhas.append(f"{gate}: FAILED")
+        except subprocess.TimeoutExpired:
+            falhas.append(f"{gate}: TIMEOUT")
+        except Exception as e:
+            falhas.append(f"{gate}: ERROR")
+
+    if falhas:
+        return False, " + ".join(falhas)
+
+    return True, "Gates OK ✅"
+
+
 def main():
     ap = argparse.ArgumentParser(description="Pool de execucao paralela por lotes")
     ap.add_argument("slug")
@@ -223,6 +264,7 @@ def main():
     ap.add_argument("--registrar", metavar="CAP", help="registra o resultado de um capitulo")
     ap.add_argument("--sucesso", action="store_true")
     ap.add_argument("--falha", nargs="?", const="falha nao especificada", metavar="MOTIVO")
+    ap.add_argument("--validar-gates", metavar="CAP", help="valida Gates 1-4 em um capitulo")
     ap.add_argument("--reescrever", metavar="CAP",
                     help="marca um capitulo para REEscrita: backup do atual em "
                          "revisao/backups/<ts>/ e volta a pendente (ate "
@@ -240,6 +282,16 @@ def main():
     if not (TO.dir_obra(args.slug, DIR_OUTPUT)).exists():
         print(f"[ERRO] Livro nao encontrado: {TO.dir_obra(args.slug, DIR_OUTPUT)}")
         return 1
+
+    if args.validar_gates:
+        numero = int(args.validar_gates)
+        passou, motivo = validar_gates(args.slug, numero)
+        if passou:
+            print(f"[OK] cap {numero}: {motivo}")
+            return 0
+        else:
+            print(f"[FALHA] cap {numero}: {motivo}")
+            return 1
 
     if args.registrar:
         estado = carregar_estado(args.slug)
