@@ -77,10 +77,13 @@ Set-Junction "agentic\commands"                           ".claude\commands"
 Set-Junction "agentic\mcp-servers"                        ".claude\mcp-servers"
 
 Write-Output "`n== Pastas .agents\ (junction para .claude\..., harnesses alternativos) =="
-Set-Junction ".agents\skills"                             ".claude\skills"
+# NAO expor skills\ e mcp-servers\ aqui: .agents\ e o diretorio de agentes do
+# Codebuff/Freebuff, que importa e executa os .js/.mjs que encontra dentro dele.
+# compilar-livro.mjs roda no import, imprime o USO e chama process.exit(1),
+# matando o CLI. Apenas agents\ e commands\ (somente .md) sao seguros aqui.
+# Skills e MCP servers seguem disponiveis via agentic\ e .opencode\.
 Set-Junction ".agents\agents"                             ".claude\agents"
 Set-Junction ".agents\commands"                           ".claude\commands"
-Set-Junction ".agents\mcp-servers"                        ".claude\mcp-servers"
 
 Write-Output "`n== Pastas .opencode\ (junction para .claude\..., OpenCode) =="
 Set-Junction ".opencode\skills"                             ".claude\skills"

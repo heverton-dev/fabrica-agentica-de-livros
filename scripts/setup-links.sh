@@ -49,10 +49,13 @@ link ".claude/mcp-servers" "agentic/mcp-servers"
 
 echo
 echo "== Pastas .agents/ (symlink para .claude/..., harnesses alternativos) =="
-link ".claude/skills" ".agents/skills"
+# NAO expor skills/ e mcp-servers/ aqui: .agents/ e o diretorio de agentes do
+# Codebuff/Freebuff, que importa e executa os .js/.mjs que encontra dentro dele.
+# compilar-livro.mjs roda no import, imprime o USO e chama process.exit(1),
+# matando o CLI. Apenas agents/ e commands/ (somente .md) sao seguros aqui.
+# Skills e MCP servers seguem disponiveis via agentic/ e .opencode/.
 link ".claude/agents" ".agents/agents"
 link ".claude/commands" ".agents/commands"
-link ".claude/mcp-servers" ".agents/mcp-servers"
 
 echo
 echo "== Pastas .opencode/ (symlink para .claude/..., OpenCode) =="
