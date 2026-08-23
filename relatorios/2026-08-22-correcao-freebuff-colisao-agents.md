@@ -78,4 +78,45 @@ O comando freebuff falhava dentro do projeto, imprimindo o USO do compilador-abn
 
 ---
 
+## 7. Adendo — Reconstrucao das junctions do projeto
+
+O relatorio original registrava, como pendencia em aberto, que nesta copia em
+`D:\Backup_C_...` **todas** as pastas espelho estavam materializadas como
+diretorios reais duplicados, ja divergindo da fonte (`compilar-livro.mjs` com
+17.677 bytes no espelho contra 18.130 em `.claude/`). O operador pediu a
+reconstrucao, feita na mesma sessao.
+
+**Verificacoes antes de apagar** (aplicando a licao do incidente da secao 2):
+
+- git nao rastreia nada nos espelhos: `agentic/` = 0 e `.agents/` = 0 arquivos
+  versionados; `.opencode/` = 1, apenas `plugins/fabrica-hooks.ts`, que nao e
+  junction e nao foi tocado. `.gitignore` cobre as 10 pastas.
+- nenhum arquivo exclusivo dos espelhos: as 10 arvores comparadas com `comm -23`
+  contra a fonte deram **0** arquivos que existiriam so na copia.
+- nenhum reparse point aninhado nos 10 espelhos — `Remove-Item -Recurse` nao
+  teria como atravessar para um alvo.
+
+**Execucao:** as 10 pastas reais foram removidas e `scripts/setup-links.ps1`
+recriou as junctions. A fonte permaneceu intacta (3401 / 7 / 19 / 375 arquivos
+em `.claude/{skills,agents,commands,mcp-servers}`, identico ao baseline medido
+antes da remocao).
+
+**Junctions ativas:** `agentic/{skills,agents,commands,mcp-servers}`,
+`.opencode/{skills,agents,commands,mcp-servers}` e `.agents/{agents,commands}`.
+`.agents/` **nao** recebeu `skills/` nem `mcp-servers/` — e exatamente a correcao
+do commit `f648552`, preservada.
+
+**Validacoes do adendo:**
+
+- propagacao provada por inode: `compilar-livro.mjs` tem inode `844424931101077`
+  e 18.130 bytes lido via `.claude/`, via `agentic/` e via `.opencode/` — mesmo
+  arquivo, sem duplicacao nem divergencia
+- espelhos agora servem a fonte atualizada (3401 arquivos em skills, nao os
+  3026 obsoletos)
+- `git ls-files -d` = 0 e `git status` limpo
+- freebuff continua abrindo a TUI dentro do projeto (sem regressao)
+- 833 testes passando
+
+---
+
 *Relatório gerado em 2026-08-22 — Fábrica Agêntica de Publicações*
