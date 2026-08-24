@@ -96,10 +96,9 @@ TIPOS = {
             "validar-escala.py",        # R-ES: limites/contorno na secao Aplica
             "validar-afirmacoes.py",    # R-AF: dado factual sem [N] no paragrafo
             "validar-fontes.py",        # R-FT: hierarquia A/B/C do dossier >= 70%
-            "validar-comandos-cli.py",  # R-CLI: comandos/flags em livros tecnicos (condicional)
+            "validar-comandos-cli.py",  # R-CLI: comando/CLI fabricado (opt-in
+                                        # via config_obra.json:categoria_tecnica)
         ),
-        # Categoria tecnica: ativa gate de comandos/CLI (livros sobre ferramentas/CLIs/frameworks)
-        "categoria_tecnica_default": False,
         # Transmutacao (reescrita entre tipos) — origens aceitas para nascer
         # como livro a partir de um material existente (expansao com custo).
         # `validar_reescrita()` confere; `transmutar-obra.py` recorta e registra.
@@ -622,6 +621,47 @@ def dir_obra(slug, base=None):
     return direto
 
 
+def _assert_dentro_do_hub(caminho_escrita, slug_mae, base=None):
+    """Guardiao de caminho: um artefato derivado de `slug_mae` precisa nascer
+    dentro do MESMO hub de colecao da obra-mae — nunca numa raiz plana orfa
+    (ex.: `output/playbooks/...` quando a mae vive em `output/<hub>/livros/...`).
+
+    Levanta ValueError se a mae vive num hub e `caminho_escrita` nao esta sob
+    esse hub. Quando a mae vive no layout PLANO (`output/<raiz>/<mae>`, sem
+    hub proprio), nao ha hub a proteger e a chamada e um no-op — layout plano
+    e valido por si (nao e todo material que pertence a uma colecao).
+
+    Existe para nao depender so da disciplina do agente em usar `dir_obra`
+    (ver RTK 2026-08-13: `fatiar-obra.py --playbook` e
+    `minerar-fontes-academicas.py` ja gravaram artefato fora do hub).
+    """
+    base = Path(base) if base is not None else DIR_OUTPUT
+    try:
+        base_r = base.resolve()
+    except OSError:
+        return
+    dir_mae = dir_obra(slug_mae, base)
+    try:
+        rel_mae = dir_mae.resolve().relative_to(base_r)
+    except ValueError:
+        return  # dir_mae fora de `base` (ex.: teste com layout atipico) -> nao valida
+    if not rel_mae.parts:
+        return
+    hub = rel_mae.parts[0]
+    if hub in _raizes_tipo():
+        return  # mae em layout plano: nao ha hub de colecao a proteger
+    hub_root = base_r / hub
+    caminho_escrita = Path(caminho_escrita).resolve()
+    try:
+        caminho_escrita.relative_to(hub_root)
+    except ValueError:
+        raise ValueError(
+            f"Escrita fora do hub da colecao '{hub}': esperado dentro de "
+            f"{hub_root}, recebido {caminho_escrita}. Use tipos_obra.dir_obra()/"
+            f"slug_curto() para resolver o caminho em vez de montar manualmente."
+        )
+
+
 def template_de(tipo):
     """Caminho do template Typst; cai no template.typ do livro se o proprio nao existir."""
     nome = campo(tipo, "template_typ")
@@ -694,6 +734,21 @@ def defaults_config(tipo, slug_mae_simples=None, extra=None):
     if extra:
         cfg.update(extra)
     return cfg
+
+
+def resolver_slug_mae(config_obra):
+    """Slug simples da obra-mae (livro/tcc do qual um derivado nasceu).
+
+    Fonte UNICA de leitura do vinculo pai-filho: `obra_mae` e `livro_mae` sao
+    gravados juntos por `defaults_config`, mas historicamente cada script lia
+    essas chaves numa ordem diferente (`livro_mae or obra_mae` num lugar,
+    `obra_mae or livro_mae` noutro) — se algum gravador antigo/manual so
+    setar uma delas, a ordem de leitura decide silenciosamente se o vinculo e
+    encontrado. Ver RTK 2026-08-10 ("obra_mae vs. serie/livro_mae").
+    Devolve None quando a obra nao tem mae (obra raiz).
+    """
+    config_obra = config_obra or {}
+    return config_obra.get("obra_mae") or config_obra.get("livro_mae") or None
 
 
 def matriz_derivacao():
