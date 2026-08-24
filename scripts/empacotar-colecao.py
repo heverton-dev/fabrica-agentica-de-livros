@@ -209,6 +209,18 @@ def empacotar(colecao, incluir_parciais=False):
         print(f"[ERRO] colecao nao encontrada: {colecao}")
         return None
 
+    # PONTO 5: Validar estrutura HUB POR COLECAO antes de empacotar
+    # (rejeita fallback plano na origem)
+    nucleo = manifesto.get("nucleo", {})
+    slug_nucleo = nucleo.get("slug", "")
+    if slug_nucleo:
+        try:
+            TO.dir_obra(slug_nucleo, DIR_OUTPUT, modo='escrita')
+        except ValueError as e:
+            print(f"[ERRO] Estrutura HUB inválida — NÃO EMPACOTANDO")
+            print(f"  {str(e)[:200]}")
+            return None
+
     migrar_prefixo_underscore(DIR_PACOTES)        # _distribuicao -> distribuicao
     validador = _importar_validador()
     # Por obra: o pacote nasce em <obra>/distribuicao/ (a serie analista ja tem

@@ -156,7 +156,7 @@ def main():
         base = Path(args.saida)
         dir_pesquisa = base.parent
     else:
-        dir_obra = TO.dir_obra(args.slug, TO.DIR_OUTPUT)
+        dir_obra = TO.dir_obra(args.slug, TO.DIR_OUTPUT, modo='escrita')
         dir_pesquisa = dir_obra / "pesquisa"
         base = dir_pesquisa / f"mineracao_academica_{Path(args.slug).name}"
     dir_pesquisa.mkdir(parents=True, exist_ok=True)

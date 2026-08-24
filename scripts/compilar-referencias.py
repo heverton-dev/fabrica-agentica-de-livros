@@ -160,7 +160,7 @@ def main():
         return 0
 
     linhas_md = ["# Referências Bibliográficas", ""] + [formatar_abnt(f) for f in unicas]
-    saida = Path(args.saida) if args.saida else TO.dir_obra(args.slug, DIR_OUTPUT) / "referencias_compiladas.md"
+    saida = Path(args.saida) if args.saida else TO.dir_obra(args.slug, DIR_OUTPUT, modo='escrita') / "referencias_compiladas.md"
     saida.parent.mkdir(parents=True, exist_ok=True)
     saida.write_text("\n".join(linhas_md) + "\n", encoding="utf-8")
 
