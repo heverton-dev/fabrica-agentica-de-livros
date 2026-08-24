@@ -761,7 +761,22 @@ def main():
     relatorio_gates = {}
     gates_falharam = []
     if tipo == "livro":
+        # Ler categoria_tecnica do config_obra
+        config_arquivo = dir_livro / "config_obra.json"
+        categoria_tecnica = False
+        if config_arquivo.exists():
+            try:
+                config = json.loads(config_arquivo.read_text(encoding="utf-8"))
+                categoria_tecnica = config.get("categoria_tecnica", False)
+            except Exception:
+                pass
+
         for nome in TO.campo(tipo, "gates_conteudo") or ():
+            # Gate de comandos/CLI: somente se categoria_tecnica=true
+            if nome == "validar-comandos-cli.py" and not categoria_tecnica:
+                relatorio_gates[nome] = {"exit": 0, "skip": "categoria_tecnica=false"}
+                continue
+
             gate = DIR_PROJETO / "scripts" / nome
             if not gate.exists():
                 relatorio_gates[nome] = {"exit": None, "erro": "script ausente"}

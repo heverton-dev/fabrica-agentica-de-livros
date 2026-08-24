@@ -3,18 +3,29 @@
 # Fonte versionada: scripts/hooks/pre-commit (copiado para .git/hooks/pre-commit
 # por scripts/setup-links.ps1|.sh, pois .git/hooks nao aceita link em todo SO).
 
-# Blindagem de segredos (melhorias/21-08-2026-plano-acao-tokens-sob-pericia.md,
-# item E): bloqueia o commit se o diff staged contiver padrao de credencial.
-# Roda ANTES do pytest (falha rapida, sem gastar tempo da suite). So examina
-# linhas ADICIONADAS (^+ sem contar o cabecalho +++), nunca as removidas.
-SEGREDO_PADROES='sk-[a-zA-Z0-9_-]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|AKIA[0-9A-Z]{16}|ghp_[a-zA-Z0-9]{36}|xox[baprs]-[0-9a-zA-Z-]+'
-SEGREDO_ACHADO=$(git diff --cached -U0 | grep -E '^\+' | grep -vE '^\+\+\+' | grep -E "$SEGREDO_PADROES")
-if [ -n "$SEGREDO_ACHADO" ]; then
-  echo "[BLOQUEADO] possivel segredo no diff staged (item E do plano de acao):"
-  echo "$SEGREDO_ACHADO"
-  echo "Remova o segredo do arquivo e injete via variavel de ambiente/cofre antes de comitar."
-  exit 1
-fi
+# === GATE DE SEGREDOS (Item E — 2026-08-21) ===
+# Bloqueia commit automático se o diff staged contiver padrão de segredo.
+# Padrões: chaves OpenAI (sk-*), AWS (AKIA*), PEM privada, token GitHub (ghp_*), Slack (xox*).
+
+PADROES_SEGREDO=(
+    'sk-[a-zA-Z0-9_-]{20,}'
+    'AKIA[0-9A-Z]{16}'
+    '-----BEGIN [A-Z ]*PRIVATE KEY'
+    'ghp_[a-zA-Z0-9]{36}'
+    'xox[baprs]-[0-9a-zA-Z-]+'
+)
+
+for padrao in "${PADROES_SEGREDO[@]}"; do
+    if git diff --cached | grep -E "$padrao" > /dev/null 2>&1; then
+        echo "[BLOQUEADO] possível segredo no diff staged"
+        echo ""
+        echo "Padrão detectado: $padrao"
+        git diff --cached | grep -n -E "$padrao" | head -5
+        echo ""
+        echo "Se é falso positivo, revise manualmente ou use 'git commit --no-verify' (com cuidado)."
+        exit 1
+    fi
+done
 
 python -m pytest -q
 if [ $? -ne 0 ]; then

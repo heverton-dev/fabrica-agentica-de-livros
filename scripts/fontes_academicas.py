@@ -69,12 +69,6 @@ TIMEOUT_SEGUNDOS = 25
 USER_AGENT = ("Mozilla/5.0 (compatible; FabricaAgentica/1.0; "
               "mineracao-academica; mailto:fabrica.agentica@local)")
 
-# Resiliencia de rede (melhorias/21-08-2026-plano-acao-tokens-sob-pericia.md,
-# item C): backoff exponencial com jitter so para falhas TRANSITORIAS.
-MAX_TENTATIVAS_REDE = 3
-BASE_BACKOFF_SEGUNDOS = 0.5
-STATUS_HTTP_TRANSITORIOS = {429, 502, 503, 504}
-
 MESES_PT = {1: "jan.", 2: "fev.", 3: "mar.", 4: "abr.", 5: "mai.", 6: "jun.",
             7: "jul.", 8: "ago.", 9: "set.", 10: "out.", 11: "nov.", 12: "dez."}
 
@@ -169,37 +163,29 @@ def descritor(fonte):
 
 # ── Helpers de rede ─────────────────────────────────────────────────────────
 
-def _http_get(url, timeout=TIMEOUT_SEGUNDOS, tentativas=MAX_TENTATIVAS_REDE):
-    """Retorna bytes da URL; levanta FonteIndisponivel apos esgotar tentativas.
-
-    Retry com backoff exponencial + jitter (0.5s, 1s, 2s... + ate 0.3s
-    aleatorio) SO para falhas transitorias: HTTP 429/502/503/504 ou
-    URLError de rede/timeout. Erro definitivo (404, 401, etc.) propaga na
-    primeira tentativa, sem esperar — nunca mascara um recurso que nao
-    existe como se fosse instabilidade passageira.
-    """
-    req = urllib.request.Request(
-        url, headers={"User-Agent": USER_AGENT, "Accept": "application/json,*/*"})
-    ultimo_erro = None
-    for tentativa in range(tentativas):
+def _http_get(url, timeout=TIMEOUT_SEGUNDOS):
+    """Retorna bytes da URL com retry em erros transitórios; levanta FonteIndisponivel em qualquer falha permanente."""
+    max_tentativas = 3
+    for tentativa in range(max_tentativas):
+        req = urllib.request.Request(
+            url, headers={"User-Agent": USER_AGENT, "Accept": "application/json,*/*"})
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read()
         except urllib.error.HTTPError as exc:
-            ultimo_erro = FonteIndisponivel(f"{url[:80]} -> HTTP {exc.code}")
-            if exc.code not in STATUS_HTTP_TRANSITORIOS:
-                raise ultimo_erro from exc
+            # Retry em erros transitórios (429, 502, 503)
+            if tentativa < max_tentativas - 1 and exc.code in (429, 502, 503):
+                espera = 0.5 * (2 ** tentativa) + random.uniform(0, 0.3)
+                print(f"[Retry {tentativa+1}/{max_tentativas}] {url[:60]} em {espera:.2f}s")
+                time.sleep(espera)
+                continue
+            # Erro permanente ou última tentativa
+            raise FonteIndisponivel(f"{url[:80]} -> HTTP {exc.code}") from exc
         except urllib.error.URLError as exc:
             razao = getattr(exc, "reason", exc)
-            ultimo_erro = FonteIndisponivel(f"{url[:80]} -> rede/DNS ({razao})")
+            raise FonteIndisponivel(f"{url[:80]} -> rede/DNS ({razao})") from exc
         except Exception as exc:  # noqa: BLE001 — timeout/parse contam como indisponivel
             raise FonteIndisponivel(f"{url[:80]} -> {exc}") from exc
-
-        if tentativa < tentativas - 1:
-            espera = BASE_BACKOFF_SEGUNDOS * (2 ** tentativa) + random.uniform(0, 0.3)
-            time.sleep(espera)
-
-    raise ultimo_erro
 
 
 def _http_get_json(url):
