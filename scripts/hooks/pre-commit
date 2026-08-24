@@ -16,6 +16,34 @@ if [ -n "$SEGREDO_ACHADO" ]; then
   exit 1
 fi
 
+# PONTO 4: Validação de estrutura HUB POR COLEÇÃO (V5) — endurecimento 2026-08
+# Bloqueia commit se há mudanças em output/ e estrutura HUB é inválida
+if git diff --cached --name-only | grep -q '^output/'; then
+  echo "[pre-commit] Validando estrutura HUB POR COLECAO..."
+  python -c "
+import sys
+from pathlib import Path
+import tipos_obra as TO
+
+dir_output = Path('output')
+raizes_planas = {TO.raiz_output(t) for t in TO.tipos_raiz()}
+raizes_planas.discard('distribuicao')
+
+for tipo in raizes_planas:
+    raiz = dir_output / tipo
+    if raiz.exists():
+        try:
+            for obra in raiz.iterdir():
+                if obra.is_dir() and not obra.name.startswith('_'):
+                    print(f'ERRO: Raiz plana detectada: {tipo}/{obra.name}')
+                    print(f'      Regra V5: use output/<obra>/{tipo}/<material>')
+                    sys.exit(1)
+        except OSError:
+            pass
+print('[OK] Estrutura HUB validada')
+" || exit 1
+fi
+
 python -m pytest -q
 if [ $? -ne 0 ]; then
   echo "[BLOQUEADO] suite de testes vermelha - corrija a causa antes de comitar (R16)"

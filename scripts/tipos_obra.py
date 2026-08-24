@@ -566,14 +566,32 @@ def _obra_raiz(slug_mae_simples, base=None):
     return None
 
 
-def dir_obra(slug, base=None):
+def dir_obra(slug, base=None, modo='leitura'):
     """Resolve um slug (obra raiz ou derivado) para o diretorio real em output/.
+
+    Args:
+        slug: identificador da obra (ex: 'deepseek-harness-do-zero-ao-phd')
+        base: diretório base (padrão: DIR_OUTPUT)
+        modo: 'leitura' (aceita fallback plano) ou 'escrita' (rejeita fallback)
+
+    Returns:
+        Path: caminho resolvido no hub
+
+    Raises:
+        ValueError: se modo='escrita' e hub não encontrado (estrutura inválida)
+
+    Regra HUB POR COLEÇÃO (V5):
+    - Nenhuma raiz plana (output/livros/, output/playbooks/, etc.)
+    - Tudo dentro de hubs: output/<slug>/livros/, output/<slug>/playbooks/
+    - 1 manifesto por hub: output/<slug>/colecoes/<slug>.json
 
     Layouts suportados:
       - plano:        output/<tipo>/<slug>
       - por obra:     output/<obra>/<tipo>/<slug>        (derivado)
       - raiz single:  output/<obra>/<tipo>               (obra == nome do slug)
-    Quando nada existe, devolve o caminho plano (fallback de escrita).
+
+    Quando nada existe e modo='leitura', devolve o caminho plano (fallback).
+    Quando nada existe e modo='escrita', lança ValueError (rejeita fallback).
     `base` permite resolver contra um output-raiz alternativo (testes).
 
     V5.1: procura em todos os hubs de colecao e subpastas de tipo.
@@ -609,6 +627,15 @@ def dir_obra(slug, base=None):
                         cand = subdir / slug
                         if cand.exists():
                             return cand
+        # Se modo='escrita', rejeita fallback plano (exceto se slug comeca com raiz de tipo
+        # — nesse caso e layout plano intencional, permitido em testes)
+        if modo == 'escrita':
+            raise ValueError(
+                f"❌ HUB NÃO ENCONTRADO (estrutura inválida para escrita): '{slug}'\n"
+                f"Regra HUB POR COLEÇÃO (V5): obra deve estar em output/<slug>/<tipo>/\n"
+                f"Verifique se a obra foi criada corretamente com /esbocar ou /criar-<tipo>.\n"
+                f"Raízes planas (output/livros/, output/playbooks/) são PROIBIDAS em V5."
+            )
         return direto
     for obra in _sereis(base):                       # multi-book raiz
         cand = obra / tipo / resto
@@ -618,6 +645,12 @@ def dir_obra(slug, base=None):
         cand = base / resto / tipo
         if cand.exists():
             return cand
+    # Layout plano <tipo>/<algo>/<algo> e PERMITIDO mesmo em modo='escrita':
+    # 1. Para tipos raiz (livros/, tccs/), e o unico layout disponivel
+    # 2. Para tipos derivados, e permitido por compatibilidade (testes, obras antigas)
+    # O que e PROIBIDO e criar NOVO no layout plano RAIZO quando ha hub em jogo
+    # (estrutura invalidaria a regra HUB POR COLECAO — mas dir_obra nao sabe disso
+    # localmente, fica para _assert_dentro_do_hub validar no contexto da colecao).
     return direto
 
 

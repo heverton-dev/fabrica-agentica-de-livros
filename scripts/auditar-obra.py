@@ -630,6 +630,22 @@ def montar_requisitos_academico(capitulos, tipo, min_refs, caracteres_obra=None)
     return requisitos
 
 
+def gate_r_str_1_estrutura_hub(slug):
+    """Gate R-STR-1: Estrutura HUB POR COLECAO é conforme?
+
+    Falha (retorna False) se:
+    - Obra está em raiz plana (output/livros/, output/playbooks/)
+    - Hub não existe ou está órfão (estrutura inválida para escrita)
+
+    Retorna True se estrutura é válida (hub encontrado).
+    """
+    try:
+        TO.dir_obra(slug, DIR_OUTPUT, modo='escrita')
+        return True
+    except ValueError:
+        return False
+
+
 def montar_alertas_estilo(capitulos, vocabulario):
     """Recomendacoes NAO bloqueantes de forma de comunicacao (nao afetam o veredito).
 
@@ -682,6 +698,18 @@ def main():
     ap.add_argument("--estrito", action="store_true", help="exit 1 se a obra estiver NAO CONFORME")
     ap.add_argument("--json", action="store_true", help="imprime relatorio JSON completo")
     args = ap.parse_args()
+
+    # Gate R-STR-1: Estrutura HUB POR COLECAO é conforme?
+    # PRIMEIRO check antes de qualquer operacao
+    if not gate_r_str_1_estrutura_hub(args.slug):
+        print(f"[ERRO] Gate R-STR-1 (Estrutura HUB) FALHOU")
+        print(f"  Regra HUB POR COLECAO (V5): obra deve estar em output/<slug>/<tipo>/")
+        print(f"  Raízes planas (output/livros/, output/playbooks/) são PROIBIDAS em V5.")
+        print(f"  Verifique se a obra foi criada corretamente com /esbocar ou /criar-<tipo>.")
+        if args.estrito:
+            return 1
+        # Em modo compatibilidade (sem --estrito), apenas alerta mas continua
+        print(f"[AVISO] Continuando em modo compatibilidade (sem --estrito)...")
 
     dir_livro = TO.dir_obra(args.slug, DIR_OUTPUT)
     dir_caps = dir_livro / "capitulos"

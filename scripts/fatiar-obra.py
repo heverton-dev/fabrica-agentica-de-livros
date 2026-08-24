@@ -312,7 +312,7 @@ def gerar_playbook(slug):
 
     titulo_obra = sumario.get("titulo_obra", slug_mae_simples)
     slug_pbk = TO.slug_curto("playbook", slug_mae_simples, nome=titulo_obra, base=DIR_OUTPUT)
-    dir_pbk = TO.dir_obra(slug_pbk, DIR_OUTPUT)
+    dir_pbk = TO.dir_obra(slug_pbk, DIR_OUTPUT, modo='escrita')
     TO._assert_dentro_do_hub(dir_pbk, slug, DIR_OUTPUT)
     for sub in ("passos", "imagens", "revisao"):
         (dir_pbk / sub).mkdir(parents=True, exist_ok=True)
