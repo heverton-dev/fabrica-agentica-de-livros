@@ -6,14 +6,20 @@ Você é o Orquestrador Mestre. O operador disparou `/esbocar` com o tema em `$A
 Esta é a **Fase 0** — a única rodada de perguntas de toda a esteira.
 
 ## Passo 0 — Preparação
-1. Slug em kebab-case a partir do tema. Se `output/livros/<slug>/` ou
-   `output/tccs/<slug>/` já existir com conteúdo, use sufixo `-v2`.
-2. A pasta raiz da obra (`output/livros/<slug>/` ou `output/tccs/<slug>/`, conforme
-   o tipo escolhido no Passo 1) só é criada no Passo 2, quando o tipo já é conhecido —
-   livros, TCCs, artigos e e-books vivem em raízes separadas no topo de `output/`
-   (`output/livros/`, `output/tccs/`, `output/artigos/`, `output/ebooks/`); artigos e
-   e-books derivados de uma obra não ficam aninhados dentro da pasta da obra-mãe,
-   apenas referenciam o slug dela via `slug_livro_mae`.
+1. Slug em kebab-case a partir do tema. Se `output/<slug>/livros/` ou
+   `output/<slug>/tccs/` já existir com conteúdo, use sufixo `-v2`.
+2. **REGRA HUB POR COLEÇÃO (V5) — obrigatória, sem exceção:** a pasta raiz da obra
+   é sempre `output/<slug>/<prefixo>/` (hub primeiro, tipo depois — ex.:
+   `output/economia-extrema-de-tokens/livros/`), só criada no Passo 2 quando o tipo
+   já é conhecido. **NUNCA** crie raízes planas no topo de `output/`
+   (`output/livros/<slug>/`, `output/tccs/<slug>/`, `output/playbooks/<slug>/`
+   etc.) — `dir_obra(..., modo='escrita')` rejeita esse layout e todo o resto da
+   esteira (colecao.py, empacotar-distribuicao.py, validar-artefatos.py) espera
+   o hub. Artigos, e-books e demais derivados de uma obra vivem **dentro do
+   mesmo hub** (`output/<slug>/artigos/`, `output/<slug>/ebooks/`,
+   `output/<slug>/playbooks/<material>/`, um nível abaixo do tipo, sem pasta
+   intermediária) — nunca em raiz própria no topo — e referenciam a obra-mãe via
+   `slug_livro_mae`/`obra_mae`.
 
 ## Passo 1 — Elicitação (2 rodadas de `AskUserQuestion`)
 
@@ -63,7 +69,12 @@ série: qualquer texto livre (ou `null` se "Não, standalone").
 ## Passo 2 — Gravar `config_obra.json`
 
 Com o `tipo_obra` já respondido no Passo 1, defina `prefixo = "livros"` (tipo_obra=livro)
-ou `prefixo = "tccs"` (tipo_obra=tcc) e crie `output/<prefixo>/<slug>/`.
+ou `prefixo = "tccs"` (tipo_obra=tcc) e crie a pasta física em
+`output/<slug>/<prefixo>/` (hub primeiro — REGRA HUB do Passo 0; NUNCA
+`output/<prefixo>/<slug>/`). O identificador lógico usado em todas as chamadas
+de script deste comando continua sendo `<prefixo>/<slug>` (ex.:
+`livros/<slug>`) — é essa string que `dir_obra()` resolve para o caminho físico
+correto no hub; não confundir identificador lógico com caminho de criação.
 
 **Capa (Gap 3):** Antes de gravar o config, pergunte em até 4 perguntas, ainda na Rodada 1 ou 2:
 
@@ -77,8 +88,8 @@ No config, os campos `cor_primaria`, `subtitulo`, `edition_tag` são **obrigató
 para `tipo_obra=livro` (Gap 3). Sem eles o `gerar-capa.py` usa fallback errado
 (cor da série, subtítulo genérico) e a capa sai visualmente divergente do padrão.
 
-Grave `output/<prefixo>/<slug>/config_obra.json` (raiz da obra, sem subpasta `esboco/`)
-no schema:
+Grave `output/<slug>/<prefixo>/config_obra.json` (raiz física da obra dentro do
+hub, sem subpasta `esboco/`) no schema:
 ```json
 {
   "tema": "$ARGUMENTS",

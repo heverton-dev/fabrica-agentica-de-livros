@@ -33,6 +33,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from series_capa import resolver_cor, resolver_serie_key  # noqa: E402
 
 AUTOR_PADRAO = "Heverton Eduardo Peres"
+
+RE_DOLLAR_SOLTO = re.compile(r"(?<!\\)\$(?!\$)")
+
+
+def _escapar_typst(valor):
+    r"""Escapa `$` solitario (nao precedido de `\` nem seguido de outro `$`) para
+    o Pandoc/Typst nao interpretar como abertura de modo matematico — mesma
+    regra ja aplicada ao corpo do livro em `converter-md-pdf.ps1`, mas que
+    faltava nas variaveis -V (sinopse, titulo etc.) do caminho Python."""
+    return RE_DOLLAR_SOLTO.sub(r"\\$", valor)
 LOCAL_PADRAO = "São Paulo"
 EDITORA_PADRAO = "Fábrica Agêntica de Livros"
 
@@ -298,7 +308,7 @@ def variaveis_pandoc_tcc(dados):
     for chave in CHAVES_PANDOC_TCC:
         valor = (dados.get(chave) or "").strip()
         if valor:
-            args += ["-V", f"{chave}={valor}"]
+            args += ["-V", f"{chave}={_escapar_typst(valor)}"]
     return args
 
 
@@ -344,7 +354,7 @@ def variaveis_pandoc_artigo(dados):
     for chave in CHAVES_PANDOC_ARTIGO:
         valor = (dados.get(chave) or "").strip()
         if valor:
-            args += ["-V", f"{chave}={valor}"]
+            args += ["-V", f"{chave}={_escapar_typst(valor)}"]
     return args
 
 
@@ -457,7 +467,7 @@ def _variaveis(dados, chaves):
     for chave in chaves:
         valor = (dados.get(chave) or "").strip()
         if valor:
-            args += ["-V", f"{chave}={valor}"]
+            args += ["-V", f"{chave}={_escapar_typst(valor)}"]
     return args
 
 
@@ -479,7 +489,7 @@ def variaveis_pandoc(metadados):
     for chave in CHAVES_PANDOC:
         valor = (metadados.get(chave) or "").strip()
         if valor:
-            args += ["-V", f"{chave}={valor}"]
+            args += ["-V", f"{chave}={_escapar_typst(valor)}"]
     return args
 
 
