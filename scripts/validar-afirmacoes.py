@@ -50,21 +50,34 @@ RE_DADO = re.compile(
 # Superlativos: regex com boundary para NAO casar "maioria" ("a maior" ∈ "a maioria")
 # nem unicidade técnica ("único identificador") nem "primeiro arquivo".
 # "primeir[oa] a <verbo-r>" preserva reivindicação de pioneirismo ("primeiro a lançar").
+# Negative lookahead em "parte"/"parcela"/"fatia": "a maior parte" é o idiomatico
+# "most of" (quantificador vago), não reivindicação de liderança/superlativo —
+# mesma categoria de ajuste que excluiu "a maioria" (RTK 2026-08-11).
 RE_SUPERLATIVO = re.compile(
-    r"\b(?:o|a|os|as)\s+maior(?:es)?\b|"
-    r"l[íi]der(?:es)?\s+do?\s+mercado|recorde|record|"
+    r"\b(?:o|a|os|as)\s+maior(?:es)?\b(?!\s+(?:parte|parcela|fatia)\b)|"
+    r"l[íi]der(?:es)?\s+do?\s+mercado|\brecorde\b|\brecord\b|"
     r"imposs[íi]vel|primeir[oa]\s+a\s+[a-zà-ÿ]+r\b",
     re.IGNORECASE,
 )
 GARANTIAS = ("garantid", "obrigatoriamente", "100% dos", "100% das")
 RE_CITACAO = re.compile(r"\[\d+(?:\s*,\s*\d+)*(?:\s*-\s*\d+)?\]")
-# Cenas/exercícios do autor: números pertencem ao livro, não a fonte externa.
-# Checklist de exercício, cena narrativa na seção Aplica e lista numerada de
-# instrução são o MESMO caso do "**Desafio" já excluído — dados didáticos, não
-# dado factual a citar. (Ajuste calibrado 2026-08-11 — RTK: "superlativos de
-# ênfase e garantias técnicas não são disparadores factuais (ruído)".)
+# Aparato didático do template EITA-V2 (seção Aplica): cena narrativa, seus
+# rótulos de comentário fixos (Métricas, Armadilhas comuns, Erros de
+# julgamento, Antipadrão observável, Síntese operacional, Nota do revisor,
+# "Três regras...") e exercícios ("Desafio") carregam números do PRÓPRIO
+# livro — ilustrativos do exemplo construído, não uma afirmação empírica
+# externa a citar. É o mesmo caso já aberto pelo "**Desafio" original,
+# generalizado para os demais rótulos do template. (Ajuste calibrado
+# 2026-08-11 — RTK: "superlativos de ênfase e garantias técnicas não são
+# disparadores factuais (ruído)" — e 2026-09-12: rótulos fixos do Aplica.)
 RE_CENA_AUTOR = re.compile(
-    r"^(?:-\s*\[\s?\]|\*\*Situa[çc][ãa]o|\*\*Cena|\*\*Desafio|Desafio opcional|"
+    r"^(?:-\s*\[\s?\]|\*\*Situa[çc][ãa]o|"
+    r"\*\*(?:A\s+|Primeira\s+|Segunda\s+|Terceira\s+)?[Cc]ena\b|"
+    r"\*\*Desafio|Desafio opcional|"
+    r"\*\*M[ée]tricas(?:\s+de\s+sucesso)?\b|\*\*Armadilhas comuns\b|"
+    r"\*\*Erros de julgamento\b|\*\*Antipadr[ãa]o observ[áa]vel\b|"
+    r"\*\*S[íi]ntese\b|\*\*Nota do revisor\b|Tr[êe]s regras\b|"
+    r"-\s*\*\*[A-ZÁ-Ú]|"
     r"Voc[êe]\s+(?:é|está|investiga|percebe|decide|abre|trabalha|descobre)|Em termos práticos)",
     re.IGNORECASE,
 )
@@ -77,11 +90,14 @@ REGRAS = {
 
 
 def _paragrafos(texto):
-    """Parágrafos fora de código; descarta headings, tabelas, citações diretas
-    e exercícios do autor (Desafio — os números pertencem ao livro, não a uma
-    fonte externa que precise de citação)."""
+    """Parágrafos fora de código; descarta headings, tabelas, citações diretas,
+    o aparato didático do Aplica (Cena/Métricas/Armadilhas/.../Nota do revisor
+    — números do próprio exemplo construído, não fato externo a citar) e sua
+    continuação em prosa (parágrafo sem rótulo próprio que dá sequência a uma
+    cena já aberta)."""
     limpo = sem_codigo(texto or "")
     saida = []
+    em_cena = False
     for p in re.split(r"\n\s*\n", limpo):
         p = p.strip()
         if not p:
@@ -89,7 +105,10 @@ def _paragrafos(texto):
         primeira = p.splitlines()[0].strip()
         if primeira.startswith(("#", "|", ">")):
             continue
-        if RE_CENA_AUTOR.match(primeira) or RE_LISTA_INSTRUCAO.match(primeira):
+        if RE_CENA_AUTOR.match(primeira):
+            em_cena = True
+            continue
+        if em_cena or RE_LISTA_INSTRUCAO.match(primeira):
             continue
         saida.append(p)
     return saida

@@ -55,9 +55,26 @@ def _ler_json(caminho, padrao=None):
     return padrao if padrao is not None else {}
 
 
+def _nome_hub(slug, dir_mae):
+    """Nome simples da obra para derivar o slug do playbook.
+
+    `slug` pode vir em duas ordens: legado `<tipo>/<nome>` (ex.: "livros/x",
+    onde Path(slug).name == "x" já é o nome certo) ou hub V5 `<hub>/<tipo>`
+    (ex.: "engenharia-agentica/livros", onde Path(slug).name == "livros" —
+    o nome da pasta de TIPO, não da obra). Distingue os dois casos pelo pai
+    do diretório resolvido: se ele é uma raiz de tipo conhecida (livros,
+    tccs, ...), o nome da obra é o avô (o hub); senão, layout legado.
+    """
+    raizes_tipo = {TO.raiz_output(t) for t in TO.tipos_validos()}
+    if dir_mae.name in raizes_tipo:
+        return dir_mae.parent.name
+    return Path(slug).name
+
+
 def contexto_da_obra(slug):
     """Mapa capitulo -> {titulo, objetivo, estagio} + metadados herdados do livro-mae."""
     dir_mae = TO.dir_obra(slug, DIR_OUTPUT)
+    nome_simples = _nome_hub(slug, dir_mae)
     sumario = _ler_json(dir_mae / "sumario_macro.json")
     config = _ler_json(dir_mae / "config_obra.json")
     motivo = sumario.get("motivo_condutor") or {}
@@ -86,8 +103,8 @@ def contexto_da_obra(slug):
 
     return {
         "slug_mae": slug,
-        "slug_mae_simples": Path(slug).name,
-        "titulo_obra": sumario.get("titulo_obra", Path(slug).name),
+        "slug_mae_simples": nome_simples,
+        "titulo_obra": sumario.get("titulo_obra", nome_simples),
         "introducao": sumario.get("introducao", ""),
         "motivo_condutor": motivo,
         "persona": motivo.get("persona_leitor", "Praticante"),
