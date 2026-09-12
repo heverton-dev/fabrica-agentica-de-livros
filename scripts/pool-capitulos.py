@@ -264,6 +264,8 @@ def validar_gates(slug, numero_capitulo):
                 ["python", str(gate_path), str(arq)],
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
+                errors="replace",
                 timeout=30
             )
             if result.returncode != 0:
@@ -280,6 +282,7 @@ def validar_gates(slug, numero_capitulo):
 
 
 def main():
+    TO.console_utf8()
     ap = argparse.ArgumentParser(description="Pool de execucao paralela por lotes")
     ap.add_argument("slug")
     ap.add_argument("--lote", type=int, default=LOTE_PADRAO,
