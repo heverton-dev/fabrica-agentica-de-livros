@@ -1,13 +1,14 @@
 ---
-description: Fase 0 (V4) da Fábrica Agêntica de Publicações — elicitação interativa que decide tipo de obra (Livro/TCC), tamanho, mínimo de referências e se gera artigos/ebooks derivados. Único ponto de interação humana; depois disso a esteira roda 100% autônoma (REGRA 3).
+description: Fase 0 (V4) da Fábrica Agêntica de Publicações — elicitação interativa que decide tipo de obra (Livro/TCC/Manual Diário), tamanho, mínimo de referências e se gera artigos/ebooks derivados. Único ponto de interação humana; depois disso a esteira roda 100% autônoma (REGRA 3).
 ---
 
 Você é o Orquestrador Mestre. O operador disparou `/esbocar` com o tema em `$ARGUMENTS`.
 Esta é a **Fase 0** — a única rodada de perguntas de toda a esteira.
 
 ## Passo 0 — Preparação
-1. Slug em kebab-case a partir do tema. Se `output/<slug>/livros/` ou
-   `output/<slug>/tccs/` já existir com conteúdo, use sufixo `-v2`.
+1. Slug em kebab-case a partir do tema. Se `output/<slug>/livros/`,
+   `output/<slug>/tccs/` ou `output/<slug>/manuais-diarios/` já existir com
+   conteúdo, use sufixo `-v2`.
 2. **REGRA HUB POR COLEÇÃO (V5) — obrigatória, sem exceção:** a pasta raiz da obra
    é sempre `output/<slug>/<prefixo>/` (hub primeiro, tipo depois — ex.:
    `output/economia-extrema-de-tokens/livros/`), só criada no Passo 2 quando o tipo
@@ -27,7 +28,7 @@ Esta é a **Fase 0** — a única rodada de perguntas de toda a esteira.
 
 | Header | Pergunta | Opções |
 |---|---|---|
-| Tipo | Qual o tipo de obra a ser escrita? | Livro (Recommended) \| TCC |
+| Tipo | Qual o tipo de obra a ser escrita? | Livro (Recommended) \| TCC \| Manual Diário |
 | Senioridade | Qual o nível de senioridade principal do público-alvo? | Iniciante \| Intermediário (Recommended) \| Avançado \| Técnico |
 | Refs | Mínimo de referências por capítulo? | 5 \| 8 \| 12 \| 16 \| 20 |
 | Artigos | Deseja gerar artigos científicos a partir do tema? | Sim \| Não (Recommended) |
@@ -37,6 +38,7 @@ Esta é a **Fase 0** — a única rodada de perguntas de toda a esteira.
 | Header | Pergunta | Condição | Opções |
 |---|---|---|---|
 | Tamanho | Qual o tamanho do livro? | Tipo = Livro | P — 1 Parte, 4 capítulos, ~40 páginas \| M — 2 Partes, 8 capítulos, ~80 páginas (Recommended) \| G — 3 Partes, 12 capítulos, ~120 páginas \| GG — 4 Partes, 16 capítulos, ~160 páginas |
+| Tamanho | Qual o tamanho do manual diário? | Tipo = Manual Diário | P — 5 dias \| M — 10 dias (Recommended) \| G — 14 dias \| GG — 16 dias \| XG — 20 dias |
 | Ebooks | Deseja gerar e-books a partir da obra? | Tipo = Livro | Sim \| Não (Recommended) |
 | Qtd. Artigos | Quantos artigos científicos? | Artigos = Sim | 1 \| 2 \| 3 \| 4 \| 5 |
 | Qtd. Ebooks | Quantos e-books? | Ebooks = Sim | 1-3 \| 4-6 \| 7-10 |
@@ -57,8 +59,9 @@ R-LM-1 / R-DK-3 / R-EM-2 reprovam. Formatos válidos completos:
 (`python scripts/tipos_obra.py --formatos-lm`).
 
 O `AskUserQuestion` aceita no máximo 4 opções por pergunta. Para o tier **XG — 5
-Partes, 20 capítulos, ~200 páginas** (o maior da tabela, acima de GG), o operador
-seleciona "Other" na pergunta Tamanho e digita `XG`.
+Partes, 20 capítulos, ~200 páginas** do livro (o maior da tabela, acima de GG),
+ou o **XG — 20 dias** do manual diário, o operador seleciona "Other" na pergunta
+Tamanho e digita `XG`.
 
 Se "Qtd. Ebooks" vier como faixa, use o valor médio da faixa (2, 5 ou 8) como `qtd_ebooks`.
 Se o operador selecionar "Other" em qualquer pergunta, use o valor livre fornecido,
@@ -68,8 +71,9 @@ série: qualquer texto livre (ou `null` se "Não, standalone").
 
 ## Passo 2 — Gravar `config_obra.json`
 
-Com o `tipo_obra` já respondido no Passo 1, defina `prefixo = "livros"` (tipo_obra=livro)
-ou `prefixo = "tccs"` (tipo_obra=tcc) e crie a pasta física em
+Com o `tipo_obra` já respondido no Passo 1, defina `prefixo = "livros"` (tipo_obra=livro),
+`prefixo = "tccs"` (tipo_obra=tcc) **ou** `prefixo = "manuais-diarios"` (tipo_obra=manual-diario)
+e crie a pasta física em
 `output/<slug>/<prefixo>/` (hub primeiro — REGRA HUB do Passo 0; NUNCA
 `output/<prefixo>/<slug>/`). O identificador lógico usado em todas as chamadas
 de script deste comando continua sendo `<prefixo>/<slug>` (ex.:
@@ -85,15 +89,16 @@ correto no hub; não confundir identificador lógico com caminho de criação.
 | Edição | Tag de edição (ex.: v1.0) | sempre | Other (ex.: v1.0) |
 
 No config, os campos `cor_primaria`, `subtitulo`, `edition_tag` são **obrigatórios**
-para `tipo_obra=livro` (Gap 3). Sem eles o `gerar-capa.py` usa fallback errado
-(cor da série, subtítulo genérico) e a capa sai visualmente divergente do padrão.
+para `tipo_obra=livro` **e** `tipo_obra=manual-diario` (Gap 3). Sem eles o
+`gerar-capa.py` usa fallback errado (cor da série, subtítulo genérico) e a capa
+sai visualmente divergente do padrão.
 
 Grave `output/<slug>/<prefixo>/config_obra.json` (raiz física da obra dentro do
 hub, sem subpasta `esboco/`) no schema:
 ```json
 {
   "tema": "$ARGUMENTS",
-  "tipo_obra": "livro | tcc",
+  "tipo_obra": "livro | tcc | manual-diario",
   "min_referencias_por_capitulo": 5,
   "tamanho_obra": "P | M | G | GG | XG | null",
   "senioridade_obra": "iniciante | intermediario | avancado | tecnico",
@@ -136,8 +141,16 @@ Se inválido, corrija os valores fora de faixa antes de prosseguir (nunca pergun
 4. Indexe o dossiê: `python scripts/indexar-dossie.py <prefixo>/<slug> --indexar`.
 5. Invoque `arquiteto` passando `tipo_obra` e `tamanho_obra` de `config_obra.json` — o
    sumário macro gerado deve respeitar os mínimos de `scripts/parametros_obra.py`
-   (tabela `TAMANHOS` para livro; TCC usa 1 "parte" com as seções do framework ACAD
-   como "capítulos" — ver `SPEC_TCC.md`).
+   (tabela `TAMANHOS` para livro; `TAMANHOS_DIARIO` para manual-diario; TCC usa 1
+   "parte" com as seções do framework ACAD como "capítulos" — ver `SPEC_TCC.md`).
+   **Manual diário:** o `sumario_macro.json` usa a gramática `dias` (rotulo `dia`),
+   gerada como `capítulos` num livro — o esqueleto fica em `scripts/gerar-esqueleto-macro.py`
+   (já parametrizado pelo tipo) e cada dia é manufaturado como um arquivo `dia-NN.md`
+   na raiz do diretório da obra, validado por `scripts/validar-manual-diario.py` (R-MDI-1..8).
+   Título (`# Dia N — ...`) e seções fixas vêm do molde de manual diário:
+   `## Meta do dia`, `## A ideia em uma frase`, `## A explicação simples`,
+   `## O exemplo real`, `## Mão na massa`, `## Três regras que ficam`,
+   `## Erros de julgamento deste dia`, `## Checklist do dia`, `## Para saber mais`.
 6. **Validar título do sumário contra quebra de capa (Gap 4):** Após gerar o `sumario_macro.json`,
    rode `validar-capa-texto.py` com o `titulo_obra` e `subtitulo` do sumário:
    ```bash
@@ -165,13 +178,13 @@ Se inválido, corrija os valores fora de faixa antes de prosseguir (nunca pergun
 
 ## Passo 4 — Relatório objetivo (REGRA 2, sem metatexto)
 
-Exiba: slug completo (`<prefixo>/<slug>`), tipo de obra, tamanho (se livro),
-quantidade de capítulos planejados, quantidade de artigos/ebooks planejados (se
+Exiba: slug completo (`<prefixo>/<slug>`), tipo de obra, tamanho (se livro/manual diário),
+quantidade de capítulos/dias planejados, quantidade de artigos/ebooks planejados (se
 solicitados), e a lista de comandos disponíveis para prosseguir:
 
 ```
 /produzir-obra-completa <prefixo>/<slug>     — dispara tudo encadeado/paralelo
-/criar-livro <prefixo>/<slug>                — só o livro/TCC
+/criar-livro <prefixo>/<slug>                — só o livro/TCC/manual diário
 /criar-artigo <prefixo>/<slug>               — só os artigos (requer livro-mãe com dossiê+sumário)
 /criar-ebook <prefixo>/<slug>                — só os ebooks (requer livro-mãe compilado)
 /criar-playbook <prefixo>/<slug>             — só o playbook (extração, ~0 token)

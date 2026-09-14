@@ -431,7 +431,7 @@ def compilar_livro(slug):
     # output/<obra>/<tipo>/ — ex.: output/gratis-open-source/livros/).
     if not (dir_livro / "capitulos").exists() and not (dir_livro / "livro_final.md").exists():
         for raiz_tipo in ("livros", "tccs", "artigos", "ebooks", "playbooks",
-                          "lead-magnets", "decks", "emails"):
+                          "lead-magnets", "decks", "emails", "manuais-diarios"):
             cand = dir_livro / raiz_tipo
             if cand.exists() and ((cand / "capitulos").exists() or (cand / "livro_final.md").exists()):
                 dir_livro = cand

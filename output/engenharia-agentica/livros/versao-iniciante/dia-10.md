@@ -2,328 +2,118 @@
 
 ## Meta do dia
 
-Entender a diferença entre **verificar depois** e **interceptar durante** —
-os hooks — e aprender a escolher entre hook de comando, de prompt e de
-agente, incluindo o mais importante de todos: **o pre-commit que bloqueia
-suíte vermelha**.
+Entender os **hooks** como camadas de interceptação que impõem regras ao agente *sem que ele peça* — e ver como o `ecossistema-aidd` integra os gates ao ciclo de vida do git via pre-commit framework, mantendo o desenvolvedor no controle.
 
 ## A ideia em uma frase
 
-Hook é a politica do harness virando **mecânica** — o único jeito de uma
-regra não depender de boa vontade.
-
----
+Hook é o alarme que toca sozinho: a regra não depende do agente pedir — ela roda automaticamente antes, durante ou depois de uma ação, e bloqueia se não for cumprida.
 
 ## A explicação simples
 
-### O que é um hook
+Hooks são interceptadores: código que roda automaticamente em resposta a um evento, sem que o agente (ou o humano) peça. No contexto de engenharia agêntica, existem dois tipos principais:
 
-Um **hook** é um comando que o harness executa **automaticamente** quando um
-evento do ciclo de vida do agente acontece. Enquanto o gate avalia um artefato
-*depois* (Dia 9), o hook se pendura *no ponto exato* em que o evento ocorre —
-inclusive **antes** do dano.
+- **Hooks de ferramenta**: um gate que é acionado *antes* do agente usar uma tool, ou *depois* de usar. É o determinismo imposto pela infraestrutura, não pelo LLM.
+- **Hooks de ciclo de vida**: como o pre-commit — rodam antes do commit, antes do push, ou em resposta a outros eventos do git.
 
-O ciclo de vida tem pontos definidos, e cada um resolve um problema:
+A força dos hooks é que não dependem de memória do agente. O LLM pode esquecer que existe uma regra; o hook não — ele roda.
 
-| Momento | O que o hook resolve |
-|---|---|
-| Início de sessão | injetar estado da tarefa, regras do dia |
-| Antes da submissão do pedido | enriquecer/validar a entrada |
-| **Antes da execução de ferramenta** | **bloquear ação perigosa, comando destrutivo, escrita proibida** |
-| Depois da execução de ferramenta | formatar, validar, registrar, disparar verificação |
-| Fim da sessão / fim de turno | rodar suíte, gerar relatório, checar pendências |
+## O framework pre-commit no `ecossistema-aidd`
 
-### Interceptar versus observar
+No `ecossistema-aidd`, a integração com hooks se dá pelo framework pre-commit. Os gates `G_*.py` são declarados em `.pre-commit-config.yaml` e rodam automaticamente a cada `git commit` [1]. O `python ecossistema.py audit` é um alias que roda `pre-commit run --all-files` — verifica todos os arquivos do repositório, não só os modificados.
 
-- Hook de **observação** registra.
-- Hook de **interceptação** pode **impedir**.
+O efeito é que a política (Dia 2) se torna **infraestrutura** — ela não pode ser contornada, porque o git a impõe antes do commit.
 
-O mecanismo é sempre o mesmo: **código de saída diferente de zero interrompe a
-ação.** É por isso que todo capítulo insiste em código de saída — é a única
-linguagem que o harness e o shell entendem sem interpretação.
+Mas existe um detalhe que separa o ecossistema-aidd de outros projetos: a Lei 8 (Honestidade do Rótulo) não é *verificada automaticamente* pelo audit — ela requer um estágio manual adicional [2]. Isso é intencional: a política que exige julgamento humano (o que conta como "honestidade") não pode ser 100% automatizada sem risco de falso positivo.
 
-### Os três tipos de hook
+## O exemplo real: `.pre-commit-config.yaml`
 
-| Tipo | O que faz | Custo | Pode bloquear? |
-|---|---|---|---|
-| **Comando** | executa um programa determinístico | milissegundos | **sim** — o único confiável |
-| **Prompt** | usa o LLM para avaliar condição ("edição respeita o padrão?") | mais caro | só triagem — veredito probabilístico |
-| **Agente** | delega a um subagente com contexto próprio | mais caro | sim, mas só o que exige raciocínio |
+Abra o `.pre-commit-config.yaml` do `ecossistema-aidd`. Cada gate `G_*.py` aparece como um hook que roda `python caminho do gate` em todos os arquivos. O formato é o padrão do pre-commit framework [3]:
 
-A regra de escolha é objetiva:
-
-> O que é **objetivo** vira comando; o que é **ambíguo** pode virar prompt; o
-> que **exige exploração** pode virar agente. E só o primeiro bloqueia de
-> forma confiável (você já sabe disso desde o Dia 2).
-
-### A regra operacional que decide o sucesso
-
-**Tempo de execução.** O hook roda em toda ação relevante; um hook lento
-transforma a experiência do time em espera. Metas práticas:
-
-- Hook de comando: **abaixo de 100 ms**.
-- Suíte de testes: **só** no fim de turno ou no commit, nunca a cada edição.
-
-Hooks lentos são desativados — não por indisciplina, mas por economia de
-paciência. **Hooks precisam ser baratos o suficiente para nunca valer a pena
-desligá-los.**
-
-### O hook que todo time deveria ter no dia 1
-
-O **pre-commit que bloqueia suíte vermelha**. Ele resolve o que nenhuma
-instrução de prompt resolve de forma confiável: por melhor que seja "só
-commite com os testes passando", instrução é probabilística; **o hook é
-binário**. É a materialização mais pura da fronteira do Dia 2.
-
-### Segurança (importante)
-
-**Hook é código que roda com o seu nível de permissão.** Um hook que executa
-conteúdo vindo da resposta do modelo — sem validação — cria uma via de
-execução arbitrária (o problema de *injeção indireta*). Hooks devem ser
-**estáticos, versionados e auditados** como qualquer código de produção.
-
----
-
-## O exemplo real: os hooks da fábrica
-
-O `.claude/settings.json` do `proj_fabrica-de-livros` é o Dia 10 em produção.
-Ele tem **três hooks `PostToolUse` e um `SessionStart`** — todos **comando**,
-nenhum prompt. Veja o padrão:
-
-### Hook 1 — o atualizador de documentação
-
-```json
-{
-  "matcher": "docs/template",
-  "hooks": [
-    {
-      "type": "command",
-      "command": "python scripts/atualizar-documentacao.py --se-sujo --silencioso"
-    }
-  ]
-}
+```yaml
+repos:
+  - repo: local
+    hooks:
+      - id: g-honestidade-rotulo
+        name: G_HONESTIDADE_ROTULO
+        entry: python gates/G_HONESTIDADE_ROTULO.py
+        language: system
+        pass_filenames: false
 ```
 
-A edição toca `docs/template` → o hook roda o script — que só recompila se
-houver sujeira (`--se-sujo`) e em silêncio (`--silencioso`). É o formatador
-pós-edição do capítulo, sem travar nada.
+A configuração `pass_filenames: false` é essencial — o gate recebe o repositório inteiro, não arquivos individuais. Cada um tem seu comportamento.
 
-### Hook 2 — o validado de capítulo
-
-```json
-{
-  "matcher": "output/*/livros/*/capitulos/cap_*.md",
-  "hooks": [
-    { "type": "command",
-      "command": "bash scripts/validar_capitulo.sh $FILE" }
-  ]
-}
+```mermaid
+flowchart LR
+    A["git commit -m 'feat: nova rota'"] --> B["pre-commit: G_HADOLINT"]
+    B --> C["pre-commit: G_SEGREDOS"]
+    C --> D["pre-commit: G_TESTES_REAIS"]
+    D --> E["pre-commit: G_HONESTIDADE_ROTULO"]
+    E -- "exit 0 todos os" --> F["commit aceito"]
+    B -- "exit 1" --> G["commit bloqueado → corrija antes"]
+    C -- "exit 1" --> G
 ```
-
-Um capítulo é salvo → o script valida na hora. Estilo, seções, estrutura do
-capítulo: **o modelo não decide mais sobre isso — o código garante.**
-
-### Hook 3 — o pre-commit da fábrica (o clássico)
-
-A fábrica tem **mais** que o exemplo do capítulo: o pre-commit está
-**versionado** em `scripts/hooks/pre-commit` e é **copiado** para
-`.git/hooks/pre-commit` por `scripts/setup-links.ps1` (Win) ou
-`setup-links.sh` (Mac/Linux).
-
-Dois detalhes que mostram o capítulo vivido:
-
-- **Não é link** ("`.git/hooks` não aceita hardlink/junction de forma
-  confiável") → é copiado, recriado no setup pós-clone. Hook versionado e
-  reproduzível na equipe inteira — o "antipadrão hook só na sua máquina"
-  combatido por construção.
-- **Mecaniza a R16**: o `AGENTS.md` explica — "bloqueia commit se `pytest -q`
-  falhar". A regra que o Dia 9 tratou como lei vira **mecânica**: o commit nem
-  acontece. A instrução "só commite verde" deixa de depender de boa vontade.
-
-### O mapa de ciclo de vida real
-
-| Evento | Hook da fábrica | Tipo |
-|---|---|---|
-| Início de sessão | `SessionStart` (injetar software?) | comando |
-| Depois da ferramenta | docs/template → atualizar docs | comando |
-| Depois da ferramenta | `cap_*.md` → `validar_capitulo.sh` | comando |
-| Antes do commit | `pre-commit` → `python -m pytest -q` | comando |
-
-Repare: **todos de comando**. A fábrica consegue rodar verificação de estilo
-de capítulo com determinismo total — e é exatamente o que o capítulo ordena:
-o objetivo vira comando, e só o que exige raciocínio sobe para o modelo.
-
-### Portable Multi-IDE = hooks para todos
-
-A seção 6 do AGENTS.md explica que os hooks vivem em `.opencode/plugins/
-fabrica-hooks.ts` (versionado) e espelham o `.claude/settings.json`. Hooks
-fazem parte do **contrato do projeto** — existem para cada IDE que o time
-usa, não só para a de quem os criou.
-
----
 
 ## Mão na massa
 
-### Tarefa 1 — o guardião de comandos (antes da ferramenta)
+Abra o terminal na pasta `ecossistema-aidd`:
 
-Recebe o comando na entrada padrão e decide: pode rodar ou não. **Ele nunca
-executa — só decide.** Essa separação é deliberada: hook simples é hook
-confiável.
+1. Liste os hooks declarados no pre-commit:
 
-```python
-import json
-import sys
+   ```bash
+   grep -n "id:" .pre-commit-config.yaml
+   ```
 
-PADROES_PROIBIDOS = [
-    "rm -rf /",
-    "git push --force",
-    "dropdb",
-    "DROP TABLE",
-    "> /dev/sda",
-]
+2. Veja se o framework está instalado no ambiente:
 
-def main():
-    evento = json.load(sys.stdin)
-    comando = (evento.get("tool_input") or {}).get("command", "")
-    for padrao in PADROES_PROIBIDOS:
-        if padrao in comando:
-            print(f"[guard] BLOQUEADO: padrao proibido -> {padrao}", file=sys.stderr)
-            sys.exit(2)  # != 0 interrompe a acao
-    sys.exit(0)
+   ```bash
+   pre-commit --version
+   ```
 
-if __name__ == "__main__":
-    main()
-```
+3. Rode todos os hooks manualmente (o equivalente ao audit):
 
-A mensagem diz **qual comando foi barrado e por quê** — recusa visível, nunca
-silenciosa.
+   ```bash
+   pre-commit run --all-files
+   ```
 
-### Tarefa 2 — o pre-commit bloqueante (o que importa hoje)
+4. Simule um commit e veja se os hooks disparam — altere um arquivo e faça:
 
-```bash
-#!/usr/bin/env bash
-set -euo pipefail
+   ```bash
+   touch teste_hook.txt && git add teste_hook.txt && git commit -m "teste hook" 2>&1 | tail -n 20
+   ```
 
-echo "[pre-commit] rodando suite de testes..."
-if ! python -m pytest -q; then
-  echo "[pre-commit] BLOQUEADO: suite vermelha. Corrija e tente novamente." >&2
-  exit 1
-fi
-echo "[pre-commit] suite verde — commit liberado"
-```
+5. Limpe:
 
-Instale-o em `.git/hooks/pre-commit`. Ele vale **para humanos e para agentes**
-— é o gate do Dia 9 no lugar certo: na **porta de saída do trabalho**.
+   ```bash
+   git reset HEAD~1 && rm -f teste_hook.txt
+   ```
 
-### Tarefa 3 — o injetor de contexto com teto
+6. Observe que `G_HONESTIDADE_ROTULO` é um dos hooks — e entenda por que ele tem um estágio manual no fluxo normal (lei 8).
 
-Sessão começa, contexto útil entra — sem ocupar a instrução persistente:
+## Três regras que ficam
 
-```json
-{
-  "evento": "SessionStart",
-  "hooks": [
-    { "type": "command",
-      "command": "cat docs/estado-tarefa.md 2>/dev/null | head -40" }
-  ]
-}
-```
-
-O `head -40` é a proteção de orçamento: hook que injeta contexto precisa de
-**teto** (lembra do Dia 8?).
-
-### Tarefa 4 — o registrador de auditoria (a caixa-preta)
-
-Toda chamada de ferramenta vira uma linha de registro:
-
-```python
-import json
-import sys
-from datetime import datetime, timezone
-
-def main():
-    evento = json.load(sys.stdin)
-    linha = {
-        "ts": datetime.now(timezone.utc).isoformat(),
-        "ferramenta": evento.get("tool_name"),
-        "sessao": evento.get("session_id"),
-        "resultado": str(evento.get("tool_response"))[:200],
-    }
-    print(json.dumps(linha, ensure_ascii=False))
-
-if __name__ == "__main__":
-    main()
-```
-
-O truncamento em 200 caracteres é intencional — auditoria não é lugar de
-despejar resultado de ferramenta. Quando um incidente acontecer, essa trilha é
-a diferença entre investigar e especular.
-
-### Tarefa 5 — o teste de falha
-
-Desabilite um hook de propósito e verifique se o trabalho continua correto.
-Se o trabalho continua correto sem ele, pode estar no lugar errado do ciclo
-de vida.
-
-### Tabela de decisão: qual hook usar
-
-| Necessidade | Tipo | Pode bloquear? |
-|---|---|---|
-| Impedir comando destrutivo | comando | sim |
-| Formatar após edição | comando | não deve |
-| Julgar padrão subjetivo de código | prompt | sim, com ressalva |
-| Conferir contrato entre módulos | agente | sim, com custo |
-| Injetar estado da tarefa no início | comando | não |
-| Registrar trilha de auditoria | comando | não |
-
----
-
-## Três regras que ficam com você
-
-1. **Hook é determinístico.** Se depende de julgamento do modelo, é gate de
-   mérito — não hook.
-2. **Hook barato o suficiente para nunca valer a pena desligar.** Hook lento
-   vira hook desabilitado.
-3. **Hook versionado.** Comportamento que só existe na sua máquina não é
-   contrato de projeto.
+1. Hooks impõem regras sem depender da memória ou pedido do agente — são infraestrutura.
+2. O pre-commit framework integra os gates ao ciclo git — a política é coagida pelo fluxo de trabalho.
+3. Nem cada regra deve ser 100% automatizada — a honestidade de rótulo exige julgamento humano, e o ecossistema respeita isso.
 
 ## Erros de julgamento deste dia
 
-- Hook lento em evento quente (suíte a cada edição).
-- Hook que falha **silenciosamente** — trate erro do hook como bloqueio, nunca
-  ignore.
-- Hook que executa saída do modelo — via direta para execução arbitrária.
-- Hook só na máquina de quem configurou — versionar é obrigatório.
-- Muitos hooks de prompt — veredito variável e custo por ação.
-- Hook com efeito colateral amplo (limpar diretório, reinstalar dependência)
-  quando o objetivo era só verificar — verificação e mutação em hooks
-  distintos.
-
-**Antipadrão observável:** quando ninguém no time sabe dizer quais hooks
-estão ativos na máquina, o comportamento do agente varia por estação. Hook é
-contrato do projeto — versionado com os demais arquivos de configuração.
-
----
+- Rodar `python ecossistema.py audit` no terminal e esquecer que os hooks já rodam automaticamente antes do commit — a redundant não machuca, mas a omissão sim.
+- Desligar um hook que falha "porque é chato" — se é chato, registre a exceção em allowlist.
+- Deixar `.pre-commit-config.yaml` sem sincronia com `ecossistema.py` — os dois devem listar os mesmos gates.
 
 ## Checklist do dia
 
-- [ ] Conto os eventos do ciclo de vida e o problema que cada hook resolve.
-- [ ] Digo a ordem: comando para o objetivo, prompt para o ambíguo, agente
-      para o que exige exploração.
-- [ ] Instalei o pre-commit que bloqueia suíte vermelha.
-- [ ] Escrevi um guardião de comandos com padrões proibidos explícitos.
-- [ ] Hook de início de sessão injetando estado com teto.
-- [ ] Registro de auditoria append-only ativo.
-- [ ] Sei de memória os 4 hooks do `.claude/settings.json` da fábrica.
+- [ ] Sei o que são hooks e por que são mais fortes do que instruções no AGENTS.md.
+- [ ] Localizei os hooks no `.pre-commit-config.yaml`.
+- [ ] Rodei `pre-commit run --all-files` e entendi o resultado.
+- [ ] Entendi por que `G_HONESTIDADE_ROTULO` tem um estágio manual.
+- [ ] Compreendo a relação entre hooks e o `python ecossistema.py audit`.
 
 ## Para saber mais
 
-- `.claude/settings.json` do projeto — 3 hooks `PostToolUse` + 1
-  `SessionStart`, todos de comando.
-- `scripts/hooks/pre-commit` + `scripts/setup-links.ps1`/`.sh` — o
-  pre-commit versionado e recriado pós-clone.
-- `AGENTS.md` seção 6 (Portabilidade Multi-IDE) — hooks espelhados em
-  `.opencode/plugins/fabrica-hooks.ts`.
+1. `.pre-commit-config.yaml` do ecossistema-aidd — a configuração local dos gates.
+2. `ecossistema.py`, função `cmd_audit` — a delegação para o pre-commit.
+3. Documentação oficial do framework pre-commit (pre-commit.com).
+4. `AGENTS.md` do ecossistema-aidd, Lei 8 — "Label Honesty" e seu papel.
 
-No Dia 11, você aprende a delegar: **subagentes** com contexto isolado — e o
-contrato que faz a delegação economizar em vez de multiplicar custo.
+No Dia 11, vamos olhar para a delegação: como o agente delega trabalho a subagentes e quais são os princípios de isolamento que tornam isso seguro.

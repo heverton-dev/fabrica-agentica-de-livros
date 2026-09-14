@@ -2,295 +2,118 @@
 
 ## Meta do dia
 
-Entender o **subagente** — uma instância com janela de contexto própria —
-e aprender o que delegar, o que **nunca** delegar, e o **contrato de retorno**
-que faz a delegação economizar contexto em vez de inflá-lo.
+Entender como o agente **delega trabalho a uma frente isolada** (subagente ou worktree) e porque o isolamento de contexto — e não apenas de arquivos — é o que torna o paralelismo seguro, usando o ambiente `subagent` do `ecossistema-aidd`.
 
 ## A ideia em uma frase
 
-Subagente vale quando a razão entre o que ele lê e o que ele conclui é alta —
-e o contrato de retorno é o que garante isso.
-
----
+Delegar não é "ter um assistente" — é **transferir trabalho para um contexto novo e limitado**, que pode morrer no fim, carregando seu lixo consigo e devolvendo só o resumo.
 
 ## A explicação simples
 
-### O que define um subagente
+Até aqui vimos um agente trabalhando sozinho no seu contexto. Mas um projeto real de engenharia agêntica não roda um único cérebro: ele **reparte tarefas**. E a repartição só escala se cada fatia tiver seu próprio contexto, separado do principal.
 
-Um **subagente** é uma instância separada, com janela de contexto própria,
-prompt de sistema próprio e lista de ferramentas própria. Ele executa uma
-tarefa e devolve ao agente principal **apenas o resultado — não o histórico**.
+O harness oferece uma ferramenta típica: o **subagente** (Agent tool, "Task", "subagent"). Você descreve a tarefa, o subagente sai com um contexto próprio, trabalha com suas próprias chamadas de ferramenta e **devolve apenas um resumo** ao agente principal. O detalhe crucial é este último: o contexto do subagente não entra na janela do agente principal. O que entra é o resultado — seco, comprimido [1].
 
-> **O que acontece dentro do subagente não entra no contexto do pai. Só o
-> retorno entra.**
+Isso muda a economia da sessão inteira: as milhares de linhas que o subagente leu para resolver uma subtarefa não poluem a janela principal. O principal mantém um "resumo do estado" (como o `CognitiveSessionLedger` do Dia 8), enquanto o subagente faz o trabalho pesado de leitura.
 
-Sem isolamento, toda leitura pesada que o agente faz permanece no histórico e
-é reprocessada em todos os turnos seguintes (o efeito do Dia 5). Com
-isolamento, a leitura pesada acontece **uma vez**, em outro contexto, e o
-contexto principal recebe só a conclusão.
+## O ambiente `subagent` no `ecossistema-aidd`
 
-### A métrica que decide se a delegação valeu
+O comando `python ecossistema.py orchestrate "plano-exemplo.md" --ambiente subagent` compila um **plano de subagentes**: lê um plano em Markdown, decompõe em frentes de trabalho e gera uma sequência de invocações da ferramenta de agente da sessão atual [2].
 
-> **Razão de compressão = tokens lidos ÷ tokens devolvidos.**
+A característica definidora desse ambiente está documentada no próprio CLI:
 
-Referências práticas:
+- sem worktree, sem terminal separado;
+- roda dentro do contexto da sessão atual;
+- **compartilha o contexto** — as frentes não têm isolamento de arquivo real;
+- útil para tarefas de leitura/análise que custam caro em tokens e podem ser terceirizadas [2].
 
-| Razão | Veredito |
-|---|---|
-| acima de 10 | excelente |
-| 5 a 10 | compensa |
-| abaixo de 3 | delegação por gosto, não por economia |
+Ou seja: `subagent` é o modo "leitura terceirizada". Ele economiza contexto do principal, mas o trabalho de edição exige a sessão principal — porque edita no mesmo filesystem, sem barreira.
 
-### O que COMPENSA delegar
+Já os ambientes `orca` e `gitworktree` (que veremos no Dia 12) existem exatamente para o caso em que as frentes **precisam** mexer em arquivos sem pisar umas nas outras — aí o isolamento não é só de contexto, é de diretório de trabalho real.
 
-1. **Varredura ampla com conclusão estreita.** "Em quais lugares deste
-   repositório o contrato `/login` é consumido?" — lê dezenas de arquivos,
-   devolve quinze linhas.
-2. **Execução isolada e ruidosa.** "Rode a suíte e diga quais falharam" — a
-   saída bruta é enorme, a conclusão é curta. Bônus: o ruído fica fora do pai.
-3. **Trabalho paralelo independente.** Três investigações que não dependem
-   entre si rodam ao mesmo tempo, cada uma em seu contexto.
+## O exemplo real: um plano de subagentes
 
-### O que NÃO compensa delegar
+Rode um plano de 3 frentes no modo `subagent` e observe como ele se comporta:
 
-1. **Tarefa que precisa de contexto compartilhado.** O subagente não sabe o
-   que o pai sabe — reconstruir o contexto custa tokens e ainda resulta em
-   decisão desalinhada.
-2. **Escrita longa e coerente.** Um capítulo, um relatório, um documento com
-   voz única: o isolamento destrói a consistência interna.
-3. **Tarefa pequena.** Delegação tem custo fixo (prompt, ferramentas,
-   retorno); abaixo de certo tamanho, só adiciona latência.
+```bash
+python ecossistema.py orchestrate plano-exemplo.md --ambiente subagent --dry-run
+```
 
-### A assimetria de informação (declarar no contrato!)
+O comando renderiza um **plano de voo** — a programação das frentes com contexto, critérios de aceite e dependências — e salva o estado em `.orca-flight-plan.json` [3]. Na prática do ecossistema, essa compilação é feita pelo módulo `scripts/subagent_plan.py`, que transforma o plano em Markdown em uma lista de chamadas ao agente.
 
-O subagente **não sabe** o que o pai sabe: deixa o histórico, as decisões, as
-restrições descobertas. Se isso importa, **precisa viajar no pedido** — e é um
-custo de entrada que entra na conta. Delegar bem é, em boa medida, escrever
-um briefing **completo e curto**.
+```mermaid
+flowchart LR
+    A["Sessao principal<br/>(contexto curto)"] --> B["orchestrate plano --ambiente subagent"]
+    B --> C["Frente 1: pesquisar API"]
+    B --> D["Frente 2: revisar schema"]
+    B --> E["Frente 3: auditar segredos"]
+    C --> F["resumo compacto"]
+    D --> F
+    E --> F
+    F --> G["Principal decide proximos passos<br/>(sem poluir a janela)"]
+```
 
-O contraponto que faz a delegação funcionar: o pai **também não sabe** o que o
-subagente lê. O contrato de retorno controla o lado que importa.
-
-### Dois efeitos colaterais valiosos
-
-- **Filtro de ruído:** stack trace, log de build e erro verboso ficam no
-  subagente; o pai recebe "a falha é X na linha Y". Qualidade de decisão
-  melhora — o pai trabalha com sinais, não matéria-prima.
-- **A armadilha:** subagente que não verifica. Como ninguém vê o que ele leu,
-  um retorno errado é praticamente indetectável. A mitigação: **exigir
-  procedência** (caminho e linha) em todo retorno, para reconferir com um
-  comando barato.
-
----
-
-## O exemplo real: a delegação na fábrica
-
-O `proj_fabrica-de-livros` é um caso de estudo de fan-out por decomposição de
-tarefa. O AGENTS.md, seção 2, lista os subagentes, e cada um obedece às
-classes deste capítulo:
-
-### Fan-out por capítulo (o "paralelo independente")
-
-> `subagente-redator-capitulo` — "manufatura tática completa de 1 capítulo em
-> paralelo (Estratégia + Redação EITA + Diagrama Mermaid + CI de Código +
-> Auto-Validação de Qualidade)".
-
-Cada capítulo tem **janela própria**, e na Fase 2 `pool-capitulos.py` dispara
-em **lotes de 4**. O orquestrador nunca paga as leituras internas de cada
-redator — só o capítulo pronto. É o fan-out da tabela do capítulo.
-
-### O mesmo padrão, em todos os tipos
-
-- `subagente-pesquisador` — a varredura de fontes acontece isolada.
-- `subagente-redator-secao-tcc` — mesmo desenho para TCC.
-- `subagente-adaptador-ebook` — a reescrita de tom dos capítulos, isolada.
-- `subagente-revisor-tecnico` — corrige **em paralelo um lote** de capítulos
-  apontados como defeituosos pela auditoria.
-
-### Delegação dentro da delegação
-
-O AGENTS.md regra 4:
-
-> "Delegação Cavecrew: subagentes comprimidos para buscas/edições extensas
-> **(nunca para prosa)**."
-
-Três ensinamentos do capítulo, em uma linha:
-
-- a delegação é para o que **comprime** (busca, edição);
-- a escrita longa coerente é **proibida** de delegar (prosa);
-- o subagente que devolve pouco é o desenho por padrão.
-
-### O contrato de retorno é a disciplina do AGENTS.md
-
-A regra 0.4 (headroom) aplica-se a tudo que volta: "logs/builds >7 linhas →
-comprimir (3 topo + 4 fim)". E o gate de retorno é determinístico: exige-se
-que o retorno do subagente caiba no formato contratado — porque um retorno
-longo é custo do pai, e o pai não deve pagar por leitura que já aconteceu.
-
-### O revisor adversarial que a fábrica executa por script
-
-A Fase 2.5 roda `auditar-obra.py --estrito` e o `revisor-tecnico` trata cada
-achar como defeito com **localização** — o revisor não corrige o aceite, ele
-razão pelo critério. É o passo 7 do capítulo no mundo real: quem julga não
-produz; quem produz não julga — e a régua (os gates) vem do repositório, não
-do autor.
-
-### A fronteira de autonomia
-
-O AGENTS.md define o que o subagente decide e o que confirma: o fluxo é
-**100% autônomo** (R3) **depois que o operador define o tema** — mas a escolha
-inicial (tema, e se entra CAMPANHA/MÁQUINA, R17) é sempre humana. Justamente
-a fronteira do dia: **delegação ≠ terceirização de risco.**
-
----
+Repare no papel do orquestrador: ele não roda o subagente como "caixa-preta"; ele **prescreve** o contexto de cada frente (o que assumir, o que verificar, o que devolver), preservando o padrão determinístico (Dia 8).
 
 ## Mão na massa
 
-### Tarefa 1 — escreva o contrato ANTES do prompt
+Abra o terminal na pasta `ecossistema-aidd`:
 
-O artefato central. Define o que entra, o que sai, o que é proibido:
+1. Veja as opções do ambiente subagent:
 
-```json
-{
-  "papel": "investigador-de-consumidores",
-  "pergunta": "Quais modulos consomem o contrato de /login e como?",
-  "contexto_necessario": [
-    "contrato atual de /login: POST com {usuario, senha}",
-    "restricao: clientes moveis dependem do formato de resposta"
-  ],
-  "limite_retorno_tokens": 250,
-  "formato_retorno": "tabela: caminho:linha | tipo de consumo | risco (alto/medio/baixo)",
-  "obrigatorio": ["citacao de caminho e linha para cada afirmacao"],
-  "proibido": [
-    "colar trechos maiores que 3 linhas",
-    "sugerir implementacao",
-    "resumir arquivos nao consultados"
-  ]
-}
-```
+   ```bash
+   python ecossistema.py orchestrate --help 2>&1 | grep -A 12 "ambiente"
+   ```
 
-`contexto_necessario` resolve a assimetria de informação; `obrigatorio` exige
-procedência — retorno verificável por comando barato, não por confiança.
+2. Veja o compilador de plano de subagentes:
 
-### Tarefa 2 — o retorno com esquema FIXO
+   ```bash
+   grep -n "def compilar_plano_subagentes" scripts/subagent_plan.py
+   ```
 
-O erro nº 1 de quem começa: receber um relatório em prosa longo que o pai lê
-inteiro para extrair duas informações. Solução: formato fixo, campos nomeados
-(veredito + evidência + lista de arquivos). O pai consome **por campo**, não
-por leitura. Bônus: o formato obriga o subagente a **decidir antes de
-escrever** — sem "em cima do muro".
+3. Olhe o renderizador — como o resumo é montado:
 
-### Tarefa 3 — valide o limite de retorno como ERRO
+   ```bash
+   grep -n "def renderizar_plano_subagentes" scripts/subagent_plan.py
+   ```
 
-```python
-def delegar(contrato, executor_subagente):
-    retorno = executor_subagente(contrato)
-    if len(retorno.split()) > contrato["limite_retorno_tokens"]:
-        return {"erro": "retorno acima do limite", "bruto": retorno[:500]}
-    return {"resultado": retorno}
-```
+4. Veja como o isolamento de contexto se manifesta no CLI:
 
-Retorno acima do limite é **erro**, não sucesso parcial. Sem isso o contrato
-vira sugestão e o ganho some na primeira execução verbosa.
+   ```bash
+   grep -n "compartilhado\|sem worktree\|contexto" ecossistema.py | head -10
+   ```
 
-### Tarefa 4 — meça a razão de compressão
+5. Rode a compilação em modo seco para visualizar as frentes:
 
-```python
-def razao_compressao(registros):
-    lidos = sum(r["tokens_lidos"] for r in registros)
-    devolvidos = sum(r["tokens_devolvidos"] for r in registros)
-    if not devolvidos:
-        return {"razao": float("inf"), "lidos": lidos, "devolvidos": 0}
-    return {
-        "razao": round(lidos / devolvidos, 1),
-        "veredito": "vale" if lidos / devolvidos >= 8 else "nao compensa",
-    }
-```
+   ```bash
+   python ecossistema.py orchestrate plano-exemplo.md --ambiente subagent --dry-run 2>&1 | tail -30
+   ```
 
-Delegação que não é medida não é gerenciada.
+## Três regras que ficam
 
-### Tarefa 5 — reconfira procedência por amostragem
-
-```bash
-sed -n '142p' app/routes/legacy.py | grep -n "login" && echo "[OK] procedencia confirmada"
-```
-
-Uma linha. A diferença entre **confiar e verificar** — um item por retorno é
-suficiente na prática.
-
-### Tarefa 6 — o revisor adversarial
-
-O subagente mais valioso **contradiz**. Três regras para que ele funcione:
-
-- recebe **os critérios**, não o resumo do autor (senão revisa o resumo);
-- **não corrige nada** — se corrigir, vira coautor e perde independência;
-- responde com **evidência**, não opinião (local exato + critério violado).
-
-Um sistema com produtor + revisor adversarial tem **controle interno**; dois
-produtores têm só redundância.
-
-### Tabela de decisão: quando NÃO delegar
-
-| Situação | Motivo |
-|---|---|
-| Tarefa de um único passo | custo de montar a delegação > tarefa |
-| Decisão que exige o contexto inteiro | o isolamento destrói a informação |
-| Trabalho estritamente sequencial | só latência acrescentada |
-| Resultado com rastreabilidade linha a linha | o retorno comprimido perde o detalhe |
-
-**A regra geral do livro:** delegue onde o trabalho **comprime** ou
-**paraleliza**; faça local onde ele **expande** e depende de contexto
-acumulado.
-
-### A fronteira de autonomia (listê por projeto)
-
-Escreva a lista do que o subagente pode fazer **sozinho** e o que exige
-**confirmação**. Essa lista é o que separa delegação de terceirização de
-risco.
-
----
-
-## Três regras que ficam com você
-
-1. **Contrato antes da delegação.** Defina o formato de retorno antes de
-   disparar o subagente.
-2. **Pergunta estreita, não área ampla.** "Revise o módulo de rede" produz
-   relatório genérico; "quais chamadas ignoram erro de rede?" produz correção
-   utilizável.
-3. **Produtor e revisor são papéis distintos.** Quem corrige não é quem julga.
+1. Subagente devolve resumo, não contexto — a janela principal fica limpa.
+2. `--ambiente subagent` serve para leitura/análise terceirizada; sem isolamento de arquivo real.
+3. O orquestrador prescreve contexto e critérios de aceite de cada frente, mantendo o padrão determinístico.
 
 ## Erros de julgamento deste dia
 
-- Delegar para ganhar velocidade **sem definir o formato do retorno**.
-- Usar subagente para tarefa que exige o contexto acumulado da conversa.
-- Não registrar qual versão do subagente produziu o resultado.
-- Confundir número de subagentes com capacidade — três sem contrato produzem
-  menos que um bem instruído.
-- Delegar sem briefing — o subagente decide sem as restrições e volta
-  desalinhado.
-- Confiar sem procedência — retorno errado é indetectável sem caminho e linha.
-
-**Antipadrão observável:** o agente principal **reescreve** o resultado
-recebido antes de usá-lo. O contrato de retorno está errado — um bom contrato
-devolve exatamente o que o próximo passo consome, e nada mais.
-
----
+- Usar subagente para editar o mesmo arquivo que outra frente — sem worktree, não há barreira de filesystem.
+- Esperar que o subagente "lembre do raciocínio" depois do retorno — o que persiste é o resumo.
+- Delegar a mesma busca para todas as frentes e inflar o custo em vez de comprimir resultados comuns.
 
 ## Checklist do dia
 
-- [ ] Explico a propriedade definidora: só o retorno entra no contexto do pai.
-- [ ] Digo as 3 tarefas que compensam e as 3 que não compensam delegar.
-- [ ] Escrevi um contrato com pergunta, contexto, limite, esquema e proibições.
-- [ ] Razão de compressão medida (≥ 8 compensa; < 3 é prejuízo).
-- [ ] Procedência exigida e conferida por amostragem.
-- [ ] Caso identificado em que delegar foi revertido por não compensar.
+- [ ] Sei explicar por que o resumo (e não o contexto) é a interface entre principal e subagente.
+- [ ] Entendo a diferença de isolamento entre `subagent`, `orca` e `gitworktree`.
+- [ ] Localizei `compilar_plano_subagentes` em `scripts/subagent_plan.py`.
+- [ ] Rodei a compilação em modo seco e li o plano de voo.
+- [ ] Sei quando usar subagente (leitura/análise) e quando usar worktree (edição paralela).
 
 ## Para saber mais
 
-- `AGENTS.md` seção 2 (Subagentes) e regra 4 (Delegação Cavecrew) — o
-  catálogo de subagentes e a regra "nunca para prosa".
-- `pool-capitulos.py` — o fan-out por lote da Fase 2 na prática.
-- Fase 2.5 (revisor-técnico) — o revisor adversarial com régua determinística.
+1. `ecossistema.py`, comando `orchestrate` — a docstring do ambiente `subagent`, 3 (linha ~370).
+2. `scripts/subagent_plan.py` — `compilar_plano_subagentes` e `renderizar_plano_subagentes`.
+3. `scripts/flight_plan.py` — `gerar_plano_de_voo` e `renderizar_plano_de_voo` (o estado do plano de voo).
+4. Skill `orca-plan-orchestrator` em `componentes/compartilhado/skills/` — o protocolo completo de frentes.
 
-No Dia 12, você escala: **várias tarefas ao mesmo tempo, cada uma em seu
-próprio diretório de trabalho** — sem que os agentes se atropelem.
+No Dia 12, entramos na suíte de orquestração completa: worktrees reais, paralelismo e o motor `gitworktree` — o ambiente que isola até o diretório.

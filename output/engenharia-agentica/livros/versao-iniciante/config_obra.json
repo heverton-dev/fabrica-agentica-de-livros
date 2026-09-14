@@ -1,8 +1,8 @@
 {
-  "tema": "Engenharia Agêntica para iniciantes: o que é um agente de IA, configurar AGENTS.md, skills, MCPs, rules, scripts, gates, hooks, subagentes, worktrees, roteamento de LLM, economia de tokens, segredos universais e esteira de produção — em 16 dias de jornada prática sobre o projeto real proj_fabrica-de-livros",
-  "tipo_obra": "livro",
+  "tema": "Engenharia Agêntica para iniciantes: o que é um agente de IA, configurar AGENTS.md, skills, MCPs, rules, scripts, gates, hooks, subagentes, worktrees, roteamento de LLM, economia de tokens, segredos universais e esteira de produção — em 16 dias de jornada prática sobre o projeto real ecossistema-aidd",
+  "tipo_obra": "manual-diario",
   "min_referencias_por_capitulo": 3,
-  "tamanho_obra": "M",
+  "tamanho_obra": "GG",
   "senioridade_obra": "iniciante",
   "serie": "engenharia-agentica",
   "cor_primaria": "#58a6ff",

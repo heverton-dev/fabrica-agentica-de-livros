@@ -1,280 +1,107 @@
-# Dia 15 — Os segredos universais: o que sobrevive a toda troca de ferramenta
+# Dia 15 — Os segredos universais aplicáveis a qualquer harness
 
 ## Meta do dia
 
-Separar o que é **invariante de engenharia** do que é **detalhe de produto** —
-porque a próxima ferramenta que você usar vai ter nomes diferentes, e o que faz
-sentido hoje continua fazendo se o princípio estiver no lugar certo.
+Sistematizar as **8 Leis Invioláveis** do `ecossistema-aidd` — e ver como cada uma delas se aplica a qualquer harness (Claude, Antigravity, OpenCode, MimoCode) sem depender de um provedor específico.
 
 ## A ideia em uma frase
 
-Invariantes descrevem relações entre as partes; modas descrevem superfícies de
-produto — e só os primeiros sobrevivem ao próximo lançamento.
-
----
+Há regras que funcionam em qualquer harness porque são leis de engenharia, não convenções de produto: determinismo primeiro, zero stubs, suprema agnóstica e o desenvolvedor no controle.
 
 ## A explicação simples
 
-### O critério de classificação
+Ao longo de 14 dias, vimos centenas de detalhes do `ecossistema-aidd`. Agora a pergunta é: **quais desses detalhes se aplicam a qualquer projeto, independentemente do harness?** A resposta são as 8 Leis Invioláveis — princípios que o `AGENTS.md` do ecossistema declara como não-negociáveis, e que funcionam em qualquer ambiente [1].
 
-- **Invariante** quando decorre de uma relação **estrutural**: modelo
-  probabilístico gera incerteza; contexto tem custo; verificação precisa ser
-  independente.
-- **Moda** quando decorre de uma **escolha de produto**: nome do arquivo de
-  configuração, formato do arquivo de regras, evento exato do hook, extensão
-  da skill.
+Cada lei é um segredo univers porque seu efeito não depende do modelo nem da ferramenta:
 
-A consequência: invariantes podem ser **ensinados e transferidos**; modas
-precisam ser **consultadas na documentação** da vez. Confundir os dois é o que
-faz um time reescrever o harness inteiro a cada dois anos.
+1. **Determinism First** (Lei 1) — scripts determinísticos decidem o que pode ser repetido; o LLM decide o que precisa de julgamento (Dia 2).
+2. **Binary Quality** (Lei 2) — exit 0/1, sem "mais ou menos"; gates são a política (Dia 9).
+3. **Structured Persistence** (Lei 3) — estado em JSON/SQLite, nunca no histórico conversacional (Dia 8).
+4. **Extreme Token Economy** (Lei 4) — cada token conta; pensamento compacto, pipe em comandos (Dia 7).
+5. **Zero Stubs, Zero Mocks** (Lei 5) — código stub/moc é código que mentem sobre o que funciona; testes reais substituem (G_TESTES_REAIS).
+6. **Supremacy Agnostic** (Lei 6) — governança cannoto a um só provedor; o harness é porta de entrada, não destino (Dia 13).
+7. **Developer in Control** (Lei 7) — nenhuma automação roda sem explícito pedido; hook, não instalação silenciosa.
+8. **Label Honesty** (Lei 8) — nunca alegar o que não está provado; testes reais definem o que é cobertura (G_HONESTIDADE_ROTULO) [2].
 
-### Os dez invariantes
+## O exemplo real: como a agnóstica se aplica a qualquer harness
 
-Cada um já apareceu neste livro, geralmente demonstrado por um sintoma. Nenhum
-menciona produto — é isso que prova que é invariante:
+O manifesto `gates/manifesto_harnesses.json` lista os harnesses suportados pelo sync: Claude Code, Antigravity, OpenCode, MimoCode, Gemini CLI. O script `gestor_componentes.py` (`python ecossistema.py components sync`) distribui os componentes de `componentes/compartilhado/skills/` para a pasta de cada harness, corrigindo data de criação.
 
-1. **O modelo é probabilístico; a confiança vem do entorno.** Nada torna a
-   geração determinística; o que se garante é que o erro não passe, com
-   verificação independente do gerador.
-2. **Verificação independente vale mais que capacidade bruta.** Um teste
-   barato impede o erro caro — é o que permite usar modelos menores e rotear.
-3. **Instrução estável, ferramenta estreita, contrato explícito.**
-4. **Contexto é orçamento, não recipiente.** Custo por turno, atenção que
-   degrada; quatro operações: escrever, selecionar, comprimir, isolar.
-5. **Ordem das partes é arquitetura.** Estável primeiro, volátil por último —
-   decorre de como cache de prefixo funciona.
-6. **Nada é gratuito em paralelo.** Duplicação, conflito, disputa; isolamento
-   resolve parte, contrato resolve o resto.
-7. **Delegação vale pela razão entre o que se lê e o que se devolve.**
-8. **Toda ação precisa ser atribuível.** Quem fez, em que branch, com qual
-   veredito. Sem atribuição não há investigação, só especulação.
-9. **Custa-se por resultado aceito, não por token.**
-10. **Configuração é código: versionada, testada, datada.**
+O que faz isso funcionar em qualquer harness é o princípio: **a pasta canônica (`componentes/`) é a fonte da verdade; as pastas por harness são só destinos de distribuição** [3]. Se amanhã surgir um harness novo, basta uma entrada no manifesto e o sync passa a distribuir.
 
-Compare com as modas: "use `settings.json`" é moda; "toda configuração que
-importa está versionada" é invariante. "Chame no evento *antes da ferramenta*"
-é moda; "intercepte **antes do dano**" é invariante.
+```mermaid
+flowchart TD
+    A["componentes/compartilhado/skills/<br/>(fonte canônica)"] --> B["python ecossistema.py components sync"]
+    B --> C[".claude/skills/ (Claude Code)"]
+    B --> D[".agents/skills/ (Antigravity)"]
+    B --> E[".opencode/skills/ (OpenCode)"]
+    B --> F[".mimocode/skills/ (MimoCode)"]
+    B --> G[".gemini/skills/ (Gemini CLI)"]
+    C --> H["cada harness lê e executa<br/>com seu protocolo nativo"]
+```
 
-### O critério de portabilidade
+## A universaliade de prática
 
-> **Escreva o conteúdo em invariantes e isole a moda em uma camada fina.**
+Considere essas outras práticas que são leis de mercado para qualquer projeto agêntico:
 
-Um documento curto de princípios (invariante, durável) + adaptadores finos por
-produto (moda, descartável). Times que fazem o contrário — princípios
-espalhados em configurações específicas — pagam migração completa a cada troca
-de ferramenta.
-
-### O teste final, barato e honesto
-
-> **Troque o harness mantendo o modelo.** O que quebrar é moda mal isolada. O
-> que continuar funcionando é invariante bem aplicado.
-
-Custa uma tarde e é a medida mais honesta de maturidade de engenharia agêntica.
-
-### Três segredos que enriquecem o dia
-
-- **Contexto mínimo suficiente:** cada bloco na janela tem que mudar pelo menos
-  uma decisão possível. A pergunta que você faz ao montar: **"qual decisão
-  este bloco habilita?"** Se pode ser removido sem mudar nenhum resultado, é
-  peso, não contexto.
-- **Reprodutibilidade:** um resultado que não se reproduz é anedota. Quatro
-  componentes: entrada (hash do estado do repo), configuração (arquivos
-  ativos), plano (o **que foi executado**, não o planejado) e evidência (o
-  que provou cada passo). O plano é o mais negligenciado.
-- **Erro barato:** sistemas que aprendem cometem erros baratos — gate no
-  momento da escrita, ambiente descartável e isolado, e recompensa por
-  **evidência de falha** (quem reporta o que não funcionou facilita o
-  diagnóstico; quem esconde a falha produz passivo três turnos depois).
-
----
-
-## O exemplo real: a fábrica é a demonstração viva
-
-A seção 6 do `AGENTS.md` é literalmente este capítulo aplicado. Ela chama os
-invariantes de "fonte" e as modas de "links/junctions":
-
-| Invariante (fonte) | Moda (derivado) |
-|---|---|
-| `AGENTS.md` — um único arquivo de regras | `CLAUDE.md`, `.cursor/rules/*.mdc`, `.windsurfrules`, `.clinerules`, `.github/copilot-instructions.md` — todos hardlinks para o mesmo |
-| `.claude/` — origem de agents, commands, skills, mcp-servers | `agentic/*`, `.opencode/*`, `.agents/*` — junctions |
-| `.mcp.json` (schema raiz) | `.cursor/mcp.json` (hardlink), `.vscode/mcp.json` e `opencode.json` (GERADOS por script, preservando decisões manuais) |
-| `scripts/hooks/pre-commit` (versionado) | `.git/hooks/pre-commit` (copiado por `setup-links.ps1`/`.sh`) |
-
-Quando um produto novo (uma IDE nova) entra: o que se escreve é um adaptador
-(junction/script de sincronização) — não um novo conjunto de princípios. É a
-economia de conhecimento que este capítulo vende, realidade no repositório.
-
-E o teste de portabilidade já existe como ferramenta quotidiana: a fábrica
-roda a mesma obra com harnesses diferentes (Claude Code, Codex, Cursor...), e
-o critério de "funcionou" é o mesmo: os gates passam. O que degrada entre
-harnesses é moda mal isolada; o que se mantém são os invariantes — e o AGENTS.md
-documenta por quê.
-
-Dois invariantes explícitos no AGENTS.md, em linguagem do dia 2:
-
-- R16 = invariante 2: verificação independente (pytest) impede o commit
-  vermelho — **bloqueante, por hook mecânico**.
-- R17 = fronteira: escolha do operador nunca é terceirizada — "a escolha é
-  sempre do operador" (decisão humana/irreversível + automação da verificação).
-
-### Os dez em uma página, versão fábrica
-
-1. Agente é probabilístico; o determinismo é construído na cabine (gates).
-2. Estável e verdadeiro pertence ao prefixo (AGENTS.md = instrução estável).
-3. Contexto suficiente: cada bloco muda uma decisão (RAG seleciona, não acumula).
-4. Custo = tokens × turnos desperdiçados (leia seções 0.1 a 0.10 do AGENTS.md).
-5. Gate na escrita custa fração do gate na entrega (Fase 2.5 antes da Fase 3).
-6. Delega onde comprime; faça local onde expande (regra de derivação, Dia 13).
-7. Paralelismo só se paga com isolamento (Dia 12) + atribuição.
-8. Roteia por natureza (Dia 13), não por preferência de modelo.
-9. Toda configuração não decidida será decidida por acidente (Dia 14).
-10. Se não pode ser reproduzido, não é resultado (`relatorios/` + evidência).
-
----
+- **Geração contra stubs é fraude**: se o agente gera um teste que dá certo só porque o código é stub, o teste mente (Lei 5).
+- **Roteamento declarativo por frente** funciona em qualquer frentes e qualquer harness (Dia 13).
+- **Estado serializado em JSON** (`PLANO-EXECUCAO-ESTRUTURADO.json`) é legível por qualquer harness que suporte leitura de arquivo (Dia 5).
+- **Python >= 3.10** como mínimo é o preço de usar dataclasses com tipos, `match/case` e `tomllib` — qualquer harness no universo aceita.
 
 ## Mão na massa
 
-### Tarefa 1 — escreva o documento de princípios
+Abra o terminal na pasta `ecossistema-aidd`:
 
-Curto, sem nome de produto, com consequência operacional em cada linha:
+1. Leia as 8 Leis do AGENTS.md (são ~20 linhas):
 
-```markdown
-# Princípios do harness (invariantes — sem dependência de produto)
+   ```bash
+   grep -A 20 "Inviolable Laws" AGENTS.md
+   ```
 
-1. Nenhuma geracao entra em uso sem verificacao independente do gerador.
-2. Instrucao persistente: curta, estavel, sem dado volatil no inicio.
-3. Ferramenta: superficie minima, esquema fechado, teto de saida.
-4. Contexto: escrever, selecionar, isolar e so entao comprimir.
-5. Ordem do prompt: estavel primeiro, volatil por ultimo.
-6. Paralelismo apenas para tarefas independentes, com atribuicao por tarefa.
-7. Delegacao com contrato: limite de retorno e procedencia obrigatoria.
-8. Custo medido por resultado aceito, nunca por token.
-9. Configuracao versionada, testada e com data de revisao.
-10. Trocar de modelo deve ser parametro, nunca reescrita.
-```
+2. Veja como o manifesto lista os harnesses:
 
-### Tarefa 2 — isole a moda em adaptadores
+   ```bash
+   cat gates/manifesto_harnesses.json | head -30
+   ```
 
-Toda dependência de produto, num arquivo por produto. Descartável, mas
-estrutura durável:
+3. Veja os comandos de distribuição:
 
-```yaml
-# adaptadores/produto-a.yaml
-produto: "harness-a"
-arquivo_instrucao: "AGENTS.md"
-arquivo_config: ".agent/settings.json"
-eventos:
-  antes_da_ferramenta: "PreToolUse"
-  fim_de_sessao: "SessionEnd"
-```
+   ```bash
+   python ecossistema.py components --help
+   ```
 
-```yaml
-# adaptadores/produto-b.yaml
-produto: "harness-b"
-arquivo_instrucao: ".rules/instructions.md"
-arquivo_config: ".harness/config.json"
-eventos:
-  antes_da_ferramenta: "tool.before"
-  fim_de_sessao: "session.stop"
-```
+4. Teste a agnóstica: rode o mesmo comando com outro `PYTHONPATH` e veja se muda algo no resultado (não deveria mudar):
 
-Note que **os princípios não aparecem aqui** — o adaptador responde "onde" e
-"como", nunca "por quê".
+   ```bash
+   python ecossistema.py status 2>&1 | head -8
+   ```
 
-### Tarefa 3 — rode o teste de portabilidade
+## Três regras que ficam
 
-```bash
-#!/usr/bin/env bash
-set -euo pipefail
-
-# 1. Tarefa representativa no harness atual
-python scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/antes.json
-
-# 2. A MESMA tarefa no harness alternativo, mesmos arquivos de projeto
-HARNESS=alternativo python scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/depois.json
-
-# 3. O que degradou = dependencia de produto; o que se manteve = invariante
-python scripts/comparar-tarefa.py /tmp/antes.json /tmp/depois.json
-```
-
-| Resultado | Leitura | Ação |
-|---|---|---|
-| Tudo se mantém | invariantes bem aplicados | trocar modelo é decisão de custo |
-| Uma etapa degrada | moda mal isolada naquela etapa | mover para adaptador |
-| Tudo degrada | princípios vivem dentro do produto | reescrever o documento de princípios |
-
-### Tarefa 4 — monte o inventário de moda
-
-```json
-{
-  "inventario_moda": [
-    { "item": "nome do arquivo de config", "onde": "adaptadores/produto-a.yaml", "revisado": "2026-09-12" },
-    { "item": "eventos de hook", "onde": "adaptadores/produto-a.yaml", "revisado": "2026-09-12" }
-  ],
-  "regra": "revisar a cada release do produto ou a cada 6 meses"
-}
-```
-
-O inventário transforma "moda" em lista de trabalho — cada item com lugar e
-data, nada invisível.
-
-### Tarefa 5 — aplique o teste de retirada por bloco
-
-Monte a janela fazendo uma pergunta por bloco: **qual decisão este bloco
-habilita?** Saem os blocos cuja informação nunca é consultada; no lugar, um
-ponteiro para recuperá-los quando precisar.
-
-### Tarefa 6 — registre o plano COMO EXECUTADO
-
-Não reproduza pelo que ficou escrito na intenção: capture entrada (hash),
-configuração ativa, plano executado (ordem real dos passos) e evidência de
-cada passo. Três artefatos pequenos transformam "aconteceu uma vez" em
-"acontece sempre que eu quiser".
-
----
-
-## Três regras que ficam com você
-
-1. **Desconfie do resultado sem rastro.** Se não há evidência, não há
-   conclusão.
-2. **Aprenda invariantes, não produtos.** A velocidade de mudança é alta; um
-   time que aprende produtos fica permanentemente atrás do lançamento.
-3. **Deixe o próximo começar sabendo.** Nota de sessão não é diário — é o
-   checklist do próximo que vai pilotar.
+1. As 8 Leis Invioláveis são leis de engenharia — funcionam em qualquer harness.
+2. A agnóstica do ecossistema se materializa num manifesto e num sync — não em heurísticas.
+3. Zero stubs + binary quality = o antídoto contra testes que mentem.
 
 ## Erros de julgamento deste dia
 
-- Aprender produtos em vez de princípios (defasagem garantida).
-- Princípios espalhados na configuração (cada migração vira reescrita).
-- **Adaptador gordo**: se o adaptador decide comportamento, a moda voltou para
-  dentro do princípio.
-- Inventário de moda desatualizado — pior que não ter, dá falsa sensação de
-  controle.
-- Contexto acumulado sem critério ("pode ser útil").
-- Guardar o resultado e descartar a evidência que o sustenta.
-
-**Antipadrão observável:** quando ninguém consegue dizer qual versão do sistema
-produziu um artefato em produção. Rastro não é burocracia de auditoria — é o
-instrumento que permite melhorar sem adivinhar.
-
----
+- Implementar uma lei "quando puder" em vez de tratá-la como não-negociável.
+- Manter código stub como "placeholder temporário" que nunca evolui para real.
+- Editar a pasta física do harness (`.claude/`) direto em vez de usar `components sync`.
 
 ## Checklist do dia
 
-- [ ] Documento de princípios escrito sem nome de produto (≤ 12 linhas).
-- [ ] Itens de moda movidos para adaptador.
-- [ ] Teste de portabilidade executado uma vez.
-- [ ] Inventário de moda com data de revisão.
-- [ ] Para cada bloco usado numa janela, sei qual decisão ele habilita.
-- [ ] Um resultado do meu trabalho tem entrada, configuração, plano e evidência registrados.
+- [ ] Consigo citar as 8 Leis Invioláveis pelo número.
+- [ ] Sei onde está o manifesto de harnesses e o que o `components sync` faz.
+- [ ] Entendo por que a fonte canônica é `componentes/compartilhado/` e as pastas por harness são só destino.
+- [ ] Identifiquei na prática qual lei aplica ao seu próximo projeto, independentemente do harness.
+- [ ] Entendi o efeito das leis 5 e 8 no código real (gates `G_TESTES_REAIS` e `G_HONESTIDADE_ROTULO`).
 
 ## Para saber mais
 
-- Seção 6 do `AGENTS.md` — a arquitetura fonte/derivado da fábrica como caso
-  completo de invariante vs moda.
-- `scripts/setup-links.ps1` / `setup-links.sh` — recriar as junctions após
-  clone (o adaptador da fábrica).
-- `relatorios/` — a convenção V5.2 que garante o rastro de cada sessão.
+1. `AGENTS.md` do ecossistema — "Inviolable Laws" completas (linhas ~10-30).
+2. `gates/manifesto_harnesses.json` — a lista de harnesses suportados.
+3. Script `scripts/gestor_componentes.py` — `sync` e `verify` de distribuição.
+4. `gates/G_HONESTIDADE_ROTULO.py` — a implementação da Lei 8.
 
-No Dia 16, a montagem final: **a arquitetura completa de uma esteira agêntica
-auditável, do tema à entrega** — o sistema que constrói sistemas.
+No Dia 16, encerramos com o panorama completo: a fábrica agêntica AIDD de ponta a ponta — do ideia ao software testado.

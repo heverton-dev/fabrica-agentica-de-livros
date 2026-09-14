@@ -99,13 +99,14 @@ def carregar_sumario_mae(slug):
 
 
 def capitulos_lineares(sumario):
-    """Achata partes/capitulos do sumario-mae em uma lista ordenada."""
+    """Achata partes/unidades do sumario-mae em uma lista ordenada (compativel com
+    livro/capitulos e manual-diario/dias — auto-deteccao pela gramatica do JSON)."""
     lista = []
     for parte in sumario.get("partes", []):
-        for cap in parte.get("capitulos", []):
+        for cap in TO.unidades_da_parte(parte):
             lista.append({
                 "parte": parte.get("parte"),
-                "capitulo": cap.get("capitulo"),
+                "capitulo": cap.get("capitulo") or cap.get("dia"),
                 "titulo": cap.get("titulo", ""),
                 "objetivo": cap.get("objetivo", ""),
             })

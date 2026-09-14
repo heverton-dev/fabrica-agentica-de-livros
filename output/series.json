@@ -40,7 +40,8 @@
     "membros": [
       "livros/engenharia-agentica",
       "engenharia-agentica",
-      "versao-iniciante"
+      "versao-iniciante",
+      "engenharia-agentica/livros/versao-iniciante"
     ]
   },
   "gratis-open-source": {

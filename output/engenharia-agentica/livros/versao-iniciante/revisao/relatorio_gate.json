@@ -1,0 +1,17 @@
+{
+  "slug": "engenharia-agentica/livros/versao-iniciante",
+  "conforme": true,
+  "total_dias": 16,
+  "violacoes": [],
+  "avisos": [],
+  "regras": {
+    "R-MDI-1": "1 arquivo dia-NN.md por dia do sumario, sem lacuna, na ordem",
+    "R-MDI-2": "todo dia tem as 9 seções fixas do manual (Meta do dia a Para saber mais)",
+    "R-MDI-3": "todo dia tem secao 'O exemplo real' com o projeto-continuo da obra",
+    "R-MDI-4": "todo dia referencia fontes ([N] numerica) e diagrama (```mermaid)",
+    "R-MDI-5": "todo dia tem ao menos 1800 caracteres (anti-dia-raso)",
+    "R-MDI-6": "dia argumenta pontos concretos (sem placeholder/vazio na Meta e no Checklist)",
+    "R-MDI-7": "manual nao contem horizontal rules (---) entre seções do dia",
+    "R-MDI-8": "capa com badge de nivel + senioridade declarada no config_obra.json"
+  }
+}

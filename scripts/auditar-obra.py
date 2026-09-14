@@ -46,8 +46,10 @@ import tipos_obra as TO
 
 # V5 — tipos cujo merito e julgado por um gate proprio (nao pelas regras de livro).
 # auditar-obra delega para o validador declarado no registro.
-TIPOS_DELEGADOS = tuple(t for t in TO.tipos_validos()
-                        if TO.campo(t, "natureza") == "extracao")
+TIPOS_DELEGADOS = tuple(
+    t for t in TO.tipos_validos()
+    if TO.campo(t, "natureza") == "extracao" or t == "manual-diario"
+)
 
 DIR_PROJETO = Path(__file__).resolve().parent.parent
 DIR_OUTPUT = DIR_PROJETO / "output"
@@ -732,32 +734,53 @@ def main():
         print(f"[i] tipo_obra={tipo} — delegando para {Path(validador).name}")
         return subprocess.run(comando).returncode
 
-    if not dir_caps.exists():
-        print(f"[ERRO] Capitulos nao encontrados: {dir_caps}")
-        return 1
+    # manual-diario: dias vivem como dia-NN.md na raiz da obra (nada de capitulos/)
+    is_eita = tipo in ("livro", "manual-diario")
     min_refs = args.min_refs or config["min_referencias_por_capitulo"]
     tamanho = args.tamanho or config.get("tamanho_obra")
-    minimos = PO.minimos_livro(tamanho) if tipo == "livro" and config.get("_origem") == "esboco" else None
-
-    caminhos = sorted(dir_caps.glob("cap_*.md"),
-                      key=lambda p: int(re.search(r"cap_(\d+)", p.stem).group(1)))
-    caminhos = [c for c in caminhos if not c.stem.startswith("_")]
-    if not caminhos:
-        print(f"[ERRO] Nenhum cap_*.md em {dir_caps}")
-        return 1
-
+    minimos = None
+    if config.get("_origem") == "esboco":
+        minimos = PO.minimos_do_tipo(tipo, tamanho) if tamanho else None
     vocabulario_motivo_condutor = []
-    if tipo == "livro":
-        sumario_path = dir_livro / "sumario_macro.json"
-        if sumario_path.exists():
-            try:
-                sumario = json.loads(sumario_path.read_text(encoding="utf-8"))
-                vocabulario_motivo_condutor = (sumario.get("motivo_condutor") or {}).get("vocabulario") or []
-            except (json.JSONDecodeError, OSError):
-                vocabulario_motivo_condutor = []
+    sumario_path = dir_livro / "sumario_macro.json"
+    if sumario_path.exists():
+        try:
+            sumario = json.loads(sumario_path.read_text(encoding="utf-8"))
+            vocabulario_motivo_condutor = (sumario.get("motivo_condutor") or {}).get("vocabulario") or []
+        except (json.JSONDecodeError, OSError):
+            vocabulario_motivo_condutor = []
+
+    if tipo == "manual-diario":
+        caminhos = sorted(
+            dir_livro.glob("dia-*.md"),
+            key=lambda p: int(re.search(r"dia-(\d+)", p.stem).group(1)))
+        caminhos = [c for c in caminhos if not c.stem.startswith("_")]
+        if not caminhos:
+            print(f"[ERRO] Nenhum dia-*.md em {dir_livro}")
+            return 1
         capitulos = [auditar_capitulo(c, vocabulario_motivo_condutor) for c in caminhos]
+    elif not dir_caps.exists():
+        print(f"[ERRO] Capitulos nao encontrados: {dir_caps}")
+        return 1
     else:
-        capitulos = [auditar_secao_academica(c, tipo, min_refs) for c in caminhos]
+        caminhos = sorted(dir_caps.glob("cap_*.md"),
+                          key=lambda p: int(re.search(r"cap_(\d+)", p.stem).group(1)))
+        caminhos = [c for c in caminhos if not c.stem.startswith("_")]
+        if not caminhos:
+            print(f"[ERRO] Nenhum cap_*.md em {dir_caps}")
+            return 1
+
+        if is_eita:
+            vocabulario_motivo_condutor = []
+            if sumario_path.exists():
+                try:
+                    sumario = json.loads(sumario_path.read_text(encoding="utf-8"))
+                    vocabulario_motivo_condutor = (sumario.get("motivo_condutor") or {}).get("vocabulario") or []
+                except (json.JSONDecodeError, OSError):
+                    vocabulario_motivo_condutor = []
+            capitulos = [auditar_capitulo(c, vocabulario_motivo_condutor) for c in caminhos]
+        else:
+            capitulos = [auditar_secao_academica(c, tipo, min_refs) for c in caminhos]
 
     livro_final = dir_livro / "livro_final.md"
     caracteres_obra = (len(livro_final.read_text(encoding="utf-8", errors="replace"))
@@ -768,8 +791,8 @@ def main():
     terminologia = detectar_inconsistencia_terminologica(capitulos)
 
     # ── Requisitos contratuais ────────────────────────────────────
-    if tipo == "livro":
-        min_capitulos = minimos["capitulos"] if minimos else MIN_CAPITULOS
+    if is_eita:
+        min_capitulos = minimos[TO.chave_unidade(tipo)] if minimos else MIN_CAPITULOS
         min_caracteres = minimos["caracteres"] if minimos else MIN_CARACTERES
         requisitos = montar_requisitos_livro(capitulos, caracteres_obra,
                                              min_capitulos, min_caracteres, min_refs,
@@ -780,15 +803,16 @@ def main():
     nao_conformes = [r for r in requisitos if not r["conforme"]]
     veredito = "CONFORME" if not nao_conformes else "NAO CONFORME"
 
-    alertas_estilo = montar_alertas_estilo(capitulos, vocabulario_motivo_condutor) if tipo == "livro" else None
+    rotulo_unidade = TO.rotulo_unidade(tipo)
+    alertas_estilo = montar_alertas_estilo(capitulos, vocabulario_motivo_condutor) if is_eita else None
 
-    # ── F1/F2 — gates de MERITO de conteudo encadeados (tipo livro) ───────
+    # ── F1/F2 — gates de MERITO de conteudo encadeados (tipo livro/manual-diario) ───────
     # Rodam offline (referencias com --sem-rede: usa cache, sem rede nada
     # reprova — R-RF-3). O revisor-tecnico roda o fluxo completo com rede e
     # --executar no Passo 1.1 da skill.
     relatorio_gates = {}
     gates_falharam = []
-    if tipo == "livro":
+    if is_eita:
         # Ler categoria_tecnica do config_obra
         config_arquivo = dir_livro / "config_obra.json"
         categoria_tecnica = False
@@ -844,7 +868,7 @@ def main():
 
     # ── Saida humana compacta ─────────────────────────────────────
     print(f"AUDITORIA DA OBRA - {args.slug}")
-    print(f"  capitulos: {len(capitulos)} | caracteres: {caracteres_obra:,}".replace(",", ".")
+    print(f"  {rotulo_unidade}s: {len(capitulos)} | caracteres: {caracteres_obra:,}".replace(",", ".")
           + f" | ~{relatorio['paginas_estimadas']} paginas")
     print("")
     for r in requisitos:
@@ -854,12 +878,12 @@ def main():
             print(f"           -> {r['detalhe']}")
     print("")
     if sobreposicao:
-        print(f"  [ALERTA] {len(sobreposicao)} par(es) de paragrafos sobrepostos entre capitulos:")
+        print(f"  [ALERTA] {len(sobreposicao)} par(es) de paragrafos sobrepostos entre {rotulo_unidade}s:")
         for s in sobreposicao[:5]:
             print(f"    cap {s['capitulo_a']} <-> cap {s['capitulo_b']} "
                   f"(sim={s['similaridade']}): {s['trecho'][:90]}...")
     else:
-        print("  [OK] Nenhuma sobreposicao relevante entre capitulos")
+        print(f"  [OK] Nenhuma sobreposicao relevante entre {rotulo_unidade}s")
     if terminologia:
         print(f"  [ALERTA] {len(terminologia)} termo(s) com grafia inconsistente:")
         for t in terminologia[:5]:
@@ -874,13 +898,13 @@ def main():
         if empilhadas:
             total = sum(len(c["ocorrencias"]) for c in empilhadas)
             print(f"  [ESTILO] {total} citacao(oes) empilhada(s) (tom de revisao de literatura) em "
-                  + ", ".join(f"cap {c['capitulo']}" for c in empilhadas))
+                  + ", ".join(f"{rotulo_unidade} {c['capitulo']}" for c in empilhadas))
         else:
             print("  [OK] Nenhuma citacao empilhada detectada")
         if alertas_estilo["motivo_condutor_avaliado"]:
             if sem_motivo:
                 print(f"  [ESTILO] motivo condutor da obra some fora da secao Ilustra em: "
-                      + ", ".join(f"cap {c}" for c in sem_motivo))
+                      + ", ".join(f"{rotulo_unidade} {c}" for c in sem_motivo))
             else:
                 print("  [OK] Motivo condutor recorrente em todos os capitulos")
         else:
@@ -888,18 +912,18 @@ def main():
 
         sem_callback = alertas_estilo["capitulos_sem_callback_capitulo_anterior"]
         if sem_callback:
-            print(f"  [ESTILO] sem callback nomeado a capitulo anterior em: "
-                  + ", ".join(f"cap {c}" for c in sem_callback))
+            print(f"  [ESTILO] sem callback nomeado a {rotulo_unidade} anterior em: "
+                  + ", ".join(f"{rotulo_unidade} {c}" for c in sem_callback))
         else:
-            print("  [OK] Callback ao capitulo anterior presente em todos os capitulos aplicaveis")
+            print(f"  [OK] Callback ao {rotulo_unidade} anterior presente em todos os {rotulo_unidade}s aplicaveis")
 
         ritmo_monotono = alertas_estilo["capitulos_ritmo_monotono"]
         if ritmo_monotono:
             print(f"  [ESTILO] ritmo de frase monotono (possivel tom de relatorio) em: "
-                  + ", ".join(f"cap {c['capitulo']} (media={c['media_palavras_por_frase']}, "
+                  + ", ".join(f"{rotulo_unidade} {c['capitulo']} (media={c['media_palavras_por_frase']}, "
                               f"cv={c['coeficiente_variacao']})" for c in ritmo_monotono))
         else:
-            print("  [OK] Ritmo de frase variado em todos os capitulos avaliados")
+            print(f"  [OK] Ritmo de frase variado em todos os {rotulo_unidade}s avaliados")
 
     if relatorio_gates:
         print("\n  GATES DE CONTEUDO (F1/F2):")

@@ -56,6 +56,18 @@ TAMANHOS = {
 }
 TAMANHO_PADRAO = "M"
 
+# Tabela de tamanhos de MANUAL DIARIO (tipo_obra=manual-diario). A unidade de
+# conteudo e o DIA, nao o capitulo. Um dia e tipicamente mais curto que um
+# capitulo de livro (~1.800-2.200 chars), entao a soma para a mesma paginacao
+# alvo fica maior que a do livro classico.
+TAMANHOS_DIARIO = {
+    "P": {"partes": 1, "dias": 5, "paginas": 40, "caracteres": 90_000},
+    "M": {"partes": 2, "dias": 10, "paginas": 80, "caracteres": 180_000},
+    "G": {"partes": 2, "dias": 14, "paginas": 110, "caracteres": 250_000},
+    "GG": {"partes": 4, "dias": 16, "paginas": 160, "caracteres": 360_000},
+    "XG": {"partes": 5, "dias": 20, "paginas": 200, "caracteres": 450_000},
+}
+
 # Retrocompatibilidade: obras V3 sem esboco/config_obra.json usam os minimos originais
 MIN_CAPITULOS_V3 = 16
 MIN_CARACTERES_V3 = 175_000
@@ -120,7 +132,22 @@ def citacao_regex(tipo_obra):
 
 
 def minimos_livro(tamanho):
+    """Minimos de LIVRO por tamanho (P/M/G/GG/XG). Mantido p/ retrocompat."""
     return TAMANHOS.get((tamanho or TAMANHO_PADRAO).upper(), TAMANHOS[TAMANHO_PADRAO])
+
+
+def minimos_manual_diario(tamanho):
+    """Minimos de MANUAL DIARIO por tamanho (P/M/G/GG/XG) — unidade = dias."""
+    padrao = TAMANHOS_DIARIO[TAMANHO_PADRAO]
+    return TAMANHOS_DIARIO.get((tamanho or TAMANHO_PADRAO).upper(), padrao)
+
+
+def minimos_do_tipo(tipo, tamanho):
+    """Minimos corretos para o `tipo`: livros usam TAMANHOS, manuais diarios usam
+    TAMANHOS_DIARIO e qualquer tipo sem tabela propria cai no TAMANHOS do livro."""
+    if tipo == "manual-diario":
+        return minimos_manual_diario(tamanho)
+    return minimos_livro(tamanho)
 
 
 def caminho_config(slug):
@@ -218,6 +245,18 @@ def validar_config(config):
             val = config.get(campo_obrig)
             if not val or (isinstance(val, str) and not val.strip()):
                 erros.append(f"{nome} eh obrigatorio para tipo_obra=livro (Gap 3: capa sem fallback errado)")
+
+    if tipo == "manual-diario":
+        tam = config.get("tamanho_obra")
+        if tam not in TAMANHOS_DIARIO:
+            erros.append(
+                f"tamanho_obra deve ser P, M, G, GG ou XG quando tipo_obra=manual-diario, "
+                f"recebido: {tam!r}"
+            )
+        for campo_obrig, nome in [("cor_primaria", "cor_primaria"), ("subtitulo", "subtitulo"), ("edition_tag", "edition_tag")]:
+            val = config.get(campo_obrig)
+            if not val or (isinstance(val, str) and not val.strip()):
+                erros.append(f"{nome} eh obrigatorio para tipo_obra=manual-diario (Gap 3: capa sem fallback errado)")
 
     if config.get("gerar_artigos"):
         qtd = config.get("qtd_artigos")

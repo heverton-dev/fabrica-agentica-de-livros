@@ -110,23 +110,47 @@ def nota_do_framework() -> str:
     ])
 
 
-def sumario_geral(sumario: dict) -> str:
+def sumario_geral(sumario, tipo="livro") -> str:
+    chave = TO.chave_unidade(tipo)
+    rotulo = TO.rotulo_unidade(tipo).capitalize()
     linhas = ["# Sumário Geral da Obra", ""]
     for parte in sumario.get("partes") or []:
         numero = parte.get("parte", "")
         titulo = parte.get("titulo_parte", "")
         linhas += [f"**Parte {numero} — {titulo}**", ""]
-        for cap in parte.get("capitulos") or []:
-            linhas.append(f"- Capítulo {cap.get('capitulo', '')}: {cap.get('titulo', '')}")
+        for cap in TO.unidades_da_parte(parte, tipo):
+            linhas.append(f"- {rotulo} {cap.get(TO.rotulo_unidade(tipo), '')}: {cap.get('titulo', '')}")
         linhas.append("")
     linhas += ["**Conclusão Geral**", ""]
     return "\n".join(linhas)
 
 
-def capitulo_por_numero(dir_obra: Path, numero: str) -> str:
-    caminho = dir_obra / "capitulos" / f"cap_{numero}.md"
-    if not caminho.exists():
-        raise FileNotFoundError(f"capitulo ausente: {caminho}")
+def arquivo_unidade(dir_obra: Path, tipo: str, numero: str) -> Path:
+    """Localiza o arquivo de uma unidade (cap_N.md em capitulos/ p/ livro; dia-NN.md
+    na raiz p/ manual-diario). Lança FileNotFoundError se o arquivo nao existir."""
+    chave = TO.chave_unidade(tipo)
+    if chave == "dias":
+        cands = [
+            dir_obra / "dias" / f"dia_{int(numero):02d}.md",
+            dir_obra / f"dia-{int(numero):02d}.md",
+            dir_obra / f"dia-{numero}.md",
+        ]
+        for p in cands:
+            if p.exists():
+                return p
+        raise FileNotFoundError(f"dia ausente: {cands}")
+    cands = [
+        dir_obra / "capitulos" / f"cap_{int(numero):02d}.md",
+        dir_obra / "capitulos" / f"cap_{numero}.md",
+    ]
+    for p in cands:
+        if p.exists():
+            return p
+    raise FileNotFoundError(f"capitulo ausente: {cands[0]}")
+
+
+def capitulo_por_numero(dir_obra: Path, numero: str, tipo: str = "livro") -> str:
+    caminho = arquivo_unidade(dir_obra, tipo, numero)
     return caminho.read_text(encoding="utf-8").strip() + "\n"
 
 
@@ -142,6 +166,10 @@ def sem_horizontal_rules(texto: str) -> str:
 
 
 def montar(dir_obra: Path, config: dict, sumario: dict) -> str:
+    tipo = config.get("tipo_obra", "livro")
+    rotulo_chave = TO.rotulo_unidade(tipo)
+    rotulo = rotulo_chave.capitalize()
+    chave = TO.chave_unidade(tipo)
     corpo = [folha_de_titulo(sumario, config)]
 
     prefacio = (dir_obra / "prefacio.md")
@@ -149,14 +177,14 @@ def montar(dir_obra: Path, config: dict, sumario: dict) -> str:
                  if prefacio.exists() else "# Prefácio\n")
 
     corpo.append(nota_do_framework())
-    corpo.append(sumario_geral(sumario))
+    corpo.append(sumario_geral(sumario, tipo))
 
     for parte in sumario.get("partes") or []:
         numero = parte.get("parte", "")
         titulo = parte.get("titulo_parte", "")
         corpo.append(f"# Parte {numero} — {titulo}\n")
-        for cap in parte.get("capitulos") or []:
-            corpo.append(capitulo_por_numero(dir_obra, str(cap.get("capitulo", ""))))
+        for cap in TO.unidades_da_parte(parte, tipo):
+            corpo.append(capitulo_por_numero(dir_obra, str(cap.get(rotulo_chave, "")), tipo))
 
     conclusao = dir_obra / "conclusao-geral.md"
     if conclusao.exists():
@@ -165,15 +193,17 @@ def montar(dir_obra: Path, config: dict, sumario: dict) -> str:
     return frontmatter(config, sumario) + "\n" + sem_horizontal_rules("\n".join(corpo))
 
 
-def validar(texto: str, sumario: dict) -> list:
+def validar(texto: str, sumario: dict, tipo: str = "livro") -> list:
     problemas = []
+    rotulo_chave = TO.rotulo_unidade(tipo)
+    rotulo = rotulo_chave.capitalize()
     if not re.match(r"^---\n", texto):
         problemas.append("frontmatter YAML ausente no inicio do documento")
     for parte in sumario.get("partes") or []:
-        for cap in parte.get("capitulos") or []:
-            numero = str(cap.get("capitulo", ""))
-            if f"# Capítulo {numero}:" not in texto:
-                problemas.append(f"capitulo {numero} nao encontrado no documento montado")
+        for cap in TO.unidades_da_parte(parte, tipo):
+            numero = str(cap.get(rotulo_chave, ""))
+            if not re.search(rf"^# {rotulo} {numero}([:\s]|—)", texto, re.MULTILINE):
+                problemas.append(f"{rotulo.lower()} {numero} nao encontrado no documento montado")
     if "Conclusão Geral" not in texto:
         problemas.append("conclusao geral ausente")
     if re.search(r"^[ \t]*(-{3,})[ \t]*$", texto.split("---", 2)[-1], re.MULTILINE):
@@ -200,15 +230,17 @@ def main() -> int:
         print("[ERRO] sumario_macro.json ausente ou vazio — rode a Fase 1 primeiro.")
         return 1
 
+    tipo = config.get("tipo_obra", "livro")
+    chave = TO.chave_unidade(tipo)
     texto = montar(dir_obra, config, sumario)
-    problemas = validar(texto, sumario)
+    problemas = validar(texto, sumario, tipo)
 
     print("=" * 62)
     print(f"MONTAGEM DO LIVRO FINAL — {args.slug}")
     print("=" * 62)
-    capitulos = sum(len(p.get("capitulos") or []) for p in sumario.get("partes") or [])
+    capitulos = sum(len(TO.unidades_da_parte(p, tipo)) for p in sumario.get("partes") or [])
     print(f"  partes montadas   : {len(sumario.get('partes') or [])}")
-    print(f"  capitulos montados: {capitulos}")
+    print(f"  {chave} montados      : {capitulos}")
     print(f"  caracteres totais : {len(texto):,}".replace(",", "."))
 
     if problemas:

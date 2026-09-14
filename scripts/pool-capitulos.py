@@ -69,11 +69,14 @@ def carregar_sumario(slug):
         print(f"[ERRO] sumario_macro.json nao encontrado em {caminho.parent}")
         return None
     dados = json.loads(caminho.read_text(encoding="utf-8"))
+    tipo = TO.tipo_por_prefixo(slug) or "livro"
+    chave = TO.chave_unidade(tipo)
+    rotulo = TO.rotulo_unidade(tipo)
     capitulos = []
     for parte in dados.get("partes", []):
-        for cap in parte.get("capitulos", []):
+        for cap in parte.get(chave, []):
             capitulos.append({
-                "capitulo": str(cap.get("capitulo")),
+                "capitulo": str(cap.get(rotulo)),
                 "parte": str(parte.get("parte")),
                 "titulo": cap.get("titulo", ""),
             })

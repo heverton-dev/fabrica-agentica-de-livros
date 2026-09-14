@@ -64,16 +64,7 @@ Conclusão   → "Dominei este tema"
 
 ## Diagrama do Fluxo EITA
 
-```mermaid
-%% legenda: Fluxo de aprendizado das 7 seções EITA
-flowchart LR
-    A[Introdução] --> B[Explica]
-    B --> C[Ilustra]
-    C --> D[Técnica]
-    D --> E[Aplica]
-    E --> F[Conclusão]
-    F --> G[Referências]
-```
+![Fluxo de aprendizado das 7 seções EITA](imagens/diagramas/dia_livro_01_093a15a20b.png)
 
 ## Dica de Leitura
 
@@ -152,15 +143,7 @@ cada harness que funciona bem tem estas 5 peças:
 
 O `ecossistema-aidd` é um **meta-repositório de engenharia agêntica**: um monorepo que distribui a mesma governança para qualquer assistente de IA — Claude Code, Antigravity, OpenCode, MimoCode, Cursor — e entrega software testado a partir de uma ideia. E adivinhe: ele é ele próprio um grande harness. Dá para encontrar as 5 peças nele em poucos minutos de exploração.
 
-```mermaid
-flowchart LR
-    M["Modelo LLM<br/>(piloto)"] --> H["Harness (cabine)"]
-    H --> I["Instrução persistente<br/>AGENTS.md"]
-    H --> T["Ferramentas<br/>gates/, scripts/, tools/"]
-    H --> C["Contexto<br/>docs/, components/"]
-    H --> E["Estado<br/>PLANO-EXECUCAO-ESTRUTURADO.json<br/>core/"]
-    H --> P["Política<br/>G_*.py + pre-commit"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_02_4bf226e963.png)
 
 | Peça | Onde está no projeto real |
 |---|---|
@@ -253,14 +236,7 @@ O `AGENTS.md` do ecossistema-aidd é explícito. Sua primeira Lei Inviolável é
 
 Repare no detalhe: não é uma preferência de estilo. É uma lei. E leis, neste projeto, têm consequência no código.
 
-```mermaid
-flowchart LR
-    A["Mudança de código"] --> B["python ecossistema.py audit"]
-    B --> C{"exit 0?"}
-    C -- Sim --> D["Mudança aceita"]
-    C -- Não (exit 1) --> E["Bloco: corrija a causa"]
-    E --> A
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_03_8ca5ef311e.png)
 
 ## O exemplo real: os gates do `ecossistema-aidd`
 
@@ -367,15 +343,7 @@ Repare no princípio: o arquivo de instrução não detalha cada ferramenta — 
 
 Na raiz do `ecossistema-aidd` você encontra o `AGENTS.md` completo em apenas ~50 linhas. Ele declara o nome do repositório, o padrão de governança ("Zero Stubs, Strict Determinism, Context Optimization <2000 tokens") e a referência completa em `docs/protocolos/AGENTS-REFERENCIA-COMPLETA.md`.
 
-```mermaid
-flowchart TD
-    AG["AGENTS.md canônico (raiz)"] --> C["CLAUDE.md"]
-    AG --> G["GEMINI.md"]
-    AG --> Q["QODER.md"]
-    AG --> B["CODEBUDDY.md"]
-    AG --> T["tools/*/AGENTS.md<br/>(detalhes por ferramenta)"]
-    AG --> D["docs/protocolos/<br/>AGENTS-REFERENCIA-COMPLETA.md"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_04_f55bb54dc9.png)
 
 A instrução persistente não é um texto único gigante: é uma **árvore**. O canônico é o tronco (limites e leis); as ferramentas são os galhos (detalhes de cada dominio); o documento de referência completa é a folhagem (o wiki completo). O agente lê o tronco sempre, os galhos sob demanda e a folhagem quando precisa mergulhar.
 
@@ -486,14 +454,7 @@ def cmd_generate(args):
 
 Isso é uma **tool** canonica: o LLM chama `python ecossistema.py generate "sistema de delivery"` e o harness instancia o subprocesso com o ambiente certo. O resultado volta com exit code — e o fluxo decide (Dia 2) [3].
 
-```mermaid
-flowchart LR
-    A["Agente (LLM)"] --> B["python ecossistema.py"]
-    B --> C["cmd_generate"]
-    C --> D["tools/aidd-generator/<br/>pipeline_completo.py"]
-    D --> E["8 fases: pesquisa → ...<br/>→ implementador"]
-    E --> F["exit 0/1"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_05_38ed059446.png)
 
 E as skills? Em `componentes/compartilhado/skills/` existem skills que ensinam o agente a orquestrar (ex.: `orca-plan-orchestrator`, com o protocolo completo de worktrees e terminal), a auditar planos (`planos-auditoria-runner`) e a operar cada ferramenta (`aidd-forge-runner`, `aidd-generator-runner` e afins). O comando `python ecossistema.py status` lista as skills universais e marca cada uma como `[OK]` ou `[AUSENTE]` [4].
 
@@ -594,19 +555,7 @@ Reduzir custo não é só "usar modelo mais barato": é **não criar turnos desn
 
 O `aidd-generator` é um loop agêntico declarado com 8 fases fixas: pesquisa, analisador, designer, planejador, criador, documentador, auto-crítica e implementador [3]. A cada transição entre fases, um gate de validação exige `exit 0` — senão a progressão é bloqueada.
 
-```mermaid
-flowchart LR
-    P1["1 pesquisa"] --> P2["2 analisador"]
-    P2 --> P3["3 designer"]
-    P3 --> P4["4 planejador"]
-    P4 --> P5["5 criador"]
-    P5 --> P6["6 documentador"]
-    P6 --> P7["7 auto_critica"]
-    P7 --> P8["8 implementador"]
-    P8 --> G{"validar_fase<br/>exit 0?"}
-    G -- Sim --> F["Fase concluída"]
-    G -- Não --> P5
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_06_a74832a3c5.png)
 
 Repare em dois detalhes de economia que o ecossistema aplica ao próprio loop:
 
@@ -714,14 +663,7 @@ O `AGENTS.md` do ecossistema é **explícito sobre o custo de contexto** — a p
 - Os detalhes ficam **fora do prefixo**: em `tools/*/AGENTS.md`, `docs/protocolos/`, `componentes/`. O agente busca sob demanda — e essas buscas de arquivos novos entram *depois*, na parte volátil, sem quebrar o prefixo.
 - O `core/context_slicer.py` extrai apenas os símbolos relevantes de um arquivo (AST), em vez de injetar o arquivo inteiro. Menos tokens mutáveis no prefixo = mais do contexto cabendo na região cacheável.
 
-```mermaid
-flowchart LR
-    A["AGENTS.md canônico<br/>(estável)"] --> B["Leis + limites<br/>(estável)"]
-    B --> C["Instrução de sistema<br/>(estável)"]
-    C --> D["Historico recente<br/>(volátil)"]
-    A -- "ordem errada" --> X["Output de ferramenta no meio<br/>quebra o prefixo &rarr; cache perdido"]
-    D -- "chegou depois" --> Y["Entra na parte volátil<br/>cache preservado"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_07_7fcf34d43e.png)
 
 A regra prática que o ecossistema demonstra: **nunca injetar bloco instável no meio de bloco estável**; buscar conhecimento sob demanda (que é volátil e fica no fim) e manter a governança canônica fixa no início [4].
 
@@ -815,19 +757,7 @@ O ecossistema-aidd observa e recomenda um conjunto de práticas que funcionam em
 4. **Grafo antes de varredura**: consultar o MCP `code-review-graph` (buscas por grafo de conhecimento) antes de Grep/Glob/leitura integral — um único resultado dirigido vale mais do que a varredura inteira [3].
 5. **Edição por busca/substituição exata**: preferir `replace_file_content`/edições pontuais em arquivos pequenos a "sobrescrever" o arquivo inteiro — evitando respostas grandes e diffs gigantes que reentram no contexto.
 
-```mermaid
-flowchart TD
-    A["Token budget da sessão"] --> B["Reduzir ENTRADA"]
-    A --> C["Reduzir SAIDA"]
-    B --> B1["pipe \| tail/grep no comando"]
-    B --> B2["grafo antes do grep/leitura"]
-    B --> B3["resumo de log, nao dump"]
-    C --> C1["pensamento \u2264150 palavras"]
-    C --> C2["executor silencioso"]
-    C --> C3["edicao cirurgica"]
-    B1 --> D["Token/sessao menor"]
-    C1 --> D
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_08_2a3a05e27f.png)
 
 ## O exemplo real: as regras de economia no `AGENTS.md`
 
@@ -939,14 +869,7 @@ Imagine que o agente precisa entender a classe `AIDDGeneratorPipeline` em `tools
 
 A economia é significativa, mas o benefício maior é a **predição**: o payload JSON é determinístico. Não importa quem ou quando chama — o mesmo arquivo sempre devolve o mesmo payload mínimo. Isso transforma contexto em algo auditável e cacheável (Dia 6).
 
-```mermaid
-flowchart LR
-    A["arquivo.py<br/>(300 linhas)"] --> B["extract_from_file<br/>AST analysis"]
-    B --> C["payload JSON<br/>(<150 tokens)"]
-    C --> D["agente seleciona<br/>método relevante"]
-    D --> E["injeta ~30 linhas<br/>no contexto"]
-    E --> F["decisão com contexto mínimo<br/>(cacheável)"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_09_dc34bae23f.png)
 
 ## O Ledger: estado persistente sem pesar
 
@@ -1086,21 +1009,7 @@ A tabela de gates no README do projeto é o mapa completo. Aqui estão os mais i
 - `G_ORFAOS` — arquivos órfãos sem referência
 - `G_DRIFT_NUCLEO_COMPARTILHADO` — componentes compartilhados estão sincronizados
 
-```mermaid
-flowchart LR
-    A["git commit"] --> B["pre-commit hook"]
-    B --> C["G_SEGREDOS"]
-    B --> D["G_HADOLINT"]
-    B --> E["G_TESTES_REAIS"]
-    B --> F["G_HONESTIDADE_ROTULO"]
-    B --> G["G_ECOSSISTEMA_INTEGRIDADE"]
-    C -- "exit 1" --> X["commit bloqueado"]
-    D -- "exit 1" --> X
-    E -- "exit 1" --> X
-    C -- "exit 0" --> Y["prossegue"]
-    D -- "exit 0" --> Y
-    E -- "exit 0" --> Y
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_10_715e77fa46.png)
 
 ## O exemplo real: estrutura de um gate no `ecossistema-aidd`
 
@@ -1213,16 +1122,7 @@ repos:
 
 A configuração `pass_filenames: false` é essencial — o gate recebe o repositório inteiro, não arquivos individuais. Cada um tem seu comportamento.
 
-```mermaid
-flowchart LR
-    A["git commit -m 'feat: nova rota'"] --> B["pre-commit: G_HADOLINT"]
-    B --> C["pre-commit: G_SEGREDOS"]
-    C --> D["pre-commit: G_TESTES_REAIS"]
-    D --> E["pre-commit: G_HONESTIDADE_ROTULO"]
-    E -- "exit 0 todos os" --> F["commit aceito"]
-    B -- "exit 1" --> G["commit bloqueado → corrija antes"]
-    C -- "exit 1" --> G
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_11_bc0dd8f003.png)
 
 ## Mão na massa
 
@@ -1332,17 +1232,7 @@ python ecossistema.py orchestrate plano-exemplo.md --ambiente subagent --dry-run
 
 O comando renderiza um **plano de voo** — a programação das frentes com contexto, critérios de aceite e dependências — e salva o estado em `.orca-flight-plan.json` [3]. Na prática do ecossistema, essa compilação é feita pelo módulo `scripts/subagent_plan.py`, que transforma o plano em Markdown em uma lista de chamadas ao agente.
 
-```mermaid
-flowchart LR
-    A["Sessao principal<br/>(contexto curto)"] --> B["orchestrate plano --ambiente subagent"]
-    B --> C["Frente 1: pesquisar API"]
-    B --> D["Frente 2: revisar schema"]
-    B --> E["Frente 3: auditar segredos"]
-    C --> F["resumo compacto"]
-    D --> F
-    E --> F
-    F --> G["Principal decide proximos passos<br/>(sem poluir a janela)"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_12_761c8703c8.png)
 
 Repare no papel do orquestrador: ele não roda o subagente como "caixa-preta"; ele **prescreve** o contexto de cada frente (o que assumir, o que verificar, o que devolver), preservando o padrão determinístico (Dia 8).
 
@@ -1437,18 +1327,7 @@ Quando você roda `orchestrate`, o ecossistema não executa as frentes na hora (
 
 O plano de voo é a interface entre o humano e a máquina: você revisa, ajusta, e então o assistente da sessão executa cada frente seguindo o protocolo (Worktree create → Terminal → send). É orquestração declarativa: o desenho primeiro, a execução depois [3].
 
-```mermaid
-flowchart TD
-    A["plano.md<br/>(3 frentes)"] --> B["python ecossistema.py orchestrate"]
-    B --> C{"Ambiente?"}
-    C -->|"orca"| D["orca-cli: worktree real + terminal"]
-    C -->|"gitworktree"| E["motor nativo: git worktree + harness"]
-    C -->|"subagent"| F["Agent tool: so contexto, sem worktree"]
-    D --> G[".orca-flight-plan.json"]
-    E --> G
-    F --> G
-    G --> H["Execucao das frentes (protocolo skill)"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_13_0a4a2afe30.png)
 
 Repare na decisão implícita: nem cada trabalho precisa de worktree. Uma frente de pesquisa que só lê arquivos pode rodar em `subagent` (barata, sem infraestrutura). Já uma frente que reescreve um módulo inteiro precisa de `gitworktree` (isolamento de arquivo + branch próprio). O orquestrador cruza isso com o `harness_profiles.json` — qual harness usar em cada ambiente [2].
 
@@ -1554,16 +1433,7 @@ O ecossistema é agnóstico por lei (supremacia agnóstica — Lei 6): ele não 
 
 **2. Roteamento por ferramenta (subprocesso determinístico).** Quando o fluxo chama um gate ou uma etapa do generator (8 fases), o trabalho é delegado a um script Python que **não usa LLM nenhum** — custo zero (Dia 4). O LLM fica reservado para as fases de raciocínio da linha de montagem; o que é mecânico sai do circuito de modelos.
 
-```mermaid
-flowchart TD
-    A["Tarefa agêntica"] --> B{"Tipo de trabalho?"}
-    B -->|"Diagnóstico de sintaxe, run de teste"| C["Subprocesso determinístico<br/>(custo zero)"]
-    B -->|"Pesquisa de código"| D["Subagent compacto (custo baixo)"]
-    B -->|"Arquitetura / síntese"| E["Harness principal<br/>(raciocínio profundo)"]
-    C --> F["exit 0/1"]
-    D --> F
-    E --> G["Revisão humana"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_14_ff88772dd3.png)
 
 ## A escolha consciente do "model: inherit"
 
@@ -1660,19 +1530,7 @@ Três configurações são as campeãs de "ninguém te contou":
 
 O fluxo de inicialização do `ecossistema.py` é antes de tudo o verdadeiro "segredo" do início de sessão:
 
-```mermaid
-flowchart TD
-    A["python ecossistema.py"] --> B{"Python >= 3.10?"}
-    B -- Não --> C["Erro: atualize o Python"]
-    B -- Sim --> D{"Dependencias importam?"}
-    D -- Não --> E{"--auto-bootstrap?"}
-    E -- Sim --> F["pip install -r requirements.txt"]
-    F --> G["Retenta iniciar (1x)"]
-    G -- Ainda falha --> H["Erro claro"]
-    G -- Sucesso --> I["CLI executando"]
-    D -- Sim --> I
-    E -- Não --> H
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_15_bcff8e475f.png)
 
 Repare: o auto-bootstrap não é "instalar sempre" — é **instalar sob demanda, apenas quando o usuário pede o flag**, e retentar uma vez. Isso mantém o projeto determinístico: nenhum efeito colateral acontece sem pedido explícito (Dia 2).
 
@@ -1788,16 +1646,7 @@ O manifesto `gates/manifesto_harnesses.json` lista os harnesses suportados pelo 
 
 O que faz isso funcionar em qualquer harness é o princípio: **a pasta canônica (`componentes/`) é a fonte da verdade; as pastas por harness são só destinos de distribuição** [3]. Se amanhã surgir um harness novo, basta uma entrada no manifesto e o sync passa a distribuir.
 
-```mermaid
-flowchart TD
-    A["componentes/compartilhado/skills/<br/>(fonte canônica)"] --> B["python ecossistema.py components sync"]
-    B --> C[".claude/skills/ (Claude Code)"]
-    B --> D[".agents/skills/ (Antigravity)"]
-    B --> E[".opencode/skills/ (OpenCode)"]
-    B --> F[".mimocode/skills/ (MimoCode)"]
-    B --> G[".gemini/skills/ (Gemini CLI)"]
-    C --> H["cada harness lê e executa<br/>com seu protocolo nativo"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_16_280b91d101.png)
 
 ## A universaliade de prática
 
@@ -1883,19 +1732,7 @@ A premissa central é: **um repositório não é um projeto — é uma fábrica*
 
 ## O exemplo real: o fluxo de ponta a ponta
 
-```mermaid
-flowchart TD
-    A["IDEIA do projeto"] --> B["bridge scan<br/>(extrair do no-code)"]
-    A --> C["generate<br/>(fábrica de 8 fases)"]
-    A --> D["ops plan<br/>(sizing + infra)"]
-    C --> E["Ciclo: pesquisa → analisador →<br/>designer → planejador → criador →<br/>documentador → auto-crítica → implementador"]
-    E --> F{"Quality Gates<br/>(16 portões)"}
-    F -- "exit 0" --> G["Software testado"]
-    F -- "exit 1" --> H["Correção → ciclo<br/>(red/verde determinístico)"]
-    G --> I["master add-module<br/>(lego do sistema)"]
-    I --> J["enterprise inject<br/>(selo SHA-256)"]
-    J --> K["deploy / publish"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_17_722bcefff5.png)
 
 ## As 6 ferramentas como etapas de uma fábrica
 
@@ -1930,17 +1767,7 @@ No Dia 12 vimos a orquestração. No Dia 13, o roteamento. A síntese destes doi
 
 Isso muda o paradigma do "programador e a IA": o humano define o plano, o ecossistema o executa, os gates garantem a qualidade, e o resultado é um sistema que se constrói e se mantém com governança.
 
-```mermaid
-flowchart LR
-    A["Plano declarativo<br/>(Markdown)"] --> B["orchestrate"]
-    B --> C["Frente 1: generate"]
-    B --> D["Frente 2: master"]
-    B --> E["Frente 3: enterprise"]
-    C --> F["Gates<br/>(exit 0/1)"]
-    D --> F
-    E --> F
-    F -- "todos os exit 0" --> G["Software integrado<br/>(commit + branches)"]
-```
+![Diagrama do capitulo](imagens/diagramas/dia_livro_18_758698be49.png)
 
 ## O que levar para qualquer projeto
 

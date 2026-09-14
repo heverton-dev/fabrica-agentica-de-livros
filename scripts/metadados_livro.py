@@ -116,7 +116,7 @@ def palavras_chave(titulo, sumario):
     fonte = [titulo]
     for parte in sumario.get("partes", []):
         fonte.append(parte.get("titulo_parte", ""))
-        for cap in parte.get("capitulos", []):
+        for cap in TO.unidades_da_parte(parte):
             fonte.append(cap.get("titulo", ""))
 
     contagem = Counter()
@@ -142,7 +142,7 @@ def classificar_cdd(titulo, sumario):
         " ".join(p.get("titulo_parte", "") for p in sumario.get("partes", [])),
         " ".join(c.get("titulo", "")
                  for p in sumario.get("partes", [])
-                 for c in p.get("capitulos", [])),
+                 for c in TO.unidades_da_parte(p)),
     ])).lower()
     for termos, cdd in TABELA_CDD:
         if any(t in alvo for t in termos):

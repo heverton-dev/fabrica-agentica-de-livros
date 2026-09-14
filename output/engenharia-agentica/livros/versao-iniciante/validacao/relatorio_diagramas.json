@@ -1,0 +1,13 @@
+{
+  "slug": "engenharia-agentica/livros/versao-iniciante",
+  "modo": "livro",
+  "arquivos": [
+    "output\\engenharia-agentica\\livros\\versao-iniciante\\livro-render.md"
+  ],
+  "total": 18,
+  "renderizados": 0,
+  "cache": 18,
+  "falhas": [],
+  "ignorados": [],
+  "validos": 0
+}

@@ -35,8 +35,8 @@ class TestRegistroPropagado:
         assert "playbook" in PO.TIPOS_VALIDOS
         assert "lead-magnet" in PO.TIPOS_VALIDOS
 
-    def test_perguntaveis_sao_apenas_livro_e_tcc(self):
-        assert set(PO.TIPOS_PERGUNTAVEIS) == {"livro", "tcc"}
+    def test_perguntaveis_sao_livro_tcc_e_manual_diario(self):
+        assert set(PO.TIPOS_PERGUNTAVEIS) == {"livro", "tcc", "manual-diario"}
 
     def test_defaults_por_tipo_cobre_todos_os_tipos(self):
         assert set(PO.DEFAULTS_POR_TIPO) == set(TO.tipos_validos())

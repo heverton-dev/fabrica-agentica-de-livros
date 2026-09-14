@@ -34,32 +34,39 @@ DIR_OUTPUT = DIR_PROJETO / "output"
 ROMANOS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 
 
-def distribuir_capitulos(total_capitulos, total_partes):
-    """N capítulos em N partes o mais equilibrado possível (resto nas primeiras)."""
-    base, resto = divmod(total_capitulos, total_partes)
+def distribuir_unidades(total_unidades, total_partes):
+    """N unidades (capítulos/dias) em N partes o mais equilibrado possível (resto nas primeiras)."""
+    base, resto = divmod(total_unidades, total_partes)
     return [base + (1 if i < resto else 0) for i in range(total_partes)]
 
 
-def montar_esqueleto(tamanho):
-    minimos = PO.minimos_livro(tamanho)
-    distribuicao = distribuir_capitulos(minimos["capitulos"], minimos["partes"])
+# Alias retrocompativel: callers antigos (e testes) usam o nome `distribuir_capitulos`.
+distribuir_capitulos = distribuir_unidades
+
+
+def montar_esqueleto(tamanho, tipo="livro"):
+    chave = TO.chave_unidade(tipo)
+    rotulo_unidade = TO.rotulo_unidade(tipo)
+    minimos = PO.minimos_do_tipo(tipo, tamanho)
+    total_unidades = minimos[chave]
+    distribuicao = distribuir_unidades(total_unidades, minimos["partes"])
 
     partes = []
-    numero_capitulo = 1
+    numero_unidade = 1
     for indice, qtd in enumerate(distribuicao):
-        capitulos = []
+        unidades = []
         for _ in range(qtd):
-            capitulos.append({
-                "capitulo": str(numero_capitulo),
+            unidades.append({
+                rotulo_unidade: str(numero_unidade),
                 "titulo": "",
                 "objetivo": "",
                 "pilares_previstos": [],
             })
-            numero_capitulo += 1
+            numero_unidade += 1
         partes.append({
             "parte": ROMANOS[indice] if indice < len(ROMANOS) else str(indice + 1),
             "titulo_parte": "",
-            "capitulos": capitulos,
+            chave: unidades,
         })
 
     return {
@@ -83,10 +90,11 @@ def main():
     ap.add_argument("--forcar", action="store_true", help="sobrescreve sumario_macro.json existente")
     args = ap.parse_args()
 
+    config = PO.carregar_config(args.slug)
     tamanho = args.tamanho
     if not tamanho:
-        config = PO.carregar_config(args.slug)
         tamanho = config.get("tamanho_obra") or PO.TAMANHO_PADRAO
+    tipo = config.get("tipo_obra", "livro")
 
     dir_obra = TO.dir_obra(args.slug, DIR_OUTPUT)
     destino = dir_obra / "sumario_macro.json"
@@ -94,13 +102,14 @@ def main():
         print(f"[gerar-esqueleto-macro] já existe: {destino} (use --forcar para sobrescrever)")
         return 1
 
-    esqueleto = montar_esqueleto(tamanho)
+    esqueleto = montar_esqueleto(tamanho, tipo)
     dir_obra.mkdir(parents=True, exist_ok=True)
     destino.write_text(json.dumps(esqueleto, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    total_cap = sum(len(p["capitulos"]) for p in esqueleto["partes"])
-    print(f"[gerar-esqueleto-macro] tamanho={tamanho.upper()} -> {len(esqueleto['partes'])} partes, "
-          f"{total_cap} capítulos vazios")
+    chave = TO.chave_unidade(tipo)
+    total_unidades = sum(len(p[chave]) for p in esqueleto["partes"])
+    print(f"[gerar-esqueleto-macro] tipo={tipo} tamanho={tamanho.upper()} -> "
+          f"{len(esqueleto['partes'])} partes, {total_unidades} {chave} vazios")
     print(f"[gerar-esqueleto-macro] gravado {destino}")
     return 0
 

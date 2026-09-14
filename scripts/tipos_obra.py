@@ -104,6 +104,37 @@ TIPOS = {
         # `validar_reescrita()` confere; `transmutar-obra.py` recorta e registra.
         "reescrever_de": ("ebook", "playbook", "artigo", "tcc"),
     },
+    "manual-diario": {
+        "rotulo": "Manual Diário",
+        "prefixo_curto": "mdi",
+        "nomes_curtos": True,
+        "raiz_output": "manuais-diarios",
+        "sufixo_slug": None,
+        "derivado_de": (),
+        "natureza": "geracao",
+        "custo_llm": "alto",
+        "dimensoes_capa": (1600, 2263),
+        "template_typ": "template.typ",
+        "validador": "validar-manual-diario.py",
+        "extensoes_saida": (".pdf",),
+        "min_refs_padrao": 3,
+        "citacao": "numerica",
+        "numerar_secoes": True,
+        "coletor_metadados": "coletar",
+        "variaveis_pandoc": "variaveis_pandoc",
+        "exige_cta": False,
+        "membro_colecao": True,
+        "perguntavel_na_fase0": True,
+        "chave_unidade": "dias",
+        "rotulo_unidade": "dia",
+        "gates_conteudo": (
+            "validar-referencias.py",
+            "validar-metricas.py",
+            "validar-escala.py",
+            "validar-afirmacoes.py",
+            "validar-fontes.py",
+        ),
+    },
     "tcc": {
         "rotulo": "TCC",
         "prefixo_curto": "tcc",
@@ -741,6 +772,32 @@ def dimensoes_capa(tipo, variante=None):
 
 def usa_citacao_autor_data(tipo):
     return campo(tipo, "citacao") == "autor-data"
+
+
+def chave_unidade(tipo):
+    """Chave do sumario_macro que nomeia as unidades de conteudo.
+
+    `capitulos` (livro/tcc) ou `dias` (manual-diario). Os scripts que leem o
+    sumario (_sereis, pool-capitulos, arquiteto) consultam este helper em vez
+    de hardcodar 'capitulos' — assim um tipo novo comunica a propria gramatica
+    de unidades sem tocar nos consumidores."""
+    return campo(tipo, "chave_unidade", "capitulos")
+
+
+def rotulo_unidade(tipo):
+    """Rotulo singular da unidade: 'capitulo' ou 'dia' (plural do helper acima)."""
+    return campo(tipo, "rotulo_unidade", "capitulo")
+
+
+def unidades_da_parte(parte, tipo=None):
+    """Lista de unidades de conteudo de uma parte do sumario_macro.
+
+    Livro/TCC usam a chave `capitulos`; manual-diario usa `dias`. Quando `tipo`
+    nao e informado, detecta pela presenca das chaves (robusto a sumarios
+    legados que nao declaram o tipo)."""
+    if tipo is not None:
+        return parte.get(chave_unidade(tipo), [])
+    return parte.get("dias") if "dias" in parte else parte.get("capitulos", [])
 
 
 def exige_referencias(tipo):
