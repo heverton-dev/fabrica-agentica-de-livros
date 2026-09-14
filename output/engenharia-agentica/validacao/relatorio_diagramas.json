@@ -1,0 +1,13 @@
+{
+  "slug": "engenharia-agentica",
+  "modo": "livro",
+  "arquivos": [
+    "output\\engenharia-agentica\\livros\\livro-render.md"
+  ],
+  "total": 16,
+  "renderizados": 0,
+  "cache": 16,
+  "falhas": [],
+  "ignorados": [],
+  "validos": 0
+}
