@@ -1,0 +1,45 @@
+{
+  "numero": "12",
+  "capitulo_fonte": "12",
+  "titulo": "Os portões finais: teste, auditoria e entrega",
+  "estagio": "Peça instalada",
+  "estagio_indice": 3,
+  "objetivo": "Fechar o trabalho com verificação séria: testes que provam comportamento, auditoria que aponta o que ficou frouxo e uma entrega que outra pessoa consegue usar.",
+  "pre_requisito": "Passo 11 concluído",
+  "entregas": [
+    "testes-comportamento.py",
+    "auditoria-evidencia.py",
+    "pacote-entrega.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.2 O teste que falha antes e passa depois",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def somar_total(pedidos):\n    return round(sum(p[\"valor\"] for p in pedidos), 2)\n\n\ndef teste_falha_antes():\n    pedidos = [{\"valor\": 10.0}, {\"valor\": 5.5}]\n    assert somar_total(pedidos) == 15.5, \"total divergente\"\n    return \"passou\"\n\n\nprint(teste_falha_antes())"
+    },
+    {
+      "titulo": "4.3 A auditoria por evidência",
+      "linguagem": "text",
+      "comandos": [],
+      "codigo": "Afirmacoes com evidencia:\n  - total fecha -> teste_equivalencia.py\nLimites declarados:\n  - nao cobre pedido cancelado"
+    }
+  ],
+  "gate": "python -c \"f=lambda p: round(sum(x['valor'] for x in p),2); assert f([{'valor':10.0},{'valor':5.5}])==15.5; print('teste verde')\"",
+  "comandos": [
+    "python -c \"f=lambda p: round(sum(x['valor'] for x in p),2); assert f([{'valor':10.0},{'valor':5.5}])==15.5; print('teste verde')\""
+  ],
+  "feito_quando": [
+    "Escreva o teste no estado atual.** Ele deve falhar, porque a correção ainda não existe",
+    "Anote a mensagem de falha.** Ela é a prova de que o teste mede a coisa certa e não passa por acidente",
+    "Aplique a correção mínima.** Sem melhorias de carona junto — misturar as duas coisas impede saber o que corrigiu",
+    "Rode a suíte inteira.** O teste novo passa e nenhum antigo quebrou"
+  ],
+  "armadilhas": [
+    "Escrever o teste depois do código, o que não prova que ele reproduzia o defeito.",
+    "Misturar refatoração com correção no mesmo passo e perder a atribuição do que resolveu.",
+    "Confundir teste automatizado com auditoria de entrega: um cobre o previsto, o outro o imprevisto."
+  ],
+  "referencia_cruzada": "Cap. 12 — Os portões finais: teste, auditoria e entrega",
+  "lacunas": []
+}

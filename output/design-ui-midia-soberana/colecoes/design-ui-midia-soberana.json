@@ -1,7 +1,7 @@
 {
   "colecao": "design-ui-midia-soberana",
   "cor_accent": "#7c6cf0",
-  "atualizado_em": "2026-08-25",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/design-ui-midia-soberana",
     "tipo": "livro",
@@ -9,11 +9,26 @@
     "senioridade": "iniciante",
     "motivo_condutor": {}
   },
-  "total_membros": 1,
+  "total_membros": 3,
   "por_tipo": {
-    "livro": 1
+    "lead-magnet": 1,
+    "livro": 1,
+    "playbook": 1
   },
   "membros": [
+    {
+      "slug": "design-ui-midia-soberana/lead-magnets/lm-3-checklist",
+      "tipo": "lead-magnet",
+      "rotulo": "Lead Magnet",
+      "titulo": "Checklist Mestre: Design, UI e Mídia Soberana",
+      "obra_mae": "design-ui-midia-soberana",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "planejado",
+      "artefatos": []
+    },
     {
       "slug": "livros/design-ui-midia-soberana",
       "tipo": "livro",
@@ -24,19 +39,37 @@
       "custo_llm": "alto",
       "senioridade": "iniciante",
       "cta_url": "https://exemplo.com/obra",
-      "estado": "redigido",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "livros.pdf"
+      ]
+    },
+    {
+      "slug": "design-ui-midia-soberana/playbooks/pbk-1-design-ui-midia",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — Design, UI e Mídia Soberana",
+      "obra_mae": "design-ui-midia-soberana",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "compilado",
+      "artefatos": [
+        "playbook.pdf"
+      ]
     }
   ],
   "derivados_ausentes": [
     "artigo",
     "ebook",
-    "playbook",
-    "lead-magnet",
     "deck",
     "emails"
   ],
-  "membros_sem_cta": [],
+  "membros_sem_cta": [
+    "design-ui-midia-soberana/lead-magnets/lm-3-checklist"
+  ],
   "maquina": null,
   "maquinas_legadas": []
 }

@@ -1,4 +1,8 @@
 {
+  "arquitetura-agentica-spec-driven-skills": {
+    "cor": "#37c3d6",
+    "membros": []
+  },
   "deepseek-harness-do-zero-ao-phd": {
     "cor": "#58a6ff",
     "membros": [
@@ -85,7 +89,8 @@
   "tratado-4-camadas-v2": {
     "cor": "#37c3d6",
     "membros": [
-      "livros/tratado-4-camadas-v2"
+      "livros/tratado-4-camadas-v2",
+      "playbooks/pbk-1-quatro-camadas-fabrica"
     ]
   }
 }

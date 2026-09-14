@@ -1,0 +1,154 @@
+{
+  "slug_mae": "livros/tratado-4-camadas-v2",
+  "slug_playbook": "tratado-4-camadas-v2/playbooks/pbk-1-quatro-camadas-fabrica",
+  "total_passos": 16,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "A conta que ninguém quer pagar",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "O dicionário de bancada",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "O seu projeto na bancada",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "A Constituição da bancada",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Peça 1 — Contexto: o que a IA lê antes de agir",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Peça 2 — Harness: o ciclo de vida e os disjuntores",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Peça 3 — Motor: roteamento, contratos e custo",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Peça 4 — Ferramentas e persistência: a usina determinística",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "09",
+      "titulo": "Primeiro encaixe: do script solto ao repositório governado",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "10",
+      "titulo": "O caso âncora completo: o Painel de Pedidos, da ideia ao ar",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "11",
+      "titulo": "Trabalho em paralelo: subagentes, worktrees e integração sem colisão",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "12",
+      "titulo": "Os portões finais: teste, auditoria e entrega",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "13",
+      "titulo": "Fazer mais gastando menos: a economia da bancada",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "14",
+      "titulo": "O certificado de bancada: provar que funciona",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "15",
+      "titulo": "Levando a bancada para o time (e para o código que já existe)",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "16",
+      "titulo": "Soberania: não ficar preso a fornecedor, modelo ou plataforma",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 2,
+    "com_gate": 2,
+    "com_feito_quando": 16,
+    "com_armadilhas": 0
+  }
+}

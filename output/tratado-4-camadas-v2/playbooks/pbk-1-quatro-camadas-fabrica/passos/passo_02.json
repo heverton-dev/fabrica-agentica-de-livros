@@ -1,0 +1,48 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "O dicionário de bancada",
+  "estagio": "Bancada",
+  "estagio_indice": 1,
+  "objetivo": "Fixar sem jargão os termos que aparecem do começo ao fim da obra, cada um com analogia de bancada e um exemplo tirado do caso âncora.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [
+    "glossario.yaml",
+    "verificar-glossario.py",
+    "termos-do-dominio.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O glossário como arquivo do projeto",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "termos:\n  lote:\n    definicao: conjunto de itens processados juntos\n    nao_e: pedido isolado\n  fechamento:\n    definicao: conferencia que libera um lote\n    nao_e: correcao de erro"
+    },
+    {
+      "titulo": "4.2 A verificação de formato",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "TERMOS = {\"lote\": \"conjunto de itens processados juntos\",\n          \"fechamento\": \"conferencia que libera um lote\"}\n\nfor termo, definicao in TERMOS.items():\n    assert len(definicao.split()) <= 12, f\"{termo}: definicao longa\"\n    print(f\"[ok] {termo}\")"
+    }
+  ],
+  "gate": "python -c \"t={'lote':'conjunto de itens processados juntos'}; assert all(len(v.split())<=12 for v in t.values()); print('glossario ok:', len(t), 'termo(s)')\"",
+  "comandos": [
+    "python -c \"t={'lote':'conjunto de itens processados juntos'}; assert all(len(v.split())<=12 for v in t.values()); print('glossario ok:', len(t), 'termo(s)')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você assume a continuidade de um projeto de relatórios que outra pessoa começou",
+    "Existe um arquivo de instruções com um termo que aparece dezenove vezes: \"consolidar\"",
+    "Você pede ao agente para \"consolidar os pedidos do dia\"",
+    "O erro.** Você culpa o modelo",
+    "Cada resposta mantém o mesmo termo ambíguo",
+    "Você apenas adiciona qualificadores em volta dele",
+    "Ao final do dia"
+  ],
+  "armadilhas": [
+    "Definir com duas orações subordinadas: se a frase ficou longa, o termo ainda não foi resolvido.",
+    "Deixar a coluna \"o que não é\" vazia e perder o mecanismo que impedia o sistema de traduzir o problema por conta própria.",
+    "Crescer o glossário sem verificação de formato, o que transforma o arquivo em texto morto."
+  ],
+  "referencia_cruzada": "Cap. 2 — O dicionário de bancada",
+  "lacunas": []
+}

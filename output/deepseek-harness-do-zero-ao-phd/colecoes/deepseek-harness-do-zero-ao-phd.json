@@ -1,7 +1,7 @@
 {
   "colecao": "deepseek-harness-do-zero-ao-phd",
   "cor_accent": "#58a6ff",
-  "atualizado_em": "2026-08-23",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/deepseek-harness-do-zero-ao-phd",
     "tipo": "livro",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "slug": "playbooks/deepseek-harness/pbk-1-deepseek-harness-phd",
+      "slug": "deepseek-harness-do-zero-ao-phd/playbooks/pbk-1-deepseek-harness-phd",
       "tipo": "playbook",
       "rotulo": "Playbook",
       "titulo": "Playbook — DeepSeek Harness: Do zero ao PhD",

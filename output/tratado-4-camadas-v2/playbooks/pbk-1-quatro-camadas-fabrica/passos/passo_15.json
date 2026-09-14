@@ -1,0 +1,48 @@
+{
+  "numero": "15",
+  "capitulo_fonte": "15",
+  "titulo": "Levando a bancada para o time (e para o código que já existe)",
+  "estagio": "Encaixe",
+  "estagio_indice": 4,
+  "objetivo": "Adotar a bancada em equipe e em sistemas herdados: por onde começar, como convencer com evidência e como conviver com código antigo.",
+  "pre_requisito": "Passo 14 concluído",
+  "entregas": [
+    "plano-adocao.yaml",
+    "painel-adocao.py",
+    "cerca-modulo.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O plano de adoção",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "tarefa: conferir totais do relatorio semanal\nresponsavel: ana\nportao: python verificacoes/portoes.py\nsemana_1: especificacao e contexto\nsemana_2: execucao com portao ligado"
+    },
+    {
+      "titulo": "4.3 O painel de adoção",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "EXECUCOES = [{\"quem\": \"ana\", \"rodou\": True}, {\"quem\": \"bruno\", \"rodou\": False}]\n\n\ndef adocao(registros):\n    total = len(registros)\n    usaram = sum(1 for r in registros if r[\"rodou\"])\n    return f\"{usaram}/{total} com uso observado\"\n\n\nprint(adocao(EXECUCOES))"
+    }
+  ],
+  "gate": "python -c \"r=[{'rodou':True}]; assert sum(1 for x in r if x['rodou'])==1; print('adocao medida por uso observado')\"",
+  "comandos": [
+    "python -c \"r=[{'rodou':True}]; assert sum(1 for x in r if x['rodou'])==1; print('adocao medida por uso observado')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você decide apresentar a bancada na reunião semanal",
+    "Prepara quarenta slides com as quatro camadas",
+    "A recepção é educada",
+    "Na semana seguinte",
+    "O erro.** Você insiste: monta um repositório-modelo completo",
+    "Duas semanas depois",
+    "A outra metade abandonou"
+  ],
+  "armadilhas": [
+    "Anunciar adoção sem dono nomeado: iniciativa compartilhada sem responsável não acontece.",
+    "Refatorar módulo herdado antes de descrever o comportamento atual e perder a referência do que era defeito antigo.",
+    "Medir adoção por declaração de intenção em vez de uso observado."
+  ],
+  "referencia_cruzada": "Cap. 15 — Levando a bancada para o time (e para o código que já existe)",
+  "lacunas": []
+}

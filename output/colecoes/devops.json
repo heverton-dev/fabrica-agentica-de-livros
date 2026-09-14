@@ -1,0 +1,57 @@
+{
+  "colecao": "devops",
+  "cor_accent": "#a855f7",
+  "atualizado_em": "2026-09-14",
+  "nucleo": {
+    "slug": "livros/devops",
+    "tipo": "livro",
+    "titulo": "DevOps Essencial: Cultura, automação e entrega contínua para iniciantes",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "A Jornada do Desenvolvedor Ágil",
+      "descricao": "Um desenvolvedor que evolui de trabalhar em silos isolados para se tornar um profissional integrado em equipes de alta performance que entregam valor continuamente",
+      "vocabulario": [
+        "colaboração",
+        "automação",
+        "feedback",
+        "imutabilidade",
+        "observabilidade",
+        "segurança"
+      ],
+      "persona_leitor": "Desenvolvedor Agêntico"
+    }
+  },
+  "total_membros": 1,
+  "por_tipo": {
+    "livro": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/devops",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "DevOps Essencial: Cultura, automação e entrega contínua para iniciantes",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": null,
+      "estado": "compilado",
+      "artefatos": [
+        "devops.pdf",
+        "livro_final.pdf"
+      ]
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "playbook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

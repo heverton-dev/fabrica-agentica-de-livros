@@ -1,0 +1,48 @@
+{
+  "numero": "09",
+  "capitulo_fonte": "09",
+  "titulo": "Primeiro encaixe: do script solto ao repositório governado",
+  "estagio": "Peça instalada",
+  "estagio_indice": 3,
+  "objetivo": "Juntar as quatro peças em um projeto pequeno e real, partindo do que já existe, e fechar o primeiro ciclo completo com aprovação.",
+  "pre_requisito": "Passo 8 concluído",
+  "entregas": [
+    "inventario-projeto.py",
+    "roteiro-instalacao.md",
+    "registro-ciclo.json"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.2 O roteiro de instalação das quatro peças",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "$ git init && git add . && git commit -m \"estado inicial\"\n$ python verificacoes/medir_contexto.py\n[ok] contexto com 4 arquivos"
+    },
+    {
+      "titulo": "4.4 O registro do primeiro ciclo",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"tarefa\": \"conferir totais do relatorio\",\n  \"entrada\": \"dados/pedidos.csv\",\n  \"portao\": \"python verificacoes/medir_contexto.py\",\n  \"resultado\": \"aprovado\"\n}"
+    }
+  ],
+  "gate": "python -c \"import json; c={'tarefa':'conferir totais','resultado':'aprovado'}; assert 'resultado' in c; print('primeiro ciclo registrado')\"",
+  "comandos": [
+    "python -c \"import json; c={'tarefa':'conferir totais','resultado':'aprovado'}; assert 'resultado' in c; print('primeiro ciclo registrado')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você assume um projeto que gera relatórios de produção: um script de 180 linhas",
+    "A primeira decisão que vem à cabeça é reescrever o script inteiro com apoio de IA",
+    "O erro.** Você reescreve",
+    "A versão nova é mais bonita",
+    "Na primeira madrugada ela roda",
+    "Ninguém sabia disso",
+    "O diagnóstico.** Você reescreveu antes de inventariar"
+  ],
+  "armadilhas": [
+    "Escolher a tarefa mais interessante em vez da mais chata: a chata tem critério de pronto mais claro.",
+    "Parar na etapa 3 e culpar o executor quando o problema era o contexto.",
+    "Não manter o caso do primeiro encaixe como referência para testar as peças seguintes."
+  ],
+  "referencia_cruzada": "Cap. 9 — Primeiro encaixe: do script solto ao repositório governado",
+  "lacunas": []
+}

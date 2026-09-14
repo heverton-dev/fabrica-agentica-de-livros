@@ -1,0 +1,469 @@
+{
+  "slug": "playbooks/pbk-1-quatro-camadas-fabrica",
+  "modo": "playbook",
+  "executado": true,
+  "total_blocos": 48,
+  "resumo": {
+    "ok": 41,
+    "nao_aplicavel": 7
+  },
+  "por_linguagem": {
+    "python": {
+      "total": 14,
+      "ok": 14,
+      "falha": 0
+    },
+    "json": {
+      "total": 3,
+      "ok": 3,
+      "falha": 0
+    },
+    "bash": {
+      "total": 16,
+      "ok": 16,
+      "falha": 0
+    },
+    "yaml": {
+      "total": 8,
+      "ok": 8,
+      "falha": 0
+    },
+    "text": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "markdown": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "console": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "sql": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "passo_01 (A conta que ninguém quer pagar)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 9,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_01 (A conta que ninguém quer pagar)",
+      "linha": 1,
+      "linguagem": "json",
+      "linhas_codigo": 6,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_01 (A conta que ninguém quer pagar) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_02 (O dicionário de bancada)",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 7,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_02 (O dicionário de bancada)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 6,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_02 (O dicionário de bancada) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_03 (O seu projeto na bancada)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 9,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_03 (O seu projeto na bancada)",
+      "linha": 1,
+      "linguagem": "text",
+      "linhas_codigo": 4,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_03 (O seu projeto na bancada) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_04 (A Constituição da bancada)",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 7,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_04 (A Constituição da bancada)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_04 (A Constituição da bancada) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_05 (Peça 1 — Contexto: o que a IA lê antes d)",
+      "linha": 1,
+      "linguagem": "markdown",
+      "linhas_codigo": 5,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_05 (Peça 1 — Contexto: o que a IA lê antes d)",
+      "linha": 1,
+      "linguagem": "json",
+      "linhas_codigo": 5,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_05 (Peça 1 — Contexto: o que a IA lê antes d) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_06 (Peça 2 — Harness: o ciclo de vida e os d)",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 8,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_06 (Peça 2 — Harness: o ciclo de vida e os d)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 12,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_06 (Peça 2 — Harness: o ciclo de vida e os d) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_07 (Peça 3 — Motor: roteamento, contratos e )",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 5,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_07 (Peça 3 — Motor: roteamento, contratos e )",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 12,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_07 (Peça 3 — Motor: roteamento, contratos e ) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_08 (Peça 4 — Ferramentas e persistência: a u)",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 4,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_08 (Peça 4 — Ferramentas e persistência: a u)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 13,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_08 (Peça 4 — Ferramentas e persistência: a u) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_09 (Primeiro encaixe: do script solto ao rep)",
+      "linha": 1,
+      "linguagem": "console",
+      "linhas_codigo": 3,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_09 (Primeiro encaixe: do script solto ao rep)",
+      "linha": 1,
+      "linguagem": "json",
+      "linhas_codigo": 6,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_09 (Primeiro encaixe: do script solto ao rep) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_10 (O caso âncora completo: o Painel de Pedi)",
+      "linha": 1,
+      "linguagem": "sql",
+      "linhas_codigo": 5,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_10 (O caso âncora completo: o Painel de Pedi)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 9,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_10 (O caso âncora completo: o Painel de Pedi) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_11 (Trabalho em paralelo: subagentes, worktr)",
+      "linha": 1,
+      "linguagem": "console",
+      "linhas_codigo": 3,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_11 (Trabalho em paralelo: subagentes, worktr)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_11 (Trabalho em paralelo: subagentes, worktr) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_12 (Os portões finais: teste, auditoria e en)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_12 (Os portões finais: teste, auditoria e en)",
+      "linha": 1,
+      "linguagem": "text",
+      "linhas_codigo": 4,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_12 (Os portões finais: teste, auditoria e en) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_13 (Fazer mais gastando menos: a economia da)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_13 (Fazer mais gastando menos: a economia da)",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 4,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_13 (Fazer mais gastando menos: a economia da) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_14 (O certificado de bancada: provar que fun)",
+      "linha": 1,
+      "linguagem": "markdown",
+      "linhas_codigo": 4,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "passo_14 (O certificado de bancada: provar que fun)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_14 (O certificado de bancada: provar que fun) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_15 (Levando a bancada para o time (e para o )",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 5,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_15 (Levando a bancada para o time (e para o )",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_15 (Levando a bancada para o time (e para o ) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_16 (Soberania: não ficar preso a fornecedor,)",
+      "linha": 1,
+      "linguagem": "yaml",
+      "linhas_codigo": 5,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "passo_16 (Soberania: não ficar preso a fornecedor,)",
+      "linha": 1,
+      "linguagem": "python",
+      "linhas_codigo": 8,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "passo_16 (Soberania: não ficar preso a fornecedor,) (gate)",
+      "linha": 1,
+      "linguagem": "bash",
+      "linhas_codigo": 1,
+      "status": "ok",
+      "execucao": "ok",
+      "detalhe": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Peça 3 — Motor: roteamento, contratos e custo",
+  "estagio": "Projeto vivo",
+  "estagio_indice": 2,
+  "objetivo": "Decidir quem executa cada tarefa, travar as respostas em formatos previsíveis e entender como o custo cresce junto com o contexto.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [
+    "roteamento.yaml",
+    "contrato-resposta.py",
+    "custo-por-tarefa.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 A tabela de decisão de roteamento",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "portas:\n  deterministica: script\n  regra_fixa: portao\n  ambigua: rota_de_julgamento\nlimite_custo_por_tarefa: 0.50"
+    },
+    {
+      "titulo": "4.2 O contrato de resposta e o validador",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "CONTRATO = {\"campos\": [\"decisao\", \"evidencia\"]}\n\n\ndef validar(resposta):\n    faltando = [c for c in CONTRATO[\"campos\"] if c not in resposta]\n    if faltando:\n        return f\"recusado: falta {faltando}\"\n    return \"aprovado\"\n\n\nprint(validar({\"decisao\": \"usar script\"}))\nprint(validar({\"decisao\": \"usar script\", \"evidencia\": \"teste 12\"}))"
+    }
+  ],
+  "gate": "python -c \"c={'decisao':1,'evidencia':2}; assert {'decisao','evidencia'}<=set(c); print('contrato de resposta completo')\"",
+  "comandos": [
+    "python -c \"c={'decisao':1,'evidencia':2}; assert {'decisao','evidencia'}<=set(c); print('contrato de resposta completo')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você recebe a tarefa de transformar os totais do dia em uma tabela de cinco linhas para colar no grupo do time",
+    "Cansado de fazer à mão",
+    "O erro.** A resposta vem com sete linhas",
+    "Você ajusta o pedido",
+    "Depois de quatro tentativas",
+    "O diagnóstico.** A tarefa é determinística: os cinco totais já existem no arquivo de saída",
+    "Não havia ambiguidade a resolver nem caminho a descobrir — portanto"
+  ],
+  "armadilhas": [
+    "Rodar tarefa determinística na rota de julgamento e pagar duas vezes: chamada e revisão.",
+    "Trocar por modelo mais barato sem medir a taxa de reprovação depois da troca.",
+    "Aceitar saída sem contrato declarado, o que torna a verificação impossível de automatizar."
+  ],
+  "referencia_cruzada": "Cap. 7 — Peça 3 — Motor: roteamento, contratos e custo",
+  "lacunas": []
+}

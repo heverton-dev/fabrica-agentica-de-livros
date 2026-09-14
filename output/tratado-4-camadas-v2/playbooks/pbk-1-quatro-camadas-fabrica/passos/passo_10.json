@@ -1,0 +1,48 @@
+{
+  "numero": "10",
+  "capitulo_fonte": "10",
+  "titulo": "O caso âncora completo: o Painel de Pedidos, da ideia ao ar",
+  "estagio": "Peça instalada",
+  "estagio_indice": 3,
+  "objetivo": "Percorrer a construção completa do caso âncora, com as decisões, os erros e as correções que aparecem em um projeto de verdade.",
+  "pre_requisito": "Passo 9 concluído",
+  "entregas": [
+    "esquema.sql",
+    "importar-com-conferencia.py",
+    "relatorio-totais.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O esquema do banco",
+      "linguagem": "sql",
+      "comandos": [],
+      "codigo": "CREATE TABLE pedidos (\n  id_externo TEXT PRIMARY KEY,\n  valor REAL NOT NULL,\n  data TEXT NOT NULL\n);"
+    },
+    {
+      "titulo": "4.3 O relatório com portão de totais",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "PEDIDOS = [{\"id\": \"P-1\", \"valor\": 30.0}, {\"id\": \"P-2\", \"valor\": 12.5}]\n\n\ndef conferir(linhas, total_manual):\n    total = round(sum(p[\"valor\"] for p in linhas), 2)\n    return {\"total\": total, \"fecha\": abs(total - total_manual) < 0.01}\n\n\nprint(conferir(PEDIDOS, 42.5))"
+    }
+  ],
+  "gate": "python -c \"linhas=[{'v':30.0},{'v':12.5}]; total=round(sum(l['v'] for l in linhas),2); assert total==42.5; print('totais fecham:', total)\"",
+  "comandos": [
+    "python -c \"linhas=[{'v':30.0},{'v':12.5}]; total=round(sum(l['v'] for l in linhas),2); assert total==42.5; print('totais fecham:', total)\""
+  ],
+  "feito_quando": [
+    "Declarar o problema em uma frase, com quem sofre e o que muda",
+    "Registrar a linha de base antes de escrever qualquer linha de código",
+    "Escrever o glossário mínimo dos termos do domínio",
+    "Definir a primeira regra verificável do projeto",
+    "Especificar a tarefa inicial com entrada, saída e recusa",
+    "Montar o contexto com os arquivos que realmente importam",
+    "Rodar o ciclo com disjuntor e portão ligados"
+  ],
+  "armadilhas": [
+    "Publicar sem medir uma semana de uso: versão que ninguém usa não gera aprendizado.",
+    "Ampliar escopo antes de instrumentar, e descobrir o erro pelo relato do usuário.",
+    "Deixar o identificador externo de fora, o que torna a duplicidade indetectável."
+  ],
+  "referencia_cruzada": "Cap. 10 — O caso âncora completo: o Painel de Pedidos, da ideia ao ar",
+  "lacunas": []
+}

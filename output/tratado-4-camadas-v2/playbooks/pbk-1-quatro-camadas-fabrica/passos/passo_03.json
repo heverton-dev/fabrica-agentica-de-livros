@@ -1,0 +1,48 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "O seu projeto na bancada",
+  "estagio": "Bancada",
+  "estagio_indice": 1,
+  "objetivo": "Preparar o alvo real: escolher o projeto, fotografar o estado atual em números, medir o custo do trabalho manual e criar a base mínima de trabalho.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [
+    "cronometro-linha-de-base.py",
+    "linha-de-base.json",
+    "estrutura-repositorio.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 A linha de base em quatro números",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "BASE = {\"tempo_de_ciclo_h\": 6.0, \"retrabalho\": 0.2,\n        \"falhas_semana\": 1, \"minutos_conferencia\": 25}\n\n\ndef custo_de_conferencia(base):\n    return round(base[\"minutos_conferencia\"] * 5 / 60, 1)\n\n\nprint(\"conferencia por semana:\", custo_de_conferencia(BASE), \"h\")"
+    },
+    {
+      "titulo": "4.2 A árvore mínima do repositório",
+      "linguagem": "text",
+      "comandos": [],
+      "codigo": "pedidos/\n  dados/\n  verificacoes/\n  caderno-de-bancada.md"
+    }
+  ],
+  "gate": "python -c \"base={'tempo_de_ciclo_h':6.0,'retrabalho':0.2}; assert set(base)=={'tempo_de_ciclo_h','retrabalho'}; print('linha de base com', len(base), 'numeros datados')\"",
+  "comandos": [
+    "python -c \"base={'tempo_de_ciclo_h':6.0,'retrabalho':0.2}; assert set(base)=={'tempo_de_ciclo_h','retrabalho'}; print('linha de base com', len(base), 'numeros datados')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você decide automatizar a emissão de notas de serviço da sua equipe",
+    "O erro.** Na terça você descobre que existem duas planilhas: uma da equipe interna",
+    "No dia 20 você olha para o projeto",
+    "O diagnóstico.** O erro não foi técnico",
+    "Sem linha de base",
+    "É o mesmo padrão que a pesquisa de desempenho de entrega descreve quando a IA é aplicada a um processo que ainda não está definido: a ferramenta amplifica a desorganização existente [1]",
+    "A correção.** Volte duas casas"
+  ],
+  "armadilhas": [
+    "Medir as quatro métricas em semanas diferentes e comparar mesmo assim.",
+    "Começar pela taxa de retrabalho, que depende de uma definição estável do que conta como refeito.",
+    "Guardar a linha de base fora do repositório, onde ninguém consegue conferir depois."
+  ],
+  "referencia_cruzada": "Cap. 3 — O seu projeto na bancada",
+  "lacunas": []
+}

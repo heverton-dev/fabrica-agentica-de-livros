@@ -1,14 +1,15 @@
-# O Tratado das 4 Camadas da Fábrica Agêntica
+# As Quatro Camadas da Fábrica Agêntica
 
 **Autor:** Heverton Eduardo Peres  ·  **Coleção:** tratado-4-camadas-v2  ·  **Licença:** Todos os direitos reservados
 
-O leitor assume o posto de comandante de uma sala de controle onde quatro painéis operacionais — CONTEXTO, HARNESS, MOTOR e FERRAMENTAS — governam agentes de IA como equipes especializadas, sob uma Constituição de 10 Leis e instrumentos de leitura determinística.
+Você não lê este livro: você monta uma bancada. O mesmo projeto real fica sobre a mesa do capítulo 1 ao 16, e cada capítulo instala uma peça que continua no lugar até o fim. Nada de exemplo descartável: o que entra na bancada é usado de novo, todo capítulo, e é isso que faz o aprendizado grudar.
 
 ## O que está neste pacote
 
 | Pasta | Material | Arquivo |
 |---|---|---|
-| `livros/` | Livro: O Tratado das 4 Camadas da Fábrica Agêntica | `liv-1-tratado-4-camadas.pdf` |
+| `livros/` | Livro: As Quatro Camadas da Fábrica Agêntica | `liv-1-quatro-camadas-fabrica.pdf` |
+| `playbooks/` | Playbook: Playbook — As Quatro Camadas da Fábrica Agêntica | `pbk-1-quatro-camadas-fabrica.pdf` |
 
 ## Como usar
 
@@ -16,12 +17,6 @@ O leitor assume o posto de comandante de uma sala de controle onde quatro painé
 - **EPUB** — reflowable, para Kindle, Kobo, Apple Books e Google Play Livros.
 - **HTML** (deck) — abra no navegador e tecle `F` para tela cheia. Funciona offline; as setas navegam entre os slides.
 - **Markdown** (e-mails) — cada arquivo é um e-mail da sequência de nutrição, na ordem de envio.
-
-## Não incluído nesta versão
-
-Os materiais abaixo ainda não estão finalizados e por isso ficaram de fora — o pacote só carrega o que está pronto e abre:
-
-- **Playbook**: Playbook — O Tratado das 4 Camadas da Fábrica Agênti — sem artefato compilado
 
 ## Licença
 

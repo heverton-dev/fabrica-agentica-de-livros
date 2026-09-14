@@ -1,7 +1,7 @@
 {
   "colecao": "otimizacao-tokens-ide-agentica",
   "cor_accent": "#58a6ff",
-  "atualizado_em": "2026-08-20",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "otimizacao-tokens-ide-agentica/livros/otimizacao-tokens-ide-agentica",
     "tipo": "livro",
@@ -57,8 +57,11 @@
       "custo_llm": "zero",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "extraido",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "pbk-1-tokens-sob-pericia.pdf"
+      ]
     }
   ],
   "derivados_ausentes": [

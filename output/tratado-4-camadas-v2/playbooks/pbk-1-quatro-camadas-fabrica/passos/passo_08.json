@@ -1,0 +1,45 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Peça 4 — Ferramentas e persistência: a usina determinística",
+  "estagio": "Projeto vivo",
+  "estagio_indice": 2,
+  "objetivo": "Montar as mãos da operação: ferramentas reexecutáveis, padronização de conexão com o mundo externo e um registro durável do que foi feito.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [
+    "ferramentas.yaml",
+    "importar-idempotente.py",
+    "registro-execucao.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 A etiqueta das ferramentas",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "ferramenta: importar_pedidos\nescopo: [ler, gravar]\nidempotente: true\nchave_unica: id_externo"
+    },
+    {
+      "titulo": "4.2 A importação idempotente",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "REGISTRO = []\n\n\ndef importar(valor, chave):\n    if any(r[\"chave\"] == chave for r in REGISTRO):\n        return \"pulado: ja importado\"\n    REGISTRO.append({\"chave\": chave, \"valor\": valor})\n    return \"importado\"\n\n\nprint(importar(10, \"P-1\"))\nprint(importar(10, \"P-1\"))\nprint(\"registros:\", len(REGISTRO))"
+    }
+  ],
+  "gate": "python -c \"vistos=set(); chave='P-1'; vistos.add(chave); assert len(vistos)==1; print('escrita idempotente por chave unica')\"",
+  "comandos": [
+    "python -c \"vistos=set(); chave='P-1'; vistos.add(chave); assert len(vistos)==1; print('escrita idempotente por chave unica')\""
+  ],
+  "feito_quando": [
+    "Aceita entrada diferente?** Se só funciona com o arquivo daquele dia, ainda é script pessoal",
+    "Sai com código de erro claro?** Falha silenciosa obriga a pessoa a investigar o que aconteceu",
+    "Pode rodar duas vezes sem estragar?** Operação que não é segura para repetir transfere risco para quem aperta o botão [8]",
+    "Deixa rastro do que fez?** Sem registro, a conferência volta a depender de memória"
+  ],
+  "armadilhas": [
+    "Ferramenta que só funciona com o arquivo daquele dia — ainda é script pessoal.",
+    "Rodar duas vezes e duplicar dado, o que transfere risco para quem aperta o botão.",
+    "Falhar sem código de erro claro e obrigar a pessoa a investigar o que aconteceu."
+  ],
+  "referencia_cruzada": "Cap. 8 — Peça 4 — Ferramentas e persistência: a usina determinística",
+  "lacunas": []
+}

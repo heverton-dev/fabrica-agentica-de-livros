@@ -1,0 +1,69 @@
+{
+  "titulo_obra": "Playbook — As Quatro Camadas da Fábrica Agêntica",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "tratado-4-camadas-v2",
+  "motivo_condutor": {
+    "nome": "A Bancada do Projeto Vivo",
+    "descricao": "Você não lê este livro: você monta uma bancada. O mesmo projeto real fica sobre a mesa do capítulo 1 ao 16, e cada capítulo instala uma peça que continua no lugar até o fim. Nada de exemplo descartável: o que entra na bancada é usado de novo, todo capítulo, e é isso que faz o aprendizado grudar.",
+    "vocabulario": [
+      "bancada",
+      "projeto vivo",
+      "peça instalada",
+      "encaixe",
+      "caderno de bancada",
+      "lâmpada de teste",
+      "disjuntor de bancada",
+      "roteador de serviço",
+      "usina de ferramentas",
+      "certificado de bancada"
+    ],
+    "persona_leitor": "Engenheiro de Bancada"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Bancada",
+      "titulo_parte": "A Bancada Antes da Primeira Peça",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Projeto vivo",
+      "titulo_parte": "As Quatro Peças",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "indice": 3,
+      "nome": "Peça instalada",
+      "titulo_parte": "Montagem: O Projeto Real de Ponta a Ponta",
+      "capitulos": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "indice": 4,
+      "nome": "Encaixe",
+      "titulo_parte": "Escala, Custo e Soberania",
+      "capitulos": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    }
+  ],
+  "total_passos": 16
+}

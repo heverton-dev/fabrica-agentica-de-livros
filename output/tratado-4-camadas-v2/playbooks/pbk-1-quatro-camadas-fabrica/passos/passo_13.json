@@ -1,0 +1,48 @@
+{
+  "numero": "13",
+  "capitulo_fonte": "13",
+  "titulo": "Fazer mais gastando menos: a economia da bancada",
+  "estagio": "Encaixe",
+  "estagio_indice": 4,
+  "objetivo": "Medir e reduzir o custo da operação sem perder qualidade, usando contexto reaproveitado, tarefas no lugar certo e limites claros de uso.",
+  "pre_requisito": "Passo 12 concluído",
+  "entregas": [
+    "custo-por-tarefa.py",
+    "corte-de-rota.py",
+    "prefixo-estavel.yaml"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O registro de custo por tarefa",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "REGISTRO = [\n    {\"tarefa\": \"conferir totais\", \"rota\": \"agente\", \"custo\": 0.42, \"tentativas\": 3},\n    {\"tarefa\": \"renomear arquivos\", \"rota\": \"script\", \"custo\": 0.0, \"tentativas\": 1},\n]\n\n\ndef mais_cara(registro):\n    return max(registro, key=lambda r: r[\"custo\"])\n\n\nprint(mais_cara(REGISTRO))"
+    },
+    {
+      "titulo": "4.3 A configuração do prefixo estável",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "prefixo_estavel:\n  - constituicao.yaml\n  - glossario.yaml\n  - contrato-pedidos.json"
+    }
+  ],
+  "gate": "python -c \"r=[{'custo':0.42},{'custo':0.0}]; assert max(r,key=lambda x:x['custo'])['custo']==0.42; print('tarefa mais cara identificada')\"",
+  "comandos": [
+    "python -c \"r=[{'custo':0.42},{'custo':0.0}]; assert max(r,key=lambda x:x['custo'])['custo']==0.42; print('tarefa mais cara identificada')\""
+  ],
+  "feito_quando": [
+    "Situação.** Chega a fatura do mês",
+    "Sua primeira reação é trocar tudo pelo modelo mais barato disponível",
+    "O erro.** Você troca o modelo",
+    "O relatório semanal passa a exigir duas correções manuais",
+    "No mês seguinte",
+    "O diagnóstico.** Você cortou a alavanca errada",
+    "O custo estava concentrado em retrabalho"
+  ],
+  "armadilhas": [
+    "Cortar o preço unitário sem olhar retrabalho e trocar um custo visível por um invisível.",
+    "Aprovar vários cortes no mesmo dia e não saber qual deles causou o efeito.",
+    "Reduzir verificação para caber no orçamento, transferindo o custo para quem usa."
+  ],
+  "referencia_cruzada": "Cap. 13 — Fazer mais gastando menos: a economia da bancada",
+  "lacunas": []
+}

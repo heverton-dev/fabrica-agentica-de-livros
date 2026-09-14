@@ -1,0 +1,48 @@
+{
+  "numero": "11",
+  "capitulo_fonte": "11",
+  "titulo": "Trabalho em paralelo: subagentes, worktrees e integração sem colisão",
+  "estagio": "Peça instalada",
+  "estagio_indice": 3,
+  "objetivo": "Dividir trabalho entre vários agentes sem que um apague o outro, com isolamento físico, fila de tarefas, revisão e integração controlada.",
+  "pre_requisito": "Passo 10 concluído",
+  "entregas": [
+    "plano-frentes.yaml",
+    "conferir-escopo.py",
+    "fila-estados.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.2 Criar e descartar frentes isoladas",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "$ git worktree add ../pedidos-relatorio -b frente/relatorio\n$ git worktree list\n$ git worktree remove ../pedidos-relatorio"
+    },
+    {
+      "titulo": "4.4 Conferência de escopo antes de integrar",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "ARQUIVOS_A = {\"relatorio.py\"}\nARQUIVOS_B = {\"importacao.py\"}\n\n\ndef pode_paralelizar(a, b):\n    return not (a & b)\n\n\nprint(pode_paralelizar(ARQUIVOS_A, ARQUIVOS_B))\nprint(pode_paralelizar(ARQUIVOS_A, {\"relatorio.py\", \"app.py\"}))"
+    }
+  ],
+  "gate": "python -c \"a={'x'}; b={'y'}; assert not (a & b); print('frentes sem colisao de arquivos')\"",
+  "comandos": [
+    "python -c \"a={'x'}; b={'y'}; assert not (a & b); print('frentes sem colisao de arquivos')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você descobre o paralelismo",
+    "Em meia hora",
+    "O erro.** No fim do dia",
+    "Metade do trabalho é descartada",
+    "O diagnóstico.** Três falhas simultâneas: sem isolamento físico",
+    "O custo não foi de execução",
+    "Somando a isso a sobreposição de escopo"
+  ],
+  "armadilhas": [
+    "Paralelizar dois trabalhos que escrevem nos mesmos arquivos e pagar mais na integração do que ganhou no tempo.",
+    "Passar de duas frentes e transformar a atenção do operador em gargalo.",
+    "Integrar sem verificação final só porque cada parte passou isolada."
+  ],
+  "referencia_cruzada": "Cap. 11 — Trabalho em paralelo: subagentes, worktrees e integração sem colisão",
+  "lacunas": []
+}

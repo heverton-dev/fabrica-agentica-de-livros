@@ -1,0 +1,57 @@
+{
+  "colecao": "manual-provedores-01",
+  "cor_accent": "#f0b429",
+  "atualizado_em": "2026-09-14",
+  "nucleo": {
+    "slug": "provedores-omniroute/livros/manual-provedores-01",
+    "tipo": "livro",
+    "titulo": "manual-provedores-01",
+    "senioridade": "",
+    "motivo_condutor": {
+      "nome": "Operador de Infraestrutura de IA",
+      "descricao": "Um DevOps ou desenvolvedor que precisa gerenciar múltiplos modelos de IA com máxima confiabilidade e mínimo custo",
+      "vocabulario": [
+        "provedor",
+        "load balancing",
+        "failover",
+        "créditos",
+        "rate limit",
+        "proxy",
+        "hub centralizado"
+      ],
+      "persona_leitor": "Desenvolvedor ou DevOps com experiência em APIs, familiar com curl/Python, buscando otimizar custos de IA"
+    }
+  },
+  "total_membros": 1,
+  "por_tipo": {
+    "livro": 1
+  },
+  "membros": [
+    {
+      "slug": "provedores-omniroute/livros/manual-provedores-01",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "manual-provedores-01",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "",
+      "cta_url": "",
+      "estado": "compilado",
+      "artefatos": [
+        "manual-omniroute.pdf"
+      ]
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "playbook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

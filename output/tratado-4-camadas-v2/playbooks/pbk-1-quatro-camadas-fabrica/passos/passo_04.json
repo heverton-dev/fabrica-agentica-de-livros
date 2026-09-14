@@ -1,0 +1,44 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "A Constituição da bancada",
+  "estagio": "Bancada",
+  "estagio_indice": 1,
+  "objetivo": "Apresentar as leis que impedem retrabalho e ensinar a escrever as regras do próprio projeto em um arquivo único que a IA lê antes de agir.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [
+    "constituicao.yaml",
+    "portao-constituicao.py",
+    "decisoes.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O arquivo de regras do projeto",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "regras:\n  - id: R1\n    texto: todo config declara a versao do formato\n    verificavel: true\n  - id: R2\n    texto: nenhum segredo em repositorio\n    verificavel: true"
+    },
+    {
+      "titulo": "4.2 O portão que fiscaliza a constituição",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import re\n\nSEGREDO = re.compile(r\"(api[_-]?key|senha|secret)\\s*[:=]\", re.I)\nLINHA = 'token = \"abc\"'\n\n\ndef fiscalizar(linha):\n    return \"reprovado\" if SEGREDO.search(linha) else \"aprovado\"\n\n\nprint(fiscalizar(LINHA))"
+    }
+  ],
+  "gate": "python -c \"import re; p=re.compile(r'(api[_-]?key|senha)', re.I); assert p.search('senha = x'); print('portao de segredo operante')\"",
+  "comandos": [
+    "python -c \"import re; p=re.compile(r'(api[_-]?key|senha)', re.I); assert p.search('senha = x'); print('portao de segredo operante')\""
+  ],
+  "feito_quando": [
+    "A regra cabe em uma frase afirmativa?** \"Todo arquivo de configuração declara a versão do formato\" é uma regra. \"Sempre escrever código limpo\" é um desejo",
+    "Existe uma entrada e uma saída observáveis?** Se você não consegue dizer o que seria reprovado, ninguém consegue construir o portão",
+    "A reprovação é automática?** Regra que depende de alguém lembrar de conferir não é portão: é combinado"
+  ],
+  "armadilhas": [
+    "Escrever regra que ninguém consegue reprovar — sem critério objetivo não existe portão, existe intenção.",
+    "Misturar acordo de time com regra verificável e produzir confiança alta com verificação zero.",
+    "Implementar dez regras de uma vez em vez de uma que roda de verdade."
+  ],
+  "referencia_cruzada": "Cap. 4 — A Constituição da bancada",
+  "lacunas": []
+}

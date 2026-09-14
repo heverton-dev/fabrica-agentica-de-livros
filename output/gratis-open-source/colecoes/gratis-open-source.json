@@ -1,11 +1,11 @@
 {
   "colecao": "gratis-open-source",
   "cor_accent": "#f0b429",
-  "atualizado_em": "2026-08-20",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/gratis-open-source",
     "tipo": "livro",
-    "titulo": "Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+    "titulo": "GRÁTIS: SUBSTITUA FERRAMENTAS PAGAS POR OPEN SOURCE",
     "senioridade": "iniciante",
     "motivo_condutor": {
       "nome": "A Oficina Digital",
@@ -35,7 +35,7 @@
       "slug": "livros/gratis-open-source",
       "tipo": "livro",
       "rotulo": "Livro",
-      "titulo": "Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+      "titulo": "GRÁTIS: SUBSTITUA FERRAMENTAS PAGAS POR OPEN SOURCE",
       "obra_mae": null,
       "natureza": "geracao",
       "custo_llm": "alto",
@@ -57,8 +57,11 @@
       "custo_llm": "zero",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "extraido",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "pbk-1-gratis-substitua.pdf"
+      ]
     }
   ],
   "derivados_ausentes": [

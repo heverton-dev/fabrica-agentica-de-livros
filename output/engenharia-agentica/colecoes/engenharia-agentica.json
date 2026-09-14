@@ -1,7 +1,7 @@
 {
   "colecao": "engenharia-agentica",
   "cor_accent": "#58a6ff",
-  "atualizado_em": "2026-09-12",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/engenharia-agentica",
     "tipo": "livro",
@@ -41,8 +41,11 @@
       "custo_llm": "alto",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "planejado",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "livros.pdf"
+      ]
     },
     {
       "slug": "engenharia-agentica/playbooks/pbk-1-engenharia-agentica",
@@ -54,7 +57,7 @@
       "custo_llm": "zero",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "planejado",
+      "estado": "extraido",
       "artefatos": []
     }
   ],

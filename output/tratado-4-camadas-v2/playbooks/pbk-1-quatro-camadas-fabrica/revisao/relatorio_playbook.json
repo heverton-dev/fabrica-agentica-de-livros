@@ -1,0 +1,18 @@
+{
+  "slug": "playbooks/pbk-1-quatro-camadas-fabrica",
+  "conforme": true,
+  "total_passos": 16,
+  "violacoes": [],
+  "avisos": [],
+  "regras": {
+    "R-PBK-0": "playbook nao repete teoria (§1, §2, §3 e §7 fora)",
+    "R-PBK-1": "todo card tem as 7 partes (① a ⑦)",
+    "R-PBK-2": "todo card cita ao menos 1 entrega com caminho de arquivo",
+    "R-PBK-3": "todo card tem 1 comando de verificacao executavel",
+    "R-PBK-4": "'Feito quando' tem de 3 a 7 itens binarios",
+    "R-PBK-5": "nenhuma parte do card excede 25 linhas",
+    "R-PBK-6": "capa com badge de nivel + ilustracao no motivo condutor",
+    "R-PBK-7": "1 card por capitulo do livro-mae, na mesma ordem, sem lacuna",
+    "R-PBK-8": "vocabulario do motivo_condutor presente nos nomes de estagio"
+  }
+}

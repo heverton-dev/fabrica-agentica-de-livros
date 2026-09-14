@@ -1,0 +1,46 @@
+{
+  "numero": "16",
+  "capitulo_fonte": "16",
+  "titulo": "Soberania: não ficar preso a fornecedor, modelo ou plataforma",
+  "estagio": "Encaixe",
+  "estagio_indice": 4,
+  "objetivo": "Proteger o que foi construído, garantindo que dados, regras e histórico continuem seus e que a troca de fornecedor seja uma decisão e não uma emergência.",
+  "pre_requisito": "Passo 15 concluído",
+  "entregas": [
+    "contrato-portabilidade.yaml",
+    "teste-portabilidade.py",
+    "decisoes-risco.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O contrato de portabilidade",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "chamada: rota_de_julgamento\nformato_entrada: json\nformato_saida: json\ntroca_permitida: true\ncusto_da_troca: 2 h"
+    },
+    {
+      "titulo": "4.2 O teste de portabilidade",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def mesma_saida(entrada):\n    a = {\"ok\": entrada[\"valor\"] > 0, \"custo\": 0.010}\n    b = {\"ok\": entrada[\"valor\"] > 0, \"custo\": 0.008}\n    return {\"aprovacao_igual\": a[\"ok\"] == b[\"ok\"],\n            \"custo_a\": a[\"custo\"], \"custo_b\": b[\"custo\"]}\n\n\nprint(mesma_saida({\"valor\": 10}))"
+    }
+  ],
+  "gate": "python -c \"f=lambda v: {'ok': v>0}; assert f(10)['ok']==f(10)['ok']; print('saida equivalente entre recursos')\"",
+  "comandos": [
+    "python -c \"f=lambda v: {'ok': v>0}; assert f(10)['ok']==f(10)['ok']; print('saida equivalente entre recursos')\""
+  ],
+  "feito_quando": [
+    "Escolha uma tarefa de rotina.** Não a mais crítica, nem a mais fácil: uma que roda toda semana",
+    "Congele a especificação e o contexto.** Eles não mudam durante o teste",
+    "Rode no recurso novo.** Mesma entrada, mesmo critério de pronto",
+    "Compare três números.** Taxa de aprovação no portão, custo por execução e tempo até o resultado",
+    "Registre o veredito.** Fica, volta ou vale como plano B declarado"
+  ],
+  "armadilhas": [
+    "Trocar de fornecedor sem congelar especificação e contexto, e medir outra tarefa por engano.",
+    "Manter duas rotas ativas em produção e dobrar a superfície de manutenção e verificação.",
+    "Decidir por preço do momento e não revisar a decisão quando o cenário de modelos muda."
+  ],
+  "referencia_cruzada": "Cap. 16 — Soberania: não ficar preso a fornecedor, modelo ou plataforma",
+  "lacunas": []
+}

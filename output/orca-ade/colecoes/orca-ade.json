@@ -1,7 +1,7 @@
 {
   "colecao": "orca-ade",
   "cor_accent": "#a855f7",
-  "atualizado_em": "2026-09-12",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/orca-ade",
     "tipo": "livro",
@@ -43,7 +43,7 @@
       "custo_llm": "alto",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "planejado",
+      "estado": "redigido",
       "artefatos": []
     },
     {

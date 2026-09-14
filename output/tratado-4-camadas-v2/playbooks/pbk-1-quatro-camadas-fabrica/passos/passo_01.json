@@ -1,0 +1,44 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "A conta que ninguém quer pagar",
+  "estagio": "Bancada",
+  "estagio_indice": 1,
+  "objetivo": "Mostrar com números por que projetos construídos no improviso com IA travam, e apresentar o mapa das quatro camadas que resolve cada uma das dores.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [
+    "inventario-da-conta.py",
+    "caderno-de-bancada.md",
+    "linha-de-base.json"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O inventário da conta",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "TAREFA = \"conferencia manual de pedidos\"\nFREQ_SEMANA, MINUTOS_POR_VEZ = 5, 8\n\n\ndef horas_por_ano(freq, minutos):\n    return round(freq * minutos * 52 / 60, 1)\n\n\nprint(TAREFA, \"->\", horas_por_ano(FREQ_SEMANA, MINUTOS_POR_VEZ), \"h/ano\")"
+    },
+    {
+      "titulo": "4.3 O caderno de bancada",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"tarefa\": \"conferencia manual de pedidos\",\n  \"minutos_por_semana\": 40,\n  \"erros_por_mes\": 3,\n  \"impacto\": \"pedido conferido errado chega ao cliente\"\n}"
+    }
+  ],
+  "gate": "python -c \"freq, minutos = 5, 8; horas = freq * minutos * 52 / 60; assert horas > 0; print('linha de base valida:', round(horas, 1), 'h/ano')\"",
+  "comandos": [
+    "python -c \"freq, minutos = 5, 8; horas = freq * minutos * 52 / 60; assert horas > 0; print('linha de base valida:', round(horas, 1), 'h/ano')\""
+  ],
+  "feito_quando": [
+    "Que tarefa apareceu mais de uma vez nesta semana?",
+    "Quanto tempo ela levou, contado em blocos de quinze minutos?",
+    "O resultado dela tem um critério de pronto que outra pessoa conseguiria conferir sem discutir?"
+  ],
+  "armadilhas": [
+    "Somar trabalho produtivo junto com repetição e concluir que o custo é impossível de resolver.",
+    "Anotar a linha de base sem data — sem data não existe comparação possível no capítulo 16.",
+    "Medir por mês em vez de por tarefa, o que esconde qual repetição está custando caro."
+  ],
+  "referencia_cruzada": "Cap. 1 — A conta que ninguém quer pagar",
+  "lacunas": []
+}

@@ -1,7 +1,7 @@
 {
   "colecao": "tratado-4-camadas",
   "cor_accent": "#a855f7",
-  "atualizado_em": "2026-08-25",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/tratado-4-camadas",
     "tipo": "livro",
@@ -41,8 +41,12 @@
       "custo_llm": "alto",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "redigido",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "livros.pdf",
+        "O_Tratado_das_4_Camadas_da_Fabrica_Agentica.pdf"
+      ]
     },
     {
       "slug": "tratado-4-camadas/playbooks/pbk-1-tratado-4-camadas",
@@ -54,8 +58,11 @@
       "custo_llm": "zero",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "extraido",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "pbk-1-tratado-4-camadas.pdf"
+      ]
     }
   ],
   "derivados_ausentes": [

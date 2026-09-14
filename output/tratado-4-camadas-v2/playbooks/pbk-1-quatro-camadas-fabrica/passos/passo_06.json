@@ -1,0 +1,48 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Peça 2 — Harness: o ciclo de vida e os disjuntores",
+  "estagio": "Projeto vivo",
+  "estagio_indice": 2,
+  "objetivo": "Instalar o ciclo de vida do trabalho com portões que devolvem sim ou não e proteções que impedem ações destrutivas antes que elas aconteçam.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [
+    "portoes.yaml",
+    "executar-portoes.py",
+    "disjuntor-escrita.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O manifesto de portões",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "portoes:\n  - nome: sintaxe\n    comando: python -m py_compile app.py\n  - nome: teste\n    comando: python -m pytest -q\ndisjuntores:\n  tentativas: 3\n  escopo: [\"app.py\", \"testes/\"]"
+    },
+    {
+      "titulo": "4.2 O disjuntor de tentativas",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "LIMITE = 3\n\n\ndef executar(passos):\n    for i, passo in enumerate(passos, 1):\n        if i > LIMITE:\n            return f\"parado no passo {i}: limite de tentativas\"\n        print(\"passo\", i, passo)\n    return \"concluido\"\n\n\nprint(executar([\"a\", \"b\", \"c\", \"d\"]))"
+    }
+  ],
+  "gate": "python -c \"limite=3; passos=4; assert passos>limite; print('disjuntor de tentativas armado em', limite)\"",
+  "comandos": [
+    "python -c \"limite=3; passos=4; assert passos>limite; print('disjuntor de tentativas armado em', limite)\""
+  ],
+  "feito_quando": [
+    "Situação.** É sexta-feira",
+    "Você tem pressa",
+    "Não roda a verificação porque ela demora quarenta segundos",
+    "O erro.** O agente interpreta \"ajustar\" como reorganizar",
+    "Resultado: o arquivo do dia foi importado duas vezes",
+    "O diagnóstico.** Não faltou cuidado: faltaram disjuntor",
+    "O disjuntor de escrita teria bloqueado a gravação na pasta de origem"
+  ],
+  "armadilhas": [
+    "Disjuntor que só registra aviso: sem ação de parada ele é log, não proteção.",
+    "Calibrar o limite de tentativas pelo valor do executor em vez do custo da conferência.",
+    "Deixar a escrita fora de escopo declarado e permitir alteração em arquivo que ninguém pediu."
+  ],
+  "referencia_cruzada": "Cap. 6 — Peça 2 — Harness: o ciclo de vida e os disjuntores",
+  "lacunas": []
+}

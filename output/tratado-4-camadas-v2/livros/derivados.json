@@ -13,10 +13,10 @@
     "itens": [
       {
         "indice": 1,
-        "titulo": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
-        "slug": "pbk-1-tratado-4-camadas",
-        "diretorio": "tratado-4-camadas-v2/playbooks/pbk-1-tratado-4-camadas",
-        "estagios": 3
+        "titulo": "Playbook — As Quatro Camadas da Fábrica Agêntica",
+        "slug": "pbk-1-quatro-camadas-fabrica",
+        "diretorio": "tratado-4-camadas-v2/playbooks/pbk-1-quatro-camadas-fabrica",
+        "estagios": 4
       }
     ]
   },

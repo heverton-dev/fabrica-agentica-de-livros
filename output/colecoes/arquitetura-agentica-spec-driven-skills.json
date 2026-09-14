@@ -1,0 +1,42 @@
+{
+  "colecao": "arquitetura-agentica-spec-driven-skills",
+  "cor_accent": "#37c3d6",
+  "atualizado_em": "2026-09-14",
+  "nucleo": {
+    "slug": "livros/arquitetura-agentica-spec-driven-skills",
+    "tipo": "livro",
+    "titulo": "Arquitetura Agêntica, Spec-Driven Development & Skills de Engenharia",
+    "senioridade": "iniciante",
+    "motivo_condutor": {}
+  },
+  "total_membros": 1,
+  "por_tipo": {
+    "livro": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/arquitetura-agentica-spec-driven-skills",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "Arquitetura Agêntica, Spec-Driven Development & Skills de Engenharia",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": null,
+      "estado": "vazio",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "playbook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

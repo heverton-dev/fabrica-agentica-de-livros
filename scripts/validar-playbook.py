@@ -207,7 +207,11 @@ def validar(slug, limiar_teoria=LIMIAR_TEORIA):
     # ── R-PBK-6: badge de nivel + capa ────────────────────────────────────────
     if not (config.get("senioridade_obra") or "").strip():
         falha("R-PBK-6", "config_obra.json sem 'senioridade_obra' (badge obrigatorio)")
-    if not (dir_pbk / "imagens" / "capa_livro.png").exists():
+    # A capa pode ter sido gravada como capa.png (padrao do gerar-capa.py, usado
+    # por /criar-capa) ou como capa_livro.png (nome que o empacotador procura).
+    # Mesmo criterio de metadados_livro.py: aceitar os dois nomes.
+    if not any((dir_pbk / "imagens" / nome).exists()
+               for nome in ("capa_livro.png", "capa.png")):
         avisos.append("capa ainda nao gerada — rode scripts/gerar-capa.py --tipo playbook")
 
     return {

@@ -1,0 +1,48 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Peça 1 — Contexto: o que a IA lê antes de agir",
+  "estagio": "Projeto vivo",
+  "estagio_indice": 2,
+  "objetivo": "Montar a camada de contexto: definir o que entra na mesa de trabalho da IA, em que formato e em que ordem, para que ela obedeça hoje e continue obedecendo depois.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [
+    "especificacao-pagina.md",
+    "contrato-pedidos.json",
+    "exemplo-minimo.csv"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 A especificação de uma tarefa",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "Tarefa: carregar pedidos do dia\nEntrada: pedidos.csv (id, valor, data)\nSaida: tabela pedidos com total conferido\nRecusa: se faltar id, parar e informar a linha\nLimite: nao altera pedido ja conciliado"
+    },
+    {
+      "titulo": "4.2 O contrato de dados",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"campos\": [\"id\", \"valor\", \"data\"],\n  \"tipos\": {\"id\": \"texto\", \"valor\": \"numero\", \"data\": \"data\"},\n  \"obrigatorios\": [\"id\", \"valor\"]\n}"
+    }
+  ],
+  "gate": "python -c \"import json; c={'campos':['id','valor'],'obrigatorios':['id']}; assert set(c['obrigatorios'])<=set(c['campos']); print('contrato de contexto coerente')\"",
+  "comandos": [
+    "python -c \"import json; c={'campos':['id','valor'],'obrigatorios':['id']}; assert set(c['obrigatorios'])<=set(c['campos']); print('contrato de contexto coerente')\""
+  ],
+  "feito_quando": [
+    "Situação.** Você precisa que o agente ajuste a regra de arredondamento do relatório de pedidos",
+    "Para \"dar contexto\"",
+    "O pedido fica com alguns milhares de linhas",
+    "O erro.** A resposta chega bonita",
+    "O diagnóstico.** A causa é a mesa",
+    "Você misturou quatro coisas de naturezas diferentes: instrução (a regra de arredondamento)",
+    "Quando tudo tem o mesmo peso"
+  ],
+  "armadilhas": [
+    "Descrever passos em vez de resultado e transformar a especificação em manual frágil.",
+    "Deixar o comportamento de recusa em silêncio, que é o que produz resposta inventada com aparência plausível.",
+    "Encher o contexto de arquivo irrelevante e deixar fora justamente o dado que faltava."
+  ],
+  "referencia_cruzada": "Cap. 5 — Peça 1 — Contexto: o que a IA lê antes de agir",
+  "lacunas": []
+}

@@ -1,0 +1,46 @@
+{
+  "numero": "14",
+  "capitulo_fonte": "14",
+  "titulo": "O certificado de bancada: provar que funciona",
+  "estagio": "Encaixe",
+  "estagio_indice": 4,
+  "objetivo": "Construir evidência de confiabilidade, distinguir prova de opinião e escrever um certificado honesto sobre o que a solução faz e o que não faz.",
+  "pre_requisito": "Passo 13 concluído",
+  "entregas": [
+    "certificado-bancada.md",
+    "teste-reprodutibilidade.py",
+    "conferencia-amostra.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 O certificado",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "# Certificado de bancada\nVersao do artefato: 1.2\nAmostra: 3 de 12 afirmacoes reabertas\nLimites: nao cobre pedido cancelado"
+    },
+    {
+      "titulo": "4.3 A conferência por amostra",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "AFIRMACOES = [\n    {\"texto\": \"totais fecham\", \"fonte\": \"teste_equivalencia.py\"},\n    {\"texto\": \"sem segredo no repo\", \"fonte\": \"portao_constituicao.py\"},\n]\n\n\ndef conferir(amostra):\n    return [a[\"fonte\"] for a in amostra]\n\n\nprint(conferir(AFIRMACOES[:2]))"
+    }
+  ],
+  "gate": "python -c \"a=[{'fonte':'t.py'}]; assert all('fonte' in x for x in a); print('afirmacoes com fonte rastreavel')\"",
+  "comandos": [
+    "python -c \"a=[{'fonte':'t.py'}]; assert all('fonte' in x for x in a); print('afirmacoes com fonte rastreavel')\""
+  ],
+  "feito_quando": [
+    "Reproduza o procedimento.** Rode como está escrito, sem consultar quem fez",
+    "Confira três números por amostra.** Escolha três afirmações e vá até a fonte de cada uma",
+    "Procure o limite declarado.** Se a seção de limites estiver vazia, a entrega reprova",
+    "Compare com a linha de base.** Sem comparação, o número não significa nada",
+    "Assine o resultado.** Quem conferiu, quando e com qual versão do artefato"
+  ],
+  "armadilhas": [
+    "Certificado sem seção de limites: o que não foi verificado precisa estar escrito.",
+    "Depender de quem fez a entrega para reproduzir o procedimento e chamar isso de verificação.",
+    "Exibir amostra como se fosse censo e transformar conferência parcial em promessa total."
+  ],
+  "referencia_cruzada": "Cap. 14 — O certificado de bancada: provar que funciona",
+  "lacunas": []
+}

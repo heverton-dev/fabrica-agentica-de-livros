@@ -1,29 +1,28 @@
 {
   "colecao": "tratado-4-camadas-v2",
   "cor_accent": "#37c3d6",
-  "atualizado_em": "2026-09-12",
+  "atualizado_em": "2026-09-14",
   "nucleo": {
     "slug": "livros/tratado-4-camadas-v2",
     "tipo": "livro",
-    "titulo": "O Tratado das 4 Camadas da Fábrica Agêntica",
+    "titulo": "As Quatro Camadas da Fábrica Agêntica",
     "senioridade": "iniciante",
     "motivo_condutor": {
-      "nome": "A Sala de Controle Soberana",
-      "descricao": "O leitor assume o posto de comandante de uma sala de controle onde quatro painéis operacionais — CONTEXTO, HARNESS, MOTOR e FERRAMENTAS — governam agentes de IA como equipes especializadas, sob uma Constituição de 10 Leis e instrumentos de leitura determinística.",
+      "nome": "A Bancada do Projeto Vivo",
+      "descricao": "Você não lê este livro: você monta uma bancada. O mesmo projeto real fica sobre a mesa do capítulo 1 ao 16, e cada capítulo instala uma peça que continua no lugar até o fim. Nada de exemplo descartável: o que entra na bancada é usado de novo, todo capítulo, e é isso que faz o aprendizado grudar.",
       "vocabulario": [
-        "sala de controle",
-        "painel operacional",
-        "circuito de segurança",
-        "roteador cognitivo",
-        "usina determinística",
-        "disjuntor de terminal",
-        "sandbox reversível",
-        "exit code",
-        "constituição viva",
-        "protocolo universal",
-        "certificado de confiabilidade"
+        "bancada",
+        "projeto vivo",
+        "peça instalada",
+        "encaixe",
+        "caderno de bancada",
+        "lâmpada de teste",
+        "disjuntor de bancada",
+        "roteador de serviço",
+        "usina de ferramentas",
+        "certificado de bancada"
       ],
-      "persona_leitor": "Engenheiro de Sistemas Autônomos"
+      "persona_leitor": "Engenheiro de Bancada"
     }
   },
   "total_membros": 2,
@@ -36,27 +35,33 @@
       "slug": "livros/tratado-4-camadas-v2",
       "tipo": "livro",
       "rotulo": "Livro",
-      "titulo": "O Tratado das 4 Camadas da Fábrica Agêntica",
+      "titulo": "As Quatro Camadas da Fábrica Agêntica",
       "obra_mae": null,
       "natureza": "geracao",
       "custo_llm": "alto",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "planejado",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "tratado-4-camadas-v2.pdf"
+      ]
     },
     {
-      "slug": "tratado-4-camadas-v2/playbooks/pbk-1-tratado-4-camadas",
+      "slug": "tratado-4-camadas-v2/playbooks/pbk-1-quatro-camadas-fabrica",
       "tipo": "playbook",
       "rotulo": "Playbook",
-      "titulo": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
+      "titulo": "Playbook — As Quatro Camadas da Fábrica Agêntica",
       "obra_mae": "tratado-4-camadas-v2",
       "natureza": "extracao",
       "custo_llm": "zero",
       "senioridade": "iniciante",
       "cta_url": "",
-      "estado": "planejado",
-      "artefatos": []
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "pbk-1-quatro-camadas-fabrica.pdf"
+      ]
     }
   ],
   "derivados_ausentes": [
