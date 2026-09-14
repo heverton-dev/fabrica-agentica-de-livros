@@ -38,7 +38,9 @@
   "engenharia-agentica": {
     "cor": "#58a6ff",
     "membros": [
-      "livros/engenharia-agentica"
+      "livros/engenharia-agentica",
+      "engenharia-agentica",
+      "versao-iniciante"
     ]
   },
   "gratis-open-source": {
@@ -90,7 +92,14 @@
     "cor": "#37c3d6",
     "membros": [
       "livros/tratado-4-camadas-v2",
-      "playbooks/pbk-1-quatro-camadas-fabrica"
+      "playbooks/pbk-1-quatro-camadas-fabrica",
+      "tratado-4-camadas-v2"
+    ]
+  },
+  "versao-iniciante": {
+    "cor": "#a855f7",
+    "membros": [
+      "versao-iniciante"
     ]
   }
 }

@@ -24,5 +24,6 @@
   "cta_texto": "",
   "modo_producao": "obra-unica",
   "obra_raiz": null,
-  "categoria_tecnica": true
+  "categoria_tecnica": true,
+  "sem_folha_rosto": true
 }

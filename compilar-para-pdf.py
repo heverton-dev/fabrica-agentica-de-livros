@@ -200,6 +200,19 @@ def renderizar_diagramas(slug, dir_livro, md_path):
     return md_path
 
 
+def flag_config(dir_livro, nome):
+    """True quando config_obra.json declara `nome: true` (opt-in editorial V5.5)."""
+    caminho = dir_livro / "config_obra.json"
+    if not caminho.exists():
+        return False
+    import json
+    try:
+        config = json.loads(caminho.read_text(encoding="utf-8"))
+    except ValueError:
+        return False
+    return bool(config.get(nome, False))
+
+
 def variaveis_visuais(slug, dir_livro, paginas=None, tipo=None):
     """Metadados injetados no template: capa/CIP comercial (livro) ou
     resumo/abstract/folha de aprovacao (TCC/artigo) — Upgrade 5 + Fase B/C (V4)."""
@@ -251,6 +264,10 @@ def variaveis_visuais(slug, dir_livro, paginas=None, tipo=None):
             args += ["-V", "capa_imagem=imagens/capa_livro.png"]
     if not CAPA_GRAFICA:
         args += ["-V", "sem_capa_grafica=1"]
+    # Regra editorial (V5.5): LIVRO pode pular a folha de rosto (capa -> CIP direto)
+    # quando config_obra.json declara "sem_folha_rosto": true (opt-in por obra).
+    if tipo == "livro" and flag_config(dir_livro, "sem_folha_rosto"):
+        args += ["-V", "sem_folha_rosto=1"]
     return args
 
 
@@ -529,6 +546,16 @@ lang: pt-BR
     try:
         ok, erro = converter_via_typst(md_compilado, pdf_path, dir_livro, titulo,
                                        extras, timeout=180, tipo=tipo)
+
+        # Segunda passagem (--paginas-exatas): grava contagem real na ficha CIP
+        # no caminho legado (chapters) — o mesmo que converter_md_direto já faz.
+        if ok and PAGINAS_EXATAS and tipo == "livro" and metadados_livro is not None:
+            paginas = metadados_livro.contar_paginas_pdf(pdf_path)
+            if paginas:
+                print(f"  Segunda passagem: gravando {paginas} paginas na ficha CIP")
+                converter_via_typst(md_compilado, pdf_path, dir_livro, titulo,
+                                    variaveis_visuais(slug, dir_livro, paginas, tipo=tipo),
+                                    timeout=180, tipo=tipo)
 
         if ok:
             tamanho_kb = pdf_path.stat().st_size / 1024

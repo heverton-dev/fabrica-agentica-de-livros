@@ -12,6 +12,7 @@
 //   sinopse                            -> texto da contracapa
 //   capa_imagem                        -> PNG full-bleed como pagina-capa (padrao da serie)
 //   sem_capa_grafica                   -> "1" desativa capa/contracapa graficas
+//   sem_folha_rosto                    -> "1" pula a folha de rosto (capa -> CIP direto, LIVRO)
 
 #set document(
   title: "$title$",
@@ -162,6 +163,10 @@
 
 #let capa-grafica-ativa = "$sem_capa_grafica$" != "1"
 
+// Regra editorial (V5.5): LIVRO pode pular a folha de rosto e ir da capa
+// direto para a ficha CIP (sem_folha_rosto=1, opt-in via config_obra.json).
+#let folha-rosto-ativa = "$sem_folha_rosto$" != "1"
+
 // ── CAPA GRAFICA (Upgrade 5) ──────────────────────────────────────
 #if capa-grafica-ativa {
   $if(capa_imagem)$
@@ -197,32 +202,34 @@
 }
 
 // ── FOLHA DE ROSTO (ABNT NBR 6029) ────────────────────────────────
-#page(header: none, footer: none, numbering: none)[
-  #set par(first-line-indent: 0cm, justify: false)
-  #align(center)[
-    #text(font: ("Inter", "Liberation Sans", "Arial"), size: 13pt, weight: "bold", fill: cor.secundaria)[$author$]
-    #v(3.5cm)
-    #text(font: ("Inter", "Liberation Sans", "Arial"), size: 22pt, weight: "bold", fill: cor.primaria)[$title$]
-    $if(subtitle)$
-    #v(0.5cm)
-    #text(font: ("Inter", "Liberation Sans", "Arial"), size: 14pt, fill: cor.secundaria)[$subtitle$]
-    $endif$
+#if folha-rosto-ativa {
+  page(header: none, footer: none, numbering: none)[
+    #set par(first-line-indent: 0cm, justify: false)
+    #align(center)[
+      #text(font: ("Inter", "Liberation Sans", "Arial"), size: 13pt, weight: "bold", fill: cor.secundaria)[$author$]
+      #v(3.5cm)
+      #text(font: ("Inter", "Liberation Sans", "Arial"), size: 22pt, weight: "bold", fill: cor.primaria)[$title$]
+      $if(subtitle)$
+      #v(0.5cm)
+      #text(font: ("Inter", "Liberation Sans", "Arial"), size: 14pt, fill: cor.secundaria)[$subtitle$]
+      $endif$
+    ]
+    #v(4cm)
+    #align(right, block(width: 8.5cm)[
+      #set text(size: 10.5pt)
+      #set par(justify: true, first-line-indent: 0cm)
+      Obra técnica de literatura especializada, produzida e diagramada conforme as
+      normas ABNT para publicação editorial.
+    ])
+    #v(1fr)
+    #align(center)[
+      #set text(size: 11pt)
+      $if(cip_local)$$cip_local$$else$Brasil$endif$
+      #linebreak()
+      $if(cip_ano)$$cip_ano$$else$#datetime.today().display("[year]")$endif$
+    ]
   ]
-  #v(4cm)
-  #align(right, block(width: 8.5cm)[
-    #set text(size: 10.5pt)
-    #set par(justify: true, first-line-indent: 0cm)
-    Obra técnica de literatura especializada, produzida e diagramada conforme as
-    normas ABNT para publicação editorial.
-  ])
-  #v(1fr)
-  #align(center)[
-    #set text(size: 11pt)
-    $if(cip_local)$$cip_local$$else$Brasil$endif$
-    #linebreak()
-    $if(cip_ano)$$cip_ano$$else$#datetime.today().display("[year]")$endif$
-  ]
-]
+}
 
 // ── VERSO DA FOLHA DE ROSTO: FICHA CATALOGRAFICA (CIP) ────────────
 $if(cip_palavras)$

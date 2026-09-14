@@ -1,0 +1,69 @@
+{
+  "titulo_obra": "Engenharia Agêntica — Versão Iniciante",
+  "subtitulo": "Do zero ao agente em produção: 16 dias de jornada",
+  "tipo_obra": "livro",
+  "tamanho_obra": "M",
+  "senioridade_obra": "iniciante",
+  "ano": 2026,
+  "introducao": "Esta versão reescreve o livro Engenharia Agêntica em linguagem simples, um capítulo por dia, usando o projeto real proj_fabrica-de-livros como exemplo contínuo do começo ao fim. O leitor começa entendendo o que é um agente de IA (e o que ele não é), monta a cabine de comando ao redor do modelo, configura custo, contexto e ferramentas, e termina com uma esteira de produção completa e auditável — sem nenhum termo dado como pré-requisito.",
+  "motivo_condutor": {
+    "nome": "A Cabine e a Torre",
+    "descricao": "O agente é o piloto: potente, adaptativo e probabilístico. O harness é a cabine — painel, checklist, alarmes, piloto automático e caixa-preta — onde cada instrumento é determinístico por construção. Voar bem não é pilotar melhor: é instrumentar melhor.",
+    "vocabulario": [
+      "cabine",
+      "painel",
+      "checklist",
+      "instrumento",
+      "alarme",
+      "piloto automático",
+      "plano de voo",
+      "caixa-preta",
+      "torre de controle",
+      "combustível"
+    ],
+    "persona_leitor": "Engenheiro de Bordo"
+  },
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "O Terreno — o que é um agente, de verdade",
+      "capitulos": [
+        {"capitulo": "1", "titulo": "O agente não é o modelo: anatomia de um harness"},
+        {"capitulo": "2", "titulo": "Probabilismo e determinismo: onde cada um manda"},
+        {"capitulo": "3", "titulo": "O arquivo que todo agente lê: AGENTS.md, config.json e rules"},
+        {"capitulo": "4", "titulo": "Skills, MCPs e tools: o que o agente sabe fazer"}
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "A Bancada — configurando o que realmente custa dinheiro",
+      "capitulos": [
+        {"capitulo": "5", "titulo": "Turnos agênticos: anatomia de um loop e por que ele custa dinheiro"},
+        {"capitulo": "6", "titulo": "Cache hit: prompt caching e a ordem das partes"},
+        {"capitulo": "7", "titulo": "Economia severa de tokens: as configurações reais"},
+        {"capitulo": "8", "titulo": "Otimização de contexto: selecionar, comprimir, isolar"}
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "A Linha de Montagem — escala, scripts e frota",
+      "capitulos": [
+        {"capitulo": "9", "titulo": "Scripts e gates: o determinismo que sustenta a esteira"},
+        {"capitulo": "10", "titulo": "Hooks: a camada que intercepta o agente"},
+        {"capitulo": "11", "titulo": "Agents e subagentes: delegação com contexto isolado"},
+        {"capitulo": "12", "titulo": "Orquestração: worktrees, paralelismo e o ambiente de agentes"}
+      ]
+    },
+    {
+      "parte": "IV",
+      "titulo_parte": "O Ofício — decisões de arquiteto",
+      "capitulos": [
+        {"capitulo": "13", "titulo": "Roteamento inteligente de LLM: o modelo certo por turno"},
+        {"capitulo": "14", "titulo": "Configurações que nunca te contam"},
+        {"capitulo": "15", "titulo": "Os segredos universais aplicáveis a qualquer harness"},
+        {"capitulo": "16", "titulo": "Arquitetura para desenvolvimento com IA: o sistema que constrói sistemas"}
+      ]
+    }
+  ],
+  "conclusao": "Fechar a jornada dos 16 dias: de desmontar a cabine a auditar o painel completo. Reunir cada instrumento apresentado, mostrá-lo encaixado em uma única arquitetura auditável e devolver ao leitor iniciante a decisão central que atravessa o livro inteiro — o que eu controlo por código e o que eu entrego ao modelo."
+}
