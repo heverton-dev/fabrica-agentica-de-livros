@@ -1,0 +1,25 @@
+{
+  "slug": "livros/devops",
+  "capitulos": 12,
+  "metricas_por_capitulo": {
+    "cap_01": 10,
+    "cap_02": 3,
+    "cap_03": 1,
+    "cap_04": 2,
+    "cap_05": 3,
+    "cap_06": 1,
+    "cap_07": 6,
+    "cap_08": 3,
+    "cap_09": 1,
+    "cap_10": 19,
+    "cap_11": 2,
+    "cap_12": 8
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

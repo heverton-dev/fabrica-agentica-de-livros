@@ -1,0 +1,48 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Orcamento e Fallback: Medir Antes de Limitar",
+  "estagio": "Laudo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor monta um sistema de controle de gasto e um fallback para modelo local usando os subcomandos e nomes de modelo reais, corrigindo os que o manual errou.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [
+    "~/.aider.conf.yml",
+    "~/.codex/config.toml",
+    "opencode.json",
+    ".jsonc",
+    "opencode/<model-id>",
+    "opencode-zen-free-tiny/small/..."
+  ],
+  "execucao": [
+    {
+      "titulo": "Alternativa ao Cron: Acoplando o Guard a um Hook do Claude Code",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# crontab -e — checa o gasto do dia a cada hora, das 8h as 20h.\n0 8-20 * * * /caminho/para/token-guard.sh \"verificacao de rotina\" >> ~/.token-guard-cron.log 2>&1"
+    }
+  ],
+  "gate": "npx ccusage@latest session --json | jq -r '.sessions[-1] // {}'",
+  "comandos": [
+    "npx ccusage@latest session --json | jq -r '.sessions[-1] // {}'",
+    "./llama-cli -m models/modelo.gguf -p \"$prompt\" -ngl 32 -c 4096"
+  ],
+  "feito_quando": [
+    "Imagine a cena: são 16h de uma sexta-feira",
+    "O comando `pipx install ccusage` falha silenciosamente para você — na verdade",
+    "Você gasta vinte minutos reinstalando `pipx`",
+    "O diagnóstico correto seria outro: `ccusage` nunca foi um pacote Python",
+    "É uma ferramenta Node — o próprio nome do ecossistema já era a evidência que faltava conferir antes de tentar instalar",
+    "A correção é trivial depois que o laudo é refeito: `npx ccusage@latest daily --json` roda sem instalação alguma",
+    "O erro comum não foi de sintaxe de shell — foi de não confirmar"
+  ],
+  "armadilhas": [
+    "Instalar ccusage via pip/pipx (e pacote npm) e concluir que a rede esta com problema",
+    "Definir hard limit sem medir baseline real de uso por pelo menos 1 semana",
+    "Confiar so em ping ICMP para decidir se a API esta de pe (ICMP pode estar bloqueado com a API acessivel)"
+  ],
+  "referencia_cruzada": "Cap. 6 — Orcamento e Fallback: Medir Antes de Limitar",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

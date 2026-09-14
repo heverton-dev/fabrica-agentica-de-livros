@@ -1,0 +1,41 @@
+{
+  "slug": "devops/livros",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 2,
+  "resumo": {
+    "nao_aplicavel": 1,
+    "nao_verificado": 1
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "hcl": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_06",
+      "linha": 10,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_06",
+      "linha": 24,
+      "linguagem": "hcl",
+      "linhas_codigo": 14,
+      "status": "nao_verificado",
+      "detalhe": "sem validador para 'hcl'"
+    }
+  ]
+}

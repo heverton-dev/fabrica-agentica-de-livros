@@ -1,0 +1,143 @@
+{
+  "tema": "Ecossistema AIDD: Fundacao Pratica para Projetos com Agentes Autonomos de IA",
+  "tipo_obra": "livro",
+  "slug": "ecossistema-aidd",
+  "min_referencias_por_capitulo": 5,
+  "tamanho_obra": "M",
+  "senioridade_obra": "intermediario",
+  "estilo_tecnica": "codigo",
+  "cor_primaria": "#1d4ed8",
+  "subtitulo": "Os 6 pilares de engenharia que protegem o seu repo de promessas em texto",
+  "edition_tag": "v1.0.0",
+  "motivo_condutor": {
+    "nome": "O desenvolvedor que perdeu tempo com promessas que nao viraram lei",
+    "persona_leitor": "Praticante de Engenharia de Software",
+    "descricao": "Um praticante que ja herdou um repo onde 'sepamos fazer diferente' era a unica defesa contra commit vermelho, postmortem arquivado sem teste de regressao, e gate que ninguem entende. O livro o transforma em quem introduz leis mecanicas de projeto antes da crise, nao depois."
+  },
+  "sumario_macro": {
+    "titulo": "Ecossistema AIDD: Fundação Prática para Projetos com Agentes Autônomos de IA",
+    "partes": [
+      {
+        "numero": 1,
+        "titulo": "Por que o kit existe",
+        "capitulos": [
+          {
+            "numero": 1,
+            "titulo": "O pretexto que custa caro",
+            "pilares": [],
+            "ancora_visual": "Um repo onde cada regra era promessa, não lei",
+            "entrega_tecnica": "Mapear 4 falhas archetipo onde manualidade substituiu mecanismo",
+            "metricas_obrigatorias": ["número de falhas archetípicas identificadas"]
+          },
+          {
+            "numero": 2,
+            "titulo": "As 6 peças em uma só frase cada",
+            "pilares": [],
+            "ancora_visual": "Tabela de 6 peças: pergunta / custo / quando introduzir",
+            "entrega_tecnica": "Cap 2 entrega tabela completa de mapeamento + regra conservadora de introdução",
+            "metricas_obrigatorias": ["número de peças associadas a problema real"]
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "As 6 peças, uma por capítulo",
+        "capitulos": [
+          {
+            "numero": 3,
+            "titulo": "Peça 1: Builder ≠ Critic",
+            "pilares": ["builder_critic"],
+            "ancora_visual": "Duas pessoas: quem escreve e quem aprova — nunca a mesma",
+            "entrega_tecnica": "Cap 3 classifica builder/critic/ambíguo por critérios objetivos (tools Read vs Write/Edit); exercício prático de classificação",
+            "metricas_obrigatorias": ["número de agentes classificados no exercício (mínimo 6)"]
+          },
+          {
+            "numero": 4,
+            "titulo": "Peça 2: Crítico determinístico (gate)",
+            "pilares": ["gate_deterministico"],
+            "ancora_visual": "Script que decide aceitável/não-aceitável — sem nuance de LLM",
+            "entrega_tecnica": "Cap 4 entrega gate canônico em Python + exemplo de falso-positivo corrigido + exercício de reescrever critério textual como gate",
+            "metricas_obrigatorias": ["número de critérios transformados em gate no exercício"]
+          },
+          {
+            "numero": 5,
+            "titulo": "Peça 3: Registro declarativo",
+            "pilares": ["registro_declarativo"],
+            "ancora_visual": "Um dicionário, 6 arquivos a menos para editar quando nasce um tipo novo",
+            "entrega_tecnica": "Cap 5 mostra sintoma de alerta (variável repetida em >=2 arquivos) + scaffold de registro + exercício de transformar dispatch if/elif em registro",
+            "metricas_obrigatorias": ["número de arquivos candidatos detectados pelo diagnóstico"]
+          },
+          {
+            "numero": 6,
+            "titulo": "Peça 4: Nunca commitar vermelho",
+            "pilares": ["nunca_vermelho"],
+            "ancora_visual": "Hook que bloqueia quando a suíte fala 'não' — não promessa de 'vamos revisar'",
+            "entrega_tecnica": "Cap 6 explica marcador de bloco no pre-commit + regra append (nunca substituir) + exercício de revisar pre-commit existente",
+            "metricas_obrigatorias": ["número de linhas do hook analisado no exercício"]
+          },
+          {
+            "numero": 7,
+            "titulo": "Peça 5: Postmortem que vira teste",
+            "pilares": ["postmortem_teste"],
+            "ancora_visual": "Cada linha de Prevenção nasce com stub de teste — não só anotação",
+            "entrega_tecnica": "Cap 7 mostra molde de postmortem + conversor para stub de teste + exercício de gerar stub de um postmortem fictício",
+            "metricas_obrigatorias": ["número de stubs gerados no exercício"]
+          },
+          {
+            "numero": 8,
+            "titulo": "Peça 6: Hook + CI/CD",
+            "pilares": ["hook_ci"],
+            "ancora_visual": "Dois pontos de aplicação do mesmo gate: local antes do commit, remoto antes do merge",
+            "entrega_tecnica": "Cap 8 entrega exemplo mínimo de workflow CI que roda a suíte e bloqueia merge se vermelho + exercício de escrever pipeline mínimo",
+            "metricas_obrigatorias": ["número de etapas do pipeline definidas no exercício"]
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "Como aplicar no seu projeto",
+        "capitulos": [
+          {
+            "numero": 9,
+            "titulo": "Diagnosticar antes de instalar",
+            "pilares": [],
+            "ancora_visual": "Relatório de diagnóstico: 6 campos que dizem quais peças propor",
+            "entrega_tecnica": "Cap 9 explica os 6 campos do relatório analisar-projeto.py + como usar para decidir sem impor",
+            "metricas_obrigatorias": ["número de peças associadas a problema real"]
+          },
+          {
+            "numero": 10,
+            "titulo": "Instalar sem destruir",
+            "pilares": [],
+            "ancora_visual": "Dry-run → explicar → gravar peça por peça — nunca 'todas de uma vez'",
+            "entrega_tecnica": "Cap 10 entrega ritual de instalação + 5 caminhos reais (agents/scripts/hooks/templates/skills) + regra inegociável de colisão",
+            "metricas_obrigatorias": ["número de peças associadas a problema real"]
+          },
+          {
+            "numero": 11,
+            "titulo": "Manter vivo depois da instalação",
+            "pilares": [],
+            "ancora_visual": "Sinais de que uma peça virou carga — e quando revisitar",
+            "entrega_tecnica": "Cap 11 entrega 3 sinais de carga de peça + critério de quando o kit pode pular sem perder nada",
+            "metricas_obrigatorias": ["número de peças associadas a problema real"]
+          }
+        ]
+      }
+    ]
+  },
+  "gerar_artigos": false,
+  "qtd_artigos": 0,
+  "gerar_ebooks": false,
+  "qtd_ebooks": 0,
+  "gerar_playbook": false,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "gerar_campanha": false,
+  "gerar_maquina": false,
+  "cta_url": "",
+  "cta_texto": "",
+  "modo_producao": "obra-unica",
+  "categoria_tecnica": false
+}

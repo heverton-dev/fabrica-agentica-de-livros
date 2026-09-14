@@ -6,6 +6,14 @@
 # === GATE DE SEGREDOS (Item E — 2026-08-21) ===
 # Bloqueia commit automático se o diff staged contiver padrão de segredo.
 # Padrões: chaves OpenAI (sk-*), AWS (AKIA*), PEM privada, token GitHub (ghp_*), Slack (xox*).
+# Allowlist: livros técnicos usam exemplos didáticos de detecção de segredos
+# (ex.: cap. de segurança com "sk-ant-..."/"sk-omniroute-abc123def456" e
+# placeholders "sk-ant-xxxx..."). Essas sequências são claramente fictícias
+# (algarismos sequenciais / x's) e nunca são credenciais reais. A exceção
+# "sk-management-framework" evita falso positivo de substring em URLs
+# (ex.: ai-risk-management-framework).
+
+ALLOWLIST_DIDATICO='sk-ant-1234567890abcdef1234567890|sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|sk-omniroute-abc123def456|sk-management-framework'
 
 PADROES_SEGREDO=(
     'sk-[a-zA-Z0-9_-]{20,}'
@@ -16,11 +24,11 @@ PADROES_SEGREDO=(
 )
 
 for padrao in "${PADROES_SEGREDO[@]}"; do
-    if git diff --cached | grep -E "$padrao" > /dev/null 2>&1; then
+    if git diff --cached | grep -E -- "$padrao" | grep -vE "$ALLOWLIST_DIDATICO" > /dev/null 2>&1; then
         echo "[BLOQUEADO] possível segredo no diff staged"
         echo ""
         echo "Padrão detectado: $padrao"
-        git diff --cached | grep -n -E "$padrao" | head -5
+        git diff --cached | grep -n -E -- "$padrao" | grep -vE "$ALLOWLIST_DIDATICO" | head -5
         echo ""
         echo "Se é falso positivo, revise manualmente ou use 'git commit --no-verify' (com cuidado)."
         exit 1
@@ -31,12 +39,16 @@ done
 # Bloqueia commit se há mudanças em output/ e estrutura HUB é inválida
 if git diff --cached --name-only | grep -q '^output/'; then
   echo "[pre-commit] Validando estrutura HUB POR COLECAO..."
+  HOOK_ROOT=$(git rev-parse --show-toplevel)
   python -c "
 import sys
 from pathlib import Path
+import subprocess
+root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], text=True).strip()
+sys.path.insert(0, str(Path(root) / 'scripts'))
 import tipos_obra as TO
 
-dir_output = Path('output')
+dir_output = Path(root) / 'output'
 raizes_planas = {TO.raiz_output(t) for t in TO.tipos_raiz()}
 raizes_planas.discard('distribuicao')
 

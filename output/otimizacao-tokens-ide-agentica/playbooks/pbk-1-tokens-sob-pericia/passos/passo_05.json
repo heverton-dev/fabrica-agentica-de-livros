@@ -1,0 +1,44 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Paralelismo e Resiliencia Que Sempre Funcionaram",
+  "estagio": "Laudo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor implementa, com confianca total, os padroes de engenharia do manual que passaram na pericia sem ressalva: paralelismo controlado, circuit breaker e backoff exponencial.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [
+    "CLAUDE.md",
+    "settings.json",
+    ".aider.conf.yml",
+    "config.toml"
+  ],
+  "execucao": [
+    {
+      "titulo": "Paralelismo Controlado em Python: semáforo Antes de Disparar Tudo",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import asyncio\nimport random\n\nasync def revisar_arquivo(caminho: str, semaforo: asyncio.Semaphore) -> dict:\n    \"\"\"Simula uma chamada de agente revisando 1 arquivo, respeitando o teto de concorrencia.\"\"\"\n    async with semaforo:\n        # Ponto onde entraria a chamada real ao modelo/API do agente.\n        await asyncio.sleep(random.uniform(0.01, 0.05))\n        return {\"arquivo\": caminho, \"status\": \"revisado\"}\n\nasync def revisar_lote(arquivos: list[str], concorrencia_maxima: int = 5) -> list[dict]:\n    semaforo = asyncio.Semaphore(concorrencia_maxima)\n    tarefas = [revisar_arquivo(c, semaforo) for c in arquivos]\n    return await asyncio.gather(*tarefas)\n\nif __name__ == \"__main__\":\n    arquivos = [f\"modulo_{i}.py\" for i in range(12)]\n    resultados = asyncio.run(revisar_lote(arquivos, concorrencia_maxima=5))\n    print(f\"{len(resultados)} arquivos revisados, teto de 5 simultaneos\")\n# ... (trecho completo no Capitulo 05 do livro)"
+    }
+  ],
+  "gate": "ls src/*.py | xargs -P 5 -I {} python revisar_arquivo.py {}",
+  "comandos": [],
+  "feito_quando": [
+    "Imagine a cena: você acabou de terminar o Capítulo 4",
+    "Você escreve rápido um laço com `asyncio.gather` chamando as 80 revisões de uma vez",
+    "Você roda o script e",
+    "O diagnóstico é o mesmo problema que a seção Explica descreveu: `asyncio.gather` sozinho não impõe limite de concorrência nenhum — ele dispara todas as corrotinas fornecidas simultaneamente",
+    "A correção tem duas partes: primeiro",
+    "Meça a taxa de erro com os subcomandos reais de auditoria de uso que o Capítulo 6 destrincha a partir da ferramenta de contagem de tokens [21]",
+    "Como síntese rápida das armadilhas mais comuns nesta frente: (1) esquecer o semáforo"
+  ],
+  "armadilhas": [
+    "Rodar paralelismo sem rate limiter e disparar 429 do provedor",
+    "Tratar a economia de tempo do paralelismo como garantia fixa em vez de estimativa a medir",
+    "Implementar circuit breaker sem o estado HALF_OPEN e nunca recuperar sozinho de uma falha"
+  ],
+  "referencia_cruzada": "Cap. 5 — Paralelismo e Resiliencia Que Sempre Funcionaram",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

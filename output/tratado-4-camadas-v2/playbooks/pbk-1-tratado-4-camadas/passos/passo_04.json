@@ -1,0 +1,60 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "A Constituição Mestre: As 10 Leis Inegociáveis",
+  "estagio": "Sala de controle",
+  "estagio_indice": 1,
+  "objetivo": "Apresentar e justificar as 10 Leis de Ouro da governança AIDD, mostrando como cada uma neutraliza um modo de falha concreto do desenvolvimento agêntico.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 A constituição como arquivo versionado",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "# Governança Canônica do Projeto\n\n## Leis inegociáveis\n1. Determinismo primeiro: resolve com script antes de chamar modelo.\n2. Qualidade binária: exit 0 aprova; exit 1 bloqueia. Sem meio-termo.\n3. Persistência estruturada: estado e decisões em arquivo auditável.\n4. Economia severa: raciocínio telegráfico, saída densa, expurgo entre fases.\n5. Supremacia agnóstica: nenhuma regra depende de harness ou fornecedor.\n6. Desenvolvedor no controle: proibido agente headless invisível.\n7. Zero stubs: proibido corpo vazio, retorno fictício ou pendência.\n8. Anti-NIH: justificar por escrito antes de construir mecanismo genérico.\n9. Honestidade de rótulo: não alegar mais do que o teste provou.\n10. Comunicação direta: sem preâmbulo, sem saudação, sem repetição."
+    },
+    {
+      "titulo": "4.2 Leis 2 e 9 em código: o fiscal da constituição",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Fiscal da constituicao: leis 3 (persistencia) e 9 (honestidade de rotulo).\"\"\"\n\nimport re\nimport sys\nfrom pathlib import Path\nfrom typing import List, Tuple\n\n# Lei 9 — vocabulario que afirma mais do que qualquer teste pode provar\nTERMOS_INFLADOS = (\n    r\"\\b100%\\s+seguro\\b\",\n    r\"\\btotalmente\\s+blindado\\b\",\n    r\"\\bsem\\s+qualquer\\s+bug\\b\",\n    r\"\\babsolutamente\\s+(?:perfeito|seguro)\\b\",\n)\n\n# Lei 3 — diretorios cuja ausencia indica estado nao auditavel\nDIRETORIOS_PERSISTENTES = (\"docs\", \"gates\", \"componentes\")\n\nEXEMPLO_INFLADO = \"Este modulo e 100% seguro em qualquer cenario de carga.\"\n\n\ndef auditar_honestidade(docs: List[Path]) -> Tuple[bool, List[str]]:\n    violacoes: List[str] = []\n    padroes = [re.compile(p, re.IGNORECASE) for p in TERMOS_INFLADOS]\n    for doc in docs:\n        texto = doc.read_text(encoding=\"utf-8\", errors=\"ignore\")\n        for padrao in padroes:\n            achado = padrao.search(texto)\n            if achado:\n                violacoes.append(f\"{doc}: afirmacao inflada -> {achado.group(0)!r}\")\n    return (not violacoes), violacoes\n\n\ndef auditar_persistencia(raiz: Path) -> Tuple[bool, List[str]]:\n    faltando = [d for d in DIRETORIOS_PERSISTENTES if not (raiz / d).is_dir()]\n    return (not faltando), [f\"diretorio persistente ausente: {d}\" for d in faltando]\n\n\ndef verificar_rotulo_isolado(texto: str) -> bool:\n    \"\"\"Lei 9 aplicada a um unico trecho — usado antes de publicar relatorio.\"\"\"\n    return not any(re.search(p, texto, re.IGNORECASE) for p in TERMOS_INFLADOS)\n\n\ndef main() -> int:\n    raiz = Path(\".\""
+    },
+    {
+      "titulo": "4.3 Os dez fiscais declarados em configuração",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "constituicao:\n  leis:\n    - id: 1\n      nome: Determinismo em primeiro lugar\n      fiscal: revisao-humana-no-plano\n    - id: 2\n      nome: Qualidade binaria\n      fiscal: gates/exit-code.sh\n    - id: 3\n      nome: Persistencia estruturada\n      fiscal: gates/fiscal-constituicao.py\n    - id: 4\n      nome: Economia severa de tokens\n      fiscal: gates/orcamento-contexto.py\n    - id: 5\n      nome: Supremacia agnostica\n      fiscal: gates/checar-acoplamento.py\n    - id: 6\n      nome: Desenvolvedor no controle\n      fiscal: gates/bloquear-headless.py\n    - id: 7\n      nome: Zero stubs\n      fiscal: gates/anti-stub-ast.py\n    - id: 8\n      nome: Anti-NIH\n      fiscal: revisao-humana-no-plano\n    - id: 9\n      nome: Honestidade de rotulo\n      fiscal: gates/fiscal-constituicao.py\n    - id: 10\n      nome: Comunicacao direta\n      fiscal: gates/ritmo-de-saida.py"
+    },
+    {
+      "titulo": "4.4 Sessão de fiscalização em operação",
+      "linguagem": "console",
+      "comandos": [
+        "python gates/fiscal-constituicao.py"
+      ],
+      "codigo": "$ python gates/fiscal-constituicao.py\n==============================================================\nFISCAL DA CONSTITUICAO — LEIS 2, 3 E 9\n==============================================================\n[LEI 3] OK persistencia estruturada\n[LEI 9] BLOQUEIO honestidade de rotulo (12 documento(s) auditado(s))\n  -> docs/relatorio-carga.md: afirmacao inflada -> '100% seguro'\n--------------------------------------------------------------\n[REPROVADO] exit 1 — violacao constitucional detectada.\n\n$ sed -i 's/100% seguro/resiliente a falha de nos, ver secao 4/' docs/relatorio-carga.md\n$ python gates/fiscal-constituicao.py\n--------------------------------------------------------------\n[APROVADO] exit 0 — constituicao respeitada."
+    }
+  ],
+  "gate": "python gates/fiscal-constituicao.py",
+  "comandos": [
+    "python gates/fiscal-constituicao.py"
+  ],
+  "feito_quando": [
+    "Escrever leis sem fiscais. Lei sem fiscal é sugestão, e sugestão não sobrevive à pressão de prazo",
+    "Confundir quantidade com cobertura. Vinte leis inúteis protegem menos do que sete leis fiscalizadas",
+    "Desligar o fiscal para liberar a entrega. Isso inverte a relação: o fiscal existe justamente para o momento em que a pressão para ignorá-lo é maior",
+    "Colocar fiscal caro no gancho rápido. O custo de espera produz evasão, e evasão produz portão desativado",
+    "Tratar a constituição como imutável. Ela precisa evoluir, mas toda alteração é mudança de lei e merece justificativa registrada [3]"
+  ],
+  "armadilhas": [
+    "Escrever leis sem fiscais. Lei sem fiscal é sugestão, e sugestão não sobrevive à pressão de prazo",
+    "Confundir quantidade com cobertura. Vinte leis inúteis protegem menos do que sete leis fiscalizadas",
+    "Desligar o fiscal para liberar a entrega. Isso inverte a relação: o fiscal existe justamente para o momento em que a pressão para ignorá-lo é maior",
+    "Colocar fiscal caro no gancho rápido. O custo de espera produz evasão, e evasão produz portão desativado",
+    "Tratar a constituição como imutável. Ela precisa evoluir, mas toda alteração é mudança de lei e merece justificativa registrada [3]"
+  ],
+  "referencia_cruzada": "Cap. 4 — A Constituição Mestre: As 10 Leis Inegociáveis",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

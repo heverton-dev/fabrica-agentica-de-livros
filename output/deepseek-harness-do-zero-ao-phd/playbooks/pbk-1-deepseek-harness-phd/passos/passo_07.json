@@ -1,0 +1,51 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Sessoes e Estado: Memoria do Agente",
+  "estagio": "Montagem",
+  "estagio_indice": 2,
+  "objetivo": "Configurar sessoes duraveis e manipular historico.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Criando e Gerenciando Sessões",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Criar nova sessão\ndsh session create --name \"refatoracao-api\"\n\n# Listar sessões existentes\ndsh session list\n# NAME                CREATED            STATUS\n# refatoracao-api     2026-08-23 14:30   active\n# debug-cache         2026-08-22 09:15   paused\n\n# Retomar sessão anterior\ndsh session resume refatoracao-api\n\n# Bifurcar sessão\ndsh session fork refatoracao-api --point turn:15 --name \"experimento- alternativo\""
+    },
+    {
+      "titulo": "Visualizando Eventos",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Listar eventos da sessão atual\ndsh session events --last 10\n# EVENT       TIMESTAMP           DETAILS\n# turn:start  2026-08-23 14:32:01  turn_id: abc123\n# user:msg    2026-08-23 14:32:01  \"Refatore a função X\"\n# tool:call   2026-08-23 14:32:05  filesystem:read src/x.js\n# tool:result 2026-08-23 14:32:06  2048 chars lidos\n# tool:call   2026-08-23 14:32:10  filesystem:write src/x.js\n# tool:result 2026-08-23 14:32:11  arquivo atualizado\n# turn:end    2026-08-23 14:32:15  3 tools executadas\n\n# Buscar eventos por ferramenta\ndsh session search --tool \"shell:execute\"\n# Encontra todos os momentos em que o agente executou comandos no shell"
+    },
+    {
+      "titulo": "Configurando Persistência",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# dsh.config.yaml\nsession:\n  storage:\n    # Armazenar sessões em disco\n    type: file\n    path: ~/.dsh/sessions/\n    \n    # Comprimir sessões antigas (>7 dias)\n    compress: true\n    \n    # Limitar tamanho por sessão\n    max-size: \"100MB\"\n    \n    # Auto-save a cada N eventos\n    auto-save: 10"
+    },
+    {
+      "titulo": "Exportando e Importando Sessões",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Exportar sessão para compartilhar\ndsh session export refatoracao-api --format json --output sessao.json\n\n# Importar sessão de outro computador\ndsh session import sessao.json --name \"continuacao\""
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Nomeie suas sessões descritivamente** — \"refatoracao-api\" é melhor que \"sessao1\"",
+    "Faça fork antes de experimentar** — preserve o caminho original",
+    "Exporte sessões importantes** — backup é segurança",
+    "Limpe sessões antigas regularmente** — disco não é infinito"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 7 — Sessoes e Estado: Memoria do Agente",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

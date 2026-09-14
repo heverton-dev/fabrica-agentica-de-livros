@@ -1,0 +1,2408 @@
+{
+  "slug": "livros/deepseek-harness-do-zero-ao-phd",
+  "total_referencias": 342,
+  "resumo": {
+    "nao_verificado": 342
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-primer.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1109/access.2026.3698694",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://shop.zimaspace.com/blogs/tech-ai-hub/de-minimal-and-creator-explained",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://thenewstack.io/deepseek-harness-open-source-plugins/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.marktechpost.com/2026/08/17/deepseek-ai-releases-deepseek-harness-in-developer-preview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.theregister.com/ai-and-ml/2026/08/14/deepseeks-innovative-harness-treats-everything-as-a-plug-in/5288095",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.i-scoop.eu/deepseek-harness-turns-every-part-of-an-agent-runtime-into-a-swappable-plugin/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://composio.dev",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/how-to-set-up-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/development.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://dev.to/nodeshiftcloud/a-step-by-step-guide-to-install-deepseek-r1-locally-with-ollama-vllm-or-transformers-44a1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://medium.com/@techlatest.net/how-to-install-deepseek-harness-a-step-by-step-setup-guide-for-developers-9bedadfb584d",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.verdent.ai/guides/agents/install-deepseek-harness-dsh",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/how-to-install-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.cometapi.com/how-to-install-and-deploy-deepseek-harness-locally/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.cloudsway.ai/resources/deepseek-harness-tutorial-architecture-and-quick-start",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/cole-medin-727752184_deepseek-built-a-coding-agent-harness-last-activity-7495993045192998912-574a",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://xcloud.host/deepseek-harness-vs-openclaw-vs-hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://kie.ai/blog/what-is-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=0sErTGzcJoc",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/richard-van-ngo-tran-8095441a4_deepseek-harness-v01-is-now-available-in-activity-7493832260652228608-E39a",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/DeepSeek/comments/1vjkstg/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://skywork.ai/skypage/en/deepseek-local-deployment-guide/2047582806721294336",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1201/9781003674702-3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://tech-insider.org/best-open-source-llm-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2501.18438",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://dev.to/ai4b/comprehensive-hardware-requirements-report-for-deepseek-r1-5269",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://localaimaster.com/blog/quantization-explained",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/i-tested-gguf-vs-awq-vs-gptq-the-fastest-4-bit-collapses-on-code-at-46-d65c271d7cdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.hivenet.com/post/deepseek-r1-model-sizes-ram-vram-requirements",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://sesamedisk.com/quantization-techniques-ai-inference-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://lyceum.technology/magazine/gguf-vs-gptq-vs-awq-quantization/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.sitepoint.com/deepseek-r1-local-deployment-guide-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1201/9781003674702-6",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1201/9781003674702-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1201/9781003674702-7",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1201/9781003674702",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://apxml.com/posts/gpu-requirements-deepseek-r1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/ollama/comments/1icv7wv/hardware_requirements_for_running_the_full_size/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/selfhosted/comments/1i6ggyh/got_deepseek_r1_running_locally_full_setup_guide/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=5RhPZgDoglE",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://medium.com/@alice.yang_10652/how-to-choose-the-right-version-of-deepseek-r1-for-local-deployment-read-here-b24f4d0ec6cc",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2412.17560",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2603.17891v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.3837/tiis.2025.05.003",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2607.14181v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.174286524.45842767/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1145/3636534.3690668",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.5044207",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.3390/ai7020061",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2410.03613",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://developers.redhat.com/articles/2026/06/15/llamacpp-vs-vllm-choosing-right-local-llm-inference-engine",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.sitepoint.com/ollama-vs-vllm-performance-benchmark-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://dev.to/nodeshiftcloud/a-step-by-step-guide-to-install-deepseek-r1-locally-with-ollama-vllm-or-transformers-44a1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://blog.worldline.tech/2026/01/29/llm-inference-battle.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://tensorfoundry.io/blog/llm-inference-servers-compared",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=0ujh7hfutq0",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://medium.com/devops-ai-decoded/vllm-vs-ollama-vs-llama-cpp-which-llm-runtime-for-devops-5951240f31d1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://bizon-tech.com/blog/best-llm-inference-engines",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.glukhov.org/llm-hosting/comparisons/hosting-llms-ollama-localai-jan-lmstudio-vllm-comparison/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://meshworld.in/blog/ai/deepseek-r1-llama-3-3-local-setup-ollama-vllm/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=0sErTGzcJoc",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://medium.com/google-cloud/deepseek-r1-unleashed-gke-ollama-and-vllm-deep-dive-1b707eeca26f",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/LocalLLM/comments/1thdu3e/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.theobjectivedad.com/pub/20250205-deepseek-homelab/index.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://dataqubed.io/deploying-deepseek-r1-locally-with-vllm-on-ubuntu/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=kADQYDjq6-U",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/LocalLLaMA/comments/1qexkwb/llamacpp_vs_vllm/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/LocalLLaMA/comments/1mb6i7x/has_vllm_made_ollama_and_llamacpp_redundant/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=XBZ6L4kj4S0",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/huggingface/text-generation-inference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-primer.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/0xsline/awesome-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/richard-van-ngo-tran-8095441a4_deepseek-harness-v01-is-now-available-in-activity-7493832260652228608-E39a",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://m.youtube.com/watch?v=Qjv8jdh4g38",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://medium.com/codetodeploy/explored-deepseek-harness-how-a-plugin-native-agent-runtime-actually-works-7b815436a6b3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2405.03644",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-primer.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/richard-van-ngo-tran-8095441a4_deepseek-harness-v01-is-now-available-in-activity-7493832260652228608-E39a",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-primer.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/git-worktrees-parallel-ai-coding-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/git-worktrees-parallel-ai-agent-execution",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://developer.upsun.com/posts/ai/git-worktrees-for-parallel-ai-coding-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://zylos.ai/research/2026-02-22-git-worktree-parallel-ai-development/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.penligent.ai/hackinglabs/git-worktrees-need-runtime-isolation-for-parallel-ai-agent-development/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://medium.com/@mabd.dev/git-worktrees-the-secret-weapon-for-running-multiple-ai-coding-agents-in-parallel-e9046451eb96",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://understandingdata.com/posts/git-worktrees-parallel-dev/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=n35KalqEwJc",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://alexlavaee.me/blog/parallel-agent-sessions-infrastructure-gap/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-primer.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/cordis-primer.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://github.com/0xsline/awesome-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://github.com/0xsline/awesome-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.ideabosque.com/library/long-running-agent-patterns-keeping-agents-alive-across-hours-and-days/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://github.com/0xsline/awesome-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.3390/bdcc9100256",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.firecrawl.dev/blog/best-vector-databases",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/weaviate-vs-chroma-vector-db",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.braintrust.dev/articles/best-vector-databases-for-rag-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://blog.alexewerlof.com/p/local-llms-for-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1145/3626772.3657834",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2501.10534v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.32628/cseit25112702",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1145/3677052.3698671",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2312.10997",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://coderfile.io/blog/local-llm-fine-tuning-code-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://futureagi.com/blog/fine-tuning-llms-unlocking-peak-performance/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://codersera.com/blog/fine-tuning-llms-complete-guide-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://effloow.com/articles/llm-fine-tuning-lora-qlora-guide-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://airbyte.com/data-engineering-resources/how-to-train-llm-with-your-own-data",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://zylos.ai/research/2026-03-22-open-source-llm-fine-tuning-serving-ai-agent-platforms/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.braintrust.dev/articles/best-llm-fine-tuning-platforms-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.reddit.com/r/learnmachinelearning/comments/1sibi3j/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://llms3.com/blog/fine-tune-llm-on-your-own-data-locally-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://tech-insider.org/how-to-fine-tune-an-llm-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2402.09353",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.findings-acl.178",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2305.14314",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-demos.38",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1016/j.neunet.2025.108095",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40663-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2412.17560",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.5044207",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1109/access.2026.3698694",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/git-worktrees-parallel-ai-agent-execution",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/git-worktrees-parallel-ai-coding-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://blog.alexewerlof.com/p/local-llms-for-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-explained-when-the-ai-model-is-just-a-plugin-16b2496f3d01",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://github.com/0xsline/awesome-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://deepseek.com/harness/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.cometapi.com/how-to-install-and-deploy-deepseek-harness-locally/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/how-to-install-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://pub.towardsai.net/deepseek-harness-vs-claude-code-a-plugin-architecture-teardown-da3c916f3af1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://habr.com/en/articles/1070958/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://floatboat.ai/blog/cordis-plugin-framework",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://agentatlas.org/blog/cordis-explained-how-deepseek-harness-plugin-framework-works/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://medium.com/data-and-beyond/decoding-deepseek-harness-the-open-source-runtime-behind-composable-ai-agents-c2299e992870",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.atlascloud.ai/blog/tips/deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://composio.dev/content/best-deepseek-harness-plugins",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/deepseek-harness-agentic-coding",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.datacamp.com/tutorial/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://springbrand.ai/deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=24UCnAs7MVg",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.youtube.com/watch?v=Hpw4fAHlHDw",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://explainx.ai/blog/deepseek-harness-v0-1-plugin-first-agent-stack-august-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://deepseekharnessai.com/categories/security",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://medium.com/@kaliarch/deepseek-harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://github.com/0xsline/awesome-deepseek-harness",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.linkedin.com/posts/tonyren_i-spent-the-evening-in-the-deepseek-harness-activity-7493848102076882944-GGXB",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

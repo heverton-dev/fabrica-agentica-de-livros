@@ -1,0 +1,54 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Visão Geral das 4 Camadas: A Arquitetura Completa",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Apresentar o mapa definitivo das quatro camadas soberanas, a separação estrita de responsabilidades e como cada camada isola um tipo de complexidade.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Auditoria transversal das quatro camadas",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Auditoria transversal das 4 camadas: confirma artefatos minimos por camada.\"\"\"\n\nimport shutil\nimport sqlite3\nimport sys\nfrom pathlib import Path\nfrom typing import List, Tuple\n\n\ndef camada_1_contexto(raiz: Path) -> Tuple[bool, List[str]]:\n    esperado = [\n        (\"AGENTS.md\", \"constituicao viva na raiz\"),\n        (\"componentes\", \"fonte unica de verdade\"),\n        (\"docs\", \"memoria estruturada auditavel\"),\n    ]\n    faltando = [f\"{desc} ({caminho})\" for caminho, desc in esperado\n                if not (raiz / caminho).exists()]\n    return (not faltando), faltando\n\n\ndef camada_2_harness(raiz: Path) -> Tuple[bool, List[str]]:\n    faltando: List[str] = []\n    if not (raiz / \".git\").exists():\n        faltando.append(\"repositorio git ausente (sem isolamento por worktree)\")\n    elif not shutil.which(\"git\"):\n        faltando.append(\"cli git ausente no PATH\")\n    gates = list((raiz / \"gates\").glob(\"*.py\")) if (raiz / \"gates\").is_dir() else []\n    if not gates:\n        faltando.append(\"nenhum portao deterministico em gates/\")\n    return (not faltando), faltando\n\n\ndef camada_3_motor(raiz: Path) -> Tuple[bool, List[str]]:\n    faltando: List[str] = []\n    politicas = (raiz / \"config\" / \"orcamento_contexto.json\")\n    if not politicas.exists():\n        faltando.append(\"politica de orcamento de contexto ausente\")\n    return (not faltando), faltando\n\n\ndef camada_4_ferramentas(raiz: Path) -> Tuple[bool, List[str]]:\n    faltando: List[str] = []\n    try:\n        conexao = sqlite3.connect(\":memory:\")\n        modo = conexao.execute(\"PRAGMA journ"
+    },
+    {
+      "titulo": "4.2 O contrato entre camadas",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "camadas:\n  1_contexto:\n    entrada: pedido_em_linguagem_natural\n    saida: pedido_enquadrado_nas_regras\n    artefatos: [AGENTS.md, componentes/specs, docs/protocolos]\n    lei_principal: 3\n  2_harness:\n    entrada: pedido_enquadrado_nas_regras\n    saida: acao_autorizada_ou_bloqueada\n    artefatos: [gates/, .git/hooks, settings.json]\n    lei_principal: 2\n  3_motor:\n    entrada: acao_autorizada\n    saida: decisao_em_formato_tipado\n    artefatos: [config/orcamento_contexto.json, schemas/]\n    lei_principal: 1\n  4_ferramentas:\n    entrada: decisao_em_formato_tipado\n    saida: mudanca_reversivel_e_registrada\n    artefatos: [mcp.json, scripts/, data/estado.db]\n    lei_principal: 7"
+    },
+    {
+      "titulo": "4.3 Sessão de operação das quatro camadas",
+      "linguagem": "console",
+      "comandos": [
+        "python esteira.py --tarefa \"aplicar migracao v12\""
+      ],
+      "codigo": "$ python esteira.py --tarefa \"aplicar migracao v12\"\n[CAMADA 1] contexto carregado: 4.100 tokens (orçamento 8.000 por turno)\n[CAMADA 2] inspecionando comando: psql -f migracao_v12.sql\n[CAMADA 2] BLOQUEIO -> comando sem --single-transaction em base marcada como critica\n[CAMADA 3] decisao revisada: reescrever comando em transacao unica\n[CAMADA 2] inspecionando comando: psql --single-transaction -f migracao_v12.sql\n[CAMADA 2] autorizado (timeout 60s)\n[CAMADA 4] executando em worktree .worktrees/tarefa-12\n[CAMADA 4] resultado registrado em data/estado.db (linha 8421)\n[PORTAO] exit 0 -> entrega confirmada"
+    }
+  ],
+  "gate": "python esteira.py --tarefa \"aplicar migracao v12\"",
+  "comandos": [
+    "python esteira.py --tarefa \"aplicar migracao v12\""
+  ],
+  "feito_quando": [
+    "Começar pelas ferramentas porque é a parte visível. A ordem correta de montagem é contexto, harness, motor e ferramentas — nessa sequência",
+    "Tratar as camadas como hierarquia de importância. Nenhuma é mais importante; cada uma cobre um tipo de falha que as outras não cobrem",
+    "Configurar governança apenas no ambiente de desenvolvimento. Se o servidor não tem o mesmo disjuntor, o sistema não tem disjuntor",
+    "Fazer o retorno de falha voltar direto à execução. Repetir ação sem rever decisão é a assinatura do laço de erro que drena orçamento",
+    "Ampliar ferramentas sem ampliar auditoria. Cada ferramenta nova é uma credencial a mais — trate-a como tal [9]"
+  ],
+  "armadilhas": [
+    "Começar pelas ferramentas porque é a parte visível. A ordem correta de montagem é contexto, harness, motor e ferramentas — nessa sequência",
+    "Tratar as camadas como hierarquia de importância. Nenhuma é mais importante; cada uma cobre um tipo de falha que as outras não cobrem",
+    "Configurar governança apenas no ambiente de desenvolvimento. Se o servidor não tem o mesmo disjuntor, o sistema não tem disjuntor",
+    "Fazer o retorno de falha voltar direto à execução. Repetir ação sem rever decisão é a assinatura do laço de erro que drena orçamento",
+    "Ampliar ferramentas sem ampliar auditoria. Cada ferramenta nova é uma credencial a mais — trate-a como tal [9]"
+  ],
+  "referencia_cruzada": "Cap. 5 — Visão Geral das 4 Camadas: A Arquitetura Completa",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

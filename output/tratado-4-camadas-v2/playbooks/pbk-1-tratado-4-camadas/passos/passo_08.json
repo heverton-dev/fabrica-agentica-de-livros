@@ -1,0 +1,56 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Camada 3 — Motor Cognitivo: Roteamento, Contratos Tipados e Economia de Tokens",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Ensinar a lei do determinismo em primeiro lugar, o roteamento por tiers de capacidade, os contratos tipados de saída e a Tríade Caveman Ultra de economia.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 O roteador: decidir antes de gastar",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Roteador cognitivo: determinismo primeiro, capacidade sob demanda.\"\"\"\n\nimport re\nimport sys\nfrom dataclasses import dataclass\nfrom typing import Callable, Optional\n\nNIVEL_1 = \"capacidade-leve\"\nNIVEL_2 = \"capacidade-media\"\nNIVEL_3 = \"raciocinio-profundo\"\n\nTETO_TOKENS_POR_NIVEL = {NIVEL_1: 800, NIVEL_2: 4000, NIVEL_3: 12000}\n\n\n@dataclass(frozen=True)\nclass Decisao:\n    nivel: str\n    deterministico: bool\n    motivo: str\n    teto_tokens: int\n\n\ndef normalizar_slug(texto: str) -> Optional[str]:\n    if not isinstance(texto, str) or not texto.strip():\n        return None\n    limpo = re.sub(r\"[^a-zA-Z0-9\\s-]\", \"\", texto).strip().lower()\n    return re.sub(r\"[\\s-]+\", \"-\", limpo) or None\n\n\ndef contar_campos(dados: dict, obrigatorios: list) -> Optional[list]:\n    if not isinstance(dados, dict):\n        return None\n    return [c for c in obrigatorios if c not in dados or dados[c] in (None, \"\")]\n\n\ndef decidir(tarefa: str) -> Decisao:\n    t = tarefa.lower()\n    if any(k in t for k in (\"slug\", \"renomear\", \"normalizar\", \"formatar\")):\n        return Decisao(NIVEL_1, True, \"transformacao textual com regra exata\", 0)\n    if any(k in t for k in (\"validar contrato\", \"checar campos\", \"conferir esquema\")):\n        return Decisao(NIVEL_1, True, \"validacao de esquema e deterministica\", 0)\n    if any(k in t for k in (\"teste\", \"implementar\", \"refatorar\", \"corrigir\")):\n        return Decisao(NIVEL_2, False, \"engenharia delimitada exige sintese\", 4000)\n    return Decisao(NIVEL_3, False, \"problema aberto exige raciocinio profundo\", 12000)\n\n\nCHECAGENS: dic"
+    },
+    {
+      "titulo": "4.2 Contrato tipado de saída",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"title\": \"ResultadoDeAnalise\",\n  \"type\": \"object\",\n  \"required\": [\"tarefa\", \"nivel\", \"achados\", \"confianca\"],\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"tarefa\": { \"type\": \"string\", \"minLength\": 4 },\n    \"nivel\": { \"type\": \"string\", \"enum\": [\"capacidade-leve\", \"capacidade-media\", \"raciocinio-profundo\"] },\n    \"achados\": {\n      \"type\": \"array\",\n      \"minItems\": 1,\n      \"items\": {\n        \"type\": \"object\",\n        \"required\": [\"arquivo\", \"linha\", \"severidade\"],\n        \"additionalProperties\": false,\n        \"properties\": {\n          \"arquivo\": { \"type\": \"string\" },\n          \"linha\": { \"type\": \"integer\", \"minimum\": 1 },\n          \"severidade\": { \"type\": \"string\", \"enum\": [\"baixa\", \"media\", \"alta\"] }\n        }\n      }\n    },\n    \"confianca\": { \"type\": \"number\", \"minimum\": 0, \"maximum\": 1 }\n  }\n}"
+    },
+    {
+      "titulo": "4.3 Sessão de operação do roteador",
+      "linguagem": "console",
+      "comandos": [
+        "python roteador.py \"normalizar slug do capitulo\"",
+        "python roteador.py \"implementar teste do modulo de frete\""
+      ],
+      "codigo": "$ python roteador.py \"normalizar slug do capitulo\"\ntarefa            : normalizar slug do capitulo\nnivel             : capacidade-leve\ndeterministico    : True\nmotivo            : transformacao textual com regra exata\nteto de tokens    : 0\nresultado direto  : meu-capitulo-introducao\n\n$ python roteador.py \"implementar teste do modulo de frete\"\ntarefa            : implementar teste do modulo de frete\nnivel             : capacidade-media\ndeterministico    : False\nmotivo            : engenharia delimitada exige sintese\nteto de tokens    : 4000\n[CONTRATO] saida validada: 4 campos obrigatorios presentes\n[CONSUMO] 1.uss 842 tokens de entrada (prefixo estavel reaproveitado)"
+    }
+  ],
+  "gate": "python roteador.py \"implementar teste do modulo de frete\"",
+  "comandos": [
+    "python roteador.py \"normalizar slug do capitulo\"",
+    "python roteador.py \"implementar teste do modulo de frete\""
+  ],
+  "feito_quando": [
+    "Usar modelo para cálculo. Cada verificação determinística convertida em script economiza duas vezes: custo e latência",
+    "Padronizar no modelo mais caro. Você paga raciocínio profundo por triagem mecânica e ainda ganha variação indesejada em tarefa que deveria ser repetível",
+    "Consumir texto livre no pipeline. Toda extração por expressão regular é dívida acumulada que quebra na primeira mudança de formatação",
+    "Comprimir contexto sem medir a consequência. Economia e retrabalho sobem juntos quando você corta significado em vez de redundância [10]",
+    "Confiar em benchmark público como prova de capacidade real. A evidência é contundente: em base de avaliação com dados não vistos, o mesmo modelo que resolve a casa dos 23% numa suíte cai para cerca de 17,8% em outra, e outro caiu de 23,1% para 14,9% [3]. Benchmark mede o que ele mede — e não mede o seu domínio [1]"
+  ],
+  "armadilhas": [
+    "Usar modelo para cálculo. Cada verificação determinística convertida em script economiza duas vezes: custo e latência",
+    "Padronizar no modelo mais caro. Você paga raciocínio profundo por triagem mecânica e ainda ganha variação indesejada em tarefa que deveria ser repetível",
+    "Consumir texto livre no pipeline. Toda extração por expressão regular é dívida acumulada que quebra na primeira mudança de formatação",
+    "Comprimir contexto sem medir a consequência. Economia e retrabalho sobem juntos quando você corta significado em vez de redundância [10]",
+    "Confiar em benchmark público como prova de capacidade real. A evidência é contundente: em base de avaliação com dados não vistos, o mesmo modelo que resolve a casa dos 23% numa suíte cai para cerca de 17,8% em outra, e outro caiu de 23,1% para 14,9% [3]. Benchmark mede o que ele mede — e não mede o seu domínio [1]"
+  ],
+  "referencia_cruzada": "Cap. 8 — Camada 3 — Motor Cognitivo: Roteamento, Contratos Tipados e Economia de Tokens",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

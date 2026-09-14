@@ -1,0 +1,49 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "Compressao e Cache Semantico Sob a Lupa: Bibliotecas, Nao Comandos",
+  "estagio": "Pericia",
+  "estagio_indice": 1,
+  "objetivo": "O leitor aprende a diferenca entre uma biblioteca Python real e uma interface de linha de comando inventada, usando as duas ferramentas de compressao/cache semantico do manual como caso pratico.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [
+    "__main__.py",
+    "~/.gptcache/config.yaml",
+    "cache.init(...)",
+    "/put",
+    "/get",
+    "semantic_cache.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "A Classe Certa: PromptCompressor em Vez de Llmlingua",
+      "linguagem": "python",
+      "comandos": [
+        "python compress_prompt.py --rate 0.5 < prompt_bruto.txt > prompt_comprimido.txt",
+        "pip install llmlingua"
+      ],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"compress_prompt.py -- wrapper real de compressao de prompt via LLMLingua.\n\nO manual descreve `Llmlingua().compress_prompt(prompt, preservation_rate=0.5)`\ne uma CLI `python -m llmlingua --preserve`. Nenhuma das duas existe: a classe\nreal e o parametro real sao outros -- ver [5][6].\n\nUso:\n    python compress_prompt.py --rate 0.5 < prompt_bruto.txt > prompt_comprimido.txt\nRequisito:\n    pip install llmlingua\n\"\"\"\nimport argparse\nimport sys\n\nfrom llmlingua import PromptCompressor  # classe real; nao \"Llmlingua\"\n\n\ndef comprimir(texto: str, rate: float, contexto_longo: bool = False) -> dict:\n    \"\"\"Comprime um prompt usando a API real do LLMLingua.\"\"\"\n# ... (trecho completo no Capitulo 04 do livro)"
+    }
+  ],
+  "gate": "python compress_prompt.py --rate 0.5 < prompt_bruto.txt > prompt_comprimido.txt",
+  "comandos": [
+    "python compress_prompt.py --rate 0.5 < prompt_bruto.txt > prompt_comprimido.txt",
+    "pip install llmlingua"
+  ],
+  "feito_quando": [
+    "Rode `pip show llmlingua` no seu ambiente e confirme que não aparece nenhum \"Console Scripts\" na saída",
+    "Escreva e teste `compress_prompt.py` com um prompt real de pelo menos 500 tokens, comparando o texto antes e depois",
+    "Inicialize `cache.init()` do GPTCache localmente e force um cache hit repetindo a mesma pergunta duas vezes seguidas",
+    "Ajuste `similarity_threshold` para 0.9 e depois para 0.6 e registre a diferença de comportamento em duas perguntas parecidas, mas não idênticas",
+    "Suba `gptcache_server -s 127.0.0.1 -p 8000` localmente e confirme, consultando a doc oficial [7], o schema de payload real dos endpoints `/put` e `/get` antes de integrá-lo a qualquer script"
+  ],
+  "armadilhas": [
+    "Instalar LLMLingua/GPTCache via pipx esperando um binario de CLI pronto",
+    "Usar preservation rate abaixo de 0.3 em prompt com codigo ou instrucao de seguranca",
+    "Configurar similarity_threshold do cache semantico abaixo de 0.7 e devolver resposta errada"
+  ],
+  "referencia_cruzada": "Cap. 4 — Compressao e Cache Semantico Sob a Lupa: Bibliotecas, Nao Comandos",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

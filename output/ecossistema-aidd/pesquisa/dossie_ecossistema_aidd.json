@@ -1,0 +1,65 @@
+{
+  "slug": "ecossistema-aidd",
+  "tema": "Ecossistema AIDD: Fundação Prática para Projetos com Agentes Autônomos de IA",
+  "tipos_fontes": {
+    "A": [],
+    "B": [
+      "Johnson, R.; Foote, B. (2024). Separation of Concerns. Portland Pattern Repository. https://wiki.c2.com/?SeparationOfConcerns",
+      "Fowler, M. (2002). Patterns of Enterprise Application Architecture. Addison-Wesley.",
+      "Martin, R. C. (2008). Clean Code. Prentice Hall.",
+      "Martin, R. C. (2017). Clean Architecture. Pearson.",
+      "Martin, R. C. (2002). Agile Software Development: Principles, Patterns, and Practices. Prentice Hall.",
+      "Gamma, E. et al. (1994). Design Patterns. Addison-Wesley.",
+      "Winters, T.; Manshreck, T.; Wright, H. (2020). Software Engineering at Google. O'Reilly.",
+      "Parnas, D. L. (1971). On the Criteria To Be Used in Decomposing Systems into Modules. Communications of the ACM.",
+      "Humble, J.; Farley, D. (2010). Continuous Delivery. Addison-Wesley.",
+      "Chacon, S.; Straub, B. (2014). Pro Git. Apress. https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks",
+      "Google SRE (2024). Postmortem Culture: Learning from Failure. https://sre.google/sre-book/postmortem-culture/",
+      "Fowler, M. (2001). Continuous Integration. https://martinfowler.com/articles/continuousIntegration.html",
+      "Hess, M. B. (2010). Continuous Integration. In: Martin, R. C. (Ed.). Agile Software Development. Prentice Hall.",
+      "Bender, E. (2015). 휘슬스톱: 소프트웨어 개발의 품질 게이트. Alta Books.",
+      "Hunt, A.; Thomas, D. (2000). The Pragmatic Programmer. Addison-Wesley.",
+      "Krebs, C.; Wilson, D. (2018). Blameless Postmortems and a Just Culture. ACM Queue.",
+      "Babb, J. (2014). The Art of Postmortems. Communications of the ACM.",
+      "Fragile, M. A. (2012). The Design of Everyday Things. Basic Books.",
+      "Kohavi, R.; Tang, D.; Xu, Y. (2020). Trustworthy Online Controlled Experiments. Cambridge University Press.",
+      "GitHub (2024). Pre-commit hooks. https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-your-repositorys-configuration",
+      "GitHub (2024). Continuous integration. https://docs.github.com/en/actions/continuous-integration",
+      "GitLab (2024). GitLab CI/CD. https://docs.gitlab.com/ee/ci/",
+      "IEEE Computer Society (2024). Code Review. IEEE Software.",
+      "Beck, K. et al. (2001). Manifesto for Agile Software Development. https://agilemanifesto.org/"
+    ],
+    "C": [
+      "Cunningham, W. (1991). The Wiki Way. https://c2.com/"
+    ]
+  },
+  "termos_por_capitulo": {
+    "1": ["promessa em texto", "regra mecânica", "commit vermelho", "postmortem arquivado", "gate não bloqueante"],
+    "2": ["6 peças kit", "mapa de conceito", "diagnosticar antes de instalar", "dry-run aditivo"],
+    "3": ["builder critic", "separação de responsabilidades", "quem gera também aprova", "tools Read vs Write/Edit", "review por pares"],
+    "4": ["crítico determinístico", "gate", "lint", "falso-positivo", "checklist determinístico"],
+    "5": ["registro declarativo", "aberto/fechado", "if tipo ==", "dispatch", "ocp solid"],
+    "6": ["nunca commitar vermelho", "hook pre-commit", "marcador bloco", "append nunca substituir"],
+    "7": ["postmortem que vira teste", "blameless", "prevenção stub teste", "regra de regressão"],
+    "8": ["hook + ci/cd", "integridade mecânica repo", "pipeline mínimo", "hook local vs ci remoto"],
+    "9": ["diagnosticar antes de instalar", "analisar-projeto.py", "relatório diagnóstico", "propõe não impõe"],
+    "10": ["instalar sem destruir", "peça por peça", "colisão aditiva", "submodule atualizado"],
+    "11": ["manter vivo", "sinal de carga peça", "revisitar convenção", "kit pode pular"]
+  },
+  "metricas_por_capitulo": {
+    "3": ["número de agentes classificados no exercício"],
+    "4": ["número de critérios transformados em gate no exercício"],
+    "5": ["número de arquivos candidatos detectados pelo diagnóstico"],
+    "6": ["número de linhas do hook analisado no exercício"],
+    "7": ["número de stubs gerados no exercício"],
+    "8": ["número de etapas do pipeline definidas no exercício"]
+  },
+  "referências_principais": {
+    "cap3": ["Johnson, R.; Foote, B. (2024). Separation of Concerns.", "Fowler, M. (2002). Patterns of Enterprise Application Architecture."],
+    "cap4": ["Hunt, A.; Thomas, D. (2000). The Pragmatic Programmer.", "Martin, R. C. (2008). Clean Code."],
+    "cap5": ["Martin, R. C. (2017). Clean Architecture.", "Martin, R. C. (2002). Agile Software Development."],
+    "cap6": ["Chacon, S.; Straub, B. (2014). Pro Git.", "Hess, M. B. (2010). Continuous Integration."],
+    "cap7": ["Google SRE (2024). Postmortem Culture.", "Krebs, C.; Wilson, D. (2018). Blameless Postmortems."],
+    "cap8": ["Fowler, M. (2001). Continuous Integration.", "Humble, J.; Farley, D. (2010). Continuous Delivery."]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "capitulo": 7,
+  "parte": "II",
+  "titulo": "O Agente Avançado e as Outras Sete Ferramentas: Produto Real, Sintaxe Fabricada",
+  "senioridade": "iniciante",
+  "callback_capitulo_anterior": "circuit breaker financeiro (hard limit) montado sobre os subcomandos reais do ccusage no Capítulo 6",
+  "pilares": [
+    {
+      "id": 1,
+      "titulo": "O agente existe: mapeando cada comando fabricado para o verbo real do Hermes Agent",
+      "objetivo": "O leitor entende que Hermes Agent (NousResearch) é produto real, open-source, com skills/cron/memória/sessões documentados — e reconstrói, comando por comando, a sintaxe exata que o manual inventou.",
+      "conceito_denso": true,
+      "ancora_visual": {
+        "tipo": "mermaid_flowchart",
+        "legenda": "Cadeia de custodia pericial aplicada aos quatro subsistemas do Hermes Agent citados no manual auditado",
+        "nos_chave": ["comando suspeito do manual", "produto existe? (autenticacao)", "sintaxe confere com a doc oficial? (assinatura)", "laudo: assinatura falsificada", "correcao com o verbo real"]
+      },
+      "entrega_tecnica": "Script hermes_pericia.sh: tabela-comando que confronta cada linha fabricada do manual (skill activate, cron create com flags, memory add, session search/read) com o verbo real documentado (skills install/browse/list, cron create posicional, memory setup/status/off, sessions list/browse/export/delete/prune/rename/stats + --resume), executável como checklist de terminal."
+    },
+    {
+      "id": 2,
+      "titulo": "As outras sete ferramentas do manual: produto real, nome impreciso, caminho não confirmado",
+      "objetivo": "O leitor faz o panorama rápido de MiMo Code, Google Antigravity, Gemini CLI, Oh My Pi, Freebuff CLI, Grok Build e Orca ADE — todas reais, mas com pelo menos um dado (nome ou caminho de config) sem lastro em fonte primária no manual.",
+      "conceito_denso": false,
+      "ancora_visual": {
+        "tipo": "mermaid_tabela_incorporada_no_fluxo",
+        "legenda": "n/a - pilar usa tabela textual, não diagrama próprio; reaproveita o diagrama do Pilar 1"
+      },
+      "entrega_tecnica": "Tabela markdown de 7 linhas (ferramenta do manual -> produto real -> status do caminho de config) usada como checklist de campo."
+    },
+    {
+      "id": 3,
+      "titulo": "Regra geral: rodar --help antes de automatizar, nunca depois",
+      "objetivo": "O leitor internaliza o protocolo mínimo replicável para qualquer CLI nova antes de escrever um script de automação em cima dela.",
+      "conceito_denso": false,
+      "ancora_visual": {
+        "tipo": "reaproveita_diagrama_pilar_1",
+        "legenda": "n/a"
+      },
+      "entrega_tecnica": "Função Python verificar_cli(nome_binario) que roda `<cli> --help` via subprocess, captura os subcomandos de primeiro nível e compara contra uma lista de comandos que o operador pretende automatizar, alertando antes da automação rodar."
+    }
+  ],
+  "min_referencias": 20,
+  "fontes_autorizadas_topico": [28,29,30,33,34,35,36,37,38,39,40,41,42,43,44,45,3,12,13,21,24]
+}

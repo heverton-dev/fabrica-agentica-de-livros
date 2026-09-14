@@ -1,0 +1,61 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "Introdução à Soberania Tecnológica no Design e UI",
+  "estagio": "Estágio 1",
+  "estagio_indice": 1,
+  "objetivo": "Imagine acordar em uma segunda-feira decisiva de entrega e descobrir que a plataforma em nuvem onde você criou toda a identidade visual da sua empresa alterou os Termos de Serviço da noite para o dia, reajustou o valor da assinatura em quatro vezes ou simplesmente bloqueou o…",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [
+    "docker-compose.yml",
+    ".env",
+    "@fontsource/inter"
+  ],
+  "execucao": [
+    {
+      "titulo": "Execução",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "version: '3.8'\n\nservices:\n  # Plataforma Aberta de Design e UI Prototyping\n  penpot-frontend:\n    image: penpotapp/frontend:latest\n    container_name: penpot_frontend\n    ports:\n      - \"9001:80\"\n    environment:\n      - PENPOT_FLAGS=enable-mimett-check\n    networks:\n      - soberano_net\n    restart: unless-stopped\n\n  # Utilitario Autonomo de Manipulacao de Documentos e PDF\n  stirling-pdf:\n    image: frooodle/s-pdf:latest\n    container_name: stirling_pdf\n    ports:\n      - \"8080:8080\"\n    environment:\n      - DOCKER_ENABLE_SECURITY=false\n      - SYSTEM_DEFAULTLOCALE=pt_BR\n    networks:\n      - soberano_net\n    restart: unless-stopped\n\nnetworks:\n  soberano_net:\n    driver: bridge"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "env",
+      "comandos": [],
+      "codigo": "# Configuracoes de Infraestrutura de Design Soberano\nPROJECT_NAME=design_soberano_local\nDOMAIN_LOCAL=localhost\nPENPOT_PORT=9001\nSTIRLING_PORT=8080\nFONTSOURCE_CACHE_DIR=./cache/fonts\nSTORAGE_PATH=./dados_criativos"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "console",
+      "comandos": [
+        "docker-compose up -d",
+        "curl -I http://localhost:9001",
+        "curl -I http://localhost:8080/api/v1/info"
+      ],
+      "codigo": "$ docker-compose up -d\n[+] Running 3/3\n Container penpot_frontend  Started                                       0.8s\n Container stirling_pdf     Started                                       0.6s\nNetwork design_soberano_local_soberano_net  Created                      0.1s\n\n$ curl -I http://localhost:9001\nHTTP/1.1 200 OK\nServer: nginx\nDate: Tue, 25 Aug 2026 14:00:00 GMT\nContent-Type: text/html\n\n$ curl -I http://localhost:8080/api/v1/info\nHTTP/1.1 200 OK\nContent-Type: application/json"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "bash",
+      "comandos": [
+        "npm install @fontsource/inter"
+      ],
+      "codigo": "# Instalacao local da fonte Inter via Fontsource\nnpm install @fontsource/inter"
+    }
+  ],
+  "gate": "docker-compose up -d",
+  "comandos": [
+    "docker-compose up -d",
+    "curl -I http://localhost:9001",
+    "curl -I http://localhost:8080/api/v1/info",
+    "npm install @fontsource/inter"
+  ],
+  "feito_quando": [],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 1 — Introdução à Soberania Tecnológica no Design e UI",
+  "lacunas": [
+    "sem_secao_aplica",
+    "feito_quando_insuficiente",
+    "sem_armadilhas"
+  ]
+}

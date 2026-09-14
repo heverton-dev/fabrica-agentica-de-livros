@@ -1,0 +1,19 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 5: o conceito de empacotamento estruturado de contexto (o snapshot do Repomix), agora aplicado um passo antes — reduzindo o próprio código-fonte para que sobre menos volume a empacotar.",
+  "metricas_obrigatorias": [
+    { "metrica": "tempo de reescrita estrutural em lote (50 arquivos)", "valor": "2 ms" },
+    { "metrica": "custo operacional do binário ast-grep", "valor": "< 10 MB RAM" }
+  ],
+  "validacoes": {
+    "validar-codigo.py --executar": "OK (5/5 blocos verificaveis, 100%)",
+    "renderizar-diagramas.py --validar": "OK (1/1 diagrama valido)",
+    "validar-metricas.py": "OK (2 metricas, 0 violacoes)",
+    "validar-escala.py": "OK (0 violacoes)",
+    "validar-afirmacoes.py": "OK (0 violacoes)",
+    "validar-referencias.py": "OK (6 ok, 1 nao_verificado, 0 reprovadas)",
+    "citacoes_corpo_vs_secao7": "8/8 citas [N] cobertas, 0 orfas, 0 nao usadas, 0 empilhadas"
+  }
+}

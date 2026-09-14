@@ -1,0 +1,21 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "titulo": "Governança em Produção: 4 Pilares + Checklist",
+  "estado_execucao": "concluido_autonomo",
+  "validacoes": {
+    "validar_codigo": "OK (6/6 blocos verificaveis, 3 nao_aplicaveis)",
+    "renderizar_diagramas": "OK (3/3 diagramas validos)",
+    "expansao_r2": "OK (20155 -> 28576 chars: resumo_diario.py, piso de qualidade no fallback, 2a cena de contraste sobre fadiga de alerta, sintese final do arco do livro)",
+    "estrutura_7_secoes": "OK (## 1. a ## 7. presentes)",
+    "horizontal_rules": "OK (0 ocorrencias de --- no corpo)",
+    "todo_placeholder": "OK (nenhum encontrado)",
+    "r4_min_referencias": "9 >= 8 (min_referencias_por_capitulo)",
+    "r14_citacoes": "0 orfas, 0 nao usadas, 0 empilhadas (9 refs, todas citadas no corpo)",
+    "callback_capitulo_anterior": "OK (Capitulo 7 / DSPy citado explicitamente na Introducao, alem de resolver o gancho do Capitulo 1)",
+    "motivo_condutor": "OK (fluxo de caixa, auditoria, governanca, resiliencia reaproveitados na secao Ilustra)",
+    "conceito_denso_pilar3": "OK (2 analogias complementares: disjuntor eletrico + limite de cartao de credito)",
+    "cena_contraste_aplica": "OK (2a pessoa: troca de modelo por chat -> reclamacoes de qualidade -> diagnostico -> correcao)"
+  },
+  "rodadas_correcao_internas": 1
+}

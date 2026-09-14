@@ -1,0 +1,38 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "A", "capitulo": "5" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 4: Git e controle de versão — o repositório como fonte única da verdade, agora aplicado ao versionamento de imagens de container",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O problema do 'funciona na minha máquina'",
+        "escopo": "Por que ambientes divergem entre dev, QA e produção; o que é um container (isolamento de processo com kernel compartilhado); diferença entre container e máquina virtual. Exclui detalhes de kernel/namespaces avançados.",
+        "ancora_visual": "flowchart LR mostrando a mesma aplicação se comportando diferente em três ambientes e o container padronizando o resultado, no vocabulário da Jornada do Desenvolvedor",
+        "entrega_tecnica": "console: docker --version, docker run hello-world e docker ps comentados passo a passo",
+        "evolucao_leitor": "Do 'na minha máquina funciona' ao entendimento de por que o artefato é idêntico em qualquer lugar",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Imagens, Dockerfile e camadas",
+        "escopo": "Imagem como template imutável e read-only; camadas criadas por cada instrução; Dockerfile como receita versionável; docker build, docker run e registries. Exclui multi-stage builds.",
+        "ancora_visual": "flowchart TD da receita (Dockerfile) gerando camadas que formam a imagem, publicada no registry e instanciada em containers iguais",
+        "entrega_tecnica": "Dockerfile comentado linha a linha (python:3.12-slim) + console com docker build -t e docker run",
+        "evolucao_leitor": "Do conceito de imagem ao artefato que ele mesmo constrói e executa",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Volumes, redes e a porta para produção",
+        "escopo": "Persistência de dados fora do ciclo de vida do container (volumes); comunicação entre containers (redes) e exposição ao host (portas); o limite do container isolado e a ponte para orquestração (Kubernetes) e CI/CD. Exclui Docker Swarm e Kubernetes na prática.",
+        "ancora_visual": "diagrama de rede com aplicação web conectada a um banco de dados, ambos em containers, com volume persistente e porta exposta",
+        "entrega_tecnica": "console: docker run -p/-v, docker network create/connect + tabela de decisão de flags",
+        "evolucao_leitor": "Do container único ao desenho de aplicação composta por serviços, ciente de onde a solução quebra",
+        "conceito_denso": false
+      }
+    ],
+    "metricas_obrigatorias": [
+      { "metrica": "camadas da imagem", "valor": "5 camadas" },
+      { "metrica": "instancias gerenciadas por container unico", "valor": "1 instancia" }
+    ]
+  }
+}

@@ -353,6 +353,12 @@ def gerar_capa_da_obra(slug, tipo_forcado=None, variante=None):
     if not categoria:
         categoria = "DESENVOLVIMENTO DE SOFTWARE"
 
+    # V5.3: edition_tag declarado na obra tem prioridade sobre o padrao "v1.0 · ano".
+    # Sem isso, a capa contradizia o edition_tag do sumario_macro.json (edicoes
+    # praticas/expandidas apareciam rotuladas como v1.0).
+    edition_tag = (sumario.get("edition_tag") or config_obra.get("edition_tag")
+                   or meta_ebook.get("edition_tag") or None)
+
     return gerar_capa(
         titulo=titulo,
         subtitulo=subtitulo,
@@ -363,6 +369,7 @@ def gerar_capa_da_obra(slug, tipo_forcado=None, variante=None):
         ilustracao_relpath=ilustracao_relpath,
         variante=variante,
         categoria=categoria,
+        edition_tag=edition_tag,
     )
 
 

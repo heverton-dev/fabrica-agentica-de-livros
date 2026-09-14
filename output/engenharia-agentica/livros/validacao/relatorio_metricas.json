@@ -1,0 +1,29 @@
+{
+  "slug": "engenharia-agentica/livros",
+  "capitulos": 16,
+  "metricas_por_capitulo": {
+    "cap_01": 29,
+    "cap_02": 24,
+    "cap_03": 22,
+    "cap_04": 33,
+    "cap_05": 41,
+    "cap_06": 23,
+    "cap_07": 26,
+    "cap_08": 29,
+    "cap_09": 32,
+    "cap_10": 21,
+    "cap_11": 22,
+    "cap_12": 21,
+    "cap_13": 25,
+    "cap_14": 22,
+    "cap_15": 20,
+    "cap_16": 25
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

@@ -1,0 +1,354 @@
+{
+  "slug": "livros/design-ui-midia-soberana",
+  "tipo_obra": "livro",
+  "veredito": "NAO CONFORME",
+  "total_capitulos": 8,
+  "caracteres_obra": 192163,
+  "paginas_estimadas": 76.9,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 8 capitulos",
+      "conforme": true,
+      "detalhe": "8 capitulo(s) (minimo 8)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 80 paginas (~200.000 caracteres)",
+      "conforme": false,
+      "detalhe": "192.163 caracteres (minimo 200.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": false,
+      "detalhe": "capitulos incompletos: 01, 02, 06, 07"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 12 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": false,
+      "detalhe": "capitulos sem diagrama: 01, 02, 06, 07"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=operacional)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "frontend",
+      "variantes": {
+        "frontend": 5,
+        "front-end": 1
+      },
+      "ocorrencias": 6
+    },
+    {
+      "termo_normalizado": "continua",
+      "variantes": {
+        "contínua": 5,
+        "continua": 1
+      },
+      "ocorrencias": 6
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": false,
+    "vocabulario_motivo_condutor": [],
+    "capitulos_com_citacao_empilhada": [],
+    "capitulos_sem_recorrencia_motivo_condutor": [],
+    "capitulos_sem_callback_capitulo_anterior": [],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 0
+    },
+    "validar-escala.py": {
+      "exit": 1
+    },
+    "validar-afirmacoes.py": {
+      "exit": 1
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0,
+      "skip": "categoria_tecnica=false"
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "01",
+      "arquivo": "cap_01.md",
+      "caracteres": 24370,
+      "palavras": 3113,
+      "secoes_faltantes": [
+        "3. Ilustra",
+        "5. Aplica"
+      ],
+      "referencias": 13,
+      "citacoes_inline": 52,
+      "diagramas_ilustra": 0,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "agrams*. Disponível em: https://github.com/excalidraw/excalidraw. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 30.2,
+        "coeficiente_variacao": 1.208
+      }
+    },
+    {
+      "capitulo": "02",
+      "arquivo": "cap_02.md",
+      "caracteres": 18944,
+      "palavras": 2499,
+      "secoes_faltantes": [
+        "3. Ilustra",
+        "5. Aplica"
+      ],
+      "referencias": 12,
+      "citacoes_inline": 44,
+      "diagramas_ilustra": 0,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Synthetic Data*. Disponível em: https://arxiv.org/abs/2107.10833. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.5,
+        "coeficiente_variacao": 0.588
+      }
+    },
+    {
+      "capitulo": "03",
+      "arquivo": "cap_03.md",
+      "caracteres": 32262,
+      "palavras": 4101,
+      "secoes_faltantes": [],
+      "referencias": 79,
+      "citacoes_inline": 79,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " https://digital-strategy.ec.europa.eu/en/policies/strategy-data. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 15.7,
+        "coeficiente_variacao": 0.875
+      }
+    },
+    {
+      "capitulo": "04",
+      "arquivo": "cap_04.md",
+      "caracteres": 23445,
+      "palavras": 3195,
+      "secoes_faltantes": [],
+      "referencias": 12,
+      "citacoes_inline": 50,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "IDE. *What is Lucide?*. Disponível em: https://lucide.dev/guide/. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.1,
+        "coeficiente_variacao": 0.694
+      }
+    },
+    {
+      "capitulo": "05",
+      "arquivo": "cap_05.md",
+      "caracteres": 23532,
+      "palavras": 2906,
+      "secoes_faltantes": [],
+      "referencias": 12,
+      "citacoes_inline": 23,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 7,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "idate Recommendation. Disponível em: https://www.w3.org/TR/SVG2/. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.1,
+        "coeficiente_variacao": 1.504
+      }
+    },
+    {
+      "capitulo": "06",
+      "arquivo": "cap_06.md",
+      "caracteres": 22727,
+      "palavras": 3207,
+      "secoes_faltantes": [
+        "3. Ilustra",
+        "5. Aplica"
+      ],
+      "referencias": 12,
+      "citacoes_inline": 48,
+      "diagramas_ilustra": 0,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "er1-gpl*. Disponível em: https://github.com/OHF-Voice/piper1-gpl. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 25.5,
+        "coeficiente_variacao": 0.708
+      }
+    },
+    {
+      "capitulo": "07",
+      "arquivo": "cap_07.md",
+      "caracteres": 21605,
+      "palavras": 2808,
+      "secoes_faltantes": [
+        "3. Ilustra",
+        "5. Aplica"
+      ],
+      "referencias": 12,
+      "citacoes_inline": 58,
+      "diagramas_ilustra": 0,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "vel em: https://fontsource.org/docs/getting-started/introduction. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 26.3,
+        "coeficiente_variacao": 0.873
+      }
+    },
+    {
+      "capitulo": "08",
+      "arquivo": "cap_08.md",
+      "caracteres": 25278,
+      "palavras": 3094,
+      "secoes_faltantes": [],
+      "referencias": 12,
+      "citacoes_inline": 14,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "niversity). 2023. Disponível em: http://arxiv.org/abs/2308.14363. Acesso em: 25 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.9,
+        "coeficiente_variacao": 0.569
+      }
+    }
+  ]
+}

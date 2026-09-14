@@ -1,0 +1,64 @@
+{
+  "numero": "12",
+  "capitulo_fonte": "12",
+  "titulo": "Orquestração: worktrees, paralelismo e o Orca ADE",
+  "estagio": "Checklist",
+  "estagio_indice": 3,
+  "objetivo": "Rodar uma frota de agentes em paralelo sem que eles se atropelem.",
+  "pre_requisito": "Passo 11 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: crie worktrees por tarefa",
+      "linguagem": "bash",
+      "comandos": [
+        "git worktree add ../wt-bug-1042 -b fix/bug-1042",
+        "git worktree add ../wt-bug-1101 -b fix/bug-1101",
+        "git worktree add ../wt-review-pr-88 -b review/pr-88",
+        "git worktree list"
+      ],
+      "codigo": "# Cria um worktree por tarefa, cada um em seu branch\ngit worktree add ../wt-bug-1042 -b fix/bug-1042\ngit worktree add ../wt-bug-1101 -b fix/bug-1101\ngit worktree add ../wt-review-pr-88 -b review/pr-88\n\n# Lista e verifica\ngit worktree list"
+    },
+    {
+      "titulo": "Passo 2: organize o fan-out com metadados",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "frota:\n  - tarefa: fix/bug-1042\n    worktree: ../wt-bug-1042\n    objetivo: \"corrigir timeout no endpoint de cotacao\"\n    arquivos_provaveis: [\"app/services/cotacao.py\", \"tests/test_cotacao.py\"]\n    gate: \"python -m pytest -q tests/test_cotacao.py\"\n  - tarefa: fix/bug-1101\n    worktree: ../wt-bug-1101\n    objetivo: \"tratar nulo no campo peso_kg\"\n    arquivos_provaveis: [\"app/models/encomenda.py\"]\n    gate: \"python -m pytest -q tests/test_encomenda.py\"\nrecursos_compartilhados:\n  banco_de_testes: \"serializado — uma tarefa por vez\"\n  limite_api: \"3 chamadas simultaneas\""
+    },
+    {
+      "titulo": "Passo 3: detecte sobreposição antes de paralelizar",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def sobreposicao(frota):\n    \"\"\"Pares de tarefas que provavelmente vao colidir no merge.\"\"\"\n    conflitos = []\n    for i, a in enumerate(frota):\n        for b in frota[i + 1:]:\n            comuns = set(a.get(\"arquivos_provaveis\", [])) & set(b.get(\"arquivos_provaveis\", []))\n            if comuns:\n                conflitos.append({\n                    \"a\": a[\"tarefa\"], \"b\": b[\"tarefa\"],\n                    \"arquivos_comuns\": sorted(comuns),\n                    \"acao_sugerida\": \"serializar ou isolar por arquivo\",\n                })\n    return conflitos"
+    },
+    {
+      "titulo": "Passo 4: serialize recursos compartilhados",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"politica_recursos\": {\n    \"banco_de_testes\": { \"modo\": \"fila\", \"concorrencia_maxima\": 1 },\n    \"servico_staging\": { \"modo\": \"fila\", \"concorrencia_maxima\": 1 },\n    \"api_fornecedor\": { \"modo\": \"teto\", \"requisicoes_por_minuto\": 60 },\n    \"cache_de_build\": { \"modo\": \"compartilhado\", \"somente_leitura\": false }\n  }\n}"
+    }
+  ],
+  "gate": "python -m pytest -q || { echo \"[ABORTA] suite principal quebrou apos merge\"; exit 1; }",
+  "comandos": [
+    "git worktree add ../wt-bug-1042 -b fix/bug-1042",
+    "git worktree add ../wt-bug-1101 -b fix/bug-1101",
+    "git worktree add ../wt-review-pr-88 -b review/pr-88",
+    "git worktree list",
+    "git merge --no-ff \"$(git -C \"$WT\" rev-parse --abbrev-ref HEAD)\"",
+    "python -m pytest -q || { echo \"[ABORTA] suite principal quebrou apos merge\"; exit 1; }"
+  ],
+  "feito_quando": [
+    "Recurso compartilhado tem dono e momento.** Arquivo central, porta e banco de teste não são paralelos",
+    "Recolha serial, integração incremental.** Uma árvore por vez, com verificação no meio",
+    "Paralelismo se mede em tempo de parede.** Mais workers com o mesmo tempo total é despesa, não arquitetura",
+    "Paralelizar sem contrato comum.** O estágio de decisão é serial por natureza; abri-lo em várias árvores produz interfaces incompatíveis e integração caríssima",
+    "Recurso compartilhado tratado como independente.** Banco de teste, porta e arquivo central são pontos únicos de disputa. Cada um precisa de dono e de momento definido",
+    "Integração em lote único.** Recolher quatro árvores de uma vez e descobrir depois qual delas quebrou a suíte custa mais do que recolher uma a uma com verificação no meio"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 12 — Orquestração: worktrees, paralelismo e o Orca ADE",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

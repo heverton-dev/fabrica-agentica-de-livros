@@ -1,0 +1,73 @@
+{
+  "slug_mae": "livros/otimizacao-tokens-ide-agentica",
+  "slug_playbook": "otimizacao-tokens-ide-agentica/playbooks/pbk-1-tokens-sob-pericia",
+  "total_passos": 8,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "O Manual Suspeito: Por Que Comandos Bonitos Enganam",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "Prompt Caching de Verdade: Como o Provedor Cobra Menos por Repeticao",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "Modelos Gratuitos Sem Lenda: o Catalogo Real Por Tras do Gateway",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Compressao e Cache Semantico Sob a Lupa: Bibliotecas, Nao Comandos",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Paralelismo e Resiliencia Que Sempre Funcionaram",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Orcamento e Fallback: Medir Antes de Limitar",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "O Agente Avancado e as Outras Sete Ferramentas: Produto Real, Sintaxe Fabricada",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "O Perito Permanente: Seu Protocolo Para Qualquer Manual Novo",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 8,
+    "com_gate": 5,
+    "com_feito_quando": 8,
+    "com_armadilhas": 0
+  }
+}

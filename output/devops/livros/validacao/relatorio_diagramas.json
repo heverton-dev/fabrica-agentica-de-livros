@@ -1,0 +1,13 @@
+{
+  "slug": "livros/devops",
+  "modo": "livro",
+  "arquivos": [
+    "output\\devops\\livros\\livro-render.md"
+  ],
+  "total": 12,
+  "renderizados": 12,
+  "cache": 0,
+  "falhas": [],
+  "ignorados": [],
+  "validos": 0
+}

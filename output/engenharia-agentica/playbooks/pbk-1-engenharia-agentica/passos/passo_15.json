@@ -1,0 +1,58 @@
+{
+  "numero": "15",
+  "capitulo_fonte": "15",
+  "titulo": "Os segredos universais aplicáveis a qualquer harness",
+  "estagio": "Instrumento",
+  "estagio_indice": 4,
+  "objetivo": "Extrair os princípios que permanecem verdadeiros quando o produto, o modelo e o padrão mudarem.",
+  "pre_requisito": "Passo 14 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: escreva o documento de princípios",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "# Principios do harness (invariantes — sem dependencia de produto)\n\n1. Nenhuma geracao entra em uso sem verificacao independente do gerador.\n2. Instrucao persistente: curta, estavel, sem dado volatil no inicio.\n3. Ferramenta: superficie minima, esquema fechado, teto de saida.\n4. Contexto: escrever, selecionar, isolar e so entao comprimir.\n5. Ordem do prompt: estavel primeiro, volatil por ultimo.\n6. Paralelismo apenas para tarefas independentes, com atribuicao por tarefa.\n7. Delegacao com contrato: limite de retorno e procedencia obrigatoria.\n8. Custo medido por resultado aceito, nunca por token.\n9. Configuracao versionada, testada e com data de revisao.\n10. Trocar de modelo deve ser parametro, nunca reescrita."
+    },
+    {
+      "titulo": "Passo 2: isole a moda em adaptadores",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# adaptadores/produto-a.yaml\nproduto: \"harness-a\"\narquivo_instrucao: \"AGENTS.md\"\narquivo_config: \".agent/settings.json\"\neventos:\n  antes_da_ferramenta: \"PreToolUse\"\n  depois_da_ferramenta: \"PostToolUse\"\n  fim_de_sessao: \"SessionEnd\"\ndeclaracao_skill:\n  arquivo: \"SKILL.md\"\n  frontmatter: [\"name\", \"description\"]"
+    },
+    {
+      "titulo": "Passo 3: rode o teste de portabilidade",
+      "linguagem": "bash",
+      "comandos": [
+        "python scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/antes.json",
+        "python scripts/comparar-tarefa.py /tmp/antes.json /tmp/depois.json"
+      ],
+      "codigo": "#!/usr/bin/env bash\nset -euo pipefail\n\n# 1. Rode uma tarefa representativa no harness atual\npython scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/antes.json\n\n# 2. Rode a MESMA tarefa no harness alternativo, com os mesmos arquivos de projeto\nHARNESS=alternativo python scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/depois.json\n\n# 3. Compare: o que degradou e dependencia de produto; o que se manteve e invariante\npython scripts/comparar-tarefa.py /tmp/antes.json /tmp/depois.json"
+    },
+    {
+      "titulo": "Passo 4: mantenha o inventário de moda",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"inventario_moda\": [\n    { \"item\": \"nome do arquivo de config\", \"onde\": \"adaptadores/produto-a.yaml\", \"revisado\": \"2026-09-12\" },\n    { \"item\": \"eventos de hook\", \"onde\": \"adaptadores/produto-a.yaml\", \"revisado\": \"2026-09-12\" },\n    { \"item\": \"limite de contexto do modelo\", \"onde\": \"config/limites.json\", \"revisado\": \"2026-09-12\" },\n    { \"item\": \"formato de declaracao de skill\", \"onde\": \"adaptadores/produto-a.yaml\", \"revisado\": \"2026-09-12\" }\n  ],\n  \"regra\": \"revisar a cada release do produto ou a cada 6 meses\"\n}"
+    }
+  ],
+  "gate": "python scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/antes.json",
+  "comandos": [
+    "python scripts/medir-tarefa.py --tarefa exemplo-01 --saida /tmp/antes.json",
+    "python scripts/comparar-tarefa.py /tmp/antes.json /tmp/depois.json"
+  ],
+  "feito_quando": [
+    "Desconfie do resultado sem rastro.** Se não há evidência, não há conclusão",
+    "Ponha número no que afirma.** Toda métrica publicada carrega valor, unidade e fonte",
+    "Deixe o próximo começar sabendo.** Nota de sessão não é diário; é checklist do próximo piloto",
+    "Contexto acumulado sem critério.** Cada bloco entra porque \"pode ser útil\", e nenhum sai. O teste de retirada — qual decisão este bloco habilita — é o que mantém a janela utilizável",
+    "Entrega sem evidência.** O resultado é bom e não há como mostrar por quê. Sem rastro, o material não é auditável e seu valor fica limitado ao momento em que foi produzido",
+    "Erro caro por verificação tardia.** Testar em produção, revisar no fim ou aceitar sem gate transforma aprendizado em prejuízo, e a equipe reage reduzindo o ritmo em vez de corrigir o instrumento"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 15 — Os segredos universais aplicáveis a qualquer harness",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

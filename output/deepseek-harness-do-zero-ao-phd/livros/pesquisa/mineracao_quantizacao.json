@@ -1,0 +1,432 @@
+{
+  "tema": "quantization GGUF AWQ GPTQ large language models inference",
+  "gerado_em": "23 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 2
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=quantization+GGUF+AW -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=quantization+GGUF+AWQ+GPTQ+large+language+mo -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 22,
+  "registros": [
+    {
+      "titulo": "Benchmarking Emerging Deep Learning Quantization Methods for Energy Efficiency",
+      "autores": [
+        "Saurabhsingh Rajput",
+        "Tushar Sharma"
+      ],
+      "ano": 2024,
+      "doi": "10.1109/icsa-c63560.2024.00049",
+      "url": "https://doi.org/10.1109/icsa-c63560.2024.00049",
+      "resumo": "In the era of generative artificial intelligence (AI), the quest for energy-efficient AI models is increasing. The increasing size of recent AI models has led to quantization techniques that reduce large models' computing and memory requirements. This study aims to compare the energy consumption of five quantization methods, viz. Gradient-based Post-Training Quantization (GPTQ),Activation-aware Weight Quantization (AWQ), GPT-Generated Model Language (GGML), GPT-Generated Unified Format (GGUF), and Bits and Bytes (BNB). We benchmark and analyze the energy efficiency of these commonly used quantization methods during inference. This preliminary exploration found that GGML and its successor GGUF were the most energy-efficient quantization methods. Our findings reveal significant variability in energy profiles across methods, challenging the notion that lower precision universally improves efficiency. The results underscore the need to benchmark quantization techniques from an energy perspective beyond just model compression. Our findings could guide the selection of models using quantization techniques and the development of new quantization techniques that prioritize energy efficiency, potentially leading to more environmentally friendly AI deployments.",
+      "citacoes": 17,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Open-Source Large Language Models in Radiology: A Review and Tutorial for Practical Research and Clinical Deployment",
+      "autores": [
+        "Cody Savage",
+        "Adway Kanhere",
+        "Vishwa S. Parekh",
+        "Curtis P. Langlotz",
+        "Anupam Joshi",
+        "Heng Huang",
+        "Florence X. Doo"
+      ],
+      "ano": 2025,
+      "doi": "10.1148/radiol.241073",
+      "url": "https://doi.org/10.1148/radiol.241073",
+      "resumo": ". In addition, this article compares the benefits and drawbacks of open-source and proprietary LLMs, discusses the differentiating characteristics of popular open-source LLMs, and highlights recent advancements that may affect their adoption.",
+      "citacoes": 42,
+      "periodico": "Radiology",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "MELTing Point: Mobile Evaluation of Language Transformers",
+      "autores": [
+        "Stefanos Laskaridis",
+        "Kleomenis Katevas",
+        "Lorenzo Minto",
+        "Hamed Haddadi"
+      ],
+      "ano": 2024,
+      "doi": "10.1145/3636534.3690668",
+      "url": "https://doi.org/10.1145/3636534.3690668",
+      "resumo": "Transformers have recently revolutionized the machine learning (ML) landscape, gradually making their way into everyday tasks and equipping our computers with \"sparks of intelligence\". However, their runtime requirements have prevented them from being broadly deployed on mobile. As personal devices become increasingly powerful at the consumer edge and prompt privacy becomes an ever more pressing issue, we explore the current state of mobile execution of Large Language Models (LLMs). To achieve this, we have created our own automation infrastructure, MELT, which supports the headless execution and benchmarking of LLMs on device, supporting different models, devices and frameworks, including Android, iOS and Nvidia Jetson devices. We evaluate popular instruction fine-tuned LLMs and leverage different frameworks to measure their end-to-end and granular performance, tracing their memory and energy requirements along the way.",
+      "citacoes": 28,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference",
+      "autores": [
+        "Chao Zeng",
+        "Liu, Songwei",
+        "Shu Yang",
+        "Fangmin Chen",
+        "Lean Fu",
+        "Xing Mei"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2412.17560",
+      "url": "http://arxiv.org/abs/2412.17560",
+      "resumo": "Model compression has emerged as a mainstream solution to reduce memory usage and computational overhead. This paper presents Group Quantization and Sparse Acceleration (GQSA), a novel compression technique tailored for LLMs. Traditional methods typically focus exclusively on either quantization or sparsification, but relying on a single strategy often results in significant performance loss at high compression rates. In contrast, GQSA integrates quantization and sparsification in a tightly coupled manner, leveraging GPU-friendly structured group sparsity and quantization for efficient acceleration. Building upon system-algorithm co-design principles, we propose a two-stage sparse optimization strategy that ensures the performance superiority of the compressed model. On the engine side, we introduce a \"task-centric\" parallel strategy, which, to the best of our knowledge, is the first application in the domain of sparse computing. Compared to the traditional 2:4 sparse method, the GQSA offers a more flexible and adjustable sparsity rate, as well as a higher weight compression rate, and is efficiently compatible with weight-only quantization methods. Experimental results demonstrate that, under the GQSA W4S50% compression setting, the model's accuracy surpasses that of both 2:4 pruning and W2 quantization. Furthermore, at the inference level, GQSA outperforms W2 by 1.26$\\times$ and 2:4 pruning by 2.35$\\times$ in terms of speed.",
+      "citacoes": 1,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "LLM-Inference-Bench: Inference Benchmarking of Large Language Models on AI Accelerators",
+      "autores": [
+        "Krishna Teja Chitty-Venkata",
+        "Siddhisanket Raskar",
+        "Bharat Kale",
+        "Farah Ferdaus",
+        "Aditya Tanikanti",
+        "Ken Raffenetti",
+        "Valerie Taylor",
+        "Murali Emani",
+        "Venkatram Vishwanath"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2411.00136",
+      "url": "http://arxiv.org/abs/2411.00136",
+      "resumo": "Large Language Models (LLMs) have propelled groundbreaking advancements across several domains and are commonly used for text generation applications. However, the computational demands of these complex models pose significant challenges, requiring efficient hardware acceleration. Benchmarking the performance of LLMs across diverse hardware platforms is crucial to understanding their scalability and throughput characteristics. We introduce LLM-Inference-Bench, a comprehensive benchmarking suite to evaluate the hardware inference performance of LLMs. We thoroughly analyze diverse hardware platforms, including GPUs from Nvidia and AMD and specialized AI accelerators, Intel Habana and SambaNova. Our evaluation includes several LLM inference frameworks and models from LLaMA, Mistral, and Qwen families with 7B and 70B parameters. Our benchmarking results reveal the strengths and limitations of various models, hardware platforms, and inference frameworks. We provide an interactive dashboard to help identify configurations for optimal performance for a given hardware platform.",
+      "citacoes": 2,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Designing Large Foundation Models for Efficient Training and Inference: A Survey",
+      "autores": [
+        "Dong Liu",
+        "Yu, Yanxuan",
+        "Wang, Yite",
+        "Wu, Jing",
+        "Wan, Zhongwei",
+        "Alinejad, Sina",
+        "Lengerich, Benjamin",
+        "Wu, Ying Nian"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2409.01990",
+      "url": "http://arxiv.org/abs/2409.01990",
+      "resumo": "This paper focuses on modern efficient training and inference technologies on foundation models and illustrates them from two perspectives: model and system design. Model and System Design optimize LLM training and inference from different aspects to save computational resources, making LLMs more efficient, affordable, and more accessible. The paper list repository is available at https://github.com/NoakLiu/Efficient-Foundation-Models-Survey.",
+      "citacoes": 5,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Edge-Ready Romanian Language Models: Training, Quantization, and Deployment",
+      "autores": [
+        "T. A. Diac",
+        "P. F. de Viana",
+        "A. F. Neagoe",
+        "A. Oprea",
+        "M. C. Raportaru",
+        "A. Nicolin-Żaczek"
+      ],
+      "ano": 2026,
+      "doi": "10.3390/ai7020061",
+      "url": "https://doi.org/10.3390/ai7020061",
+      "resumo": "We present RoBaseLM-S (125 M) and RoBaseLM-M (260 M), two compact Romanian decoder-only language models trained from scratch on a 4.3 B-token curated corpus. Architecturally, they follow a modern LLaMA-style recipe with pre-norm RMSNorm, rotary position embeddings, SwiGLU feed-forward blocks, grouped-query attention, and 4 k-token context windows. We release both full-precision (FP16) and post-training 5-bit (Q5_K_M) checkpoints in GGUF format for lightweight local inference. The 5-bit variants fit under 500 MB and generate text in real time on a Jetson Nano 4 GB, enabling fully offline Romanian text generation on consumer-grade edge hardware. We evaluate the models intrinsically (multi-domain perplexity across news, literary prose, poetry, and heterogeneous web text) and extrinsically (LaRoSeDa sentiment classification and RO-STS sentence similarity). Relative to Romanian GPT-2–style baselines at similar parameter scales, RoBaseLM-S and RoBaseLM-M reduce perplexity substantially, e.g., from 30.7 to 15.9 on our held-out news split. The 5-bit post-training quantized checkpoints remain within FP16 performance across all reported tasks. To our knowledge, these are the first Romanian small language models explicitly optimized for long-context inference, post-training quantization, and low-power on-device deployment.",
+      "citacoes": 1,
+      "periodico": "AI",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Generative AI and LLMs for Critical Infrastructure Protection: Evaluation Benchmarks, Agentic AI, Challenges, and Opportunities",
+      "autores": [
+        "Yagmur Yigit",
+        "Mohamed Amine Ferrag",
+        "Mohamed Chahine Ghanem",
+        "Iqbal H. Sarker",
+        "Λέανδρος Μαγλαράς",
+        "Christos Chrysoulas",
+        "Naghmeh Moradpoor",
+        "Norbert Tihanyi",
+        "Helge Janicke"
+      ],
+      "ano": 2025,
+      "doi": "10.3390/s25061666",
+      "url": "https://doi.org/10.3390/s25061666",
+      "resumo": "Critical National Infrastructures (CNIs)-including energy grids, water systems, transportation networks, and communication frameworks-are essential to modern society yet face escalating cybersecurity threats. This review paper comprehensively analyzes AI-driven approaches for Critical Infrastructure Protection (CIP). We begin by examining the reliability of CNIs and introduce established benchmarks for evaluating Large Language Models (LLMs) within cybersecurity contexts. Next, we explore core cybersecurity issues, focusing on trust, privacy, resilience, and securability in these vital systems. Building on this foundation, we assess the role of Generative AI and LLMs in enhancing CIP and present insights on applying Agentic AI for proactive defense mechanisms. Finally, we outline future directions to guide the integration of advanced AI methodologies into protecting critical infrastructures. Our paper provides a strategic roadmap for researchers and practitioners committed to fortifying national infrastructures against emerging cyber threats through this synthesis of current challenges, benchmarking strategies, and innovative AI applications.",
+      "citacoes": 52,
+      "periodico": "Sensors",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Cognitive Edge Computing: A Comprehensive Survey on Optimizing Large Models and AI Agents for Pervasive Deployment",
+      "autores": [
+        "Xubin Wang",
+        "Qing Li",
+        "Weijia Jia"
+      ],
+      "ano": 2025,
+      "doi": "10.22541/au.176348756.61222219/v1",
+      "url": "https://doi.org/10.22541/au.176348756.61222219/v1",
+      "resumo": "This article surveys Cognitive Edge Computing as a practical and methodical pathway for deploying reasoning-capable Large Language Models (LLMs) and autonomous AI agents on resource-constrained devices at the network edge. We present a unified, cognition-preserving framework spanning: (1) model optimization (quantization, sparsity, low-rank adaptation, distillation) aimed at retaining multi-step reasoning under tight memory/compute budgets; (2) system architecture (on-device inference, elastic offloading, cloud-edge collaboration) that trades off latency, energy, privacy, and capacity; and (3) adaptive intelligence (context compression, dynamic routing, federated personalization) that tailors computation to task difficulty and device constraints. We synthesize advances in efficient Transformer design, multimodal integration, hardware-aware compilation, privacy-preserving learning, and agentic tool use, and map them to edge-specific operating envelopes. We further outline a standardized evaluation protocol covering latency, throughput, energy per token, accuracy, robustness, privacy, and sustainability, with explicit measurement assumptions to enhance comparability. Remaining challenges include modality-aware reasoning benchmarks, transparent and reproducible energy reporting, edgeoriented safety/alignment evaluation, and multi-agent testbeds. We conclude with practitioner guidelines for cross-layer co-design of algorithms, runtime, and hardware to deliver reliable, efficient, and privacy-preserving cognitive capabilities on edge devices.",
+      "citacoes": 8,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Understanding Large Language Models in Your Pockets: Performance Study on COTS Mobile Devices",
+      "autores": [
+        "Jie Xiao",
+        "Huang, Qianyi",
+        "Chen Xu",
+        "Tian, Chen"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2410.03613",
+      "url": "http://arxiv.org/abs/2410.03613",
+      "resumo": "As large language models (LLMs) increasingly integrate into every aspect of our work and daily lives, there are growing concerns about user privacy, which push the trend toward local deployment of these models. There are a number of lightweight LLMs (e.g., Gemini Nano, LLAMA2 7B) that can run locally on smartphones, providing users with greater control over their personal data. As a rapidly emerging application, we are concerned about their performance on commercial-off-the-shelf mobile devices. To fully understand the current landscape of LLM deployment on mobile platforms, we conduct a comprehensive measurement study on mobile devices. While user experience is the primary concern for end-users, developers focus more on the underlying implementations. Therefore, we evaluate both user-centric metrics-such as token throughput, latency, and response quality-and developer-critical factors, including resource utilization, OS strategies, battery consumption, and launch time. We also provide comprehensive comparisons across the mobile system-on-chips (SoCs) from major vendors, highlighting their performance differences in handling LLM workloads, which may help developers identify and address bottlenecks for mobile LLM applications. We hope that this study can provide insights for both the development of on-device LLMs and the design for future mobile system architecture.",
+      "citacoes": 3,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "\"GGUF Models and Quantization\"",
+      "autores": [
+        "Tripathi, OM"
+      ],
+      "ano": 2025,
+      "doi": "10.2139/ssrn.5044207",
+      "url": "https://doi.org/10.2139/ssrn.5044207",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "TripleOptim: A Comprehensive Optimization Framework for GPTQ Quantization Inference on Heterogeneous Platforms",
+      "autores": [],
+      "ano": 2025,
+      "doi": "10.3837/tiis.2025.05.003",
+      "url": "https://doi.org/10.3837/tiis.2025.05.003",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "KSII Transactions on Internet and Information Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "TurboQuant-Pro: Neural-Adaptive Online Vector Quantization for Large Language Models",
+      "autores": [
+        "Liam, Eric"
+      ],
+      "ano": 2026,
+      "doi": "10.22541/au.177584853.38478918/v1",
+      "url": "https://doi.org/10.22541/au.177584853.38478918/v1",
+      "resumo": "<jats:p>Large Language Models (LLMs) exhibit heavytailed and highly non-Gaussian weight distributions, posing a major challenge for online vector quantization. While TurboQuant provides an efficient baseline via random orthogonal rotation and Lloyd-Max quantization, it fails under structural outliers and distributional shifts. In this paper, we present TurboQuant-Pro, a systematic evolution from heuristic-driven quantization toward a fully neural-adaptive framework. We demonstrate that only by fully parameterizing the quantization process can near-lossless compression be achieved. Our final model, TurboQuant-ProV3, reaches a cosine similarity of 0.9957, while the multi-codebook ProV4 further approaches theoretical limits.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "edgemodelr: Local Large Language Model Inference Engine",
+      "autores": [
+        "Mali, Pawan Rama",
+        "Gerganov, Georgi"
+      ],
+      "ano": 2025,
+      "doi": "10.32614/cran.package.edgemodelr",
+      "url": "https://doi.org/10.32614/cran.package.edgemodelr",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "CRAN: Contributed Packages",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Efficient learning and inference methods for large language models",
+      "autores": [
+        "Xu, Yige"
+      ],
+      "ano": null,
+      "doi": "10.32657/10356/214513",
+      "url": "https://doi.org/10.32657/10356/214513",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "DOL-LLM - Optimizing Large Language Model Inference with Domain-Specific Adaptations and Efficiency Techniques via Quantization, Pruning, and Distillation",
+      "autores": [
+        "Ahtasam, Mo"
+      ],
+      "ano": 2025,
+      "doi": "10.36227/techrxiv.174286524.45842767/v1",
+      "url": "https://doi.org/10.36227/techrxiv.174286524.45842767/v1",
+      "resumo": "<jats:p>The rapid advancements in Large Language Models (LLMs) have led to their widespread adoption across various applications. However, their high computational requirements often restrict deployment on resource-limited devices.This research presents a promising Techniques for developing lightweight, domain-specific language models that can operate effectively on resource-constrained devices. The proposed Domain-Oriented Lightweight Large Language Models (DOL-LLM) aims to tackle one of the most significant challenges in modern AI deployment: making powerful language models accessible on edge devices without sacrificing domain expertise or performance. By combining quantization, pruning, and distillation techniques with domain-specific training, this research could significantly advance the practical application of LLMs in resource-limited environments like mobile devices and embedded systems.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Hallucination Detection and Mitigation in Large Language Models Using Lightweight Inference-Time Models",
+      "autores": [
+        "S, Chandana",
+        "K, Nayana"
+      ],
+      "ano": 2026,
+      "doi": "10.55248/gengpi.07.0426.c1028",
+      "url": "https://doi.org/10.55248/gengpi.07.0426.c1028",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "International Journal of Research Publication and Reviews",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "AIOS: A CPU-Native Inference Architecture for Large Language Models",
+      "autores": [
+        "Casavaraju, Anand"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.6467298",
+      "url": "https://doi.org/10.2139/ssrn.6467298",
+      "resumo": "<jats:p>We present AIOS-a runtime architecture and model co-design framework for deploying large language models efficiently on CPU hardware. Current LLM inference engines were designed for GPU memory architecture and treat CPU as a fallback. We argue this is a design constraint, not a physics constraint, and that a first-principles approach to CPU memory hierarchy can achieve 50-92% reduction in DRAM data movement per generated token depending on model compliance with a proposed Model Contract. We decompose the inference bandwidth problem into four independent resource dimensions: weight reads, KV cache reads, activation memory spill, and attention compute. We propose five architectural requirements-the AIOS Model Contract-that models can be designed or fine-tuned to satisfy, and define four compliance tiers with corresponding performance projections. We present Mistral 7B as a baseline analysis [A] and Falcon 7B relufied as a reference implementation [P][V:#1], analytically projecting 80-85% MB/token reduction under full AIOS optimization [V:#2]. All quantitative projections are labeled by validation status. Empirical validation is tracked publicly on GitHub. AIOS is fully open source under Apache 2.0.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
+      "autores": [
+        "Cao, Deyu",
+        "Yin, Yixin",
+        "Aref, Samin"
+      ],
+      "ano": 2026,
+      "doi": "10.5220/0014431500004052",
+      "url": "https://doi.org/10.5220/0014431500004052",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 18th International Conference on Agents and Artificial Intelligence",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Model Serving and Inference Optimization",
+      "autores": [
+        "Rawat, Ajay",
+        "Pathak, Vardan",
+        "Pathak, Vardan"
+      ],
+      "ano": 2026,
+      "doi": "10.1007/979-8-8688-2733-4_10",
+      "url": "https://doi.org/10.1007/979-8-8688-2733-4_10",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Mastering Large Language Models",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference",
+      "autores": [
+        "Arpit Singh Gautam",
+        "Saurabh Jha"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2603.17891v1",
+      "resumo": "Post training quantization is essential for deploying large language models (LLMs) on resource constrained hardware, yet state of the art methods enforce uniform bit widths across layers, yielding suboptimal accuracy efficiency trade offs. We present RAMP (Reinforcement Adaptive Mixed Precision), an off policy Soft Actor Critic framework that learns per layer bit width assignments to minimize perplexity under a global bit budget. The policy conditions on an 11 dimensional embedding of activation statistics, weight properties, and structural descriptors, enabling zero shot transfer across model families and scales. To enable stable sub 4 bit quantization, we introduce Scale Folding, a preconditioning technique that migrates activation outliers into weights via per channel scaling and normalization layer compensation. A quality prioritized reward with asymmetric penalties and budget cliffs drives rapid convergence. On Llama 2 7B, RAMP achieves 5.54 perplexity at 3.68GB (3.65 effective bits), outperforming uniform 4 bit AWQ (5.60 at 3.90 GB) and GPTQ by 6% in size and 1% to3% in quality. Critically, a policy trained only on Llama 2 7B generalizes zero shot to Llama 2 13B and Mistral 7B, often surpassing target specific training, supporting the hypothesis that quantization sensitivity is primarily architectural. The HALO pipeline exports allocations to GGUF format for kernel free inference on CPUs, GPUs, and edge devices, retaining 99.5% of FP16 commonsense reasoning performance.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Quantize with Confidence? An Empirical Study of Quantization for Code Generation",
+      "autores": [
+        "Saima Afrin",
+        "Md. Zahidul Haque",
+        "Antonio Mastropaolo"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2607.14181v1",
+      "resumo": "The growing adoption of local inference frameworks such as Ollama has made it increasingly common for developers to run large code models on laptops and other resource-constrained hardware. In these settings, post-training quantization is essential for reducing memory footprint and enabling practical deployment, yet its impact on generated code remains insufficiently understood. We empirically evaluate six state-of-the-art quantization methods (GPTQ, AWQ, QuIP#, AQLM, BitsAndBytes, and GGUF) on two representative large code model families, Qwen2.5-Coder and CodeLlama, using the multilingual McEval and CoderEval benchmarks for Python and Java. We assess functional correctness (pass@1) together with maintainability, reliability, security, and structural complexity. We also introduce a novel analysis of robustness under varying prompt complexity, characterized by Shannon entropy and token length. Our results show that quantization techniques differ meaningfully in their impact on correctness and code quality. AQLM consistently matches or exceeds the full-precision baseline, whereas QuIP# exhibits the largest correctness degradation, particularly on complex prompts. Security attributes remain stable across models, benchmarks, and programming languages, while robustness to prompt complexity varies across techniques. These findings provide practical guidance for selecting quantization strategies for deploying large code models on resource-constrained hardware and highlight the importance of evaluating quantized models beyond functional correctness.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    }
+  ]
+}

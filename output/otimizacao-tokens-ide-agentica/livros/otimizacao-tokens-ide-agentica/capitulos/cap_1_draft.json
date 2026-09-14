@@ -1,0 +1,41 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "1" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "titulo": "O Manual Suspeito: Por Que Comandos Bonitos Enganam",
+  "senioridade_obra": "iniciante",
+  "callback_capitulo_anterior": null,
+  "metricas_obrigatorias": [
+    { "metrica": "itens do manual auditado classificados como FABRICADO", "valor": "18 de 61 itens (~30%)" },
+    { "metrica": "desconto real do cache de leitura da Anthropic", "valor": "90% (0,1x o preço de input padrão)" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O caso: anatomia de um manual que mistura técnica real com comando fabricado",
+        "escopo": "Entra: apresentação do manual-fonte (agent-token-optimization-manual-v3.1.md), 2 casos concretos lado a lado (pipx install ccusage vs. npx ccusage@latest; ~/.config/claude-code/settings.json com cacheControl vs. ~/.claude/settings.json real) mostrando que ferramenta real + sintaxe inventada é o padrão de erro. Fora: não entra ainda o protocolo de verificação completo (isso é o pilar 2) nem a análise psicológica funda (pilar 3) — aqui é só a exposição do sintoma via evidência concreta.",
+        "ancora_visual": "flowchart LR no vocabulário de perícia: um 'documento' (comando) chega até o leitor -> triagem visual (nome da ferramenta é reconhecido = 'letra timbrada' parece autêntica) -> bifurcação: caminho de cima (aceitar sem checar, colar no terminal) termina em 'erro de execução ou falha silenciosa'; caminho de baixo (cruzar contra fonte primária) termina em 'comando confirmado ou corrigido'. Usar rótulos com o vocabulário do motivo condutor (laudo, autenticação, falsificação).",
+        "entrega_tecnica": "bash — dois blocos de terminal comparativos (comentados linha a linha) mostrando `pipx install ccusage` falhando (pacote não é Python) ao lado de `npx ccusage@latest daily` funcionando; e o trecho de settings.json fabricado (~/.config/claude-code/settings.json com cacheControl) ao lado do settings.json real (~/.claude/settings.json com hooks/model/permissions).",
+        "evolucao_leitor": "De 'eu copio o comando porque o manual parece técnico e detalhado' para 'eu reconheço que aparência de rigor não é evidência — preciso separar o que é a ferramenta (pode ser real) do que é a sintaxe (pode ser inventada)'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "O método de perícia: hierarquia de fontes A/B/C e a regra de nunca confiar em comando sem checar --help ou doc oficial",
+        "escopo": "Entra: a classificação A (documentação oficial do fornecedor) / B (repositório oficial do projeto, PyPI/npm) / C (terceiros — blogs, wikis, imprensa) usada no dossiê desta obra; o protocolo mínimo de verificação (checar --help do binário instalado, cruzar contra doc oficial antes de automatizar, tratar 'não verificável' como pendência e não como aprovação); os 4 vereditos possíveis (CONFIRMADO / PARCIALMENTE CORRETO / FABRICADO / NÃO VERIFICÁVEL) com um exemplo real de cada um tirado da auditoria. Fora: não entra o detalhamento técnico de cada LAB específico (fica para os capítulos 2-7) — aqui o método é ensinado de forma abstrata e reutilizável.",
+        "ancora_visual": "flowchart TB do protocolo de perícia como árvore de decisão: 'comando/config chega' -> 'existe fonte classe A (doc oficial)?' -> sim: 'bate exatamente? ' -> CONFIRMADO ou PARCIALMENTE CORRETO (corrigir com a fonte); não -> 'existe fonte classe B (repo/pacote oficial)?' -> mesma checagem; não -> 'existe qualquer fonte primária?' -> não: NÃO VERIFICÁVEL (tratar como não aprovado); a ferramenta claramente inexistente em qualquer classe -> FABRICADO. Usar os rótulos exatos dos 4 vereditos.",
+        "entrega_tecnica": "python — função utilitária `classificar_fonte(evidencia: dict) -> str` que recebe {'existe_doc_oficial': bool, 'existe_repo_pacote': bool, 'bate_com_manual': bool} e devolve um dos 4 vereditos, com docstring explicando a regra de decisão; incluir também um checklist em comentário do que rodar antes de automatizar qualquer CLI nova (`<comando> --help`).",
+        "evolucao_leitor": "De 'eu não sei como verificar se um comando é confiável' para 'eu aplico uma hierarquia de fontes reproduzível (A/B/C) e sei que NÃO VERIFICÁVEL nunca vira sinônimo de aprovado' — este é o núcleo técnico do livro inteiro.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "O motivo condutor: por que 'nome familiar' é o gatilho psicológico que faz o operador baixar a guarda",
+        "escopo": "Entra: a explicação de por que ferramenta real + sintaxe fabricada é mais perigosa do que fabricação total (o nome reconhecido — Hermes, ccusage, Claude Code — desarma o ceticismo natural do leitor); a conexão com o resumo quantitativo da auditoria (26 CONFIRMADO / 13 PARCIALMENTE CORRETO / 18 FABRICADO / 4 NÃO VERIFICÁVEL) como prova de que o problema é sistemático, não um erro isolado; a virada de identidade do leitor (de consumidor de manuais para perito). Fora: não entra ainda o protocolo pessoal de verificação versionado (isso é o Capítulo 8, fechamento do arco).",
+        "ancora_visual": "flowchart LR simples de 'gatilho de confiança': nome da ferramenta reconhecido -> ativa heurística de familiaridade -> reduz a checagem percebida como necessária -> comando é copiado sem cruzamento -> risco de falha em produção. Contrastar com o caminho do perito: nome reconhecido -> tratado como hipótese, não como prova -> cruzamento obrigatório.",
+        "evolucao_leitor": "De 'eu confio porque reconheço o nome da ferramenta' para 'eu trato o reconhecimento do nome como motivo para MAIS cuidado, não menos — porque é exatamente aí que a fabricação parcial se esconde'.",
+        "conceito_denso": false
+      }
+    ]
+  },
+  "escala_limite_sugerido": "O protocolo de pericia reduz drasticamente o risco de copiar comando fabricado, mas nao elimina 100% dos casos: documentacao oficial desatualizada, catalogos de modelo que mudam de uma semana para outra (ex.: OpenCode Zen) e produtos lancados apos o corte de conhecimento do proprio pesquisador exigem reconferencia pontual — 'fonte classe A' e o melhor sinal disponivel, nao uma garantia perpetua.",
+  "fontes_autorizadas": [1,3,4,5,8,13,14,15,16,17,18,19,20,21,22,23,24,26,27,28,29,30,31,32]
+}

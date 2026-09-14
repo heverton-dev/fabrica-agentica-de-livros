@@ -1,0 +1,34 @@
+{
+  "numero": "19",
+  "capitulo_fonte": "19",
+  "titulo": "Servidores MCP e a Usina de Scripts Determinísticos",
+  "estagio": "Usina determinística",
+  "estagio_indice": 5,
+  "objetivo": "Ensinar arquitetura MCP e scripts determinísticos.",
+  "pre_requisito": "Passo 18 concluído",
+  "entregas": [
+    "servidor_mcp_simples.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Criando seu Primeiro Servidor MCP em Python (`servidor_mcp_simples.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# servidor_mcp_simples.py — Servidor MCP Oficial da Camada 4\nimport sys\nimport json\n\ndef processar_requisicao(req_json: str) -> str:\n    try:\n        dados = json.loads(req_json)\n        metodo = dados.get(\"method\")\n        \n        # 1. Descoberta de Ferramentas (tools/list)\n        if metodo == \"tools/list\":\n            return json.dumps({\n                \"tools\": [\n                    {\n                        \"name\": \"calcular_soma\",\n                        \"description\": \"Calcula a soma determinística de dois números inteiros\",\n                        \"inputSchema\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"a\": { \"type\": \"integer\" },\n                                \"b\": { \"type\": \"integer\" }\n                            },\n                            \"required\": [\"a\", \"b\"]\n                        }\n                    }\n                ]\n            })\n            \n        # 2. Execução de Ferramenta (tools/call)\n        elif metodo == \"tools/call\":\n            params = dados.get(\"params\", {})\n            args = params.get(\"arguments\", {})\n            resultado = args.get(\"a\", 0) + args.get(\"b\", 0)\n            return json.dumps({\n                \"content\": [{\"type\": \"text\", \"text\": str(resultado)}],\n                \"isError\": False\n            })\n            \n    except Exception as e:\n        return json.dumps({\"isError\": True, \"error\": str(e)})\n        \n    return json.dumps({\"isError\": True, \"error\": \"Método desconhecido\"})\n\nif __name__ == \"__main__\":\n    # Teste"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute `python servidor_mcp_simples.py` alterando a chamada de teste para `{\"method\": \"tools/list\"}` e observe a descoberta de ferramentas",
+    "Adicione ao script uma segunda ferramenta `multiplicar_numeros` com o seu schema correspondente",
+    "Teste a execução tipada: chame `calcular_soma` com argumentos válidos e inválidos e confirme a resposta estruturada",
+    "Crie um script determinístico seu (ex: `renderizar-diagramas.py`) e comprove que a mesma entrada produz sempre a mesma saída"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 19 — Servidores MCP e a Usina de Scripts Determinísticos",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "numero": "14",
+  "capitulo_fonte": "14",
+  "titulo": "A Matriz de 3 Tiers de Modelos",
+  "estagio": "Roteador cognitivo",
+  "estagio_indice": 4,
+  "objetivo": "Ensinar o roteamento inteligente entre 3 tiers de modelos.",
+  "pre_requisito": "Passo 13 concluído",
+  "entregas": [
+    ".router/tiers.json"
+  ],
+  "execucao": [
+    {
+      "titulo": "Configuração Declarativa da Matriz de Tiers (`.router/tiers.json`)",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"tiers_matrix\": {\n    \"tier_1_fast\": {\n      \"primary\": \"gemini-2.0-flash\",\n      \"fallback\": \"claude-3-5-haiku\",\n      \"max_tokens_budget\": 1000,\n      \"temperature\": 0.1\n    },\n    \"tier_2_standard\": {\n      \"primary\": \"claude-3-7-sonnet\",\n      \"fallback\": \"deepseek-chat\",\n      \"max_tokens_budget\": 4000,\n      \"temperature\": 0.2\n    },\n    \"tier_3_reasoning\": {\n      \"primary\": \"claude-3-7-sonnet-thinking\",\n      \"fallback\": \"o3-mini\",\n      \"thinking_budget\": 8000,\n      \"temperature\": 1.0\n    }\n  }\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Crie o arquivo `.router/tiers.json` com os 3 tiers e insira os modelos que você possui configurados",
+    "Classifique 5 tarefas reais entre Tier 1, Tier 2 e Tier 3 e justifique cada escolha",
+    "Simule a Regra de Escalação: force uma falha dupla no Tier 2 e observe a escalação automática para o Tier 3",
+    "Estime o custo de um projeto seu usando a estratégia monolítica vs a estratégia dos 3 Tiers"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 14 — A Matriz de 3 Tiers de Modelos",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug_livro_mae": "tratado-4-camadas-v2",
+  "artigos": {
+    "total": 0,
+    "itens": []
+  },
+  "ebooks": {
+    "total": 0,
+    "itens": []
+  },
+  "playbooks": {
+    "total": 1,
+    "itens": [
+      {
+        "indice": 1,
+        "titulo": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
+        "slug": "pbk-1-tratado-4-camadas",
+        "diretorio": "tratado-4-camadas-v2/playbooks/pbk-1-tratado-4-camadas",
+        "estagios": 3
+      }
+    ]
+  },
+  "lead-magnets": {
+    "total": 0,
+    "itens": []
+  },
+  "decks": {
+    "total": 0,
+    "itens": []
+  },
+  "emails": {
+    "total": 0,
+    "itens": []
+  }
+}

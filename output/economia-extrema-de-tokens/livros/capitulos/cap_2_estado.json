@@ -1,0 +1,25 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "2" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 1: a ilusão do modelo 'barato' — agora mostrada como um problema de arquitetura de contexto, não só de tabela de preço por token",
+  "metricas_obrigatorias": [
+    { "metrica": "economia de tokens no bloco de raciocínio interno (caveman)", "valor": "até 90%" },
+    { "metrica": "economia de tokens em logs de compilação/teste (headroom)", "valor": "até 80%" },
+    { "metrica": "economia por turno de raciocínio", "valor": "até 800 tokens" },
+    { "metrica": "regra de truncamento determinístico do headroom", "valor": "3 linhas do topo + 4 do final, para saída > 7 linhas" }
+  ],
+  "validacao": {
+    "secoes_eita_ok": true,
+    "diagramas_mermaid": 3,
+    "diagramas_validos": 3,
+    "blocos_codigo_verificaveis": 3,
+    "blocos_codigo_ok": 3,
+    "referencias_secao7": 8,
+    "min_referencias_por_capitulo": 8,
+    "citacoes_corpo_sem_orfas": true,
+    "citacoes_empilhadas": false,
+    "hr_dentro_capitulo": 0,
+    "todo_placeholder": false
+  }
+}

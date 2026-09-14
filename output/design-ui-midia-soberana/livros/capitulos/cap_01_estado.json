@@ -1,0 +1,10 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "1", "capitulo": "1" },
+  "estado_execucao": "concluido_autonomo",
+  "caracteres": 15840,
+  "diagramas": 1,
+  "blocos_codigo": 5,
+  "referencias": 13,
+  "status_validacao": "sucesso"
+}

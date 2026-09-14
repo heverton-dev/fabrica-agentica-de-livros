@@ -1,0 +1,33 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "Visão Geral das 4 Camadas: A Arquitetura Completa",
+  "estagio": "Central de comando",
+  "estagio_indice": 1,
+  "objetivo": "Apresentar o modelo das 4 Camadas como solução definitiva.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "O Contrato de Passagem entre Camadas",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"transacao_agentica\": {\n    \"camada_1_contexto\": {\n      \"invariancia_prefixo\": true,\n      \"regras_ativas\": 18,\n      \"densidade_tokens\": \"shannon_max\"\n    },\n    \"camada_2_harness\": {\n      \"circuit_breaker_limite_turnos\": 15,\n      \"sandbox_isolada\": true,\n      \"gate_precommit_ativo\": true\n    },\n    \"camada_3_cognitivo\": {\n      \"modelo_selecionado\": \"claude-3-7-sonnet\",\n      \"tier\": 2,\n      \"contrato_schema\": \"StructuredOutput_v1\"\n    },\n    \"camada_4_ferramentas\": {\n      \"protocolo\": \"mcp_json_rpc\",\n      \"persistencia\": \"sqlite_wal\",\n      \"exit_code_esperado\": 0\n    }\n  }\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Esboce em papel ou Markdown como as 4 camadas se conectam no seu projeto atual — use o modelo da Fórmula 1 como referência visual",
+    "Identifique em qual das 4 camadas seu projeto está mais fraco hoje e Justifique por quê",
+    "Crie um plano de implementação para a Camada 1 (Contexto & Diretivas) com pelo menos 3 ações concretas",
+    "Mapeie as ferramentas que você usa hoje e classifique cada uma em qual camada ela opera"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 4 — Visão Geral das 4 Camadas: A Arquitetura Completa",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": {
+    "parte": "2",
+    "capitulo": "7"
+  },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 6: o conceito de pipelines modulares locais no ComfyUI, agora aplicado ao processamento e síntese de áudio neural",
+  "metricas_obrigatorias": [
+    {
+      "metrica": "fator de tempo real (RTF)",
+      "valor": "0.15"
+    },
+    {
+      "metrica": "tamanho do modelo neural",
+      "valor": "82 MB"
+    }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Fundamentos da Síntese de Voz Local e Soberania Auditiva",
+        "escopo": "Diferença entre TTS comercial em nuvem e engines neurais locais; arquitetura VITS; soberania digital e privacidade em áudio",
+        "ancora_visual": "flowchart LR comparando o fluxo dependente de nuvem com o fluxo soberano local",
+        "entrega_tecnica": "bash com comandos de checagem e instalação do sintetizador local piper1-gpl",
+        "evolucao_leitor": "Compreender as vantagens de privacidade e desempenho da síntese neural offline",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Arquitetura Neural de Áudio: Kokoro e piper1-gpl",
+        "escopo": "Mecanismos de conversão de texto para espectrograma e vocodificação neural; modelos ONNX ultraligeiros; execução em CPU/GPU",
+        "ancora_visual": "flowchart TD mostrando o pipeline de síntese de voz (Texto -> Fonetização -> Variational Autoencoder VITS -> Vocoder ONNX -> Áudio Wave)",
+        "entrega_tecnica": "python com script de síntese de voz usando piper1-gpl / ONNX local com saída WAV",
+        "evolucao_leitor": "Dominar a estrutura de inferência neural local para áudio e parametragem de voz",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Automação e Integração de Voz em Mídias e Interfaces",
+        "escopo": "Automação de narração para tutoriais e acessibilidade UI; empacotamento sem depender de APIs externas; limites e escalabilidade local",
+        "ancora_visual": "sequenceDiagram de integração de áudio neural em aplicações web e fluxos de mídia",
+        "entrega_tecnica": "python com pipeline de geração de narração em lote para arquivos de texto",
+        "evolucao_leitor": "Ser capaz de integrar narrações neurais locais em fluxos produtivos corporativos",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

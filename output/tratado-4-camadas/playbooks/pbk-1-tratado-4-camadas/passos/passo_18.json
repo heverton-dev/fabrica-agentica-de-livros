@@ -1,0 +1,34 @@
+{
+  "numero": "18",
+  "capitulo_fonte": "18",
+  "titulo": "O Banco de Estado Persistente: SQLite e a Esteira",
+  "estagio": "Usina determinística",
+  "estagio_indice": 5,
+  "objetivo": "Ensinar SQLite como banco de estado para agentes IA.",
+  "pre_requisito": "Passo 17 concluído",
+  "entregas": [
+    "state_manager.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Módulo Completo de Rastreamento de Estado em Python (`state_manager.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# state_manager.py — Gerenciador de Estado Persistente da Camada 4\nimport sqlite3\nimport json\nfrom pathlib import Path\n\nDB_PATH = Path(\".tools/state_tracker.db\")\n\ndef inicializar_banco():\n    DB_PATH.parent.mkdir(parents=True, exist_ok=True)\n    conn = sqlite3.connect(DB_PATH)\n    cursor = conn.cursor()\n    \n    # Ativar modo WAL para alta concorrência\n    cursor.execute(\"PRAGMA journal_mode=WAL;\")\n    \n    # Criar tabela de tarefas\n    cursor.execute(\"\"\"\n    CREATE TABLE IF NOT EXISTS tarefas_esteira (\n        id INTEGER PRIMARY KEY AUTOINCREMENT,\n        titulo TEXT NOT NULL,\n        agente_responsavel TEXT NOT NULL,\n        status TEXT CHECK(status IN ('pendente', 'em_andamento', 'concluido', 'falha')) DEFAULT 'pendente',\n        arquivos_modificados TEXT,\n        criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n    );\n    \"\"\")\n    conn.commit()\n    conn.close()\n    print(\"  [OK] Banco de Estado SQLite WAL inicializado em .tools/state_tracker.db.\")\n\ndef registrar_tarefa(titulo: str, agente: str) -> int:\n    conn = sqlite3.connect(DB_PATH)\n    cursor = conn.cursor()\n    cursor.execute(\"INSERT INTO tarefas_esteira (titulo, agente_responsavel, status) VALUES (?, ?, 'em_andamento')\", (titulo, agente))\n    task_id = cursor.lastrowid\n    conn.commit()\n    conn.close()\n    return task_id\n\ndef concluir_tarefa(task_id: int, arquivos: list):\n    conn = sqlite3.connect(DB_PATH)\n    cursor = conn.cursor()\n    cursor.execute(\"UPDATE tarefas_esteira SET status = 'concluido', arquivos_modificados = ? WHERE id = ?\", (json.dumps(arquivos), task_id))\n    conn.commit()\n"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute `python state_manager.py` e confirme que `.tools/state_tracker.db` foi criado com a tabela `tarefas_esteira`",
+    "Consulte o banco com um visualizador de SQLite e verifique as tarefas registradas",
+    "Desenhe o esquema de uma tarefa do seu cotidiano e liste os campos adicionais úteis na tabela",
+    "Teste a persistência: registre uma tarefa, feche e reabra o programa, e confirme que o estado foi restaurado"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 18 — O Banco de Estado Persistente: SQLite e a Esteira",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

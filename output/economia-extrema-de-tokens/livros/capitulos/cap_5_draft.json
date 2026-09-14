@@ -1,0 +1,81 @@
+{
+  "capitulo": 5,
+  "parte": "II",
+  "titulo": "Empacotamento de Contexto: Repomix",
+  "senioridade_obra": "iniciante",
+  "motivo_condutor_aplicado": {
+    "vocabulario_usado": ["token", "custo", "fluxo de caixa", "empacotamento", "cobertura", "snapshot"],
+    "persona_leitor": "Engenheiro de Custos com IA"
+  },
+  "callback_capitulo_anterior": "cache de prefixo estável (RTK-Memory) — o Capítulo 4 mostrou que reprocessar o mesmo prefixo do zero é dinheiro perdido; este capítulo mostra que enviar o mesmo projeto em pedaços soltos é o mesmo desperdício, só que na entrada",
+  "pilares": [
+    {
+      "ordem": 1,
+      "nome": "O problema do contexto fragmentado",
+      "objetivo_pedagogico": "O leitor entende por que 'mandar os arquivos que acha que importam' é uma aposta cara: contexto fragmentado gera tanto over-inclusion (arquivos irrelevantes pagos por token) quanto under-inclusion (falta um arquivo-chave e o modelo alucina a resposta).",
+      "conceito_denso": false,
+      "ancora_visual": null,
+      "entrega_tecnica": null,
+      "pontos_chave": [
+        "Ler arquivo por arquivo manualmente é uma decisão binária repetida N vezes (incluo ou não) sem visão do todo",
+        "Binários, lockfiles e arquivos ignorados no .gitignore custam tokens sem agregar sinal",
+        "Custo de under-inclusion não aparece na fatura, aparece em retrabalho (resposta errada, nova chamada)"
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Como o Repomix estrutura um snapshot com cobertura garantida",
+      "objetivo_pedagogico": "O leitor entende o mecanismo determinístico do Repomix: varredura do repositório, filtro por .gitignore mais regras próprias, compactação em um único arquivo XML/Markdown com numeração de linhas, e contagem exata de tokens antes do envio.",
+      "conceito_denso": true,
+      "ancora_visual": {
+        "tipo": "flowchart",
+        "legenda": "Pipeline do Repomix: do repositorio bruto ao snapshot unico enviado ao LLM",
+        "elementos": [
+          "Repositório completo (N arquivos)",
+          "Filtro .gitignore + regras .repomix.json",
+          "Descarte de binários/lockfiles/assets",
+          "Compactação em 1 arquivo XML com numeração de linhas",
+          "Contagem exata de tokens do pacote final",
+          "Envio ao LLM como contexto único"
+        ]
+      },
+      "entrega_tecnica": {
+        "artefato": "config .repomix.json com include/ignore/output customizados",
+        "linguagem": "json"
+      },
+      "pontos_chave": [
+        "Analogia 1 (denso): Repomix como mala de viagem com lista de embarque — você não joga o guarda-roupa inteiro na mala, decide o que cobre a viagem",
+        "Analogia 2 (denso): Repomix como sumário executivo de uma empresa — não é a empresa inteira, é a representação mínima que ainda permite decisão informada",
+        "Regras de ignore em camadas: .gitignore do projeto + regras próprias do .repomix.json (mais agressivas)",
+        "Tamanho do pacote final vs. cobertura semântica: o trade-off central da ferramenta",
+        "Contagem exata de tokens do pacote é o número que entra na calculadora de custo do Capítulo 1"
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Instalar, configurar e versionar snapshots reutilizáveis",
+      "objetivo_pedagogico": "O leitor sai do capítulo com Repomix instalado, um .repomix.json ajustado ao próprio projeto, e um snapshot versionado que vira entrada padrão do agente em vez de decisão manual repetida a cada sessão.",
+      "conceito_denso": false,
+      "ancora_visual": null,
+      "entrega_tecnica": {
+        "artefato": "script Python que compara bytes/tokens antes e depois do empacotamento + comandos CLI de instalação e execução",
+        "linguagem": "python + console"
+      },
+      "pontos_chave": [
+        "npx repomix roda sem instalação global — zero fricção para testar",
+        "Versionar o .repomix.json no repositório transforma a decisão de 'o que incluir' em configuração auditável, não em memória do agente",
+        "Snapshot vira artefato reutilizável entre sessões, não recriado do zero a cada chamada"
+      ]
+    }
+  ],
+  "referencias_autorizadas": [
+    "https://github.com/yamadashy/repomix",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2024.acl-long.91",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.825",
+    "https://doi.org/10.18653/v1/2025.findings-acl.1274",
+    "http://arxiv.org/abs/2307.06435",
+    "https://doi.org/10.1007/s11704-026-60308-3",
+    "https://www.semanticscholar.org/paper/3d45fc603e34934fc589b9547307815f7723de34"
+  ]
+}

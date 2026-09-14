@@ -1,0 +1,71 @@
+{
+  "colecao": "engenharia-agentica",
+  "cor_accent": "#58a6ff",
+  "atualizado_em": "2026-09-12",
+  "nucleo": {
+    "slug": "livros/engenharia-agentica",
+    "tipo": "livro",
+    "titulo": "Engenharia Agêntica",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "A Cabine e a Torre",
+      "descricao": "O agente é o piloto: potente, adaptativo e probabilístico. O harness é a cabine — painel, checklist, alarmes, piloto automático e caixa-preta — onde cada instrumento é determinístico por construção. Voar bem não é pilotar melhor: é instrumentar melhor.",
+      "vocabulario": [
+        "cabine",
+        "painel",
+        "checklist",
+        "instrumento",
+        "alarme",
+        "piloto automático",
+        "plano de voo",
+        "caixa-preta",
+        "torre de controle",
+        "combustível"
+      ],
+      "persona_leitor": "Engenheiro de Bordo"
+    }
+  },
+  "total_membros": 2,
+  "por_tipo": {
+    "livro": 1,
+    "playbook": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/engenharia-agentica",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "Engenharia Agêntica",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "planejado",
+      "artefatos": []
+    },
+    {
+      "slug": "engenharia-agentica/playbooks/pbk-1-engenharia-agentica",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — Engenharia Agêntica",
+      "obra_mae": "engenharia-agentica",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "planejado",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

@@ -1,0 +1,71 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "Ollama, vLLM e llama.cpp: Os Tres Motores de Inferencia Local",
+  "estagio": "Kit de pecas",
+  "estagio_indice": 1,
+  "objetivo": "Configurar e comparar engines de inferencia local.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Configurando Ollama",
+      "linguagem": "bash",
+      "comandos": [
+        "curl -fsSL https://ollama.com/install.sh | sh",
+        "curl http://localhost:11434/api/generate -d '{"
+      ],
+      "codigo": "# Instalar Ollama (Linux/macOS)\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Instalar Windows: baixe de https://ollama.com/download\n\n# Puxar um modelo\nollama pull deepseek-v4:7b\n\n# Iniciar o servidor (API na porta 11434)\nollama serve\n\n# Testar a API\ncurl http://localhost:11434/api/generate -d '{\n  \"model\": \"deepseek-v4:7b\",\n  \"prompt\": \"Olá, funciona?\",\n  \"stream\": false\n}'"
+    },
+    {
+      "titulo": "Configurando vLLM",
+      "linguagem": "bash",
+      "comandos": [
+        "pip install vllm",
+        "curl http://localhost:8000/v1/chat/completions -H \"Content-Type: application/json\" -d '{"
+      ],
+      "codigo": "# Instalar vLLM via pip\npip install vllm\n\n# Iniciar o servidor com modelo DeepSeek\nvllm serve deepseek-ai/DeepSeek-V4-7B-AWQ \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --max-model-len 4096 \\\n  --gpu-memory-utilization 0.9\n\n# Testar a API (compatível com OpenAI)\ncurl http://localhost:8000/v1/chat/completions -H \"Content-Type: application/json\" -d '{\n  \"model\": \"deepseek-ai/DeepSeek-V4-7B-AWQ\",\n  \"messages\": [{\"role\": \"user\", \"content\": \"Olá\"}]\n}'"
+    },
+    {
+      "titulo": "Configurando llama.cpp",
+      "linguagem": "bash",
+      "comandos": [
+        "git clone https://github.com/ggerganov/llama.cpp",
+        "make -j$(nproc)",
+        "curl http://localhost:8080/health"
+      ],
+      "codigo": "# Compilar o llama.cpp\ngit clone https://github.com/ggerganov/llama.cpp\ncd llama.cpp\nmake -j$(nproc)\n\n# Baixar modelo GGUF\nwget https://huggingface.co/deepseek-ai/DeepSeek-V4-7B-GGUF/resolve/main/deepseek-v4-7b-q4_k_m.gguf\n\n# Rodar o servidor HTTP\n./llama-server -m deepseek-v4-7b-q4_k_m.gguf \\\n  --host 0.0.0.0 \\\n  --port 8080 \\\n  -ngl 99 \\\n  -c 4096\n\n# Testar\ncurl http://localhost:8080/health"
+    },
+    {
+      "titulo": "Conectando ao DeepSeek Harness",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Para Ollama (porta 11434)\ndsh config set-model ollama deepseek-v4:7b\ndsh config set-endpoint http://localhost:11434\n\n# Para vLLM (porta 8000)\ndsh config set-model vllm deepseek-ai/DeepSeek-V4-7B-AWQ\ndsh config set-endpoint http://localhost:8000\n\n# Para llama.cpp (porta 8080)\ndsh config set-model llamacpp deepseek-v4-7b-q4_k_m\ndsh config set-endpoint http://localhost:8080\n\n# Verificar configuração\ndsh config show\n\n# Iniciar\ndsh --mode standard"
+    }
+  ],
+  "gate": "curl -fsSL https://ollama.com/install.sh | sh",
+  "comandos": [
+    "curl -fsSL https://ollama.com/install.sh | sh",
+    "curl http://localhost:11434/api/generate -d '{",
+    "pip install vllm",
+    "curl http://localhost:8000/v1/chat/completions -H \"Content-Type: application/json\" -d '{",
+    "git clone https://github.com/ggerganov/llama.cpp",
+    "make -j$(nproc)",
+    "curl http://localhost:8080/health"
+  ],
+  "feito_quando": [
+    "Para 5 desenvolvedores funcionava bem",
+    "Quando o time cresceu para 20",
+    "O Ollama não foi projetado para múltiplas requisições simultâneas — ele processa uma por vez [3]",
+    "A solução: migraram para vLLM com a mesma GPU",
+    "O throughput subiu de 5 para 45 requisições simultâneas",
+    "O custo da GPU foi o mesmo — a diferença foi apenas o engine [4]",
+    "Se o time cresceu"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 4 — Ollama, vLLM e llama.cpp: Os Tres Motores de Inferencia Local",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

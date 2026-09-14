@@ -1,0 +1,64 @@
+{
+  "numero": "11",
+  "capitulo_fonte": "11",
+  "titulo": "Orquestração Cross-Harness: Subagentes, Worktrees e o Protocolo ORCA ADE",
+  "estagio": "Circuito de segurança",
+  "estagio_indice": 3,
+  "objetivo": "Ensinar a orquestrar múltiplos agentes e harnesses com isolamento físico, funil deliberativo com checkpoints humanos e paralelismo seguro.",
+  "pre_requisito": "Passo 10 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Gerenciador de ambientes isolados por tarefa",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Gerenciador de ambientes isolados (ORCA ADE) para tarefas agenticas.\"\"\"\n\nimport json\nimport shutil\nimport subprocess\nimport sys\nfrom pathlib import Path\nfrom typing import List, Optional\n\nBASE = Path(\".worktrees\")\nBRANCH_BASE = \"main\"\n\n\ndef _git(args: List[str]) -> subprocess.CompletedProcess:\n    return subprocess.run([\"git\", *args], capture_output=True, text=True, timeout=30)\n\n\ndef listar() -> List[str]:\n    resultado = _git([\"worktree\", \"list\", \"--porcelain\"])\n    if resultado.returncode != 0:\n        return []\n    return [linha.split(\" \", 1)[1]\n            for linha in resultado.stdout.splitlines()\n            if linha.startswith(\"worktree \")]\n\n\ndef criar(nome: str, base: str = BRANCH_BASE) -> Optional[Path]:\n    destino = BASE / nome\n    branch = f\"agent/{nome}\"\n    if destino.exists():\n        print(f\"[AVISO] ambiente ja existe: {destino}\")\n        return destino\n    BASE.mkdir(exist_ok=True)\n    resultado = _git([\"worktree\", \"add\", \"-b\", branch, str(destino), base])\n    if resultado.returncode != 0:\n        print(f\"[FALHA] nao foi possivel criar ambiente: {resultado.stderr.strip()}\")\n        return None\n    print(f\"[OK] ambiente isolado criado: {destino} (branch {branch})\")\n    return destino\n\n\ndef descartar(nome: str, remover_branch: bool = True) -> bool:\n    destino = BASE / nome\n    resultado = _git([\"worktree\", \"remove\", \"--force\", str(destino)])\n    if resultado.returncode != 0:\n        print(f\"[FALHA] nao foi possivel remover {destino}: {resultado.stderr.strip()}\")\n        return False\n    if base_existe(destino"
+    },
+    {
+      "titulo": "4.2 Plano de despacho em lotes com desfecho obrigatório",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"plano\": \"PLAN-0011-governanca-de-frete\",\n  \"aprovado_por\": \"operador\",\n  \"aprovado_em\": \"2026-09-11\",\n  \"lote_maximo\": 4,\n  \"politica_de_memoria\": \"resumir-e-expurgar-regiao-volatil-entre-lotes\",\n  \"politica_de_falha\": \"backoff-15s-30s-60s-ate-3-tentativas\",\n  \"tarefas\": [\n    { \"id\": \"t1\", \"escopo\": \"extrair contrato de frete\",  \"estado\": \"pendente\", \"criterio\": \"esquema valida\" },\n    { \"id\": \"t2\", \"escopo\": \"criar portao anti-duplicata\", \"estado\": \"pendente\", \"criterio\": \"exit 1 em duplicata\" },\n    { \"id\": \"t3\", \"escopo\": \"migrar consumidores\",         \"estado\": \"pendente\", \"criterio\": \"testes passam\" },\n    { \"id\": \"t4\", \"escopo\": \"remover modulo antigo\",       \"estado\": \"pendente\", \"criterio\": \"nenhuma referencia restante\" }\n  ]\n}"
+    },
+    {
+      "titulo": "4.3 Sessão de orquestração",
+      "linguagem": "console",
+      "comandos": [
+        "python orca.py criar t1-contrato-frete",
+        "python orca.py criar t2-portao-duplicata",
+        "python orca.py descartar t2-portao-duplicata"
+      ],
+      "codigo": "$ python orca.py criar t1-contrato-frete\n[OK] ambiente isolado criado: .worktrees/t1-contrato-frete (branch agent/t1-contrato-frete)\n$ python orca.py criar t2-portao-duplicata\n[OK] ambiente isolado criado: .worktrees/t2-portao-duplicata (branch agent/t2-portao-duplicata)\n\n$ cd .worktrees/t2-portao-duplicata && python gates/anti-duplicata.py\n[REPROVADO] exit 1 — dois modulos exportam calculo_frete\n\n$ python orca.py descartar t2-portao-duplicata\n[OK] ambiente descartado: .worktrees/t2-portao-duplicata\n[REGISTRO] t2 = falhou (backoff 15s; tentativa 1 de 3)\n\n$ cd .worktrees/t1-contrato-frete && python gates/validar-esquema.py\n[APROVADO] exit 0 — contrato de frete valida\n$ cd - && python orca.py listar\n[\".worktrees/t1-contrato-frete\"]\n[REGISTRO] t1 = sucesso (merge em main autorizado)"
+    },
+    {
+      "titulo": "4.5 Resumo de lote e expurgo de contexto",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Resumo de lote concluido: o unico artefato que sobrevive ao expurgo.\"\"\"\n\nimport json\nimport sys\nfrom dataclasses import dataclass, asdict\nfrom pathlib import Path\nfrom typing import List\n\nLIMITE_CARACTERES = 1200\n\n\n@dataclass\nclass ResumoDeLote:\n    lote: int\n    tarefas_concluidas: List[str]\n    tarefas_reprovadas: List[str]\n    arquivos_tocados: List[str]\n    decisoes: List[str]\n    pendencias: List[str]\n\n    def texto(self) -> str:\n        linhas = [f\"Lote {self.lote} concluido\"]\n        linhas.append(\"Concluidas: \" + (\", \".join(self.tarefas_concluidas) or \"nenhuma\"))\n        linhas.append(\"Reprovadas: \" + (\", \".join(self.tarefas_reprovadas) or \"nenhuma\"))\n        linhas.append(\"Arquivos: \" + (\", \".join(self.arquivos_tocados) or \"nenhum\"))\n        for decisao in self.decisoes:\n            linhas.append(f\"Decisao: {decisao}\")\n        for pendencia in self.pendencias:\n            linhas.append(f\"Pendencia: {pendencia}\")\n        return \"\\n\".join(linhas)\n\n\nLIMITES_SUGERIDOS = {\n    \"max_tarefas_por_resumo\": 8,\n    \"max_decisoes\": 5,\n    \"max_pendencias\": 5,\n    \"max_tokens_no_proximo_lote\": 4000,\n}\n\n\ndef validar(resumo: ResumoDeLote) -> List[str]:\n    problemas: List[str] = []\n    if len(resumo.tarefas_concluidas) > LIMITES_SUGERIDOS[\"max_tarefas_por_resumo\"]:\n        problemas.append(\"resumo com tarefas demais: consolide antes de gerar o artefato\")\n    if len(resumo.decisoes) > LIMITES_SUGERIDOS[\"max_decisoes\"]:\n        problemas.append(\"decisoes demais para o artefato: mova o detalhe para a documentacao\")\n    if len(resumo."
+    }
+  ],
+  "gate": "python orca.py criar t1-contrato-frete",
+  "comandos": [
+    "python orca.py criar t1-contrato-frete",
+    "python orca.py criar t2-portao-duplicata",
+    "python orca.py descartar t2-portao-duplicata"
+  ],
+  "feito_quando": [
+    "Paralelizar antes de planejar. Sem fronteiras declaradas, tarefas \"independentes\" disputam recursos e o ganho desaparece em reconciliação",
+    "Usar o diretório de trabalho compartilhado. Sem isolamento físico, a última escrita vence e a intenção se perde [1]",
+    "Deixar agente rodando sem observação e sem teto. Horizonte longo sem supervisão é onde o desvio de comportamento se instala [7]",
+    "Não registrar falha. Tarefa que falha e desaparece da contagem distorce a percepção de progresso e esconde o gargalo real",
+    "Carregar o histórico de todos os lotes adiante. Isso reproduz a saturação de contexto que o protocolo deveria evitar [14]"
+  ],
+  "armadilhas": [
+    "Paralelizar antes de planejar. Sem fronteiras declaradas, tarefas \"independentes\" disputam recursos e o ganho desaparece em reconciliação",
+    "Usar o diretório de trabalho compartilhado. Sem isolamento físico, a última escrita vence e a intenção se perde [1]",
+    "Deixar agente rodando sem observação e sem teto. Horizonte longo sem supervisão é onde o desvio de comportamento se instala [7]",
+    "Não registrar falha. Tarefa que falha e desaparece da contagem distorce a percepção de progresso e esconde o gargalo real",
+    "Carregar o histórico de todos os lotes adiante. Isso reproduz a saturação de contexto que o protocolo deveria evitar [14]"
+  ],
+  "referencia_cruzada": "Cap. 11 — Orquestração Cross-Harness: Subagentes, Worktrees e o Protocolo ORCA ADE",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

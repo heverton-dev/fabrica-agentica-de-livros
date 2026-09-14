@@ -1,0 +1,48 @@
+{
+  "slug": "manual-provedores-01",
+  "tipo_obra": "livro",
+  "titulo": "Manual OmniRoute — 15 Provedores de IA Gratuitos para Máxima Confiabilidade",
+  "subtitulo": "Agregue Google Vertex AI, Claude, GPT-4 e mais em um único hub",
+  "autores": ["Marketing Conexão"],
+  "editor": "Editora Agêntica",
+  "data_publicacao": "2026-08-24",
+  "versao": "1.0",
+  "lingua": "pt-BR",
+  "isbn": "",
+  "categoria_tecnica": false,
+  "estilo_tecnica": "operacional",
+  "persona_leitor": "Desenvolvedor ou DevOps",
+  "nivel_dificuldade": "intermediario",
+  "publico_alvo": "Startups, desenvolvedores, DevOps que usam múltiplos modelos de IA",
+  "descricao_breve": "Guia prático e completo para configurar OmniRoute como seu hub único de IA, conectando 15 provedores gratuitos (Vertex AI, Claude, GPT-4, Groq, etc.) e integrando com Claude Code.",
+  "resumo_executivo": "OmniRoute é um proxy OpenAI-compatível que centraliza credenciais de múltiplos provedores de IA e faz load balancing automático. Este livro mostra como configurar OmniRoute, conectar seus 15 provedores com free tier, e integrar com Claude Code e Cursor. Resultado: máxima confiabilidade, custos otimizados, zero fricção de credenciais.",
+  "num_capitulos": 5,
+  "num_paginas_estimadas": 80,
+  "tempo_leitura_horas": 2.5,
+  "colecao": "provedores-omniroute",
+  "metadados_livro": {
+    "capa_tipo": "2d_plano",
+    "capa_cores": {
+      "primaria": "#2563eb",
+      "secundaria": "#1e40af",
+      "accent": "#60a5fa"
+    },
+    "badge_nivel": "intermediario",
+    "inclui_indices": true,
+    "inclui_glossario": false,
+    "inclui_apendices": false
+  },
+  "tags": [
+    "OmniRoute",
+    "IA",
+    "API",
+    "LLM",
+    "Provedores Gratuitos",
+    "Claude Code",
+    "DevOps",
+    "Integração",
+    "Load Balancing"
+  ],
+  "dependencias": [],
+  "notas_producao": "Livro adaptado de manual técnico preexistente. Estruturado em 5 capítulos EITA. Sem requisitos de pesquisa adicional — conteúdo já validado em 24.08.2026."
+}

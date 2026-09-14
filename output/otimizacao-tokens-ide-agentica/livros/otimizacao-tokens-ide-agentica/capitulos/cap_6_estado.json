@@ -1,0 +1,16 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 5: o circuit breaker (fechado/aberto/semiaberto) e o backoff exponencial com jitter, agora reaproveitados como circuit breaker financeiro do token-guard",
+  "validacao": {
+    "validar_codigo": "OK (4/4 blocos verificaveis, 1 nao_aplicavel = crontab)",
+    "renderizar_diagramas": "OK (1 diagrama valido)",
+    "referencias_secao7": 27,
+    "min_referencias_exigido": 20,
+    "r14_orfaos": 0,
+    "citacoes_corpo": 8,
+    "citacoes_empilhadas": 0
+  },
+  "pool_registro": "sucesso (tentativa 1)"
+}

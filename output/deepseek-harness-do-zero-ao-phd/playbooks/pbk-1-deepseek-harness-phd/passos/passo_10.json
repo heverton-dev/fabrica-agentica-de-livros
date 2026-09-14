@@ -1,0 +1,41 @@
+{
+  "numero": "10",
+  "capitulo_fonte": "10",
+  "titulo": "Ferramentas Customizadas: Construindo Pecas Novas",
+  "estagio": "Estacao de trabalho",
+  "estagio_indice": 3,
+  "objetivo": "Criar ferramentas personalizadas para o agente.",
+  "pre_requisito": "Passo 9 concluído",
+  "entregas": [
+    "${params.registry}/${params.tag}"
+  ],
+  "execucao": [
+    {
+      "titulo": "Criando uma Tool de Deploy",
+      "linguagem": "javascript",
+      "comandos": [],
+      "codigo": "// tools/deploy-docker.js\nexport default {\n  name: \"deploy-docker\",\n  description: \"Faz build e deploy de uma aplicação Docker\",\n  parameters: {\n    type: \"object\",\n    properties: {\n      dockerfile: {\n        type: \"string\",\n        description: \"Caminho para o Dockerfile\"\n      },\n      tag: {\n        type: \"string\",\n        description: \"Tag da imagem Docker\"\n      },\n      registry: {\n        type: \"string\",\n        description: \"Registry de destino\",\n        default: \"docker.io\"\n      }\n    },\n    required: [\"dockerfile\", \"tag\"]\n  },\n  async execute(params, ctx) {\n    const shell = ctx.service('shell');\n    \n    try {\n      // Build da imagem\n      const buildResult = shell.execute(\n        `docker build -t ${params.tag} -f ${params.dockerfile} .`\n      );\n      \n      // Push para o registry\n      const pushResult = shell.execute(\n        `docker push ${params.registry}/${params.tag}`\n      );\n      \n      return {\n        success: true,\n        image: `${params.registry}/${params.tag}`,\n        buildOutput: buildResult,\n        pushOutput: pushResult\n      };\n    } catch (error) {\n      return {\n        success: false,\n        error: error.message\n      };\n    }\n  }\n};"
+    },
+    {
+      "titulo": "Composição de Tools",
+      "linguagem": "javascript",
+      "comandos": [],
+      "codigo": "// Tool que busca e analisa um repositório\nexport default {\n  name: \"analisar-repo\",\n  description: \"Busca um repositório e retorna análise de qualidade\",\n  parameters: {\n    type: \"object\",\n    properties: {\n      repo: { type: \"string\" },\n      branch: { type: \"string\", default: \"main\" }\n    },\n    required: [\"repo\"]\n  },\n  async execute(params, ctx) {\n    const shell = ctx.service('shell');\n    \n    // Step 1: Clonar o repositório\n    shell.execute(`git clone ${params.repo} /tmp/analysis`);\n    \n    // Step 2: Analisar complexidade\n    constLOC = shell.execute('find /tmp/analysis -name \"*.js\" | xargs wc -l');\n    const issues = shell.execute('cd /tmp/analysis && npm audit --json');\n    \n    // Step 3: Limpar\n    shell.execute('rm -rf /tmp/analysis');\n    \n    return {\n      linesOfCode: loc,\n      securityIssues: JSON.parse(issues)\n    };\n  }\n};"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Sempre defina timeout** — tools não devem rodar indefinidamente",
+    "Trate todos os erros** — rede, arquivo, permissão",
+    "Retorne resultados estruturados** — o modelo precisa processar o output",
+    "Limpe recursos** — arquivos temporários, conexões, processos",
+    "Teste cenários de falha** — API fora do ar, disco cheio, permissão negada"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 10 — Ferramentas Customizadas: Construindo Pecas Novas",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

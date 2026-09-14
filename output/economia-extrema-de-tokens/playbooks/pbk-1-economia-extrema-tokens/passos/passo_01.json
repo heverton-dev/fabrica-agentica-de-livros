@@ -1,0 +1,63 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "A Crise de Custos com LLMs: De $100 para $10k Sem Aviso",
+  "estagio": "Token",
+  "estagio_indice": 1,
+  "objetivo": "O leitor entende a urgência e o escopo do problema: tokens não são uma abstração, mas dinheiro circulando; a falta de visibilidade é o verdadeiro inimigo.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [
+    "calculadora_projecao_custos.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Execução",
+      "linguagem": "python",
+      "comandos": [
+        "python calculadora_projecao_custos.py chamada",
+        "python calculadora_projecao_custos.py projetar",
+        "python calculadora_projecao_custos.py auditar caminho/para/log.csv"
+      ],
+      "codigo": "\"\"\"\ncalculadora_projecao_custos.py\nFerramenta de bolso do Engenheiro de Custos com IA.\n\nUso:\n  python calculadora_projecao_custos.py chamada\n  python calculadora_projecao_custos.py projetar\n  python calculadora_projecao_custos.py auditar caminho/para/log.csv\n\"\"\"\n\nimport csv\nimport sys\n\n# Preco de referencia por 1 milhao de tokens (valores ilustrativos, em dolares).\n# Troque pelos precos reais do seu provedor antes de usar em producao.\nPRECO_ENTRADA_POR_MILHAO = 3.00\nPRECO_SAIDA_POR_MILHAO = 15.00\n\n\ndef custo_de_uma_chamada(tokens_entrada: int, tokens_saida: int) -> float:\n    \"\"\"Calcula o custo de uma unica chamada de API, em dolares.\n\n    Cada tipo de token tem um preco diferente por milhao [8]: tokens de\n    saida custam mais porque exigem geracao ativa, nao so leitura.\n    \"\"\"\n    custo_entrada = (tokens_entrada / 1_000_000) * PRECO_ENTRADA_POR_MILHAO\n    custo_saida = (tokens_saida / 1_000_000) * PRECO_SAIDA_POR_MILHAO\n    return round(custo_entrada + custo_saida, 6)\n\n\ndef projetar_tres_meses(\n    usuarios_mes1: int,\n    chamadas_por_usuario_dia: int,\n    tokens_medios_por_chamada: int,\n    taxa_crescimento_contexto: float,\n) -> list:\n    \"\"\"Projeta o custo mensal para 3 meses.\n\n    A cada mes, o numero de usuarios dobra (cenario tipico de adocao\n    inicial) e o contexto medio por chamada cresce pela taxa informada,\n    simulando o efeito de \"juros compostos\" do historico reenviado.\n    \"\"\"\n    resultados = []\n    usuarios = usuarios_mes1\n    tokens_por_chamada = tokens_medios_por_chamada\n\n    for mes in range(1, 4):\n        chamadas_no_mes = usuarios * chamadas_por_us"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "console",
+      "comandos": [
+        "python calculadora_projecao_custos.py projetar"
+      ],
+      "codigo": "$ python calculadora_projecao_custos.py projetar\nMes 1: 50 usuarios, 2000 tokens/chamada, custo $135.0\nMes 2: 100 usuarios, 3200 tokens/chamada, custo $432.0\nMes 3: 200 usuarios, 5120 tokens/chamada, custo $1382.4"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def alertar_limite_orcamento(resumo_por_dia: dict, limite_diario_dolares: float) -> list:\n    \"\"\"Compara o custo de cada dia contra um limite de orcamento.\n\n    Retorna a lista de dias que estouraram o limite, ordenada do maior\n    excesso para o menor. Esta e a diferenca entre auditar depois do\n    fato e ser avisado no mesmo dia em que o custo sai da faixa esperada.\n    \"\"\"\n    dias_fora_do_orcamento = []\n    for data, custo_do_dia in resumo_por_dia.items():\n        if custo_do_dia > limite_diario_dolares:\n            dias_fora_do_orcamento.append((data, custo_do_dia))\n    return sorted(dias_fora_do_orcamento, key=lambda item: item[1], reverse=True)"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def ponto_de_equilibrio_saas_vs_api(\n    custo_assinatura_mensal_por_usuario: float,\n    numero_de_usuarios: int,\n    custo_medio_por_chamada: float,\n) -> int:\n    \"\"\"Calcula quantas chamadas por mes, no total, igualam o custo\n    de uma assinatura SaaS de preco fixo por usuario.\n\n    Acima desse numero de chamadas, pagar por token (modelo de API)\n    fica mais caro que a assinatura; abaixo, fica mais barato.\n    \"\"\"\n    if custo_medio_por_chamada <= 0:\n        raise ValueError(\"custo_medio_por_chamada deve ser maior que zero\")\n    custo_total_assinatura = custo_assinatura_mensal_por_usuario * numero_de_usuarios\n    return int(custo_total_assinatura / custo_medio_por_chamada)"
+    }
+  ],
+  "gate": "python calculadora_projecao_custos.py auditar caminho/para/log.csv",
+  "comandos": [
+    "python calculadora_projecao_custos.py chamada",
+    "python calculadora_projecao_custos.py projetar",
+    "python calculadora_projecao_custos.py auditar caminho/para/log.csv"
+  ],
+  "feito_quando": [
+    "Exporte (ou simule) um CSV com as colunas `data,tokens_entrada,tokens_saida,modelo` das últimas duas semanas do seu projeto",
+    "Rode `calculadora_projecao_custos.py auditar` sobre esse CSV e identifique o dia de maior custo",
+    "Calcule quantos tokens de entrada, em média, são histórico reenviado versus pergunta nova",
+    "Rode o modo `projetar` com os parâmetros reais do seu projeto e compare com a fatura real dos últimos 2 meses",
+    "Escreva, em uma frase, o estágio da curva de escalada em que seu projeto está hoje (Mês 1, 2 ou 3 da seção Ilustra)",
+    "Rode `ponto_de_equilibrio_saas_vs_api` com o preço de uma assinatura SaaS equivalente ao seu caso de uso e descubra se pagar por token ainda é a opção mais barata no seu volume atual"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 1 — A Crise de Custos com LLMs: De $100 para $10k Sem Aviso",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

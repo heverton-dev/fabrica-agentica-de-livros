@@ -1,0 +1,102 @@
+{
+  "dossies": [
+    "dossie_engenharia-agentica.md",
+    "dossie_min_cache.md",
+    "dossie_min_codeagents.md",
+    "dossie_min_contexto.md",
+    "dossie_min_custos.md",
+    "dossie_min_ferramentas.md",
+    "dossie_min_orquestracao.md",
+    "dossie_mineracao_academica_engenharia-agentica.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_engenharia-agentica.md",
+      "classes": {
+        "A": 14,
+        "B": 24,
+        "C": 6
+      },
+      "linhas_fonte": 33
+    },
+    {
+      "arquivo": "dossie_min_cache.md",
+      "classes": {
+        "A": 24,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 24
+    },
+    {
+      "arquivo": "dossie_min_codeagents.md",
+      "classes": {
+        "A": 36,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 36
+    },
+    {
+      "arquivo": "dossie_min_contexto.md",
+      "classes": {
+        "A": 28,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 28
+    },
+    {
+      "arquivo": "dossie_min_custos.md",
+      "classes": {
+        "A": 24,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 24
+    },
+    {
+      "arquivo": "dossie_min_ferramentas.md",
+      "classes": {
+        "A": 25,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 25
+    },
+    {
+      "arquivo": "dossie_min_orquestracao.md",
+      "classes": {
+        "A": 24,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 24
+    },
+    {
+      "arquivo": "dossie_mineracao_academica_engenharia-agentica.md",
+      "classes": {
+        "A": 20,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 20
+    }
+  ],
+  "classes": {
+    "A": 195,
+    "B": 24,
+    "C": 6
+  },
+  "linhas_fonte_total": 214,
+  "classificadas": 225,
+  "proporcao_ab": 0.973,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "engenharia-agentica/livros"
+}

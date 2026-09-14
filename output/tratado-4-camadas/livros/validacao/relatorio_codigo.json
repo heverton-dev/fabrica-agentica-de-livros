@@ -1,0 +1,414 @@
+{
+  "slug": "tratado-4-camadas/livros",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 46,
+  "resumo": {
+    "nao_aplicavel": 31,
+    "falha": 6,
+    "ok": 9
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 20,
+      "ok": 0,
+      "falha": 0
+    },
+    "text": {
+      "total": 8,
+      "ok": 0,
+      "falha": 0
+    },
+    "python": {
+      "total": 11,
+      "ok": 5,
+      "falha": 6
+    },
+    "json": {
+      "total": 3,
+      "ok": 3,
+      "falha": 0
+    },
+    "markdown": {
+      "total": 3,
+      "ok": 0,
+      "falha": 0
+    },
+    "bash": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 60.0,
+  "blocos": [
+    {
+      "origem": "cap_1",
+      "linha": 53,
+      "linguagem": "mermaid",
+      "linhas_codigo": 19,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 86,
+      "linguagem": "text",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 107,
+      "linguagem": "python",
+      "linhas_codigo": 38,
+      "status": "falha",
+      "detalhe": "linha 25: unterminated string literal (detected at line 25)"
+    },
+    {
+      "origem": "cap_2",
+      "linha": 42,
+      "linguagem": "mermaid",
+      "linhas_codigo": 23,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 48,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 17,
+      "linguagem": "text",
+      "linhas_codigo": 24,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 61,
+      "linguagem": "mermaid",
+      "linhas_codigo": 6,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 80,
+      "linguagem": "json",
+      "linhas_codigo": 25,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_5",
+      "linha": 75,
+      "linguagem": "mermaid",
+      "linhas_codigo": 20,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 103,
+      "linguagem": "markdown",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 46,
+      "linguagem": "mermaid",
+      "linhas_codigo": 17,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 71,
+      "linguagem": "markdown",
+      "linhas_codigo": 23,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 55,
+      "linguagem": "mermaid",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 75,
+      "linguagem": "markdown",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 36,
+      "linguagem": "mermaid",
+      "linhas_codigo": 7,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 51,
+      "linguagem": "python",
+      "linhas_codigo": 65,
+      "status": "falha",
+      "detalhe": "linha 60: unterminated string literal (detected at line 60)"
+    },
+    {
+      "origem": "cap_9",
+      "linha": 57,
+      "linguagem": "mermaid",
+      "linhas_codigo": 8,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_9",
+      "linha": 73,
+      "linguagem": "json",
+      "linhas_codigo": 29,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_10",
+      "linha": 31,
+      "linguagem": "text",
+      "linhas_codigo": 6,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 60,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 77,
+      "linguagem": "python",
+      "linhas_codigo": 34,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_11",
+      "linha": 19,
+      "linguagem": "text",
+      "linhas_codigo": 18,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_11",
+      "linha": 57,
+      "linguagem": "mermaid",
+      "linhas_codigo": 16,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_11",
+      "linha": 81,
+      "linguagem": "bash",
+      "linhas_codigo": 31,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_12",
+      "linha": 48,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_12",
+      "linha": 65,
+      "linguagem": "python",
+      "linhas_codigo": 66,
+      "status": "falha",
+      "detalhe": "linha 61: unterminated string literal (detected at line 61)"
+    },
+    {
+      "origem": "cap_13",
+      "linha": 54,
+      "linguagem": "mermaid",
+      "linhas_codigo": 11,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_13",
+      "linha": 73,
+      "linguagem": "python",
+      "linhas_codigo": 33,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_14",
+      "linha": 19,
+      "linguagem": "text",
+      "linhas_codigo": 19,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_14",
+      "linha": 51,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_14",
+      "linha": 68,
+      "linguagem": "json",
+      "linhas_codigo": 23,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_15",
+      "linha": 34,
+      "linguagem": "mermaid",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_15",
+      "linha": 54,
+      "linguagem": "python",
+      "linhas_codigo": 23,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_16",
+      "linha": 33,
+      "linguagem": "mermaid",
+      "linhas_codigo": 10,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_16",
+      "linha": 51,
+      "linguagem": "python",
+      "linhas_codigo": 64,
+      "status": "falha",
+      "detalhe": "linha 59: unterminated string literal (detected at line 59)"
+    },
+    {
+      "origem": "cap_17",
+      "linha": 57,
+      "linguagem": "mermaid",
+      "linhas_codigo": 7,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_17",
+      "linha": 72,
+      "linguagem": "python",
+      "linhas_codigo": 32,
+      "status": "falha",
+      "detalhe": "linha 8: unterminated f-string literal (detected at line 8)"
+    },
+    {
+      "origem": "cap_18",
+      "linha": 19,
+      "linguagem": "text",
+      "linhas_codigo": 19,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_18",
+      "linha": 62,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_18",
+      "linha": 85,
+      "linguagem": "python",
+      "linhas_codigo": 54,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_19",
+      "linha": 21,
+      "linguagem": "text",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_19",
+      "linha": 50,
+      "linguagem": "mermaid",
+      "linhas_codigo": 10,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_19",
+      "linha": 68,
+      "linguagem": "python",
+      "linhas_codigo": 50,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_20",
+      "linha": 19,
+      "linguagem": "text",
+      "linhas_codigo": 26,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_20",
+      "linha": 68,
+      "linguagem": "mermaid",
+      "linhas_codigo": 24,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_20",
+      "linha": 100,
+      "linguagem": "python",
+      "linhas_codigo": 74,
+      "status": "falha",
+      "detalhe": "linha 17: unterminated string literal (detected at line 17)"
+    }
+  ]
+}

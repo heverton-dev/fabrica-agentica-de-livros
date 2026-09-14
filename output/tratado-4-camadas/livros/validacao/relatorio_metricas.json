@@ -1,0 +1,33 @@
+{
+  "slug": "livros/tratado-4-camadas",
+  "capitulos": 20,
+  "metricas_por_capitulo": {
+    "cap_1": 17,
+    "cap_2": 23,
+    "cap_3": 23,
+    "cap_4": 19,
+    "cap_5": 26,
+    "cap_6": 5,
+    "cap_7": 26,
+    "cap_8": 13,
+    "cap_9": 7,
+    "cap_10": 8,
+    "cap_11": 2,
+    "cap_12": 7,
+    "cap_13": 12,
+    "cap_14": 8,
+    "cap_15": 2,
+    "cap_16": 3,
+    "cap_17": 4,
+    "cap_18": 2,
+    "cap_19": 4,
+    "cap_20": 12
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

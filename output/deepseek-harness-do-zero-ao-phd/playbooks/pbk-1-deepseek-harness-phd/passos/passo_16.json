@@ -1,0 +1,50 @@
+{
+  "numero": "16",
+  "capitulo_fonte": "16",
+  "titulo": "Deploy e Operacao: Levando a Oficina para Producao",
+  "estagio": "Calibracao",
+  "estagio_indice": 4,
+  "objetivo": "Colocar o harness em producao com Docker e monitoramento.",
+  "pre_requisito": "Passo 15 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Dockerfile para DeepSeek Harness",
+      "linguagem": "dockerfile",
+      "comandos": [],
+      "codigo": "# Dockerfile\nFROM node:22-slim\n\n# Instalar dependências do sistema\nRUN apt-get update && apt-get install -y \\\n    git \\\n    curl \\\n    && rm -rf /var/lib/apt/lists/*\n\n# Instalar DeepSeek Harness\nRUN npm install -g deepseek-harness\n\n# Criar diretório de trabalho\nWORKDIR /app\n\n# Copiar configuração\nCOPY .dsh/ .dsh/\n\n# Expor portas\nEXPOSE 11434 8000\n\n# Iniciar\nCMD [\"dsh\", \"--mode\", \"standard\", \"--host\", \"0.0.0.0\"]"
+    },
+    {
+      "titulo": "Docker Compose com GPU",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# docker-compose.yaml\nversion: '3.8'\nservices:\n  harness:\n    build: .\n    ports:\n      - \"8080:8080\"\n    volumes:\n      - ./config:/app/.dsh\n      - ./sessions:/root/.dsh/sessions\n    deploy:\n      resources:\n        reservations:\n          devices:\n            - driver: nvidia\n              count: 1\n              capabilities: [gpu]\n    environment:\n      - DSH_MODEL=deepseek-v4:14b\n      - DSH_MODE=standard\n      - NVIDIA_VISIBLE_DEVICES=all\n    restart: unless-stopped\n    healthcheck:\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost:8080/health\"]\n      interval: 30s\n      timeout: 10s\n      retries: 3"
+    },
+    {
+      "titulo": "Monitoramento com Prometheus",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# prometheus.yaml\nglobal:\n  scrape_interval: 15s\n\nscrape_configs:\n  - job_name: 'deepseek-harness'\n    static_configs:\n      - targets: ['harness:8080']\n    metrics_path: '/metrics'"
+    },
+    {
+      "titulo": "Rate Limiting",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# dsh.config.yaml — produção\nrate_limiting:\n  enabled: true\n  requests_per_minute: 60\n  tokens_per_hour: 100000\n  per_user: true\n\nfallback:\n  primary: \"deepseek-v4:14b\"\n  secondary: \"deepseek-v4:7b\"\n  on_error: \"switch\"\n  max_retries: 3"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Na primeira noite",
+    "O harness ficou retornando erros por 8 horas antes de alguém perceber [3]"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 16 — Deploy e Operacao: Levando a Oficina para Producao",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "feito_quando_insuficiente",
+    "sem_armadilhas"
+  ]
+}

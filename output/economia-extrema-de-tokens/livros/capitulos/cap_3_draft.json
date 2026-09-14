@@ -1,0 +1,48 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "3" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "titulo": "Skills Agênticas de Compressão: Caveman, Headroom, Lean-CTX",
+  "senioridade_obra": "iniciante",
+  "callback_capitulo_anterior": "Capítulo 2: o conceito de compressão de contexto como redução de dimensionalidade — caveman e headroom foram apresentados isoladamente; agora o leitor os vê encadeados em pipeline junto com o lean-ctx.",
+  "metricas_obrigatorias": [
+    { "metrica": "economia de tokens no raciocínio interno (caveman)", "valor": "90%" },
+    { "metrica": "economia de tokens em logs de compilação/teste (headroom)", "valor": "80%" },
+    { "metrica": "economia de tokens de leitura de código (lean-ctx)", "valor": "85%" },
+    { "metrica": "redução de linhas lidas ao editar função em arquivo grande", "valor": "25 linhas em vez de 1.500 linhas" },
+    { "metrica": "economia combinada declarada das 8 ferramentas quando aplicadas juntas", "valor": "até 85% do custo total com LLMs" }
+  ],
+  "escala_e_contorno": {
+    "ate_onde_escala": "A cadeia caveman → headroom → lean-ctx escala bem para qualquer sessão de agente que produza raciocínio interno extenso, logs de build/teste e leitura de arquivos de código — cobre a maioria do consumo de tokens operacional de um agente de codificação.",
+    "onde_quebra": "Headroom quebra quando a causa raiz do erro está NO MEIO do log (não no topo nem no final) — a regra fixa de 3+4 linhas corta a informação útil. Lean-CTX quebra quando o símbolo procurado não tem nome único (grep retorna dezenas de ocorrências) ou quando a lógica está espalhada por múltiplos arquivos sem um padrão de busca claro — nesses casos, ler o arquivo inteiro (ou um trecho maior) ainda é mais barato que 10 buscas frustradas.",
+    "contorno": "Para headroom: usar flag de contexto extra (ex.: grep -C) ao redor do trecho truncado quando o erro não aparece nas bordas. Para lean-ctx: subir o `--topo` da busca ou usar AST-grep (Capítulo 6) para localizar por estrutura, não por string."
+  },
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "A Cadeia de Compressão: 3 Skills, 1 Pipeline",
+        "escopo": "Entra: o que cada skill comprime (caveman = raciocínio interno do agente; headroom = saída de shell/build/teste >7 linhas; lean-ctx = leitura de arquivo de código). Fica de fora: configuração avançada de hooks (fica para o Pilar 3) e ferramentas de cache/memória (Capítulo 4). O leitor entende que não são 3 truques soltos, mas 3 estágios de um mesmo funil de economia, cada um atuando em um tipo diferente de saída do agente.",
+        "ancora_visual": "flowchart LR do fluxo de trabalho do Engenheiro de Custos com IA durante uma tarefa de codificação: Tarefa do agente -> [Raciocínio interno] --caveman--> Pensamento comprimido; Tarefa -> [Comando de build/teste] --headroom--> Log comprimido (3 topo + 4 fim); Tarefa -> [Leitura de arquivo] --lean-ctx--> grep + slice de linhas. Todos os 3 ramos convergem num nó final 'Contexto enxuto entregue ao LLM', reforçando o vocabulário de fluxo de caixa do motivo condutor.",
+        "entrega_tecnica": "Python: script comentado passo a passo (nível iniciante) que simula a contagem de tokens antes/depois de cada estágio do pipeline (raciocínio, log, leitura de código), usando um contador simples de caracteres/4 como proxy de tokens, e imprime a economia percentual de cada etapa.",
+        "evolucao_leitor": "De 'conheço 3 skills separadas que economizam tokens' para 'enxergo a cadeia caveman → headroom → lean-ctx como um pipeline único de compressão, e sei em qual ponto do fluxo cada uma entra'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Grep Antes de Read: a Disciplina do Lean-CTX",
+        "escopo": "Entra: por que ler um arquivo inteiro é caro (custo escala com o tamanho do arquivo, não com o tamanho da mudança); a regra comportamental de localizar o símbolo via grep/AST antes de qualquer leitura de arquivo >50 linhas; o exemplo real do dossiê (arquivo de 1.500 linhas, edição de 25 linhas). Fica de fora: buscas estruturais por AST (aprofundado no Capítulo 6). Este é o núcleo técnico mais denso do capítulo: exige mudar um hábito automático (ler tudo para 'ter certeza') por uma disciplina de busca cirúrgica.",
+        "ancora_visual": "sequenceDiagram entre Agente, Grep e Arquivo: o Agente primeiro pergunta a localização do símbolo ao Grep (que devolve StartLine/EndLine), e só então lê a fatia exata do Arquivo — em contraste com uma segunda faixa do mesmo diagrama mostrando o caminho ingênuo (Agente lê o Arquivo inteiro direto), destacando visualmente a diferença de volume de dados transitando.",
+        "entrega_tecnica": "Bash: script comentado linha a linha (nível iniciante) que primeiro roda `grep -n \"def nome_da_funcao\"` num arquivo de exemplo para achar a linha, e depois usa `sed -n 'INICIO,FIMp'` para ler só a fatia — comparando o total de linhas lidas com e sem a disciplina.",
+        "evolucao_leitor": "De 'abro o arquivo inteiro sempre que preciso mexer em algo' para 'localizo o símbolo primeiro e leio só a fatia que preciso — sei que essa é a diferença entre ler 25 linhas e 1.500'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Quando NÃO Comprimir: Governança de Exceções",
+        "escopo": "Entra: os casos em que a compressão deve ser desabilitada (conteúdo sensível/PII, saída que vai para `output/**` ou dados de obra que exigem leitura íntegra, decisões de auditoria que precisam do log completo); como declarar essas exceções nos hooks do `.claude/settings.json` para que rodem automaticamente sem depender de lembrar manualmente. Fica de fora: implementação de cache (Capítulo 4). Este é o pilar que separa quem usa as skills por padrão de quem sabe *quando desligá-las* — a marca de quem já queimou os dedos comprimindo o que não devia.",
+        "ancora_visual": "flowchart TD de árvore de decisão: 'Saída do agente' -> pergunta 'Vai para output/** ou é dado de auditoria/PII?' -> [Sim] 'NÃO comprimir, ler/logar integralmente' / [Não] 'Aplicar caveman/headroom/lean-ctx normalmente' -> 'Hook em .claude/settings.json decide automaticamente'.",
+        "entrega_tecnica": "JSON: exemplo comentado de trecho de `.claude/settings.json` com um hook que aciona headroom/lean-ctx por padrão, mas declara uma exceção de path (`output/**`) que preserva o conteúdo integral.",
+        "evolucao_leitor": "De 'aplico compressão em tudo, sempre' para 'sei declarar a exceção certa no hook certo, porque compressão sem governança pode apagar exatamente o dado que eu precisava auditar'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

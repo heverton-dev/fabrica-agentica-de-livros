@@ -1,0 +1,418 @@
+{
+  "slug": "livros/otimizacao-tokens-ide-agentica",
+  "tipo_obra": "livro",
+  "veredito": "CONFORME",
+  "total_capitulos": 8,
+  "caracteres_obra": 213169,
+  "paginas_estimadas": 85.3,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 8 capitulos",
+      "conforme": true,
+      "detalhe": "8 capitulo(s) (minimo 8)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 80 paginas (~200.000 caracteres)",
+      "conforme": true,
+      "detalhe": "213.169 caracteres (minimo 200.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 20 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=hibrido)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [],
+  "inconsistencia_terminologica": [],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": true,
+    "vocabulario_motivo_condutor": [
+      "pericia",
+      "laudo",
+      "fonte primaria",
+      "cadeia de custodia",
+      "autenticacao",
+      "falsificacao",
+      "evidencia",
+      "assinatura",
+      "contraprova",
+      "letra timbrada"
+    ],
+    "capitulos_com_citacao_empilhada": [
+      {
+        "capitulo": "3",
+        "ocorrencias": [
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "4",
+        "ocorrencias": [
+          "[2][3]",
+          "[5][6]",
+          "[10][11]",
+          "[12][1]",
+          "[5][7]",
+          "[5][6]",
+          "[5][6]",
+          "[15][16]",
+          "[15][16]"
+        ]
+      },
+      {
+        "capitulo": "6",
+        "ocorrencias": [
+          "[11][12]",
+          "[13][14]",
+          "[17][18]",
+          "[19][20]",
+          "[25][26]"
+        ]
+      },
+      {
+        "capitulo": "7",
+        "ocorrencias": [
+          "[17][18]",
+          "[11][12]",
+          "[8][7]",
+          "[13][14]",
+          "[15][16]",
+          "[9][10]",
+          "[17][18]",
+          "[4][5]"
+        ]
+      },
+      {
+        "capitulo": "8",
+        "ocorrencias": [
+          "[14][15]",
+          "[6][16]",
+          "[1][10][11]"
+        ]
+      }
+    ],
+    "capitulos_sem_recorrencia_motivo_condutor": [],
+    "capitulos_sem_callback_capitulo_anterior": [],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 0
+    },
+    "validar-escala.py": {
+      "exit": 0
+    },
+    "validar-afirmacoes.py": {
+      "exit": 0
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "1",
+      "arquivo": "cap_1.md",
+      "caracteres": 25880,
+      "palavras": 3220,
+      "secoes_faltantes": [],
+      "referencias": 24,
+      "citacoes_inline": 28,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "reference*. Disponível em: https://code.claude.com/docs/en/hooks. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 35,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.7,
+        "coeficiente_variacao": 0.985
+      }
+    },
+    {
+      "capitulo": "2",
+      "arquivo": "cap_2.md",
+      "caracteres": 27768,
+      "palavras": 3902,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 63,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 8,
+      "artefatos_tecnica": 8,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " coding agents*. Disponível em: https://github.com/f/agentlytics. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 20,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 27.7,
+        "coeficiente_variacao": 0.978
+      }
+    },
+    {
+      "capitulo": "3",
+      "arquivo": "cap_3.md",
+      "caracteres": 23536,
+      "palavras": 3129,
+      "secoes_faltantes": [],
+      "referencias": 24,
+      "citacoes_inline": 34,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "[24] ORCA. *Orca ADE*. Disponível em: https://www.onorca.dev/. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": 10,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.8,
+        "coeficiente_variacao": 1.331
+      }
+    },
+    {
+      "capitulo": "4",
+      "arquivo": "cap_4.md",
+      "caracteres": 25151,
+      "palavras": 3074,
+      "secoes_faltantes": [],
+      "referencias": 22,
+      "citacoes_inline": 40,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " coding agents*. Disponível em: https://github.com/f/agentlytics. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[2][3]",
+        "[5][6]",
+        "[10][11]",
+        "[12][1]",
+        "[5][7]",
+        "[5][6]",
+        "[5][6]",
+        "[15][16]",
+        "[15][16]"
+      ],
+      "vocabulario_fora_ilustra": 10,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.7,
+        "coeficiente_variacao": 1.013
+      }
+    },
+    {
+      "capitulo": "5",
+      "arquivo": "cap_5.md",
+      "caracteres": 28191,
+      "palavras": 3449,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 29,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "SONL files*. Disponível em: https://github.com/ryoppippi/ccusage. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 12,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 31.2,
+        "coeficiente_variacao": 0.855
+      }
+    },
+    {
+      "capitulo": "6",
+      "arquivo": "cap_6.md",
+      "caracteres": 26697,
+      "palavras": 3476,
+      "secoes_faltantes": [],
+      "referencias": 27,
+      "citacoes_inline": 35,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": ": https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[11][12]",
+        "[13][14]",
+        "[17][18]",
+        "[19][20]",
+        "[25][26]"
+      ],
+      "vocabulario_fora_ilustra": 30,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.1,
+        "coeficiente_variacao": 0.784
+      }
+    },
+    {
+      "capitulo": "7",
+      "arquivo": "cap_7.md",
+      "caracteres": 28170,
+      "palavras": 3639,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 49,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Parallel*. Disponível em: https://www.gnu.org/software/parallel/. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[17][18]",
+        "[11][12]",
+        "[8][7]",
+        "[13][14]",
+        "[15][16]",
+        "[9][10]",
+        "[17][18]",
+        "[4][5]"
+      ],
+      "vocabulario_fora_ilustra": 48,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 29.6,
+        "coeficiente_variacao": 1.074
+      }
+    },
+    {
+      "capitulo": "8",
+      "arquivo": "cap_8.md",
+      "caracteres": 27776,
+      "palavras": 3820,
+      "secoes_faltantes": [],
+      "referencias": 25,
+      "citacoes_inline": 48,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "tps://developer.1password.com/docs/cli/reference/commands/signin. Acesso em: 20 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[14][15]",
+        "[6][16]",
+        "[1][10][11]"
+      ],
+      "vocabulario_fora_ilustra": 27,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 25.9,
+        "coeficiente_variacao": 1.053
+      }
+    }
+  ]
+}

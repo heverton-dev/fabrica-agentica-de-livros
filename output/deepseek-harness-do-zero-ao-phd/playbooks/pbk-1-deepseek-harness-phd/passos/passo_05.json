@@ -1,0 +1,48 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Sistema de Plugins: O Coracao do Harness",
+  "estagio": "Montagem",
+  "estagio_indice": 2,
+  "objetivo": "Dominar o ciclo de vida dos plugins Cordis.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Criando um Plugin do Zero",
+      "linguagem": "bash",
+      "comandos": [
+        "npm init -y"
+      ],
+      "codigo": "# Criar estrutura do plugin\nmkdir my-word-count-plugin\ncd my-word-count-plugin\nnpm init -y"
+    },
+    {
+      "titulo": "Instalando e Testando",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Instalar localmente\ndsh plugins install ./my-word-count-plugin\n\n# Verificar que está instalado\ndsh plugins list\n# NAME                    VERSION  PROVIDES    REQUIRES\n# my-word-count-plugin    0.1.0    tool        filesystem\n\n# Testar no harness\ndsh> Use a ferramenta word-count no arquivo README.md\n# Resultado: { words: 1247, lines: 89, chars: 7832 }"
+    },
+    {
+      "titulo": "Resolvendo Conflitos",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "dsh plugins check-conflicts\n# ⚠️ Conflito: serviço 'shell' registrado por:\n#   - @deepseek/shell-tool (v1.2.0)\n#   - my-custom-shell (v0.1.0)\n# Resolução: my-custom-shell tem prioridade (mais recente)"
+    }
+  ],
+  "gate": "npm init -y",
+  "comandos": [
+    "npm init -y"
+  ],
+  "feito_quando": [
+    "Sempre implemente o lifecycle completo:** `ready` e `dispose` não são opcionais",
+    "Use `ctx.effect()` para side effects:** cada `addEventListener`, `setInterval`, ou modificação de estado global deve ter um cleanup associado",
+    "Declare dependências explicitamente:** o campo `requires` no `package.json` permite que o Cordis resolva conflitos antes de carregar",
+    "Teste a remoção:** antes de publicar, instale e remova seu plugin 3 vezes seguidas. Se o harness ficar instável, há um leak [3]"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 5 — Sistema de Plugins: O Coracao do Harness",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

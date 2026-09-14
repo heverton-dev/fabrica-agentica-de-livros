@@ -1,0 +1,38 @@
+{
+  "numero": "11",
+  "capitulo_fonte": "11",
+  "titulo": "O Guarda-Costas do Git: Pre-Commit com 6 Gates",
+  "estagio": "Circuito de segurança",
+  "estagio_indice": 3,
+  "objetivo": "Ensinar a implementar pre-commit hook com 6 gates.",
+  "pre_requisito": "Passo 10 concluído",
+  "entregas": [
+    ".harness/hooks/pre-commit",
+    ".git/hooks/pre-commit"
+  ],
+  "execucao": [
+    {
+      "titulo": "O Script Oficial do Pre-Commit Hook (`.harness/hooks/pre-commit`)",
+      "linguagem": "bash",
+      "comandos": [
+        "pytest -q || { echo \"[FALHA GATE 2] Testes falharam!\"; exit 1; }"
+      ],
+      "codigo": "#!/usr/bin/env bash\n# pre-commit — O Guarda-Costas do Git com 6 Gates\nset -e\n\necho \"=== [PRE-COMMIT] Iniciando Inspeção dos 6 Gates de Integridade ===\"\n\n# GATE 1: Detecção de Segredos\necho \"--> Gate 1/6: Verificando exposição de chaves privadas...\"\nif grep -rE \"sk-ant-[a-zA-Z0-9_-]{20,}|ghp_[a-zA-Z0-9]{20,}\" --exclude-dir=\".git\" .; then\n    echo \"[FALHA GATE 1] Segredo detectado no código! Abortando commit.\"\n    exit 1\nfi\necho \"    [OK] Nenhum segredo exposto.\"\n\n# GATE 2: Testes Automatizados\necho \"--> Gate 2/6: Executando suíte de testes de integridade...\"\nif command -v pytest >/dev/null 2>&1; then\n    pytest -q || { echo \"[FALHA GATE 2] Testes falharam!\"; exit 1; }\nfi\necho \"    [OK] Testes automatizados passaram com Exit Code 0.\"\n\n# GATE 3, 4, 5, 6: Verificação de Tipos e Governança\necho \"--> Gates 3 a 6: Verificando compilação e integridade de governança...\"\nif [ ! -f \"CLAUDE.md\" ]; then\n    echo \"[FALHA GATE 6] Arquivo de governança CLAUDE.md foi apagado!\"; exit 1;\nfi\necho \"    [OK] Governança e tipagem verificadas.\"\n\necho \"=== [SUCESSO] Todos os Gates Aprovados! Commit Liberado. ===\"\nexit 0"
+    }
+  ],
+  "gate": "pytest -q || { echo \"[FALHA GATE 2] Testes falharam!\"; exit 1; }",
+  "comandos": [
+    "pytest -q || { echo \"[FALHA GATE 2] Testes falharam!\"; exit 1; }"
+  ],
+  "feito_quando": [
+    "Crie o arquivo `teste_segredo.txt` com uma chave `sk-ant-...` falsa e confirme que o Gate 1 bloqueia o commit",
+    "Instale o script `pre-commit` em `.git/hooks/pre-commit` com `chmod +x` e rode um commit de teste",
+    "Adicione um teste unitário que falha de propósito e observe o Gate 2 abortando o commit com Exit Code 1",
+    "Verifique que o Gate 6 aborta o commit se o arquivo `CLAUDE.md` for apagado ou adulterado"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 11 — O Guarda-Costas do Git: Pre-Commit com 6 Gates",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

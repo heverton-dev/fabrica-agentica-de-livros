@@ -1,0 +1,44 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "O Agente Avancado e as Outras Sete Ferramentas: Produto Real, Sintaxe Fabricada",
+  "estagio": "Laudo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor aplica a pericia em um caso denso: um agente de automacao real cujos comandos de skill, cron, memoria e sessao foram todos documentados de memoria, mais um panorama das outras sete ferramentas citadas no manual original.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [
+    "hermes_pericia.sh",
+    "~/.mimo/config.yaml",
+    "mimocode.json",
+    "~/.antigravity/settings.json",
+    "~/.google-ai/configurerc",
+    "~/.gemini/settings.json"
+  ],
+  "execucao": [
+    {
+      "titulo": "Checklist de Terminal: `hermes_pericia.sh`",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env bash\n# hermes_pericia.sh -- checklist de pericia dos comandos do Hermes Agent.\n#\n# O manual de referencia descreve `hermes skill activate`, `hermes cron create\n# --name/--schedule/--deliver`, `hermes memory add --target/--content` e\n# `hermes session search/read`. Nenhum dos quatro existe na CLI real -- ver\n# a documentacao oficial de CLI/Configuration da NousResearch [4][5].\n#\n# Uso: ./hermes_pericia.sh  (sem argumentos -- imprime o laudo comparativo)\n\nset -euo pipefail\n\necho \"== LAUDO PERICIAL: Hermes Agent ==\"\necho\n\nprintf \"%-45s | %-45s\\n\" \"FABRICADO (manual)\" \"REAL (doc oficial)\"\nprintf \"%-45s-+-%-45s\\n\" \"$(printf -- '-%.0s' {1..45})\" \"$(printf -- '-%.0s' {1..45})\"\nprintf \"%-45s | %-45s\\n\" \"hermes skill activate <nome>\"        \"hermes skills install <id> | browse | list\"\nprintf \"%-45s | %-45s\\n\" \"hermes cron create --name --schedule\" \"hermes cron create \\\"<prompt>\\\" [--skill NOME]\"\nprintf \"%-45s | %-45s\\n\" \"hermes memory add --target --content\"  \"hermes memory setup | status | off\"\n# ... (trecho completo no Capitulo 07 do livro)"
+    }
+  ],
+  "gate": "python verificar_cli.py hermes --comandos-esperados \"skills,cron,memory,sessions\"",
+  "comandos": [
+    "python verificar_cli.py hermes --comandos-esperados \"skills,cron,memory,sessions\""
+  ],
+  "feito_quando": [
+    "Rode `hermes skills --help`, `hermes cron --help`, `hermes memory --help` e `hermes sessions --help` na sua instalação e confira se os subcomandos batem com o laudo deste capítulo",
+    "Execute `hermes_pericia.sh` e adicione uma linha nova para o próximo comando do Hermes que você pretende automatizar, antes de escrevê-lo em produção",
+    "Escolha uma das sete ferramentas da tabela de campo (a que você já usa ou pretende testar) e confirme o caminho real de configuração na documentação oficial dela, registrando o resultado",
+    "Rode `verificar_cli.py` contra uma CLI Agêntica qualquer que você já tenha instalada, com uma lista de 3 a 5 subcomandos que você pretende automatizar"
+  ],
+  "armadilhas": [
+    "Copiar flag de CLI de um post de blog ou changelog antigo sem rodar --help na versao instalada",
+    "Supor que toda IDE agentica usa a mesma sintaxe de skill/cron/memoria",
+    "Achar que o nome do produto ser real garante que todo comando do texto tambem esta certo"
+  ],
+  "referencia_cruzada": "Cap. 7 — O Agente Avancado e as Outras Sete Ferramentas: Produto Real, Sintaxe Fabricada",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Refatoração Estrutural com AST: ast-grep",
+  "estagio": "Custo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor escreve uma query AST uma vez e reduz seu código em 20-30%, eliminando duplicação que o grep tradicional não vê. Menos código = menos contexto = menos custo.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Provando a diferença entre grep e AST na prática",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# comparar_grep_vs_ast.py\n# Demonstracao didatica: contar chamadas \"api.get(url)\" via regex (texto)\n# versus via arvore de sintaxe (estrutura), no mesmo trecho de codigo Python.\n\nimport ast\nimport re\n\ncodigo_fonte = \"\"\"\nresultado = api.get(url)\noutro = api.get(\n    url,\n)\n\"\"\"\n\n\ndef contar_via_regex(codigo: str) -> int:\n    \"\"\"Conta ocorrencias comparando texto, byte a byte, contra um padrao fixo.\"\"\"\n    padrao = re.compile(r\"api\\\\.get\\\\(url\\\\)\")\n    return len(padrao.findall(codigo))\n\n\ndef contar_via_ast(codigo: str) -> int:\n    \"\"\"Conta ocorrencias comparando a estrutura da arvore de sintaxe.\n\n    Encontra qualquer chamada no formato api.get(...), nao importa\n    como ela foi formatada no arquivo original.\n    \"\"\"\n    arvore = ast.parse(codigo)\n    total = 0\n    for no in ast.walk(arvore):\n        if isinstance(no, ast.Call) and isinstance(no.func, ast.Attribute):\n            se_e_api = isinstance(no.func.value, ast.Name) and no.func.value.id == \"api\"\n            if se_e_api and no.func.attr == \"get\":\n                total += 1\n    return total\n\n\nif __name__ == \"__main__\":\n    print(\"Via regex (texto):\", contar_via_regex(codigo_fonte))\n    print(\"Via AST (estrutura):\", contar_via_ast(codigo_fonte))"
+    },
+    {
+      "titulo": "Investigação pontual sem escrever regra alguma",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "$ sg run -p 'api.get($URL)' --lang js\nsrc/pedidos.js:12: resultado = api.get(url)\nsrc/relatorios.js:47: dados = api.get(endpointRelatorio)\n2 correspondencias em 2 arquivos, 8 ms"
+    },
+    {
+      "titulo": "Reescrevendo em lote: da regra YAML ao repositório inteiro",
+      "linguagem": "console",
+      "comandos": [
+        "npm install -g @ast-grep/cli",
+        "git diff src/pedidos.js"
+      ],
+      "codigo": "$ npm install -g @ast-grep/cli\n$ sg --version\n0.30.0"
+    },
+    {
+      "titulo": "Colocando um auditor automático no CI",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# regras/proibir-console-log.yml\nid: proibir-console-log-em-producao\nlanguage: JavaScript\nrule:\n  pattern: \"console.log($$$ARGS)\""
+    }
+  ],
+  "gate": "npm install -g @ast-grep/cli",
+  "comandos": [
+    "npm install -g @ast-grep/cli",
+    "git diff src/pedidos.js"
+  ],
+  "feito_quando": [
+    "Instale o ast-grep no seu ambiente (`npm install -g @ast-grep/cli` ou o binário nativo da plataforma)",
+    "Rode `sg run -p '<um padrão do seu projeto>'` e compare o resultado com o mesmo `grep` sobre o mesmo padrão",
+    "Escreva uma regra YAML de reescrita para uma mudança de assinatura real do seu código e rode com `--update-all` num branch isolado",
+    "Adicione um step de `sg scan --error` num workflow de CI, mesmo que só em modo de aviso no início"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 6 — Refatoração Estrutural com AST: ast-grep",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

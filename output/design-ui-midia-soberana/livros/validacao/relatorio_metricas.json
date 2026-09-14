@@ -1,0 +1,21 @@
+{
+  "slug": "livros/design-ui-midia-soberana",
+  "capitulos": 8,
+  "metricas_por_capitulo": {
+    "cap_01": 1,
+    "cap_02": 1,
+    "cap_03": 3,
+    "cap_04": 1,
+    "cap_05": 27,
+    "cap_06": 7,
+    "cap_07": 9,
+    "cap_08": 1
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

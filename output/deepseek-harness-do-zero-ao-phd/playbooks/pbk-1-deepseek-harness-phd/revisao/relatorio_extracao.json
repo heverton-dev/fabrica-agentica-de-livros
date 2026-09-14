@@ -1,0 +1,149 @@
+{
+  "slug_mae": "livros/deepseek-harness-do-zero-ao-phd",
+  "slug_playbook": "playbooks/deepseek-harness/pbk-1-deepseek-harness-phd",
+  "total_passos": 16,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "O Que e o DeepSeek Harness: O Agente que e Plugin",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "Instalacao Local: Do Zero ao Primeiro dsh",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "Modelos DeepSeek: Escolhendo o Motor da Sua Oficina",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Ollama, vLLM e llama.cpp: Os Tres Motores de Inferencia Local",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Sistema de Plugins: O Coracao do Harness",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Tool Pipeline: Como o Agente Executa Acoes",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Sessoes e Estado: Memoria do Agente",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Sandbox e Seguranca: Isolando o Agente",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "09",
+      "titulo": "Criando seu Primeiro Plugin personalizado",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "10",
+      "titulo": "Ferramentas Customizadas: Construindo Pecas Novas",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "11",
+      "titulo": "Pipelines de Ferramentas: Orquestrando Acoes Complexas",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "12",
+      "titulo": "RAG Local: Memoria de Longo Prazo para Agentes",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "13",
+      "titulo": "Fine-Tuning Local: Personalizando o Modelo",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "14",
+      "titulo": "Multi-Agente: Coordenando uma Equipe de Agentes",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "15",
+      "titulo": "Profiles e Configuracao Avancada: Afinando a Oficina",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "16",
+      "titulo": "Deploy e Operacao: Levando a Oficina para Producao",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "feito_quando_insuficiente",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 1,
+    "com_gate": 9,
+    "com_feito_quando": 15,
+    "com_armadilhas": 0
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "slug": "livros/orca-ade",
+  "tipo_obra": "livro",
+  "veredito": "NAO CONFORME",
+  "total_capitulos": 8,
+  "caracteres_obra": 187001,
+  "paginas_estimadas": 74.8,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 16 capitulos",
+      "conforme": false,
+      "detalhe": "8 capitulo(s) (minimo 16)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 160 paginas (~400.000 caracteres)",
+      "conforme": false,
+      "detalhe": "187.001 caracteres (minimo 400.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 20 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=hibrido)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "esta",
+      "variantes": {
+        "está": 57,
+        "esta": 3,
+        "Esta": 1
+      },
+      "ocorrencias": 61
+    },
+    {
+      "termo_normalizado": "porque",
+      "variantes": {
+        "porque": 45,
+        "porquê": 2
+      },
+      "ocorrencias": 47
+    },
+    {
+      "termo_normalizado": "comentario",
+      "variantes": {
+        "comentário": 7,
+        "Comentário": 1,
+        "comentario": 1
+      },
+      "ocorrencias": 9
+    },
+    {
+      "termo_normalizado": "aquele",
+      "variantes": {
+        "aquele": 3,
+        "àquele": 2,
+        "Aquele": 1
+      },
+      "ocorrencias": 6
+    },
+    {
+      "termo_normalizado": "claudecode",
+      "variantes": {
+        "claude-code": 3,
+        "ClaudeCode": 1
+      },
+      "ocorrencias": 4
+    },
+    {
+      "termo_normalizado": "divida",
+      "variantes": {
+        "divida": 2,
+        "Divida": 1,
+        "dívida": 1
+      },
+      "ocorrencias": 4
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": true,
+    "vocabulario_motivo_condutor": [
+      "torre de controle",
+      "frota de agentes",
+      "worktree como garagem isolada",
+      "painel de estado",
+      "linha de vida (heartbeat)",
+      "ordem de serviço (dispatch)",
+      "portão de decisão",
+      "diário de bordo da sessão",
+      "checkpoint de worktree",
+      "sala de revisão",
+      "procedência de linha",
+      "frota remota"
+    ],
+    "capitulos_com_citacao_empilhada": [
+      {
+        "capitulo": "1",
+        "ocorrencias": [
+          "[4][53]",
+          "[49][51]"
+        ]
+      },
+      {
+        "capitulo": "2",
+        "ocorrencias": [
+          "[20][70]",
+          "[25][26][27][28]",
+          "[35][36]",
+          "[65][46]",
+          "[3][4][6][25][28]",
+          "[3][49]",
+          "[6][3]",
+          "[1][65]",
+          "[1][62]",
+          "[1][42]"
+        ]
+      },
+      {
+        "capitulo": "3",
+        "ocorrencias": [
+          "[2][66]",
+          "[2][71]",
+          "[2][49]",
+          "[3][49]",
+          "[3][53]",
+          "[3][26]",
+          "[51][4]",
+          "[6][53]",
+          "[26][3]",
+          "[3][51]",
+          "[4][51]",
+          "[4][29][30][31]",
+          "[2][38]"
+        ]
+      },
+      {
+        "capitulo": "4",
+        "ocorrencias": [
+          "[4][25]",
+          "[4][26][27]",
+          "[4][28]",
+          "[49][51]"
+        ]
+      },
+      {
+        "capitulo": "7",
+        "ocorrencias": [
+          "[5][43]",
+          "[15][18]",
+          "[9][15]",
+          "[20][70]",
+          "[6][20]",
+          "[17][18]",
+          "[18][43]",
+          "[5][9]",
+          "[9][15]",
+          "[15][18]",
+          "[17][18]",
+          "[18][43]",
+          "[49][51]"
+        ]
+      },
+      {
+        "capitulo": "8",
+        "ocorrencias": [
+          "[4][25]",
+          "[4][25]",
+          "[4][25]"
+        ]
+      }
+    ],
+    "capitulos_sem_recorrencia_motivo_condutor": [
+      "2",
+      "3",
+      "4"
+    ],
+    "capitulos_sem_callback_capitulo_anterior": [],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 1
+    },
+    "validar-escala.py": {
+      "exit": 0
+    },
+    "validar-afirmacoes.py": {
+      "exit": 1
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "1",
+      "arquivo": "cap_1.md",
+      "caracteres": 21233,
+      "palavras": 2726,
+      "secoes_faltantes": [],
+      "referencias": 24,
+      "citacoes_inline": 28,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "and CSS*. 2026. Disponível em: <https://www.electronjs.org/>. Acesso em: 12 set. 2026. (B)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        29,
+        30,
+        31,
+        32,
+        35,
+        37,
+        38,
+        39,
+        47,
+        62,
+        66,
+        70,
+        71
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[4][53]",
+        "[49][51]"
+      ],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 15.4,
+        "coeficiente_variacao": 0.868
+      }
+    },
+    {
+      "capitulo": "2",
+      "arquivo": "cap_2.md",
+      "caracteres": 24612,
+      "palavras": 3119,
+      "secoes_faltantes": [],
+      "referencias": 33,
+      "citacoes_inline": 73,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "t-end component. 2026. Disponível em: <https://xtermjs.org/>. Acesso em: 12 set. 2026. (B)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        7,
+        8,
+        58,
+        59
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[20][70]",
+        "[25][26][27][28]",
+        "[35][36]",
+        "[65][46]",
+        "[3][4][6][25][28]",
+        "[3][49]",
+        "[6][3]",
+        "[1][65]",
+        "[1][62]",
+        "[1][42]"
+      ],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 16.6,
+        "coeficiente_variacao": 1.125
+      }
+    },
+    {
+      "capitulo": "3",
+      "arquivo": "cap_3.md",
+      "caracteres": 24768,
+      "palavras": 3038,
+      "secoes_faltantes": [],
+      "referencias": 32,
+      "citacoes_inline": 70,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "and CSS*. 2026. Disponível em: <https://www.electronjs.org/>. Acesso em: 12 set. 2026. (B)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        7,
+        9,
+        10,
+        11,
+        13,
+        21,
+        25,
+        28,
+        32,
+        35,
+        42,
+        47,
+        58,
+        60,
+        62
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[2][66]",
+        "[2][71]",
+        "[2][49]",
+        "[3][49]",
+        "[3][53]",
+        "[3][26]",
+        "[51][4]",
+        "[6][53]",
+        "[26][3]",
+        "[3][51]",
+        "[4][51]",
+        "[4][29][30][31]",
+        "[2][38]"
+      ],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 16.7,
+        "coeficiente_variacao": 1.138
+      }
+    },
+    {
+      "capitulo": "4",
+      "arquivo": "cap_4.md",
+      "caracteres": 25024,
+      "palavras": 2949,
+      "secoes_faltantes": [],
+      "referencias": 28,
+      "citacoes_inline": 55,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Hub, 2026. Disponível em: <https://github.com/stablyai/orca>. Acesso em: 12 set. 2026. (A)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        3,
+        5,
+        7,
+        8,
+        16,
+        21,
+        29,
+        30,
+        31,
+        32,
+        34,
+        42,
+        43,
+        54
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[4][25]",
+        "[4][26][27]",
+        "[4][28]",
+        "[49][51]"
+      ],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 16.4,
+        "coeficiente_variacao": 1.039
+      }
+    },
+    {
+      "capitulo": "5",
+      "arquivo": "cap_5.md",
+      "caracteres": 22497,
+      "palavras": 3038,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 46,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Hub, 2026. Disponível em: <https://github.com/stablyai/orca>. Acesso em: 12 set. 2026. (A)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        1
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.8,
+        "coeficiente_variacao": 1.105
+      }
+    },
+    {
+      "capitulo": "6",
+      "arquivo": "cap_6.md",
+      "caracteres": 20033,
+      "palavras": 2775,
+      "secoes_faltantes": [],
+      "referencias": 22,
+      "citacoes_inline": 29,
+      "diagramas_ilustra": 3,
+      "diagramas_total": 3,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Hub, 2026. Disponível em: <https://github.com/stablyai/orca>. Acesso em: 12 set. 2026. (A)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20,
+        35,
+        37,
+        42,
+        49,
+        65
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 4,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.3,
+        "coeficiente_variacao": 1.058
+      }
+    },
+    {
+      "capitulo": "7",
+      "arquivo": "cap_7.md",
+      "caracteres": 28829,
+      "palavras": 3398,
+      "secoes_faltantes": [],
+      "referencias": 25,
+      "citacoes_inline": 76,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " desktop apps*. Disponível em: <https://www.electronjs.org/>. Acesso em: 12 set. 2026. (B)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[5][43]",
+        "[15][18]",
+        "[9][15]",
+        "[20][70]",
+        "[6][20]",
+        "[17][18]",
+        "[18][43]",
+        "[5][9]",
+        "[9][15]",
+        "[15][18]",
+        "[17][18]",
+        "[18][43]",
+        "[49][51]"
+      ],
+      "vocabulario_fora_ilustra": 13,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.7,
+        "coeficiente_variacao": 1.091
+      }
+    },
+    {
+      "capitulo": "8",
+      "arquivo": "cap_8.md",
+      "caracteres": 20005,
+      "palavras": 2683,
+      "secoes_faltantes": [],
+      "referencias": 22,
+      "citacoes_inline": 50,
+      "diagramas_ilustra": 2,
+      "diagramas_total": 2,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Hub, 2026. Disponível em: <https://github.com/stablyai/orca>. Acesso em: 12 set. 2026. (A)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        1,
+        6,
+        20,
+        33,
+        34,
+        36,
+        49,
+        51,
+        52,
+        56,
+        65
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[4][25]",
+        "[4][25]",
+        "[4][25]"
+      ],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.0,
+        "coeficiente_variacao": 1.12
+      }
+    }
+  ]
+}

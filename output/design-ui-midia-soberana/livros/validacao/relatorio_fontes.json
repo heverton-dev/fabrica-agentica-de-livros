@@ -1,0 +1,52 @@
+{
+  "dossies": [
+    "dossie_design-ui-midia-soberana.md",
+    "mineracao_academica_design-ui-midia-soberana.md",
+    "mineracao_academica_soberania-tts.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_design-ui-midia-soberana.md",
+      "classes": {
+        "A": 25,
+        "B": 38,
+        "C": 0
+      },
+      "linhas_fonte": 31
+    },
+    {
+      "arquivo": "mineracao_academica_design-ui-midia-soberana.md",
+      "classes": {
+        "A": 16,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 16
+    },
+    {
+      "arquivo": "mineracao_academica_soberania-tts.md",
+      "classes": {
+        "A": 12,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 12
+    }
+  ],
+  "classes": {
+    "A": 53,
+    "B": 38,
+    "C": 0
+  },
+  "linhas_fonte_total": 59,
+  "classificadas": 91,
+  "proporcao_ab": 1.0,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "livros/design-ui-midia-soberana"
+}

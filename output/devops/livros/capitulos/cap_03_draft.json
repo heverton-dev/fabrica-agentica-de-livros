@@ -1,0 +1,42 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "A", "capitulo": "3" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 1: o conceito de Automação e Pipeline CI/CD, agora aplicado ao provisionamento de infraestrutura com IaC",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Fundamentos de Infraestrutura como Código",
+        "escopo": "Definir o que é IaC, os princípios centrais (declarativo, idempotência, imutabilidade) e o problema que IaC resolve: provisionamento manual, ambientes snowflake e drift. Não cobre sintaxe de ferramentas específicas em detalhe. Entra a conexão com controle de versão (Capítulo 2) e automação (Capítulo 1).",
+        "ancora_visual": "flowchart TD do fluxo clássico: Desenvolvedor/Infra → Arquivo IaC versionado (Git) → terraform plan/apply → Provisionamento em Cloud Provider → Ambiente idêntico e reproduzível. Mostrar o contraste com o caminho manual (comandos SSH/scattered).",
+        "entrega_tecnica": "bash script comparativo: lado esquerdo mostra provisionamento manual fragmentado (scp, ssh, apt-get), lado direito mostra o mesmo objetivo declarado em um arquivo IaC versionado. Comentado linha a linha.",
+        "evolucao_leitor": "de provisionar servidores manualmente com comandos individuais para declarar a infraestrutura como código versionado, imutável e reproduzível",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Terraform e HCL — Declarando Infraestrutura",
+        "escopo": "Linguagem HCL do Terraform: providers, resources, variáveis e o conceito de state. A diferença crucial entre declarativo (Terraform: 'oque quero') e imperativo (scripts: 'como chegar'). Por que o state file é crítico e o perigo do drift. Este é o núcleo técnico do capítulo — o leitor precisa dominar 'terraform plan', 'terraform apply' e entender o paralelo com Git (state = versão da infraestrutura).",
+        "ancora_visual": "diagrama de sequência mostrando o ciclo: Arquivo .tf → terraform init (download providers) → terraform plan (diff desejado vs state atual) → terraform apply (concorra com cloud provider) → state atualizado → infraestrutura provisionada. Destacar o paralelo: plan = git diff, apply = git commit/push.",
+        "entrega_tecnica": "arquivo Terraform (HCL) provisionando uma VM única + security group em provedor cloud simulado (localhost). Inclui variables.tf, main.tf e outputs. Comentado passo a passo.",
+        "evolucao_leitor": "de confundir 'declarar' com 'imperativo' para ler e escrever configurações Terraform que o cloud provider reconcilia automaticamente",
+        "conceito_denso": true,
+        "metrica_nucleo": {
+          "metrica": "Deployment Frequency",
+          "valor": "Diária (múltiplas vezes ao dia para elite)",
+          "fonte_dossie": "DORA metrics mencionados em B0003 + MISHRA (2020) systematic mapping"
+        },
+        "limite_contorno": "IaC escala bem para infraestrutura stateless e containers. Não é ideal para dados persistentes sensíveis a latência (bancos de dados stateful), onde a gestão manual ainda exige cuidado. Drift em recursos mutáveis (como regras de firewall alteradas fora do código) quebra a imutabilidade — exigindo detectores de drift como o terraform plan -refresh-only."
+      },
+      {
+        "nome": "Ansible — Configuração e Integração CI/CD",
+        "escopo": "Ansible como ferramenta de configuration management (imperativa/YAML) em contraste com Terraform (declarativo). Playbooks, tasks, handlers e o inventário. Como IaC entra no pipeline CI/CD: validação com terraform fmt/validate e ansible-lint nas etapas do pipeline. Boas práticas: repositórios separados, versionamento semântico, testing com terratest.",
+        "ancora_visual": "pipeline CI/CD integrado: Git push → CI (lint + plan) → approve manual → CD (apply) → ambiente provisionado/configurado. Mostrar gates de segurança: policy-as-code (OPA/Checkov) validando o plano antes do apply.",
+        "entrega_tecnica": "playbook Ansible (YAML) configurando um servidor web Nginx em uma VM recém-provisionada. Inclui handler de restart e notificação. Comentado linha a linha.",
+        "evolucao_leitor": "de scripts isolados sem validação para pipelines automatizados que provisionam, configuram e testam infraestrutura com gates de segurança",
+        "conceito_denso": false
+      }
+    ],
+    "motivo_condutor_vocabulario": ["colaboração", "automação", "imutabilidade", "feedback"],
+    "persona_leitor": "Desenvolvedor Agêntico"
+  }
+}

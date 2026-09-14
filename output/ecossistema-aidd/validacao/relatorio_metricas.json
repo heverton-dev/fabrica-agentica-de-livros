@@ -1,0 +1,31 @@
+{
+  "slug": "ecossistema-aidd",
+  "capitulos": 11,
+  "metricas_por_capitulo": {
+    "cap_1": 4,
+    "cap_2": 1,
+    "cap_3": 2,
+    "cap_4": 2,
+    "cap_5": 0,
+    "cap_6": 5,
+    "cap_7": 2,
+    "cap_8": 6,
+    "cap_9": 3,
+    "cap_10": 4,
+    "cap_11": 7
+  },
+  "total_violacoes": 1,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": [
+    {
+      "regra": "R-MT-1",
+      "enunciado": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+      "detalhe": "nenhuma métrica (número + unidade) encontrada no capítulo",
+      "origem": "cap_5"
+    }
+  ]
+}

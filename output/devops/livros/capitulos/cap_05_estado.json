@@ -1,0 +1,25 @@
+{
+  "capitulo": 5,
+  "slug": "devops",
+  "titulo": "Containers e Docker: empacotando aplicações",
+  "estado": "concluido_autonomo",
+  "arquivo": "output/devops/livros/capitulos/cap_05.md",
+  "caracteres": 11973,
+  "refs_secao7": 16,
+  "citacoes_corpo": 24,
+  "diagramas": 1,
+  "blocos_codigo": 5,
+  "validacoes": {
+    "validar_codigo": "OK 100% (5 blocos, 0 verificaveis)",
+    "renderizar_diagramas": "OK 1 diagrama valido",
+    "validar_metricas": "OK 3 metricas, 0 violacoes",
+    "r4_refs_min": "OK 16 >= 16",
+    "r14_orfas": "OK nenhuma",
+    "r9_hr": "OK ausente",
+    "r13_metatexto": "OK ausente",
+    "r11_legenda_mermaid": "OK",
+    "r12_bloco_codigo": "OK"
+  },
+  "registro_pool": "sucesso (tentativa 1)",
+  "data": "2026-08-27"
+}

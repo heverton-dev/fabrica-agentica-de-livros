@@ -1,0 +1,13 @@
+{
+  "slug": "orquestracao-multi-agente-orca",
+  "modo": "livro",
+  "arquivos": [
+    "output\\orquestracao-multi-agente-orca\\livro-render.md"
+  ],
+  "total": 16,
+  "renderizados": 0,
+  "cache": 16,
+  "falhas": [],
+  "ignorados": [],
+  "validos": 0
+}

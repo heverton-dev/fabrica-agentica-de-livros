@@ -1,0 +1,15 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "4" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 3: o protocolo de verificação de catálogo, agora aplicado a duas bibliotecas Python reais (LLMLingua, GPTCache)",
+  "validacao": {
+    "validar_codigo": "OK (3/3 blocos verificaveis, 1 nao_aplicavel = json)",
+    "renderizar_diagramas": "OK (1 diagrama valido)",
+    "referencias_secao7": 22,
+    "min_referencias_exigido": 20,
+    "r14_orfaos": 0,
+    "r14_refs_nao_citadas": 0
+  },
+  "pool_registro": "sucesso (tentativa 1)"
+}

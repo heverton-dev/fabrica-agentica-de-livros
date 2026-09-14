@@ -1,0 +1,751 @@
+{
+  "slug": "orquestracao-multi-agente-orca",
+  "tipo_obra": "livro",
+  "veredito": "CONFORME",
+  "total_capitulos": 16,
+  "caracteres_obra": 253610,
+  "paginas_estimadas": 101.4,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 8 capitulos",
+      "conforme": true,
+      "detalhe": "16 capitulo(s) (minimo 8)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 80 paginas (~200.000 caracteres)",
+      "conforme": true,
+      "detalhe": "253.610 caracteres (minimo 200.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "8 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 3 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=hibrido)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "02",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "03",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "04",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "05",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "06",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "16",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "03",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "04",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "05",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "06",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "16",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "03",
+      "capitulo_b": "04",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "03",
+      "capitulo_b": "05",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "03",
+      "capitulo_b": "06",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "03",
+      "capitulo_b": "16",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "04",
+      "capitulo_b": "05",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "04",
+      "capitulo_b": "06",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "04",
+      "capitulo_b": "16",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "05",
+      "capitulo_b": "06",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "05",
+      "capitulo_b": "16",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    },
+    {
+      "capitulo_a": "06",
+      "capitulo_b": "16",
+      "similaridade": 1.0,
+      "trecho": "[17] SHUKLA, Akshat; RAJPUT, Priyanshu. Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems: An Empirical Case Study, Controlled Pilot Expe"
+    }
+  ],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "multiagent",
+      "variantes": {
+        "Multi-Agent": 85,
+        "Multi-agent": 12,
+        "Multiagent": 1
+      },
+      "ocorrencias": 98
+    },
+    {
+      "termo_normalizado": "esta",
+      "variantes": {
+        "está": 8,
+        "esta": 1
+      },
+      "ocorrencias": 9
+    },
+    {
+      "termo_normalizado": "pseudoterminal",
+      "variantes": {
+        "Pseudo-Terminal": 3,
+        "pseudoterminal": 2,
+        "pseudo-terminal": 1
+      },
+      "ocorrencias": 6
+    },
+    {
+      "termo_normalizado": "valida",
+      "variantes": {
+        "valida": 3,
+        "Valida": 1,
+        "válida": 1
+      },
+      "ocorrencias": 5
+    },
+    {
+      "termo_normalizado": "copia",
+      "variantes": {
+        "Cópia": 2,
+        "Copia": 1,
+        "cópia": 1,
+        "copia": 1
+      },
+      "ocorrencias": 5
+    },
+    {
+      "termo_normalizado": "microtarefas",
+      "variantes": {
+        "microtarefas": 2,
+        "micro-tarefas": 2
+      },
+      "ocorrencias": 4
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": true,
+    "vocabulario_motivo_condutor": [
+      "Orquestração Multi-Agente",
+      "Git Worktree",
+      "Mesa de Trabalho Isolada",
+      "Mesa Pai e Mesa Filha",
+      "Central de Monitoramento (orca worktree ps)",
+      "Regra de Ouro da Auditoria",
+      "Processo Zumbi",
+      "Sessão PTY",
+      "Cherry-Pick Concorrente"
+    ],
+    "capitulos_com_citacao_empilhada": [],
+    "capitulos_sem_recorrencia_motivo_condutor": [
+      "06",
+      "09",
+      "11",
+      "15"
+    ],
+    "capitulos_sem_callback_capitulo_anterior": [
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 0
+    },
+    "validar-escala.py": {
+      "exit": 0
+    },
+    "validar-afirmacoes.py": {
+      "exit": 0
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "01",
+      "arquivo": "cap_01.md",
+      "caracteres": 20166,
+      "palavras": 2486,
+      "secoes_faltantes": [],
+      "referencias": 13,
+      "citacoes_inline": 40,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 6,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.0,
+        "coeficiente_variacao": 1.023
+      }
+    },
+    {
+      "capitulo": "02",
+      "arquivo": "cap_02.md",
+      "caracteres": 16602,
+      "palavras": 1893,
+      "secoes_faltantes": [],
+      "referencias": 9,
+      "citacoes_inline": 32,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.8,
+        "coeficiente_variacao": 1.025
+      }
+    },
+    {
+      "capitulo": "03",
+      "arquivo": "cap_03.md",
+      "caracteres": 16889,
+      "palavras": 1913,
+      "secoes_faltantes": [],
+      "referencias": 9,
+      "citacoes_inline": 39,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 12,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.3,
+        "coeficiente_variacao": 1.069
+      }
+    },
+    {
+      "capitulo": "04",
+      "arquivo": "cap_04.md",
+      "caracteres": 16842,
+      "palavras": 1919,
+      "secoes_faltantes": [],
+      "referencias": 9,
+      "citacoes_inline": 38,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.3,
+        "coeficiente_variacao": 1.118
+      }
+    },
+    {
+      "capitulo": "05",
+      "arquivo": "cap_05.md",
+      "caracteres": 16163,
+      "palavras": 1819,
+      "secoes_faltantes": [],
+      "referencias": 8,
+      "citacoes_inline": 37,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 6,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.1,
+        "coeficiente_variacao": 1.227
+      }
+    },
+    {
+      "capitulo": "06",
+      "arquivo": "cap_06.md",
+      "caracteres": 15751,
+      "palavras": 1781,
+      "secoes_faltantes": [],
+      "referencias": 8,
+      "citacoes_inline": 36,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "sity)**, 2026. Disponível em: <https://arxiv.org/abs/2602.22480>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.4,
+        "coeficiente_variacao": 1.057
+      }
+    },
+    {
+      "capitulo": "07",
+      "arquivo": "cap_07.md",
+      "caracteres": 15239,
+      "palavras": 1696,
+      "secoes_faltantes": [],
+      "referencias": 5,
+      "citacoes_inline": 37,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "5. Disponível em: <https://doi.org/10.1109/asew67777.2025.00059>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 26.7,
+        "coeficiente_variacao": 1.051
+      }
+    },
+    {
+      "capitulo": "08",
+      "arquivo": "cap_08.md",
+      "caracteres": 15507,
+      "palavras": 1671,
+      "secoes_faltantes": [],
+      "referencias": 6,
+      "citacoes_inline": 37,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.8,
+        "coeficiente_variacao": 1.244
+      }
+    },
+    {
+      "capitulo": "09",
+      "arquivo": "cap_09.md",
+      "caracteres": 14849,
+      "palavras": 1660,
+      "secoes_faltantes": [],
+      "referencias": 8,
+      "citacoes_inline": 35,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.2,
+        "coeficiente_variacao": 1.153
+      }
+    },
+    {
+      "capitulo": "10",
+      "arquivo": "cap_10.md",
+      "caracteres": 15153,
+      "palavras": 1728,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 39,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 4,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.5,
+        "coeficiente_variacao": 1.031
+      }
+    },
+    {
+      "capitulo": "11",
+      "arquivo": "cap_11.md",
+      "caracteres": 14654,
+      "palavras": 1614,
+      "secoes_faltantes": [],
+      "referencias": 6,
+      "citacoes_inline": 38,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.2,
+        "coeficiente_variacao": 1.083
+      }
+    },
+    {
+      "capitulo": "12",
+      "arquivo": "cap_12.md",
+      "caracteres": 15731,
+      "palavras": 1633,
+      "secoes_faltantes": [],
+      "referencias": 8,
+      "citacoes_inline": 33,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.1,
+        "coeficiente_variacao": 1.197
+      }
+    },
+    {
+      "capitulo": "13",
+      "arquivo": "cap_13.md",
+      "caracteres": 14771,
+      "palavras": 1601,
+      "secoes_faltantes": [],
+      "referencias": 6,
+      "citacoes_inline": 35,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.0,
+        "coeficiente_variacao": 1.037
+      }
+    },
+    {
+      "capitulo": "14",
+      "arquivo": "cap_14.md",
+      "caracteres": 14426,
+      "palavras": 1629,
+      "secoes_faltantes": [],
+      "referencias": 8,
+      "citacoes_inline": 37,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.8,
+        "coeficiente_variacao": 1.228
+      }
+    },
+    {
+      "capitulo": "15",
+      "arquivo": "cap_15.md",
+      "caracteres": 14592,
+      "palavras": 1541,
+      "secoes_faltantes": [],
+      "referencias": 6,
+      "citacoes_inline": 32,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 25,
+        "coeficiente_variacao": 1.206
+      }
+    },
+    {
+      "capitulo": "16",
+      "arquivo": "cap_16.md",
+      "caracteres": 16275,
+      "palavras": 1789,
+      "secoes_faltantes": [],
+      "referencias": 12,
+      "citacoes_inline": 30,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ponível em: <https://doi.org/10.1023/b:agnt.0000038028.66672.1e>. Acesso em: 31 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.3,
+        "coeficiente_variacao": 1.182
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "numero": "16",
+  "capitulo_fonte": "16",
+  "titulo": "Arquitetura para desenvolvimento com IA: o sistema que constrói sistemas",
+  "estagio": "Instrumento",
+  "estagio_indice": 4,
+  "objetivo": "Fechar a obra com o desenho completo de uma esteira agêntica auditável, do tema à entrega.",
+  "pre_requisito": "Passo 15 concluído",
+  "entregas": [
+    "AGENTS.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "Passo 1: declare a esteira inteira em um único arquivo",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "esteira:\n  nome: \"relatorio-tecnico\"\n  entrada:\n    formato: \"json\"\n    schema: \"schemas/entrada.json\"\n  saida:\n    formato: \"markdown\"\n    criterio_de_pronto: [\"todas as secoes preenchidas\", \"toda metrica com fonte\"]\n  camadas:\n    contrato:\n      arquivo: \"contratos/relatorio.yaml\"\n    contexto:\n      operacoes: [\"escrever\", \"selecionar\", \"isolar\", \"comprimir\"]\n      ordem_prompt: [\"instrucao\", \"ferramentas\", \"base\", \"historico\"]\n    geracao:\n      roteamento:\n        extracao: \"pequeno\"\n        sintese: \"medio\"\n        raciocinio: \"grande\"\n      delegacao:\n        varredura: { limite_retorno_tokens: 250, procedencia: obrigatoria }\n    verificacao:\n      gates: [\"forma\", \"contrato\", \"merito\"]\n      bloqueio_mecanico: \"pre-commit\"\n    governanca:\n      custo_maximo_por_tarefa_usd: 1.20\n      teto_de_turnos: 30\n      retencao_historico_dias: 30\n      aprovacao_humana: [\"publicacao externa\"]"
+    },
+    {
+      "titulo": "Passo 2: monte o painel de métricas",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "METRICAS = {\n    \"custo_por_resultado_aceito_usd\": {\"meta\": 0.35, \"janela\": \"semanal\"},\n    \"turnos_por_tarefa\": {\"meta\": 18, \"janela\": \"semanal\"},\n    \"taxa_aceitacao_primeiro_degrau\": {\"meta\": 0.70, \"janela\": \"semanal\"},\n    \"sessoes_terminadas_por_limite_de_contexto\": {\"meta\": 0.05, \"janela\": \"semanal\"},\n    \"artefatos_sem_atribuicao\": {\"meta\": 0.0, \"janela\": \"diaria\"},\n}\n\n\ndef avaliar(painel):\n    fora = []\n    for nome, ref in METRICAS.items():\n        valor = painel.get(nome)\n        if valor is None:\n            fora.append({\"metrica\": nome, \"estado\": \"ausente\"})\n            continue\n        if nome.endswith(\"taxa_aceitacao_primeiro_degrau\"):\n            ok = valor >= ref[\"meta\"]\n        elif nome in (\"artefatos_sem_atribuicao\", \"sessoes_terminadas_por_limite_de_contexto\"):\n            ok = valor <= ref[\"meta\"]\n        else:\n            ok = valor <= ref[\"meta\"]\n        if not ok:\n            fora.append({\"metrica\": nome, \"valor\": valor, \"meta\": ref[\"meta\"]})\n    return fora"
+    },
+    {
+      "titulo": "Passo 3: transforme governança em arquivo verificável",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"governanca\": {\n    \"custo\": { \"orcamento_mensal_usd\": 900, \"alerta_em\": 0.8, \"teto_por_tarefa_usd\": 1.2 },\n    \"seguranca\": {\n      \"rede\": false,\n      \"leitura_de_ambiente\": false,\n      \"conteudo_externo\": \"marcado_e_sem_escrita\",\n      \"acoes_irreversiveis\": \"somente_humano\"\n    },\n    \"retencao\": { \"historico_dias\": 30, \"auditoria_dias\": 180, \"payload_de_lead\": \"nao_registrar\" },\n    \"responsabilidade\": {\n      \"dono_da_configuracao\": \"time-plataforma\",\n      \"revisao_de_configuracao\": \"trimestral\",\n      \"aprovador_de_publicacao\": \"operador-humano\"\n    }\n  }\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Não pule o nível 3.** Delegação sem verificação multiplica desvio",
+    "Progresso tem número.** Quatro indicadores bastam para saber se o sistema melhora",
+    "O harness é sistema em operação.** Revisão periódica, como qualquer peça de infraestrutura",
+    "Escalar produção sem escalar verificação.** O volume cresce, os gates continuam os mesmos, e os defeitos passam a chegar à publicação. Velocidade sem instrumento não é maturidade",
+    "Pular o nível de verificação para chegar ao paralelismo.** Delegação sem gate multiplica o desvio pelo número de workers simultâneos",
+    "Tratar o harness como projeto com data de término.** Ele é sistema em operação contínua: revisão periódica dos gates, das regras e do orçamento, como qualquer peça de infraestrutura crítica"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 16 — Arquitetura para desenvolvimento com IA: o sistema que constrói sistemas",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

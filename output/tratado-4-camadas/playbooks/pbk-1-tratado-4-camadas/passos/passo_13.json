@@ -1,0 +1,34 @@
+{
+  "numero": "13",
+  "capitulo_fonte": "13",
+  "titulo": "Os 3 Princípios Universais do LLM",
+  "estagio": "Roteador cognitivo",
+  "estagio_indice": 4,
+  "objetivo": "Ensinar os fundamentos de Model Layer & Semantic Routing.",
+  "pre_requisito": "Passo 12 concluído",
+  "entregas": [
+    "semantic_router.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Exemplo de Roteador Semântico Simples em Python (`semantic_router.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# semantic_router.py — Roteador Cognitivo da Camada 3\nimport sys\n\n# Matriz de Tiers\nTIER_1_FAST = \"gemini-2.0-flash\"      # Quase gratuito / Rápido\nTIER_2_DEV  = \"claude-3-7-sonnet\"     # Desenvolvimento equilibrado\nTIER_3_DEEP = \"claude-3-7-thinking\"   # Raciocínio arquitetural pesado\n\nPALAVRAS_CHAVE_COMPLEXAS = [\"arquitetura\", \"seguranca\", \"refatorar sistema\", \"algoritmo\", \"otimizar sql\"]\n\ndef rotear_tarefa(descricao_tarefa: str) -> str:\n    texto = descricao_tarefa.lower()\n    \n    # Tarefas Críticas (Tier 3)\n    if any(p in texto for p in PALAVRAS_CHAVE_COMPLEXAS):\n        print(f\"[ROTEADOR C3] Tarefa Crítica detectada -> Roteando para TIER 3 ({TIER_3_DEEP})\")\n        return TIER_3_DEEP\n        \n    # Tarefas de Codificação Padrão (Tier 2)\n    if any(p in texto for p in [\"criar funcao\", \"escrever teste\", \"adicionar endpoint\", \"consertar\"]):\n        print(f\"[ROTEADOR C3] Desenvolvimento Padrão -> Roteando para TIER 2 ({TIER_2_DEV})\")\n        return TIER_2_DEV\n        \n    # Tarefas Mecânicas (Tier 1)\n    print(f\"[ROTEADOR C3] Tarefa Mecânica Simples -> Roteando para TIER 1 ({TIER_1_FAST})\")\n    return TIER_1_FAST\n\nif __name__ == \"__main__\":\n    prompt = sys.argv[1] if len(sys.argv) > 1 else \"Formatar o arquivo de logs\"\n    modelo_escolhido = rotear_tarefa(prompt)\n    print(f\"Modelo alocado: {modelo_escolhido}\")"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute `semantic_router.py` com as frases \"Formatar o arquivo de logs\", \"criar funcao de login\" e \"desenhar arquitetura de seguranca\" e observe a alocação de tiers",
+    "Classifique 5 tarefas reais do seu dia a dia entre Tier 1, Tier 2 e Tier 3",
+    "Defina um JSON Schema para uma resposta de API e teste que o modelo devolve exatamente a estrutura esperada",
+    "Simule uma falha do provedor principal e verifique o fallback automático para o provedor secundário"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 13 — Os 3 Princípios Universais do LLM",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

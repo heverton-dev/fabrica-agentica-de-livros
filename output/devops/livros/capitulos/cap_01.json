@@ -1,0 +1,38 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "1" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": null,
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Evolucao Historica",
+        "escopo": "Do desenvolvimento em silos aos primeiros manifestos DevOps (2000-2015). Foco no problema: times separados, deploys demorados, falhas em produção.",
+        "ancora_visual": "flowchart TD\n    A[Desenvolvedores] --> B[Ops]\n    B --> C[Ambiente Prod]\n    C --> D[Falhas]\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#cff,stroke:#333,stroke-width:2px",
+        "entrega_tecnica": "bash Comentado passo a passo do pipeline inicial",
+        "evolucao_leitor": "de confuso com termos quanto de não saber por onde começar",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Cultura CALMS",
+        "escopo": "Os 5 pilares que transformam times: Colaboracao, Automacao, Lean, Medicao, Compartilhamento. Este é o coração do DevOps — sem cultura, ferramentas não funcionam.",
+        "ancora_visual": "graph TD\n    A[Colaboracao] --> B[Automacao]\n    B --> C[Lean]\n    C --> D[Medicao]\n    D --> E[Compartilhamento]\n    F[Aplicacao] --> B",
+        "entrega_tecnica": "python Checklist de cultura com métricas DORA",
+        "evolucao_leitor": "de praticar atividades isoladas para integrar com o time inteiro",
+        "conceito_dense": true
+      },
+      {
+        "nome": "Pipeline CI/CD",
+        "escopo": "Do código commit até a produção: CI valida builds, CD prepara releases. Foco em automação de testes e deploy com aprovação manual opcional. Inclui métrica concreta.",
+        "ancora_visual": "sequenceDiagram\n    participant Dev as Desenvolvedor\n    participant CI as CI Server\n    participant Test as Testes\n    participant Prod as Producao\n    Dev->>CI: Push\n    CI->>Test: Rodar\n    Test-->>CI: OK\n    CI->>Prod: Deploy",
+        "entrega_tecnica": "yaml Pipeline GitHub Actions com 3 etapas",
+        "evolucao_leitor": "de deploys manuais para entregas automatizadas e repetiveis",
+        "conceito_denso": false,
+        "metricas_obrigatorias": [
+          { "metrica": "Deployment Frequency", "valor": "Semanal" },
+          { "metrica": "Lead Time for Changes", "valor": "4 horas" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "capitulo": 12,
+  "slug": "devops",
+  "titulo": "Observabilidade e monitoramento contínuo",
+  "estado": "concluido_autonomo",
+  "arquivo": "output/devops/livros/capitulos/cap_12.md",
+  "caracteres": 12086,
+  "refs_secao7": 16,
+  "citacoes_corpo": 19,
+  "diagramas": 1,
+  "blocos_codigo": 3,
+  "validacoes": {
+    "validar_codigo": "OK 100% (0 blocos verificaveis no diretorio legado)",
+    "renderizar_diagramas": "OK (1 mermaid renderizavel)",
+    "eita_secoes": "OK 7/7 (## 1. a ## 7.)",
+    "r4_refs_min": "OK 16 >= 16",
+    "r14_citacoes_mapeadas": "OK 16/16 no corpo existem na secao 7"
+  },
+  "notas": "Reescrita completa a partir de arquivo reprovado: header H1, secoes H2, sem gates/metatexto, sem citacao autor-data, sem caracteres nao-PT-BR. Arquivo gravado em output/devops/livros/capitulos/cap_12.md."
+}

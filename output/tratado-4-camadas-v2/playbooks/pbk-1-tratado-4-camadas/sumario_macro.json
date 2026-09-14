@@ -1,0 +1,58 @@
+{
+  "titulo_obra": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "tratado-4-camadas-v2",
+  "motivo_condutor": {
+    "nome": "A Sala de Controle Soberana",
+    "descricao": "O leitor assume o posto de comandante de uma sala de controle onde quatro painéis operacionais — CONTEXTO, HARNESS, MOTOR e FERRAMENTAS — governam agentes de IA como equipes especializadas, sob uma Constituição de 10 Leis e instrumentos de leitura determinística.",
+    "vocabulario": [
+      "sala de controle",
+      "painel operacional",
+      "circuito de segurança",
+      "roteador cognitivo",
+      "usina determinística",
+      "disjuntor de terminal",
+      "sandbox reversível",
+      "exit code",
+      "constituição viva",
+      "protocolo universal",
+      "certificado de confiabilidade"
+    ],
+    "persona_leitor": "Engenheiro de Sistemas Autônomos"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Sala de controle",
+      "titulo_parte": "Fundamentos — A Crise, a Linguagem e a Lei",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Painel operacional",
+      "titulo_parte": "As Quatro Camadas da Fábrica Agêntica",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "indice": 3,
+      "nome": "Circuito de segurança",
+      "titulo_parte": "Implementação, Escala e Soberania",
+      "capitulos": [
+        "10",
+        "11",
+        "12"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "titulo_obra": "Playbook — Economia de Tokens",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "economia-extrema-de-tokens",
+  "motivo_condutor": {
+    "nome": "O Perito de Custos com IA",
+    "descricao": "Cada token consumido é dinheiro em movimento: o leitor aprende a enxergar a máquina de custos LLM como um sistema de fluxo de caixa que pode ser otimizado em 8 pontos táticos e 4 pilares estratégicos, transformando-se de consumidor passivo a gestor consciente de despesa com IA.",
+    "vocabulario": [
+      "token",
+      "custo",
+      "fluxo de caixa",
+      "otimização",
+      "governança",
+      "auditoria",
+      "compressão",
+      "cache",
+      "memória",
+      "resiliência"
+    ],
+    "persona_leitor": "Engenheiro de Custos com IA"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Token",
+      "titulo_parte": "O Problema e Fundamentos da Economia de Tokens",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Custo",
+      "titulo_parte": "Implementação Tática e Governança Estratégica",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ]
+}

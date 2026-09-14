@@ -1,0 +1,35 @@
+{
+  "slug_livro_mae": "design-ui-midia-soberana",
+  "artigos": {
+    "total": 0,
+    "itens": []
+  },
+  "ebooks": {
+    "total": 0,
+    "itens": []
+  },
+  "playbooks": {
+    "total": 1,
+    "itens": [
+      {
+        "indice": 1,
+        "titulo": "Playbook — Design, UI e Mídia Soberana",
+        "slug": "pbk-1-design-ui-midia",
+        "diretorio": "playbooks/design-ui/pbk-1-design-ui-midia",
+        "estagios": 2
+      }
+    ]
+  },
+  "lead-magnets": {
+    "total": 0,
+    "itens": []
+  },
+  "decks": {
+    "total": 0,
+    "itens": []
+  },
+  "emails": {
+    "total": 0,
+    "itens": []
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "tema": "image super-resolution Real-ESRGAN diffusion models neural TTS",
+  "gerado_em": "25 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 8
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 8
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=image+super-resoluti -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=image+super-resolution+Real-ESRGAN+diffusion -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 16,
+  "registros": [
+    {
+      "titulo": "SegDiff: Image Segmentation with Diffusion Probabilistic Models",
+      "autores": [
+        "Tomer Amit",
+        "Tal Shaharbany",
+        "Eliya Nachmani",
+        "Lior Wolf"
+      ],
+      "ano": 2021,
+      "doi": "10.48550/arxiv.2112.00390",
+      "url": "http://arxiv.org/abs/2112.00390",
+      "resumo": "Diffusion Probabilistic Methods are employed for state-of-the-art image generation. In this work, we present a method for extending such models for performing image segmentation. The method learns end-to-end, without relying on a pre-trained backbone. The information in the input image and in the current estimation of the segmentation map is merged by summing the output of two encoders. Additional encoding layers and a decoder are then used to iteratively refine the segmentation map, using a diffusion model. Since the diffusion model is probabilistic, it is applied multiple times, and the results are merged into a final segmentation map. The new method produces state-of-the-art results on the Cityscapes validation set, the Vaihingen building segmentation benchmark, and the MoNuSeg dataset.",
+      "citacoes": 13,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Generative adversarial networks (GANs): Introduction, Taxonomy, Variants, Limitations, and Applications",
+      "autores": [
+        "Preeti Sharma",
+        "Manoj Kumar",
+        "Hitesh Kumar Sharma",
+        "Soly Mathew Biju"
+      ],
+      "ano": 2024,
+      "doi": "10.1007/s11042-024-18767-y",
+      "url": "https://doi.org/10.1007/s11042-024-18767-y",
+      "resumo": "Abstract The growing demand for applications based on Generative Adversarial Networks (GANs) has prompted substantial study and analysis in a variety of fields. GAN models have applications in NLP, architectural design, text-to-image, image-to-image, 3D object production, audio-to-image, and prediction. This technique is an important tool for both production and prediction, notably in identifying falsely created pictures, particularly in the context of face forgeries, to ensure visual integrity and security. GANs are critical in determining visual credibility in social media by identifying and assessing forgeries. As the field progresses, a variety of GAN variations arise, along with the development of diverse assessment techniques for assessing model efficacy and scope. The article provides a complete and exhaustive overview of the most recent advances in GAN model designs, the efficacy and breadth of GAN variations, GAN limits and potential solutions, and the blooming ecosystem of upcoming GAN tool domains. Additionally, it investigates key measures like as Inception Score (IS) and Fréchet Inception Distance (FID) as critical benchmarks for improving GAN performance in contrast to existing approaches.",
+      "citacoes": 113,
+      "periodico": "Multimedia Tools and Applications",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Morphology Focused Diffusion Probabilistic Model for Synthesis of Histopathology Images",
+      "autores": [
+        "Puria Azadi Moghadam",
+        "Sanne Van Dalen",
+        "Karina C. Martin",
+        "Jochen K. Lennerz",
+        "Stephen Yip",
+        "Hossein Farahani",
+        "Ali Bashashati"
+      ],
+      "ano": 2022,
+      "doi": "10.48550/arxiv.2209.13167",
+      "url": "http://arxiv.org/abs/2209.13167",
+      "resumo": "Visual microscopic study of diseased tissue by pathologists has been the cornerstone for cancer diagnosis and prognostication for more than a century. Recently, deep learning methods have made significant advances in the analysis and classification of tissue images. However, there has been limited work on the utility of such models in generating histopathology images. These synthetic images have several applications in pathology including utilities in education, proficiency testing, privacy, and data sharing. Recently, diffusion probabilistic models were introduced to generate high quality images. Here, for the first time, we investigate the potential use of such models along with prioritized morphology weighting and color normalization to synthesize high quality histopathology images of brain cancer. Our detailed results show that diffusion probabilistic models are capable of synthesizing a wide range of histopathology images and have superior performance compared to generative adversarial networks.",
+      "citacoes": 6,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Seeing the Sound: Multilingual Lip Sync for Real-Time Face-to-Face Translation",
+      "autores": [
+        "Amirkia Rafiei Oskooei",
+        "Mehmet S. Aktaş",
+        "Mustafa Keleş"
+      ],
+      "ano": 2024,
+      "doi": "10.3390/computers14010007",
+      "url": "https://doi.org/10.3390/computers14010007",
+      "resumo": "Imagine a future where language is no longer a barrier to real-time conversations, enabling instant and lifelike communication across the globe. As cultural boundaries blur, the demand for seamless multilingual communication has become a critical technological challenge. This paper addresses the lack of robust solutions for real-time face-to-face translation, particularly for low-resource languages, by introducing a comprehensive framework that not only translates language but also replicates voice nuances and synchronized facial expressions. Our research tackles the primary challenge of achieving accurate lip synchronization across culturally diverse languages, filling a significant gap in the literature by evaluating the generalizability of lip sync models beyond English. Specifically, we develop a novel evaluation framework combining quantitative lip sync error metrics and qualitative assessments by human observers. This framework is applied to assess two state-of-the-art lip sync models with different architectures for Turkish, Persian, and Arabic languages, using a newly collected dataset. Based on these findings, we propose and implement a modular system that integrates language-agnostic lip sync models with neural networks to deliver a fully functional face-to-face translation experience. Inference Time Analysis shows this system achieves highly realistic, face-translated talking heads in real time, with a throughput as low as 0.381 s. This transformative framework is primed for deployment in immersive environments such as VR/AR, Metaverse ecosystems, and advanced video conferencing platforms. It offers substantial benefits to developers and businesses aiming to build next-generation multilingual communication systems for diverse applications. While this work focuses on three languages, its modular design allows scalability to additional languages. However, further testing in broader linguistic and cultural contexts is required to confirm its universal applicability, paving the way for a more interconnected and inclusive world where language ceases to hinder human connection.",
+      "citacoes": 11,
+      "periodico": "Computers",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Mobile Foundation Model as Firmware",
+      "autores": [
+        "Jinliang Yuan",
+        "Yang Chen",
+        "Dongqi Cai",
+        "Shihe Wang",
+        "Xin Yuan",
+        "Zeling Zhang",
+        "Xiang Li",
+        "Dingge Zhang",
+        "Hanzi Mei",
+        "Xianqing Jia",
+        "Shangguang Wang",
+        "Mengwei Xu"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2308.14363",
+      "url": "http://arxiv.org/abs/2308.14363",
+      "resumo": "In today's landscape, smartphones have evolved into hubs for hosting a multitude of deep learning models aimed at local execution. A key realization driving this work is the notable fragmentation among these models, characterized by varied architectures, operators, and implementations. This fragmentation imposes a significant burden on the comprehensive optimization of hardware, system settings, and algorithms. Buoyed by the recent strides in large foundation models, this work introduces a pioneering paradigm for mobile AI: a collaborative management approach between the mobile OS and hardware, overseeing a foundational model capable of serving a broad spectrum of mobile AI tasks, if not all. This foundational model resides within the NPU and remains impervious to app or OS revisions, akin to firmware. Concurrently, each app contributes a concise, offline fine-tuned \"adapter\" tailored to distinct downstream tasks. From this concept emerges a concrete instantiation known as \\sys. It amalgamates a curated selection of publicly available Large Language Models (LLMs) and facilitates dynamic data flow. This concept's viability is substantiated through the creation of an exhaustive benchmark encompassing 38 mobile AI tasks spanning 50 datasets, including domains such as Computer Vision (CV), Natural Language Processing (NLP), audio, sensing, and multimodal inputs. Spanning this benchmark, \\sys unveils its impressive performance. It attains accuracy parity in 85\\% of tasks, demonstrates improved scalability in terms of storage and memory, and offers satisfactory inference speed on Commercial Off-The-Shelf (COTS) mobile devices fortified with NPU support. This stands in stark contrast to task-specific models tailored for individual applications.",
+      "citacoes": 3,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Distilling the Knowledge from Conditional Normalizing Flows",
+      "autores": [
+        "Dmitry Baranchuk",
+        "Vladimir Aliev",
+        "Artem Babenko"
+      ],
+      "ano": 2021,
+      "doi": "10.48550/arxiv.2106.12699",
+      "url": "http://arxiv.org/abs/2106.12699",
+      "resumo": "Normalizing flows are a powerful class of generative models demonstrating strong performance in several speech and vision problems. In contrast to other generative models, normalizing flows are latent variable models with tractable likelihoods and allow for stable training. However, they have to be carefully designed to represent invertible functions with efficient Jacobian determinant calculation. In practice, these requirements lead to overparameterized and sophisticated architectures that are inferior to alternative feed-forward models in terms of inference time and memory consumption. In this work, we investigate whether one can distill flow-based models into more efficient alternatives. We provide a positive answer to this question by proposing a simple distillation approach and demonstrating its effectiveness on state-of-the-art conditional flow-based models for image super-resolution and speech synthesis.",
+      "citacoes": 2,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "StreamWise: Serving Multi-Modal Generation in Real-Time at Scale",
+      "autores": [
+        "Haoran Qiu",
+        "Gohar Irfan Chaudhry",
+        "Chaojie Zhang",
+        "Íñigo Goiri",
+        "Esha Choukse",
+        "Rodrigo Fonseca",
+        "Ricardo Bianchini"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2603.05800",
+      "resumo": "Advances in multi-modal generative models are enabling new applications, from storytelling to automated media synthesis. Most current workloads generate simple outputs (e.g., image generation from a prompt) in batch mode, often requiring several seconds even for basic results. Serving real-time multi-modal workflows at scale is costly and complex, requiring efficient coordination of diverse models (each with unique resource needs) across language, audio, image, and video, all under strict latency and resource constraints. We tackle these challenges through the lens of real-time podcast video generation, integrating LLMs, text-to-speech, and video-audio generation. To meet tight SLOs, we design an adaptive, modular serving system, StreamWise, that dynamically manages quality (e.g., resolution, sharpness), model/content parallelism, and resource-aware scheduling. We leverage heterogeneous hardware to maximize responsiveness and efficiency. For example, the system can lower video resolution and allocate more resources to early scenes. We quantify the trade-offs between latency, cost, and quality. The cheapest setup generates a 10-minute podcast video on A100 GPUs in 1.4 hours (8.4x slower than the real-time) for less than \\$25. StreamWise enables high-quality real-time streaming with a sub-second startup delay under $45.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Artificial Intelligence and the Transformation of the Media System",
+      "autores": [
+        "Georgiana Camelia STĂNESCU"
+      ],
+      "ano": 2026,
+      "doi": "10.3390/encyclopedia6020045",
+      "url": "https://doi.org/10.3390/encyclopedia6020045",
+      "resumo": "Artificial intelligence is increasingly being used in all branches of the media system and has transformed the way specialists in this field work in recent years. Currently, applications of artificial intelligence are used across a range of processes involved in the production, editing, distribution, and consumption of media content. These include technologies such as generative chatbots, automated transcription, writing, translation, and editing tools, as well as applications for image and video creation. All of these types of applications have taken over a significant portion of the traditional activities carried out by media professionals. From a technological point of view, these uses primarily rely on machine learning, natural language processing, and computer vision techniques, complemented by generative models that automatically analyze, generate, and interpret text, sound, and images. Although these technologies contribute to increased efficiency, faster work, and reduced operating costs, they also pose significant risks, particularly regarding the spread of false information. From a theoretical perspective, artificial intelligence goes beyond the status of a technological tool, being conceptualized as a communicational actor that actively intervenes in the generation, structuring, and circulation of messages, influencing the relationships between producers, content, and audiences in the current media environment.",
+      "citacoes": 0,
+      "periodico": "Encyclopedia",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Enhancing super-resolution models: a comparative analysis of real-ESRGAN, AESRGAN, and ESRGAN",
+      "autores": [
+        "Senthil, Avinash",
+        "Tomlinson, Lee"
+      ],
+      "ano": 2025,
+      "doi": "10.1117/12.3062693",
+      "url": "https://doi.org/10.1117/12.3062693",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Seventh International Conference on Image Processing and Machine Vision (IPMV 2025)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "RIDCP-ESRGAN: Real Image Dehazing Via High-Quality Codebook Priors with ESRGAN-Based Super-Resolution Enhancement",
+      "autores": [
+        "Wang, Chenglong",
+        "Sun, Xin",
+        "Dai, Kaiheng"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/aann66429.2025.11257608",
+      "url": "https://doi.org/10.1109/aann66429.2025.11257608",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 5th International Conference on Advanced Algorithms and Neural Networks (AANN)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Thermal Image Super-Resolution Using Real-ESRGAN for Human Detection",
+      "autores": [
+        "Correa, Vinícius",
+        "Funk, Peter",
+        "Sundelius, Nils",
+        "Sohlberg, Rickard",
+        "Wahid, Mastura",
+        "Ramos, Alexandre"
+      ],
+      "ano": 2025,
+      "doi": "10.5220/0013078800003912",
+      "url": "https://doi.org/10.5220/0013078800003912",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 20th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Face Image Super-Resolution Reconstruction Based on the Improved ESRGAN",
+      "autores": [
+        "Li, Mingda"
+      ],
+      "ano": 2023,
+      "doi": "10.5220/0012820100003885",
+      "url": "https://doi.org/10.5220/0012820100003885",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 1st International Conference on Data Analysis and Machine Learning",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Face image super-resolution reconstruction based on an improved Real-ESRGAN",
+      "autores": [
+        "Wei, Fan",
+        "Yang, Longhai"
+      ],
+      "ano": 2026,
+      "doi": "10.1117/12.3095299",
+      "url": "https://doi.org/10.1117/12.3095299",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "International Conference on Image, Signal Processing, and Machine Learning (ISPML 2025)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Effect Analysis of Loss Function for Image Super-Resolution Based on Improved ESRGAN",
+      "autores": [
+        "Pan, Miao"
+      ],
+      "ano": 2023,
+      "doi": "10.5220/0012804500003885",
+      "url": "https://doi.org/10.5220/0012804500003885",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 1st International Conference on Data Analysis and Machine Learning",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Figure 3: Difference between a low-resolution fish image and its corresponding super-resolved image generated by ESRGAN.",
+      "autores": [],
+      "ano": null,
+      "doi": "10.7717/peerjcs.2860/fig-3",
+      "url": "https://doi.org/10.7717/peerjcs.2860/fig-3",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "CA-ESRGAN: Super-Resolution Image Synthesis Using Channel Attention-Based ESRGAN",
+      "autores": [
+        "Liu, Jingan",
+        "Chandrasiri, Naiwala P."
+      ],
+      "ano": 2024,
+      "doi": "10.1109/access.2024.3363172",
+      "url": "https://doi.org/10.1109/access.2024.3363172",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "IEEE Access",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

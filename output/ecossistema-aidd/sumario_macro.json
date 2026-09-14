@@ -1,0 +1,93 @@
+{
+  "titulo": "Ecossistema AIDD: Fundação Prática para Projetos com Agentes Autônomos de IA",
+  "subtitulo": "Os 6 pilares de engenharia que protegem o seu repo de promessas em texto",
+  "tipo_obra": "livro",
+  "senioridade_obra": "intermediario",
+  "motivo_condutor": {
+    "nome": "O desenvolvedor que perdeu tempo com promessas que nao viraram lei",
+    "persona_leitor": "Praticante de Engenharia de Software",
+    "descricao": "Um praticante que ja herdou um repo onde 'sepamos fazer diferente' era a unica defesa contra commit vermelho, postmortem arquivado sem teste de regressao, e gate que ninguem entende. O livro o transforma em quem introduz leis mecanicas de projeto antes da crise, nao depois."
+  },
+  "partes": [
+    {
+      "numero": 1,
+      "titulo": "Por que o kit existe",      "capitulos": [
+        {
+          "numero": 1,
+          "titulo": "O pretexto que custa caro",
+          "pilares": [],
+          "ancora_visual": "Um repo onde cada regra era promessa, nao lei",
+          "entrega_tecnica": "Mapear 4 falhas archetipo onde manualidade substituiu mecanismo"
+        },
+        {
+          "numero": 2,
+          "titulo": "As 6 pecas em uma so frase cada",
+          "pilares": [],
+          "ancora_visual": "Tabela de 6 pecas: pergunta / custo / quando introduzir",
+          "entrega_tecnica": "Cap 2 entrega tabela completa de mapeamento + regra conservadora de introducao"
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "As 6 peças, uma por capítulo",
+    "capitulos": [
+      {
+        "numero": 3,
+        "titulo": "Peça 1: Builder != Critic",
+        "pilares": ["builder_critic"],
+        "ancora_visual": "Duas pessoas: quem escreve e quem aprova - nunca a mesma",          "entrega_tecnica": "Cap 3 classifica builder/critic/ambigo por criterios objetivos (tools Read vs Write/Edit); exercicio pratico de classificacao"
+      },
+      {
+        "numero": 4,
+        "titulo": "Peça 2: Critico deterministico (gate)",
+        "pilares": ["gate_deterministico"],
+        "ancora_visual": "Script que decide aceitavel/nao-aceitavel - sem nuance de LLM",          "entrega_tecnica": "Cap 4 entrega gate canonico em Python + exemplo de falso-positivo corrigido + exercicio de reescrever critique textual como gate"
+      },
+      {
+        "numero": 5,
+        "titulo": "Peça 3: Registro declarativo",
+        "pilares": ["registro_declarativo"],
+        "ancora_visual": "Um dicionario, 6 arquivos a menos para editar quando nasce um tipo novo",          "entrega_tecnica": "Cap 5 mostra sintoma de alerta (variavel repetida em >=2 arquivos) + scaffold de registro + exercicio de transformar dispatch if/elif em registro"
+      },
+      {
+        "numero": 6,
+        "titulo": "Peça 4: Nunca commitar vermelho",
+        "pilares": ["nunca_vermelho"],
+        "ancora_visual": "Hook que bloqueia quando a suíte fala NAO - nao promessa de vamos revisar",,          "entrega_tecnica": "Cap 6 explica marcador de bloco no pre-commit + regra append (nunca substituir) + exercicio de revisar pre-commit existente"
+      },
+      {
+        "numero": 7,
+        "titulo": "Peça 5: Postmortem que vira teste",
+        "pilares": ["postmortem_teste"],
+        "ancora_visual": "Cada linha de Prevencao nasce com stub de teste - nao so anotacao",
+        "entrega_tecnica": "Cap 7 mostra molde de postmortem + conversor para stub de teste + exercicio de gerar stub de um postmortem ficticio"
+      },
+      {
+        "numero": 8,
+        "titulo": "Peça 6: Hook + CI/CD",          "pilares": ["hook_ci"],
+          "ancora_visual": "Dois pontos de aplicacao do mesmo gate: local antes do commit, remoto antes do merge",
+          "entrega_tecnica": "Cap 8 entrega exemplo minimo de workflow CI que roda a suíte e bloqueia merge se vermelho + exercicio de escrever pipeline minimo"
+      }
+    ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Como aplicar no seu projeto",
+      "capitulos": [
+        {
+          "numero": 9,
+          "titulo": "Diagnosticar antes de instalar"
+        },
+        {
+          "numero": 10,
+          "titulo": "Instalar sem destruir"
+        },
+        {
+          "numero": 11,
+          "titulo": "Manter vivo depois da instalacao"
+        }
+      ]
+    }
+  ]
+}

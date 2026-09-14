@@ -1,0 +1,37 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "B", "capitulo": "6" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 5: pipelines CI/CD básicos, agora aplicado ao IaC.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Fundamentos de IaC",
+        "escopo": "Conceitos básicos de Infraestrutura como Código, definição, benefícios e diferenças em relação a provisionamento manual. Não entra em detalhes de ferramentas específicas.",
+        "ancora_visual": "flowchart TD\n    A[Infraestrutura manual] --> B[Desafios de configuração] --> C[Infraestrutura como Código]",
+        "entrega_tecnica": "Texto explicativo com exemplos de arquivos declarativos simples.",
+        "evolucao_leitor": "Do desconhecimento da automação de infraestrutura para compreender o modelo declarativo.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Terraform - Provisionamento Declarativo",
+        "escopo": "Como usar Terraform (HCL) para provisionar recursos, fluxo plan/apply, gerenciamento de estado. Inclui exemplo de bucket S3 na AWS.",
+        "ancora_visual": "flowchart LR\n    A[terraform init] --> B[terraform plan] --> C[terraform apply] --> D[Recurso provisionado]",
+        "entrega_tecnica": "Código HCL (Terraform) exemplo de bucket S3.",
+        "evolucao_leitor": "Do entendimento geral de IaC para aplicar Terraform em um caso real.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Práticas avançadas e gestão de estado",
+        "escopo": "Estratégias de backend remoto para estado, versionamento, workspaces e detecção de drift. Não aprofunda networking avançado.",
+        "ancora_visual": "stateDiagram-v2\n    [*] --> Init\n    Init --> Plan\n    Plan --> Apply\n    Apply --> State\n    State --> DriftCheck\n    DriftCheck --> [*]",
+        "entrega_tecnica": "Script Bash simples para configurar backend S3 para o estado do Terraform.",
+        "evolucao_leitor": "Do uso local do Terraform ao gerenciamento colaborativo de estado remoto.",
+        "conceito_denso": false
+      }
+    ],
+    "metricas_obrigatorias": [
+      { "metrica": "tempo médio de apply Terraform", "valor": "2 min" }
+    ]
+  }
+}

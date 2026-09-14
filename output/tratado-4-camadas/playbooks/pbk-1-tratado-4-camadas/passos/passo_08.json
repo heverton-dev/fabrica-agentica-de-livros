@@ -1,0 +1,34 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Implementação e Réplica da Camada 1",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Guia passo a passo para implementar a Camada TELA.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [
+    "setup_camada1.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Script Universal de Inicialização da Camada 1 (`setup_camada1.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# setup_camada1.py — Inicializador Universal da Camada 1\nimport os\nimport sys\nfrom pathlib import Path\n\nCONSTITUICAO_TEXTO = \"\"\"# GOVERNANÇA AGÊNTICA — NÍVEL INDUSTRIAL (18 REGRAS)\n\n## COMUNICAÇÃO (SHANNON DENSITY MAX)\n1. Idioma: Português do Brasil (PT-BR).\n2. Estilo: Direto, conciso, sem saudações ou preâmbulos.\n3. Raciocínio interno (<thinking>): Estilo Caveman telegráfico.\n4. Use links markdown clicáveis para arquivos de código.\n5. Transparência: Apresente logs reais e Exit Code 0 em testes.\n6. Ações destrutivas exigem consentimento prévio do operador.\n\n## ENGENHARIA & CONTEXTO\n7. Grep antes de read: Proibido carregar arquivos inteiros sem busca cirúrgica.\n8. Edição cirúrgica: Substitua apenas blocos específicos de texto.\n9. Imutabilidade: Nunca altere este arquivo durante uma sessão ativa.\n10. Preservação de testes existentes: Proibido apagar asserções para forçar sucesso.\n11. Structured Outputs com contratos JSON Schema rígidos.\n12. Atomicidade: Um objetivo e uma responsabilidade por turno.\n\n## HIGIENE & SEGURANÇA\n13. Bloqueio estrito de comandos perigosos sem sandbox.\n14. Isolamento em Git Worktrees para tarefas concorrentes.\n15. Zero poluição: Não crie arquivos temporários na raiz do projeto.\n16. Detecção ativa de segredos: Proibido salvar chaves de API no repositório.\n17. Circuit Breaker: Pause aos 3 erros repetidos consecutivos.\n18. Auditoria obrigatória de 6 gates de pre-commit antes de declarar entrega.\n\"\"\"\n\ndef instalar_camada1():\n    print(\"=== [CAMADA 1] Instalando Governança e Diretivas de Contexto ===\")\n    \n    # 1. Criar pastas\n    "
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute o script `setup_camada1.py` no seu projeto e verifique se CLAUDE.md, .governance/CONSTITUTION.md e AGENTS.md foram criados",
+    "Teste a reação do agente: faça uma pergunta simples e observe se ele responde em PT-BR direto, sem saudações (Densidade de Shannon)",
+    "Configure os hardlinks/junctions para que o mesmo arquivo de regras atenda a múltiplas IDEs sem duplicação",
+    "Rode a auditoria automatizada da Camada 1 e confirme que o KV-Cache não foi corrompido"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 8 — Implementação e Réplica da Camada 1",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "O Dicionário do Iniciante: Glossário Descomplicado",
+  "estagio": "Sala de controle",
+  "estagio_indice": 1,
+  "objetivo": "Fixar o vocabulário mínimo para operar a fábrica: agentes, harnesses, contexto, MCP, gates, stubs, context engineering, worktrees e persistência.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Dicionário como contrato executável",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Glossario executavel: vocabulario validado antes de virar documentacao.\"\"\"\n\nimport json\nimport sys\nfrom dataclasses import dataclass, asdict\nfrom typing import Literal\n\nPAINEIS = (\"CONTEXTO\", \"HARNESS\", \"MOTOR\", \"FERRAMENTAS\")\n\n\n@dataclass(frozen=True)\nclass Termo:\n    termo: str\n    painel: str\n    definicao: str\n    impacto: str\n\n    def valido(self) -> bool:\n        return (len(self.termo) >= 2\n                and self.painel in PAINEIS\n                and len(self.definicao) >= 20\n                and len(self.impacto) >= 20)\n\n\nGLOSSARIO = [\n    Termo(\"Agente\", \"MOTOR\",\n          \"Modelo mais instrucoes, historico e capacidade de chamar ferramentas.\",\n          \"Separa a culpa: erro de instrucao nao se corrige trocando modelo.\"),\n    Termo(\"Harness\", \"HARNESS\",\n          \"Aplicacao hospedeira que executa comandos e acessa disco em nome do agente.\",\n          \"Todo risco operacional real nasce aqui, nao no modelo.\"),\n    Termo(\"Janela de contexto\", \"CONTEXTO\",\n          \"Limite de tokens mantidos na memoria de trabalho de uma requisicao.\",\n          \"Contexto cheio degrada foco, eleva custo e aumenta latencia.\"),\n    Termo(\"Portao de qualidade\", \"CONTEXTO\",\n          \"Script deterministico com saida binaria: zero aprova, um bloqueia.\",\n          \"Permite automatizar a decisao sem julgamento humano por entrega.\"),\n    Termo(\"Stub\", \"FERRAMENTAS\",\n          \"Casca de funcao que simula funcionamento com pass ou pendencia.\",\n          \"Passa na revisao manual e falha silenciosamente em producao.\"),\n    Termo(\"Servidor MCP\", \"F"
+    },
+    {
+      "titulo": "4.2 O esquema de saída que o pipeline consome",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"versao\": \"2026.1\",\n  \"termos\": [\n    {\n      \"termo\": \"Harness\",\n      \"painel\": \"HARNESS\",\n      \"definicao\": \"Aplicacao hospedeira que executa comandos em nome do agente.\",\n      \"impacto\": \"Todo risco operacional real nasce aqui, nao no modelo.\"\n    }\n  ]\n}"
+    },
+    {
+      "titulo": "4.3 Sessão de consulta do dicionário",
+      "linguagem": "console",
+      "comandos": [
+        "python glossario.py --termo harness",
+        "python glossario.py --painel CONTEXTO"
+      ],
+      "codigo": "$ python glossario.py --termo harness\nTermo    : Harness\nPainel   : HARNESS\nDefinicao: Aplicacao hospedeira que executa comandos em nome do agente.\nImpacto  : Todo risco operacional real nasce aqui, nao no modelo.\n\n$ python glossario.py --painel CONTEXTO\n[1] Janela de contexto  (degradacao de foco com contexto cheio)\n[2] Portao de qualidade (saida binaria: zero aprova, um bloqueia)\n[3] Context engineering (governanca do que entra na mesa de trabalho)"
+    },
+    {
+      "titulo": "4.5 Detector de vocabulário inflado",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Detector de adjetivos nao verificaveis em documentacao tecnica.\"\"\"\n\nimport re\nimport sys\nfrom pathlib import Path\nfrom typing import Dict, List\n\nADJETIVOS = (\"robusto\", \"escalavel\", \"seguro\", \"otimizado\", \"performatico\",\n             \"completo\", \"confiavel\", \"avancado\")\n\n# Metrica adjacente: numero com unidade proxima ao adjetivo\nRE_METRICA = re.compile(\n    r\"\\d+(?:[.,]\\d+)?\\s*(?:%|ms|s\\b|min|GB|MB|tokens?|vezes|x\\b|milhoes?)\",\n    re.IGNORECASE,\n)\n\n\nclass Ocorrencia:\n    def __init__(self, arquivo: Path, linha: int, termo: str, contexto: str):\n        self.arquivo = arquivo\n        self.linha = linha\n        self.termo = termo\n        self.contexto = contexto\n\n    def verificavel(self) -> bool:\n        return bool(RE_METRICA.search(self.contexto))\n\n    def __str__(self) -> str:\n        marca = \"OK\" if self.verificavel() else \"HIPOTESE\"\n        return f\"[{marca}] {self.arquivo}:{self.linha} termo {self.termo!r}\"\n\n\ndef varrer(arquivo: Path) -> List[Ocorrencia]:\n    achados: List[Ocorrencia] = []\n    for numero, linha in enumerate(arquivo.read_text(encoding=\"utf-8\").splitlines(), 1):\n        baixo = linha.lower()\n        for adjetivo in ADJETIVOS:\n            if re.search(r\"\\b\" + re.escape(adjetivo) + r\"\\b\", baixo):\n                achados.append(Ocorrencia(arquivo, numero, adjetivo, baixo))\n    return achados\n\n\ndef resumir(ocorrencias: List[Ocorrencia]) -> Dict[str, int]:\n    return {\n        \"total\": len(ocorrencias),\n        \"verificaveis\": sum(1 for o in ocorrencias if o.verificavel()),\n        \"hipoteses\": sum(1 for o in"
+    }
+  ],
+  "gate": "python glossario.py --termo harness",
+  "comandos": [
+    "python glossario.py --termo harness",
+    "python glossario.py --painel CONTEXTO"
+  ],
+  "feito_quando": [
+    "Usar \"modelo\" e \"agente\" como sinônimos. Isso faz você procurar a culpa no lugar errado e gastar orçamento trocando o que não estava quebrado",
+    "Tratar a janela de contexto como disco. Contexto guardado não é contexto disponível; a mesa de trabalho tem tamanho",
+    "Chamar de \"teste\" o que é portão de qualidade. Um teste informa; um portão bloqueia. Sem bloqueio, o defeito continua no caminho",
+    "Aceitar definição sem impacto declarado. Termo que não muda nenhuma decisão é ornamento",
+    "Confiar em teste que nunca falhou. Verifique se o teste é capaz de falhar antes de considerar que ele protege algo [19]"
+  ],
+  "armadilhas": [
+    "Usar \"modelo\" e \"agente\" como sinônimos. Isso faz você procurar a culpa no lugar errado e gastar orçamento trocando o que não estava quebrado",
+    "Tratar a janela de contexto como disco. Contexto guardado não é contexto disponível; a mesa de trabalho tem tamanho",
+    "Chamar de \"teste\" o que é portão de qualidade. Um teste informa; um portão bloqueia. Sem bloqueio, o defeito continua no caminho",
+    "Aceitar definição sem impacto declarado. Termo que não muda nenhuma decisão é ornamento",
+    "Confiar em teste que nunca falhou. Verifique se o teste é capaz de falhar antes de considerar que ele protege algo [19]"
+  ],
+  "referencia_cruzada": "Cap. 2 — O Dicionário do Iniciante: Glossário Descomplicado",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

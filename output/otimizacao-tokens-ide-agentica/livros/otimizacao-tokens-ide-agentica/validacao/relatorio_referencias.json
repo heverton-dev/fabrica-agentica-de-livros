@@ -1,0 +1,1309 @@
+{
+  "slug": "livros/otimizacao-tokens-ide-agentica",
+  "total_referencias": 185,
+  "resumo": {
+    "nao_verificado": 185
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://claudelog.com/faqs/what-is-ccusage-tool/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://opencode.ai/docs/zen/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://opencode.ai/v2/docs/config",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/microsoft/LLMLingua",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://pypi.org/project/llmlingua/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/tensorstax/agenttrace",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/f/agentlytics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.python.org/3/library/asyncio.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.gnu.org/software/parallel/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/ollama/ollama",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/ggml-org/llama.cpp",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.vllm.ai/en/stable/cli/serve/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/NousResearch/hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.chezmoi.io/install/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://developer.1password.com/docs/cli/reference/commands/signin",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://agentbrisk.com/blog/prompt-caching-deep-dive-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/usage/caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/config/aider_conf.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/openai/codex/blob/main/docs/config.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/NousResearch/hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://omp.sh/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/google-gemini/gemini-cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://geminicli.com/docs/reference/configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://claudelog.com/faqs/what-is-ccusage-tool/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/tensorstax/agenttrace",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/f/agentlytics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://opencode.ai/docs/zen/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.maximalstudio.in/blog/opencode-zen-free-models",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.bswen.com/blog/2026-04-21-free-models-opencode/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://opencode.ai/v2/docs/config",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/config/aider_conf.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/openai/codex/blob/main/docs/config.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/tensorstax/agenttrace",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/f/agentlytics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/ollama/ollama",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/ggml-org/llama.cpp",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.vllm.ai/en/stable/cli/serve/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/NousResearch/hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/google-gemini/gemini-cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://geminicli.com/docs/reference/configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/xai-org/grok-build",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://x.ai/news/grok-build-cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.chezmoi.io/install/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://opencode.ai/docs/zen/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://docs.bswen.com/blog/2026-04-21-free-models-opencode/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.maximalstudio.in/blog/opencode-zen-free-models",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/microsoft/LLMLingua",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://pypi.org/project/llmlingua/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/usage/caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/config/aider_conf.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/openai/codex/blob/main/docs/config.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://opencode.ai/v2/docs/config",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://claudelog.com/faqs/what-is-ccusage-tool/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://docs.python.org/3/library/asyncio.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.gnu.org/software/parallel/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/tensorstax/agenttrace",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/f/agentlytics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://docs.python.org/3/library/asyncio.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.gnu.org/software/parallel/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/NousResearch/hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/microsoft/LLMLingua",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/ollama/ollama",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://docs.vllm.ai/en/stable/cli/serve/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://opencode.ai/v2/docs/config",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/config/aider_conf.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/openai/codex/blob/main/docs/config.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://geminicli.com/docs/reference/configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/xai-org/grok-build",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://claudelog.com/faqs/what-is-ccusage-tool/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/ollama/ollama",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://ollama.com/library",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/ggml-org/llama.cpp",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.vllm.ai/en/stable/cli/serve/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/tensorstax/agenttrace",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/f/agentlytics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.gnu.org/software/parallel/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/usage/caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/config/aider_conf.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/openai/codex/blob/main/docs/config.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://opencode.ai/v2/docs/config",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://opencode.ai/docs/zen/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.bswen.com/blog/2026-04-21-free-models-opencode/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.maximalstudio.in/blog/opencode-zen-free-models",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.python.org/3/library/asyncio.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://agentbrisk.com/blog/prompt-caching-deep-dive-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/microsoft/LLMLingua",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://pypi.org/project/llmlingua/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/ollama/ollama",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/NousResearch/hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/google-gemini/gemini-cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://geminicli.com/docs/reference/configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://x.ai/news/grok-build-cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/xai-org/grok-build",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://en.wikipedia.org/wiki/Google_Antigravity",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://omp.sh/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://betterstack.com/community/guides/ai/oh-my-pi-ai-coding-agent/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://freebuff.com/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.ycombinator.com/companies/freebuff",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.gnu.org/software/parallel/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/NousResearch/hermes-agent",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://geminicli.com/docs/reference/configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.chezmoi.io/install/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/microsoft/LLMLingua",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/ryoppippi/ccusage",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://agentbrisk.com/blog/prompt-caching-deep-dive-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://claudelog.com/faqs/what-is-ccusage-tool/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://aider.chat/docs/usage/caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://ollama.com/library",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/ollama/ollama",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/tensorstax/agenttrace",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/f/agentlytics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/ggml-org/llama.cpp",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://docs.vllm.ai/en/stable/cli/serve/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://developers.openai.com/codex/config-basic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://opencode.ai/v2/docs/config",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://opencode.ai/docs/zen/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/google-gemini/gemini-cli",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://developer.1password.com/docs/cli/reference/commands/signin",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

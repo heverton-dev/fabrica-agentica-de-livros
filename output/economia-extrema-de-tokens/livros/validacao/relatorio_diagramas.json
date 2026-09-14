@@ -1,0 +1,13 @@
+{
+  "slug": "livros/economia-extrema-de-tokens",
+  "modo": "livro",
+  "arquivos": [
+    "output\\economia-extrema-de-tokens\\livros\\livro-render.md"
+  ],
+  "total": 14,
+  "renderizados": 0,
+  "cache": 14,
+  "falhas": [],
+  "ignorados": [],
+  "validos": 0
+}

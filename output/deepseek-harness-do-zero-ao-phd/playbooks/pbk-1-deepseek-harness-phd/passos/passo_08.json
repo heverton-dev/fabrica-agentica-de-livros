@@ -1,0 +1,55 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Sandbox e Seguranca: Isolando o Agente",
+  "estagio": "Montagem",
+  "estagio_indice": 2,
+  "objetivo": "Configurar sandboxes e guardrails de seguranca.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Configurando Git Worktrees",
+      "linguagem": "bash",
+      "comandos": [
+        "git worktree list"
+      ],
+      "codigo": "# Configurar o harness para usar worktrees\ndsh config set sandbox.worktree.enabled true\ndsh config set sandbox.worktree.path ~/.dsh/worktrees/\n\n# Criar sessão com worktree isolado\ndsh session create --name \"feature-nova\" --worktree\n\n# Verificar que o worktree foi criado\ngit worktree list\n# /home/user/projeto          abc1234 [main]\n# /home/user/.dsh/worktrees/feature-nova  def5678 [feature-nova]"
+    },
+    {
+      "titulo": "Configurando Filesystem Guards",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# dsh.config.yaml\nsandbox:\n  filesystem:\n    # Diretório do projeto — leitura e escrita\n    allow:\n      - path: \"./src/**\"\n        permissions: [\"read\", \"write\"]\n      - path: \"./tests/**\"\n        permissions: [\"read\", \"write\"]\n      - path: \"./docs/**\"\n        permissions: [\"read\", \"write\"]\n    \n    # Diretórios sensíveis — apenas leitura\n    read-only:\n      - path: \"./.env.example\"\n      - path: \"./config/*.json\"\n    \n    # Diretórios bloqueados\n    deny:\n      - path: \"./.git/**\"\n      - path: \"./node_modules/**\"\n      - path: \"~/.ssh/**\"\n      - path: \"~/.aws/**\""
+    },
+    {
+      "titulo": "Configurando Security Plugins",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Instalar plugins de segurança\ndsh plugins install @deepseek/approvals\ndsh plugins install @deepseek/audit\n\n# Configurar aprovações\ndsh config set security.approvals.enabled true\ndsh config set security.approvals.require-for:\n  - \"shell:execute\"\n  - \"filesystem:delete\"\n  - \"git:push\"\n  - \"git:reset\""
+    },
+    {
+      "titulo": "Rodando com Segurança",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Iniciar com sandbox habilitado\ndsh --mode standard --sandbox\n\n# Output:\n# 🔒 Sandbox ativo\n# 📁 Filesystem: ./src/** (r/w), ./tests/** (r/w)\n# 🚫 Bloqueado: ~/.ssh/**, ~/.aws/**\n# ✅ Approvals: shell:execute, filesystem:delete\n# \n# dsh> Modifique a função X\n# [APPROVAL] shell:execute: \"ls -la src/\"\n# Aprovar? (s/n): s\n# [APPROVAL] filesystem:write: \"src/x.js\"\n# Aprovar? (s/n): s"
+    }
+  ],
+  "gate": "git worktree list",
+  "comandos": [
+    "git worktree list"
+  ],
+  "feito_quando": [
+    "NUNCA rode agentes com acesso total ao sistema",
+    "Sempre bloqueie diretórios sensíveis (.ssh, .aws, .env)",
+    "Habilite approvals para ações destrutivas",
+    "Audite regularmente os logs de ação",
+    "Use worktrees para isolar sessões de trabalho"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 8 — Sandbox e Seguranca: Isolando o Agente",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "livros/deepseek-harness-do-zero-ao-phd",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 9,
+  "resumo": {
+    "nao_aplicavel": 2,
+    "ok": 7
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "bash": {
+      "total": 7,
+      "ok": 7,
+      "falha": 0
+    },
+    "(sem tag)": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_3",
+      "linha": 101,
+      "linguagem": "mermaid",
+      "linhas_codigo": 20,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 129,
+      "linguagem": "bash",
+      "linhas_codigo": 17,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 152,
+      "linguagem": "bash",
+      "linhas_codigo": 15,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 173,
+      "linguagem": "bash",
+      "linhas_codigo": 12,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 191,
+      "linguagem": "bash",
+      "linhas_codigo": 12,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 209,
+      "linguagem": "bash",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 228,
+      "linguagem": "(sem tag)",
+      "linhas_codigo": 2,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 234,
+      "linguagem": "bash",
+      "linhas_codigo": 9,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 271,
+      "linguagem": "bash",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": ""
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug_livro_mae": "orca-ade",
+  "artigos": {
+    "total": 0,
+    "itens": []
+  },
+  "ebooks": {
+    "total": 0,
+    "itens": []
+  },
+  "playbooks": {
+    "total": 1,
+    "itens": [
+      {
+        "indice": 1,
+        "titulo": "Playbook — ORCA ADE: O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+        "slug": "pbk-1-orca-ade-guia",
+        "diretorio": "orca-ade/playbooks/pbk-1-orca-ade-guia",
+        "estagios": 4
+      }
+    ]
+  },
+  "lead-magnets": {
+    "total": 0,
+    "itens": []
+  },
+  "decks": {
+    "total": 0,
+    "itens": []
+  },
+  "emails": {
+    "total": 0,
+    "itens": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "7" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 6: o circuit breaker financeiro (hard limit) construído sobre os subcomandos reais do ccusage, e as tags confirmadas do Ollama como fallback local",
+  "validacao": {
+    "validar_codigo": "OK (3 blocos analisados, 2 ok, 1 nao_aplicavel = markdown de tabela)",
+    "renderizar_diagramas": "OK (1 diagrama valido)",
+    "referencias_secao7": 21,
+    "min_referencias_exigido": 20,
+    "r14_orfaos": 0,
+    "r14_refs_nao_citadas": 0
+  },
+  "pool_registro": "sucesso (tentativa 1)"
+}

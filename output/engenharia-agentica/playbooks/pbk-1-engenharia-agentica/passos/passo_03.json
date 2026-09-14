@@ -1,0 +1,55 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "O arquivo que todo agente lê: AGENTS.md, config.json e rules",
+  "estagio": "Cabine",
+  "estagio_indice": 1,
+  "objetivo": "Ensinar a escrever as instruções persistentes que sobrevivem entre sessões e entre harnesses diferentes.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [
+    "app/legado/",
+    "Write(migrations/*)",
+    "docs/decisoes/"
+  ],
+  "execucao": [
+    {
+      "titulo": "Camada 2: regras condicionais",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# .agent/rules/migracoes.yaml\nescopo:\n  caminhos: [\"migrations/**\", \"app/models/**\"]\nregras:\n  - \"Toda migracao precisa de funcao de downgrade.\"\n  - \"Nome do arquivo: <revisao>_<verbo>_<entidade>.py\"\n  - \"Nunca usar DROP COLUMN direto: criar coluna nova e migrar dados.\""
+    },
+    {
+      "titulo": "Camada 3: configuração, permissões e hooks",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"model\": \"herdar\",\n  \"permissions\": {\n    \"allow\": [\"Bash(python -m pytest*)\", \"Bash(alembic upgrade head)\", \"Read(**)\"],\n    \"deny\": [\"Bash(git push*)\", \"Bash(alembic downgrade*)\", \"Bash(dropdb*)\", \"Write(migrations/*)\"]\n  },\n  \"hooks\": {\n    \"PreToolUse\": [\n      { \"matcher\": \"Bash\", \"hooks\": [{ \"type\": \"command\", \"command\": \"python scripts/guard.py\" }] }\n    ],\n    \"PostToolUse\": [\n      { \"matcher\": \"Edit\", \"hooks\": [{ \"type\": \"command\", \"command\": \"python scripts/format.py\" }] }\n    ]\n  }\n}"
+    },
+    {
+      "titulo": "Ordem de precedência: o teste que revela o harness real",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# 1. Defina um valor reconhecivel no escopo de usuario\necho '{\"model\": \"valor-do-usuario\"}' > ~/.agent/settings.json\n# 2. Defina outro valor no escopo de projeto\necho '{\"model\": \"valor-do-projeto\"}' > .agent/settings.json\n# 3. Pergunte ao harness qual valor venceu\nagent config get model"
+    },
+    {
+      "titulo": "Calibrando a camada 2",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "regras_condicionais:\n  migracoes:\n    caminhos: [\"migrations/**\", \"app/models/**\"]\n    regras:\n      - \"toda migracao precisa de downgrade testado\"\n      - \"nunca DROP COLUMN direto\"\n  ui:\n    caminhos: [\"frontend/**/*.tsx\"]\n    regras:\n      - \"componente sem estado por padrao\"\n      - \"acessibilidade: todo controle interativo com rotulo\"\n  legado:\n    caminhos: [\"app/legado/**\"]\n    regras:\n      - \"nao refatorar sem pedido explicito\"\n      - \"manter compatibilidade com o contrato atual\""
+    }
+  ],
+  "gate": "python scripts/auditar-instrucao.py AGENTS.md",
+  "comandos": [
+    "python scripts/auditar-instrucao.py AGENTS.md"
+  ],
+  "feito_quando": [
+    "Teste de remoção.** Pegue três linhas do arquivo de instruções do seu projeto e remova cada uma mentalmente. Se o comportamento do agente não muda em nenhuma hipótese, as três linhas são candidatas a sair. Registre o resultado antes de editar o arquivo",
+    "Migração de camada.** Escolha uma regra que hoje vive como prosa e reescreva-a como impedimento executável. A pergunta de controle é direta: se o agente tentar desobedecer, o sistema recusa ou apenas avisa?",
+    "Precedência.** Escreva duas regras conflitantes em escopos diferentes — uma global e uma específica — e descubra empiricamente qual vence. A resposta precisa estar registrada; descoberta durante um incidente é caro demais",
+    "Poda.** Reduza a camada 1 em 20% sem perder nenhuma restrição real. O que sobrar depois da poda é o núcleo estável que merece morar no prefixo cacheado do capítulo seguinte"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 3 — O arquivo que todo agente lê: AGENTS.md, config.json e rules",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

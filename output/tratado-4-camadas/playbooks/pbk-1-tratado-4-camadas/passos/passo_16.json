@@ -1,0 +1,34 @@
+{
+  "numero": "16",
+  "capitulo_fonte": "16",
+  "titulo": "Implementação e Réplica da Camada 3",
+  "estagio": "Roteador cognitivo",
+  "estagio_indice": 4,
+  "objetivo": "Guia passo a passo para implementar o roteador LLM.",
+  "pre_requisito": "Passo 15 concluído",
+  "entregas": [
+    "setup_camada3.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "O Script Oficial do Roteador Cognitivo (`setup_camada3.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# setup_camada3.py — Instalador Industrial da Camada 3 (Roteador Cognitivo)\nimport os\nimport sys\nfrom pathlib import Path\n\nROUTER_CONFIG = \"\"\"{\n  \"routing_strategy\": \"pareto_80_20\",\n  \"providers\": {\n    \"tier_1_fast\": {\n      \"model\": \"gemini-2.0-flash\",\n      \"timeout\": 15,\n      \"max_retries\": 2\n    },\n    \"tier_2_standard\": {\n      \"model\": \"claude-3-7-sonnet\",\n      \"timeout\": 30,\n      \"max_retries\": 2\n    },\n    \"tier_3_reasoning\": {\n      \"model\": \"claude-3-7-sonnet-thinking\",\n      \"timeout\": 60,\n      \"max_retries\": 1\n    }\n  },\n  \"fallbacks\": {\n    \"claude-3-7-sonnet\": \"deepseek-chat\",\n    \"gemini-2.0-flash\": \"claude-3-5-haiku\"\n  }\n}\"\"\"\n\ndef instalar_camada3():\n    print(\"=== [CAMADA 3] Instalando Motor Cognitivo e Roteador Semântico ===\")\n    \n    # 1. Criar pasta .router\n    dir_router = Path(\".router\")\n    dir_schemas = dir_router / \"schemas\"\n    dir_schemas.mkdir(parents=True, exist_ok=True)\n    \n    # 2. Gravar models_config.json\n    (dir_router / \"models_config.json\").write_text(ROUTER_CONFIG, encoding=\"utf-8\")\n    print(\"  [OK] Arquivo .router/models_config.json configurado com estratégia Pareto 80/20.\")\n    \n    # 3. Gravar schema exemplo\n    schema_exemplo = \"\"\"{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"RespostaPadraoAgente\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"sucesso\": { \"type\": \"boolean\" },\n    \"resumo\": { \"type\": \"string\" },\n    \"arquivos_modificados\": { \"type\": \"array\", \"items\": { \"type\": \"string\" } }\n  },\n  \"required\": [\"sucesso\", \"resumo\", \"arquivos_modificados\"]\n}\"\"\"\n    (dir_schemas / \"resp"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute `python setup_camada3.py` e confirme que `.router/models_config.json` e `.router/schemas/resposta_padrao.json` foram criados",
+    "Adicione o seu modelo secundário favorito na lista de fallbacks do `models_config.json`",
+    "Simule uma queda do provedor principal e meça o tempo de chaveamento para o fallback",
+    "Roteie 5 tarefas reais e verifique se cada uma foi alocada ao tier de menor custo adequado"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 16 — Implementação e Réplica da Camada 3",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "slug": "playbooks/pbk-1-tratado-4-camadas",
+  "conforme": false,
+  "total_passos": 20,
+  "violacoes": [
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "01",
+      "detalhe": "partes vazias: ③ entregas, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "01",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "01",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "01",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 55}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "02",
+      "detalhe": "partes vazias: ④ execucao, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "02",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "03",
+      "detalhe": "partes vazias: ③ entregas, ④ execucao, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "03",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "03",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "04",
+      "detalhe": "partes vazias: ③ entregas, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "04",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "04",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "04",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 26}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "05",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "05",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "06",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "06",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "07",
+      "detalhe": "partes vazias: ③ entregas, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "07",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "07",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "08",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "08",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "08",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 40}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "09",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "09",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "09",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 30}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "10",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "10",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "10",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 35}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "11",
+      "detalhe": "partes vazias: ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "11",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 32}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "12",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "12",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "12",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 58}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "13",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "13",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "13",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 34}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "14",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "14",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "15",
+      "detalhe": "partes vazias: ③ entregas, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "15",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "15",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "16",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "16",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "16",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 58}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "17",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "17",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "17",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 33}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "18",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "18",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "18",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 47}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "19",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "19",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "19",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 48}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "20",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "20",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "20",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 43}"
+    }
+  ],
+  "avisos": [],
+  "regras": {
+    "R-PBK-0": "playbook nao repete teoria (§1, §2, §3 e §7 fora)",
+    "R-PBK-1": "todo card tem as 7 partes (① a ⑦)",
+    "R-PBK-2": "todo card cita ao menos 1 entrega com caminho de arquivo",
+    "R-PBK-3": "todo card tem 1 comando de verificacao executavel",
+    "R-PBK-4": "'Feito quando' tem de 3 a 7 itens binarios",
+    "R-PBK-5": "nenhuma parte do card excede 25 linhas",
+    "R-PBK-6": "capa com badge de nivel + ilustracao no motivo condutor",
+    "R-PBK-7": "1 card por capitulo do livro-mae, na mesma ordem, sem lacuna",
+    "R-PBK-8": "vocabulario do motivo_condutor presente nos nomes de estagio"
+  }
+}

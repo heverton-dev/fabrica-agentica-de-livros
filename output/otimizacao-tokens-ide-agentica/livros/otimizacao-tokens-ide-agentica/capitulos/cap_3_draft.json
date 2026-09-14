@@ -1,0 +1,59 @@
+{
+  "capitulo": "3",
+  "parte": "I",
+  "titulo": "Modelos Gratuitos Sem Lenda: o Catalogo Real Por Tras do Gateway",
+  "senioridade_alvo": "iniciante",
+  "motivo_condutor_aplicado": "A Pericia Forense de Configuracoes — o leitor examina o gateway OpenCode Zen como um documento que precisa de autenticacao: letra timbrada real (o produto existe), mas a lista de 'membros' (os 7 modelos citados pelo manual) precisa ter cada nome cotejado contra o catalogo vigente antes de virar evidencia aceita.",
+  "callback_capitulo_anterior": "o caminho de configuracao fantasma do Capitulo 2 — ~/.config/claude-code/settings.json com campo cacheControl, que nao existe; o real e ~/.claude/settings.json sem esse campo",
+  "pilares": [
+    {
+      "id": 1,
+      "titulo": "O gateway real: o que ele e, e por que a curadoria de modelos gratuitos muda com frequencia",
+      "pontos": [
+        "OpenCode (opencode.ai) e uma IDE agentica real; 'Zen' e o nome real do gateway/marketplace de modelos hospedado pelo proprio time do OpenCode, com camada gratuita sem cartao de credito.",
+        "O catalogo de modelos gratuitos do Zen e rotativo por natureza: modelos gratuitos por tempo limitado entram e saem, porque provedores oferecem acesso promocional para ganhar adocao.",
+        "A configuracao real de modelo mora em opencode.json (global em ~/.config/opencode/ ou na raiz do projeto), campo 'model' no formato provider/model-id — nao 'defaultModel', nao 'cacheControl', nao 'maxTokens' no nivel raiz."
+      ],
+      "ancora_visual": {
+        "tipo": "mermaid",
+        "descricao": "flowchart mostrando o caminho real de uma requisicao ate o modelo escolhido via Zen, com o ponto de checagem forense (catalogo vigente) destacado",
+        "legenda": "Cadeia de custodia de uma escolha de modelo: da requisicao do agente ate o provider/model-id autenticado no catalogo vigente do Zen."
+      },
+      "entrega_tecnica": "snippet real de opencode.json com campo model no formato provider/model-id, comentado linha a linha",
+      "conceito_denso": false,
+      "metricas_obrigatorias": ["campo real 'model' no schema (fonte oficial)"]
+    },
+    {
+      "id": 2,
+      "titulo": "Autopsia da tabela fabricada: como 7 modelos com nomes plausiveis foram inventados e por que a tabela de specs associada nao podia ser real",
+      "pontos": [
+        "Os 7 nomes opencode-zen-free-tiny/small/medium/large/xlarge/prompt/coder imitam uma convencao real de nomenclatura de porte (como camadas de instancia de nuvem) — e exatamente essa familiaridade de padrao que destrava confianca sem checagem.",
+        "A nomenclatura real do catalogo Zen e provider/model-id, com nomes de modelo de fato variados e as vezes ate estranhos (Big Pickle, Grok Code Fast 1, MiMo-V2 Flash Free, Nemotron 3 Free) — a ausencia de um padrao limpo e, paradoxalmente, o sinal de autenticidade.",
+        "Uma tabela de benchmark (latencia, contexto, qualidade) construida para um modelo que nao existe e irrecuperavel: nao ha ajuste possivel, porque nao ha objeto real por tras dos numeros — o unico caminho e descartar a tabela inteira e refazer a medicao contra o catalogo vigente no momento da publicacao."
+      ],
+      "ancora_visual": {
+        "tipo": "mermaid",
+        "descricao": "diagrama comparativo lado a lado: documento falsificado (nomes tiny..xlarge) vs documento autenticado (provider/model-id real), com o veredito de cada verificacao",
+        "legenda": "Duas linhas de custodia: a esquerda, o nome fabricado nunca teve fonte primaria; a direita, o nome real resiste a contraprova no catalogo oficial."
+      },
+      "entrega_tecnica": "par de blocos: configuracao ERRADA (nome fabricado, falha silenciosa ou erro de provider) vs configuracao CORRETA (nome real confirmado)",
+      "conceito_denso": true,
+      "analogias": [
+        "Perícia documental: letra timbrada autentica (a empresa/gateway existe) com assinatura falsificada (o nome do funcionario/modelo foi inventado) — o timbre nao valida a assinatura.",
+        "Cardapio de restaurante real com um prato que nunca esteve no cardapio: o restaurante existe, a mesa existe, mas pedir o prato inventado nao traz comida — traz erro."
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Protocolo de verificacao de catalogo antes de publicar ou automatizar qualquer escolha de modelo",
+      "pontos": [
+        "Checklist minimo antes de commitar um nome de modelo em script/config: (1) abrir a doc oficial vigente do catalogo, (2) confirmar o model-id exato copiado dali (nunca de memoria), (3) registrar a data da checagem junto da config.",
+        "Sinal de alerta especifico: tabelas de benchmark 'bonitas demais' sem link rastreavel para a fonte da medicao devem ser tratadas como nao verificadas ate prova em contrario.",
+        "O mesmo protocolo vale para qualquer CLI nova alem do OpenCode — Aider, Codex, Ollama, llama.cpp, vLLM, Hermes Agent, Gemini CLI, Grok Build, chezmoi, Orca ADE: cada uma tem sua propria pagina de documentacao oficial, e nomear um modelo/comando de memoria e a causa-raiz do erro deste capitulo inteiro."
+      ],
+      "ancora_visual": null,
+      "entrega_tecnica": "script bash que aplica a mesma tecnica de hash ja usada no Capitulo anterior para deteccao de mudanca (sha256 do CLAUDE.md), agora aplicada a pagina de catalogo, para sinalizar quando reconferir",
+      "conceito_denso": false
+    }
+  ]
+}

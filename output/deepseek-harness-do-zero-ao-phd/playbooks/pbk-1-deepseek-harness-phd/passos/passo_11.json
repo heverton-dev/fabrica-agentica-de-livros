@@ -1,0 +1,46 @@
+{
+  "numero": "11",
+  "capitulo_fonte": "11",
+  "titulo": "Pipelines de Ferramentas: Orquestrando Acoes Complexas",
+  "estagio": "Estacao de trabalho",
+  "estagio_indice": 3,
+  "objetivo": "Construir pipelines de multiplas ferramentas.",
+  "pre_requisito": "Passo 10 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Configurando um Pipeline Chain",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# pipelines/deploy.yaml\nname: deploy-completo\ndescription: Pipeline de deploy: lint → test → build → push → deploy\nsteps:\n  - name: lint\n    tool: shell:execute\n    params:\n      command: \"npm run lint\"\n    on-success: next\n    on-fail: stop\n    \n  - name: test\n    tool: shell:execute\n    params:\n      command: \"npm test\"\n    on-success: next\n    on-fail: rollback\n    \n  - name: build\n    tool: shell:execute\n    params:\n      command: \"npm run build\"\n    on-success: next\n    on-fail: rollback\n    \n  - name: push\n    tool: git:push\n    params:\n      branch: \"main\"\n    on-success: next\n    on-fail: rollback"
+    },
+    {
+      "titulo": "Configurando Fan-out Paralelo",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# pipelines/analise-multiplas.yaml\nname: analise-multiplas-fontes\ndescription: Analisa múltiplas fontes em paralelo\nparallel:\n  - name: analise-codigo\n    tool: analisar-codigo\n    params:\n      directory: \"./src\"\n      \n  - name: analise-testes\n    tool: analisar-testes\n    params:\n      directory: \"./tests\"\n      \n  - name: analise-documentacao\n    tool: analisar-docs\n    params:\n      directory: \"./docs\"\n      \nconsolidate:\n  tool: consolidar-relatorio\n  params:\n    inputs:\n      - \"{{steps.analise-codigo.result}}\"\n      - \"{{steps.analise-testes.result}}\"\n      - \"{{steps.analise-documentacao.result}}\""
+    },
+    {
+      "titulo": "Hooks de Auditoria",
+      "linguagem": "javascript",
+      "comandos": [],
+      "codigo": "// hook de auditoria para pipelines\nexport default function pipelineAuditHook(ctx) {\n  ctx.on('pipeline:start', (event) => {\n    console.log(`[PIPELINE] ${event.name} iniciado`);\n  });\n\n  ctx.on('pipeline:step:complete', (event) => {\n    console.log(`[PIPELINE] ${event.step} completado em ${event.duration}ms`);\n  });\n\n  ctx.on('pipeline:step:fail', (event) => {\n    console.log(`[PIPELINE] ${event.step} falhou: ${event.error}`);\n  });\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Limite retries a 3-5** — mais que isso é desperdício",
+    "Use backoff exponencial** — 1s → 2s → 4s é melhor que 3x 5s",
+    "Defina timeout por step** — nenhum step deve rodar mais que 60s",
+    "Logs em cada step** — para debug quando algo falha",
+    "Rollback automático** — se o deploy falhar, desfazer mudanças"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 11 — Pipelines de Ferramentas: Orquestrando Acoes Complexas",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

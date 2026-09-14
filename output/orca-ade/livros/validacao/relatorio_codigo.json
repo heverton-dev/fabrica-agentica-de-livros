@@ -1,0 +1,62 @@
+{
+  "slug": "livros/orca-ade",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 4,
+  "resumo": {
+    "nao_aplicavel": 1,
+    "ok": 3
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "python": {
+      "total": 2,
+      "ok": 2,
+      "falha": 0
+    },
+    "bash": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_7",
+      "linha": 61,
+      "linguagem": "mermaid",
+      "linhas_codigo": 11,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 82,
+      "linguagem": "python",
+      "linhas_codigo": 72,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_7",
+      "linha": 162,
+      "linguagem": "python",
+      "linhas_codigo": 93,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_7",
+      "linha": 263,
+      "linguagem": "bash",
+      "linhas_codigo": 26,
+      "status": "ok",
+      "detalhe": ""
+    }
+  ]
+}

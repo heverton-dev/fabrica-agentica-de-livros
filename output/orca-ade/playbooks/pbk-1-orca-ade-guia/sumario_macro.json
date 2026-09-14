@@ -1,0 +1,70 @@
+{
+  "titulo_obra": "Playbook — ORCA ADE: O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "orca-ade",
+  "motivo_condutor": {
+    "nome": "A Torre de Controle da Frota",
+    "descricao": "O leitor deixa de ser um único desenvolvedor digitando em um único checkout e assume o posto de operador de uma torre de controle: cada tarefa é um worktree isolado, cada worktree hospeda um agente, e cada agente é um veículo com estado observável, rádio próprio e diário de bordo. A obra ensina a montar essa torre, ler seus painéis, disparar e recolher veículos, e manter a frota voando sem sacrificar a revisão humana do que é entregue.",
+    "vocabulario": [
+      "torre de controle",
+      "frota de agentes",
+      "worktree como garagem isolada",
+      "painel de estado",
+      "linha de vida (heartbeat)",
+      "ordem de serviço (dispatch)",
+      "portão de decisão",
+      "diário de bordo da sessão",
+      "checkpoint de worktree",
+      "sala de revisão",
+      "procedência de linha",
+      "frota remota"
+    ],
+    "persona_leitor": "Operador de Frota Agêntica"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Torre de controle",
+      "titulo_parte": "Fundamentos — Por Que Um Agente Só Não Basta",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Frota de agentes",
+      "titulo_parte": "O Ambiente — Interface, Agentes e Operação Diária",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "indice": 3,
+      "nome": "Worktree como garagem isolada",
+      "titulo_parte": "Automação e Orquestração",
+      "capitulos": [
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ]
+    },
+    {
+      "indice": 4,
+      "nome": "Painel de estado",
+      "titulo_parte": "Escala e Soberania",
+      "capitulos": [
+        "14",
+        "15",
+        "16"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "O Dicionário do Iniciante: Glossário Descomplicado",
+  "estagio": "Central de comando",
+  "estagio_indice": 1,
+  "objetivo": "Garantir que qualquer pessoa domine os conceitos fundamentais de IA e engenharia.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [
+    "CLAUDE.md",
+    "settings.json"
+  ],
+  "execucao": [],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Defina em suas próprias palavras o que são LLM, MCP, Token e SQLite — escreva como se explicasse para um colega de trabalho leigo",
+    "Crie um glossário pessoal com pelo menos 10 termos do capítulo que você mais usa ou pretende usar no dia a dia",
+    "Identifique 3 termos que ainda lhe causam confusão e pesquise cada um até dominar o conceito",
+    "Explique para alguém leigo o que é um \"agente de IA\" usando apenas analogias do mundo real"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 2 — O Dicionário do Iniciante: Glossário Descomplicado",
+  "lacunas": [
+    "sem_execucao",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

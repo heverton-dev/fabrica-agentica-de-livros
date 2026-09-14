@@ -1,0 +1,147 @@
+{
+  "slug": "playbooks/pbk-1-economia-extrema-tokens",
+  "conforme": false,
+  "total_passos": 8,
+  "violacoes": [
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "01",
+      "detalhe": "partes vazias: ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "01",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 87}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "02",
+      "detalhe": "partes vazias: ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "02",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 135}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "03",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "03",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "03",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 103}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "04",
+      "detalhe": "partes vazias: ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "04",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 108}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "05",
+      "detalhe": "partes vazias: ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "05",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 89}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "06",
+      "detalhe": "partes vazias: ③ entregas, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "06",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "06",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 60}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "07",
+      "detalhe": "partes vazias: ③ entregas, ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-2",
+      "enunciado": "todo card cita ao menos 1 entrega com caminho de arquivo",
+      "passo": "07",
+      "detalhe": "nenhum caminho de arquivo citado"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "07",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "07",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 65}"
+    },
+    {
+      "regra": "R-PBK-1",
+      "enunciado": "todo card tem as 7 partes (① a ⑦)",
+      "passo": "08",
+      "detalhe": "partes vazias: ⑤ gate, ⑦ armadilhas"
+    },
+    {
+      "regra": "R-PBK-3",
+      "enunciado": "todo card tem 1 comando de verificacao executavel",
+      "passo": "08",
+      "detalhe": "nenhum comando de verificacao executavel"
+    },
+    {
+      "regra": "R-PBK-5",
+      "enunciado": "nenhuma parte do card excede 25 linhas",
+      "passo": "08",
+      "detalhe": "partes acima de 25 linhas: {'execucao': 114}"
+    }
+  ],
+  "avisos": [
+    "capa ainda nao gerada — rode scripts/gerar-capa.py --tipo playbook"
+  ],
+  "regras": {
+    "R-PBK-0": "playbook nao repete teoria (§1, §2, §3 e §7 fora)",
+    "R-PBK-1": "todo card tem as 7 partes (① a ⑦)",
+    "R-PBK-2": "todo card cita ao menos 1 entrega com caminho de arquivo",
+    "R-PBK-3": "todo card tem 1 comando de verificacao executavel",
+    "R-PBK-4": "'Feito quando' tem de 3 a 7 itens binarios",
+    "R-PBK-5": "nenhuma parte do card excede 25 linhas",
+    "R-PBK-6": "capa com badge de nivel + ilustracao no motivo condutor",
+    "R-PBK-7": "1 card por capitulo do livro-mae, na mesma ordem, sem lacuna",
+    "R-PBK-8": "vocabulario do motivo_condutor presente nos nomes de estagio"
+  }
+}

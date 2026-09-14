@@ -1,0 +1,50 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "E-mail Marketing: Enviando Campanhas Sem Depender do Mailchimp",
+  "estagio": "Oficina",
+  "estagio_indice": 1,
+  "objetivo": "Ensinar a montar uma stack própria de e-mail marketing e a lidar com o desafio real dessa categoria — reputação de domínio e deliverability.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "O selo de garantia: publicando SPF, DKIM e DMARC",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# registros-dns-campanhas.yaml\ndominio: campanhas.suaoficina.com.br\nregistros:\n  - tipo: TXT\n    nome: campanhas.suaoficina.com.br\n    valor: \"v=spf1 include:_spf.postal.suaoficina.com.br ~all\"\n  - tipo: TXT\n    nome: postal-dkim._domainkey.campanhas.suaoficina.com.br\n    valor: \"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC\"\n  - tipo: TXT\n    nome: _dmarc.campanhas.suaoficina.com.br\n    valor: \"v=DMARC1; p=quarantine; rua=mailto:dmarc@suaoficina.com.br\""
+    },
+    {
+      "titulo": "Montando a bancada: Listmonk, Mautic e Postal — o que cada um resolve",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose run --rm listmonk ./listmonk --install",
+        "docker compose up -d"
+      ],
+      "codigo": "# docker-compose.yml\nservices:\n  listmonk-db:\n    image: postgres:16-alpine\n    restart: unless-stopped\n    environment:\n      POSTGRES_USER: listmonk\n      POSTGRES_PASSWORD: \"<senha-forte-aqui>\"\n      POSTGRES_DB: listmonk\n    volumes:\n      - listmonk-data:/var/lib/postgresql/data\n  listmonk:\n    image: listmonk/listmonk:latest\n    restart: unless-stopped\n    ports:\n      - \"9000:9000\"\n    environment:\n      LISTMONK_db__user: listmonk\n      LISTMONK_db__password: \"<senha-forte-aqui>\"\n      LISTMONK_db__database: listmonk\n      LISTMONK_db__host: listmonk-db\n    depends_on:\n      - listmonk-db\nvolumes:\n  listmonk-data:"
+    },
+    {
+      "titulo": "Auditando a licença: o contraexemplo do EmailEngine e o alerta do Mailtrain",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"ferramenta\": \"EmailEngine\",\n  \"licenca\": \"source-available (nao FOSS)\",\n  \"trial_dias\": 14,\n  \"ultimo_release\": \"ativo, mas sob licenca comercial apos o trial\",\n  \"veredito\": \"nao usar como base gratuita de producao\"\n}"
+    }
+  ],
+  "gate": "docker compose run --rm listmonk ./listmonk --install",
+  "comandos": [
+    "docker compose run --rm listmonk ./listmonk --install",
+    "docker compose up -d"
+  ],
+  "feito_quando": [
+    "Publique os três registros DNS (SPF, DKIM, DMARC) do seu domínio de envio e confirme a propagação com `dig` ou `nslookup`",
+    "Suba o Listmonk com Docker Compose, rode o instalador e envie uma campanha de teste para uma lista pequena (menos de 20 contatos)",
+    "Rode o script `validar_spf` deste capítulo contra o registro SPF real do seu domínio",
+    "Monte o checklist de auditoria de licença (formato JSON deste capítulo) para duas ferramentas \"open source\" que você usa ou pretende usar"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 2 — E-mail Marketing: Enviando Campanhas Sem Depender do Mailchimp",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

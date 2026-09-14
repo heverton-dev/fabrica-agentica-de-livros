@@ -1,0 +1,28 @@
+{
+  "capitulo": 2,
+  "slug": "devops",
+  "titulo": "Cultura DevOps: quebrando silos e colaborando",
+  "estado": "concluido_autonomo",
+  "arquivo": "output/devops/livros/capitulos/cap_02.md",
+  "caracteres": 12155,
+  "refs_secao7": 18,
+  "citacoes_corpo": 15,
+  "diagramas": 1,
+  "blocos_codigo": 3,
+  "validacoes": {
+    "validar_codigo": "OK 100% (3 blocos, 2 verificaveis)",
+    "renderizar_diagramas": "OK 1 diagrama valido",
+    "r4_refs_min": "OK 18 >= 16",
+    "r14_orfas": "OK nenhuma",
+    "r9_hr": "OK ausente",
+    "r13_metatexto": "OK ausente",
+    "r11_legenda_mermaid": "OK presente",
+    "r12_linguagem_codigo": "OK presente",
+    "callback_capitulo_anterior": "OK Capítulo 1 (CALMS)",
+    "conceito_denso": "OK 2 analogias no pilar Cultura (muro e bastão)",
+    "cena_contraste": "OK Erro Comum vs Prática Correta em 2a pessoa",
+    "persona_leitor": "OK Desenvolvedor Agêntico reforçada",
+    "ritmo_frase": "AVISO não bloqueante (auditar-obra.py pode sinalizar)"
+  },
+  "observacoes": "Teto de 12000 chars superado em ~155 (meta flexível). 18 refs reais do dossiê com DOI/URL. Códigos: YAML GitHub Actions (pip-audit+bandit) e Python postmortem. Diagrama mermaid flowchart do fluxo de valor com legenda."
+}

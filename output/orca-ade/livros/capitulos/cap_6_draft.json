@@ -1,0 +1,40 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 4: o worktree como checkout físico isolado e descartável, agora usado como o racional de segurança que autoriza o Orca a pré-aplicar o bypass de permissão de cada agente sem pedir confirmação a cada comando.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Agnosticismo radical: o catálogo como consequência de um princípio, não de uma lista",
+        "escopo": "Entra: o princípio 'if it runs in a terminal, it runs in Orca' [9][65]; o catálogo de mais de 30 CLIs pré-configuradas com lançamento em um clique [9]; a fronteira explícita 'Not a model — bring your own Claude, Codex, or OpenCode subscription' [1][65]; a lógica de que a escolha do agente vira variável por tarefa, não decisão irreversível. Fica de fora: detalhes de configuração fina de cada CLI individual (fica para o Pilar 2) e o painel de status/hooks (fica para o Pilar 3).",
+        "ancora_visual": "flowchart LR no vocabulário da Torre de Controle: um único 'combobox de lançamento' (a torre) apontando para uma frota de veículos heterogêneos (Claude Code, Codex, Gemini, Cursor CLI, OpenCode, Aider, +25 outros), todos convergindo no mesmo 'hangar' (o terminal dentro do worktree) — evidenciando que o Orca não pilota nenhum veículo, só abre o portão do hangar para o veículo escolhido.",
+        "entrega_tecnica": "bash: sequência mínima e comentada passo a passo mostrando como o operador iniciante detecta agentes disponíveis e lança dois agentes diferentes no mesmo worktree via `orca` CLI, sem flags avançadas.",
+        "evolucao_leitor": "De 'preciso escolher UM agente para sempre' para 'a torre de controle aceita qualquer veículo que saiba andar em um terminal — a escolha do agente é uma decisão por tarefa, revogável a qualquer momento'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Permissões em contexto: o bypass pré-aplicado e por que o worktree descartável o autoriza",
+        "escopo": "Entra: as flags de bypass por CLI (`--dangerously-skip-permissions`, `--dangerously-bypass-approvals-and-sandbox`, `--yolo` e equivalentes) [5][9]; o racional documentado de que worktrees são descartáveis e por isso o agente pode experimentar sem reconfirmação [9]; o alternador global `Settings → Agents → Agent Permissions` (Yolo vs. Manual) [9]; a regra de precedência do override por agente (valor customizado não-vazio tira aquele agente das migrações futuras de modo de permissão) [9]. Fica de fora: hooks de status e memória do agente (Pilar 3).",
+        "ancora_visual": "sequenceDiagram no vocabulário da Torre de Controle mostrando o 'portão de decisão' antes de cada comando: Operador -> Torre (define política Yolo/Manual) -> Veículo (agente) tenta uma ação -> Torre consulta 1) há override individual? 2) senão, qual é a política global? -> decisão final sem reconfirmação por comando, justificada pelo checkout descartável do worktree.",
+        "entrega_tecnica": "bash: script comentado linha a linha que consulta a configuração de permissão de um agente específico e explica, em cada etapa, se aquele agente está sob a política global ou sob override — pensado para o operador iniciante decidir com segurança quando ativar bypass.",
+        "evolucao_leitor": "De 'bypass de permissão soa perigoso e eu não confio nisso' para 'eu entendo exatamente qual rede de segurança física (o worktree descartável) sustenta o bypass, e sei quando um override individual silenciosamente ganha precedência sobre a política global'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Integrações profundas: hooks, memória do agente e troca de conta a quente",
+        "escopo": "Entra: os três agentes com integração profunda — Claude Code, Codex e Cursor CLI [9]; o que o Orca lê sem tocar (`.claude/`, `.codex/`, `CLAUDE.md`, `AGENTS.md` pertencem ao agente) [16]; os hooks de status gerenciados e sua persistência em disco entre reinícios [16]; a troca de conta a quente (hot-swap) sem derrubar sessão viva, com guarda contra refresh de autenticação sobreposto [10][12]; o rastreio de uso e proximidade de limite de taxa na barra de status [19]. Fica de fora: a configuração de hooks de setup de worktree (isso é Capítulo 4/11).",
+        "ancora_visual": "flowchart TB no vocabulário da Torre de Controle: um 'painel de estado' único recebendo três sinais simultâneos de um mesmo veículo (Claude Code) — hooks de status (OSC), memória de sessão (~/.claude lido, nunca escrito) e rastreio de uso/limite de taxa — convergindo no painel sem que a torre precise reiniciar o veículo para trocar de piloto (conta).",
+        "entrega_tecnica": "bash: comandos de verificação dos hooks de status do agente (`orca agent hooks status|on|off --json`) comentados, mostrando como o operador iniciante confirma que os hooks sobreviveram a um reinício do aplicativo.",
+        "evolucao_leitor": "De 'o terminal do agente é uma caixa-preta que eu só observo' para 'eu leio o painel de estado da frota, sei que a memória do agente nunca é reescrita pela torre, e consigo trocar de conta no meio de uma sessão sem perder o trabalho' — o ponto em que o leitor começa a operar como profissional, não como espectador.",
+        "conceito_denso": false
+      }
+    ],
+    "metricas_obrigatorias": [
+      { "metrica": "agentes com integração profunda (uso, hot-swap, hooks)", "valor": "3" },
+      { "metrica": "flags distintas de bypass de permissão pré-aplicadas", "valor": "3" },
+      { "metrica": "agentes embarcados no seletor pré-configurado", "valor": "mais de 30 CLIs" }
+    ],
+    "limite_escala_sugerido": "O catálogo cobre CLIs que rodam em terminal; interfaces gráficas nativas ficam fora (endereçadas no Capítulo 13, Computer Use). O bypass pré-aplicado depende do worktree ser realmente descartável — em repositórios sem isolamento por worktree, a mesma flag vira risco real, não conveniência."
+  }
+}

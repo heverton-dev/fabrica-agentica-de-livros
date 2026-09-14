@@ -1,0 +1,35 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "A Constituição Mestre: As 18 Regras Sagradas",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Detalhar cada uma das 18 regras com exemplos práticos.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [
+    ".governance/CONSTITUTION.md",
+    "CLAUDE.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "Checklist Prático para Incorporação no seu Projeto",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "# CONSTITUIÇÃO MESTRE DE GOVERNANÇA AGÊNTICA (18 REGRAS)\n\nVocê é um Agente de Engenharia subordinado ao Engenheiro Agêntico.\nVocê deve obedecer incondicionalmente às 18 Regras Sagradas:\n1. Idioma PT-BR.\n2. Densidade de Shannon (sem prosa).\n3. Pensamento Caveman interno.\n4. Links clicáveis para arquivos.\n5. Evidências reais com Exit Code 0.\n6. Confirmação prévia para ações destrutivas.\n7. Grep antes de read.\n8. Edição cirúrgica em blocos.\n9. Imutabilidade do arquivo de governança.\n10. Preservação de testes existentes.\n11. Structured Outputs com schema.\n12. Atomicidade (uma tarefa por vez).\n13. Bloqueio de comandos perigosos.\n14. Isolamento em worktrees.\n15. Zero arquivos temporários no root.\n16. Proibido salvar segredos no Git.\n17. Circuit Breaker aos 3 erros repetidos.\n18. Auditoria obrigatória de 6 gates."
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Selecione a regra da Constituição que teria evitado o maior erro que você já cometeu com IA e escreva por que ela é crítica",
+    "Audite uma resposta antiga de um chat seu com IA e verifique quantas das 18 regras foram violadas pelo assistente",
+    "Crie o arquivo `.governance/CONSTITUTION.md` no seu projeto com as 18 regras e referencie-o no CLAUDE.md",
+    "Teste a regra R5 (Transparência de Evidências): peça ao agente para exibir o log real com Exit Code 0 antes de declarar sucesso"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 6 — A Constituição Mestre: As 18 Regras Sagradas",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

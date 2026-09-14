@@ -1,0 +1,22 @@
+{
+  "https://www.computer.org/publications/ieee-software/": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-09-09"
+  },
+  "https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-09-09"
+  },
+  "https://sre.google/sre-book/postmortem-culture/": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-09-09"
+  },
+  "https://martinfowler.com/articles/continuousIntegration.html": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-09-09"
+  }
+}

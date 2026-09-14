@@ -1,0 +1,29 @@
+{
+  "slug": "livros/deepseek-harness-do-zero-ao-phd",
+  "capitulos": 16,
+  "metricas_por_capitulo": {
+    "cap_1": 2,
+    "cap_2": 7,
+    "cap_3": 39,
+    "cap_4": 13,
+    "cap_5": 1,
+    "cap_6": 1,
+    "cap_7": 3,
+    "cap_8": 1,
+    "cap_9": 1,
+    "cap_10": 1,
+    "cap_11": 11,
+    "cap_12": 1,
+    "cap_13": 23,
+    "cap_14": 3,
+    "cap_15": 10,
+    "cap_16": 7
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

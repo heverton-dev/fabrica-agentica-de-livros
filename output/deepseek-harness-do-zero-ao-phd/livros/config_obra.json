@@ -1,0 +1,30 @@
+{
+  "tema": "DeepSeek Harness: Do zero ao PhD",
+  "tipo_obra": "livro",
+  "min_referencias_por_capitulo": 20,
+  "tamanho_obra": "GG",
+  "senioridade_obra": "iniciante",
+  "serie": null,
+  "cor_primaria": "#7C3AED",
+  "subtitulo": "Guia Completo para Configuracao, Customizacao e Deploy Local",
+  "edition_tag": "v1.0",
+  "estilo_tecnica": "hibrido",
+  "gerar_artigos": false,
+  "qtd_artigos": 0,
+  "gerar_ebooks": false,
+  "qtd_ebooks": 0,
+
+  "gerar_playbook": true,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "cta_url": null,
+  "cta_texto": null,
+
+  "gerar_maquina": false,
+  "gerar_campanha": false,
+
+  "modo_producao": "obra-unica",
+  "obra_raiz": null
+}

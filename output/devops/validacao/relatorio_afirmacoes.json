@@ -1,0 +1,50 @@
+{
+  "slug": "devops",
+  "capitulos": 7,
+  "total_violacoes": 5,
+  "por_capitulo": {
+    "cap_1": 3,
+    "cap_2": 1,
+    "cap_09": 1
+  },
+  "regras": {
+    "R-AF-1": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo"
+  },
+  "violacoes": [
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_1",
+      "secao": 5,
+      "trecho": "Imagine que você é o responsável por um sistema de e-commerce que recebe 500 pedidos por minuto. No cenário **tradicional**, a equipe de operações é chamada às 2 da manhã porque o servidor \"está lento\". No cenário **DevO"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_1",
+      "secao": 5,
+      "trecho": "- **Erro comum:** Delegar deploy apenas para o \"especialista\" e não documentar critérios de aceite. - **Prática correta:** Implementar *gates de aprovação automática* no pipeline: só avança para produção se cobertura de "
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_1",
+      "secao": 5,
+      "trecho": "- **Deployment Frequency:** Semanal (meta inicial) — escala até diário quando automação de rollback estiver madura. - **Lead Time for Changes:** 4 horas (atual) — escala para <1 hora com pipelines paralelos. - **Mean Tim"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_2",
+      "secao": 4,
+      "trecho": "<!-- Núcleo de valor: código real executável com linguagem declarada, arquitetura, passos. Mínimo 60% do capítulo. Citações [N] para técnicas/benchmarks/estatísticas. -->"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_09",
+      "secao": 4,
+      "trecho": "Lembre‑se de configurar o provedor AWS e ter acesso ao cluster k8s antes de executar esse script."
+    }
+  ]
+}

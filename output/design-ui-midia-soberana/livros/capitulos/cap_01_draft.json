@@ -1,0 +1,34 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "1", "capitulo": "1" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": null,
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O Diagnóstico da Dependência Tecnológica e o Risco SaaS no Design",
+        "escopo": "Explicar como o modelo SaaS centralizou artefatos visuais e arquivos de UI em nuvens proprietárias, gerando aprisionamento tecnológico (vendor lock-in), perda de controle de dados e riscos operacionais a ativos criativos.",
+        "ancora_visual": "flowchart TD mostrando a transição histórica do modelo desktop proprietário local para o ecossistema SaaS centralizado em nuvem e a vulnerabilidade operacional resultante",
+        "entrega_tecnica": "Estrutura de manifestos e verificadores de dependência em ambiente local (docker-compose.yml e scripts de validação de ambiente offline)",
+        "evolucao_leitor": "De usuário passivo exposto a mudanças arbitrárias de Termos de Serviço para um profissional consciente dos riscos de retenção e propriedade dos seus ativos visuais",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Os Pilares Fundamentais da Soberania Digital no Workflow Criativo",
+        "escopo": "Definir conceitualmente a Soberania Tecnológica aplicada ao Design e UI: software open-source, formatos abertos interoperáveis (SVG 2, PDF 2.0), controle de infraestrutura autônoma e execução local (Edge AI).",
+        "ancora_visual": "flowchart LR dos quatro pilares da Soberania Digital no Design (Software Aberto, Formatos Padronizados, Execução Local e Auto-hospedagem)",
+        "entrega_tecnica": "Configuração de container docker-compose.yml para auto-hospedagem de serviços essenciais de design e verificação de saúde com curl",
+        "evolucao_leitor": "De alguém dependente de ecossistemas fechados para um projetista capaz de articular e construir uma infraestrutura autônoma de design",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Visão Geral do Stack Soberano: De Penpot a Stirling-PDF",
+        "escopo": "Apresentar a arquitetura integrada da suíte soberana de ferramentas (Penpot, Inkscape, Fontsource, Stirling-PDF, Real-ESRGAN, ComfyUI, Kokoro TTS) e sua articulação pragmática.",
+        "ancora_visual": "flowchart TD da arquitetura em camadas do Stack Soberano de Mídia (Camada de Interface, Camada de Ativos, Camada de Processamento de Mídia e Camada de Infraestrutura)",
+        "entrega_tecnica": "Arquivo .env e script de orquestração em Bash para inicialização do ecossistema local de design",
+        "evolucao_leitor": "De uma visão fragmentada de ferramentas isoladas para a compreensão estratégica de uma esteira completa de design soberano",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

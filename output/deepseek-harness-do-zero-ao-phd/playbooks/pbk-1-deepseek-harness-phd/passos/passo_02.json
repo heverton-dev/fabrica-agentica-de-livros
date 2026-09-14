@@ -1,0 +1,67 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "Instalacao Local: Do Zero ao Primeiro dsh",
+  "estagio": "Kit de pecas",
+  "estagio_indice": 1,
+  "objetivo": "Instalar e executar o primeiro agente.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Instalação Completa — Rota npm",
+      "linguagem": "bash",
+      "comandos": [
+        "node --version",
+        "npm install -g deepseek-harness"
+      ],
+      "codigo": "# Passo 1: Verificar se o Node.js está instalado e na versão correta\nnode --version\n# Saída esperada: v22.x.x ou superior\n\n# Passo 2: Instalar o DeepSeek Harness globalmente\nnpm install -g deepseek-harness\n\n# Passo 3: Verificar a instalação\ndsh --version\n# Saída esperada: deepseek-harness v0.1.x\n\n# Passo 4: Verificar os modos disponíveis\ndsh --help"
+    },
+    {
+      "titulo": "Instalação Completa — Rota Source",
+      "linguagem": "bash",
+      "comandos": [
+        "git clone https://github.com/deepseek-ai/deepseek-harness.git",
+        "pnpm install",
+        "pnpm build",
+        "pnpm link --global"
+      ],
+      "codigo": "# Passo 1: Clonar o repositório\ngit clone https://github.com/deepseek-ai/deepseek-harness.git\ncd deepseek-harness\n\n# Passo 2: Instalar dependências (pnpm recomendado)\npnpm install\n\n# Passo 3: Compilar o projeto\npnpm build\n\n# Passo 4: Linkar o binário globalmente (para usar 'dsh' de qualquer pasta)\npnpm link --global\n\n# Passo 5: Verificar\ndsh --version"
+    },
+    {
+      "titulo": "Configuração da API Key",
+      "linguagem": "bash",
+      "comandos": [
+        "curl -fsSL https://ollama.com/install.sh | sh"
+      ],
+      "codigo": "# Opção A: DeepSeek API (cloud)\ndsh config set-api-key deepseek <SUA_API_KEY_AQUI>\n\n# Verificar se a chave foi salva\ndsh config show"
+    },
+    {
+      "titulo": "Primeira Execução",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Iniciar o DeepSeek Harness no modo Standard\ndsh --mode standard\n\n# Você verá algo como:\n# 🚀 DeepSeek Harness v0.1.0\n# Mode: Standard | Model: deepseek-v4 (via ollama)\n# Type your message or /help for commands\n#\n# dsh>"
+    }
+  ],
+  "gate": "node --version",
+  "comandos": [
+    "node --version",
+    "npm install -g deepseek-harness",
+    "git clone https://github.com/deepseek-ai/deepseek-harness.git",
+    "pnpm install",
+    "pnpm build",
+    "pnpm link --global",
+    "curl -fsSL https://ollama.com/install.sh | sh"
+  ],
+  "feito_quando": [
+    "Node.js desatualizado**: sempre use v22+. Versões anteriores causam erros de módulos ESM",
+    "Permissões no Linux/macOS**: se o `npm install -g` pedir sudo, use `nvm` para gerenciar Node.js sem sudo",
+    "Firewall bloqueando Ollama**: se o Ollama não responde, verifique se a porta 11434 não está bloqueada"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 2 — Instalacao Local: Do Zero ao Primeiro dsh",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

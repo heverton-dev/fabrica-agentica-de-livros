@@ -1,0 +1,42 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "7" },
+  "titulo": "Otimização de Prompts: DSPy",
+  "senioridade_obra": "iniciante",
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 6: o ast-grep encontra padrões estruturais em código (duplicação, parâmetros não usados) sem exigir leitura arquivo por arquivo — uma query que sobrevive à formatação. Este capítulo aplica a mesma lógica de busca estrutural a um material diferente: o prompt que você reenvia centenas de vezes por mês para a mesma tarefa.",
+  "metricas_obrigatorias": [
+    { "metrica": "redução de tamanho de prompt com compilação DSPy", "valor": "até 50%" },
+    { "metrica": "economia combinada das 8 ferramentas da obra quando aplicadas juntas", "valor": "até 85%" },
+    { "metrica": "redução de tokens de prompt ao otimizar prompt repetido (objetivo do capítulo)", "valor": "20-40%" }
+  ],
+  "limite_e_contorno_sugerido": "DSPy só compila o que tem contra o que comparar: exige um punhado de exemplos de treino já revisados manualmente e uma função de métrica que diga objetivamente se uma saída está certa. Sem exemplos rotulados e sem métrica clara, o compilador não tem o que otimizar — ele erra fluente, não silencioso. Além disso, compilar tem custo fixo de tempo e tokens (rodar o otimizador várias vezes contra o conjunto de treino); só compensa para prompts que você reutiliza dezenas ou centenas de vezes, nunca para uma pergunta única que você faz uma vez e descarta.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Prompt como programa: Signature e Module do DSPy",
+        "escopo": "Entra: a diferença entre Signature (contrato de entrada/saída, o que deve ser preenchido) e Module (a estratégia de chamada ao LLM, como o preenchimento acontece); por que separar essas duas camadas é o que torna o prompt testável. Fica de fora: o algoritmo interno do otimizador (Pilar 2).",
+        "ancora_visual": "Não é o diagrama principal do capítulo (reservado ao Pilar 2/Ilustra); aqui a explicação usa duas analogias complementares em texto.",
+        "entrega_tecnica": "Python: definição de uma classe dspy.Signature com campos de entrada/saída tipados e de uma classe dspy.Module que a usa via dspy.Predict, sem ainda compilar nada — só o contrato estrutural.",
+        "evolucao_leitor": "De 'prompt é um texto que eu escrevo e reescrevo até parecer bom' para 'prompt tem um contrato de entrada/saída separado da estratégia de preenchê-lo — e contrato dá para testar'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "O compilador DSPy: BootstrapFewShot busca o prompt mais barato que ainda passa",
+        "escopo": "Entra: como o compilador testa combinações de exemplos e instruções contra uma métrica de validação e mantém a versão mais enxuta que ainda acerta; a mecânica de otimização automática como auditoria de despesa recorrente. Fica de fora: como escrever a Signature (Pilar 1) e como aplicar isso a um prompt real do leitor (Pilar 3).",
+        "ancora_visual": "flowchart TD comparando dois fluxos lado a lado: 'engenharia manual de prompt' (escreve → testa em poucos exemplos → reescreve por tentativa e erro → prompt cresce com remendos) versus 'pipeline compilado DSPy' (Signature + exemplos de treino + métrica → BootstrapFewShot testa candidatos → mantém o prompt mais barato que passa na métrica).",
+        "entrega_tecnica": "Python: exemplo completo e comentado com dspy.Example (exemplos de treino), função de métrica/validador e chamada de BootstrapFewShot(metric=...).compile(...) produzindo o módulo otimizado.",
+        "evolucao_leitor": "De 'eu decido, no achômetro, se um prompt está bom' para 'uma métrica decide, contra exemplos reais, se o prompt está bom — e o compilador busca a versão mais barata que ainda passa'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Aplicando em produção: otimizar o prompt que você repete 1000x/mês",
+        "escopo": "Entra: como escolher um bom candidato para compilação (prompt repetido em alto volume, com critério de acerto claro); comparação de tamanho de prompt antes/depois; o erro comum de 'inchar' o prompt manualmente a cada falha percebida versus corrigir via exemplo de treino + recompilação. Fica de fora: detalhes de Signature/Module (Pilar 1) e do algoritmo do otimizador (Pilar 2).",
+        "ancora_visual": "Tabela comparativa (não Mermaid): tokens do prompt manual vs. compilado, taxa de acerto contra o conjunto de validação.",
+        "entrega_tecnica": "Reaproveita o módulo compilado do Pilar 2 e adiciona um passo de comparação: medir len(prompt) antes/depois e rodar contra um conjunto de validação separado do treino.",
+        "evolucao_leitor": "De 'quando o modelo erra, eu adiciono mais uma instrução ao prompt' para 'quando o modelo erra, eu adiciono um exemplo ao conjunto de treino e recompilo — o prompt fica mais preciso sem ficar mais longo'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

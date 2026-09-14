@@ -1,0 +1,539 @@
+{
+  "tema": "multi-agent orchestration task decomposition LLM",
+  "gerado_em": "12 set. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    },
+    "arxiv": {
+      "status": "erro",
+      "erro": "http://export.arxiv.org/api/query?search_query=all:multi-agent+AND+all:orchestra -> The read operation timed out",
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=multi-agent+orchestr -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=multi-agent+orchestration+task+decomposition -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 24,
+  "registros": [
+    {
+      "titulo": "A survey on large language model based autonomous agents",
+      "autores": [
+        "Lei Wang",
+        "Chen Ma",
+        "Xueyang Feng",
+        "Zeyu Zhang",
+        "Hao Yang",
+        "Jingsen Zhang",
+        "Zhiyuan Chen",
+        "Jiakai Tang",
+        "Xu Chen",
+        "Yankai Lin",
+        "Wayne Xin Zhao",
+        "Zhewei Wei",
+        "Ji-Rong Wen"
+      ],
+      "ano": 2024,
+      "doi": "10.1007/s11704-024-40231-1",
+      "url": "https://doi.org/10.1007/s11704-024-40231-1",
+      "resumo": "Abstract Autonomous agents have long been a research focus in academic and industry communities. Previous research often focuses on training agents with limited knowledge within isolated environments, which diverges significantly from human learning processes, and makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of Web knowledge, large language models (LLMs) have shown potential in human-level intelligence, leading to a surge in research on LLM-based autonomous agents. In this paper, we present a comprehensive survey of these studies, delivering a systematic review of LLM-based autonomous agents from a holistic perspective. We first discuss the construction of LLM-based autonomous agents, proposing a unified framework that encompasses much of previous work. Then, we present a overview of the diverse applications of LLM-based autonomous agents in social science, natural science, and engineering. Finally, we delve into the evaluation strategies commonly used for LLM-based autonomous agents. Based on the previous studies, we also present several challenges and future directions in this field.",
+      "citacoes": 1547,
+      "periodico": "Frontiers of Computer Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Survey of Large Language Models",
+      "autores": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong",
+        "Yupeng Hou",
+        "Beichen Zhang",
+        "Yingqian Min",
+        "Junjie Zhang",
+        "Peiyu Liu",
+        "Xiaolei Wang",
+        "Yifan Du",
+        "Yushuo Chen",
+        "Yushuo Chen",
+        "Zhipeng Chen",
+        "Jinhao Jiang",
+        "Ruiyang Ren",
+        "Yifan Li",
+        "Xinyu Tang",
+        "Peiyu Liu",
+        "Yiwen Hu",
+        "Jian‐Yun Nie",
+        "Ji-Rong Wen"
+      ],
+      "ano": 2026,
+      "doi": "10.1007/s11704-026-60308-3",
+      "url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "resumo": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, architectural innovations, and data curation strategies; (2) post-training techniques, including supervised fine-tuning and reinforcement learning, which adapt foundational models to downstream tasks and enhance their alignment and safety; (3) utilization strategies, such as in-context learning, prompt engineering, and agentic reasoning, that optimize real-world deployment and enable effective interaction with external environments; and (4) evaluation methods, encompassing benchmarks for key ability dimensions such as core language capabilities, reasoning, and safety, which support comprehensive and reliable assessment of model performance. Additionally, we identify critical research issues, including those concerning theoretical foundations, efficient scaling, alignment, and agentic capability, and highlight the open challenges they present. By synthesizing state-of-the-art insights and emerging trends, this survey aims to provide a systematic and comprehensive framework for understanding the trajectory, current limitations, and future directions of LLM progress.",
+      "citacoes": 1526,
+      "periodico": "Frontiers of Computer Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "When LLMs meet cybersecurity: a systematic literature review",
+      "autores": [
+        "Jie Zhang",
+        "H. Bu",
+        "Hui Wen",
+        "Yongji Liu",
+        "Haiqiang Fei",
+        "Rongrong Xi",
+        "Lun Li",
+        "Yun Yang",
+        "Hongsong Zhu",
+        "Dan Meng"
+      ],
+      "ano": 2025,
+      "doi": "10.1186/s42400-025-00361-w",
+      "url": "https://doi.org/10.1186/s42400-025-00361-w",
+      "resumo": "Abstract The rapid development of large language models (LLMs) has opened new avenues across various fields, including cybersecurity, which faces an evolving threat landscape and demand for innovative technologies. Despite initial explorations into the application of LLMs in cybersecurity, there is a lack of a comprehensive overview of this research area. This paper addresses this gap by providing a systematic literature review, covering the analysis of over 300 works, encompassing 25 LLMs and more than 10 downstream scenarios. Our comprehensive overview addresses three key research questions: the construction of cybersecurity-oriented LLMs, the application of LLMs to various cybersecurity tasks, the challenges and further research in this area. This study aims to shed light on the extensive potential of LLMs in enhancing cybersecurity practices and serve as a valuable resource for applying LLMs in this field. We also maintain and regularly update a list of practical guides on LLMs for cybersecurity at https://github.com/tmylla/Awesome-LLM4Cybersecurity .",
+      "citacoes": 210,
+      "periodico": "Cybersecurity",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "AI Agents vs. Agentic AI: A Conceptual taxonomy, applications and challenges",
+      "autores": [
+        "Ranjan Sapkota",
+        "Konstantinos I. Roumeliotis",
+        "Manoj Karkee"
+      ],
+      "ano": 2025,
+      "doi": "10.1016/j.inffus.2025.103599",
+      "url": "https://doi.org/10.1016/j.inffus.2025.103599",
+      "resumo": "Information fusion, in the context of the Generative AI era, must distinguish AI Agents from Agentic AI. This review critically distinguishes between AI Agents and Agentic AI, offering a structured, conceptual taxonomy, application mapping, and analysis of opportunities and challenges to clarify their divergent design philosophies and capabilities. We begin by outlining the search strategy and foundational definitions, characterizing AI Agents as modular systems driven and enabled by LLMs and LIMs for task-specific automation. Generative AI is positioned as a precursor providing the foundation, with AI agents advancing through tool integration, prompt engineering, and reasoning enhancements. We then characterize Agentic AI systems, which, in contrast to AI Agents, represent a paradigm shift marked by multi-agent collaboration, dynamic task decomposition, persistent memory, and coordinated autonomy. Through a chronological evaluation of architectural evolution, operational mechanisms, interaction styles, and autonomy levels, we present a comparative analysis across both AI agents and agentic AI paradigms. Application domains enabled by AI Agents such as customer support, scheduling, and data summarization are then contrasted with Agentic AI deployments in research automation, robotic coordination, and medical decision support. We further examine unique challenges in each paradigm including hallucination, brittleness, emergent behavior, and coordination failure, and propose targeted solutions such as ReAct loops, retrieval-augmented generation (RAG), automation coordination layers, and causal modeling. This work aims to provide a roadmap for developing robust, scalable, and explainable AI-driven systems.",
+      "citacoes": 194,
+      "periodico": "Information Fusion",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The Rise and Potential of Large Language Model Based Agents: A Survey",
+      "autores": [
+        "Zhiheng Xi",
+        "Wen-Xiang Chen",
+        "Xin Guo",
+        "Wei He",
+        "Yiwen Ding",
+        "Boyang Hong",
+        "Ming Zhang",
+        "Junzhe Wang",
+        "Senjie Jin",
+        "Enyu Zhou",
+        "Rui Zheng",
+        "Xiaoran Fan",
+        "Xiao Wang",
+        "Limao Xiong",
+        "Yuhao Zhou",
+        "Weiran Wang",
+        "Changhao Jiang",
+        "Yicheng Zou",
+        "Xiangyang Liu",
+        "Zhangyue Yin",
+        "Shihan Dou",
+        "Rongxiang Weng",
+        "Wensen Cheng",
+        "Qi Zhang",
+        "Wenjuan Qin",
+        "Yongyan Zheng",
+        "Xipeng Qiu",
+        "Huang, Xuanjing",
+        "Tao Gui"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2309.07864",
+      "url": "http://arxiv.org/abs/2309.07864",
+      "resumo": "For a long time, humanity has pursued artificial intelligence (AI) equivalent to or surpassing the human level, with AI agents considered a promising vehicle for this pursuit. AI agents are artificial entities that sense their environment, make decisions, and take actions. Many efforts have been made to develop intelligent agents, but they mainly focus on advancement in algorithms or training strategies to enhance specific capabilities or performance on particular tasks. Actually, what the community lacks is a general and powerful model to serve as a starting point for designing AI agents that can adapt to diverse scenarios. Due to the versatile capabilities they demonstrate, large language models (LLMs) are regarded as potential sparks for Artificial General Intelligence (AGI), offering hope for building general AI agents. Many researchers have leveraged LLMs as the foundation to build AI agents and have achieved significant progress. In this paper, we perform a comprehensive survey on LLM-based agents. We start by tracing the concept of agents from its philosophical origins to its development in AI, and explain why LLMs are suitable foundations for agents. Building upon this, we present a general framework for LLM-based agents, comprising three main components: brain, perception, and action, and the framework can be tailored for different applications. Subsequently, we explore the extensive applications of LLM-based agents in three aspects: single-agent scenarios, multi-agent scenarios, and human-agent cooperation. Following this, we delve into agent societies, exploring the behavior and personality of LLM-based agents, the social phenomena that emerge from an agent society, and the insights they offer for human society. Finally, we discuss several key topics and open problems within the field. A repository for the related papers at https://github.com/WooooDyy/LLM-Agent-Paper-List.",
+      "citacoes": 257,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A review of large language models and autonomous agents in chemistry",
+      "autores": [
+        "Mayk Caldas Ramos",
+        "Christopher J. Collison",
+        "Andrew Dickson White"
+      ],
+      "ano": 2024,
+      "doi": "10.1039/d4sc03921a",
+      "url": "https://doi.org/10.1039/d4sc03921a",
+      "resumo": "Large language models (LLMs) have emerged as powerful tools in chemistry, significantly impacting molecule design, property prediction, and synthesis optimization. This review highlights LLM capabilities in these domains and their potential to accelerate scientific discovery through automation. We also review LLM-based autonomous agents: LLMs with a broader set of tools to interact with their surrounding environment. These agents perform diverse tasks such as paper scraping, interfacing with automated laboratories, and synthesis planning. As agents are an emerging topic, we extend the scope of our review of agents beyond chemistry and discuss across any scientific domains. This review covers the recent history, current capabilities, and design of LLMs and autonomous agents, addressing specific challenges, opportunities, and future directions in chemistry. Key challenges include data quality and integration, model interpretability, and the need for standard benchmarks, while future directions point towards more sophisticated multi-modal agents and enhanced collaboration between agents and experimental methods. Due to the quick pace of this field, a repository has been built to keep track of the latest studies: https://github.com/ur-whitelab/LLMs-in-science.",
+      "citacoes": 239,
+      "periodico": "Chemical Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+      "autores": [
+        "Yongliang Shen",
+        "Kaitao Song",
+        "Xu Tan",
+        "Dongsheng Li",
+        "Weiming Lü",
+        "Yueting Zhuang"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2303.17580",
+      "url": "http://arxiv.org/abs/2303.17580",
+      "resumo": "Solving complicated AI tasks with different domains and modalities is a key step toward artificial general intelligence. While there are numerous AI models available for various domains and modalities, they cannot handle complicated AI tasks autonomously. Considering large language models (LLMs) have exhibited exceptional abilities in language understanding, generation, interaction, and reasoning, we advocate that LLMs could act as a controller to manage existing AI models to solve complicated AI tasks, with language serving as a generic interface to empower this. Based on this philosophy, we present HuggingGPT, an LLM-powered agent that leverages LLMs (e.g., ChatGPT) to connect various AI models in machine learning communities (e.g., Hugging Face) to solve AI tasks. Specifically, we use ChatGPT to conduct task planning when receiving a user request, select models according to their function descriptions available in Hugging Face, execute each subtask with the selected AI model, and summarize the response according to the execution results. By leveraging the strong language capability of ChatGPT and abundant AI models in Hugging Face, HuggingGPT can tackle a wide range of sophisticated AI tasks spanning different modalities and domains and achieve impressive results in language, vision, speech, and other challenging tasks, which paves a new way towards the realization",
+      "citacoes": 265,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning",
+      "autores": [
+        "Edward Yi Chang",
+        "Longling Geng"
+      ],
+      "ano": 2025,
+      "doi": "10.14778/3750601.3750611",
+      "url": "https://doi.org/10.14778/3750601.3750611",
+      "resumo": "This paper introduces SagaLLM, a structured multi-agent architecture designed to address four foundational limitations of current LLM-based planning systems: unreliable self-validation, context loss, lack of transactional safeguards, and insufficient inter-agent coordination. While recent frameworks leverage LLMs for task decomposition and multi-agent communication, they often fail to ensure consistency, rollback, or constraint satisfaction across distributed workflows. SagaLLM bridges this gap by integrating the Saga transactional pattern with persistent memory, automated compensation, and independent validation agents. It leverages LLMs' generative reasoning to automate key tasks traditionally requiring hand-coded coordination logic, including state tracking, dependency analysis, log schema generation, and recovery orchestration. Although SagaLLM relaxes strict ACID guarantees, it ensures workflow-wide consistency and recovery through modular checkpointing and compensable execution. Empirical evaluations across planning domains demonstrate that standalone LLMs frequently violate interdependent constraints or fail to recover from disruptions. In contrast, SagaLLM achieves significant improvements in consistency, validation accuracy, and adaptive coordination under uncertainty—establishing a robust foundation for real-world, scalable LLM-based multi-agent systems.",
+      "citacoes": 20,
+      "periodico": "Proceedings of the VLDB Endowment",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+      "autores": [
+        "Ranjan Sapkota",
+        "Konstantinos I. Roumeliotis",
+        "Manoj Karkee"
+      ],
+      "ano": 2025,
+      "doi": "10.70777/si.v2i3.15161",
+      "url": "https://doi.org/10.70777/si.v2i3.15161",
+      "resumo": "This review critically distinguishes between AI Agents and Agentic AI, offering a structured, conceptual taxonomy, application mapping, and analysis of opportunities and challenges to clarify their divergent design philosophies and capabilities. We begin by outlining the search strategy and foundational definitions, characterizing AI Agents as modular systems driven and enabled by LLMs and LIMs for taskspecific automation. Generative AI is positioned as a precursor providing the foundation, with AI agents advancing through tool integration, prompt engineering, and reasoning enhancements. We then characterize Agentic AI systems, which, in contrast to AI Agents, represent a paradigm shift marked by multi-agent collaboration, dynamic task decomposition, persistent memory, and coordinated autonomy. Through a chronological evaluation of architectural evolution, operational mechanisms, interaction styles, and autonomy levels, we present a comparative analysis across both AI agents and agentic AI paradigms. Application domains enabled by AI Agents such as customer support, scheduling, and data summarization are then contrasted with Agentic AI deployments in research automation, robotic coordination, and medical decision support. We further examine unique challenges in each paradigm including hallucination, brittleness, emergent behavior, and coordination failure, and propose targeted solutions such as ReAct loops, retrieval-augmented generation (RAG), automation coordination layers, and causal modeling. This work aims to provide a roadmap for developing robust, scalable, and explainable AI-driven systems.",
+      "citacoes": 170,
+      "periodico": "SuperIntelligence - Robotics - Safety & Alignment",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "LLM Agents for Smart City Management: Enhancing Decision Support Through Multi-Agent AI Systems",
+      "autores": [
+        "Anna V. Kalyuzhnaya",
+        "Sergey Mityagin",
+        "Elizaveta Lutsenko",
+        "Andrey Getmanov",
+        "Yaroslav Aksenkin",
+        "Kamil Fatkhiev",
+        "Kirill Fedorin",
+        "Nikolay O. Nikitin",
+        "Natalia Chichkova",
+        "Vladimir Vorona",
+        "Alexander V. Boukhanovsky"
+      ],
+      "ano": 2025,
+      "doi": "10.3390/smartcities8010019",
+      "url": "https://doi.org/10.3390/smartcities8010019",
+      "resumo": "This study investigates the implementation of LLM agents in smart city management, leveraging both the inherent language processing abilities of LLMs and the distributed problem solving capabilities of multi-agent systems for the improvement of urban decision making processes. A multi-agent system architecture combines LLMs with existing urban information systems to process complex queries and generate contextually relevant responses for urban planning and management. The research is focused on three main hypotheses testing: (1) LLM agents’ capability for effective routing and processing diverse urban queries, (2) the effectiveness of Retrieval-Augmented Generation (RAG) technology in improving response accuracy when working with local knowledge and regulations, and (3) the impact of integrating LLM agents with existing urban information systems. Our experimental results, based on a comprehensive validation dataset of 150 question–answer pairs, demonstrate significant improvements in decision support capabilities. The multi-agent system achieved pipeline selection accuracy of 94–99% across different models, while the integration of RAG technology improved response accuracy by 17% for strategic development queries and 55% for service accessibility questions. The combined use of document databases and service APIs resulted in the highest performance metrics (G-Eval scores of 0.68–0.74) compared to standalone LLM responses (0.30–0.38). Using St. Petersburg’s Digital Urban Platform as a testbed, we demonstrate the practical applicability of this approach to create integrated city management systems with support complex urban decision making processes. This research contributes to the growing field of AI-enhanced urban management by providing empirical evidence of LLM agents’ effectiveness in processing heterogeneous urban data and supporting strategic planning decisions. Our findings suggest that LLM-based multi-agent systems can significantly enhance the efficiency and accuracy of urban decision making while maintaining high relevance in responses.",
+      "citacoes": 58,
+      "periodico": "Smart Cities",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "ChatDev: Communicative Agents for Software Development",
+      "autores": [
+        "Chen Qian",
+        "Wei Liu",
+        "Hongzhang Liu",
+        "Nuo Chen",
+        "Yufan Dang",
+        "Jiahao Li",
+        "Cheng Yang",
+        "Weize Chen",
+        "Yu-Sheng Su",
+        "Xin Cong",
+        "Juyuan Xu",
+        "Dahai Li",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "ano": 2024,
+      "doi": "10.18653/v1/2024.acl-long.810",
+      "url": "https://doi.org/10.18653/v1/2024.acl-long.810",
+      "resumo": "Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun. Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2024.",
+      "citacoes": 348,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Intent-Based Infrastructure and Service Orchestration Using Agentic-AI",
+      "autores": [
+        "Dimitrios Brodimas",
+        "Alexios Birbas",
+        "Dimitrios Kapolos",
+        "Spyros Denazis"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/ojcoms.2025.3600706",
+      "url": "https://doi.org/10.1109/ojcoms.2025.3600706",
+      "resumo": "This paper introduces a novel framework that integrates agentic ai with ibn to enable autonomous management, configuration, and optimization of mobile network services and resources. Leveraging the advanced reasoning and natural language processing capabilities of an llm, the proposed architecture translates high-level user intents into precise network actions, facilitating user-friendly and scalable network orchestration. The framework employs a distributed multi-agent system, where specialized agents collaborate to decompose user intents, provide computational infrastructure, and deploy services using industry-standard iac tools. By supporting natural language interactions, the system reduces operational complexity and enhances accessibility for users with varying technical expertise. Experimental evaluations demonstrate significant improvements in task completion rates, response accuracy, and operational efficiency compared to traditional manual methods, particularly for complex network management tasks. In essence, this work creates an intelligent network orchestration framework that adapts to user needs by automatically configuring network and computing resources while operating with minimal human intervention.",
+      "citacoes": 22,
+      "periodico": "IEEE Open Journal of the Communications Society",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Z-SPACE: A MULTI-AGENT TOOL ORCHESTRATION FRAMEWORK FOR ENTERPRISE-GRADE LLM AUTOMATION",
+      "autores": [
+        "Nan, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.2139/ssrn.5896270",
+      "url": "https://doi.org/10.2139/ssrn.5896270",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "AROMA: Adaptive Orchestration for Robust and Cost-Efficient Multi-Agent LLM Systems",
+      "autores": [
+        "Yin, Tianyu",
+        "Jia, Jingyi"
+      ],
+      "ano": 2026,
+      "doi": "10.22541/au.177403077.77403552/v1",
+      "url": "https://doi.org/10.22541/au.177403077.77403552/v1",
+      "resumo": "<jats:p>Multi-Agent Large Language Model Systems (MAS) confront significant challenges stemming from systemic design flaws, inter-agent misalignments, and prohibitive operational costs. These systems frequently offer only modest performance gains, or even exhibit setbacks, while incurring substantial increases in token consumption due to prevalent failure modes like improper task decomposition and information overload. To address these critical issues, we propose Adaptive Orchestration for Robust Multi-Agent LLM Systems (AROMA), a novel framework designed to dynamically perceive, diagnose, and adaptively orchestrate multi-agent collaboration. AROMA incorporates capabilities for real-time failure identification, intelligent adjustment of system parameters, roles, and communication strategies, and optimization for efficient task completion with minimal overhead. Through extensive experiments on complex benchmarks, AROMA demonstrates enhanced task success rates and a substantial reduction in average token cost compared to existing baselines, alongside a significant mitigation of collaboration failure modes. Our findings confirm AROMA's efficacy in improving robustness, efficiency, and generalizability, paving the way for more reliable and economically sustainable multi-agent LLM deployments.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "FATA: A Framework-Agnostic, Task-Agnostic Agentic AI Platform for Serverless Multi-Agent Orchestration",
+      "autores": [
+        "SHERIFF, AKRAM"
+      ],
+      "ano": 2025,
+      "doi": "10.36227/techrxiv.175099921.10546764/v1",
+      "url": "https://doi.org/10.36227/techrxiv.175099921.10546764/v1",
+      "resumo": "<jats:p>Contemporary agentic AI systems face critical challenges in tool orchestration, dynamic coordination, and framework interoperability. I present FATA (Framework Agnostic and Task Agnostic Agentic AI), a novel control plane design pattern that enables scalable, distributed multi-agent orchestration through serverless architecture. FATA introduces a unified tool management layer that dynamically routes, validates, and governs tool interactions while maintaining framework independence. My approach distinguishes between specialized AI agents for targeted automation and collaborative agentic ecosystems with emergent collective intelligence. Through systematic evaluation across cybersecurity, compliance, and document processing domains, FATA demonstrates the capability to reduce developer complexity, enable runtime adaptability, and provide robust governance mechanisms for enterprise-scale agentic deployments.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Multi-Agent LLM Collaborative Reasoning and Task Planning for Complex Task Solving",
+      "autores": [
+        "Zhang, Wentao",
+        "Liao, Tian",
+        "Feng, Yihui"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.7150298",
+      "url": "https://doi.org/10.2139/ssrn.7150298",
+      "resumo": "<jats:p>Complex open-domain tasks require long-range reasoning, controlled decomposition, and reliable tool-mediated execution from large language models (LLMs). Single-agent LLM workflows still suffer from one-perspective planning bias, accumulated errors in long reasoning chains, and weak control over tool invocation. This paper proposes a multi-agent LLM collaborative reasoning and hierarchical task-planning framework for complex task solving. The framework assigns the planner, executor, and verifier to explicit roles and represents each task as a dependency-aware graph with priorities, confidence states, evidence requirements, and repair conditions. To address parameter selection, the priority coefficients are determined on a validation set with the default setting α = 0.35, β = 0.30, γ = 0.25, and λ = 0.10, while the verifier confidence threshold is set to θ = 0.72 after grid-based calibration. A sensitivity test shows that changing each priority coefficient by ±0.10 changes the completion rate by no more than 2.6 percentage points, and varying θ from 0.65 to 0.80 changes answer accuracy by no more than 3.2 percentage points. The shared-memory update function is implemented through typed records, node-level indexes, semantic retrieval, and conflict-aware invocation rules. A unified tool-error taxonomy is also defined, including wrong tool selection, invalid parameters, invalid invocation sequence, execution failure, and inconsistent result integration. Experiments on multi-step logical reasoning, cross-tool orchestration, and open-domain problem solving show that the proposed framework improves task completion by 27.3%, answer accuracy by 19.6%, reasoning accuracy by 22.1%, and factual consistency by 24.8%, while reducing tool error rate by 31.5% compared with a single-agent GPT-4 baseline.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Multi-Agent LLM Collaborative Reasoning and Task Planning for Complex Task Solving",
+      "autores": [
+        "Zhang, Wentao",
+        "Liao, Tian",
+        "Feng, Yihui"
+      ],
+      "ano": 2026,
+      "doi": "10.21203/rs.3.rs-10232223/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-10232223/v1",
+      "resumo": "<title>Abstract</title>\n                <p>Complex open-domain tasks require long-range reasoning, controlled decomposition, and reliable tool-mediated execution from large language models (LLMs). Single-agent LLM workflows still suffer from one-perspective planning bias, accumulated errors in long reasoning chains, and weak control over tool invocation. This paper proposes a multi-agent LLM collaborative reasoning and hierarchical task-planning framework for complex task solving. The framework assigns the planner, executor, and verifier to explicit roles and represents each task as a dependency-aware graph with priorities, confidence states, evidence requirements, and repair conditions. To address parameter selection, the priority coefficients are determined on a validation set with the default setting α = 0.35, β = 0.30, γ = 0.25, and λ = 0.10, while the verifier confidence threshold is set to θ = 0.72 after grid-based calibration. A sensitivity test shows that changing each priority coefficient by ± 0.10 changes the completion rate by no more than 2.6 percentage points, and varying θ from 0.65 to 0.80 changes answer accuracy by no more than 3.2 percentage points. The shared-memory update function is implemented through typed records, node-level indexes, semantic retrieval, and conflict-aware invocation rules. A unified tool-error taxonomy is also defined, including wrong tool selection, invalid parameters, invalid invocation sequence, execution failure, and inconsistent result integration. Experiments on multi-step logical reasoning, cross-tool orchestration, and open-domain problem solving show that the proposed framework improves task completion by 27.3%, answer accuracy by 19.6%, reasoning accuracy by 22.1%, and factual consistency by 24.8%, while reducing tool error rate by 31.5% compared with a single-agent GPT-4 baseline.</p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Network Function Orchestration with LLM based Multi-Agent System",
+      "autores": [
+        "Gemayel, Johny",
+        "Mokh, Ali"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/iccworkshops67674.2025.11162489",
+      "url": "https://doi.org/10.1109/iccworkshops67674.2025.11162489",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 IEEE International Conference on Communications Workshops (ICC Workshops)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "An LLM-Agent Framework for Adaptive Task Decomposition and Continual Strategy Updating in Non-Stationary Environments",
+      "autores": [
+        "Hu, Yi"
+      ],
+      "ano": 2026,
+      "doi": "10.20944/preprints202602.1841.v1",
+      "url": "https://doi.org/10.20944/preprints202602.1841.v1",
+      "resumo": "<jats:p>The study addresses the challenges faced by agents in dynamic and uncertain environments, where decision-making is easily disrupted, task structures are difficult to maintain, and strategies lack continuous adaptability. It proposes an adaptive task decomposition and strategy updating method grounded in large model reasoning. The approach first introduces state modeling and semantic context encoding mechanisms that capture environmental non-stationarity, allowing the agent to acquire and integrate temporal information throughout long-term interactions. Building on this foundation, an adaptive task decomposition module dynamically generates hierarchical task structures through semantic reasoning, enabling the agent to preserve coherent execution even when task goals change, disturbances intensify, or feedback becomes incomplete. In parallel, the strategy updating mechanism adjusts decision distributions based on real-time feedback, allowing rapid recovery and stable behavior when action deviations, sudden scene changes, or state noise occur. These components are integrated into a unified closed-loop reasoning framework that equips the agent with structural understanding, behavioral adjustment, and robust execution capabilities in complex scenarios. Systematic evaluation across multiple key metrics demonstrates that the method improves task completion, planning consistency, error recovery, and decision stability, highlighting its potential value for complex tasks in diverse application domains.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "RAG-Driven Multi-Agent LLM Framework with Task Decomposition for Beyond 5G Auto-Configuration",
+      "autores": [
+        "Sarıdaş, İrşat Emin",
+        "Salan, Onur",
+        "Görçin, Ali",
+        "Hökelek, İbrahim",
+        "Çırpan, Hakan Ali"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/ict70370.2026.11594648",
+      "url": "https://doi.org/10.1109/ict70370.2026.11594648",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2026 32nd International Conference on Telecommunications (ICT)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "LLM-Based Multi-Agent Orchestration: A Survey of Frameworks, Communication Protocols, and Emerging Patterns",
+      "autores": [
+        "Zhu, Yiwen",
+        "Liu, Lihe",
+        "Yu, Jiaqian",
+        "Zhang, Di"
+      ],
+      "ano": 2026,
+      "doi": "10.20944/preprints202604.2147.v1",
+      "url": "https://doi.org/10.20944/preprints202604.2147.v1",
+      "resumo": "<jats:p>The proliferation of large language model (LLM) agents has enabled increasingly complex 2 multi-step automation; however, composing multiple agents into coherent systems intro3 duces significant orchestration challenges that remain poorly documented. This survey 4 examines LLM-based multi-agent orchestration from 2023 through early 2026 (literature 5 cutoff: March 2026). We propose a three-topology, one-adaptivity taxonomy—centralized, 6 decentralized, and hierarchical coordination topologies, each optionally augmented with 7 a dynamic/adaptive control axis—grounded in classical multi-agent systems theory and 8 recent empirical evidence. We compare four leading frameworks (LangGraph, CrewAI, 9 AutoGen/Microsoft Agent Framework, and OpenAI Agents SDK) along axes directly rele10 vant to practitioners: state-management granularity, token cost structure, failure-recovery 11 options, and design philosophy. The emerging protocol stack is examined in terms of why 12 MCP (agent-to-tool) and A2A (agent-to-agent) occupy complementary layers, how the 13 ACP–A2A merger signals protocol convergence, and where ANP’s decentralized-discovery 14 design fits. Production design considerations—state management, task planning, error 15 handling, scalability, and security—are evaluated with reference to published benchmarks. 16 We close by identifying five open challenges and proposing a six-dimension evaluation 17 framework for multi-agent coordination quality. This paper provides practitioners with 18 a decision framework spanning taxonomy, framework selection, protocol adoption, and 19 production deployment.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Cross-Domain Orchestration with Multi-Agent LLM Framework for Enhanced Task Automation",
+      "autores": [
+        "Xu, Xiaonan",
+        "Chen, Haoshuo",
+        "Ryf, Roland",
+        "Bidkar, Sarvesh",
+        "Simsarian, Jesse E.",
+        "McLaird, Jeff",
+        "Rea, Paul",
+        "Fontaine, Nicolas K.",
+        "Mazur, Mikael",
+        "Dallachiesa, Lauren",
+        "Neilson, David T."
+      ],
+      "ano": 2025,
+      "doi": "10.1364/ofc.2025.m3z.10",
+      "url": "https://doi.org/10.1364/ofc.2025.m3z.10",
+      "resumo": "<jats:p>We evaluate the performance of LLMs in multi-agent systems for complex cross-domain network orchestration, interoperability and task automation. We demonstrate the effectiveness of this approach across IP, optical, and robotic domains.</jats:p>",
+      "citacoes": null,
+      "periodico": "Optical Fiber Communication Conference (OFC) 2025",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "WirelessLLM-Agent: A Unified LLM-Based Agent Framework for Multi-Task Wireless Communication Decision-Making",
+      "autores": [
+        "Yu, Gregory",
+        "Butler, Ian",
+        "Collins, Aaron"
+      ],
+      "ano": 2026,
+      "doi": "10.20944/preprints202604.0849.v1",
+      "url": "https://doi.org/10.20944/preprints202604.0849.v1",
+      "resumo": "<jats:p>The integration of large language models into wireless communication has shown promising results for individual tasks. However, existing approaches are typically designed for single-task scenarios and rely on supervised fine-tuning that fails to optimize for long-term decision quality. In this paper, we propose WirelessLLM-Agent, a unified LLM-based agent framework for multi-task wireless communication decision-making. Our framework integrates a semantic state serialization module that transforms heterogeneous wireless states into structured textual representations, a multi-task adapter architecture based on MoE-LoRA for parameter-efficient knowledge sharing, and a two-stage training paradigm combining SFT warm-start with GRPO reinforcement learning enhanced by lookahead collaborative simulation. Extensive experiments on channel multi-task learning, mobile edge computing task offloading, and cooperative edge caching demonstrate that WirelessLLM-Agent consistently outperforms existing methods while exhibiting strong zero-shot generalization.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Collaboration, Task Decomposition and Allocation",
+      "autores": [],
+      "ano": null,
+      "doi": "10.4324/9780203305607_chapter_9",
+      "url": "https://doi.org/10.4324/9780203305607_chapter_9",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Multi-Agent Systems for Concurrent Intelligent Design and Manufacturing",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

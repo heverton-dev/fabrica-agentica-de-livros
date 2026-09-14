@@ -1,0 +1,45 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Otimização de contexto: selecionar, comprimir, isolar",
+  "estagio": "Painel",
+  "estagio_indice": 2,
+  "objetivo": "Ensinar as quatro operações de contexto e quando cada uma compensa.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Operação 2: selecionar — função de recuperação com orçamento",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def selecionar(consulta, arquivos, orcamento_linhas=120):\n    \"\"\"Retorna trechos relevantes ordenados por densidade de ocorrencia.\"\"\"\n    termos = [t.lower() for t in consulta.split() if len(t) > 3]\n    achados = []\n    for caminho in arquivos:\n        linhas = caminho.read_text(encoding=\"utf-8\", errors=\"replace\").splitlines()\n        for i, linha in enumerate(linhas):\n            texto = linha.lower()\n            pontos = sum(texto.count(t) for t in termos)\n            if pontos:\n                achados.append((pontos, caminho, i, linha.strip()))\n    achados.sort(key=lambda x: -x[0])\n    return achados[:orcamento_linhas]"
+    },
+    {
+      "titulo": "Operação 3: comprimir — política de compactação que preserva o essencial",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "politica_compactacao:\n  gatilho: \"contexto acima de 70% da janela\"\n  preservar_sempre:\n    - \"decisoes tomadas e seu motivo\"\n    - \"restricoes e contratos declarados\"\n    - \"caminhos de arquivo e nomes de simbolos\"\n    - \"falhas nao resolvidas\"\n  descartar_primeiro:\n    - \"conversa intermediaria de ajuste\"\n    - \"resultados de ferramenta ja consumidos\"\n    - \"repeticoes de leitura\"\n  registrar: \"gravar resumo no arquivo de estado antes de compactar\""
+    },
+    {
+      "titulo": "Operação 4: isolar — contrato de delegação",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"papel\": \"investigador-de-codigo\",\n  \"pergunta\": \"quais pontos do repositorio dependem do contrato de /login?\",\n  \"limite_leitura\": \"sem restricao\",\n  \"limite_retorno_tokens\": 250,\n  \"formato_retorno\": \"lista: caminho:linha — motivo em ate 12 palavras\",\n  \"proibido\": [\"colar trechos maiores que 3 linhas\", \"sugerir implementacao\"]\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Arquivo de estado.** Crie o bloco de estado da tarefa no formato do capítulo — decisões, arquivos já analisados, restrições descobertas e próximo passo — e comece a próxima sessão a partir dele",
+    "Recuperação em níveis.** Escolha um símbolo do projeto e responda uma pergunta sobre ele percorrendo a hierarquia: busca, assinatura, janela. Compare o consumo com o da leitura integral do arquivo",
+    "Política de compactação.** Escreva, em uma página, o que nunca comprime e o que é sempre descartável. A restrição de domínio é o primeiro item da lista",
+    "Rastro de descarte.** Ao remover um bloco da janela, registre o que saiu, por que saiu e como recuperá-lo. Depois simule um erro e verifique se é possível reconstruir a informação"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 8 — Otimização de contexto: selecionar, comprimir, isolar",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

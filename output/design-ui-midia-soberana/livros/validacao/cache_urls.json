@@ -1,0 +1,62 @@
+{
+  "https://fontsource.org/docs/getting-started/introduction": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://digital-strategy.ec.europa.eu/en/policies/strategy-data": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://www.w3.org/TR/SVG2/": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://github.com/penpot/penpot": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://lucide.dev/guide/": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://github.com/excalidraw/excalidraw": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://inkscape.org/about/": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://arxiv.org/abs/1809.00219": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://arxiv.org/abs/2006.11239": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://arxiv.org/abs/2112.10752": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://github.com/Stirling-Tools/Stirling-PDF": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://github.com/qpdf/qpdf": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 7 — BI e gestão de projetos: a oficina mede e organiza o trabalho; falta a peça que hospeda todas as outras e o balanço final da troca",
+  "metricas_obrigatorias": [
+    { "metrica": "limite de usuários e histórico do Free plan do Slack (não-open-source) x usuários ilimitados no self-hosted", "valor": "10 usuários e 90 dias de histórico vs. ilimitados" },
+    { "metrica": "RAM mínima do Mattermost para times pequenos e para times maiores", "valor": "2 GB vs. 4-8 GB" },
+    { "metrica": "RAM mínima do Coolify (oficial) x recomendação prática", "valor": "2 CPUs/2 GB/30 GB vs. 4 vCPU/8 GB/100 GB NVMe" },
+    { "metrica": "custo mensal de VPS (Hetzner CPX22) x assinatura Slack Pro", "valor": "~US$9,49/mês vs. ~US$8,75 por usuário/mês" },
+    { "metrica": "requisito mínimo do Dokku", "valor": "1 GB RAM" },
+    { "metrica": "CapRover em VPS de baixo custo", "valor": "~US$10/mês" }
+  ],
+  "limite_escala_aplica": "A troca quebra de forma previsível em três cenários: (1) a equipe depende de chamadas de vídeo nativas de alta qualidade e de integrações prontas do Slack, onde Mattermost e Rocket.Chat ainda entregam menos; (2) o negócio exige SLA de disponibilidade com orquestração multi-máquina, onde Dokku (single-node por design) e Coolify (sem multi-servidor antes da v5) ficam para trás; (3) ninguém na equipe tem tempo ou disposição para assumir o plantão de atualizações, backups e segurança da VPS — aí a assinatura continua sendo a peça alugada mais barata.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "A sala de equipe na sua oficina: Mattermost e Rocket.Chat como substitutos reais do Slack",
+        "escopo": "Entra: comparação honesta Mattermost vs. Rocket.Chat vs. Zulip contra Slack/Teams, com números reais de maturidade (estrelas, stack, licenças, requisitos de RAM) e os pontos onde a equipe sente a diferença (vídeo nativo, integrações, moderação). Sai: instalação passo a passo (fica no Pilar 2) e custo da VPS (fica no Pilar 3).",
+        "ancora_visual": "flowchart LR mostrando a prateleira de comunicação da Oficina Digital: três peças (Mattermost, Rocket.Chat, Zulip) com etiqueta de maturidade cada, convergindo para a bancada de comparação contra o Slack — vocabulário do motivo condutor (peça, prateleira, bancada, garantia).",
+        "entrega_tecnica": "Tabela de decisão (markdown) comparando as três ferramentas por critério operacional: stack, licença, RAM mínima, pontos onde sente a diferença vs. Slack — modo operacional, sem código de programação.",
+        "evolucao_leitor": "De 'Slack é o único jeito de conversar em equipe' para 'sei qual peça pegar na prateleira e onde a equipe vai sentir a diferença'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "A peça que faltava: Docker, Coolify, CapRover e Dokku como a bancada que hospeda tudo",
+        "escopo": "Entra: o modelo mental da bancada auto-hospedada (VPS → Docker → camada PaaS → apps) construído com um deploy real de Mattermost via Docker Compose e a comparação entre Coolify, CapRover e Dokku como camadas de hospedagem estilo Heroku. Sai: escolha entre chat X/Y/Z (Pilar 1) e o balanço financeiro (Pilar 3).",
+        "ancora_visual": "flowchart TB da pilha da oficina: VPS (Hetzner ou Oracle Free Tier) no topo, Docker embaixo, e as quatro camadas de hospedagem (Portainer, Coolify, Dokku, CapRover) alimentando os apps já montados nos capítulos anteriores (Mattermost, n8n, Listmonk, EspoCRM).",
+        "entrega_tecnica": "docker-compose.yml real do Mattermost (app + PostgreSQL), sessão console mostrando a subida e o teste HTTP, e sessão bash do deploy inicial do Coolify e do Dokku — modo operacional, sem Python/TS puro.",
+        "evolucao_leitor": "De 'self-hosted é coisa de especialista' para 'eu subo minha própria bancada e hospedo nela tudo o que montei neste livro'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "O balanço final: quando a soma de VPS, manutenção e risco ainda sai mais barata que a assinatura",
+        "escopo": "Entra: a conta completa da troca — VPS (~US$9,49/mês na Hetzner), horas de manutenção, backups e risco de segurança — contra a soma das assinaturas evitadas em todos os capítulos, e quando a troca NÃO vale (SLA, orquestração multi-máquina, plantão). Sai: escolha de ferramenta (Pilares 1-2) e receitas de instalação.",
+        "ancora_visual": "sequenceDiagram do ciclo de vida da manutenção na oficina: Servidor alerta → Artesão diagnostica → Artesão corrige → Servidor volta ao ar, contrastado com o SaaS onde esse ciclo é invisível — retomando a Lacuna Honesta dos capítulos anteriores.",
+        "entrega_tecnica": null,
+        "evolucao_leitor": "De 'open source é grátis, logo sempre vale' para 'eu sei orçar VPS, manutenção e risco, e sei responder quando a troca vale — e quando não vale'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Comunicação em Equipe e a Infraestrutura Que Sustenta Tudo",
+  "estagio": "Bancada",
+  "estagio_indice": 2,
+  "objetivo": "Encerrar a jornada mostrando a peça que sustenta todas as anteriores — a infraestrutura self-hosted —, e entregar ao leitor um balanço final de quando a troca vale o esforço.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "A Bancada Que Hospeda Tudo: Mattermost + Docker",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose up -d",
+        "curl -sI http://localhost:8065 | head -1"
+      ],
+      "codigo": "# docker-compose.yml — Mattermost (time pequeno)\nversion: \"3.9\"\n\nservices:\n  mm-postgres:\n    image: postgres:16-alpine\n    restart: unless-stopped\n    environment:\n      POSTGRES_DB: mattermost\n      POSTGRES_USER: mmuser\n      POSTGRES_PASSWORD: troque-esta-senha\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n\n  mattermost:\n    image: mattermost/mattermost-team-edition:latest\n    restart: unless-stopped\n    ports:\n      - \"8065:8065\"\n    environment:\n      MM_SQLSETTINGS_DRIVERNAME: postgres\n      MM_SQLSETTINGS_DATASOURCE: postgres://mmuser:troque-esta-senha@mm-postgres:5432/mattermost?sslmode=disable\n      MM_SERVICESETTINGS_SITEURL: http://chat.suaoficina.com\n    volumes:\n      - mmdata:/mattermost/data\n    depends_on:\n      - mm-postgres\n\nvolumes:\n  pgdata:\n  mmdata:"
+    },
+    {
+      "titulo": "O Deploy na Camada PaaS: Dokku",
+      "linguagem": "console",
+      "comandos": [
+        "git push dokku main"
+      ],
+      "codigo": "$ dokku apps:create oficina-chat\nCreating oficina-chat... done\n\n$ dokku postgres:create chat-db\n       Waiting for container to be ready... done\n$ dokku postgres:link chat-db oficina-chat\n\n$ dokku domains:add oficina-chat chat.suaoficina.com\n-----> Added chat.suaoficina.com to oficina-chat\n\n$ git push dokku main\n-----> Building oficina-chat from buildpacks...\n-----> Deploying oficina-chat to dokku\n=====> Application deployed:\n       http://chat.suaoficina.com"
+    },
+    {
+      "titulo": "O Armário com Painel: Coolify para Quem Quer Ver Tudo",
+      "linguagem": "console",
+      "comandos": [
+        "curl -sI http://192.168.0.10:8000 | head -1"
+      ],
+      "codigo": "$ sudo curl -fsSL https://coolify.io/install.sh | bash\n[INFO] Installing Docker Engine...\n[INFO] Installing Coolify v4.x...\n[INFO] Coolify is ready: http://192.168.0.10:8000\n$ curl -sI http://192.168.0.10:8000 | head -1\nHTTP/1.1 200 OK"
+    },
+    {
+      "titulo": "A Segurança da Oficina: Atualização e Acesso",
+      "linguagem": "console",
+      "comandos": [
+        "docker compose up -d",
+        "curl -sI https://chat.suaoficina.com | head -1"
+      ],
+      "codigo": "$ sudo apt update && sudo apt upgrade -y\n$ cd /srv/oficina && docker compose pull\n$ docker compose up -d\n$ curl -sI https://chat.suaoficina.com | head -1\nHTTP/1.1 200 OK"
+    }
+  ],
+  "gate": "docker compose up -d",
+  "comandos": [
+    "docker compose up -d",
+    "curl -sI http://localhost:8065 | head -1",
+    "git push dokku main",
+    "curl -sI http://192.168.0.10:8000 | head -1",
+    "curl -sI https://chat.suaoficina.com | head -1",
+    "docker compose ps --format \"table {{.Name}}\\t{{.Image}}\\t{{.Status}}\"",
+    "docker images | grep mattermost",
+    "docker compose pull",
+    "docker compose up -d --no-deps mattermost=9.10",
+    "docker compose restart mattermost"
+  ],
+  "feito_quando": [
+    "A assinatura cobra por usuário? Some o custo anual de todo o time",
+    "A alternativa open source tem manutenção ativa? Olhe o repositório e o changelog — a lição do Redash do capítulo 7",
+    "A equipe depende de integrações prontas ou recursos exclusivos da loja? Video nativo, conectores, marketplace",
+    "Alguém assume o plantão de atualizações, backup e segurança? Sem dono, não há troca",
+    "A soma VPS + manutenção + risco fica abaixo da assinatura? Só então a peça é sua"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 8 — Comunicação em Equipe e a Infraestrutura Que Sustenta Tudo",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

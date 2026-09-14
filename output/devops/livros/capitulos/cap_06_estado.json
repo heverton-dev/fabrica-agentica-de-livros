@@ -1,0 +1,24 @@
+{
+  "capitulo": "6",
+  "titulo": "Infraestrutura como Código (IaC) e provisionamento declarativo",
+  "parte": "B",
+  "estado": "concluido_autonomo",
+  "tentativas": 1,
+  "ultimo_erro": "",
+  "arquivo": "cap_06.md",
+  "caracteres": 7410,
+  "validacoes": {
+    "ci_codigo": "ok",
+    "diagrama_mermaid": "ok",
+    "metricas": "ok",
+    "escala": "ok",
+    "afirmacoes": "ok",
+    "fontes": "ok",
+    "referencias": {
+      "total_secao7": 16,
+      "citacoes_corpo": [1, 4, 7, 11, 13],
+      "orphans": 0
+    },
+    "caminho_md": "output/devops/livros/capitulos/cap_06.md"
+  }
+}

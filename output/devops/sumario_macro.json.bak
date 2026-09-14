@@ -1,0 +1,378 @@
+{
+  "titulo_obra": "DevOps Essencial: Cultura, automação e entrega contínua para iniciantes",
+  "subtitulo": "Cultura, automação e entrega contínua na prática",
+  "tipo_obra": "livro",
+  "tamanho_obra": "G",
+  "paginas_estimadas": 120,
+  "motivo_condutor": {
+    "nome": "A Jornada do Desenvolvedor Ágil",
+    "descricao": "Um desenvolvedor que evolui de trabalhar em silos isolados para se tornar um profissional integrado em equipes de alta performance que entregam valor continuamente",
+    "vocabulario": [
+      "colaboração",
+      "automação",
+      "feedback",
+      "imutabilidade",
+      "observabilidade",
+      "segurança"
+    ],
+    "persona_leitor": "Desenvolvedor Agêntico"
+  },
+  "introducao": "Apresentar o panorama geral do DevOps, estabelecer expectativas para a jornada de aprendizagem e motivar o leitor a adotar uma mentalidade de colaboração e melhoria contínua",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos do DevOps",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "Introdução ao DevOps e Quebra de Silos",
+          "resumo": "Compreender as origens do DevOps, os problemas dos silos tradicionais e como a cultura de colaboração transforma a entrega de software",
+          "objetivo": "Apresentar o conceito de DevOps, suas origens e como ele quebra as barreiras tradicionais entre desenvolvimento e operações",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Origem e evolução do DevOps",
+            "Problemas dos silos organizacionais tradicionais",
+            "Benefícios da cultura de colaboração",
+            "Princípios CALMS como fundamento do DevOps"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Desenvolvimento Isolado] --> B[Operações Isoladas]\n    B --> C[Silos Comunicação Ruim]\n    C --> D[Lentidão e Falhas]\n    D --> E[Insatisfação do Cliente]\n    style A fill:#f9f,stroke:#333\n    style E fill:#f96,stroke:#333\n    subgraph DevOps Transformation\n    F[Colaboração] --> G[Automação]\n    G --> H[Feedback Rápido]\n    H --> I[Melhoria Contínua]\n    end\n    I --> J[Entrega de Valor]\n    J --> K[Satisfação do Cliente]",
+          "entrega_tecnica": "Checklist de avaliação de silos organizacionais com 10 perguntas para identificar barreiras entre desenvolvimento e operações",
+          "secoes_eita": [
+            "Introdução: A história do surgimento do DevOps e os problemas dos modelos tradicionais",
+            "Explica: Como os silos entre desenvolvimento e operações criam gargalos e como o DevOps os quebra",
+            "Ilustra": "Diagrama comparando fluxo de trabalho tradicional vs. fluxo de trabalho DevOps com métricas de lead time e frequência de deployment",
+            "Técnica": "Template de checklist para avaliação de maturidade organizacional em colaboração entre dev e ops",
+            "Aplica": "Exercício de mapeamento dos fluxos de trabalho atuais da equipe e identificação de pontos de atrito",
+            "Conclusão": "Que o primeiro passo para DevOps é cultural, não técnico, e começa com a quebra de silos mentais",
+            "Referências": [
+              "EBERT, Christof et al. DevOps. IEEE Software, 2016.",
+              "BASS, Len; WEBER, Ingo; ZHU, Liming. Devops: A Software Architect's Perspective. CERN Document Server, 2015.",
+              "HUMBLE, Jez; MOLYNEUX, David. Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation. Addison-Wesley, 2010."
+            ]
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Cultura de Colaboração e Aprendizado",
+          "resumo": "Explorar os aspectos culturais do DevOps, incluindo responsabilidade compartilhada, confiança e aprendizado sistemático com falhas",
+          "objetivo": "Explorar os aspectos culturais do DevOps, incluindo responsabilidade compartilhada e aprendizado com falhas",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Responsabilidade compartilhada entre equipes",
+            "Cultura de blameless postmortems",
+            "Confiança psicológica em equipes",
+            "Comunicação transparente e fluxo de informação"
+          ],
+          "ancora_visual": "flowchart LR\n    A[Falha Ocorre] --> B[Postmortem Sem Culpa]\n    B --> C[Análise Sistemática]\n    C --> D[Identificação da Causa Raiz]\n    D --> E[Aprendizado Documentado]\n    E --> F[Melhoria de Processo]\n    F --> G[Compartilhamento do Conhecimento]\n    G --> H[Prevenção de Recorrência]\n    style B fill:#bbf,stroke:#333\n    style H fill:#9f9,stroke:#333",
+          "entrega_tecnica": "Template para condução de blameless postmortem com estrutura de perguntas e registro de aprendizados",
+          "secoes_eita": [
+            "Introdução: Por que a cultura é o fundamento mais importante do DevOps",
+            "Explica": "Como a responsabilidade compartilhada difere da cultura de culpabilidade tradicional",
+            "Ilustra": "Comparação de duas respostas a um incidente: uma com cultura de culpa e outra com aprendizado sistemático",
+            "Técnica": "Roteiro facilitado para conduzir uma reunião de pós-mortem eficaz e sem atribuição de culpa",
+            "Aplica": "Simular análise de um incidente fictício usando o template de postmortem fornecido",
+            "Conclusão": "Organizações que aprendem com falhas inovam mais rápido e têm equipes mais engajadas",
+            "Referências": [
+              "DEKKER, Sidney. The Field Guide to Understanding 'Human Error'. Ashgate Publishing, 2014.",
+              "KERSTEN, Mik; HUMBLE, Jez; et al. Accelerate: The Science of Lean Software and DevOps. IT Revolution Press, 2018.",
+              "EDMONDSON, Amy C. The Fearless Organization: Creating Psychological Safety in the Workplace. Wiley, 2018."
+            ]
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "Princípios Lean e Fluxo Contínuo",
+          "resumo": "Aplicar os princípios Lean ao desenvolvimento de software para eliminar desperdícios, reduzir tamanhos de lote e melhorar o fluxo de valor",
+          "objetivo": "Aplicar os princípios Lean ao desenvolvimento de software para reduzir desperdícios e melhorar o fluxo de trabalho",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Identificação dos 7 desperdícios no desenvolvimento de software",
+            "Redução do tamanho de lote e aumento da frequência de entrega",
+            "Fluxo contínuo e sistema de puxar (pull-based)",
+            "Melhoria contínua (Kaizen) aplicada a processos de entrega"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Trabalho em Lotes Grandes] --> B[Longos Tempos de Espera]\n    B --> C[Alto Estoque de Trabalho em Progresso]\n    C --> D[Dificuldade de Detecção Precoce de Problemas]\n    D --> E[Retrabalho Caro]\n    style A fill:#f96,stroke:#333\n    style E fill:#f96,stroke:#333\n    subgraph Lean Transformation\n    F[Pequenos Lotes] --> G[Feedback Rápido]\n    G --> H[Detecção Precoce de Defeitos]\n    H --> I[Menor Estoque de WIP]\n    I --> J[Fluxo Suave e Previsível]\n    end\n    J --> K[Maior Produtividade e Qualidade]",
+          "entrega_tecnica": "Exercício de mapeamento do fluxo de valor (value stream mapping) para o processo de entrega de software da equipe",
+          "secoes_eita": [
+            "Introdução: Como os princípios da manufactura lean se aplicam ao desenvolvimento de software",
+            "Explica": "Identificação e classificação dos tipos de desperdício (muda) no contexto de desenvolvimento de software",
+            "Ilustra": "Antes e depois da aplicação de princípios lean: comparação de lead time, estoque de WIP e taxa de defeitos",
+            "Técnica": "Planilha para mapeamento do fluxo de valor com identificação de etapas que agregam valor e aquelas que apenas geram custos",
+            "Aplica": "Mapear o fluxo de valor atual de uma funcionalidade típica da equipe, identificando gargalos e oportunidades de melhoria",
+            "Conclusão": "Pequenas melhorias contínuas nos processos produzem ganhos substanciais ao longo do tempo",
+            "Referencias": [
+              "WOMACK, James P.; JONES, Daniel T.; ROOS, Daniel. The Machine That Changed the World. Rawson Associates, 1990.",
+              "POPKINDE, Mary; POPPENDICK, Craig. Lean Software Development: An Agile Toolkit. Addison-Wesley, 2003.",
+              "HOVSEPIAN, Arsen; WALL, John. The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses. Crown Business, 2011."
+            ]
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Métricas e Medição de Desempenho",
+          "resumo": "Estabelecer métricas objetivas para avaliar o desempenho das práticas DevOps usando o framework DORA e promover melhorias baseadas em dados",
+          "objetivo": "Estabelecer métricas objetivas para avaliar o desempenho das práticas DevOps usando o framework DORA",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Métricas DORA: frequência de deployment, lead time para mudanças, MTTR e taxa de falha em mudanças",
+            "Como coletar, visualizar e agir baseado em métricas de desempenho",
+            "Uso de métricas para impulsionar melhorias contínuas",
+            "Armadilhas comuns na interpretação e uso de métricas de desempenho"
+          ],
+          "ancora_visual": "flowchart LR\n    A[Deploy Frequency] --> B[Lead Time]\n    B --> C[Change Fail Rate]\n    C --> D[Time to Restore]\n    D --> E[Qualidade e Velocidade]\n    E --> F[Melhoria Contínua]\n    style A fill:#9f9,stroke:#333\n    style F fill:#9f9,stroke:#333\n    subgraph Métricas DORA\n    style A fill:#cfc,stroke:#333\n    style B fill:#cfc,stroke:#333\n    style C fill:#cfc,stroke:#333\n    style D fill:#cfc,stroke:#333\n    end",
+          "entrega_tecnica": "Dashboard básico de métricas DORA em JSON para importação em ferramentas de visualização como Grafana ou Kibana",
+          "secoes_eita": [
+            "Introdução: Por que métricas são essenciais para melhoria contínua em DevOps",
+            "Explica": "Definição e cálculo das quatro métricas-chave do framework DORA",
+            "Ilustra": "Exemplo de evolução das métricas DORA ao longo de trimestres em uma equipe que está adotando práticas DevOps",
+            "Técnica": "Script Python simples para coleta e cálculo básico das métricas DORA a partir de dados de deployment e incidentes",
+            "Aplica": "Coletar dados das últimas 4 semanas de atividade da equipe e calcular as métricas DORA atuais",
+            "Conclusão": "O que não é medido não pode ser melhorado; métricas fornecem o feedback necessário para evolução",
+            "Referencias": [
+              "FORSGREN, Nicole; HUMBLE, Jez; et al. Accelerate: The Science of Lean Software and DevOps. IT Revolution Press, 2018.",
+              "HUMBLE, Jez; MOLES, Barry. Lean Enterprise: How High Performance Organizations Innovate at Scale. O'Reilly Media, 2015.",
+              "DORA METRICS: https://cloud.google.com/devops/devops-dora"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "Práticas Técnicas de Engenharia",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Integração Contínua (CI)",
+          "resumo": "Implementar pipelines de integração contínua para automatizar build, teste e validação de código em cada commit",
+          "objetivo": "Implementar pipelines de integração contínua para automatizar build, teste e validação de código",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Princípios e benefícios da Integração Contínua",
+            "Configuração de pipelines CI com GitHub Actions e GitLab CI",
+            "Estratégias de teste automatizado: unitário, de integração e de qualidade de código",
+            "Integração de análise estática de segurança e qualidade de código no pipeline"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Commit no Repositório] --> B[Trigger do Pipeline CI]\n    B --> C[Stage: Checkout Código]\n    C --> D[Stage: Build/Compilação]\n    D --> E[Stage: Testes Unitários]\n    E --> F[Stage: Testes de Integração]\n    F --> G[Stage: Análise de Segurança]\n    G --> H[Stage: Relatório de Qualidade]\n    H --> I[Decisão: Aprovar ou Reprovar]\n    I --> J[Merge para Branch Principal]\n    style B fill:#9f9,stroke:#333\n    style J fill:#9f9,stroke:#333\n    subgraph Estágios de Validação\n    style D fill:#cfc,stroke:#333\n    style E fill:#cfc,stroke:#333\n    style F fill:#cfc,stroke:#333\n    style G fill:#cfc,stroke:#333\n    style H fill:#cfc,stroke:#333\n    end",
+          "entrega_tecnica": "Template de pipeline CI em YAML para GitHub Actions com build, testes unitários, testes de integração e análise de segurança básica",
+          "secoes_eita": [
+            "Introdução: O problema da integração rara e como a CI o resolve",
+            "Explica": "Como a integração frequente reduz riscos e melhora a qualidade do software",
+            "Ilustra": "Comparação de tempo para detecção de defeitos entre integração diária e integração semanal",
+            "Técnica": "Arquivo workflow.yml completo para GitHub Actions com stages de build, teste e segurança",
+            "Aplica": "Criar um repositório de exemplo e configurar um pipeline CI que rode testes em cada push",
+            "Conclusão": "Integração contínua transforma integração de um evento raro em uma rotina previsível e segura",
+            "Referencias": [
+              "FOWLER, Martin. Continuous Integration. Martin Fowler Website, 2006.",
+              "HUMBLE, Jez; FARLEY, David. Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation. Addison-Wesley, 2010.",
+              "DORA: https://cloud.google.com/devops/devops-ci"
+            ]
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Entrega e Implantação Contínua (CD)",
+          "resumo": "Estabelecer processos de entrega contínua que automatizam a preparação e deployment de software em diversos ambientes com segurança e confiabilidade",
+          "objetivo": "Estabelecer processos de entrega contínua que automatizam a preparação e deployment de software em diversos ambientes",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Diferenças entre Entrega Contínua e Implantação Contínua",
+            "Modelos de implantação: blue-green, canary, rolling updates e feature flags",
+            "Estratégias de gerenciamento de configuração e secrets em diferentes ambientes",
+            "Automação de rollback e recuperação rápida de falhas"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Pipeline CI Aprovado] --> B[Stage: Preparação de Release]\n    B --> C[Gate: Aprovação Manual/Automática]\n    C --> D[Ambiente de Staging]\n    D --> E[Testes de Aceitação e Performance]\n    E --> F[Gate: Qualidade Aprovada?]\n    F --> G[Sim: Deploy para Produção]\n    F --> NÃO: H[Manter em Staging para Correções]\n    G --> I[Monitoramento Pós-Deploy]\n    I --> J[Alertas: Problemas Detectados?]\n    J --> K[Sim: Iniciar Rollback Automático]\n    J --> NÃO: L[Operação Normal em Produção]\n    style C fill:#9f9,stroke:#333\n    style G fill:#9f9,stroke:#333\n    style K fill:#f96,stroke:#333\n    style L fill:#9f9,stroke:#333",
+          "entrega_tecnica": "Template de pipeline CD em YAML para Argo CD com estratégias de deploy blue-green e rollback automático",
+          "secoes_eita": [
+            "Introdução: Como a CD estende os benefícios da CI até a entrega de valor ao usuário final",
+            "Explica": "Distinção entre entrega contínua (pronto para deploy) e implantação contínua (deploy automático)",
+            "Ilustra": "Comparação de três estratégias de deploy: big bang, blue-green e canary, com seus riscos e benefícios",
+            "Técnica": "Manifestos Kubernetes e configuração do Argo CD para deploy com estratégia canary e monitoramento de métricas",
+            "Aplica": "Configurar um pipeline de deploy simples que leve uma aplicação de staging para produção com validação automática",
+            "Conclusão": "Implantação contínua bem implementada reduz riscos e aumenta a frequência de entrega de valor",
+            "Referencias": [
+              "HUMBLE, Jez; FARLEY, David. Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation. Addison-Wesley, 2010.",
+              "ARGO CD DOCS: https://argoproj.github.io/cd/",
+              "FEATURE FLAGS: https://launchdarkly.com/blog/what-are-feature-flags/"
+            ]
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Infraestrutura como Código (IaC)",
+          "resumo": "Provisionar e gerenciar infraestrutura de forma declarativa, versionada e reproduzível usando ferramentas como Terraform e Ansible",
+          "objetivo": "Provisionar e gerenciar infraestrutura de forma declarativa e versionada usando ferramentas como Terraform e Ansible",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Princípios e benefícios da Infraestrutura como Código",
+            "Linguagem HashiCorp Configuration Language (HCL) do Terraform",
+            "Playbooks e estrutura de projetos no Ansible",
+            "Gerenciamento de estado, workspaces e colaboração em equipes com Terraform"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Código IaC no Repositório] --> B[Pull Request]\n    B --> C[Code Review]\n    C --> D[Merge para main]\n    D --> E[Pipeline de Validação]\n    E --> F[Plano: terraform plan]\n    F --> G[Aprovação: Plano Revisado?]\n    G --> H[Sim: Aplicar: terraform apply]\n    G --> NÃO: I[Manter em PR para Correções]\n    H --> J[Aplicação com Sucesso]\n    J --> K[Estado Atualizado no backend]\n    K --> L[Infraestrutura Provisionada e Pronto para Uso]\n    style B fill:#9f9,stroke:#333\n    style H fill:#9f9,stroke:#333\n    style L fill:#9f9,stroke:#333\n    subgraph Validação e Aprovação\n    style E fill:#cfc,stroke:#333\n    style F fill:#cfc,stroke:#333\n    style G fill:#cfc,stroke:#333\n    end",
+          "entrega_tecnica": "Template de projeto Terraform para provisionamento de uma aplicação web simples em AWS com VPC, EC2 e RDS",
+          "secoes_eita": [
+            "Introdução: Como o provisionamento manual de infraestrutura leva à inconsistência e ao desperdício",
+            "Explica": "Princípios de declaratividade, versionamento e idempotência na gestão de infraestrutura",
+            "Ilustra": "Antes e depois da adoção de IaC: comparação de tempo de provisionamento, consistência e rastreabilidade de mudanças",
+            "Técnica": "Arquivo main.py completo com variáveis, outputs e módulos reutilizáveis para um ambiente web básico",
+            "Aplica": "Criar um diretório com arquivos Terraform básicos e aplicar para provisionar um recurso de nuvem simples",
+            "Conclusão": "Infraestrutura tratada como código elimina o 'funciona na minha máquina' e cria ambientes reproduzíveis",
+            "Referencias": [
+              "HASHICORP: https://developer.hashicorp.com/terraform/tutorials",
+              "ANSIBLE DOCS: https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html",
+              "FOWLER, Martin; SASSIE, Neal. Refactoring: Improving the Design of Existing Code. Addison-Wesley, 1999."
+            ]
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Contêineres e Orquestração com Docker/Kubernetes",
+          "resumo": "Empacotar aplicações em contêineres portáteis e orquestrar sua execução, escalabilidade e gerenciamento em clusters Kubernetes",
+          "objetivo": "Empacotar aplicações em contêineres e orquestrar sua execução em escala usando Docker e Kubernetes",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Fundamentos de contêineres: isolamento, portabilidade e eficiência de recursos",
+            "Criação, distribuição e execução de imagens Docker",
+            "Arquitetura e componentes principais do Kubernetes: pods, serviços, deployments",
+            "Gerenciamento de configuração, secrets e storage em ambientes Kubernetes"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Aplicação Monolítica] --> B[Dockerfile: Definir Imagem]\n    B --> C[docker build: Criar Imagem]\n    C --> D[docker push: Registrar em Registry]\n    D --> E[K8s Deployment: Definir Estado Desejado]\n    E --> F[Kubelet: Garantir Estado no Nó]\n    F --> G[Container Runtime: Executar o Container]\n    G --> H[Pod: Unidade Básica de Execução]\n    H --> I[Serviço: Exposição de Rede estável]\n    I --> J[Balanceador de Carga: Distribuir Tráfego]\n    J --> K[Usuário Final: Acesso à Aplicação]\n    style C fill:#9f9,stroke:#333\n    style H fill:#9f9,stroke:#333\n    style K fill:#9f9,stroke:#333",
+          "entrega_tecnica": "Dockerfile multi-estágio para uma aplicação web Node.js com build de dependências e runtime otimizado",
+          "secoes_eita": [
+            "Introdução: Como os contêineres resolvem o problema do 'funciona na minha máquina'",
+            "Explica": "Como o Docker empacota aplicação e dependências em uma imagem portátil e isolada",
+            "Ilustra": "Arquitetura de um aplicativo containerizado mostrando camadas de imagem, sistema de arquivos overlay e runtime",
+            "Técnica": "Dockerfile otimizado para uma aplicação web simples com multi-estágio para reduzir tamanho da imagem final",
+            "Aplica": "Criar um Dockerfile para uma aplicação de exemplo, construir a imagem e testar sua execução localmente",
+            "Conclusão": "Contêineres e orquestração fornecem a base técnica para deploy previsível, escalável e portátil de aplicações",
+            "Referencias": [
+              "MERKLE, John. Docker: Up & Run: Shipping Reliable Containers in Production. O'Reilly Media, 2014.",
+              "KUBERNETES DOCS: https://kubernetes.io/docs/home/",
+              "FIELDING, Roy T.; TAYLOR, Richard N. Principios e o Projeto da Arquitetura de Rede HTTP. Adobe Systems, 2000."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "Excelência Operacional e Segurança",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "Observabilidade e Monitoramento",
+          "resumo": "Implementar sistemas de observabilidade baseados nos três pilares: métricas, logs e traces para compreensão profunda do comportamento do sistema",
+          "objetivo": "Implementar sistemas de observabilidade baseados nos três pilares: métricas, logs e traces",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Três pilares da observabilidade: métricas, logs e traces distribuídos",
+            "Coleta, armazenamento e visualização de métricas com Prometheus e Grafana",
+            "Agregação, indexação e busca de logs com ELK Stack ou similares",
+            "Rastreamento distribuído de requisições com Jaeger, OpenTelemetry ou AWS X-Ray"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Aplicação Instrumentada] --> B[Métricas: Prometheus]\n    A --> C[Logs: Fluentd/Filebeat]\n    A --> D[Traces: OpenTelemetry]\n    B --> E[Armazenamento: TSDB]\n    C --> F[Armazenamento: Index de Logs]\n    D --> G[Armazenamento: Trace Store]\n    E --> H[Visualização: Grafana]\n    F --> I[Visualização: Kibana]\n    G --> J[Visualização: Jaeger UI]\n    H --> K[Insights: Tendências e Anomalias]\n    I --> L[Insights: Padrões e Erros]\n    J --> M[Insights: Fluxo e Latência]\n    style B fill:#9f9,stroke:#333\n    style C fill:#9f9,stroke:#333\n    style D fill:#9f9,stroke:#333\n    style H fill:#9f9,stroke:#333\n    style I fill:#9f9,stroke:#333\n    style J fill:#9f9,stroke:#333",
+          "entrega_tecnica": "Configuração básica do Prometheus para coleta de métricas de uma aplicação exposta no endpoint /metrics",
+          "secoes_eita": [
+            "Introdução: Por que monitoramento tradicional é insuficiente para sistemas modernos distribuídos",
+            "Explica": "Definição dos três pilares da observabilidade e como eles se complementam",
+            "Ilustra": "Exemplo de incidente complexo onde apenas um dos pilares teria sido suficiente para diagnóstico rápido",
+            "Técnica": "Arquivo yaml de configuração do Prometheus com job de raspagem para métricas de aplicação",
+            "Aplica": "Configurar coleta de métricas básicas de uma aplicação simples e visualizar no Grafana",
+            "Conclusão": "Observabilidade transforma dados operacionais em insights acionáveis para melhoria contínua",
+            "Referencias": [
+              "PROMETHEUS DOCS: https://prometheus.io/docs/introduction/overview/",
+              "ELASTIC: https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html",
+              "JAEGER: https://www.jaegertracing.io/docs/1.46/getting-started/"
+            ]
+          ]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Tracing Distribuído e Logs Avançados",
+          "resumo": "Aprofundar as técnicas de tracing distribuído e gerenciamento de logs para diagnósticos precisos e performance otimizada em sistemas distribuídos",
+          "objetivo": "Aprofecar as técnicas de tracing distribuído e gerenciamento de logs para diagnósticos precisos em sistemas distribuídos",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Instrumentação de aplicações para tracing distribuído com OpenTelemetry ou similar",
+            "Correlação entre traces, métricas e logs para análise completa de causa raiz",
+            "Estratégies de amostragem e gerenciamento de volume de dados de tracing",
+            "Integração de tracing com sistemas de alerta e gerenciamento de incidentes"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Requisição HTTP Entrada] --> B[Gateway de Entrada]\n    B --> C[Serviço A: Início do Trace]\n    C --> D[Span: Operação de Banco de Dados]\n    D --> E[Span: Chamada para Serviço B]\n    E --> F[Serviço B: Processamento]\n    F --> G[Span: Operação de Cache]\n    G --> H[Span: Operação de Arquivo]\n    H --> I[Resposta: Saída do Sistema]\n    I --> J[Coleta: Agente de Telemetria]\n    J --> K[Armazenamento: Backend de Traces]\n    K --> L[Visualização: Interface de Trace]\n    style C fill:#9f9,stroke:#333\n    style H fill:#9f9,stroke:#333\n    style L fill:#9f9,stroke:#333",
+          "entrega_tecnica": "Instrumentação básica de uma aplicação Python com OpenTelemetry para exportar traces para o Jaeger",
+          "secoes_eita": [
+            "Introdução: Como logs simples são insuficientes para compreender fluxos em microsserviços",
+            "Explica": "Como o tracing distribuído atribui identificadores únicos às requisições e acompanha seu percurso",
+            "Ilustra": "Visualização de um trace complexo mostrando pai-filho entre spans e latência em cada serviço",
+            "Técnica": "Código Python de exemplo com decoradores e middleware para instrumentação automática de funções e chamadas HTTP",
+            "Aplica": "Instrumentar uma aplicação simples de duas funções que se chamam e visualizar o trace gerado",
+            "Conclusão": "Tracing distribuído transforma supposições em evidências para otimização e depuração de sistemas distribuídos",
+            "Referencias": [
+              "OPENTELEMETRY: https://opentelemetry.io/docs/instrumentation/",
+              "JAEGER DOCS: https://www.jaegertracing.io/docs/1.46/getting-started/",
+              "BEN SIGEVICH, Liz; et al. Distributed Systems Observability. O'Reilly Media, 2021."
+            ]
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Segurança e DevSecOps",
+          "resumo": "Integrar práticas de segurança desde o início do desenvolvimento usando a abordagem Shift-Left e automatizando verificações de segurança ao longo do pipeline",
+          "objetivo": "Integrar práticas de segurança desde o início do desenvolvimento usando a abordagem Shift-Left e DevSecOps",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "Princípios do DevSecOps: segurança como responsabilidade compartilhada ao longo do ciclo de vida",
+            "Análise estática de código (SAST) e varredura de dependências para detecção precoce de vulnerabilidades",
+            "Escaneamento de imagens de contêineres e infraestrutura como código para segurança de deploy",
+            "Testes de segurança dinâmica (DAST) e teste de penetração em ambientes de staging"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Commit de Código] --> B[Pipeline CI]\n    B --> C[Estágio: SAST e Análise de Dependências]\n    C --> D[Stage: Build e Testes Unitários]\n    D --> E[Stage: Testes de Integração]\n    E --> F[Stage: Escaneamento de Container e IaC]\n    F --> G[Stage: Testes de Segurança Dinâmica]\n    G --> H[Deploy para Staging]\n    H --> I[Testes de Aceitação e Performance]\n    I --> J[Deploy para Produção]\n    style C fill:#f96,stroke:#333\n    style F fill:#f96,stroke:#333\n    style G fill:#f96,stroke:#333\n    subgraph Estágios de Segurança\n    style C fill:#f99,stroke:#333\n    style F fill:#f99,stroke:#333\n    style G fill:#f99,stroke:#333\n    end",
+          "entrega_tecnica": "Configuração de GitHub Actions para executar análise estática de segurança com CodeQL e varredura de dependências em cada pull request",
+          "secoes_eita": [
+            "Introdução: Como abordagens tradicionais de segurança chegam tarde demais no ciclo de vida",
+            "Explica": "Princípios do Shift-Left: mover verificações de segurança o mais early possível no processo de desenvolvimento",
+            "Ilustra": "Linha do tempo comparando detecção de vulnerabilidade em modelo tradicional vs. abordagem Shift-Left",
+            "Técnica": "Arquivo workflow.yml para GitHub Actions com etapas de SAST, SCA e scans de container no pipeline CI",
+            "Aplica": "Configurar verificação de segurança básica em um repositório de exemplo e observar seu funcionamento em pull requests",
+            "Conclusão": "Segurança integrada ao longo do ciclo de vida reduz custos de correção e aumenta a confiança nas releases",
+            "Referencias": [
+              "OWASP: https://owasp.org/www-community/Attacks/",
+              "SANS: https://www.sans.org/white-papers/3428/",
+              "DUVALL, Paul M.; GLOVER, Steve; MATYAS, Steven. Continuous Integration: Improving Software Quality and Reducing Risk. Addison-Wesley, 2007."
+            ]
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Práticas Avançadas e Estudos de Caso",
+          "resumo": "Explorar tópicos avançados de DevOps e analisar estudos de caso de organizações que alcançaram excelência na prática de entrega contínua de valor",
+          "objetivo": "Explorar tópicos avançados de DevOps e analisar estudos de caso de organizações que alcançaram excelência na prática",
+          "tempo_leitura_minutos": 25,
+          "conceitos_chave": [
+            "GitOps: operações baseadas em pull requests e estado desejado em repositórios Git",
+            "Práticas de observabilidade avançada: alertas inteligentes e automação de resposta a incidentes",
+            "Estratégias de gerenciamento de custos em ambientes de nuvem pública",
+            "Tendências emergentes: service mesh, IA para operações e plataforma de desenvolvedor interna"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Estado Desejado no Git] --> B[Pull Request Alterando Manifesto]\n    B --> C[Code Review e Testes Automatizados]\n    C --> D[Merge para main]\n    D --> E[Flux Operator Detecta Mudança]\n    E --> F[Comparar Estado Atual com Estado Desejado]\n    F --> G[Estado Divergente?]\n    G --> NÃO: H[Nenhuma Ação Necessária]\n    G --> SIM: I[Aplicar Mudanças para Alinhar Estados]\n    I --> J[Estado do Cluster Alinhado com Git]\n    J --> K[Loop Contínuo de Sincronização]\n    style B fill:#9f9,stroke:#333\n    style D fill:#9f9,stroke:#333\n    style H fill:#9f9,stroke:#333\n    style J fill:#9f9,stroke:#333\n    style K fill:#9f9,stroke:#333",
+          "entrega_tecnica": "Manifestos básicos de Argo CD e Flux para sincronização de estado de cluster com repositório Git",
+          "secoes_eita": [
+            "Introdução: Como o DevOps evoluiu além de CI/CD para abarcar toda a experiência de entrega de software",
+            "Explica": "Princípios do GitOps: usar Git como fonte única da verdade para estado de infraestrutura e aplicações",
+            "Ilustra": "Comparação de abordagens tradicionais de mudança de infraestrutura vs. fluxo de trabalho GitOps",
+            "Técnica": "Manifestos YAML básicos para configurar Argo CD ou Flux com sincronização de um namespace Kubernetes",
+            "Aplica": "Configurar um repositório Git com manifesto simples de deployment e observar a sincronização automática com o cluster",
+            "Conclusão": "O futuro do DevOps é uma plataforma integrada que fornece experiência consistente e previsível para equipes de entrega",
+            "Referencias": [
+              "WEIGAND, Alexis; HUSSAIN, Joshua. GitOps: Rally Point for Cloud Native Transformation. O'Reilly Media, 2021.",
+              "SERVICE MESH: https://servicemesh.io/",
+              "PLATAFORMA DE DESENVOLVEDOR INTERNA: https://thenewstack.io/internal-developer-platforms-explained/"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Sintetizar os conceitos aprendidos, reforçar a importância da jornada contínua de aprimoramento e fornecer orientações práticas para a aplicação imediata dos conhecimentos adquiridos"
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "livros/otimizacao-tokens-ide-agentica",
+  "capitulos": 8,
+  "metricas_por_capitulo": {
+    "cap_1": 4,
+    "cap_2": 38,
+    "cap_3": 2,
+    "cap_4": 3,
+    "cap_5": 13,
+    "cap_6": 4,
+    "cap_7": 2,
+    "cap_8": 4
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

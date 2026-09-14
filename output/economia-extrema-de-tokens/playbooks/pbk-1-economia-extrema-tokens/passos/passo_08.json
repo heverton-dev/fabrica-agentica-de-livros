@@ -1,0 +1,55 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Governança em Produção: 4 Pilares + Checklist",
+  "estagio": "Custo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor monta um sistema de governança que sustenta redução de custos: automatiza o que pode, avisa o que precisa aprovação, e garante que ninguém gaste sem visibilidade.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [
+    "log_custos.jsonl",
+    "resumo_diario.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Middleware de mensuração e observabilidade",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# middleware_custo.py\n# Envolve uma chamada de LLM e registra custo, usuario e modelo por linha JSON.\nimport json\nimport time\n\nPRECO_POR_1K_TOKENS = {\n    \"modelo-padrao\": {\"entrada\": 0.003, \"saida\": 0.015},\n    \"modelo-barato\": {\"entrada\": 0.0008, \"saida\": 0.004},\n}\n\n\ndef calcular_custo(modelo: str, tokens_entrada: int, tokens_saida: int) -> float:\n    \"\"\"Calcula o custo estimado da chamada em dolares, a partir da tabela de precos.\"\"\"\n    preco = PRECO_POR_1K_TOKENS.get(modelo, PRECO_POR_1K_TOKENS[\"modelo-padrao\"])\n    custo_entrada = (tokens_entrada / 1000) * preco[\"entrada\"]\n    custo_saida = (tokens_saida / 1000) * preco[\"saida\"]\n    return round(custo_entrada + custo_saida, 6)\n\n\ndef registrar_chamada(usuario: str, modelo: str, tokens_entrada: int, tokens_saida: int, arquivo=\"log_custos.jsonl\"):\n    \"\"\"Grava um registro estruturado de uma chamada, pronto para agregacao posterior.\"\"\"\n    registro = {\n        \"timestamp\": time.time(),\n        \"usuario\": usuario,\n        \"modelo\": modelo,\n        \"tokens_entrada\": tokens_entrada,\n        \"tokens_saida\": tokens_saida,\n        \"custo_usd\": calcular_custo(modelo, tokens_entrada, tokens_saida),\n    }\n    with open(arquivo, \"a\", encoding=\"utf-8\") as f:\n        f.write(json.dumps(registro, ensure_ascii=False) + \"\\n\")\n    return registro\n\n\nif __name__ == \"__main__\":\n    exemplo = registrar_chamada(\"usuario_42\", \"modelo-padrao\", tokens_entrada=1200, tokens_saida=350)\n    print(\"Chamada registrada:\", exemplo)"
+    },
+    {
+      "titulo": "Circuit breaker de custo",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# circuit_breaker_custo.py\n# Circuit breaker simples que desvia trafego quando o custo por chamada estoura o limite.\nimport time\n\n\nclass CircuitBreakerCusto:\n    def __init__(self, limite_usd: float, janela_teste_segundos: int = 60):\n        self.limite_usd = limite_usd\n        self.janela_teste_segundos = janela_teste_segundos\n        self.estado = \"fechado\"\n        self.momento_abertura = None\n\n    def registrar_custo(self, custo_usd: float) -> str:\n        \"\"\"Recebe o custo da ultima chamada e decide o proximo estado/rota.\"\"\"\n        if self.estado == \"fechado\":\n            if custo_usd > self.limite_usd:\n                self.estado = \"aberto\"\n                self.momento_abertura = time.time()\n                return \"modelo-fallback\"\n            return \"modelo-principal\"\n\n        if self.estado == \"aberto\":\n            if time.time() - self.momento_abertura >= self.janela_teste_segundos:\n                self.estado = \"meio-aberto\"\n                return \"modelo-principal\"  # testa uma amostra\n            return \"modelo-fallback\"\n\n        if self.estado == \"meio-aberto\":\n            if custo_usd > self.limite_usd:\n                self.estado = \"aberto\"\n                self.momento_abertura = time.time()\n                return \"modelo-fallback\"\n            self.estado = \"fechado\"\n            return \"modelo-principal\"\n\n\nif __name__ == \"__main__\":\n    breaker = CircuitBreakerCusto(limite_usd=0.05)\n    print(breaker.registrar_custo(0.02))   # modelo-principal\n    print(breaker.registrar_custo(0.09))   # modelo-fallback (abre)\n    print(breaker.registrar_custo(0.03))   # aind"
+    },
+    {
+      "titulo": "Fechando o buraco: piso de qualidade acoplado ao fallback",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# circuit_breaker_qualidade.py\n# Envolve o CircuitBreakerCusto com um piso de qualidade antes de aceitar o fallback.\nfrom circuit_breaker_custo import CircuitBreakerCusto\n\n\ndef registrar_custo_com_qualidade(breaker: CircuitBreakerCusto, custo_usd: float, resposta_valida: bool) -> str:\n    \"\"\"So aceita a rota de fallback se a amostra tambem passar num criterio minimo de qualidade.\"\"\"\n    rota = breaker.registrar_custo(custo_usd)\n    if rota == \"modelo-fallback\" and not resposta_valida:\n        # custo baixo nao compensa se a resposta nao serve: forca nova tentativa no principal\n        breaker.estado = \"aberto\"\n        return \"modelo-principal-forcado\"\n    return rota"
+    },
+    {
+      "titulo": "Checklist de produção e alerta automático",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# checklist-governanca.yaml\n# Checklist minimo de producao: uma linha por decisao que precisa de dono.\ngovernanca_producao:\n  aprovacao_de_modelo:\n    exigida_acima_de_usd_mes: 500\n    aprovador: \"lider_tecnico_da_equipe\"\n  limite_de_gasto_por_projeto:\n    valor_usd_mes: 2000\n    acao_ao_ultrapassar: \"alerta + revisao obrigatoria\"\n  auditoria_periodica:\n    cadencia: \"semanal\"\n    escopo: \"reabrir 5% das chamadas e conferir custo real vs. estimado\"\n  canais_de_alerta:\n    - \"slack:#custos-llm\"\n    - \"email:financeiro@empresa.com\""
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Implemente o `middleware_custo.py` sobre uma chamada real do seu projeto e rode por um dia inteiro",
+    "Rode o `resumo_diario.py` sobre o log gerado e confira se o total agregado bate com o que você esperava gastar naquele dia",
+    "Ajuste o `limite_usd` do `circuit_breaker_custo.py` para o teto que sua equipe consideraria aceitável por chamada",
+    "Preencha o `checklist-governanca.yaml` com os nomes reais de aprovador, limite de gasto e canal de alerta da sua equipe",
+    "Defina, por escrito, qual métrica de qualidade mínima seu circuit breaker vai checar antes de aceitar uma rota de fallback como segura",
+    "Defina a cadência de recálculo do baseline de alerta (ex.: média móvel de 14 dias) para que o webhook não vire ruído ignorado"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 8 — Governança em Produção: 4 Pilares + Checklist",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

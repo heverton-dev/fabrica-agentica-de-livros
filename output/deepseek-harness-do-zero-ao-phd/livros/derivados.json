@@ -1,0 +1,35 @@
+{
+  "slug_livro_mae": "deepseek-harness-do-zero-ao-phd",
+  "artigos": {
+    "total": 0,
+    "itens": []
+  },
+  "ebooks": {
+    "total": 0,
+    "itens": []
+  },
+  "playbooks": {
+    "total": 1,
+    "itens": [
+      {
+        "indice": 1,
+        "titulo": "Playbook — DeepSeek Harness: Do zero ao PhD",
+        "slug": "pbk-1-deepseek-harness-phd",
+        "diretorio": "playbooks/deepseek-harness/pbk-1-deepseek-harness-phd",
+        "estagios": 4
+      }
+    ]
+  },
+  "lead-magnets": {
+    "total": 0,
+    "itens": []
+  },
+  "decks": {
+    "total": 0,
+    "itens": []
+  },
+  "emails": {
+    "total": 0,
+    "itens": []
+  }
+}

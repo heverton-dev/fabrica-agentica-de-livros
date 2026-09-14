@@ -1,0 +1,42 @@
+{
+  "dossies": [
+    "dossie_gratis-open-source.md",
+    "mineracao_academica_gratis-open-source.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_gratis-open-source.md",
+      "classes": {
+        "A": 108,
+        "B": 282,
+        "C": 54
+      },
+      "linhas_fonte": 444
+    },
+    {
+      "arquivo": "mineracao_academica_gratis-open-source.md",
+      "classes": {
+        "A": 10,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 10
+    }
+  ],
+  "classes": {
+    "A": 118,
+    "B": 282,
+    "C": 54
+  },
+  "linhas_fonte_total": 454,
+  "classificadas": 454,
+  "proporcao_ab": 0.881,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "gratis-open-source/livros"
+}

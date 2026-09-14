@@ -1,0 +1,34 @@
+{
+  "numero": "09",
+  "capitulo_fonte": "09",
+  "titulo": "Os 3 Princípios Universais do HARNESS",
+  "estagio": "Circuito de segurança",
+  "estagio_indice": 3,
+  "objetivo": "Ensinar os fundamentos de Harness & Loop Engineering.",
+  "pre_requisito": "Passo 8 concluído",
+  "entregas": [
+    ".harness/settings.json"
+  ],
+  "execucao": [
+    {
+      "titulo": "Arquivo de Configuração do Harness (`.harness/settings.json`)",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"harness_governance\": {\n    \"version\": \"2.0\",\n    \"circuit_breakers\": {\n      \"max_turns_per_task\": 15,\n      \"command_timeout_seconds\": 60,\n      \"max_consecutive_errors\": 3\n    },\n    \"command_blacklist\": [\n      \"rm -rf /\",\n      \"rm -rf *\",\n      \"mkfs\",\n      \"dd if=\",\n      \"git push --force\",\n      \"git reset --hard origin/main\",\n      \":(){ :|:& };:\"\n    ],\n    \"sandbox_policy\": {\n      \"require_git_worktree\": true,\n      \"auto_rollback_on_failure\": true\n    },\n    \"hooks_enabled\": {\n      \"pre_tool_call\": true,\n      \"post_tool_call\": true,\n      \"pre_commit_gates\": true\n    }\n  }\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Crie a pasta `.harness/` no seu projeto e salve o arquivo `settings.json` com os limites de segurança adequados (turnos, timeout, blacklist)",
+    "Teste o disjuntor: tente executar um comando da blacklist (ex: `rm -rf /`) e observe o bloqueio",
+    "Crie um Git Worktree isolado e execute uma tarefa de teste dentro dele, comprovando que a branch principal fica intacta",
+    "Configure um hardlink/junction para o arquivo de governança e verifique que a atualização propaga para todas as ferramentas"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 9 — Os 3 Princípios Universais do HARNESS",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

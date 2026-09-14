@@ -1,0 +1,34 @@
+{
+  "numero": "12",
+  "capitulo_fonte": "12",
+  "titulo": "Implementação e Réplica da Camada 2",
+  "estagio": "Circuito de segurança",
+  "estagio_indice": 3,
+  "objetivo": "Guia passo a passo para implementar a Camada HARNESS.",
+  "pre_requisito": "Passo 11 concluído",
+  "entregas": [
+    "setup_camada2.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "Script Universal de Instalação da Camada 2 (`setup_camada2.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# setup_camada2.py — Instalador Industrial da Camada 2 (Harness)\nimport os\nimport sys\nimport shutil\nfrom pathlib import Path\n\nSETTINGS_JSON = \"\"\"{\n  \"harness\": {\n    \"version\": \"2.0\",\n    \"circuit_breakers\": {\n      \"max_turns\": 15,\n      \"timeout_seconds\": 60\n    },\n    \"blocked_commands\": [\n      \"rm -rf /\", \"mkfs\", \"git push --force\", \"drop database\"\n    ],\n    \"gates\": {\n      \"secret_detection\": true,\n      \"unit_tests\": true,\n      \"governance_parity\": true\n    }\n  }\n}\"\"\"\n\ndef instalar_camada2():\n    print(\"=== [CAMADA 2] Instalando Harness, Circuit Breakers e Hooks ===\")\n    \n    # 1. Criar pasta .harness\n    dir_harness = Path(\".harness\")\n    dir_hooks = dir_harness / \"hooks\"\n    dir_hooks.mkdir(parents=True, exist_ok=True)\n    \n    # 2. Gravar settings.json\n    (dir_harness / \"settings.json\").write_text(SETTINGS_JSON, encoding=\"utf-8\")\n    print(\"  [OK] Arquivo .harness/settings.json configurado.\")\n    \n    # 3. Configurar hook de pre-commit no Git se a pasta .git existir\n    git_hooks = Path(\".git\") / \"hooks\"\n    if git_hooks.exists():\n        hook_file = git_hooks / \"pre-commit\"\n        hook_conteudo = \"\"\"#!/usr/bin/env bash\nset -e\necho \"[PRE-COMMIT HARNESS] Executando validação de segurança...\"\nif grep -rE \"sk-ant-[a-zA-Z0-9_-]{20,}\" --exclude-dir=\".git\" .; then\n    echo \"[ERRO] Chave de API detectada! Abortando commit.\"\n    exit 1\nfi\necho \"[PRE-COMMIT HARNESS] Aprovado com Exit Code 0.\"\nexit 0\n\"\"\"\n        hook_file.write_text(hook_conteudo, encoding=\"utf-8\")\n        try:\n            os.chmod(hook_file, 0o755)\n        except Exception:\n   "
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute `python setup_camada2.py` no seu projeto e confirme que `.harness/settings.json` e o hook de pre-commit foram criados",
+    "Monte uma Topologia Hierárquica: um coordenador despachando 2 subagentes em worktrees separados",
+    "Simule uma Topologia Gauntlet: um agente implementa uma função e outro tenta quebrá-la com casos de borda",
+    "Configure os setup-links (junctions) para que `.governance/` seja compartilhado entre duas ferramentas"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 12 — Implementação e Réplica da Camada 2",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

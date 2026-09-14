@@ -1,0 +1,41 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "7" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 6: o conceito de agnosticismo radical (qualquer CLI que roda em um terminal roda no Orca), agora aplicado ao ciclo de vida observável dessa mesma CLI dentro do terminal",
+  "senioridade_obra": "iniciante",
+  "metricas_obrigatorias": [
+    { "metrica": "janela padrão de ociosidade antes de hibernar um agente", "valor": "30 minutos" },
+    { "metrica": "faixa configurável da janela de hibernação", "valor": "1 minuto a 24 horas" },
+    { "metrica": "agentes com sessão retomável elegíveis à hibernação", "valor": "11" }
+  ],
+  "sugestao_limite_contorno": "A hibernação só existe para agentes de sessão retomável (11 listados); Cursor CLI, Hermes, Copilot, Trae e outros terminais não retomáveis continuam rodando indefinidamente mesmo ociosos — o limite é do lado do agente, não do Orca.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O painel de estado: glifos, OSC e o Agent Dashboard",
+        "escopo": "Entra: os seis glifos de estado (spinner, ponto de interrogação âmbar, check/ponto esmeralda, ponto vermelho, ponto cinza, sem indicador), a origem dessa leitura (sequência de título OSC do terminal + hooks do agente), o Agent Dashboard como kanban de quatro colunas (Needs You, Working, Done, Idle) e seus filtros. Fica fora: a mecânica interna de hooks por agente individual (Capítulo 6) e o ciclo de revisão do diff (Capítulo 8).",
+        "ancora_visual": "flowchart LR mostrando o painel de estado da torre de controle: um agente emitindo título OSC -> Orca traduzindo em glifo -> glifo refletido simultaneamente na aba, na barra lateral e no cartão do Agent Dashboard -> operador clicando no cartão para focar o terminal vivo.",
+        "entrega_tecnica": "Python: script simples e comentado passo a passo que recebe uma lista de strings simulando títulos OSC de terminais e classifica cada um no glifo correspondente (tabela de mapeamento), imprimindo um mini-kanban textual com contagem por coluna (Needs You / Working / Done / Idle).",
+        "evolucao_leitor": "De quem precisa clicar em cada aba para saber se um agente travou, para quem lê o painel de estado de relance e sabe exatamente qual worktree pede atenção — sem abrir nenhum terminal.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Hibernação: a linha de vida do agente ocioso",
+        "escopo": "Entra: a lista completa de condições que precisam valer TODAS ao mesmo tempo para um terminal hibernar, a janela padrão de 30 minutos e sua faixa configurável de 1 minuto a 24 horas, o comportamento de unidade (todos os painéis do worktree hibernam juntos), a retomada por flags nativas de cada CLI (claude --resume, codex resume) e o sono manual com Sleep with Descendants. Fica fora: a configuração de automações agendadas (Capítulo 12) e o comportamento em servidor remoto (Capítulo 14).",
+        "ancora_visual": "stateDiagram-v2 do ciclo de vida de um terminal de agente na torre de controle: Working -> Done -> (checagem de todas as condições de segurança) -> Hibernado -> (tecla, nova saída, ou reabertura do worktree) -> Retomado, com uma seta de exceção direto de Done para Working quando qualquer condição falha.",
+        "entrega_tecnica": "Python: função comentada linha a linha que recebe um dicionário com o estado de um terminal (status do agente, se está no worktree ativo, minutos ocioso, se o agente é resumível, se há dispatch pendente) e retorna True/False para 'pode hibernar', aplicando as condições como uma lista de checagens sequenciais e explicando no comentário por que cada uma existe.",
+        "evolucao_leitor": "De quem imagina hibernação como 'o app deixou de gastar CPU', para quem entende que hibernação é uma promessa de segurança com condições auditáveis — e sabe explicar por que um worktree com subagente ainda vivo nunca dorme sozinho.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "O terminal como instrumento de bancada: splits, OSC 52, busca, flutuante, Quick Commands e histórico",
+        "escopo": "Entra: base xterm.js e renderização WebGL, splits, clipboard TUI via OSC 52, busca no scrollback, terminal flutuante como superfície global, Quick Commands (comandos salvos + prompts de agente reutilizáveis) e o painel de Agent Session History com suas ações por linha (Resume, Copy resume command, Open log). Fica fora: a configuração de temas por sistema operacional e os detalhes de teclado por plataforma (tratados como nota de rodapé prática, não como pilar).",
+        "ancora_visual": "flowchart TB do diário de bordo da sessão: transcrição gravada em disco pela CLI -> Orca varrendo os diretórios de sessão -> painel de Agent Session History listando por projeto/pasta/agente -> operador escolhendo Resume (mesma sessão) ou Copy resume command (para outro terminal/host).",
+        "entrega_tecnica": "Bash: script simples e comentado que lista os diretórios de histórico de sessão conhecidos (ex.: ~/.claude, ~/.codex/sessions) quando existirem, e imprime, para cada um, quantos arquivos de sessão foram encontrados — um 'inventário de diário de bordo' de bancada.",
+        "evolucao_leitor": "De quem trata o terminal como uma janela qualquer que se fecha e se perde, para quem trata cada sessão como um registro recuperável — e sabe copiar o comando de retomada certo mesmo quando o Resume automático não está disponível (workspace remoto).",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

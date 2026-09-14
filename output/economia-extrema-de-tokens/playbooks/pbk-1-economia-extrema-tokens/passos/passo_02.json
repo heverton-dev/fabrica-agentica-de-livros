@@ -1,0 +1,58 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "Como Funciona a Economia de Tokens: Caveman e Headroom",
+  "estagio": "Token",
+  "estagio_indice": 1,
+  "objetivo": "O leitor entende que a economia de tokens não é ajuste fino, mas arquitetura: onde cortar, quando sumarizar, e como medir o impacto de cada corte.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [
+    "output/**"
+  ],
+  "execucao": [
+    {
+      "titulo": "Medindo o índice de compressão do seu próprio texto",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# medir_compressao.py\n# Estima tokens de um texto (aproximacao: 4 caracteres = 1 token)\n# e calcula o indice de compressao entre uma versao original e uma versao comprimida.\n\ndef estimar_tokens(texto: str) -> int:\n    # Aproximacao padrao de mercado para estimativa rapida sem chamar API\n    return max(1, len(texto) // 4)\n\ndef indice_compressao(original: str, comprimido: str) -> float:\n    tokens_originais = estimar_tokens(original)\n    tokens_comprimidos = estimar_tokens(comprimido)\n    reducao = 1 - (tokens_comprimidos / tokens_originais)\n    return round(reducao * 100, 1)\n\nif __name__ == \"__main__\":\n    original = (\n        \"Ola! Gostaria muito de pedir, se possivel, que voce me ajudasse \"\n        \"a entender por que o teste esta falhando, pois isso esta me \"\n        \"deixando bastante preocupado com o prazo do projeto.\"\n    )\n    comprimido = \"Teste falhando. Causa: prazo em risco.\"\n\n    print(f\"Tokens originais: {estimar_tokens(original)}\")\n    print(f\"Tokens comprimidos: {estimar_tokens(comprimido)}\")\n    print(f\"Indice de compressao: {indice_compressao(original, comprimido)}%\")"
+    },
+    {
+      "titulo": "Caveman: aplicando as 3 regras de corte",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# caveman_corte.py\n# Aplica 3 regras deterministicas de corte a um paragrafo de raciocinio verboso.\n\nimport re\n\nSAUDACOES = [\"ola\", \"bom dia\", \"boa tarde\", \"gostaria de\", \"vou analisar\"]\n\ndef remover_saudacao(texto: str) -> str:\n    linhas = texto.split(\". \")\n    filtradas = [l for l in linhas if not any(s in l.lower() for s in SAUDACOES)]\n    return \". \".join(filtradas)\n\ndef remover_repeticao_do_prompt(texto: str, prompt_usuario: str) -> str:\n    if prompt_usuario and prompt_usuario.lower() in texto.lower():\n        texto = texto.lower().replace(prompt_usuario.lower(), \"\")\n    return texto.strip(\" .\")\n\ndef encurtar_frases_longas(texto: str, limite_palavras: int = 20) -> str:\n    frases = re.split(r\"(?<=[.!?]) \", texto)\n    curtas = []\n    for frase in frases:\n        palavras = frase.split()\n        if len(palavras) > limite_palavras:\n            metade = len(palavras) // 2\n            curtas.append(\" \".join(palavras[:metade]) + \".\")\n            curtas.append(\" \".join(palavras[metade:]))\n        else:\n            curtas.append(frase)\n    return \" \".join(curtas)\n\ndef aplicar_caveman(texto: str, prompt_usuario: str = \"\") -> str:\n    etapa1 = remover_saudacao(texto)\n    etapa2 = remover_repeticao_do_prompt(etapa1, prompt_usuario)\n    etapa3 = encurtar_frases_longas(etapa2)\n    return etapa3\n\nif __name__ == \"__main__\":\n    bruto = (\n        \"Ola! Vou analisar cuidadosamente sua solicitacao de corrigir \"\n        \"o teste que falhou porque o mock retornou nulo em vez do \"\n        \"objeto esperado, e isso quebrou a asserção da linha 42.\"\n    )\n    print(aplicar_caveman(bruto))"
+    },
+    {
+      "titulo": "Headroom: a regra 3+4 em produção",
+      "linguagem": "bash",
+      "comandos": [
+        "./headroom.sh \"npm run build\""
+      ],
+      "codigo": "#!/usr/bin/env bash\n# headroom.sh — comprime saida de um comando quando ela passa de 7 linhas\n# Uso: ./headroom.sh \"npm test\"\n\nset -euo pipefail\n\nSAIDA=$(eval \"$1\" 2>&1) || true\nTOTAL_LINHAS=$(echo \"$SAIDA\" | wc -l)\n\nif [ \"$TOTAL_LINHAS\" -gt 7 ]; then\n  echo \"$SAIDA\" | head -n 3\n  echo \"... [$(($TOTAL_LINHAS - 7)) linhas omitidas pelo headroom] ...\"\n  echo \"$SAIDA\" | tail -n 4\nelse\n  echo \"$SAIDA\"\nfi"
+    },
+    {
+      "titulo": "Projetando o efeito cascata do Pilar 4",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# projetar_economia_mensal.py\n# Projeta a economia mensal de tokens ao aplicar caveman + headroom\n# em N execucoes diarias de build/raciocinio.\n\ndef estimar_tokens(texto_ou_linhas, chars_por_linha: int = 60) -> int:\n    # Aproximacao: 4 caracteres = 1 token (ver ressalva na secao Explica)\n    total_chars = texto_ou_linhas * chars_por_linha\n    return max(1, total_chars // 4)\n\ndef projetar_economia_mensal(\n    linhas_log_bruto: int,\n    execucoes_por_dia: int,\n    tokens_raciocinio_bruto: int,\n    tokens_raciocinio_caveman: int,\n    dias_uteis_mes: int = 22,\n) -> dict:\n    linhas_log_comprimido = 7  # regra 3 + 4 do headroom\n    tokens_log_bruto = estimar_tokens(linhas_log_bruto)\n    tokens_log_comprimido = estimar_tokens(linhas_log_comprimido)\n\n    economia_log_por_execucao = tokens_log_bruto - tokens_log_comprimido\n    economia_raciocinio_por_execucao = tokens_raciocinio_bruto - tokens_raciocinio_caveman\n\n    economia_diaria = (\n        economia_log_por_execucao + economia_raciocinio_por_execucao\n    ) * execucoes_por_dia\n\n    return {\n        \"tokens_economizados_por_execucao\": economia_log_por_execucao\n        + economia_raciocinio_por_execucao,\n        \"tokens_economizados_por_dia\": economia_diaria,\n        \"tokens_economizados_por_mes\": economia_diaria * dias_uteis_mes,\n    }\n\nif __name__ == \"__main__\":\n    resultado = projetar_economia_mensal(\n        linhas_log_bruto=340,\n        execucoes_por_dia=50,\n        tokens_raciocinio_bruto=180,\n        tokens_raciocinio_caveman=22,\n    )\n    for chave, valor in resultado.items():\n        print(f\"{chave}: {valor:,}\".replace("
+    }
+  ],
+  "gate": "./headroom.sh \"npm run build\"",
+  "comandos": [
+    "./headroom.sh \"npm run build\""
+  ],
+  "feito_quando": [
+    "Rode `medir_compressao.py` com um parágrafo real que você escreveu para o agente esta semana",
+    "Aplique `aplicar_caveman()` no mesmo parágrafo e compare o índice de compressão",
+    "Rode `headroom.sh` sobre a saída de um build ou teste do seu projeto atual",
+    "Rode `projetar_economia_mensal.py` com os números reais de execuções por dia da sua equipe",
+    "Preencha a tabela de decisão do capítulo com pelo menos 2 situações reais do seu fluxo de trabalho",
+    "Identifique 1 lugar onde você aplicaria headroom mas NÃO deveria (ex.: evidência de auditoria)",
+    "Reescreva em modo caveman o próximo comentário de revisão de código que você receber, antes de repassá-lo ao agente"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 2 — Como Funciona a Economia de Tokens: Caveman e Headroom",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

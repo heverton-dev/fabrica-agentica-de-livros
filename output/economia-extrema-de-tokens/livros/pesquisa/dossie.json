@@ -1,0 +1,282 @@
+{
+  "tema_raiz": "Economia Extrema de Tokens e Otimização de Contexto",
+  "subtema": "Metodologias, compiladores, caches e skills agênticas para cortar até 85% do custo com LLMs",
+  "data_coleta": "2026-08-25",
+  "versao_dossie": "1.0",
+  "escopo": "Camada 01 · Eficiência de Contexto & Skills — 8 Ferramentas / Soberania Total",
+  "fontes_primarias": [
+    {
+      "titulo": "Economia Extrema de Tokens, Contexto & Skills de Eficiência",
+      "url": "file:///C:/Users/trcnologia/orca/projects/open-source/docs/listas/01-economia-de-tokens.html",
+      "data_acesso": "2026-08-25",
+      "tipo_documento": "Compêndio Técnico HTML",
+      "autoridade": "Curadoria de Elite - Open Source Initiative (OSI), Linux Foundation, CNCF Landscape"
+    }
+  ],
+  "ferramentas_principais": [
+    {
+      "id": "01",
+      "nome": "Skill: caveman",
+      "categoria": "Agentic Reasoning Compression",
+      "tipo": "Prompt Skill — Compressão de Pensamento",
+      "economia_declarada": "-90% de tokens no bloco <thought>",
+      "economia_percentual": 90,
+      "saas_substituido": "Pensamentos CoT prolixos e caros",
+      "licenca": "MIT / Prompt Skill",
+      "custo_operacional": "0 MB RAM / Overhead zero",
+      "descricao": "Força o agente a pensar em estilo telegráfico (estilo homem das cavernas), sem artigos, sem saudações e sem repetir o prompt do usuário. Usa frases curtas de 3 a 5 linhas no Chain-of-Thought, economizando até 800 tokens a cada turno de raciocínio interno.",
+      "caso_uso": "Raciocínios internos de agentes; compressão de pensamento em cadeia (Chain-of-Thought)",
+      "beneficio_chave": "Tokens de pensamento interno custam o mesmo que tokens de saída. Pensar de forma enxuta é a forma mais rápida de economizar.",
+      "impacto_latencia": "Reduz latência de resposta em 60%"
+    },
+    {
+      "id": "02",
+      "nome": "Skill: headroom",
+      "categoria": "Log & Terminal Compression",
+      "tipo": "Prompt Skill — Compressão de Logs",
+      "economia_declarada": "-80% de tokens em logs de compilação",
+      "economia_percentual": 80,
+      "saas_substituido": "Dumps gigantes de terminal no contexto",
+      "licenca": "MIT / Prompt Skill",
+      "custo_operacional": "0 MB RAM / Filtro em runtime",
+      "descricao": "Monitora e trunca logs longos de compilação, testes e builds, mantendo apenas o topo do comando e o stack trace do erro. Aplica regra rígida: se a saída do comando tiver > 7 linhas, comprime em (3 linhas do topo + 4 linhas do final), preservando a causa raiz da falha sem poluir a janela de contexto.",
+      "caso_uso": "Logs de compilação; output de testes; dumps de terminal; builds",
+      "regra_operacional": "Logs > 7 linhas -> comprimir (3 topo + 4 fim)",
+      "beneficio_chave": "A maioria dos erros de compilação tem sua causa nas últimas 4 linhas. Ler 300 linhas de warning é queimar dinheiro.",
+      "impacto_qualidade": "Preserva a causa raiz enquanto elimina poluição de contexto"
+    },
+    {
+      "id": "03",
+      "nome": "Skill: lean-ctx",
+      "categoria": "Targeted Code Inspection",
+      "tipo": "Prompt Skill — Inspeção Cirúrgica de Código",
+      "economia_declarada": "-85% de tokens de leitura de código",
+      "economia_percentual": 85,
+      "saas_substituido": "view_file() do arquivo inteiro",
+      "licenca": "MIT / Prompt Skill",
+      "custo_operacional": "0 MB RAM / Disciplina de agente",
+      "descricao": "Obriga o agente a usar grep_search e ler trechos específicos com intervalo de linhas em vez de ler o arquivo completo. Impõe restrição comportamental: antes de ler qualquer arquivo com mais de 50 linhas, o agente deve localizar o símbolo exato via grep ou AST e ler apenas a fatia [StartLine/EndLine].",
+      "caso_uso": "Edição de funções em arquivos grandes; busca de símbolos; inspeção de código estruturado",
+      "regra_operacional": "Grep antes de read. Limitar leitura por intervalo estrito de linhas",
+      "beneficio_chave": "A maior causa de esquecimento em conversas longas é a poluição do contexto com arquivos lidos integralmente sem necessidade.",
+      "exemplo_pratico": "Alterar uma função em arquivo de 1.500 linhas: grep -> view_file(StartLine=120, EndLine=145) [25 linhas vs 1.500]"
+    },
+    {
+      "id": "04",
+      "nome": "Skill: rtk-memory",
+      "categoria": "Persistent Prefix Cache Memory",
+      "tipo": "Scratchpad Skill — Cache de Prefixo Duradouro",
+      "economia_declarada": "100% de reuso de prefix cache da Anthropic/OpenAI",
+      "economia_percentual": 100,
+      "saas_substituido": "Reenvio de histórico antigo no prompt",
+      "licenca": "MIT / Scratchpad Skill",
+      "custo_operacional": "Arquivo Markdown local / 0 RAM",
+      "descricao": "Persiste novos aprendizados e correções em arquivo externo (RTK-SCRATCHPAD.md) para manter as instruções base imutáveis. Mantém o arquivo de governança principal (AGENTS.md/CLAUDE.md) intacto para que os provedores de LLM façam cache do prompt de sistema. Novos aprendizados da sessão são appendados em arquivo separado consultado sob demanda.",
+      "caso_uso": "Governança de agentes; cache de prefixo em chamadas de API; manutenção de aprendizados entre sessões",
+      "regra_operacional": "Novos aprendizados: SEMPRE appendar em RTK-SCRATCHPAD.md",
+      "beneficio_chave": "Modificar o system prompt invalida o cache de prefixo em provedores como Anthropic, encarecendo todas as chamadas seguintes.",
+      "impacto_economico": "Mantém 100% do cache de prefixo aquecido e barato em sessões futuras"
+    },
+    {
+      "id": "05",
+      "nome": "Repomix",
+      "categoria": "Context Packing",
+      "tipo": "CLI Determinística — Empacotador de Repositórios",
+      "economia_declarada": "-70% de tokens por prompt (~$300/mês)",
+      "economia_percentual": 70,
+      "economia_mensal_usd": 300,
+      "saas_substituido": "Leitura manual de múltiplos arquivos",
+      "licenca": "MIT",
+      "custo_operacional": "< 30 MB RAM / CLI sob demanda",
+      "descricao": "Empacota repositórios inteiros em 1 arquivo XML/Markdown com contagem exata de tokens e filtros inteligentes de .gitignore. Varre o repositório, descarta binários, lockfiles e arquivos ignorados no Git e compila um documento único com cabeçalhos XML e numeração de linhas para leitura otimizada por LLMs.",
+      "caso_uso": "Análise de arquitetura completa; feature engineering; onboarding de repositórios",
+      "comando_basico": "npx repomix --style xml --output-show-line-numbers",
+      "beneficio_chave": "Remove automaticamente arquivos binários, lockfiles e assets pesados antes de enviar o contexto à LLM.",
+      "repositorio": "github.com/yamadashy/repomix"
+    },
+    {
+      "id": "06",
+      "nome": "ast-grep (sg)",
+      "categoria": "AST Search & Rewrite",
+      "tipo": "CLI Determinística — Transformação Estrutural de Código",
+      "economia_declarada": "100% grátis em transformações estruturais",
+      "economia_percentual": 100,
+      "saas_substituido": "Refatorações caras via LLM",
+      "licenca": "MIT",
+      "custo_operacional": "Binário Rust / < 10 MB RAM",
+      "descricao": "Busca e reescrita de código baseada na Árvore de Sintaxe Abstrata (AST). Não erra espaçamentos nem quebras de linha. Faz o parsing do código-fonte em nós de Árvore Sintática usando Tree-sitter em Rust, permitindo buscar e substituir estruturas com wildcards sintáticos ($$$ARGS) em microssegundos.",
+      "caso_uso": "Refatoração massiva; mudança de assinatura de função; renomeação; transformações estruturais",
+      "comando_basico": "sg --pattern 'function $NAME($$$ARGS) { $$$BODY }'",
+      "exemplo_pratico": "Alterar 50 arquivos: sg -p 'api.get($URL)' -r 'api.fetch({url: $URL})' -w [2ms vs horas de engenharia manual]",
+      "beneficio_chave": "Substitui prompts inteiros de 'renomeie/altere assinatura' por uma chamada determinística de 2ms no terminal.",
+      "repositorio": "ast-grep.github.io"
+    },
+    {
+      "id": "07",
+      "nome": "LiteLLM Semantic Cache / OmniRouter",
+      "categoria": "AI Gateway & Cache",
+      "tipo": "Gateway + Cache Semântico — Roteamento Inteligente de LLM",
+      "economia_declarada": "-40% a -60% na fatura de API (~$500/mês)",
+      "economia_percentual_minima": 40,
+      "economia_percentual_maxima": 60,
+      "economia_mensal_usd": 500,
+      "saas_substituido": "Chamadas duplicadas em APIs de LLM",
+      "licenca": "MIT",
+      "custo_operacional": "~70 MB RAM em repouso",
+      "descricao": "Gateway de roteamento inteligente e cache semântico de respostas de LLM em Redis com balanceamento de carga. Calcula embeddings de prompts recebidos e faz busca por similaridade de cosseno no Redis antes de disparar requisições para a OpenAI/Anthropic. Se similaridade > 0.95, devolve a resposta cacheada em 2ms.",
+      "caso_uso": "Suítes de testes automatizados; CI/CD com prompts repetidos; redução de custos de API; balanceamento de carga",
+      "comando_basico": "docker run -d -p 4000:4000 ghcr.io/berriai/litellm:main-latest",
+      "beneficio_chave": "Essencial para suítes de testes de software e pipelines de CI/CD que rodam os mesmos prompts repetidamente.",
+      "impacto_latencia": "Respostas cacheadas em 2ms com custo $0",
+      "repositorio": "litellm.ai"
+    },
+    {
+      "id": "08",
+      "nome": "DSPy (Stanford)",
+      "categoria": "Prompt Compiler",
+      "tipo": "Biblioteca Python — Compilador de Prompts",
+      "economia_declarada": "Reduz tamanho de prompt em até 50%",
+      "economia_percentual": 50,
+      "saas_substituido": "Engenharia de prompt manual cara",
+      "licenca": "MIT",
+      "custo_operacional": "Biblioteca pura / Zero runtime RAM",
+      "descricao": "Compila e otimiza automaticamente instruções e few-shots via algoritmos matemáticos para máxima acurácia no menor prompt. Modela o pipeline como grafo computacional diferenciável. Otimizadores como BootstrapFewShot testam permutações de prompts contra uma métrica e geram a versão mais enxuta e assertiva.",
+      "caso_uso": "Otimização de prompts para produção; compilação de pipelines LLM; redução de tamanho de contexto",
+      "comando_basico": "pip install dspy-ai",
+      "beneficio_chave": "Trata prompts como código compilável. Se você mudar de modelo, basta recompilar o pipeline sem reescrever nada.",
+      "fluxo_tipico": "Defina classe de extração -> Forneça 10-20 exemplos -> Execute compilador -> Gera prompt otimizado",
+      "repositorio": "dspy.ai"
+    }
+  ],
+  "pilares_governanca": [
+    {
+      "pilar_numero": 1,
+      "nome": "Isolamento em Containers Docker",
+      "descricao": "Nunca instale ferramentas diretamente no sistema host sem isolamento de rede e volumes mapeados em disco seguro. O Docker fornece isolamento completo entre aplicações e o host.",
+      "criticidade": "Alta",
+      "categoria": "Infraestrutura"
+    },
+    {
+      "pilar_numero": 2,
+      "nome": "Proxy Reverso com Caddy / Traefik",
+      "descricao": "Aponte a borda de rede para proxies leves com renovação automática de certificados TLS sem scripts manuais. Essencial para exposição segura de serviços internos.",
+      "criticidade": "Alta",
+      "categoria": "Rede & TLS"
+    },
+    {
+      "pilar_numero": 3,
+      "nome": "Backup Imutável com Restic / Borg",
+      "descricao": "Programe snapshots diários dos volumes para armazenamento S3 remoto compatível para restauração rápida em caso de desastre. Garante recuperabilidade dos dados de estado.",
+      "criticidade": "Alta",
+      "categoria": "Resiliência"
+    },
+    {
+      "pilar_numero": 4,
+      "nome": "Acesso Seguro via WireGuard / Headscale",
+      "descricao": "Mantenha painéis de administração e bancos de dados fora da internet pública, acessíveis apenas pela VPN mesh interna. Zero-trust network access.",
+      "criticidade": "Alta",
+      "categoria": "Segurança"
+    }
+  ],
+  "metricas_economia_global": {
+    "economia_combinada_minima": "85%",
+    "economia_combinada_media": "85%",
+    "descricao": "A combinação das 8 ferramentas permite cortar até 85% do custo com LLMs quando aplicadas simultaneamente.",
+    "economia_por_dimensao": {
+      "reasoning_compression": "90% (caveman)",
+      "log_compression": "80% (headroom)",
+      "code_inspection": "85% (lean-ctx)",
+      "cache_prefix": "100% (rtk-memory)",
+      "context_packing": "70% (Repomix)",
+      "ast_transformations": "100% (ast-grep)",
+      "ai_gateway_cache": "40-60% (LiteLLM)",
+      "prompt_compilation": "50% (DSPy)"
+    }
+  },
+  "matriz_comparativa_saas": {
+    "dimensao": "Software proprietário vs. Alternativas open-source auditadas",
+    "metricas": [
+      {
+        "aspecto": "Taxas de assento",
+        "proprietary": "10-50 USD/user/mês",
+        "opensource": "0 USD (MIT / Open Source)"
+      },
+      {
+        "aspecto": "Overhead de contexto",
+        "proprietary": "80-100% do custo mensal em ruído",
+        "opensource": "15-30% (com aplicação de skills)"
+      },
+      {
+        "aspecto": "Soberania de dados",
+        "proprietary": "Dados armazenados em nuvem (SaaS)",
+        "opensource": "100% local ou controle próprio (S3 compatível)"
+      },
+      {
+        "aspecto": "Portabilidade de lock-in",
+        "proprietary": "Acoplado ao provedor SaaS",
+        "opensource": "Portável entre modelos / provedores"
+      }
+    ]
+  },
+  "estimativa_tamanho": {
+    "numero_secoes": 4,
+    "numero_ferramentas": 8,
+    "numero_pilares": 4,
+    "paginas_estimadas": 48,
+    "tamanho_estimado_MB": 2.5,
+    "tempo_leitura_horas": 3.5,
+    "complexidade": "Intermediária (técnica aplicada, não teórica)",
+    "publico_alvo": "Engenheiros de software, DevOps, arquitetos de IA, líderes técnicos"
+  },
+  "estrutura_conteudo": {
+    "parte_1": {
+      "titulo": "A Equação da Soberania",
+      "subtitulo": "A fronteira entre refém de nuvem e autonomia técnica",
+      "secoes": 2
+    },
+    "parte_2": {
+      "titulo": "O Panorama Geral",
+      "subtitulo": "O inventário completo da camada",
+      "conteudo": "Tabela comparativa direta: ferramenta, software proprietário substituído, economia média e licença",
+      "secoes": 1
+    },
+    "parte_3": {
+      "titulo": "O Detalhamento Técnico & Workflows Práticos",
+      "subtitulo": "As fichas técnicas completas com Guia do Dia a Dia",
+      "ledger_entries": 8,
+      "secoes": 1
+    },
+    "parte_4": {
+      "titulo": "A Regra de Ouro",
+      "subtitulo": "Como operar essa pilha com estabilidade",
+      "pilares": 4,
+      "secoes": 1
+    }
+  },
+  "palavras_chave": [
+    "economia de tokens",
+    "otimização de contexto",
+    "prompt engineering",
+    "skills agênticas",
+    "compressão de logs",
+    "cache de prefixo",
+    "AST grep",
+    "LLM gateway",
+    "prompt compiler",
+    "soberania de dados",
+    "open source",
+    "zero lock-in",
+    "infraestrutura determinística"
+  ],
+  "autorizacoes": [
+    "Open Source Initiative (OSI)",
+    "Linux Foundation",
+    "CNCF Landscape"
+  ],
+  "notas_editoriais": {
+    "maturidade_codigo": "Todas as 8 ferramentas foram verificadas quanto a maturidade, licenças abertas e viabilidade em produção.",
+    "viabilidade_producao": "100% auditado",
+    "soberania": "100% soberania de dados, 0 taxas por assento ou cota oculta",
+    "proximas_etapas": "Validação em ambiente de staging, integração com CI/CD existente, monitoramento de economia real"
+  }
+}

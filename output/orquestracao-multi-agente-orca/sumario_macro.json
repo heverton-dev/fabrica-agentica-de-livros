@@ -1,0 +1,350 @@
+{
+  "titulo_obra": "Orquestração Multi-Agente com ORCA",
+  "subtitulo": "Worktrees Isoladas, Execução Paralela e Engenharia de Software Autônoma com IA",
+  "motivo_condutor": {
+    "nome": "A Oficina de Software Autônoma",
+    "descricao": "A transformação da interação com IA: saindo do modelo de chat síncrono e limitante para uma oficina organizada com mesas de trabalho isoladas (worktrees) e múltiplos agentes especializados atuando em paralelo sob a supervisão do mestre de obras.",
+    "vocabulario": [
+      "Orquestração Multi-Agente",
+      "Git Worktree",
+      "Mesa de Trabalho Isolada",
+      "Mesa Pai e Mesa Filha",
+      "Central de Monitoramento (orca worktree ps)",
+      "Regra de Ouro da Auditoria",
+      "Processo Zumbi",
+      "Sessão PTY",
+      "Cherry-Pick Concorrente"
+    ],
+    "persona_leitor": "Desenvolvedor, arquiteto ou engenheiro de software iniciante no ecossistema de agentes autônomos que busca escalar a produtividade de desenvolvimento sem sofrer com corrupção de código ou gargalos de contexto."
+  },
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos da Orquestração e Desacoplamento Cognitivo",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "O Fim do Chat Linear: A Transição do Assistente Único para a Equipe de Agentes",
+          "objetivo": "Apresentar as limitações do chat síncrono tradicional e demonstrar como a orquestração multi-agente multiplica a produtividade da engenharia de software.",
+          "ancora_visual": "Diagrama de fluxo comparando a fila sequencial de um chat comum com a execução paralela de 3 agentes especializados.",
+          "entrega_tecnica": "Comandos de terminal para inspecionar o status do daemon do ORCA e verificar a prontidão do runtime.",
+          "pilares_previstos": [
+            "gargalo_chat_linear",
+            "metaphora_orquestra",
+            "desacoplamento_cognitivo",
+            "ganho_throughput"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "ganho de throughput",
+              "valor": "3x"
+            }
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Arquitetura do ORCA: Daemon, Repositórios e o Modelo Mental de Oficinas",
+          "objetivo": "Explicar a arquitetura em camadas do ORCA, o gerenciamento de daemons locais e o catálogo de repositórios rastreados.",
+          "ancora_visual": "Diagrama de blocos da arquitetura do ORCA: CLI, Daemon de Estado, Catálogo Git e Agentes Concorrentes.",
+          "entrega_tecnica": "Script de automação para registrar e listar múltiplos repositórios com orca repo add e orca repo list.",
+          "pilares_previstos": [
+            "daemon_orca",
+            "catalogo_repositorios",
+            "modelo_oficina",
+            "integracao_git"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "tempo de registro",
+              "valor": "500 ms"
+            }
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "A Mágica das Worktrees Git: Isolamento de Espaço de Trabalho e Branches Paralelos",
+          "objetivo": "Descrever o funcionamento interno das worktrees do Git e como elas garantem isolamento físico e zero conflito de arquivos locais.",
+          "ancora_visual": "Diagrama de árvore Git exibindo múltiplos checkouts físicos apontando para a pasta central .git.",
+          "entrega_tecnica": "Comando completo para criar worktree isolada via orca worktree create vinculada ao repositório e branch dedicado.",
+          "pilares_previstos": [
+            "mecanismo_worktree",
+            "isolamento_sistema_arquivos",
+            "eliminacao_race_conditions",
+            "seguranca_workspace"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "tempo de checkout",
+              "valor": "2 s"
+            }
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Hierarquia Visual de Tarefas: Organização de Mesas Pai e Mesas Filhas",
+          "objetivo": "Demonstrar a importância da organização hierárquica na TUI do ORCA usando --parent-worktree vs --no-parent e ajuste retroativo.",
+          "ancora_visual": "Diagrama em árvore comparando worktrees desordenadas na raiz contra uma árvore aninhada sob o projeto pai.",
+          "entrega_tecnica": "Script CLI executando criação aninhada e correção retroativa com orca worktree set --parent-worktree.",
+          "pilares_previstos": [
+            "hierarquia_visual",
+            "parent_worktree_vs_no_parent",
+            "ajuste_retroativo",
+            "clareza_operacional"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "redução de poluição visual",
+              "valor": "80%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "Operação de Terminais e Motores de Agentes",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "O Ciclo de Vida dos Terminais: Criação, Handles e Sessões PTY Dedicadas",
+          "objetivo": "Detalhar a criação e gestão de sessões PTY através de orca terminal create e a comunicação via handles identificadores.",
+          "ancora_visual": "Diagrama de sequência mostrando o ciclo de vida do terminal: spawn do PTY, alocação de handle, envio de comandos e encerramento.",
+          "entrega_tecnica": "Comandos de criação de terminais com titles descritivos e comandos de agentes específicos em lote.",
+          "pilares_previstos": [
+            "sessao_pty",
+            "handle_terminal",
+            "isolamento_processos",
+            "ciclo_vida_terminal"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "tempo de spawn de terminal",
+              "valor": "100 ms"
+            }
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Motores de Agentes em Campo: Orquestrando Antigravity, MimoCode e OpenCode",
+          "objetivo": "Comparar os principais motores de agentes de IA, suas flags de execução autônoma e os comandos exatos de inicialização no ORCA.",
+          "ancora_visual": "Tabela conceitual e diagrama de fluxo mapeando as características e especialidades do Antigravity, MimoCode e OpenCode.",
+          "entrega_tecnica": "Comandos CLI completos para lançar cada um dos três agentes com flags de bypass de permissões e modo de confiança.",
+          "pilares_previstos": [
+            "antigravity_agy",
+            "mimocode_trust",
+            "opencode_cli",
+            "especializacao_agentes"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "agentes suportados",
+              "valor": "3 agentes"
+            }
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Protocolos de Envio e Bypass de Permissões: Evitando Travamentos e Buffers Presos",
+          "objetivo": "Solucionar armadilhas operacionais comuns de agentes, como prompts de pasta confiável, bypass de permissão e buffers presos na TUI.",
+          "ancora_visual": "Fluxograma de decisão para mitigação de bloqueios em prompts interativos com envio de teclas e Enter de escape.",
+          "entrega_tecnica": "Script de monitoramento e envio seguro via orca terminal send mitigando o problema do buffer multi-linha preso.",
+          "pilares_previstos": [
+            "folder_trust_dialog",
+            "bypass_permission_traps",
+            "buffer_multilinha",
+            "mitigacao_bloqueio"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "taxa de sucesso de disparo",
+              "valor": "99%"
+            }
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Variáveis de Ambiente e Estado Local: Preparação de Arquivos .env e Dependências",
+          "objetivo": "Ensinar a automação de replicação de arquivos ignorados (.env) e instalação isolada de dependências em cada nova worktree.",
+          "ancora_visual": "Diagrama de fluxo de bootstrap de worktree: criação de pasta, cópia de .env, ativação de venv e verificação de chaves.",
+          "entrega_tecnica": "Script PowerShell/Bash de automação de bootstrap de worktree com replicação segura de variáveis de ambiente.",
+          "pilares_previstos": [
+            "bootstrap_worktree",
+            "replicacao_env",
+            "seguranca_credenciais",
+            "isolamento_dependencias"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "tempo de bootstrap",
+              "valor": "5 s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "Monitoramento em Tempo Real e Resiliência",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "A Central de Câmeras ao Vivo: Monitoramento Contínuo com orca worktree ps",
+          "objetivo": "Capacitar o desenvolvedor a operar o comando orca worktree ps como uma central de vigilância em tempo real com outputs JSON e TUI.",
+          "ancora_visual": "Mockup esquemático da saída do orca worktree ps com branches, contagem de PTYs, notificações e previews de tela.",
+          "entrega_tecnica": "Comandos CLI com flags --limit e --json combinados com jq para filtrar agentes que terminaram ou estão ociosos.",
+          "pilares_previstos": [
+            "painel_central_ps",
+            "preview_ao_vivo",
+            "extracao_json",
+            "dashboard_operacional"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "intervalo de amostragem",
+              "valor": "3 s"
+            }
+          ]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Detecção Precoce de Bloqueios: Identificação e Eliminação de Agentes Zumbis",
+          "objetivo": "Abordar os riscos de processos zumbis que consomem PTYs em segundo plano e fornecer métodos determinísticos de expurgo.",
+          "ancora_visual": "Diagrama de detecção de anomalias: agente sem atividade de CPU/disco bloqueado em prompt de confirmação.",
+          "entrega_tecnica": "Script de health check automatizado para identificar processos travados e aplicar término forçado seguro.",
+          "pilares_previstos": [
+            "processos_zumbis",
+            "deteccao_anomalias",
+            "expurgo_terminais",
+            "resiliencia_recursos"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "consumo de CPU ociosa",
+              "valor": "0%"
+            }
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Inspeção Visual de Código e Diffs: Análise Rápida com orca file diff e open-changed",
+          "objetivo": "Apresentar as ferramentas nativas de inspeção de arquivos do ORCA para auditar modificações antes de qualquer mesclagem.",
+          "ancora_visual": "Diagrama de visualização de diffs com código original vs código modificado pelo agente com destaque de alterações.",
+          "entrega_tecnica": "Comandos CLI para disparar orca file diff e orca file open-changed nos modos edit, diff e both.",
+          "pilares_previstos": [
+            "inspecao_diff",
+            "open_changed_files",
+            "revisao_visual",
+            "prevencao_regressao"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "velocidade de revisão",
+              "valor": "4x"
+            }
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Concorrência e Sincronização Assíncrona: Modelagem Teórica e Prática de Co-Agentes",
+          "objetivo": "Aprofundar a fundamentação acadêmica sobre concorrência multi-agente, limites transacionais e escalabilidade horizontal de LLMs.",
+          "ancora_visual": "Gráfico conceitual de escalabilidade comparando tempo total de entrega em tarefas síncronas vs assíncronas concorrentes.",
+          "entrega_tecnica": "Implementação em Python de um loop de controle assíncrono para despachar e aguardar múltiplos workers.",
+          "pilares_previstos": [
+            "concorrencia_multiagente",
+            "escalabilidade_horizontal",
+            "controle_transacional",
+            "teoria_coagentes"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "redução do tempo de entrega",
+              "valor": "65%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "IV",
+      "titulo_parte": "Integração Contínua, Auditoria e Entrega de Software",
+      "capitulos": [
+        {
+          "capitulo": "13",
+          "titulo": "A Regra de Ouro da Auditoria: Verificação Empírica vs Relatório de Sucesso do Agente",
+          "objetivo": "Estabelecer a cultura e os gates automatizados de validação empírica, prevenindo que falsos positivos de IAs cheguem à produção.",
+          "ancora_visual": "Fluxo do pipeline de auditoria: entrega do agente -> execução de testes unitários -> smoke test -> veredito.",
+          "entrega_tecnica": "Pipeline em Python/Bash que executa a suíte de testes de verdade e rejeita commits que falham nos testes.",
+          "pilares_previstos": [
+            "regra_ouro_auditoria",
+            "prevencao_falsos_positivos",
+            "gates_automaticos",
+            "validacao_empirica"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "taxa de cobertura de testes",
+              "valor": "100%"
+            }
+          ]
+        },
+        {
+          "capitulo": "14",
+          "titulo": "Mesclagem Concorrente sem Conflito: O Fluxo de Cherry-Pick e Reconciliação",
+          "objetivo": "Demonstrar o fluxo seguro de reconciliação de código entre branches paralelos usando cherry-pick e resolução de sobreposição.",
+          "ancora_visual": "Diagrama de commits mostrando o cherry-pick seletivo de commits de worktrees filhas para o branch principal.",
+          "entrega_tecnica": "Comandos Git e ORCA CLI para integração de commits e limpeza pós-mesclagem com orca worktree rm --force.",
+          "pilares_previstos": [
+            "cherry_pick_seletivo",
+            "reconciliacao_conflitos",
+            "limpeza_pos_mesclagem",
+            "integridade_main"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "tempo de integração",
+              "valor": "1 min"
+            }
+          ]
+        },
+        {
+          "capitulo": "15",
+          "titulo": "Automação e Verificação Remota com GitHub CLI: Validação de Pull Requests e CI",
+          "objetivo": "Integrar o fluxo local do ORCA com o ecossistema remoto do GitHub usando a ferramenta oficial gh CLI.",
+          "ancora_visual": "Diagrama de integração ponta a ponta: Worktree ORCA -> Push para Branch Remoto -> PR Automático -> CI GitHub Actions.",
+          "entrega_tecnica": "Comandos gh para verificar autenticação, inspecionar commits na main, abrir PRs e checar execuções do GitHub Actions.",
+          "pilares_previstos": [
+            "github_cli_gh",
+            "validacao_remota",
+            "automacao_pull_requests",
+            "ci_cd_agente"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "tempo de verificação remota",
+              "valor": "10 s"
+            }
+          ]
+        },
+        {
+          "capitulo": "16",
+          "titulo": "O Futuro da Engenharia de Software Agêntica: Pipelines Autônomos e Auto-Evolução",
+          "objetivo": "Sintetizar a jornada do livro e projetar a evolução dos sistemas de desenvolvimento autônomo com IA, meta-harnesses e auto-aprendizado.",
+          "ancora_visual": "Mapa de maturidade do desenvolvimento de software: do código manual aos ecossistemas multi-agentes auto-adaptativos.",
+          "entrega_tecnica": "Script de orquestração completa em Python que automatiza o ciclo completo: criação, despacho, auditoria e merge.",
+          "pilares_previstos": [
+            "auto_evolucao_software",
+            "meta_harnesses",
+            "fabricas_autonomas",
+            "conclusao_transformacional"
+          ],
+          "metricas_obrigatorias": [
+            {
+              "metrica": "autonomia do pipeline",
+              "valor": "100%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

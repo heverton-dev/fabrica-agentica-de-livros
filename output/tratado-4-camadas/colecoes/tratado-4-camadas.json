@@ -1,0 +1,71 @@
+{
+  "colecao": "tratado-4-camadas",
+  "cor_accent": "#a855f7",
+  "atualizado_em": "2026-08-25",
+  "nucleo": {
+    "slug": "livros/tratado-4-camadas",
+    "tipo": "livro",
+    "titulo": "O Tratado das 4 Camadas da Fábrica Agêntica",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "A Central de Comando Autônoma",
+      "descricao": "O leitor é o comandante de uma central de controle onde quatro painéis operacionais (TELA, HARNESS, LLM, TOOLS) governam agentes de IA como se fossem equipes especializadas.",
+      "vocabulario": [
+        "central de comando",
+        "painel operacional",
+        "circuito de segurança",
+        "roteador cognitivo",
+        "usina determinística",
+        "disjuntor",
+        "sandbox reversível",
+        "exit code",
+        "hardlink de governança",
+        "protocolo universal"
+      ],
+      "persona_leitor": "Engenheiro de Sistemas Autônomos"
+    }
+  },
+  "total_membros": 2,
+  "por_tipo": {
+    "livro": 1,
+    "playbook": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/tratado-4-camadas",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "O Tratado das 4 Camadas da Fábrica Agêntica",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "redigido",
+      "artefatos": []
+    },
+    {
+      "slug": "tratado-4-camadas/playbooks/pbk-1-tratado-4-camadas",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
+      "obra_mae": "tratado-4-camadas",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "extraido",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

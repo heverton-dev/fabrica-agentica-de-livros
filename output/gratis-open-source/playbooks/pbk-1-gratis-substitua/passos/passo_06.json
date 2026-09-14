@@ -1,0 +1,67 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Vídeo e Nuvem: Editando e Guardando Seus Arquivos Sem Assinatura",
+  "estagio": "Bancada",
+  "estagio_indice": 2,
+  "objetivo": "Cobrir edição de vídeo e armazenamento em nuvem self-hosted, sinalizando com precisão os casos em que 'open source' é rótulo incorreto.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Montando a Bancada de Vídeo",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "$ uname -a\nLinux oficina 6.8.0-45-generic #45-Ubuntu SMP x86_64 GNU/Linux\n$ free -h\n               total        used        free\nMem:           15GiB       3,2GiB       11GiB\n$ glxinfo | grep \"OpenGL version\"\nOpenGL version string: 4.6 (Core Profile) Mesa 24.0.5"
+    },
+    {
+      "titulo": "A Estante Central: Nextcloud Self-Hosted",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose up -d",
+        "curl -sI http://localhost:8080 | head -1",
+        "docker compose exec -u www-data app php occ maintenance:mode --on",
+        "docker compose exec -u www-data app php occ status"
+      ],
+      "codigo": "# docker-compose.yml — Nextcloud self-hosted (referência mínima)\nversion: \"3.9\"\n\nservices:\n  db:\n    image: mariadb:11\n    restart: unless-stopped\n    environment:\n      MYSQL_DATABASE: nextcloud\n      MYSQL_USER: nextcloud\n      MYSQL_PASSWORD: troque-esta-senha\n      MYSQL_ROOT_PASSWORD: troque-esta-root\n    volumes:\n      - db:/var/lib/mysql\n\n  app:\n    image: nextcloud:stable\n    restart: unless-stopped\n    ports:\n      - \"8080:80\"\n    environment:\n      MYSQL_HOST: db\n      MYSQL_DATABASE: nextcloud\n      MYSQL_USER: nextcloud\n      MYSQL_PASSWORD: troque-esta-senha\n    volumes:\n      - nextcloud:/var/www/html\n    depends_on:\n      - db\n\nvolumes:\n  db:\n  nextcloud:"
+    },
+    {
+      "titulo": "A Prateleira Externa: Backup com a Regra 3-2-1",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "# backup-oficina.sh — regra 3-2-1 na pratica (exemplo didatico: requer restic instalado)\n# Copia 1 e 2: estante Nextcloud + disco local (ja existem)\n# Copia 3: repositorio restic em disco externo, fora do ambiente\n\nexport RESTIC_REPOSITORY=/media/disco-externo/restic-oficina\nexport RESTIC_PASSWORD=\"senha-do-cofre\"\n\n# 1. Faz o snapshot criptografado de toda a prateleira\nrestic backup /srv/nextcloud/data\n\n# 2. Verifica a integridade do cofre (nada de confiar cegamente)\nrestic check\n\n# 3. Política de retenção: 7 diarios, 4 semanais, 6 mensais\nrestic forget --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --prune"
+    },
+    {
+      "titulo": "Vídeo Não É Só Cortar: O Fluxo de Produção Completo",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "$ ffprobe -v error -show_entries format=duration,bit_rate -of default=noprint_wrappers=1 projeto-final.mp4\nduration=300.500000\nbit_rate=8250000\n$ ls -lh projeto-final.mp4\n-rw-r--r-- 1 artesao artesao 313M ago 20 07:00 projeto-final.mp4"
+    }
+  ],
+  "gate": "docker compose up -d",
+  "comandos": [
+    "docker compose up -d",
+    "curl -sI http://localhost:8080 | head -1",
+    "docker compose exec -u www-data app php occ maintenance:mode --on",
+    "docker compose exec -u www-data app php occ status",
+    "docker compose exec -u www-data app php occ maintenance:mode --off",
+    "docker compose exec -u www-data app php occ app:update --all",
+    "docker compose exec -u www-data app php occ background:cron",
+    "docker compose logs --since 24h app | grep -c \"ERROR\""
+  ],
+  "feito_quando": [
+    "A jornada prática deste capítulo é a primeira semana do Artesão Digital migrando vídeo",
+    "O cenário: você terminou de editar um vídeo curto para o canal da sua área — algo de cinco minutos",
+    "Erro comum:** você confia na sincronização como se ela fosse backup",
+    "Edita o vídeo direto da pasta sincronizada do Nextcloud em dois dispositivos",
+    "O diagnóstico é sempre o mesmo: sincronizar replica",
+    "São funções diferentes",
+    "Prática correta:** a pasta sincronizada recebe apenas o material de trabalho corrente"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 6 — Vídeo e Nuvem: Editando e Guardando Seus Arquivos Sem Assinatura",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

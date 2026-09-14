@@ -1,0 +1,39 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "O Contexto Real de Origem: O Projeto Arsenal Open Source",
+  "estagio": "Central de comando",
+  "estagio_indice": 1,
+  "objetivo": "Apresentar o projeto Arsenal como campo de batalha real e a matriz de transposição universal.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Estrutura de Diretórios de uma Estação Agêntica Profissional",
+      "linguagem": "text",
+      "comandos": [],
+      "codigo": "meu-projeto-agentico/\n├── .governance/              # Camada 1: Diretivas, Regras e Contexto\n│   ├── CONSTITUTION.md       # As 18 Regras Sagradas invioláveis\n│   └── skills/               # Habilidades carregadas sob demanda (Lazy Loading)\n├── .harness/                 # Camada 2: Proteção, Hooks e Disjuntores\n│   ├── settings.json         # Limites de turnos, timeouts e comandos bloqueados\n│   └── hooks/                # Pre-commit e interceptores de ferramentas\n├── .router/                  # Camada 3: Motor Cognitivo e Roteamento\n│   └── models_config.json    # Matriz de 3 Tiers (Flash, Standard, Reasoning)\n├── .tools/                   # Camada 4: Servidores MCP e Banco de Estado\n│   ├── state_tracker.db      # SQLite para persistência de tarefas\n│   └── mcp_servers/          # Protocolo Model Context Protocol\n├── CLAUDE.md                 # Ponto de entrada invariante para agentes\n└── README.md                 # Documentação executiva"
+    },
+    {
+      "titulo": "4.2 Script de Verificação de Prontidão da Estação (Pre-Flight Check)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# preflight_check.py — Validador de integridade da estação agêntica\nimport os\nimport sys\nfrom pathlib import Path\n\ndef verificar_estacao():\n    print(\"=== [PRE-FLIGHT CHECK] Verificando Central de Comando Agêntica ===\")\n    erros = []\n    \n    # 1. Checagem de Governança (Camada 1)\n    if not Path(\"CLAUDE.md\").exists() and not Path(\".governance\").exists():\n        erros.append(\"[Camada 1] Ausência de arquivo de governança invariante (CLAUDE.md).\")\n    else:\n        print(\"[OK] Camada 1 (Contexto & Diretivas): Ativa e Invariante.\")\n        \n    # 2. Checagem de Harness e Git (Camada 2)\n    if not Path(\".git\").exists():\n        erros.append(\"[Camada 2] Repositório Git não inicializado para versionamento.\")\n    else:\n        print(\"[OK] Camada 2 (Harness & Execução): Controle de versão ativo.\")\n        \n    # 3. Resumo da Verificação\n    if erros:\n        print(\"\n[FALHA] Alertas de Prontidão detectados:\")\n        for err in erros:\n            print(f\"  -> {err}\")\n        return False\n        \n    print(\"\n[SUCESSO] Central de Comando 100% operacional para o Engenheiro Agêntico!\")\n    return True\n\nif __name__ == \"__main__\":\n    if not verificar_estacao():\n        sys.exit(1)"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Verifique se seu projeto possui um arquivo de governança invariante (CLAUDE.md ou equivalente — se não existir, crie um com 3 regras mínimas)",
+    "Escreva uma lista das 4 dores que você já enfrentou ao usar IA para programar (custo, amnésia, alucinação, lock-in)",
+    "Documente o seu fluxo atual de interação com agentes de IA e identifique ao menos 1 ponto onde a Metriz de Transposição Universal poderia ser aplicada",
+    "Crie um esboço em papel ou Markdown de como sua Central de Comando seria organizada (4 camadas)"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 1 — O Contexto Real de Origem: O Projeto Arsenal Open Source",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

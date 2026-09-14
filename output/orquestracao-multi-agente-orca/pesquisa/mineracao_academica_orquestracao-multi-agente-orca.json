@@ -1,0 +1,443 @@
+{
+  "tema": "multi-agent software engineering LLM autonomous agents Git worktree",
+  "gerado_em": "31 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=multi-agent+software -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=multi-agent+software+engineering+LLM+autonom -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 20,
+  "registros": [
+    {
+      "titulo": "Effective Strategies for Asynchronous Software Engineering Agents",
+      "autores": [
+        "Jiayi Geng",
+        "Graham Neubig"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2603.21489",
+      "resumo": "AI agents have become increasingly capable at isolated software engineering (SWE) tasks such as resolving issues on Github. Yet long-horizon tasks involving multiple interdependent subtasks still pose challenges both with respect to accuracy, and with respect to timely completion. A natural approach to solving these long-horizon tasks in a timely manner is asynchronous multi-agent collaboration, where multiple agents work on different parts of the task at the same time. But effective application of multi-agent systems has proven surprisingly difficult: concurrent edits by multiple agents interfere with each other, dependencies are difficult to synchronize, and combining partial progress into a coherent whole is challenging. On the other hand, human developers have long relied on mature collaboration infrastructure to manage these challenges in large software projects. Inspired by these collaboration primitives, we introduce Centralized Asynchronous Isolated Delegation (CAID), a structured multi-agent coordination paradigm grounded in three core SWE primitives: centralized task delegation, asynchronous execution, and isolated workspaces. CAID constructs dependency-aware task plans through a central manager, executes subtasks concurrently in isolated workspaces, and consolidates progress via structured integration with executable test-based verification. In empirical evaluation, we find that CAID improves accuracy over single-agent baselines by 25.6% absolute on paper reproduction tasks (PaperBench) and 14.7% on Python library development tasks (Commit0). Through systematic analysis, we find that branch-and-merge is a central coordination mechanism for multi-agent collaboration, and that SWE primitives such as git worktree, git commit, and git merge enable it to be realized in a reliable and executable manner.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Multi-agent Collaboration with State Management",
+      "autores": [
+        "Mengyang Liu",
+        "Taozhi Chen",
+        "Zhenhua Xu",
+        "Xue Jiang",
+        "Yihong Dong"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2605.20563",
+      "resumo": "Recent advances in multi-agent systems have shown great potential for solving complex tasks. However, when multiple agents edit a shared codebase concurrently, their changes can silently conflict and inconsistent views lead to integration failures. Existing multi-agent systems address this through workspace isolation (e.g., one git worktree per agent), but this defers conflict resolution to a post-hoc merge step where recovery is expensive. In this paper, we propose STORM, i.e., STate-ORiented Management for multi-agent collaboration. Specifically, STORM manages agent states by mediating their interactions with the shared workspace, ensuring that each agent operates on a consistent view of the codebase and that conflicting edits are detected and resolved at write time. We evaluate STORM on Commit0 and PaperBench across multiple LLMs. STORM outperforms the git-worktree-based multi-agent baseline by +18.7 on Commit0-Lite and +1.4 on PaperBench, while achieving comparable or better cost efficiency. Combined with single-agent runs, STORM reaches highest scores of 87.6 and 78.2 on the two benchmarks respectively, suggesting that explicit state management is a more effective foundation for multi-agent collaboration than workspace isolation. STORM can also be plugged into any multi-agent system seamlessly.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning",
+      "autores": [
+        "Guhong Chen",
+        "Yingcheng Shi",
+        "Yongbin Li",
+        "Binhua Li",
+        "Xander Xu",
+        "Hu Wei",
+        "Shiwen Ni",
+        "Min Yang (146229)",
+        "Jieping Ye"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2606.03108",
+      "resumo": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static. This limitation sharpens in agentic RL, where shifting bottlenecks and scalar rewards mask diverse failure modes. We introduce EvoTrainer, an autonomous training framework that co-evolves LLM policies and training-side harnesses through empirical feedback: it diagnoses rollout-level evidence, revises diagnostics, backtests interventions, and accumulates reusable skills. Evaluated on mathematical reasoning, competitive-programming code generation, and repository-level software engineering, EvoTrainer matches or exceeds the human-engineered RL references under the same data, codebase, and evaluation protocol, with the largest gain on long-horizon agentic SWE. Trajectory analyses show that retained strategies diverge across domains, evolving diagnostics prevent invalid high-scoring branches from being promoted, and reusable skills shape later search. Autonomous LLM RL should move beyond recipe search toward joint evolution of policies and the training harnesses that interpret them.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
+      "autores": [
+        "Ao Qu",
+        "Han Zheng",
+        "Zijian Zhou",
+        "Yihao Yan",
+        "Yihong Tang",
+        "Shao Yong Ong",
+        "Fenglu Hong",
+        "Kaichen Zhou",
+        "Chonghe Jiang",
+        "Minwei Kong",
+        "Jiacheng Zhu",
+        "Xuan Jiang",
+        "Sirui Li",
+        "Cathy Wu",
+        "Bryan Kian Hsiang Low",
+        "Jinhua Zhao",
+        "Paul Pu Liang"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2604.01658",
+      "resumo": "Large language model (LLM)-based evolution is a promising approach for open-ended discovery, where progress requires sustained search and knowledge accumulation. Existing methods still rely heavily on fixed heuristics and hard-coded exploration rules, which limit the autonomy of LLM agents. We present CORAL, the first framework for autonomous multi-agent evolution on open-ended problems. CORAL replaces rigid control with long-running agents that explore, reflect, and collaborate through shared persistent memory, asynchronous multi-agent execution, and heartbeat-based interventions. It also provides practical safeguards, including isolated workspaces, evaluator separation, resource management, and agent session and health management. Evaluated on diverse mathematical, algorithmic, and systems optimization tasks, CORAL sets new state-of-the-art results on 10 tasks, achieving 3-10 times higher improvement rates with far fewer evaluations than fixed evolutionary search baselines across tasks. On Anthropic's kernel engineering task, four co-evolving agents improve the best known score from 1363 to 1103 cycles. Mechanistic analyses further show how these gains arise from knowledge reuse and multi-agent exploration and communication. Together, these results suggest that greater agent autonomy and multi-agent evolution can substantially improve open-ended discovery. Code is available at https://github.com/Human-Agent-Society/CORAL.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence",
+      "autores": [
+        "Yuyuan Feng",
+        "Zhiyi Xiang",
+        "Chaobin Yang",
+        "Qichao Ma",
+        "Zerui Chen",
+        "Yujing Zhang",
+        "Ke Huang",
+        "Chuanjie Wu",
+        "Zhaoxu Liu",
+        "Yili Wang",
+        "Xin He",
+        "Jiapu Wang",
+        "Zijin Hong",
+        "Hao Chen",
+        "Yuanchen Bei",
+        "Kun Wang",
+        "Shengyuan Chen",
+        "Ningyu Zhang",
+        "Enyan Dai",
+        "Linhao Luo",
+        "Qingyi Pan",
+        "Qi Wang",
+        "Wenqi Fan",
+        "Guangjing Wang",
+        "Na Zou",
+        "Yangqiu Song",
+        "Xin Wang",
+        "Zechao Li",
+        "Xia Hu",
+        "Qing Li",
+        "Xiao Huang",
+        "Zhihong Zhang",
+        "Jinsong Su",
+        "Qinggang Zhang",
+        "Yi Chang"
+      ],
+      "ano": 2026,
+      "doi": "10.48550/arxiv.2608.21156",
+      "url": "https://arxiv.org/abs/2608.21156",
+      "resumo": "LLMs have evolved from language generators to autonomous agents capable of complex, long-horizon tasks. This evolution has produced paradigms including Prompt Engineering to elicit model capabilities, Context Engineering to manage information access, Harness Engineering to organize external tools and resources, and Loop Engineering to support continual reflection and self-improvement. Yet as tasks grow more complex, individual intelligence faces a fundamental limit: many tasks require heterogeneous expertise, interdependent subtasks, parallel execution, independent verification, and persistent state, exceeding any single agent's organizational capacity. Augmenting one agent's capabilities or context cannot resolve this architectural mismatch; intelligence must instead be distributed across specialized agents and organized at the system level. We call this System Intelligence: an agent system's ability to organize and coordinate multiple intelligent components into a coherent, adaptive whole pursuing a shared objective. Achieving it requires more than adding agents; it demands explicit structures to organize work, coordinate heterogeneous agents, and maintain evolving execution states. We introduce Graph Engineering, an emerging paradigm for next-generation agent systems. Unlike prior paradigms that mainly optimize individual interactions or agent-level behavior, Graph Engineering constructs explicit, dynamic, evolving graph structures representing tasks, agents, and system states. These abstractions provide a unified foundation for organizing complex objectives, orchestrating heterogeneous agents, modeling system dynamics, and enabling scalable agent evolution. We systematically review the principles, methodologies, and applications of Graph Engineering for LLM agents. Related papers, open-source data, and projects are collected at https://github.com/DEEP-JLU/Awesome-Graph-Engineering.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "An Empirical Study of Multi-Agent Collaboration for Automated Research",
+      "autores": [
+        "Yang Shen",
+        "Zhenyi Yi",
+        "Ziyi Zhao",
+        "Lijun Sun",
+        "Dongyang Li",
+        "Chin-Teng Lin",
+        "Yuhui Shi"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2603.29632",
+      "resumo": "As AI agents evolve, the community is rapidly shifting from single Large Language Models (LLMs) to Multi-Agent Systems (MAS) to overcome cognitive bottlenecks in automated research. However, the optimal multi-agent coordination framework for these autonomous agents remains largely unexplored. In this paper, we present a systematic empirical study investigating the comparative efficacy of distinct multi-agent structures for automated machine learning optimization. Utilizing a rigorously controlled, execution-based testbed equipped with Git worktree isolation and explicit global memory, we benchmark a single-agent baseline against two multi-agent paradigms: a subagent architecture (parallel exploration with post-hoc consolidation) and an agent team architecture (experts with pre-execution handoffs). By evaluating these systems under strictly fixed computational time budgets, our findings reveal a fundamental trade-off between operational stability and theoretical deliberation. The subagent mode functions as a highly resilient, high-throughput search engine optimal for broad, shallow optimizations under strict time constraints. Conversely, the agent team topology exhibits higher operational fragility due to multi-author code generation but achieves the deep theoretical alignment necessary for complex architectural refactoring given extended compute budgets. These empirical insights provide actionable guidelines for designing future autoresearch systems, advocating for dynamically routed architectures that adapt their collaborative structures to real-time task complexity.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Glite ARF: Verifier-Driven Research with Parallel LLM Coding Agents",
+      "autores": [
+        "Vassili Philippov",
+        "Pavel Katunin",
+        "Dmitry Andreev",
+        "Igor Ostanin",
+        "Anton Nikolaev"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2606.27416",
+      "resumo": "LLM coding agents make it tempting to automate empirical research by delegating experiments to them directly, but naive delegation does not scale to large projects: low-rate instruction lapses compound into broken, irreproducible artefacts. To address this problem, we present Glite ARF, an open-source Python framework for running many LLM coding agents in parallel on a research repository without sacrificing reproducibility or auditability. The framework defines a three-role stack: a human researcher chooses which hypotheses to test, coding agents (Claude Code, Codex CLI) implement individual tasks under a fixed structure, and deterministic Python verifier scripts enforce task isolation, immutability of completed work, a corrections overlay, and a materialised project overview. We call this verifier-driven research: the rules of the research process live in code that fails loudly when violated, not in prose that agents are merely asked to follow. Using Glite ARF, we developed our submission to the BEA 2026 vocabulary-difficulty shared task, placing first in the closed track and second in the open track on all three target languages (Spanish, German, Mandarin) and reducing the official baseline RMSE by 29.9% (closed) and 35.9% (open). The campaign comprised 273 tracked tasks (146 experiment runs) across 129 feature sets, run by up to twelve parallel agents orchestrated from a single laptop - with some model training on rented A100s - at approximately \\$450 in LLM API spend (\\$498 total third-party cost), and structured per-fold provenance let us catch and strip four target-leaking feature sets, correcting an implausible 0.609 RMSE to 0.802. Across three campaigns in three domains, the framework's structural machinery adds only about 1% of wall-clock time. Framework and a public demo project accompany this paper.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "CoAgent: Concurrency Control for Multi-Agent Systems",
+      "autores": [
+        "Hongtao Lyu",
+        "Dingyan Zhang",
+        "M T Wu",
+        "Xingda Wei",
+        "Haibo Chen"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2606.15376",
+      "resumo": "Multi-agent LLM systems -- coding agents, devops agents, document agents -- now routinely run several agents in parallel against the same git tree, Kubernetes cluster, or document. As soon as two of them mutate shared state, they enter the regime classical concurrency control has studied for decades, but classical mechanisms fit LLM agents poorly. A single agent transaction spans minutes of inference, read sets are broad and opaque rather than statically inferable, and the live state agents act on admits neither fork nor buffer, so writes take effect the moment they execute. Locks block long inference intervals; OCC abort-and-retry discards minutes of work on every conflict. This paper builds concurrency control on a capability classical transactions lack: the LLM inside each agent can judge whether a conflicting write invalidates its plan, and can repair exactly the operations that depended on it. Control therefore turns advisory: the runtime informs, the agent repairs. Our protocol, MTPO (Monotonic Trajectory Pre-Order), fixes a serialization order at launch, serves each read the order-filtered value, and applies writes speculatively in place; a one-way notification asks an affected reader to re-judge and patch its plan, while the framework mechanically undoes and reorders misplaced writes through the saga-style inverse each tool registers in advance. At quiescence the run is serializable in the pre-decided order. We realize MTPO as CoAgent, toolcall middleware whose privileged ToolSmith grows footprint-declared, undoable tools online. On ten contended workloads, CoAgent stays within 5\\% of serial correctness at a $1.4\\times$ speedup and near-serial token cost, where 2PL and OCC surrender nearly all concurrency gains; on a bash-only target system, it grows a 25-tool library online and lifts the task pass rate from 45/71 to 63/71 at $0.80\\times$ the time and $0.86\\times$ the cost.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Effective Harness Engineering for Algorithm Discovery with Coding Agents",
+      "autores": [
+        "Yoichi Ishibashi",
+        "Taro Yano",
+        "Masafumi Oyamada"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2605.15221",
+      "resumo": "AlphaEvolve and FunSearch have demonstrated the potential of combining large language models (LLMs) with evolutionary search for automated algorithm discovery. However, discovery success is shaped not only by model capability but also significantly by the design of the execution infrastructure, i.e., the harness. This paper investigates effective harness design through three questions: under a fixed token budget, is it better to produce many algorithms with brief thought or fewer algorithms with deeper thought? How should the harness handle evaluation hacks, where generated programs exploit the scoring function? And how can agents that require full filesystem access execute safely in parallel? Using Vesper, an algorithm discovery framework that incorporates harness improvements addressing these questions, we evaluate on Circle Packing under the same token budget. Interestingly, generating fewer algorithms while thinking more deeply about each one achieved higher scores. That is, scaling the quality of each individual is more budget-efficient than scaling the number of evolutionary generations. Surprisingly, more capable models produced evaluation hacks at higher rates, making hack detection increasingly necessary as models scale.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "VeRO: A Harness for Agents to Optimize Agents",
+      "autores": [
+        "Varun Ursekar",
+        "Apaar Shanker",
+        "Veronica Chatrath",
+        "Yuan",
+        "Samuel Marc Denton"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2602.22480",
+      "resumo": "An important emerging application of coding agents is agent harness optimization: the iterative improvement of a target agent by editing and evaluating its code. Despite its relevance, the community lacks a systematic understanding of coding agent performance on this task. Harness optimization differs from conventional software engineering: agent harnesses interleave deterministic code with stochastic LLM completions, requiring structured capture of both intermediate execution traces and downstream outcomes. To address these challenges, we introduce (1) VeRO (Versioning, Rewards, and Observations), an outer harness that provides versioned snapshots, budget-controlled evaluation, and structured execution traces of target harnesses, and (2) VeRO-Bench, a benchmark suite of target agents and tasks with reference evaluation procedures. Using VeRO, we conduct an empirical study comparing optimizers across tasks and analyzing which modifications reliably improve target agent harnesses. We release VeRO to support research on agent optimization as a core capability for coding agents. Code is available at https://github.com/scaleapi/vero.",
+      "citacoes": 0,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Challenges and Research Directions in Agent-Oriented Software Engineering",
+      "autores": [
+        "Zambonelli, Franco",
+        "Omicini, Andrea"
+      ],
+      "ano": 2004,
+      "doi": "10.1023/b:agnt.0000038028.66672.1e",
+      "url": "https://doi.org/10.1023/b:agnt.0000038028.66672.1e",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Autonomous Agents and Multi-Agent Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Multi-agent systems for improved information retrieval - leveraging autonomous agents and LLM models",
+      "autores": [
+        "Poniszewska-Marańda, Aneta",
+        "Kopa, Maciej",
+        "Borowska, Bożena"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/asew67777.2025.00062",
+      "url": "https://doi.org/10.1109/asew67777.2025.00062",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 40th IEEE/ACM International Conference on Automated Software Engineering Workshops (ASEW)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Sura.ai: Multi-Agent Infrastructure Recovery with LLM-Powered Autonomous Remediation",
+      "autores": [
+        "Arvind, Ananya",
+        "Narayanan, Shruthi",
+        "Narayanan, Saishriya"
+      ],
+      "ano": 2026,
+      "doi": "10.5220/0014456800004052",
+      "url": "https://doi.org/10.5220/0014456800004052",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 18th International Conference on Agents and Artificial Intelligence",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Creatures: Entertainment Software Agents with Artificial Life",
+      "autores": [
+        "Grand, Stephen",
+        "Cliff, Dave"
+      ],
+      "ano": 1998,
+      "doi": "10.1023/a:1010042522104",
+      "url": "https://doi.org/10.1023/a:1010042522104",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Autonomous Agents and Multi-Agent Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "ALMAS: an Autonomous LLM-based Multi-Agent Software Engineering Framework",
+      "autores": [
+        "Tawosi, Vali",
+        "Ramani, Keshav",
+        "Alamir, Salwa",
+        "Liu, Xiaomo"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/asew67777.2025.00059",
+      "url": "https://doi.org/10.1109/asew67777.2025.00059",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 40th IEEE/ACM International Conference on Automated Software Engineering Workshops (ASEW)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Defining Open Software Architectures for Customized Remote Execution of Web Agents",
+      "autores": [
+        "Issarny, Valérie",
+        "Saridakis, Titos"
+      ],
+      "ano": 1999,
+      "doi": "10.1023/a:1010008305297",
+      "url": "https://doi.org/10.1023/a:1010008305297",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Autonomous Agents and Multi-Agent Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "AutoMETA: A Multi-Agent LLM System for Autonomous Meta-Analysis",
+      "autores": [
+        "Lee, Keeheon",
+        "Ryu, Kunhee"
+      ],
+      "ano": null,
+      "doi": "10.65109/hxka2256",
+      "url": "https://doi.org/10.65109/hxka2256",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Emergent Autonomous Sub-Agent Spawning in LLM-Based Multi-Agent Software Engineering Systems:An Empirical Case Study, Controlled Pilot Experiment, and Benchmark Framework\"Can AI Agents Have Babies?\"",
+      "autores": [
+        "Shukla, Akshat",
+        "Rajput, Priyanshu"
+      ],
+      "ano": 2026,
+      "doi": "10.51244/ijrsi.2026.1303000020",
+      "url": "https://doi.org/10.51244/ijrsi.2026.1303000020",
+      "resumo": "<jats:p>This paper grew out of something we stumbled on while running a fairly routine software development setup at a real company. We had two coding agents working in parallel on a web app: one was writing backend logic, the other was handling UI research. Neither was given any instruction or tooling to spawn new agents. There was no orchestration layer, no agent registry, nothing of the sort. Yet both of them, working independently, created brand-new agent processes to handle frontend tasks that were piling up. The children ran in their own processes, had their own prompts, and kept working even after we killed the parents.\nWe named this behavior Latent Constructive Spawning (LCS) and placed it within a larger category we call Emergent Reproductive Agent Behavior (ERAB). We make five contributions: first, a working definition with six strict criteria for what counts as autonomous spawning, verified against process-tree forensics; second, a four-class taxonomy separating LCS from orchestrated delegation, prompted self-copying, and survival-driven replication; third, four falsifiable hypotheses about when and why it happens; fourth, ERAB Bench, a ten-metric protocol for measuring it; and fifth, a 16-run controlled pilot across two anonymized model families. Spawning appeared in 5 out of 8 runs when task load was high and shell access was available. It appeared in zero runs when either condition was missing (p = 0.044, Fisher's exact test, one-sided). We acknowledge the small sample size and treat these as preliminary findings that warrant larger-scale replication. Process trees, prompt files, and post-parent persistence logs are included. The practical concern: this kind of agent self-organization can plausibly happen in coding-agent setups where the agent has a terminal, a filesystem, and enough unfinished work, though replication across additional model families, domains, and environments is needed before any general claims are warranted.</jats:p>",
+      "citacoes": null,
+      "periodico": "International Journal of Research and Scientific Innovation",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "An Automated Teamwork Infrastructure for Heterogeneous Software Agents and Humans",
+      "autores": [
+        "Pynadath, David V.",
+        "Tambe, Milind"
+      ],
+      "ano": 2003,
+      "doi": "10.1023/a:1024176820874",
+      "url": "https://doi.org/10.1023/a:1024176820874",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Autonomous Agents and Multi-Agent Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Taxonomy for Autonomous LLM-Powered Multi-Agent Architectures",
+      "autores": [
+        "Händler, Thorsten"
+      ],
+      "ano": 2023,
+      "doi": "10.5220/0012239100003598",
+      "url": "https://doi.org/10.5220/0012239100003598",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 15th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

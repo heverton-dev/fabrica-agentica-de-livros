@@ -1,0 +1,40 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "2" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 1: o método de perícia (hierarquia de fontes A/B/C e a regra de nunca confiar em comando sem checar --help ou doc oficial), agora aplicado à mecânica de cobrança do cache de prompt",
+  "metricas_obrigatorias": [
+    { "metrica": "desconto no cache read", "valor": "90% (0,1x o preço de input padrão)" },
+    { "metrica": "premium do cache write TTL 5 min", "valor": "1,25x o preço de input padrão" },
+    { "metrica": "premium do cache write TTL 1 hora", "valor": "2x o preço de input padrão" },
+    { "metrica": "tamanho mínimo cacheável", "valor": "1024 tokens" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O mecanismo real do cache: leitura barata, escrita cara",
+        "escopo": "Entra: campo cache_control (type: ephemeral) no payload da Messages API da Anthropic, os dois tipos de operação (write cria o cache, read reaproveita), os multiplicadores reais de preço (read 0,1x / write 1,25x-2x), TTL de 5 min vs 1h, mínimo de 1024 tokens cacheáveis. Fica de fora: qualquer toggle de 'settings.json' com campo cacheControl/systemPrompt (isso é a fabricação do manual, tratada no pilar 2) e qualquer percentual fixo de ganho de latência (a doc não publica isso).",
+        "ancora_visual": "flowchart LR do laudo pericial: 'Comando/config chega à mesa do perito' -> decisão 'Existe cache_control no payload da API (fonte primária [1])?' -> ramifica em 'Primeira chamada = cache WRITE (prefixo novo, custo 1,25x-2x)' e 'Chamada repetida = cache HIT/READ (prefixo idêntico byte-a-byte, custo 0,1x)' -> nó final 'Laudo: prefixo mudou 1 byte = cache invalidado, novo WRITE'. Usa vocabulário do motivo condutor (laudo, evidência, cadeia de custódia).",
+        "entrega_tecnica": "JSON comentado do payload real da Messages API com bloco 'system' e cache_control:{type:ephemeral} em um breakpoint, mostrando onde write e read acontecem em duas chamadas sequenciais (comentário linha a linha, nível iniciante).",
+        "evolucao_leitor": "De 'cache é uma configuração que eu ligo' para 'cache é um efeito colateral de manter o prefixo da chamada idêntico byte-a-byte — e cobra diferente para criar (write) e reaproveitar (read)'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Onde a configuração de verdade mora (por IDE) vs. o documento falsificado do manual",
+        "escopo": "Entra: caminhos reais confirmados — Claude Code (~/.claude/settings.json usuário, .claude/settings.json projeto, CLAUDE.md incluído automaticamente, campos reais model/permissions/env/hooks), Aider (~/.aider.conf.yml, cache-prompts:true, --cache-keepalive-pings), Codex (~/.codex/config.toml, campos no NÍVEL RAIZ como model/model_provider/wire_api, sem seção [codex]). Contraprova explícita do caminho fabricado ~/.config/claude-code/settings.json com campos systemPrompt/cacheControl. Fica de fora: Hermes e as outras 7 IDEs (citadas de passagem como 'documentos não confirmados', aprofundamento fica para pilar 3 e capítulos seguintes).",
+        "ancora_visual": "flowchart TB estilo 'cadeia de custódia de 3 documentos lado a lado' — Claude Code / Aider / Codex — cada um com dois cartões empilhados: 'Documento apresentado pelo manual' (caminho/campo fabricado, marcado com selo de falsificação) e 'Documento com fonte primária' (caminho real, selo de autenticado [3][9][11]).",
+        "entrega_tecnica": "Três blocos de config reais comentados: settings.json (Claude Code, JSON), .aider.conf.yml (YAML) com cache-prompts, config.toml (Codex) com campos no nível raiz — cada um com um comentário apontando o que NÃO existe (o campo fabricado correspondente).",
+        "evolucao_leitor": "De 'todo caminho de config com nome de ferramenta familiar parece confiável' para 'eu exijo o documento com fonte primária antes de copiar qualquer caminho de arquivo'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Medindo cache hit de verdade (sem inventar métrica)",
+        "escopo": "Entra: ccusage como ferramenta real (Node/npm, não pipx), comando npx ccusage@latest session --json, campos reais cacheCreationTokens/cacheReadTokens/cacheHitRate (não cache_hit_ratio nem cache_hit). Fica de fora: qualquer 'ccusage log --date' (subcomando fabricado) — os reais são daily/weekly/monthly/session/blocks.",
+        "ancora_visual": "flowchart LR do fluxo de evidência: 'Sessão de trabalho no Claude Code' -> 'Arquivos JSONL locais (~/.claude/projects/**)' -> 'npx ccusage@latest session --json' -> 'Laudo final: cacheReadTokens / cacheCreationTokens / cacheHitRate' com um ramo lateral marcado 'X' para o campo fabricado cache_hit_ratio.",
+        "entrega_tecnica": "Comando de terminal (bash) com npx ccusage@latest session --json e um trecho comentado do JSON de saída real destacando os 3 campos de cache, mais um one-liner com jq extraindo cacheHitRate.",
+        "evolucao_leitor": "De 'confio no que o manual diz que devo medir' para 'eu leio o campo certo na saída real da ferramenta antes de reportar qualquer número de economia'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Os 3 Princípios Universais da TELA",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Ensinar os fundamentos de Prompt & Context Engineering.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [
+    "CLAUDE.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "Exemplo Real: O Cabeçalho de Governança Invariante (`CLAUDE.md`)",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "<!-- INÍCIO DO BLOCO INVARIANTE (NUNCA ALTERAR EM SESSÃO ATIVA) -->\n# PROTOCOLO DE GOVERNANÇA AGÊNTICA — NÍVEL INDUSTRIAL\n\n## DIRETIVAS DE COMUNICAÇÃO (DENSIDADE DE SHANNON)\n1. Idioma obrigatório: Português do Brasil (PT-BR).\n2. Estilo de resposta: Conciso, telegráfico, sem saudações e sem preâmbulos.\n3. Pensamento interno (<thinking>): Estilo Caveman (abreviado, foco em fatos).\n\n## DIRETIVAS DE ENGENHARIA (LOCALIDADE DE CONTEXTO)\n1. REGRA INVIOLÁVEL: Use grep/ripgrep para localizar linhas antes de ler arquivos inteiros.\n2. Nunca execute leituras superiores a 100 linhas sem autorização explícita.\n3. Sempre execute os testes automatizados antes de reportar conclusão de tarefas.\n<!-- FIM DO BLOCO INVARIANTE -->"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Reescreva um prompt vago usando o princípio de Invariância de Prefixo — mantenha o início estático e isole a parte dinâmica",
+    "Meça a \"densidade de Shannon\" de um prompt que você usa com frequência: quantas palavras são ruído vs. informação técnica real?",
+    "Aplique o princípio de Localidade de Contexto em uma tarefa real: use grep antes de ler qualquer arquivo inteiro",
+    "Crie o seu CLAUDE.md invariante com pelo menos 3 regras fixas que não mudam entre sessões"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 5 — Os 3 Princípios Universais da TELA",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

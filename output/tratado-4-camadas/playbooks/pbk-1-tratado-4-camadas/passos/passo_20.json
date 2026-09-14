@@ -1,0 +1,34 @@
+{
+  "numero": "20",
+  "capitulo_fonte": "20",
+  "titulo": "O Super-Auditor e o Manual de Montagem Universal",
+  "estagio": "Usina determinística",
+  "estagio_indice": 5,
+  "objetivo": "Super-Auditor e manual para novos e legados projetos.",
+  "pre_requisito": "Passo 19 concluído",
+  "entregas": [
+    "super_auditor.py"
+  ],
+  "execucao": [
+    {
+      "titulo": "O Script Completo do Super-Auditor Universal (`super_auditor.py`)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# super_auditor.py — Auditor Mestre das 4 Camadas da Fábrica Agêntica\nimport os\nimport sys\nimport json\nfrom pathlib import Path\n\ndef auditar_quatro_camadas():\n    print(\"==================================================================\")\n    print(\"   SUPER-AUDITOR UNIVERSAL — TRATADO DAS 4 CAMADAS DA FÁBRICA     \")\n    print(\"==================================================================\")\n    \n    score = 0\n    relatorio = {}\n    \n    # 1. Auditoria da Camada 1 (Contexto & Governança)\n    print(\"\n--> [1/4] Auditando Camada 1: Contexto & Diretivas...\")\n    c1_ok = Path(\"CLAUDE.md\").exists() or Path(\".governance/CONSTITUTION.md\").exists()\n    relatorio[\"camada_1_contexto\"] = \"APROVADO\" if c1_ok else \"REPROVADO\"\n    if c1_ok:\n        score += 25\n        print(\"    [OK] Arquivo de Governança Invariante ativo.\")\n    else:\n        print(\"    [ALERTA] Ausência de CLAUDE.md ou CONSTITUTION.md!\")\n        \n    # 2. Auditoria da Camada 2 (Harness & Segurança)\n    print(\"\n--> [2/4] Auditando Camada 2: Harness & Execução...\")\n    c2_ok = Path(\".harness/settings.json\").exists() or Path(\".git\").exists()\n    relatorio[\"camada_2_harness\"] = \"APROVADO\" if c2_ok else \"REPROVADO\"\n    if c2_ok:\n        score += 25\n        print(\"    [OK] Disjuntores e controle de versão ativos.\")\n    else:\n        print(\"    [ALERTA] Ausência de .harness/settings.json ou Git!\")\n        \n    # 3. Auditoria da Camada 3 (Motor Cognitivo)\n    print(\"\n--> [3/4] Auditando Camada 3: Motor Cognitivo & Roteamento...\")\n    c3_ok = Path(\".router/models_config.json\").exists() or Path(\".router\""
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Execute `python super_auditor.py` na raiz do seu projeto e registre a pontuação obtida",
+    "Se a pontuação for inferior a 100, execute os instaladores das camadas correspondentes (`setup_camada1.py`, `setup_camada2.py`, `setup_camada3.py`, `state_manager.py`) até atingir 100/100",
+    "Lance o seu primeiro agente autônomo em um worktree isolado com a Constituição Mestre ativa",
+    "Documente o pipeline de ponta a ponta do seu projeto passando pelas 4 camadas até o Super-Auditor"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 20 — O Super-Auditor e o Manual de Montagem Universal",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

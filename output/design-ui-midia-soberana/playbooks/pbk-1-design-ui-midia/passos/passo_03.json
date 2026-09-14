@@ -1,0 +1,49 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "Design Vetorial e UI: Penpot como alternativa ao Figma",
+  "estagio": "Estágio 1",
+  "estagio_indice": 1,
+  "objetivo": "Como visto no Capítulo 2, onde exploramos a vulnerabilidade da geopolítica da nuvem e a urgência do software local, o design de interfaces digitais tornou-se uma das disciplinas mais estratégicas no desenvolvimento de produtos modernos. Ao dominar ferramentas de design vetorial…",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [
+    "docker-compose.yml"
+  ],
+  "execucao": [
+    {
+      "titulo": "4.1 Instalação via Docker Compose",
+      "linguagem": "bash",
+      "comandos": [
+        "curl -o docker-compose.yml https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml",
+        "docker-compose up -d",
+        "docker-compose logs -f penpot-backend"
+      ],
+      "codigo": "mkdir penpot-server\ncd penpot-server\ncurl -o docker-compose.yml https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml"
+    },
+    {
+      "titulo": "4.2 Primeiro acesso e criação de projetos",
+      "linguagem": "bash",
+      "comandos": [
+        "docker exec -it penpot-postgres psql -U penpot -d penpot -c \"UPDATE profile SET is_active = true WHERE email = 'seu_email@exemplo.com';\""
+      ],
+      "codigo": "docker exec -it penpot-postgres psql -U penpot -d penpot -c \"UPDATE profile SET is_active = true WHERE email = 'seu_email@exemplo.com';\""
+    }
+  ],
+  "gate": "curl -o docker-compose.yml https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml",
+  "comandos": [
+    "curl -o docker-compose.yml https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml",
+    "docker-compose up -d",
+    "docker-compose logs -f penpot-backend",
+    "docker exec -it penpot-postgres psql -U penpot -d penpot -c \"UPDATE profile SET is_active = true WHERE email = 'seu_email@exemplo.com';\""
+  ],
+  "feito_quando": [
+    "Exportação estruturada do Figma:** Cada página do design system foi exportada como SVG, preservando camadas e nomes de objetos. Plugins de terceiros (como Figma to Code) foram usados para extrair metadados de design tokens (cores, espaçamentos, tipografia) em JSON [61]",
+    "Reconstrução no Penpot:** Os SVGs foram importados como referência visual, mas os componentes foram redesenhados nativamente no Penpot para aproveitar Flexbox e Grid — o que não existia no Figma de forma nativa [62]. Tokens de cor e tipografia foram configurados manualmente no Assets Panel, seguindo a mesma nomenclatura do Figma (ex.: `color-brand-primary`, `font-size-lg`) para facilitar a transição dos designers [63]",
+    "Validação colaborativa:** Cada designer recebeu acesso à instância auto-hospedada do Penpot e passou uma semana testando o novo ambiente em projetos não críticos. Problemas de compatibilidade (fontes faltantes, atalhos de teclado diferentes) foram documentados e resolvidos via customização do frontend do Penpot [64]"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 3 — Design Vetorial e UI: Penpot como alternativa ao Figma",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "dossies": [
+    "dossie_orquestracao-multi-agente-orca.md",
+    "mineracao_academica_orquestracao-multi-agente-orca.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_orquestracao-multi-agente-orca.md",
+      "classes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 26
+    },
+    {
+      "arquivo": "mineracao_academica_orquestracao-multi-agente-orca.md",
+      "classes": {
+        "A": 20,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 20
+    }
+  ],
+  "classes": {
+    "A": 20,
+    "B": 0,
+    "C": 0
+  },
+  "linhas_fonte_total": 46,
+  "classificadas": 20,
+  "proporcao_ab": 1.0,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "orquestracao-multi-agente-orca"
+}

@@ -1,0 +1,67 @@
+{
+  "https://www.semanticscholar.org/paper/aa8146c31d171edfe37f7d41fbc9655d2c554231": {
+    "status": "ok",
+    "detalhe": "HTTP 202",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.17762/ijisae.v14i1s.8385": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.1109/icdcsw72724.2026.00031": {
+    "status": "ok",
+    "detalhe": "HTTP 202",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.1109/cai59869.2024.00075": {
+    "status": "ok",
+    "detalhe": "HTTP 202",
+    "em": "2026-08-25"
+  },
+  "http://arxiv.org/abs/2407.01527v2": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.18653/v1/2024.acl-long.678": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "http://arxiv.org/abs/2511.01815v2": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "http://arxiv.org/abs/2608.00528v1": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.1007/s11704-026-60308-3": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "http://arxiv.org/abs/2307.06435": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.18653/v1/2023.emnlp-main.825": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.18653/v1/2025.findings-acl.1274": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  },
+  "https://doi.org/10.18653/v1/2024.acl-long.91": {
+    "status": "ok",
+    "detalhe": "HTTP 200",
+    "em": "2026-08-25"
+  }
+}

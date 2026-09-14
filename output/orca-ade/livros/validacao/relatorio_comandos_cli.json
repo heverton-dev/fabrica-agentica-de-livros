@@ -1,0 +1,39 @@
+{
+  "slug": "livros/orca-ade",
+  "capitulos": 1,
+  "total_blocos": 3,
+  "confirmados": 0,
+  "fabricados": 0,
+  "nao_verificados": 3,
+  "por_capitulo_com_falha": {},
+  "regras": {
+    "R-CLI-1": "bloco de código/CLI marcado confere=false (sintaxe fabricada ou parcialmente correta) reprova; sem marcação vira pendência, nunca reprova"
+  },
+  "violacoes": [],
+  "pendentes": [
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" classificar_glifos.py - Traduz titulos de terminal (estilo sequencia OSC) para os seis glifos de estado do pa"
+    },
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" pode_hibernar.py - Aplica as condicoes documentadas de hibernacao de um terminal de agente, uma por uma, e ex"
+    },
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env bash # inventario_diario_bordo.sh - Conta arquivos de sessao em diretorios de # historico conhecidos de CLIs de agente, quando existirem no siste"
+    }
+  ]
+}

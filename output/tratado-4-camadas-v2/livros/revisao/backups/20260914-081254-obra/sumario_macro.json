@@ -1,0 +1,185 @@
+{
+  "titulo_obra": "O Tratado das 4 Camadas da Fábrica Agêntica",
+  "titulo_capa": "O Tratado das 4 Camadas",
+  "subtitulo": "Guia Definitivo de Arquitetura, Soberania e Engenharia de Software com IA",
+  "edition_tag": "v3.0 — Edição Expandida e Definitiva",
+  "tipo_obra": "livro",
+  "tamanho_obra": "G",
+  "min_referencias_por_capitulo": 20,
+  "senioridade_obra": "iniciante",
+  "estilo_tecnica": "operacional",
+  "motivo_condutor": {
+    "nome": "A Sala de Controle Soberana",
+    "descricao": "O leitor assume o posto de comandante de uma sala de controle onde quatro painéis operacionais — CONTEXTO, HARNESS, MOTOR e FERRAMENTAS — governam agentes de IA como equipes especializadas, sob uma Constituição de 10 Leis e instrumentos de leitura determinística.",
+    "vocabulario": [
+      "sala de controle",
+      "painel operacional",
+      "circuito de segurança",
+      "roteador cognitivo",
+      "usina determinística",
+      "disjuntor de terminal",
+      "sandbox reversível",
+      "exit code",
+      "constituição viva",
+      "protocolo universal",
+      "certificado de confiabilidade"
+    ],
+    "persona_leitor": "Engenheiro de Sistemas Autônomos"
+  },
+  "introducao": "Apresentar a crise do desenvolvimento amador com IA, a transição para o Engenheiro Agêntico e a promessa da arquitetura de 4 Camadas da Edição Expandida e Definitiva.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos — A Crise, a Linguagem e a Lei",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "O Contexto Real de Origem: Do Projeto Arsenal ao Ecossistema AIDD",
+          "objetivo": "Situar historicamente a passagem do programador manual ao Engenheiro Agêntico, apresentar o Projeto Arsenal Open Source como campo de batalha real e o Ecossistema AIDD como plataforma resultante.",
+          "pilares_previstos": [
+            "A transição histórica: programador manual, usuário amador de chat e Engenheiro Agêntico",
+            "Do Arsenal ao Ecossistema AIDD: a suíte das seis ferramentas soberanas",
+            "A matriz de transposição universal: intenção, contratos, guardiões e ações"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "O Dicionário do Iniciante: Glossário Descomplicado",
+          "objetivo": "Fixar o vocabulário mínimo para operar a fábrica: agentes, harnesses, contexto, MCP, gates, stubs, context engineering, worktrees e persistência.",
+          "pilares_previstos": [
+            "Termos de IA e contexto: agente, janela de contexto, prompt drift, context engineering",
+            "Termos de engenharia: harness, quality gates, exit code, stubs, dependências alucinadas",
+            "Termos de infraestrutura: MCP, servidores de ferramentas, Git worktree, SQLite WAL"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+          "objetivo": "Dissecar as quatro falhas estruturais que colapsam iniciativas amadoras de IA: amnésia de contexto, stubs/alucinação funcional, subagentes headless no vácuo e lock-in de harness.",
+          "pilares_previstos": [
+            "Amnésia e poluição da janela de contexto (efeito 'lost in the middle')",
+            "A praga dos stubs, a ilusão funcional e as dependências fantasmas",
+            "Subagentes headless no vácuo e fragmentação por lock-in de harness"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "A Constituição Mestre: As 10 Leis Inegociáveis",
+          "objetivo": "Apresentar e justificar as 10 Leis de Ouro da governança AIDD, mostrando como cada uma neutraliza um modo de falha concreto do desenvolvimento agêntico.",
+          "pilares_previstos": [
+            "Leis de mérito: determinismo em primeiro lugar, qualidade binária, persistência estruturada",
+            "Leis de economia e soberania: Tríade Caveman Ultra, supremacia agnóstica, desenvolvedor no controle",
+            "Leis de integridade: tolerância zero a stubs, anti-NIH e honestidade de rótulo"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "As Quatro Camadas da Fábrica Agêntica",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Visão Geral das 4 Camadas: A Arquitetura Completa",
+          "objetivo": "Apresentar o mapa definitivo das quatro camadas soberanas, a separação estrita de responsabilidades e como cada camada isola um tipo de complexidade.",
+          "pilares_previstos": [
+            "As quatro camadas: Contexto e Governança, Harness, Motor Cognitivo, Ferramentas e Persistência",
+            "A interação vertical entre camadas e os pontos de contrato",
+            "Por que separação de responsabilidades elimina as quatro dores da crise"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Camada 1 — Contexto e Governança: Densidade, Localidade e Determinismo",
+          "objetivo": "Ensinar os três princípios universais de contexto — Densidade de Shannon, Localidade de Contexto e Determinismo Declarativo — e a Constituição Viva que os materializa no repositório.",
+          "pilares_previstos": [
+            "Densidade de Shannon: máxima informação com o mínimo de tokens",
+            "Localidade de Contexto: a regra na hora e no lugar certos (raiz enxuta, módulos locais)",
+            "Determinismo Declarativo: proibição como contrato validado por script, nunca como pedido no chat"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Camada 2 — Harness e Ciclo de Vida: Disjuntores, Worktrees e Quality Gates",
+          "objetivo": "Blindar o ambiente de execução com os três princípios do harness: isolamento de execução, interceptação de ciclo de vida e agnosticismo operacional.",
+          "pilares_previstos": [
+            "Isolamento de execução: sandbox reversível e Git worktree nativo",
+            "Interceptação de ciclo de vida: disjuntor de terminal, timeouts e hooks de pre-commit",
+            "Agnosticismo de execução: paridade Windows/Linux/macOS e a bateria dos seis gates"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Camada 3 — Motor Cognitivo: Roteamento, Contratos Tipados e Economia de Tokens",
+          "objetivo": "Ensinar a lei do determinismo em primeiro lugar, o roteamento por tiers de capacidade, os contratos tipados de saída e a Tríade Caveman Ultra de economia.",
+          "pilares_previstos": [
+            "Determinismo em primeiro lugar: resolver com script, regex ou AST antes de chamar o modelo",
+            "Roteamento por tiers e contratos tipados (JSON Schema / validação de saída)",
+            "Tríade Caveman Ultra e injeção dinâmica de skills por manifesto sob demanda"
+          ]
+        },
+        {
+          "capitulo": "9",
+          "titulo": "Camada 4 — Ferramentas, MCP e Persistência: A Usina Determinística",
+          "objetivo": "Construir o braço físico da fábrica: servidores MCP sob escopo mínimo, scripts determinísticos idempotentes e persistência de estado auditável.",
+          "pilares_previstos": [
+            "Model Context Protocol: transporte, escopo mínimo e riscos de tool poisoning",
+            "Idempotência e paridade de hash em ferramentas e scripts de automação",
+            "Persistência de estado auditável: SQLite em modo WAL e trilhas de decisão"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "Implementação, Escala e Soberania",
+      "capitulos": [
+        {
+          "capitulo": "10",
+          "titulo": "Implementação e Réplica das 4 Camadas: O Manual de Montagem",
+          "objetivo": "Fornecer o blueprint executável de montagem da fábrica: estrutura canônica de diretórios, sincronização agnóstica de componentes e blindagem de projetos legados.",
+          "pilares_previstos": [
+            "Estrutura canônica: constituição viva, fonte única de verdade e pontos de entrada por harness",
+            "Sincronização determinística de componentes e provisionamento idempotente",
+            "Blindagem de legado e auditoria transversal das quatro camadas"
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Orquestração Cross-Harness: Subagentes, Worktrees e o Protocolo ORCA ADE",
+          "objetivo": "Ensinar a orquestrar múltiplos agentes e harnesses com isolamento físico, funil deliberativo com checkpoints humanos e paralelismo seguro.",
+          "pilares_previstos": [
+            "O funil deliberativo: investigar, planejar e só então executar sob aprovação",
+            "Isolamento por Git worktree e descarte reversível de tentativas reprovadas",
+            "Coordenação de subagentes supervisionados e a proibição de headless invisível"
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Super-Auditoria e Entrega Soberana: O Certificado de Confiabilidade",
+          "objetivo": "Fechar o ciclo com a auditoria final determinística, o pacote de entrega verificável e a evolução contínua da fábrica sem dívida técnica silenciosa.",
+          "pilares_previstos": [
+            "Auditoria final: gates de mérito, integridade de dependências e honestidade de rótulo",
+            "Pacote de entrega verificável: o que abre, o que fica de fora e por quê",
+            "Evolução contínua: telemetria de custo, revisão de leis e anti-NIH aplicado"
+          ]
+        }
+      ]
+    }
+  ],
+  "metricas_obrigatorias": {
+    "1": [{"metrica": "repositórios públicos usando SDKs de LLM", "valor": "1,1 milhão"}],
+    "2": [{"metrica": "economia de custo de token de entrada com cache de prefixo", "valor": "90%"}],
+    "3": [{"metrica": "desenvolvedores que desconfiam da exatidão da saída de IA", "valor": "46%"}],
+    "4": [{"metrica": "amostras de código gerado por IA com vulnerabilidade OWASP Top 10", "valor": "45%"}],
+    "5": [{"metrica": "adoção de platform engineering nos times pesquisados", "valor": "90%"}],
+    "6": [{"metrica": "redução de latência com reaproveitamento de prefixo estável", "valor": "85%"}],
+    "7": [{"metrica": "patches aceitos como corretos que não resolviam a tarefa", "valor": "7,2%"}],
+    "8": [{"metrica": "resolução do mesmo modelo no SWE-bench Pro após a suite Verified", "valor": "17,8%"}],
+    "9": [{"metrica": "dependências referenciadas por código gerado que não existem", "valor": "20%"}],
+    "10": [{"metrica": "taxa de aprovação de segurança do código gerado por IA", "valor": "56%"}],
+    "11": [{"metrica": "repositórios públicos que passaram a usar notebooks", "valor": "2,4 milhões"}],
+    "12": [{"metrica": "saturação do SWE-bench Verified", "valor": "93,9%"}]
+  },
+  "conclusao": "Sintetizar a jornada de usuário de IA a Arquiteto de Sistemas Autônomos de Alta Confiabilidade, reafirmando as 10 Leis e o papel do desenvolvedor no controle."
+}

@@ -1,0 +1,56 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Cache hit: prompt caching e a ordem das partes",
+  "estagio": "Painel",
+  "estagio_indice": 2,
+  "objetivo": "Dominar o mecanismo que mais barateia um agente de longa duração — e a fragilidade que o faz sumir.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: audite a estabilidade do prefixo",
+      "linguagem": "bash",
+      "comandos": [
+        "python scripts/dump-prompt.py --sessao bug-1042 --turno 1 > /tmp/turno1.txt",
+        "python scripts/dump-prompt.py --sessao bug-1042 --turno 9 > /tmp/turno9.txt"
+      ],
+      "codigo": "# Capture o prompt montado em dois turnos distintos\npython scripts/dump-prompt.py --sessao bug-1042 --turno 1 > /tmp/turno1.txt\npython scripts/dump-prompt.py --sessao bug-1042 --turno 9 > /tmp/turno9.txt\n\n# Descubra a primeira linha de divergencia\ndiff /tmp/turno1.txt /tmp/turno9.txt | head -20"
+    },
+    {
+      "titulo": "Passo 2: reorganize o prompt em quatro blocos",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def montar_prompt(instrucao, ferramentas, skills, base, historico, turno_atual):\n    \"\"\"Monta o prompt na ordem: estavel -> semi-estavel -> volatil.\n\n    Bloco 1 (estavel): muda apenas em release do projeto.\n    Bloco 2 (semi-estavel): muda por sessao, nao por turno.\n    Bloco 3 (volatil): muda a cada turno — sempre no fim.\n    \"\"\"\n    bloco_1 = [instrucao, ferramentas, skills]          # cacheavel entre sessoes\n    bloco_2 = [base]                                     # cacheavel na sessao\n    bloco_3 = [*historico, turno_atual]                  # nunca cacheavel\n    return {\"estavel\": bloco_1, \"sessao\": bloco_2, \"volatil\": bloco_3}"
+    },
+    {
+      "titulo": "Passo 3: elimine voláteis do topo",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import json\n\n# Errado: ordem das chaves depende da insercao — o prefixo muda sem necessidade\nconfig_instavel = json.dumps(config)\n\n# Certo: serializacao deterministica — o mesmo conteudo produz o mesmo texto\nconfig_estavel = json.dumps(config, sort_keys=True, ensure_ascii=False, separators=(\",\", \":\"))"
+    },
+    {
+      "titulo": "Passo 4: meça a taxa de acerto e o custo por leitura",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def taxa_acerto(registros):\n    \"\"\"Proporcao de tokens de entrada lidos de cache em uma sessao.\"\"\"\n    entrada = sum(r[\"tokens_entrada\"] for r in registros)\n    cache = sum(r.get(\"tokens_cache_leitura\", 0) for r in registros)\n    escritos = sum(r.get(\"tokens_cache_escrita\", 0) for r in registros)\n    return {\n        \"leitura\": cache,\n        \"escrita\": escritos,\n        \"comum\": entrada - cache - escritos,\n        \"taxa\": round(cache / entrada, 3) if entrada else 0.0,\n    }"
+    }
+  ],
+  "gate": "python scripts/dump-prompt.py --sessao bug-1042 --turno 1 > /tmp/turno1.txt",
+  "comandos": [
+    "python scripts/dump-prompt.py --sessao bug-1042 --turno 1 > /tmp/turno1.txt",
+    "python scripts/dump-prompt.py --sessao bug-1042 --turno 9 > /tmp/turno9.txt"
+  ],
+  "feito_quando": [
+    "Hash do prefixo.** Instrumente a sessão para registrar um hash curto do primeiro bloco do prompt. Rode a mesma tarefa duas vezes e compare: hash constante significa que o cache tem chance de acertar",
+    "Ordem dos blocos.** Reorganize o prompt nos quatro blocos do método — estável, projeto, tarefa e variável — e verifique que nada volátil subiu para o topo",
+    "Comparação entre subagentes.** Dispare dois subagentes com o mesmo bloco de projeto e compare os prompts com `diff`. Qualquer diferença além do trecho específico é defeito de montagem",
+    "Diagnóstico de curva.** Desenhe o custo por turno de uma sessão longa. Curva monotonicamente decrescente é saúde; qualquer subida no meio indica que algo reescreveu o prefixo"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 6 — Cache hit: prompt caching e a ordem das partes",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

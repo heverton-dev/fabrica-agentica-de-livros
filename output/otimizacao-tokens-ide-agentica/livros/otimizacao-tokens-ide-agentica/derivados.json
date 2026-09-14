@@ -1,0 +1,35 @@
+{
+  "slug_livro_mae": "otimizacao-tokens-ide-agentica",
+  "artigos": {
+    "total": 0,
+    "itens": []
+  },
+  "ebooks": {
+    "total": 0,
+    "itens": []
+  },
+  "playbooks": {
+    "total": 1,
+    "itens": [
+      {
+        "indice": 1,
+        "titulo": "Playbook — Tokens Sob Pericia",
+        "slug": "pbk-1-tokens-sob-pericia",
+        "diretorio": "otimizacao-tokens-ide-agentica/playbooks/pbk-1-tokens-sob-pericia",
+        "estagios": 2
+      }
+    ]
+  },
+  "lead-magnets": {
+    "total": 0,
+    "itens": []
+  },
+  "decks": {
+    "total": 0,
+    "itens": []
+  },
+  "emails": {
+    "total": 0,
+    "itens": []
+  }
+}

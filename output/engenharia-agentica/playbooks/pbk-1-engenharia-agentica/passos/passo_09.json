@@ -1,0 +1,59 @@
+{
+  "numero": "09",
+  "capitulo_fonte": "09",
+  "titulo": "Scripts e gates: o determinismo que sustenta a esteira",
+  "estagio": "Checklist",
+  "estagio_indice": 3,
+  "objetivo": "Construir verificações que reprovam artefato ruim antes que ele contamine a fase seguinte.",
+  "pre_requisito": "Passo 8 concluído",
+  "entregas": [
+    ".env"
+  ],
+  "execucao": [
+    {
+      "titulo": "Gate de forma: estrutura mínima verificável",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Gate de forma: verifica estrutura obrigatoria de um documento.\"\"\"\nimport re\nimport sys\nfrom pathlib import Path\n\nSECOES = [\"Introducao\", \"Explica\", \"Ilustra\", \"Tecnica\", \"Aplica\", \"Conclusao\", \"Referencias\"]\n\n\ndef verificar(caminho):\n    texto = Path(caminho).read_text(encoding=\"utf-8\", errors=\"replace\")\n    erros = []\n    for nome in SECOES:\n        if not re.search(rf\"^##\\s*\\d*\\.?\\s*{nome}\", texto, re.MULTILINE | re.IGNORECASE):\n            erros.append(f\"{caminho}: secao ausente -> {nome}\")\n    if \"```mermaid\" not in texto:\n        erros.append(f\"{caminho}: nenhum diagrama mermaid encontrado\")\n    if re.search(r\"^---\\s*$\", texto, re.MULTILINE):\n        erros.append(f\"{caminho}: regra horizontal '---' proibida\")\n    return erros\n\n\nif __name__ == \"__main__\":\n    problemas = verificar(sys.argv[1])\n    for p in problemas:\n        print(f\"[FORMA] {p}\")\n    sys.exit(1 if problemas else 0)"
+    },
+    {
+      "titulo": "Gate de contrato: regras do domínio",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Gate de contrato: referencias minimas e citacoes rastreaveis.\"\"\"\nimport re\nimport sys\nfrom pathlib import Path\n\nMIN_REFERENCIAS = 20\n\n\ndef verificar(caminho, minimo=MIN_REFERENCIAS):\n    texto = Path(caminho).read_text(encoding=\"utf-8\", errors=\"replace\")\n    secoes = re.split(r\"^##\\s*\\d*\\.?\\s*\", texto, flags=re.MULTILINE)\n    corpo = \"\\n\".join(secoes[:-1])\n    refs = secoes[-1] if secoes else \"\"\n\n    citadas = {m for m in re.findall(r\"\\[(\\d{1,3})\\]\", corpo)}\n    listadas = {m for m in re.findall(r\"^\\[(\\d{1,3})\\]\", refs, re.MULTILINE)}\n\n    erros = []\n    orfas = sorted(citadas - listadas, key=int)\n    if orfas:\n        erros.append(f\"{caminho}: citacoes sem referencia -> {', '.join(orfas)}\")\n    if len(listadas) < minimo:\n        erros.append(f\"{caminho}: {len(listadas)} referencias (minimo {minimo})\")\n    return erros\n\n\nif __name__ == \"__main__\":\n    problemas = verificar(sys.argv[1])\n    for p in problemas:\n        print(f\"[CONTRATO] {p}\")\n    sys.exit(1 if problemas else 0)"
+    },
+    {
+      "titulo": "Gate de mérito: execução real",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Gate de merito: executa blocos Python marcados como verificaveis.\"\"\"\nimport re\nimport subprocess\nimport sys\nimport tempfile\nfrom pathlib import Path\n\n\ndef executar(caminho):\n    texto = Path(caminho).read_text(encoding=\"utf-8\", errors=\"replace\")\n    falhas = []\n    for i, bloco in enumerate(re.findall(r\"```python\\n(.*?)```\", texto, re.DOTALL), 1):\n        if \"SMOKE: pular\" in bloco:\n            continue\n        with tempfile.NamedTemporaryFile(\"w\", suffix=\".py\", delete=False,\n                                         encoding=\"utf-8\") as arq:\n            arq.write(bloco)\n            nome = arq.name\n        r = subprocess.run([sys.executable, \"-m\", \"py_compile\", nome],\n                           capture_output=True, text=True, encoding=\"utf-8\")\n        if r.returncode != 0:\n            falhas.append(f\"{caminho}: bloco python #{i} nao compila -> {r.stderr.strip()[:120]}\")\n    return falhas\n\n\nif __name__ == \"__main__\":\n    problemas = executar(sys.argv[1])\n    for p in problemas:\n        print(f\"[MERITO] {p}\")\n    sys.exit(1 if problemas else 0)"
+    },
+    {
+      "titulo": "O encadeador: uma esteira que para no primeiro erro",
+      "linguagem": "bash",
+      "comandos": [
+        "python scripts/gate_forma.py \"$ARTEFATO\"",
+        "python scripts/gate_contrato.py \"$ARTEFATO\"",
+        "python scripts/gate_merito.py \"$ARTEFATO\""
+      ],
+      "codigo": "#!/usr/bin/env bash\nset -euo pipefail\n\nARTEFATO=\"${1:?uso: auditar.sh <arquivo>}\"\n\npython scripts/gate_forma.py \"$ARTEFATO\"\npython scripts/gate_contrato.py \"$ARTEFATO\"\npython scripts/gate_merito.py \"$ARTEFATO\"\n\necho \"[OK] $ARTEFATO aprovado nos tres niveis\""
+    }
+  ],
+  "gate": "python scripts/gate_forma.py \"$ARTEFATO\"",
+  "comandos": [
+    "python scripts/gate_forma.py \"$ARTEFATO\"",
+    "python scripts/gate_contrato.py \"$ARTEFATO\"",
+    "python scripts/gate_merito.py \"$ARTEFATO\""
+  ],
+  "feito_quando": [
+    "Primeiro gate.** Converta um critério que hoje é revisão manual em comando de verificação. Se ele exigir mais de vinte minutos para ficar pronto, o critério ainda está vago demais",
+    "Calibração dupla.** Injete um erro de propósito e confirme a reprovação; injete uma mudança legítima e confirme a aprovação. Um gate testado só de um lado é um gate pela metade",
+    "Mensagem útil.** Reescreva a saída de falha para apontar arquivo, linha e regra violada. O tempo economizado em cada falha é o retorno imediato do exercício",
+    "Encadeamento.** Monte a esteira que para no primeiro erro e registre o veredito de cada etapa. A ordem importa: o gate mais barato roda primeiro"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 9 — Scripts e gates: o determinismo que sustenta a esteira",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

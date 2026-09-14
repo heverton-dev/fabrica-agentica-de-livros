@@ -1,0 +1,77 @@
+{
+  "colecao": "economia-extrema-de-tokens",
+  "cor_accent": "#f0b429",
+  "atualizado_em": "2026-08-25",
+  "nucleo": {
+    "slug": "livros/economia-extrema-de-tokens",
+    "tipo": "livro",
+    "titulo": "Economia Extrema de Tokens",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "O Perito de Custos com IA",
+      "descricao": "Cada token consumido é dinheiro em movimento: o leitor aprende a enxergar a máquina de custos LLM como um sistema de fluxo de caixa que pode ser otimizado em 8 pontos táticos e 4 pilares estratégicos, transformando-se de consumidor passivo a gestor consciente de despesa com IA.",
+      "vocabulario": [
+        "token",
+        "custo",
+        "fluxo de caixa",
+        "otimização",
+        "governança",
+        "auditoria",
+        "compressão",
+        "cache",
+        "memória",
+        "resiliência"
+      ],
+      "persona_leitor": "Engenheiro de Custos com IA"
+    }
+  },
+  "total_membros": 2,
+  "por_tipo": {
+    "livro": 1,
+    "playbook": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/economia-extrema-de-tokens",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "Economia Extrema de Tokens",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": null,
+      "estado": "compilado",
+      "artefatos": [
+        "economia-extrema-de-tokens.pdf",
+        "livro_final.pdf"
+      ]
+    },
+    {
+      "slug": "economia-extrema-de-tokens/playbooks/pbk-1-economia-extrema-tokens",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — Economia de Tokens",
+      "obra_mae": "economia-extrema-de-tokens",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "pbk-1-economia-extrema-tokens.pdf"
+      ]
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

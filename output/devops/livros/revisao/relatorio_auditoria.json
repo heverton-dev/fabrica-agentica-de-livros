@@ -1,0 +1,576 @@
+{
+  "slug": "livros/devops",
+  "tipo_obra": "livro",
+  "veredito": "NAO CONFORME",
+  "total_capitulos": 12,
+  "caracteres_obra": 143789,
+  "paginas_estimadas": 57.5,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 12 capitulos",
+      "conforme": true,
+      "detalhe": "12 capitulo(s) (minimo 12)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 120 paginas (~300.000 caracteres)",
+      "conforme": false,
+      "detalhe": "143.789 caracteres (minimo 300.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 16 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=codigo)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "esta",
+      "variantes": {
+        "está": 35,
+        "esta": 1
+      },
+      "ocorrencias": 36
+    },
+    {
+      "termo_normalizado": "porque",
+      "variantes": {
+        "porque": 12,
+        "porquê": 2
+      },
+      "ocorrencias": 14
+    },
+    {
+      "termo_normalizado": "exercicio",
+      "variantes": {
+        "Exercício": 11,
+        "exercicio": 1
+      },
+      "ocorrencias": 12
+    },
+    {
+      "termo_normalizado": "mantem",
+      "variantes": {
+        "mantém": 4,
+        "mantêm": 2
+      },
+      "ocorrencias": 6
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": true,
+    "vocabulario_motivo_condutor": [
+      "colaboração",
+      "automação",
+      "feedback",
+      "imutabilidade",
+      "observabilidade",
+      "segurança"
+    ],
+    "capitulos_com_citacao_empilhada": [
+      {
+        "capitulo": "01",
+        "ocorrencias": [
+          "[1][2]"
+        ]
+      },
+      {
+        "capitulo": "07",
+        "ocorrencias": [
+          "[10][11]",
+          "[12][13]"
+        ]
+      },
+      {
+        "capitulo": "12",
+        "ocorrencias": [
+          "[14][15]"
+        ]
+      }
+    ],
+    "capitulos_sem_recorrencia_motivo_condutor": [],
+    "capitulos_sem_callback_capitulo_anterior": [],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 0
+    },
+    "validar-escala.py": {
+      "exit": 0
+    },
+    "validar-afirmacoes.py": {
+      "exit": 0
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0,
+      "skip": "categoria_tecnica=false"
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "01",
+      "arquivo": "cap_01.md",
+      "caracteres": 9326,
+      "palavras": 1138,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 12,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "m: https://prometheus.io/docs/prometheus/latest/getting_started/. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]"
+      ],
+      "vocabulario_fora_ilustra": 10,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 17.4,
+        "coeficiente_variacao": 1.477
+      }
+    },
+    {
+      "capitulo": "02",
+      "arquivo": "cap_02.md",
+      "caracteres": 12159,
+      "palavras": 1514,
+      "secoes_faltantes": [],
+      "referencias": 18,
+      "citacoes_inline": 36,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "2016. Disponível em: https://doi.org/10.1007/978-1-4842-2208-9_2. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        11,
+        15,
+        18
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 18,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 14.6,
+        "coeficiente_variacao": 1.102
+      }
+    },
+    {
+      "capitulo": "03",
+      "arquivo": "cap_03.md",
+      "caracteres": 21318,
+      "palavras": 2531,
+      "secoes_faltantes": [],
+      "referencias": 18,
+      "citacoes_inline": 9,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "n: arXiv. 2023. Disponível em: http://arxiv.org/abs/2302.01053v1. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 15,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 18.8,
+        "coeficiente_variacao": 1.051
+      }
+    },
+    {
+      "capitulo": "04",
+      "arquivo": "cap_04.md",
+      "caracteres": 13234,
+      "palavras": 1838,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 23,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " — gitignore*. Disponível em: https://git-scm.com/docs/gitignore. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 8,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 17.4,
+        "coeficiente_variacao": 0.975
+      }
+    },
+    {
+      "capitulo": "05",
+      "arquivo": "cap_05.md",
+      "caracteres": 11973,
+      "palavras": 1581,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 24,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "eline*. Disponível em: https://www.jenkins.io/doc/book/pipeline/. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 4,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 15.9,
+        "coeficiente_variacao": 1.165
+      }
+    },
+    {
+      "capitulo": "06",
+      "arquivo": "cap_06.md",
+      "caracteres": 7248,
+      "palavras": 948,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 6,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "2016. Disponível em: https://doi.org/10.1007/978-1-4842-2208-9_2. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 13.5,
+        "coeficiente_variacao": 0.878
+      }
+    },
+    {
+      "capitulo": "07",
+      "arquivo": "cap_07.md",
+      "caracteres": 8677,
+      "palavras": 1070,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 16,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " Pipelines*. Disponível em: https://example.com/fast-feedback-ci. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[10][11]",
+        "[12][13]"
+      ],
+      "vocabulario_fora_ilustra": 8,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 15.9,
+        "coeficiente_variacao": 0.948
+      }
+    },
+    {
+      "capitulo": "08",
+      "arquivo": "cap_08.md",
+      "caracteres": 6342,
+      "palavras": 749,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 6,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "e*. Disponível em: https://www.jenkins.io/doc/book/pipeline/. Acesso em: 26 ago. 2026. (B)",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 12,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 14.3,
+        "coeficiente_variacao": 1.691
+      }
+    },
+    {
+      "capitulo": "09",
+      "arquivo": "cap_09.md",
+      "caracteres": 11330,
+      "palavras": 1414,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 12,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "es, 2024. Disponível em: https://doi.org/10.1201/9781003404354-2. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        3,
+        5,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 7,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 14.3,
+        "coeficiente_variacao": 0.999
+      }
+    },
+    {
+      "capitulo": "10",
+      "arquivo": "cap_10.md",
+      "caracteres": 19137,
+      "palavras": 1927,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 21,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "n: arXiv. 2023. Disponível em: http://arxiv.org/abs/2302.01053v1. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        15,
+        16
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 23,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 17.3,
+        "coeficiente_variacao": 1.069
+      }
+    },
+    {
+      "capitulo": "11",
+      "arquivo": "cap_11.md",
+      "caracteres": 10750,
+      "palavras": 1172,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 20,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "n: arXiv. 2025. Disponível em: http://arxiv.org/abs/2507.00421v1. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 26,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 14.8,
+        "coeficiente_variacao": 1.016
+      }
+    },
+    {
+      "capitulo": "12",
+      "arquivo": "cap_12.md",
+      "caracteres": 12295,
+      "palavras": 1611,
+      "secoes_faltantes": [],
+      "referencias": 16,
+      "citacoes_inline": 22,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "eline*. Disponível em: https://www.jenkins.io/doc/book/pipeline/. Acesso em: 26 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[14][15]"
+      ],
+      "vocabulario_fora_ilustra": 22,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 14.8,
+        "coeficiente_variacao": 0.956
+      }
+    }
+  ]
+}

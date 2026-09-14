@@ -1,0 +1,35 @@
+{
+  "slug": "livros/design-ui-midia-soberana",
+  "capitulos": 8,
+  "total_violacoes": 4,
+  "regras": {
+    "R-ES-1": "seção Aplica contém ao menos 1 termo de escala/limite",
+    "R-ES-2": "termo de escala em contexto de advertência (limite/contorno)"
+  },
+  "violacoes": [
+    {
+      "regra": "R-ES-1",
+      "enunciado": "seção Aplica contém ao menos 1 termo de escala/limite",
+      "detalhe": "seção Aplica sem nenhum termo de escala/limite",
+      "origem": "cap_01"
+    },
+    {
+      "regra": "R-ES-1",
+      "enunciado": "seção Aplica contém ao menos 1 termo de escala/limite",
+      "detalhe": "seção Aplica sem nenhum termo de escala/limite",
+      "origem": "cap_02"
+    },
+    {
+      "regra": "R-ES-1",
+      "enunciado": "seção Aplica contém ao menos 1 termo de escala/limite",
+      "detalhe": "seção Aplica sem nenhum termo de escala/limite",
+      "origem": "cap_06"
+    },
+    {
+      "regra": "R-ES-1",
+      "enunciado": "seção Aplica contém ao menos 1 termo de escala/limite",
+      "detalhe": "seção Aplica sem nenhum termo de escala/limite",
+      "origem": "cap_07"
+    }
+  ]
+}

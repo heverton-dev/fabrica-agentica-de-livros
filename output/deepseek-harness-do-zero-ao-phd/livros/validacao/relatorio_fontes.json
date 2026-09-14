@@ -1,0 +1,72 @@
+{
+  "dossies": [
+    "dossie_deepseek-harness.md",
+    "mineracao_academica_deepseek-harness-do-zero-ao-phd.md",
+    "mineracao_lora_finetuning.md",
+    "mineracao_quantizacao.md",
+    "mineracao_rag.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_deepseek-harness.md",
+      "classes": {
+        "A": 25,
+        "B": 25,
+        "C": 63
+      },
+      "linhas_fonte": 95
+    },
+    {
+      "arquivo": "mineracao_academica_deepseek-harness-do-zero-ao-phd.md",
+      "classes": {
+        "A": 20,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 20
+    },
+    {
+      "arquivo": "mineracao_lora_finetuning.md",
+      "classes": {
+        "A": 32,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 32
+    },
+    {
+      "arquivo": "mineracao_quantizacao.md",
+      "classes": {
+        "A": 22,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 22
+    },
+    {
+      "arquivo": "mineracao_rag.md",
+      "classes": {
+        "A": 38,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 38
+    }
+  ],
+  "classes": {
+    "A": 137,
+    "B": 25,
+    "C": 63
+  },
+  "linhas_fonte_total": 207,
+  "classificadas": 225,
+  "proporcao_ab": 0.72,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "livros/deepseek-harness-do-zero-ao-phd"
+}

@@ -1,0 +1,18 @@
+{
+  "coordenadas": { "parte": "I", "capitulo": "1" },
+  "estado_execucao": "concluido_autonomo",
+  "desfecho": {
+    "capitulo": "Introducao ao DevOps",
+    "caracteres": 4850,
+    "diagramas": 1,
+    "blocos_codigo": 1,
+    "referencias": 16,
+    "citacoes_corpo": 5,
+    "validacao": {
+      "codigo": "OK",
+      "diagramas": "OK",
+      "metricas": "OK",
+      "referencias": "OK"
+    }
+  }
+}

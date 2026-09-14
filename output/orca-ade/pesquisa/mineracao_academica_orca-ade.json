@@ -1,0 +1,203 @@
+{
+  "tema": "ORCA ADE ambiente de desenvolvimento agêntico worktrees agentes paralelos",
+  "gerado_em": "12 set. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "arxiv": {
+      "status": "erro",
+      "erro": "http://export.arxiv.org/api/query?search_query=all:ORCA+AND+all:ADE+AND+all:ambi -> The read operation timed out",
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=ORCA+ADE+ambiente+de -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=ORCA+ADE+ambiente+de+desenvolvimento+ag%C3%A -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 10,
+  "registros": [
+    {
+      "titulo": "Ambiente de apoio ao desenvolvimento de aplicações distribuídas e reconfiguráveis utilizando agentes de busca e classificação inteligentes",
+      "autores": [
+        "Rossi, Ednilson Geraldo"
+      ],
+      "ano": null,
+      "doi": "10.11606/d.18.2009.tde-24092009-154121",
+      "url": "https://doi.org/10.11606/d.18.2009.tde-24092009-154121",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "ASTRAL - Ambiente de Simulação e Teste de pRogramas paraLelos",
+      "autores": [
+        "Sant'Ana, Tomás Dias"
+      ],
+      "ano": null,
+      "doi": "10.11606/d.55.2018.tde-24012018-111858",
+      "url": "https://doi.org/10.11606/d.55.2018.tde-24012018-111858",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Modelización y simulación basada en agentes aplicada a la arquitectura de entrada/salida de los computadores paralelos",
+      "autores": [
+        "Encinas, Diego Omar"
+      ],
+      "ano": null,
+      "doi": "10.35537/10915/194710",
+      "url": "https://doi.org/10.35537/10915/194710",
+      "resumo": "<jats:p>Los sistemas de Computación de Altas Prestaciones (HPC, High Performance Computing) han incrementado significativamente su capacidad de cómputo, pero el Sistema de Entrada/Salida no ha evolucionado al mismo ritmo. Para reducir esta brecha, estos sistemas emplean redes de alta velocidad y sistemas de almacenamiento diseñados para Entrada/Salida (E/S) paralela. Pero su administración depende de una pila de software encargada de organizar los distintos módulos de la arquitectura, lo que introduce complejidad debido a la interacción entre el hardware y el software de E/S. Para optimizar esta interacción, es fundamental evaluar el rendimiento del sistema bajo distintas configuraciones. Esto permite, por ejemplo, ajustar la relación entre nodos de cómputo y servidores de datos o determinar el tamaño óptimo de fragmentación de archivos. Sin embargo, realizar pruebas en sistemas en producción presenta desafíos, como restricciones de acceso y limitaciones de hardware. En este contexto, disponer de una herramienta que permita estimar el comportamiento del sistema en distintos escenarios resulta clave. La modelización y la simulación son estrategias efectivas para predecir el impacto de diferentes configuraciones, reduciendo la complejidad del análisis y optimizando el rendimiento en entornos HPC. En particular, la Modelización y Simulación basada en Agentes (ABMS, Agent-Based Modeling and Simulation) permite representar sistemas complejos con distintos niveles de detalle, desde una visión funcional hasta una prestacional considerando tanto aspectos temporales como espaciales, dependiendo de los componentes de la pila de software que se deseen analizar. En este contexto, el objetivo principal de esta tesis es desarrollar un modelo del sistema de E/S en HPC que permita predecir cómo afectan los cambios en sus componentes tanto a la funcionalidad como al rendimiento del sistema. En particular, se enfoca en la modelización del hardware y software de E/S mediante el paradigma ABMS, con especial énfasis en el sistema de archivos de la pila de software de E/S paralela. Para ello, se definen los agentes involucrados y sus interacciones, lo que permite la implementación del simulador SABIOS (Simulator for Agent-Based I/O System). Los resultados obtenidos con SABIOS demuestran la capacidad del modelo para cuantificar y visualizar el comportamiento de las distintas capas del sistema de archivos PVFS2, abarcando también funciones específicas del middleware y de la capa de aplicación.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Desenvolvimento formal de algoritmos paralelos sistolicos",
+      "autores": [
+        "Okuda, Kunio"
+      ],
+      "ano": null,
+      "doi": "10.11606/d.45.1989.tde-20220712-113641",
+      "url": "https://doi.org/10.11606/d.45.1989.tde-20220712-113641",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Ambiente de Nuvem Computacional Privada para Teste e Desenvolvimento de Programas Paralelos",
+      "autores": [
+        "Maliszewski, Anderson",
+        "Vogel, Adriano",
+        "Griebler, Dalvan",
+        "Schepke, Claudio",
+        "Navaux, Philippe"
+      ],
+      "ano": 2021,
+      "doi": "10.5753/sbc.6150.4.5",
+      "url": "https://doi.org/10.5753/sbc.6150.4.5",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Minicursos da XXI Escola Regional de Alto Desempenho da Região Sul",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Crise climática na cidade do Rio de Janeiro: agentes e territórios de informação no Twitter",
+      "autores": [
+        "Andrade, Francisca Marli Rodrigues de",
+        "Barreto, Tarssio Brito",
+        "Henriques, Alen Batista"
+      ],
+      "ano": 2023,
+      "doi": "10.5380/dma.v62i0.86679",
+      "url": "https://doi.org/10.5380/dma.v62i0.86679",
+      "resumo": "<p>A pesquisa parte da tentativa de retratar a cidade do Rio de Janeiro – Brasil – em uma temporalidade específica, quando ocorre um evento climático extremo. Essa tentativa acontece no universo virtual do Twitter, para então buscar compreender as dinâmicas que caracterizam a participação social no processo de elaboração de informações sobre a crise climática, ou seja, identificar os agentes e os territórios de informações. Os dados analisados têm como origem as publicações no Twitter, referentes às fortes chuvas de abril de 2019 na cidade do Rio de Janeiro. Tais dados foram obtidos a partir da utilização da API do Twitter, no ambiente de programação R. Para coletar, tratar, organizar e sistematizar os dados, empregamos o enfoque metodológico da análise temática em duas etapas, as quais nos permitiram analisar 375 mil tweets. As análises desses dados foram complementadas por informações provenientes do IBGE e DATA.RIO. Os principais resultados sinalizam os condicionantes da exclusão digital das populações mais afetadas pela crise climática, principalmente: o grau de instrução escolar e a situação econômica das populações que habitam nos territórios mais afetados pelos impactos do evento climático observado, como elementos determinantes. Ademais, os resultados sinalizam a importância de combater o negacionismo climático – principalmente nas esferas públicas – e, portanto, pautar a criação de agendas de trabalho voltadas ao fortalecimento da participação social enquanto mecanismo de ampliação da governança climática e de redução das injustiças ambientais.</p>",
+      "citacoes": null,
+      "periodico": "Desenvolvimento e Meio Ambiente",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Desenvolvimento de modelos para predição de desempenho de programas paralelos MPI.",
+      "autores": [
+        "Laine, Jean Marcos"
+      ],
+      "ano": null,
+      "doi": "10.11606/d.3.2003.tde-28082003-184400",
+      "url": "https://doi.org/10.11606/d.3.2003.tde-28082003-184400",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Desenvolvimento e Avaliação de Algoritmos Numéricos Paralelos",
+      "autores": [
+        "Cortés, Omar Andrés Carmona"
+      ],
+      "ano": null,
+      "doi": "10.11606/d.55.2018.tde-09032018-135249",
+      "url": "https://doi.org/10.11606/d.55.2018.tde-09032018-135249",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Ambiente de simulação de manipuladores paralelos",
+      "autores": [
+        "Andres Lara Molina, Fabian"
+      ],
+      "ano": null,
+      "doi": "10.47749/t/unicamp.2008.437988",
+      "url": "https://doi.org/10.47749/t/unicamp.2008.437988",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Um ambiente para programação orientada a objetos distribuídos e paralelos em grades computacionais.",
+      "autores": [
+        "Bianchini, Calebe de Paula"
+      ],
+      "ano": null,
+      "doi": "10.11606/t.3.2009.tde-26032009-171120",
+      "url": "https://doi.org/10.11606/t.3.2009.tde-26032009-171120",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

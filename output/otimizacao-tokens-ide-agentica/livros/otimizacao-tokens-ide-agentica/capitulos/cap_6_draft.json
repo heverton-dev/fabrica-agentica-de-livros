@@ -1,0 +1,39 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 5: o circuit breaker (fechado/aberto/semiaberto) que blindou as chamadas de API contra falha em cascata, e o backoff exponencial com jitter que evitou amplificar rate limit — o mesmo esqueleto de estados, agora reaproveitado para proteger o orçamento em vez do código.",
+  "metricas_obrigatorias": [
+    { "metrica": "subcomandos reais do ccusage confirmados na fonte primária", "valor": "5 (daily, weekly, monthly, session, blocks)" },
+    { "metrica": "modelos/tags Ollama confirmados como fallback local", "valor": "7 (qwen2.5-coder:7b, codestral:22b, llama3.1:8b, zephyr:7b, mistral:7b, dolphin-mistral:7b, starcoder2:3b)" },
+    { "metrica": "mês de renomeação do binário do llama.cpp (main → llama-cli)", "valor": "junho de 2024" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Os subcomandos reais do ccusage: medir antes de limitar",
+        "escopo": "Entra: ccusage é pacote npm/Node (não Python — pipx nunca vai instalá-lo), roda via `npx ccusage@latest <subcomando>` sem instalação prévia; os 5 subcomandos reais confirmados na fonte primária (daily, weekly, monthly, session, blocks); não existe `ccusage log --date`; os campos reais de cache (`cacheCreationTokens`, `cacheReadTokens`, `cacheHitRate`) retomam o mecanismo do Cap. 2. Fica de fora: qualquer promessa de que o ccusage por si só bloqueia gasto — ele é o laudo de uso, não o freio.",
+        "ancora_visual": "flowchart TD do exame pericial do script token-guard: do comando suspeito `ccusage log --date` (letra timbrada real, assinatura falsificada) até a contraprova no --help/documentação oficial, terminando no comando autenticado `ccusage daily --json`.",
+        "entrega_tecnica": "bash: função `custo_do_dia()` que chama `npx ccusage@latest daily --json` e extrai o custo total com `jq`.",
+        "evolucao_leitor": "De colar `ccusage log --date` do manual e receber 'unknown command' para saber consultar `npx ccusage@latest --help` e confirmar os 5 subcomandos reais antes de automatizar qualquer medição.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Fallback offline real: Ollama, llama.cpp e vLLM sem sintaxe fabricada",
+        "escopo": "Entra: Ollama como motor confirmado (`ollama pull`/`ollama run`), os 7 modelos/tags confirmados na library oficial; llama.cpp com o binário renomeado para `llama-cli` desde jun/2024 e a flag de contexto real `-c` (não `-ctx-size`); vLLM com o comando real `vllm serve <modelo> --gpu-memory-utilization 0.9 --host 0.0.0.0 --port 8000` (não `python -m vllm.server`); estratégia híbrida de detecção de conectividade. Fica de fora: comparação de qualidade de resposta entre modelo local e modelo em nuvem — fora do escopo pericial deste capítulo.",
+        "ancora_visual": "sequenceDiagram do fluxo de decisão: token-guard consulta o laudo de uso, decide entre canal em nuvem autenticado e fallback local, e cada motor de inferência responde só depois de ter a própria sintaxe confirmada.",
+        "entrega_tecnica": "bash: função `fallback_local()` com três ramos comentados (Ollama, llama-cli, vllm serve), cada um com o comando corrigido e a fonte da correção.",
+        "evolucao_leitor": "De copiar `./main -m models/... -ctx-size 4096` e `python -m vllm.server` esperando que rodem, para conferir o `--help` de cada motor de inferência antes de automatizar o fallback.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "token-guard de ponta a ponta: hard limit como circuit breaker financeiro",
+        "escopo": "Entra: script completo unindo `ccusage daily --json`, limite configurável, arquivo de estado (fechado/aberto) espelhando o Cap. 5, troca automática para o fallback local quando o teto estoura, log de decisão, e agendamento real via `crontab -e`. Fica de fora: dashboards visuais e alertas por e-mail/Slack (fora do escopo do script mínimo testável).",
+        "ancora_visual": "reaproveita o flowchart do Pilar 1 e a sequência do Pilar 2, agora unificados num único diagrama de decisão fechado (o token-guard completo).",
+        "entrega_tecnica": "bash: script `token-guard.sh` completo e executável, com bloco de agendamento cron comentado ao final.",
+        "evolucao_leitor": "De ter um script que nunca chegaria a rodar (fundações fabricadas) para operar hoje mesmo um sistema de contenção de gasto real, testável linha a linha.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

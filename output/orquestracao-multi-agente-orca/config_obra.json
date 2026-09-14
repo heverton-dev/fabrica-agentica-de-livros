@@ -1,0 +1,21 @@
+{
+  "tema": "Orquestração Multi-Agente com ORCA: Worktrees Isoladas, Execução Paralela e Engenharia de Software Autônoma com IA",
+  "tipo_obra": "livro",
+  "tamanho_obra": "M",
+  "senioridade_obra": "iniciante",
+  "estilo_tecnica": "hibrido",
+  "min_referencias_por_capitulo": 3,
+  "gerar_artigos": false,
+  "gerar_playbook": false,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "gerar_campanha": false,
+  "gerar_maquina": false,
+  "cta_url": "",
+  "cta_texto": "",
+  "modo_producao": "obra-unica",
+  "obra_raiz": null,
+  "categoria_tecnica": true
+}

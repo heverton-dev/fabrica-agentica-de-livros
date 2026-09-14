@@ -1,0 +1,40 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "2" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 1: a ilusão do modelo 'barato' — agora mostrada como um problema de arquitetura de contexto, não só de tabela de preço por token",
+  "metricas_obrigatorias": [
+    { "metrica": "economia de tokens no bloco de raciocínio interno (caveman)", "valor": "até 90%" },
+    { "metrica": "economia de tokens em logs de compilação/teste (headroom)", "valor": "até 80%" },
+    { "metrica": "economia por turno de raciocínio", "valor": "até 800 tokens" },
+    { "metrica": "regra de truncamento determinístico do headroom", "valor": "3 linhas do topo + 4 do final, para saída > 7 linhas" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Contexto não é grátis: compressão como redução de dimensionalidade",
+        "escopo": "Entra: por que 'mais contexto' parece seguro mas cobra caro; tokens de entrada custam por chamada, mesmo os que não mudam a resposta; a analogia matemática simples de reduzir dimensões mantendo o essencial. Fora: detalhes de arquitetura de cache (fica para o Capítulo 4); código de compressão real (fica para o Pilar 2 e 3).",
+        "ancora_visual": "flowchart LR mostrando o Engenheiro de Custos com IA enviando um prompt 'gordo' (texto bruto) vs. um prompt comprimido, com dois caminhos paralelos convergindo no medidor de custo/token — ponto de decisão explícito: 'este texto muda a resposta do agente?'",
+        "entrega_tecnica": "Python: script simples e comentado linha a linha que estima tokens de um texto (aproximação por caracteres/4) antes e depois de remover trechos redundantes, imprimindo o índice de compressão.",
+        "evolucao_leitor": "De 'contexto grande é sinônimo de contexto seguro' para 'todo token de entrada é uma linha no extrato bancário do agente'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Caveman: pensamento telegráfico sem perder a intenção",
+        "escopo": "Entra: como a skill caveman corta artigos, saudações e repetição do prompt do usuário no raciocínio interno (Chain-of-Thought); por que tokens de pensamento custam o mesmo que tokens de resposta; o tradeoff entre clareza e economia. Fora: implementação de hooks de ativação automática (fica para o Capítulo 3, onde as 3 skills formam pipeline).",
+        "ancora_visual": "flowchart TD comparando dois blocos de raciocínio interno do mesmo agente — 'Modo Verboso' (frases completas, repetição do prompt) vs. 'Modo Caveman' (frases de 3-5 palavras) — com contador de tokens ao lado de cada bloco, no vocabulário de fluxo de caixa do motivo condutor.",
+        "entrega_tecnica": "Python: script comentado que recebe um parágrafo de raciocínio verboso e aplica 3 regras determinísticas de corte (remove saudação, remove repetição do prompt, corta frases >20 palavras em cláusulas curtas), imprimindo antes/depois com contagem de tokens.",
+        "evolucao_leitor": "De 'escrever raciocínio bonito' para 'escrever raciocínio que resolve, ponto' — o leitor passa a enxergar prosa longa como desperdício, não como cuidado.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Headroom: comprimindo logs e saídas verbosas de shell",
+        "escopo": "Entra: a regra determinística de 7 linhas (3 do topo + 4 do final); por que a causa-raiz de erro de build está quase sempre nas últimas linhas; quando NÃO aplicar headroom (conteúdo de output/**, dados de obra, evidência de auditoria). Fora: integração com hooks do settings.json (fica para o Capítulo 3).",
+        "ancora_visual": "flowchart LR do caminho de um log de 300 linhas de build entrando no filtro headroom, sendo dividido em 'zona preservada' (3 linhas topo) e 'zona preservada' (4 linhas final), com a 'zona cortada' explicitamente marcada e o stack trace de erro destacado na saída final.",
+        "entrega_tecnica": "Python: script standalone e comentado que lê um log de exemplo (ou stdin), aplica a regra 3+4 quando linhas > 7, e imprime o log comprimido com marcador de quantas linhas foram omitidas.",
+        "evolucao_leitor": "De 'colar o log inteiro no agente para ele entender o erro' para 'entregar exatamente a evidência que resolve o problema, nada mais'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

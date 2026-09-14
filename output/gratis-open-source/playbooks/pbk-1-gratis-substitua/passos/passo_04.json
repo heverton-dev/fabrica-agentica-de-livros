@@ -1,0 +1,64 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "Automação de Fluxos: Trocando o Zapier pelo n8n",
+  "estagio": "Oficina",
+  "estagio_indice": 1,
+  "objetivo": "Demonstrar por que a automação de fluxos é a categoria mais madura da lista, guiando a construção do primeiro fluxo de ponta a ponta.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [
+    "docker-compose.yml"
+  ],
+  "execucao": [
+    {
+      "titulo": "Por que Docker e por que PostgreSQL desde o primeiro dia",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# docker-compose.yml — bancada minima para produção do n8n\nversion: \"3.8\"\n\nservices:\n  postgres:\n    image: postgres:16\n    restart: unless-stopped\n    environment:\n      POSTGRES_USER: n8n\n      POSTGRES_PASSWORD: \"troque-esta-senha-no-deploy\"\n      POSTGRES_DB: n8n\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\n  n8n:\n    image: docker.n8n.io/n8nio/n8n:latest\n    restart: unless-stopped\n    ports:\n      - \"5678:5678\"\n    environment:\n      DB_TYPE: postgresdb\n      DB_POSTGRESDB_HOST: postgres\n      DB_POSTGRESDB_DATABASE: n8n\n      DB_POSTGRESDB_USER: n8n\n      DB_POSTGRESDB_PASSWORD: \"troque-esta-senha-no-deploy\"\n      N8N_ENCRYPTION_KEY: \"<chave-de-32-caracteres-gerada-no-deploy>\"\n      WEBHOOK_URL: \"https://automacao.suaoficina.com.br/\"\n      GENERIC_TIMEZONE: \"America/Sao_Paulo\"\n    volumes:\n      - n8n_data:/home/node/.n8n\n    depends_on:\n      - postgres\n\nvolumes:\n  postgres_data:\n  n8n_data:"
+    },
+    {
+      "titulo": "Subindo a bancada e testando o primeiro gatilho",
+      "linguagem": "console",
+      "comandos": [
+        "docker compose up -d",
+        "docker compose ps",
+        "curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:5678/healthz"
+      ],
+      "codigo": "$ docker compose up -d\n[+] Running 2/2\n - Container oficina-postgres-1  Started\n - Container oficina-n8n-1       Started\n\n$ docker compose ps\nNAME               IMAGE                         STATUS\noficina-postgres-1 postgres:16                   Up 12 seconds (healthy)\noficina-n8n-1      docker.n8n.io/n8nio/n8n:latest Up 10 seconds\n\n$ curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:5678/healthz\n200"
+    },
+    {
+      "titulo": "O fluxo de ponta a ponta: gatilho, nó, credencial e deploy",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"name\": \"Pedido recebido -> normaliza -> reenvia\",\n  \"nodes\": [\n    {\n      \"id\": \"gatilho-webhook\",\n      \"name\": \"Gatilho: Webhook\",\n      \"type\": \"n8n-nodes-base.webhook\",\n      \"typeVersion\": 2,\n      \"position\": [240, 300],\n      \"parameters\": {\n        \"path\": \"pedido-novo\",\n        \"httpMethod\": \"POST\",\n        \"responseMode\": \"lastNode\"\n      }\n    },\n    {\n      \"id\": \"no-transformacao\",\n      \"name\": \"Normaliza payload\",\n      \"type\": \"n8n-nodes-base.set\",\n      \"typeVersion\": 3,\n      \"position\": [460, 300],\n      \"parameters\": {\n        \"assignments\": {\n          \"assignments\": [\n            { \"name\": \"cliente\", \"type\": \"string\", \"value\": \"={{$json.nome}}\" },\n            { \"name\": \"valor_pedido\", \"type\": \"number\", \"value\": \"={{$json.total}}\" }\n          ]\n        }\n      }\n    },\n    {\n      \"id\": \"no-autenticado\",\n      \"name\": \"Reenvia com credencial\",\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4,\n      \"position\": [680, 300],\n      \"parameters\": {\n        \"method\": \"POST\",\n        \"url\": \"https://api.parceiro-externo.com/pedidos\",\n        \"authentication\": \"genericCredentialType\",\n        \"genericAuthType\": \"httpHeaderAuth\"\n      },\n      \"credentials\": {\n        \"httpHeaderAuth\": {\n          \"id\": \"1\",\n          \"name\": \"Cofre - Parceiro Externo\"\n        }\n      }\n    }\n  ],\n  \"connections\": {\n    \"Gatilho: Webhook\": {\n      \"main\": [[{ \"node\": \"Normaliza payload\", \"type\": \"main\", \"index\": 0 }]]\n    },\n    \"Normaliza payload\": {\n      \"main\": [[{ \"node\": \"Reenvia com credencial\", \"type\": \"main\", \"index\": 0 }]]\n    }\n  }\n}"
+    },
+    {
+      "titulo": "Backup da bancada: o script que evita perder o fluxo montado",
+      "linguagem": "bash",
+      "comandos": [
+        "docker exec oficina-postgres-1 pg_dump -U n8n n8n | gzip > \"${DESTINO}\""
+      ],
+      "codigo": "#!/usr/bin/env bash\nset -euo pipefail\n\nDATA=$(date +%F)\nDESTINO=\"/backups/n8n/n8n-${DATA}.sql.gz\"\n\nmkdir -p /backups/n8n\n\ndocker exec oficina-postgres-1 pg_dump -U n8n n8n | gzip > \"${DESTINO}\"\n\necho \"Backup gravado em ${DESTINO}\"\n\nfind /backups/n8n -name \"n8n-*.sql.gz\" -mtime +30 -delete"
+    }
+  ],
+  "gate": "docker compose up -d",
+  "comandos": [
+    "docker compose up -d",
+    "docker compose ps",
+    "curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:5678/healthz",
+    "docker exec oficina-postgres-1 pg_dump -U n8n n8n | gzip > \"${DESTINO}\""
+  ],
+  "feito_quando": [
+    "Suba o `docker-compose.yml` desta seção em uma VPS de teste (2 GB RAM é suficiente para começar)",
+    "Importe o fluxo JSON do webhook e ative-o",
+    "Dispare o webhook com `curl` usando um payload diferente do exemplo e confirme a resposta",
+    "Crie a credencial do nó `HTTP Request` pelo painel de credenciais do n8n — nunca em texto livre no nó",
+    "Configure o script de backup via `cron` e confirme que o arquivo `.sql.gz` é gerado no dia seguinte",
+    "Escreva, em uma frase, quem na sua equipe (ou você mesmo) fica de guarda se esse fluxo falhar às 3h da manhã"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 4 — Automação de Fluxos: Trocando o Zapier pelo n8n",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

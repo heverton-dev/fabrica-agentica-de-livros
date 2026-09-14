@@ -1,0 +1,1176 @@
+{
+  "slug": "engenharia-agentica/livros",
+  "tipo_obra": "livro",
+  "veredito": "CONFORME",
+  "total_capitulos": 16,
+  "caracteres_obra": 401427,
+  "paginas_estimadas": 160.6,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 16 capitulos",
+      "conforme": true,
+      "detalhe": "16 capitulo(s) (minimo 16)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 160 paginas (~400.000 caracteres)",
+      "conforme": true,
+      "detalhe": "401.427 caracteres (minimo 400.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 20 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=hibrido)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [
+    {
+      "capitulo_a": "07",
+      "capitulo_b": "08",
+      "similaridade": 0.593,
+      "trecho": "[1] GOOGLE CLOUD. *Prompt caching — Claude partner models*. Disponível em: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-cachin"
+    },
+    {
+      "capitulo_a": "04",
+      "capitulo_b": "15",
+      "similaridade": 0.557,
+      "trecho": "Os termos da casa: LLM é o modelo que gera texto; token é a unidade mínima que ele processa; harness é a camada que decide o que entra na janela e o que é verificado depois. E **co"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "02",
+      "similaridade": 0.546,
+      "trecho": "[1] OPENAI et al. *GPT-4 Technical Report*. Disponível em: https://arxiv.org/abs/2303.08774. Acesso em: 12 set. 2026.\n[2] WANG, Lei et al. *A survey on large language model based a"
+    },
+    {
+      "capitulo_a": "14",
+      "capitulo_b": "15",
+      "similaridade": 0.51,
+      "trecho": "[1] ANTHROPIC. *All settings — Claude Code Docs*. Disponível em: https://code.claude.com/docs/en/settings-reference. Acesso em: 12 set. 2026.\n[2] CURSOR. *Rules — Cursor Docs*. Dis"
+    },
+    {
+      "capitulo_a": "09",
+      "capitulo_b": "10",
+      "similaridade": 0.503,
+      "trecho": "[1] ANTHROPIC. *Automate actions with hooks — Claude Code Docs*. Disponível em: https://code.claude.com/docs/en/hooks-guide. Acesso em: 12 set. 2026.\n[2] ANTHROPIC. *Hooks referenc"
+    },
+    {
+      "capitulo_a": "05",
+      "capitulo_b": "06",
+      "similaridade": 0.493,
+      "trecho": "[1] MODEL CONTEXT PROTOCOL. *Specification (2025-06-18)*. Disponível em: https://modelcontextprotocol.io/specification/2025-06-18. Acesso em: 12 set. 2026.\n[2] GOOGLE CLOUD. *Promp"
+    },
+    {
+      "capitulo_a": "09",
+      "capitulo_b": "11",
+      "similaridade": 0.483,
+      "trecho": "[1] ANTHROPIC. *Automate actions with hooks — Claude Code Docs*. Disponível em: https://code.claude.com/docs/en/hooks-guide. Acesso em: 12 set. 2026.\n[2] ANTHROPIC. *Hooks referenc"
+    },
+    {
+      "capitulo_a": "15",
+      "capitulo_b": "16",
+      "similaridade": 0.483,
+      "trecho": "[1] ANTHROPIC. *Effective context engineering for AI agents*. Disponível em: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents. Acesso em: 12 set. 2"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "04",
+      "similaridade": 0.481,
+      "trecho": "[1] OPENAI et al. *GPT-4 Technical Report*. Disponível em: https://arxiv.org/abs/2303.08774. Acesso em: 12 set. 2026.\n[2] WANG, Lei et al. *A survey on large language model based a"
+    },
+    {
+      "capitulo_a": "05",
+      "capitulo_b": "08",
+      "similaridade": 0.473,
+      "trecho": "[1] MODEL CONTEXT PROTOCOL. *Specification (2025-06-18)*. Disponível em: https://modelcontextprotocol.io/specification/2025-06-18. Acesso em: 12 set. 2026.\n[2] GOOGLE CLOUD. *Promp"
+    },
+    {
+      "capitulo_a": "12",
+      "capitulo_b": "16",
+      "similaridade": 0.473,
+      "trecho": "[1] GIT. *git-worktree — Referência oficial*. Disponível em: https://git-scm.com/docs/git-worktree. Acesso em: 12 set. 2026.\n[2] ANTHROPIC. *Run parallel sessions with worktrees — "
+    },
+    {
+      "capitulo_a": "13",
+      "capitulo_b": "15",
+      "similaridade": 0.468,
+      "trecho": "[1] ONG, Isaac et al. *RouteLLM: Learning to Route LLMs with Preference Data*. Disponível em: https://arxiv.org/abs/2406.18665. Acesso em: 12 set. 2026.\n[2] MOHAMMADI, Mahmoud et a"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "09",
+      "similaridade": 0.466,
+      "trecho": "[1] OPENAI et al. *GPT-4 Technical Report*. Disponível em: https://arxiv.org/abs/2303.08774. Acesso em: 12 set. 2026.\n[2] MOHAMMADI, Mahmoud et al. *Evaluation and Benchmarking of "
+    },
+    {
+      "capitulo_a": "06",
+      "capitulo_b": "07",
+      "similaridade": 0.464,
+      "trecho": "[1] GOOGLE CLOUD. *Prompt caching — Claude partner models*. Disponível em: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-cachin"
+    },
+    {
+      "capitulo_a": "08",
+      "capitulo_b": "11",
+      "similaridade": 0.464,
+      "trecho": "[1] LANGCHAIN. *Context Engineering*. Disponível em: https://www.langchain.com/blog/context-engineering-for-agents. Acesso em: 12 set. 2026.\n[2] ANTHROPIC. *Effective context engin"
+    },
+    {
+      "capitulo_a": "05",
+      "capitulo_b": "07",
+      "similaridade": 0.463,
+      "trecho": "[1] MODEL CONTEXT PROTOCOL. *Specification (2025-06-18)*. Disponível em: https://modelcontextprotocol.io/specification/2025-06-18. Acesso em: 12 set. 2026.\n[2] GOOGLE CLOUD. *Promp"
+    },
+    {
+      "capitulo_a": "01",
+      "capitulo_b": "03",
+      "similaridade": 0.453,
+      "trecho": "[1] OPENAI et al. *GPT-4 Technical Report*. Disponível em: https://arxiv.org/abs/2303.08774. Acesso em: 12 set. 2026.\n[2] WANG, Lei et al. *A survey on large language model based a"
+    },
+    {
+      "capitulo_a": "04",
+      "capitulo_b": "11",
+      "similaridade": 0.452,
+      "trecho": "[1] MODEL CONTEXT PROTOCOL. *Specification (2025-06-18)*. Disponível em: https://modelcontextprotocol.io/specification/2025-06-18. Acesso em: 12 set. 2026.\n[2] MODEL CONTEXT PROTOC"
+    },
+    {
+      "capitulo_a": "02",
+      "capitulo_b": "11",
+      "similaridade": 0.451,
+      "trecho": "[1] OPENAI et al. *GPT-4 Technical Report*. Disponível em: https://arxiv.org/abs/2303.08774. Acesso em: 12 set. 2026.\n[2] MOHAMMADI, Mahmoud et al. *Evaluation and Benchmarking of "
+    }
+  ],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "esta",
+      "variantes": {
+        "está": 104,
+        "Esta": 21,
+        "esta": 4
+      },
+      "ocorrencias": 129
+    },
+    {
+      "termo_normalizado": "agentsmd",
+      "variantes": {
+        "agentsmd": 22,
+        "agents.md": 22,
+        "AGENTS.MD": 11,
+        "AGENTS.md": 10,
+        "agents-md": 2,
+        "Agents.md": 1
+      },
+      "ocorrencias": 68
+    },
+    {
+      "termo_normalizado": "historico",
+      "variantes": {
+        "histórico": 41,
+        "Histórico": 6,
+        "historico": 1
+      },
+      "ocorrencias": 48
+    },
+    {
+      "termo_normalizado": "decisoes",
+      "variantes": {
+        "decisões": 36,
+        "Decisões": 3,
+        "decisoes": 2
+      },
+      "ocorrencias": 41
+    },
+    {
+      "termo_normalizado": "bloco",
+      "variantes": {
+        "bloco": 35,
+        "Bloco": 3,
+        "bloço": 1
+      },
+      "ocorrencias": 39
+    },
+    {
+      "termo_normalizado": "descricao",
+      "variantes": {
+        "descrição": 26,
+        "Descrição": 6,
+        "descricao": 1
+      },
+      "ocorrencias": 33
+    },
+    {
+      "termo_normalizado": "migracao",
+      "variantes": {
+        "migração": 15,
+        "migracao": 2,
+        "Migração": 1
+      },
+      "ocorrencias": 18
+    },
+    {
+      "termo_normalizado": "continua",
+      "variantes": {
+        "continua": 14,
+        "contínua": 4
+      },
+      "ocorrencias": 18
+    },
+    {
+      "termo_normalizado": "precommit",
+      "variantes": {
+        "pre-commit": 8,
+        "Pre-commit": 2,
+        "pré-commit": 1
+      },
+      "ocorrencias": 11
+    },
+    {
+      "termo_normalizado": "obrigatorio",
+      "variantes": {
+        "obrigatório": 9,
+        "obrigatorio": 1
+      },
+      "ocorrencias": 10
+    },
+    {
+      "termo_normalizado": "indice",
+      "variantes": {
+        "índice": 7,
+        "indice": 1
+      },
+      "ocorrencias": 8
+    },
+    {
+      "termo_normalizado": "invalida",
+      "variantes": {
+        "inválida": 3,
+        "invalida": 2
+      },
+      "ocorrencias": 5
+    },
+    {
+      "termo_normalizado": "aprovacao",
+      "variantes": {
+        "aprovação": 4,
+        "aprovacao": 1
+      },
+      "ocorrencias": 5
+    },
+    {
+      "termo_normalizado": "seria",
+      "variantes": {
+        "seria": 2,
+        "Seria": 1,
+        "séria": 1
+      },
+      "ocorrencias": 4
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": true,
+    "vocabulario_motivo_condutor": [
+      "cabine",
+      "painel",
+      "checklist",
+      "instrumento",
+      "alarme",
+      "piloto automático",
+      "plano de voo",
+      "caixa-preta",
+      "torre de controle",
+      "combustível"
+    ],
+    "capitulos_com_citacao_empilhada": [
+      {
+        "capitulo": "01",
+        "ocorrencias": [
+          "[3][4]",
+          "[4][8]",
+          "[3][9]",
+          "[6][7]"
+        ]
+      },
+      {
+        "capitulo": "02",
+        "ocorrencias": [
+          "[3][4]"
+        ]
+      },
+      {
+        "capitulo": "03",
+        "ocorrencias": [
+          "[1][2]"
+        ]
+      },
+      {
+        "capitulo": "04",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]"
+        ]
+      },
+      {
+        "capitulo": "05",
+        "ocorrencias": [
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "06",
+        "ocorrencias": [
+          "[1][2]",
+          "[1][3]"
+        ]
+      },
+      {
+        "capitulo": "08",
+        "ocorrencias": [
+          "[1][2][3]",
+          "[5][6]",
+          "[2][4]"
+        ]
+      },
+      {
+        "capitulo": "10",
+        "ocorrencias": [
+          "[1][2]"
+        ]
+      },
+      {
+        "capitulo": "11",
+        "ocorrencias": [
+          "[1][2]"
+        ]
+      },
+      {
+        "capitulo": "12",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]"
+        ]
+      },
+      {
+        "capitulo": "13",
+        "ocorrencias": [
+          "[1][2]",
+          "[1][4]"
+        ]
+      },
+      {
+        "capitulo": "15",
+        "ocorrencias": [
+          "[3][4]"
+        ]
+      },
+      {
+        "capitulo": "16",
+        "ocorrencias": [
+          "[1][2]"
+        ]
+      }
+    ],
+    "capitulos_sem_recorrencia_motivo_condutor": [],
+    "capitulos_sem_callback_capitulo_anterior": [],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 0
+    },
+    "validar-escala.py": {
+      "exit": 0
+    },
+    "validar-afirmacoes.py": {
+      "exit": 0
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "01",
+      "arquivo": "cap_01.md",
+      "caracteres": 29788,
+      "palavras": 4216,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 17,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 7,
+      "artefatos_tecnica": 8,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "jection*. Disponível em: https://doi.org/10.1145/3605764.3623985. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[3][4]",
+        "[4][8]",
+        "[3][9]",
+        "[6][7]"
+      ],
+      "vocabulario_fora_ilustra": 16,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.3,
+        "coeficiente_variacao": 1.178
+      }
+    },
+    {
+      "capitulo": "02",
+      "arquivo": "cap_02.md",
+      "caracteres": 27132,
+      "palavras": 3844,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 4,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "prise-agent-platform/models/partner-models/claude/prompt-caching. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[3][4]"
+      ],
+      "vocabulario_fora_ilustra": 8,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.1,
+        "coeficiente_variacao": 1.232
+      }
+    },
+    {
+      "capitulo": "03",
+      "arquivo": "cap_03.md",
+      "caracteres": 24810,
+      "palavras": 3434,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 6,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 7,
+      "artefatos_tecnica": 7,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "jection*. Disponível em: https://doi.org/10.1145/3605764.3623985. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]"
+      ],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.8,
+        "coeficiente_variacao": 1.271
+      }
+    },
+    {
+      "capitulo": "04",
+      "arquivo": "cap_04.md",
+      "caracteres": 25538,
+      "palavras": 3394,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 7,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 8,
+      "artefatos_tecnica": 9,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "es*. Disponível em: https://doi.org/10.1016/j.inffus.2025.103599. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]"
+      ],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.0,
+        "coeficiente_variacao": 1.129
+      }
+    },
+    {
+      "capitulo": "05",
+      "arquivo": "cap_05.md",
+      "caracteres": 25590,
+      "palavras": 3559,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 5,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 8,
+      "artefatos_tecnica": 8,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "a oficial*. Disponível em: https://git-scm.com/docs/git-worktree. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.7,
+        "coeficiente_variacao": 1.364
+      }
+    },
+    {
+      "capitulo": "06",
+      "arquivo": "cap_06.md",
+      "caracteres": 25645,
+      "palavras": 3719,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 6,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "les — Cursor Docs*. Disponível em: https://cursor.com/docs/rules. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[1][3]"
+      ],
+      "vocabulario_fora_ilustra": 11,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.9,
+        "coeficiente_variacao": 1.095
+      }
+    },
+    {
+      "capitulo": "07",
+      "arquivo": "cap_07.md",
+      "caracteres": 24453,
+      "palavras": 3575,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 5,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 7,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "les — Cursor Docs*. Disponível em: https://cursor.com/docs/rules. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 10,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.1,
+        "coeficiente_variacao": 1.249
+      }
+    },
+    {
+      "capitulo": "08",
+      "arquivo": "cap_08.md",
+      "caracteres": 24306,
+      "palavras": 3443,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 10,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "les — Cursor Docs*. Disponível em: https://cursor.com/docs/rules. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2][3]",
+        "[5][6]",
+        "[2][4]"
+      ],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.6,
+        "coeficiente_variacao": 1.15
+      }
+    },
+    {
+      "capitulo": "09",
+      "arquivo": "cap_09.md",
+      "caracteres": 24390,
+      "palavras": 3284,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 4,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "es*. Disponível em: https://doi.org/10.1016/j.inffus.2025.103599. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.4,
+        "coeficiente_variacao": 1.207
+      }
+    },
+    {
+      "capitulo": "10",
+      "arquivo": "cap_10.md",
+      "caracteres": 23568,
+      "palavras": 3398,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 4,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "rvey*. Disponível em: https://doi.org/10.1007/s41019-025-00296-9. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]"
+      ],
+      "vocabulario_fora_ilustra": 9,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.9,
+        "coeficiente_variacao": 1.307
+      }
+    },
+    {
+      "capitulo": "11",
+      "arquivo": "cap_11.md",
+      "caracteres": 24905,
+      "palavras": 3568,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 3,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ngineering/equipping-agents-for-the-real-world-with-agent-skills. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]"
+      ],
+      "vocabulario_fora_ilustra": 5,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.6,
+        "coeficiente_variacao": 1.104
+      }
+    },
+    {
+      "capitulo": "12",
+      "arquivo": "cap_12.md",
+      "caracteres": 23959,
+      "palavras": 3329,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 5,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "rvey*. Disponível em: https://doi.org/10.1007/s41019-025-00296-9. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]"
+      ],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.3,
+        "coeficiente_variacao": 1.07
+      }
+    },
+    {
+      "capitulo": "13",
+      "arquivo": "cap_13.md",
+      "caracteres": 24159,
+      "palavras": 3289,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 5,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "/cookbook/tool-use-context-engineering-context-engineering-tools. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[1][4]"
+      ],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.7,
+        "coeficiente_variacao": 1.197
+      }
+    },
+    {
+      "capitulo": "14",
+      "arquivo": "cap_14.md",
+      "caracteres": 23981,
+      "palavras": 3390,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 4,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " Disponível em: https://sourcegraph.com/blog/context-engineering. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 1,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.6,
+        "coeficiente_variacao": 1.195
+      }
+    },
+    {
+      "capitulo": "15",
+      "arquivo": "cap_15.md",
+      "caracteres": 24072,
+      "palavras": 3342,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 6,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "les — Cursor Docs*. Disponível em: https://cursor.com/docs/rules. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[3][4]"
+      ],
+      "vocabulario_fora_ilustra": 7,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.0,
+        "coeficiente_variacao": 1.237
+      }
+    },
+    {
+      "capitulo": "16",
+      "arquivo": "cap_16.md",
+      "caracteres": 25131,
+      "palavras": 3522,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 4,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "les — Cursor Docs*. Disponível em: https://cursor.com/docs/rules. Acesso em: 12 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]"
+      ],
+      "vocabulario_fora_ilustra": 26,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 20.7,
+        "coeficiente_variacao": 1.051
+      }
+    }
+  ]
+}

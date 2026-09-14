@@ -1,0 +1,37 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "Documentação Soberana: Stirling-PDF e fluxos de trabalho autônomos",
+  "estagio": "Estágio 2",
+  "estagio_indice": 2,
+  "objetivo": "No Capítulo 7, exploramos como o ecossistema Kokoro permitiu a emancipação completa da síntese de voz, substituindo infraestruturas dependentes de nuvem por uma solução neural leve e profundamente personalizável. Compreender essa transição em áudio pavimentou o caminho para uma…",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [
+    "docker-compose.yml"
+  ],
+  "execucao": [
+    {
+      "titulo": "Execução",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import os\nimport requests\n\ndef executar_pipeline_ocr_soberano(diretorio_entrada: str, diretorio_saida: str, url_base=\"http://localhost:8080\"):\n    \"\"\"\n    Executa Processamentos OCR batch consumindo a API REST do Stirling-PDF local.\n    Garante a confidencialidade e elimina custos SaaS, permitindo a extração de\n    texto em massa de PDFs escaneados ou rasterizados.\n    \"\"\"\n    endpoint_ocr = f\"{url_base}/api/v1/misc/ocr-pdf\"\n    \n    if not os.path.exists(diretorio_saida):\n        os.makedirs(diretorio_saida)\n        print(f\"Diretório de saída criado: {diretorio_saida}\")\n        \n    arquivos_sucesso = 0\n    arquivos_falha = 0\n    \n    print(f\"Iniciando varredura no diretório: {diretorio_entrada}\")\n    for nome_arquivo in os.listdir(diretorio_entrada):\n        if not nome_arquivo.lower().endswith(\".pdf\"):\n            continue\n            \n        caminho_entrada = os.path.join(diretorio_entrada, nome_arquivo)\n        caminho_saida = os.path.join(diretorio_saida, f\"ocr_pesquisavel_{nome_arquivo}\")\n        \n        print(f\"Processando OCR em: {nome_arquivo}...\")\n        \n        with open(caminho_entrada, 'rb') as arquivo_pdf:\n            # O payload reflete as variáveis aceitas pela API do Stirling-PDF\n            dados_formulario = {\n                'languages': 'por',    # Definindo idioma primário como Português\n                'sidecar': 'false',    # Não criar arquivo de texto .txt separado\n                'deskew': 'true',      # Alinhar a inclinação de folhas escaneadas\n                'clean': 'true',       # Limpar fundo escuro\n                'cleanFinal': 'false',"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Para assimilar o verdadeiro valor da documentação autônoma",
+    "Imagine a situação rotineira: você acabou de receber de um cliente governamental uma dezena de manuais de especificações escaneados em baixa resolução",
+    "A pressão do prazo está se esgotando",
+    "Um profissional desavisado invariavelmente recorre ao padrão comodista: abre um serviço genérico como \"I-Love-PDF\" ou congêneres",
+    "Ele arrasta os dez arquivos sensíveis contendo informações embargadas para uma janela do navegador",
+    "O site exibe barras de progresso simuladas e",
+    "Para realizar o OCR do lote inteiro"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 8 — Documentação Soberana: Stirling-PDF e fluxos de trabalho autônomos",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

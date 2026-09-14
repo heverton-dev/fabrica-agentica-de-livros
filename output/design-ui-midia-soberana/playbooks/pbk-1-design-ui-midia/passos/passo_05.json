@@ -1,0 +1,66 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Upscaling Local: Real-ESRGAN e Upscayl para criativos",
+  "estagio": "Estágio 2",
+  "estagio_indice": 2,
+  "objetivo": "Você já se deparou com aquela fotografia antiga, esmaecida pelo tempo, que gostaria de restaurar? Ou precisou ampliar um logotipo de baixa resolução para uma impressão profissional, apenas para ver os pixels se transformarem em manchas borradas? A ampliação de imagens sempre foi…",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [
+    "~/.config/Upscayl/models/",
+    "_upscayled_4x.png",
+    "input/upscayled/"
+  ],
+  "execucao": [
+    {
+      "titulo": "Configuração do ambiente Upscayl",
+      "linguagem": "bash",
+      "comandos": [
+        "./Upscayl-2.10.0.AppImage"
+      ],
+      "codigo": "# Linux (AppImage)\nwget https://github.com/upscayl/upscayl/releases/download/v2.10.0/Upscayl-2.10.0.AppImage\nchmod +x Upscayl-2.10.0.AppImage\n./Upscayl-2.10.0.AppImage\n\n# macOS (via Homebrew)\nbrew install --cask upscayl\n\n# Windows (Instalador .exe)\n# Baixe Upscayl-2.10.0.exe da página de releases e execute"
+    },
+    {
+      "titulo": "Configuração avançada: Real-ESRGAN via linha de comando",
+      "linguagem": "bash",
+      "comandos": [
+        "pip install realesrgan"
+      ],
+      "codigo": "# Instalação via pip (requer Python 3.8+)\npip install realesrgan\n\n# Baixar modelos pré-treinados\nwget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth \\\n     -P ~/.cache/realesrgan/weights/\n\n# Upscale único com modelo geral\nrealesrgan-ncnn-vulkan -i input.jpg -o output.png -n realesr-general-x4v3 -s 4\n\n# Upscale em lote\nfor img in input/*.jpg; do\n  realesrgan-ncnn-vulkan -i \"$img\" -o \"output/$(basename \"$img\" .jpg)_4x.png\" \\\n    -n realesr-general-x4v3 -s 4\ndone"
+    },
+    {
+      "titulo": "Integração com ferramentas de edição",
+      "linguagem": "bash",
+      "comandos": [
+        "git clone https://github.com/Aimarekin/Upscaler-for-GIMP.git"
+      ],
+      "codigo": "git clone https://github.com/Aimarekin/Upscaler-for-GIMP.git\ncp Upscaler-for-GIMP/upscaler.py ~/.config/GIMP/2.10/plug-ins/\nchmod +x ~/.config/GIMP/2.10/plug-ins/upscaler.py"
+    },
+    {
+      "titulo": "Otimização de performance",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "  realesrgan-ncnn-vulkan -i input.jpg -o output.png -n realesr-general-x4v3 -s 4 -f fp16"
+    }
+  ],
+  "gate": "./Upscayl-2.10.0.AppImage",
+  "comandos": [
+    "./Upscayl-2.10.0.AppImage",
+    "pip install realesrgan",
+    "git clone https://github.com/Aimarekin/Upscaler-for-GIMP.git"
+  ],
+  "feito_quando": [
+    "Diagnóstico**: verificar hardware disponível (workstation com RTX 3060, 12 GB VRAM)",
+    "Configuração**: instalar Upscayl, baixar modelo RealESRGAN_x4plus",
+    "Teste piloto**: processar 50 imagens de amostra, avaliar qualidade e ajustar modelo se necessário",
+    "Produção em lote**: rodar processamento durante a madrugada (5-8 horas para 5.000 imagens)",
+    "Controle de qualidade**: revisar aleatoriamente 5% dos resultados, reprocessar falhas pontuais com modelo alternativo",
+    "Integração de pipeline**: adicionar etapa automática de upscaling antes da importação no After Effects",
+    "Script de automação** (shell):"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 5 — Upscaling Local: Real-ESRGAN e Upscayl para criativos",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

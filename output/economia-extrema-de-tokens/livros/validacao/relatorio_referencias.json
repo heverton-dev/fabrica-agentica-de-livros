@@ -1,0 +1,470 @@
+{
+  "slug": "livros/economia-extrema-de-tokens",
+  "total_referencias": 65,
+  "resumo": {
+    "ok": 48,
+    "nao_verificado": 17
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2307.06435",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-026-60308-3",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1145/3637528.3671470",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1109/cai59869.2024.00075",
+      "status": "ok",
+      "detalhe": "HTTP 202"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2407.01527v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.678",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2023.emnlp-main.825",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.17762/ijisae.v14i1s.8385",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2023.emnlp-main.825",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.91",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/3d45fc603e34934fc589b9547307815f7723de34",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.678",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2307.06435",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-026-60308-3",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.1145/3637528.3671470",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2307.06435",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2023.emnlp-main.825",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.findings-acl.195",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.91",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1145/3637528.3671470",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.21203/rs.3.rs-9368244/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.14264/262de91",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.678",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/aa8146c31d171edfe37f7d41fbc9655d2c554231",
+      "status": "ok",
+      "detalhe": "HTTP 202"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.17762/ijisae.v14i1s.8385",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.1109/icdcsw72724.2026.00031",
+      "status": "ok",
+      "detalhe": "HTTP 202"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.1109/cai59869.2024.00075",
+      "status": "ok",
+      "detalhe": "HTTP 202"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2407.01527v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.678",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2511.01815v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2608.00528v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-026-60308-3",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/yamadashy/repomix",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.1145/3637528.3671470",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.91",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2023.emnlp-main.825",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/3d45fc603e34934fc589b9547307815f7723de34",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2307.06435",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-026-60308-3",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2307.06435",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2023.emnlp-main.825",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-026-60308-3",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.91",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.678",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.1145/3637528.3671470",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2023.emnlp-main.825",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2024.acl-long.91",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/3d45fc603e34934fc589b9547307815f7723de34",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/4c101e9b3a84a793b00d3ed00c5232435420142c",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.1609/aaai.v39i23.34639",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/c9314e5c12102c8d489f511fd3764408229045d5",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-026-60308-3",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.1145/3637528.3671470",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.1109/icdcsw72724.2026.00031",
+      "status": "ok",
+      "detalhe": "HTTP 202"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.21203/rs.3.rs-9368244/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2307.06435",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.18653/v1/2025.findings-acl.1274",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.17762/ijisae.v14i1s.8385",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.1109/cai59869.2024.00075",
+      "status": "ok",
+      "detalhe": "HTTP 202"
+    }
+  ]
+}

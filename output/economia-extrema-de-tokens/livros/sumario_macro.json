@@ -1,0 +1,237 @@
+{
+  "titulo_obra": "Economia Extrema de Tokens",
+  "subtitulo": "8 ferramentas + 4 pilares de governança para reduzir custos com LLMs",
+  "tipo_obra": "livro",
+  "tamanho_obra": "M",
+  "paginas_estimadas": 80,
+  "motivo_condutor": {
+    "nome": "O Perito de Custos com IA",
+    "descricao": "Cada token consumido é dinheiro em movimento: o leitor aprende a enxergar a máquina de custos LLM como um sistema de fluxo de caixa que pode ser otimizado em 8 pontos táticos e 4 pilares estratégicos, transformando-se de consumidor passivo a gestor consciente de despesa com IA.",
+    "vocabulario": ["token", "custo", "fluxo de caixa", "otimização", "governança", "auditoria", "compressão", "cache", "memória", "resiliência"],
+    "persona_leitor": "Engenheiro de Custos com IA"
+  },
+  "introducao": "Apresentar a crise silenciosa: projetos com LLMs que começam com $100/mês e viram $10k/mês sem que ninguém tenha visto vindo. Estabelecer que a economia de tokens não é mágica, mas engenharia. Mostrar o mapa do livro: 8 ferramentas que reduzem custo em pontos específicos (compressão, cache, memória, empacotamento, refatoração, otimização de prompt) e 4 pilares que sustentam tudo (mensuração, observabilidade, fallback, governança). O leitor vai sair do livro sabendo exatamente onde seu dinheiro vai e como não sair do orçamento.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "O Problema e Fundamentos da Economia de Tokens",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "A Crise de Custos com LLMs: De $100 para $10k Sem Aviso",
+          "resumo": "Anatomia da escalada de custos em projetos com LLMs. Como tokens criptografados transformam-se em faturas invisíveis. Estudo de caso real: um projeto que começou 'experimental' e virou despesa corporativa sem governança.",
+          "objetivo": "O leitor entende a urgência e o escopo do problema: tokens não são uma abstração, mas dinheiro circulando; a falta de visibilidade é o verdadeiro inimigo.",
+          "tempo_leitura_minutos": 12,
+          "conceitos_chave": [
+            "Crescimento exponencial de custos em produção",
+            "A ilusão do modelo 'barato'",
+            "Tokens de entrada vs. saída e o impacto real no orçamento",
+            "Casos de escalada sem visibilidade",
+            "Impacto de erros de configuração em custos"
+          ],
+          "secoes_eita": [
+            "Introdução: O primeiro mês de um projeto experimental",
+            "Explica: Como tokens se convertem em dólares reais",
+            "Ilustra: Anatomia de 3 escaladas de custo reais (com números)",
+            "Técnica: Calculadora de projeção de custos (Python/CLI)",
+            "Aplica: Auditando seu próprio projeto",
+            "Conclusão: Por que 'barato' não é barato em escala",
+            "Referências: Documentação de pricing dos provedores"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Como Funciona a Economia de Tokens: Caveman e Headroom",
+          "resumo": "Fundamentos matemáticos da compressão de contexto. As duas primeiras ferramentas: pensamento telegráfico (caveman) e detecção de logs verbosos (headroom). Custo-benefício de cada estratégia.",
+          "objetivo": "O leitor entende que a economia de tokens não é ajuste fino, mas arquitetura: onde cortar, quando sumarizar, e como medir o impacto de cada corte.",
+          "tempo_leitura_minutos": 15,
+          "conceitos_chave": [
+            "Compressão de contexto como redução de dimensionalidade",
+            "Pensamento telegráfico (caveman): 70% menos tokens, mesma intenção",
+            "Detecção de verbosidade (headroom): identifica logs >7 linhas",
+            "Índice de compressão (antes/depois)",
+            "Tradeoff entre clareza e economia"
+          ],
+          "secoes_eita": [
+            "Introdução: Por que 'mais contexto' é armadilha",
+            "Explica: Matemática de compressão vs. relevância semântica",
+            "Ilustra: 4 exemplos de caveman no mundo real (commits, logs, prompts)",
+            "Técnica: Implementar headroom em seu fluxo (Python script detecta logs >7 linhas)",
+            "Aplica: Reescrever seu contexto com 50% menos tokens, mesma precisão",
+            "Conclusão: Compressão é linguagem, não truque",
+            "Referências: Artigos sobre compressão de contexto em LLMs"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "Skills Agênticas de Compressão: Caveman, Headroom, Lean-CTX",
+          "resumo": "Três ferramentas de compressão em cadeia. Caveman (pensamento telegráfico) → Headroom (comprime saída de shell) → Lean-CTX (grep antes de read). Sinergia entre elas e quando aplicar cada uma.",
+          "objetivo": "O leitor monta seu próprio pipeline de compressão, escolhendo qual ferramenta encadear de acordo com o tipo de saída (log, código, referência) e o contexto disponível.",
+          "tempo_leitura_minutos": 18,
+          "conceitos_chave": [
+            "Cadeia de compressão: caveman → headroom → lean-ctx",
+            "Grep before read: busca antes de ler arquivo inteiro",
+            "Compressão seletiva vs. agressiva",
+            "Métricas de eficácia (tokens antes/depois, tempo de busca)",
+            "Quando desabilitar compressão (conteúdo sensível, saída em output/)"
+          ],
+          "secoes_eita": [
+            "Introdução: As 3 skills formam um sistema, não ferramentas isoladas",
+            "Explica: Como cada skill reduz tokens e mantém precisão",
+            "Ilustra: Pipeline real (commit + log + referência = 3 exemplos completos)",
+            "Técnica: Ativar skills no .claude/settings.json; hooks que rodamAutomaticamente",
+            "Aplica: Comprimir seu próprio dossier de projeto em 60% menos tokens",
+            "Conclusão: Compressão agêntica não é destruição, é cirurgia",
+            "Referências: Código-fonte de cada skill; config de hooks"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Cache Inteligente e Memory: RTK-Memory + LiteLLM",
+          "resumo": "Cache de prompt (leitura repetida = 90% desconto) e memória de sessão em LLMs. RTK-memory para mensuração de cache hits. LiteLLM como router inteligente que escolhe qual provedor usa cache.",
+          "objetivo": "O leitor configura cache real (não teórico) no seu fluxo de trabalho com IA, vê o desconto materializar e entende quando reutilizar contexto compensa mais que gerá-lo do zero.",
+          "tempo_leitura_minutos": 16,
+          "conceitos_chave": [
+            "Cache de prompt: byte-a-byte idêntico = desconto",
+            "Janela de cache (últimas 2-5 horas de histórico)",
+            "Taxa de desconto (até 90% em tokens lidos)",
+            "Memory como cache distribuído entre chamadas",
+            "Router de provedor: quando fazer cache em Anthropic vs. OpenAI"
+          ],
+          "secoes_eita": [
+            "Introdução: Cache é desconto automático, não configuração",
+            "Explica: Mecânica de cache de prompt em provedores reais",
+            "Ilustra: Histórico de sessão + histórico de chat = 2 estratégias",
+            "Técnica: RTK-memory para medir cache hits reais; LiteLLM router configuration",
+            "Aplica: Montar pipeline que reutiliza contexto entre 3 chamadas seguidas",
+            "Conclusão: Cache resolve 30% do problema de custo, sem gerir muito",
+            "Referências: Documentação de cache dos provedores; repos de LiteLLM e RTK"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "Implementação Tática e Governança Estratégica",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Empacotamento de Contexto: Repomix",
+          "resumo": "Quando você tem 50 arquivos de contexto, qual leva? Repomix cria snapshots estruturados de codebase, garantindo que o arquivo menor contenha exatamente o que o LLM precisa. Configuração, ignores inteligentes e versionamento de snapshots.",
+          "objetivo": "O leitor reduz tamanho de contexto em 40-70% mantendo cobertura, criando snapshots reutilizáveis que viram entradas padrão para o agente.",
+          "tempo_leitura_minutos": 14,
+          "conceitos_chave": [
+            "Snapshot estruturado de codebase",
+            "Ignores inteligentes vs. agressivos",
+            "Tamanho do empacote vs. cobertura",
+            "Versionamento de snapshots (.repomix.json)",
+            "Repomix como substituição de 'enviar 50 arquivos em zip'"
+          ],
+          "secoes_eita": [
+            "Introdução: A ilusão de 'só vou usar este arquivo'",
+            "Explica: Como Repomix estrutura codebase mantendo relevância",
+            "Ilustra: Snapshot de projeto real antes/depois (tamanho, precisão)",
+            "Técnica: Instalar Repomix; .repomix.json com regras personalizadas",
+            "Aplica: Criar snapshot do seu projeto; validar que LLM entende o escopo",
+            "Conclusão: Empacotamento é pré-processamento que não custa tokens",
+            "Referências: Documentação Repomix; exemplos de config por tipo de projeto"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Refatoração Estrutural com AST: ast-grep",
+          "resumo": "Como encontrar padrões em código de ponta a ponta sem ler tudo. AST-grep como ferramenta de refatoração automática: busca estrutural que sobrevive à formatação, renames em massa, remoção de código morto.",
+          "objetivo": "O leitor escreve uma query AST uma vez e reduz seu código em 20-30%, eliminando duplicação que o grep tradicional não vê. Menos código = menos contexto = menos custo.",
+          "tempo_leitura_minutos": 16,
+          "conceitos_chave": [
+            "AST (Abstract Syntax Tree) vs. regex",
+            "Queries estruturais que sobrevivem à formatação",
+            "Refatoração automática: renames, remoção de código morto",
+            "Detecção de anti-patterns e código duplicado",
+            "Integração em CI: bloqueia merge se duplicação >threshold"
+          ],
+          "secoes_eita": [
+            "Introdução: Grep encontra strings, AST encontra estrutura",
+            "Explica: Como parsers extraem padrões estruturais",
+            "Ilustra: 3 queries reais (função duplicada, parâmetro não-usado, pattern anti-pattern)",
+            "Técnica: Instalar ast-grep; escrever primeira query em YAML; rodar refator automático",
+            "Aplica: Encontrar e refatorar duplicação no seu projeto",
+            "Conclusão: Uma query AST economiza 100 horas de leitura manual",
+            "Referências: Documentação ast-grep; exemplos de queries por linguagem"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Otimização de Prompts: DSPy",
+          "resumo": "Prompts são código também. DSPy como linguagem de programação para otimizar prompts: definir estrutura esperada, exemplares de treinamento, validadores. Compilador DSPy que procura o prompt 'mais barato' que ainda passa na validação.",
+          "objetivo": "O leitor vira de quem copia prompts prontos para quem otimiza seus próprios prompts, economizando 20-40% em tokens de prompt + reduzindo hallucinations.",
+          "tempo_leitura_minutos": 17,
+          "conceitos_chave": [
+            "Prompts como programas estruturados",
+            "In-context exemplars vs. fine-tuning",
+            "Validadores de saída (forma, conteúdo, lógica)",
+            "Compilador DSPy: otimiza prompt iterativamente",
+            "Custo de prompt: tokens fixos que impactam cada chamada"
+          ],
+          "secoes_eita": [
+            "Introdução: Prompt engineering é 'achômetro'; DSPy é engenharia real",
+            "Explica: Framework DSPy: módulos, validadores, compiladores",
+            "Ilustra: Caso prático: otimizar prompt de extração de dados (antes/depois em tokens)",
+            "Técnica: Definir módulo DSPy; fornecer validador; chamar compilador; comparar prompts gerados",
+            "Aplica: Otimizar um prompt que você repete 1000x/mês",
+            "Conclusão: DSPy torna prompt engineering reproduzível",
+            "Referências: Repositório DSPy; artigos sobre prompt synthesis"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Governança em Produção: 4 Pilares + Checklist",
+          "resumo": "As 8 ferramentas só funcionam se sustentadas por 4 pilares: (1) Mensuração contínua (métricas de custo real), (2) Observabilidade (rastreio de chamadas LLM), (3) Fallback inteligente (quando falhar, usar modelo local ou cache), (4) Governança (quem autoriza novo modelo, quando escalar). Checklist pronto para produção.",
+          "objetivo": "O leitor monta um sistema de governança que sustenta redução de custos: automatiza o que pode, avisa o que precisa aprovação, e garante que ninguém gaste sem visibilidade.",
+          "tempo_leitura_minutos": 19,
+          "conceitos_chave": [
+            "Pilar 1 — Mensuração: custo por chamada, por usuário, por modelo",
+            "Pilar 2 — Observabilidade: logs estruturados, traces distribuídos",
+            "Pilar 3 — Fallback: circuit breaker, modelo local, cache como respaldo",
+            "Pilar 4 — Governança: aprovação de modelos, limite de gasto, auditoria",
+            "Automação de alertas (Slack, email) quando custo desviar de baseline"
+          ],
+          "secoes_eita": [
+            "Introdução: Reduzir custo é inútil sem visibilidade e controle",
+            "Explica: Os 4 pilares como camadas de um sistema de governança",
+            "Ilustra: Arquitetura real de startup (Kubernetes + Prometheus + webhook alerts)",
+            "Técnica: Código-pronto: hooks para logging, dashboard Grafana, circuit breaker em Python",
+            "Aplica: Montar seus 4 pilares usando stack que já tem (CloudWatch, Datadog, ou DIY)",
+            "Conclusão: Governança é seguro que cobre as 8 ferramentas",
+            "Referências: Exemplos de implementação por provedor; templates de checklist"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Fechar o arco: as 8 ferramentas (caveman, headroom, lean-ctx, rtk-memory, LiteLLM, Repomix, ast-grep, DSPy) são táticas que reduzem custo em pontos específicos do fluxo; os 4 pilares (mensuração, observabilidade, fallback, governança) são a estrutura que sustenta tudo. O leitor sai do livro com um mapa visual de onde seu dinheiro com LLM está indo e 3 ações concretas que pode implementar hoje. O verdadeiro economista de tokens é aquele que vê a máquina de custos como um sistema inteiro, não como 8 truques isolados.",
+  "sumario_detalhado": {
+    "conteudo_captitulos": "Cada capítulo segue o padrão EITA: Introdução (contexto), Explica (teoria), Ilustra (exemplos reais), Técnica (código ou config pronto), Aplica (exercício para o leitor), Conclusão (resumo), Referências (links/documentação). Nenhum capítulo assume conhecimento de programação avançada; senioridade = Iniciante.",
+    "distribuicao_ferramentas": {
+      "Parte 1": {
+        "Cap 1": "Problema (sem ferramentas específicas)",
+        "Cap 2": "caveman, headroom (introdução)",
+        "Cap 3": "caveman, headroom, lean-ctx (série compressão)",
+        "Cap 4": "rtk-memory, LiteLLM (cache e memória)"
+      },
+      "Parte 2": {
+        "Cap 5": "Repomix (empacotamento)",
+        "Cap 6": "ast-grep (refatoração)",
+        "Cap 7": "DSPy (otimização)",
+        "Cap 8": "4 pilares integram todas as ferramentas"
+      }
+    },
+    "metricas_esperadas": {
+      "tempo_total_leitura": "127 minutos (~2h 07m)",
+      "palavras_estimadas": "18000-20000 (80 páginas)",
+      "exercicios": "8 (1 por capítulo)",
+      "checklists": "3 (final dos caps 3, 5, 8)",
+      "exemplos_codigo": "12-15 snippets (Python, YAML, shell)"
+    }
+  }
+}

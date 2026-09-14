@@ -1,0 +1,1316 @@
+{
+  "slug": "livros/devops",
+  "total_referencias": 186,
+  "resumo": {
+    "nao_verificado": 186
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://research.google/pubs/pub50370/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://cloud.google.com/devops/state-of-devops-report/2023",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://itrevolution.com/the-phoenix-project/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://collaboration.corp/blameless-postmortems/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://docs.github.com/en/actions",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://prometheus.io/docs/prometheus/latest/getting_started/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2012.06145v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2109.09601v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1016/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/1808.06915v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1201/9781003404354-2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-6412-6_1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2302.01053v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-2208-9_2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1002/9781119310778.ch2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1016/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2012.06145v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-6412-6_1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-5343-4_3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2302.01053v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://git-scm.com/about",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/pt-br/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2012.06145v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.conventionalcommits.org/pt-br/v1.0.0/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.atlassian.com/br/git/tutorials/using-branches/merge-conflicts",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2302.01053v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://nvie.com/posts/a-successful-git-branching-model/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.atlassian.com/br/continuous-delivery/continuous-integration/trunk-based-development",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/pt-br/v2/Git-Internals-Git-Objects",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/gitignore",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1016/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/1808.06915v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2012.06145v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1016/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://core.ac.uk/display/157897360",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-6412-6_1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-5343-4_3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-6412-6_8",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1002/9781119310778.ch2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1002/9781119310778.app",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4842-2208-9_2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://example.com/ci-cd-practices",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://example.com/continuous-delivery",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://docs.github.com/actions",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://example.com/calms-dora-metrics",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.amazon.com/Accelerate-Software-Performing-Technology/dp/1942788339",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://argo-cd.readthedocs.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://example.com/devsecops-ci-cd",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://prometheus.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://grafana.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.jaegertracing.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://opentelemetry.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.docker.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://example.com/fast-feedback-ci",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1109/MS.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1002/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1201/9781003404354-2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1016/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2507.00421v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2302.01053v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2301.09429v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1145/2962695.2962707",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1007/978-1-4302-4570-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1002/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1201/9781003404354-2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2507.00421v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.68",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1145/3359981",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://cds.cern.ch/record/2034028",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.81",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://prometheus.io/docs/introduction/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://grafana.com/docs/grafana/latest/getting-started/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.elastic.co/guide/index.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.jaegertracing.io/docs/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://opentelemetry.io/docs/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1109/ms.2016.64",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1016/j.cosrev.2020.100308",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1002/smr.1885",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2012.06145v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://docs.docker.com/get-started/overview/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://kubernetes.io/docs/concepts/overview/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.jenkins.io/doc/book/pipeline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

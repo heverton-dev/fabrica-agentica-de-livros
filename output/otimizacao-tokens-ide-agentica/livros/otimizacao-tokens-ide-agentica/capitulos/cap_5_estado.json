@@ -1,0 +1,16 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "5" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 4: a diferença entre biblioteca Python real e CLI inventada (LLMLingua/PromptCompressor e GPTCache reescritos com a API real, testáveis linha a linha)",
+  "validacao": {
+    "validar_codigo": "OK (3/3 blocos verificaveis executados com sucesso via --executar, 3 nao_aplicavel = console/json)",
+    "renderizar_diagramas": "OK (1 diagrama stateDiagram-v2 valido)",
+    "referencias_secao7": 21,
+    "min_referencias_exigido": 20,
+    "r14_orfaos": 0,
+    "r14_refs_nao_citadas": 0,
+    "observacao": "Capitulo de alivio da Parte II: quase todo o LAB 5 da auditoria (asyncio.gather+Semaphore, xargs -P, GNU parallel -j, circuit breaker CLOSED/OPEN/HALF_OPEN, backoff exponencial com jitter) e CONFIRMADO sem ressalva. Unica ressalva mantida: sintaxe exata de 'Hermes delegation' nao documentada publicamente (conceito confirmado, sintaxe nao) e 'economia de 80% do tempo' tratada como ilustracao matematica, nao garantia universal."
+  },
+  "pool_registro": "sucesso (tentativa 1)"
+}

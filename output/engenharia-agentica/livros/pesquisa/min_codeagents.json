@@ -1,0 +1,737 @@
+{
+  "tema": "autonomous software engineering agents code generation",
+  "gerado_em": "12 set. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    },
+    "arxiv": {
+      "status": "erro",
+      "erro": "http://export.arxiv.org/api/query?search_query=all:autonomous+AND+all:software+A -> The read operation timed out",
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+software+ -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=autonomous+software+engineering+agents+code+ -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    }
+  },
+  "total_unicos": 36,
+  "registros": [
+    {
+      "titulo": "A survey on large language model based autonomous agents",
+      "autores": [
+        "Lei Wang",
+        "Chen Ma",
+        "Xueyang Feng",
+        "Zeyu Zhang",
+        "Hao Yang",
+        "Jingsen Zhang",
+        "Zhiyuan Chen",
+        "Jiakai Tang",
+        "Xu Chen",
+        "Yankai Lin",
+        "Wayne Xin Zhao",
+        "Zhewei Wei",
+        "Ji-Rong Wen"
+      ],
+      "ano": 2024,
+      "doi": "10.1007/s11704-024-40231-1",
+      "url": "https://doi.org/10.1007/s11704-024-40231-1",
+      "resumo": "Abstract Autonomous agents have long been a research focus in academic and industry communities. Previous research often focuses on training agents with limited knowledge within isolated environments, which diverges significantly from human learning processes, and makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of Web knowledge, large language models (LLMs) have shown potential in human-level intelligence, leading to a surge in research on LLM-based autonomous agents. In this paper, we present a comprehensive survey of these studies, delivering a systematic review of LLM-based autonomous agents from a holistic perspective. We first discuss the construction of LLM-based autonomous agents, proposing a unified framework that encompasses much of previous work. Then, we present a overview of the diverse applications of LLM-based autonomous agents in social science, natural science, and engineering. Finally, we delve into the evaluation strategies commonly used for LLM-based autonomous agents. Based on the previous studies, we also present several challenges and future directions in this field.",
+      "citacoes": 1547,
+      "periodico": "Frontiers of Computer Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Survey of Autonomous Driving: Common Practices and Emerging Technologies",
+      "autores": [
+        "Ekim Yurtsever",
+        "Jacob Lambert",
+        "Alexander Carballo",
+        "Kazuya Takeda"
+      ],
+      "ano": 2020,
+      "doi": "10.1109/access.2020.2983149",
+      "url": "https://doi.org/10.1109/access.2020.2983149",
+      "resumo": "Automated driving systems (ADSs) promise a safe, comfortable and efficient driving experience. However, fatalities involving vehicles equipped with ADSs are on the rise. The full potential of ADSs cannot be realized unless the robustness of state-of-the-art is improved further. This paper discusses unsolved problems and surveys the technical aspect of automated driving. Studies regarding present challenges, high-level system architectures, emerging methodologies and core functions including localization, mapping, perception, planning, and human machine interfaces, were thoroughly reviewed. Furthermore, many state-of-the-art algorithms were implemented and compared on our own platform in a real-world driving setting. The paper concludes with an overview of available datasets and tools for ADS development.",
+      "citacoes": 1808,
+      "periodico": "IEEE Access",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "autores": [
+        "Joon Sung Park",
+        "Joseph O’Brien",
+        "Carrie J. Cai",
+        "Meredith Ringel Morris",
+        "Percy Liang",
+        "Michael S. Bernstein"
+      ],
+      "ano": 2023,
+      "doi": "10.1145/3586183.3606763",
+      "url": "https://doi.org/10.1145/3586183.3606763",
+      "resumo": "Believable proxies of human behavior can empower interactive applications ranging from immersive environments to rehearsal spaces for interpersonal communication to prototyping tools. In this paper, we introduce generative agents: computational software agents that simulate believable human behavior. Generative agents wake up, cook breakfast, and head to work; artists paint, while authors write; they form opinions, notice each other, and initiate conversations; they remember and reflect on days past as they plan the next day. To enable generative agents, we describe an architecture that extends a large language model to store a complete record of the agent’s experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior. We instantiate generative agents to populate an interactive sandbox environment inspired by The Sims, where end users can interact with a small town of twenty-five agents using natural language. In an evaluation, these generative agents produce believable individual and emergent social behaviors. For example, starting with only a single user-specified notion that one agent wants to throw a Valentine’s Day party, the agents autonomously spread invitations to the party over the next two days, make new acquaintances, ask each other out on dates to the party, and coordinate to show up for the party together at the right time. We demonstrate through ablation that the components of our agent architecture—observation, planning, and reflection—each contribute critically to the believability of agent behavior. By fusing large language models with computational interactive agents, this work introduces architectural and interaction patterns for enabling believable simulations",
+      "citacoes": 1806,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Multi-Agent Systems for Power Engineering Applications—Part I: Concepts, Approaches, and Technical Challenges",
+      "autores": [
+        "S.D.J. McArthur",
+        "E.M. Davidson",
+        "Victoria M. Catterson",
+        "Aris Dimeas",
+        "Nikos Hatziargyriou",
+        "Ferdinanda Ponci",
+        "Toshihisa Funabashi"
+      ],
+      "ano": 2007,
+      "doi": "10.1109/tpwrs.2007.908471",
+      "url": "https://doi.org/10.1109/tpwrs.2007.908471",
+      "resumo": "This is the first part of a two-part paper that has arisen from the work of the IEEE Power Engineering Society's Multi-Agent Systems (MAS) Working Group. Part I of this paper examines the potential value of MAS technology to the power industry. In terms of contribution, it describes fundamental concepts and approaches within the field of multi-agent systems that are appropriate to power engineering applications. As well as presenting a comprehensive review of the meaningful power engineering applications for which MAS are being investigated, it also defines the technical issues which must be addressed in order to accelerate and facilitate the uptake of the technology within the power and energy sector. Part II of this paper explores the decisions inherent in engineering multi-agent systems for applications in the power and energy sector and offers guidance and recommendations on how MAS can be designed and implemented.",
+      "citacoes": 1090,
+      "periodico": "IEEE Transactions on Power Systems",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Autonomous chemical research with large language models",
+      "autores": [
+        "Daniil A. Boiko",
+        "Robert MacKnight",
+        "Ben Kline",
+        "Gabe Gomes"
+      ],
+      "ano": 2023,
+      "doi": "10.1038/s41586-023-06792-0",
+      "url": "https://doi.org/10.1038/s41586-023-06792-0",
+      "resumo": "Abstract Transformer-based large language models are making significant strides in various fields, such as natural language processing 1–5 , biology 6,7 , chemistry 8–10 and computer programming 11,12 . Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.",
+      "citacoes": 977,
+      "periodico": "Nature",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Autonomous agents for business process management",
+      "autores": [
+        "Nicholas R. Jennings",
+        "Timothy J. Norman",
+        "Peyman Faratin",
+        "Paul O’Brien",
+        "B R Odgers"
+      ],
+      "ano": 2000,
+      "doi": "10.1080/088395100117106",
+      "url": "https://doi.org/10.1080/088395100117106",
+      "resumo": "Traditional approaches to managing business processes are often inadequate for large-scale, organisation-wide, dynamic settings. However, since Internet and Intranet technologies have become widespread, an increasing number of business processes exhibit these properties. Therefore, a new approach is needed. To this end, we describe the motivation, conceptualization, design, and implementation of a novel agent-based business process management system. The key advance of our system is that responsibility for enacting various components of the business process is delegated to a number of autonomous problem-solving agents. To enact their role, these agents typically interact and negotiate with other agents in order to coordinate their actions and to buy in the services they require. This approach leads to a system that is significantly more agile and robust than its traditional counterparts. To help demonstrate these benefits, a companion paper describes the application of our systemto a real-world problem faced by British Telecom.",
+      "citacoes": 349,
+      "periodico": "Applied Artificial Intelligence",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Conversational agents in healthcare: a systematic review",
+      "autores": [
+        "Liliana Laranjo",
+        "Adam G. Dunn",
+        "Huong Ly Tong",
+        "A. Baki Kocaballı",
+        "Jessica Chen",
+        "Rabia Bashir",
+        "Didi Surian",
+        "Blanca Gallego",
+        "Farah Magrabi",
+        "Annie Lau",
+        "Enrico Coiera"
+      ],
+      "ano": 2018,
+      "doi": "10.1093/jamia/ocy072",
+      "url": "https://doi.org/10.1093/jamia/ocy072",
+      "resumo": "Objective: Our objective was to review the characteristics, current applications, and evaluation measures of conversational agents with unconstrained natural language input capabilities used for health-related purposes. Methods: We searched PubMed, Embase, CINAHL, PsycInfo, and ACM Digital using a predefined search strategy. Studies were included if they focused on consumers or healthcare professionals; involved a conversational agent using any unconstrained natural language input; and reported evaluation measures resulting from user interaction with the system. Studies were screened by independent reviewers and Cohen's kappa measured inter-coder agreement. Results: The database search retrieved 1513 citations; 17 articles (14 different conversational agents) met the inclusion criteria. Dialogue management strategies were mostly finite-state and frame-based (6 and 7 conversational agents, respectively); agent-based strategies were present in one type of system. Two studies were randomized controlled trials (RCTs), 1 was cross-sectional, and the remaining were quasi-experimental. Half of the conversational agents supported consumers with health tasks such as self-care. The only RCT evaluating the efficacy of a conversational agent found a significant effect in reducing depression symptoms (effect size d = 0.44, p = .04). Patient safety was rarely evaluated in the included studies. Conclusions: The use of conversational agents with unconstrained natural language input capabilities for health-related purposes is an emerging field of research, where the few published studies were mainly quasi-experimental, and rarely evaluated efficacy or safety. Future studies would benefit from more robust experimental designs and standardized reporting. Protocol Registration: The protocol for this systematic review is registered at PROSPERO with the number CRD42017065917.",
+      "citacoes": 1412,
+      "periodico": "Journal of the American Medical Informatics Association",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "autores": [
+        "Nathan J. Szymanski",
+        "Bernardus Rendy",
+        "Yuxing Fei",
+        "Rishi E. Kumar",
+        "Tanjin He",
+        "David Milsted",
+        "Matthew J. McDermott",
+        "Max C. Gallant",
+        "Ekin D. Cubuk",
+        "Amil Merchant",
+        "Haegyeom Kim",
+        "Anubhav Jain",
+        "Christopher J. Bartel",
+        "Kristin A. Persson",
+        "Yan Zeng",
+        "Gerbrand Ceder"
+      ],
+      "ano": 2023,
+      "doi": "10.1038/s41586-023-06734-w",
+      "url": "https://doi.org/10.1038/s41586-023-06734-w",
+      "resumo": ", we introduce the A-Lab, an autonomous laboratory for the solid-state synthesis of inorganic powders. This platform uses computations, historical data from the literature, machine learning (ML) and active learning to plan and interpret the outcomes of experiments performed using robotics. Over 17 days of continuous operation, the A-Lab realized 41 novel compounds from a set of 58 targets including a variety of oxides and phosphates that were identified using large-scale ab initio phase-stability data from the Materials Project and Google DeepMind. Synthesis recipes were proposed by natural-language models trained on the literature and optimized using an active-learning approach grounded in thermodynamics. Analysis of the failed syntheses provides direct and actionable suggestions to improve current techniques for materials screening and synthesis design. The high success rate demonstrates the effectiveness of artificial-intelligence-driven platforms for autonomous materials discovery and motivates further integration of computations, historical knowledge",
+      "citacoes": 956,
+      "periodico": "Nature",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The open agent architecture: A framework for building distributed software systems",
+      "autores": [
+        "David L. Martin",
+        "Adam Cheyer",
+        "Douglas B. Moran"
+      ],
+      "ano": 1999,
+      "doi": "10.1080/088395199117504",
+      "url": "https://doi.org/10.1080/088395199117504",
+      "resumo": "The Open Agent Architecture (OAA), developed and used for several years at SRI International, makes it possible for software services to be provided through the cooperative efforts of distributed collections of autonomous agents. Communication and cooperation between agents are brokered by one or more facilitators, which are responsible for matching requests, from users and agents, with descriptions of the capabilities of other agents. Thus it is not generally required that a user or agent know the identities, locations, or number of other agents involved in satisfying a request. OAA is structured so as to minimize the effort involved in creating new agents and \"wrapping\" legacy applications, written in various languages and operating on various platforms; to encourage the reuse of existing agents; and to allow for dynamism and flexibility in the makeup ofagent communities. Distinguishing features of OAA as compared with related work include extreme flexibility in using facilitator-based delegation of complex goals, triggers, and data management requests; agent-based provision of multimodal user interfaces; and built-in support for including the user as a privileged member of the agent community. This article explains the structure and elements of agent-based systems constructed using OAA. The characteristics and use of each major component of OAA infrastructure are described, including the agent library, the Interagent Communication Language, capabilities declarations, service requests, facilitation, management of data repositories, and autonomous monitoring using triggers. To provide technical context, we describe the motivations for OAA's design, and situate its features within the realm ofalternative software paradigms. A summary is given of OAA-based systems built to date, and brief descriptions are given of several of these.",
+      "citacoes": 496,
+      "periodico": "Applied Artificial Intelligence",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Deep Reinforcement Learning framework for Autonomous Driving",
+      "autores": [
+        "Ahmad EL Sallab",
+        "Mohammed Abdou",
+        "Etienne Perot",
+        "Senthil Yogamani"
+      ],
+      "ano": 2017,
+      "doi": "10.2352/issn.2470-1173.2017.19.avm-023",
+      "url": "https://doi.org/10.2352/issn.2470-1173.2017.19.avm-023",
+      "resumo": "Reinforcement learning is considered to be a strong AI paradigm which can be used to teach machines through interaction with the environment and learning from their mistakes. Despite its perceived utility, it has not yet been successfully applied in automotive applications. Motivated by the successful demonstrations of learning of Atari games and Go by Google DeepMind, we propose a framework for autonomous driving using deep reinforcement learning. This is of particular relevance as it is difficult to pose autonomous driving as a supervised learning problem due to strong interactions with the environment including other vehicles, pedestrians and roadworks. As it is a relatively new area of research for autonomous driving, we provide a short overview of deep reinforcement learning and then describe our proposed framework. It incorporates Recurrent Neural Networks for information integration, enabling the car to handle partially observable scenarios. It also integrates the recent work on attention models to focus on relevant information, thereby reducing the computational complexity for deployment on embedded hardware. The framework was tested in an open source 3D car racing simulator called TORCS. Our simulation results demonstrate learning of autonomous maneuvering in a scenario of complex road curvatures and simple interaction of other vehicles.",
+      "citacoes": 839,
+      "periodico": "Electronic Imaging",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The Arcade Learning Environment: An Evaluation Platform for General Agents",
+      "autores": [
+        "M. G. Bellemare",
+        "Y. Naddaf",
+        "J. Veness",
+        "M. Bowling"
+      ],
+      "ano": 2013,
+      "doi": "10.1613/jair.3912",
+      "url": "https://doi.org/10.1613/jair.3912",
+      "resumo": "In this article we introduce the Arcade Learning Environment (ALE): both a challenge problem and a platform and methodology for evaluating the development of general, domain-independent AI technology. ALE provides an interface to hundreds of Atari 2600 game environments, each one different, interesting, and designed to be a challenge for human players. ALE presents significant research challenges for reinforcement learning, model learning, model-based planning, imitation learning, transfer learning, and intrinsic motivation. Most importantly, it provides a rigorous testbed for evaluating and comparing approaches to these problems. We illustrate the promise of ALE by developing and benchmarking domain-independent agents designed using well-established AI techniques for both reinforcement learning and planning. In doing so, we also propose an evaluation methodology made possible by ALE, reporting empirical results on over 55 different games. All of the software, including the benchmark agents, is publicly available.",
+      "citacoes": 1076,
+      "periodico": "Journal of Artificial Intelligence Research",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "ChatDev: Communicative Agents for Software Development",
+      "autores": [
+        "Chen Qian",
+        "Wei Liu",
+        "Hongzhang Liu",
+        "Nuo Chen",
+        "Yufan Dang",
+        "Jiahao Li",
+        "Cheng Yang",
+        "Weize Chen",
+        "Yu-Sheng Su",
+        "Xin Cong",
+        "Juyuan Xu",
+        "Dahai Li",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "ano": 2024,
+      "doi": "10.18653/v1/2024.acl-long.810",
+      "url": "https://doi.org/10.18653/v1/2024.acl-long.810",
+      "resumo": "Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun. Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2024.",
+      "citacoes": 348,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Designing Autonomous AI Agents for Code Generation, Refactoring, and Maintenance in Agile Software Engineering",
+      "autores": [
+        "Sarathe, Saurabh",
+        "Sharma, Gaurav"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/icetems66917.2026.11469540",
+      "url": "https://doi.org/10.1109/icetems66917.2026.11469540",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2026 3rd International Conference on Emerging Trends in Engineering and Medical Sciences (ICETEMS)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Software Programmed by Artificial Agents toward an Autonomous Development Process for Code Generation",
+      "autores": [
+        "Insaurralde, Carlos C."
+      ],
+      "ano": 2013,
+      "doi": "10.1109/smc.2013.561",
+      "url": "https://doi.org/10.1109/smc.2013.561",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2013 IEEE International Conference on Systems, Man, and Cybernetics",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Autonomous AI Agents for Software Development: A Framework for Intelligent Code Generation and Maintenance",
+      "autores": [
+        "Thatikonda, Vamsi Krishna"
+      ],
+      "ano": 2026,
+      "doi": "10.59324/jaitd.2026.2(2).16",
+      "url": "https://doi.org/10.59324/jaitd.2026.2(2).16",
+      "resumo": "<jats:p>This paper presents a comprehensive framework for deploying autonomous AI agents in software development workflows. Drawing from recent advances in agentic AI systems, we propose a multi-agent architecture that transforms traditional software development from human-driven to human-supervised autonomous code generation, testing, and maintenance. We define a taxonomy of software development agents spanning from simple code completion (Level 0) to self-evolving multi-agent systems (Level 4). Our framework integrates language models with specialized tools through a robust orchestration layer, enabling agents to reason about code, execute development tasks, and learn from feedback. We demonstrate the practical application of this system through a case study in microservices development, showing potential for 40–60% reduction in routine development overhead while maintaining code quality standards.</jats:p>",
+      "citacoes": null,
+      "periodico": "Journal of Artificial Intelligence and Technological Development",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "SOEN-101: Code Generation by Emulating Software Process Models Using Large Language Model Agents",
+      "autores": [
+        "Lin, Feng",
+        "Kim, Dong Jae",
+        "Chen, Tse-Hsun"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/icse55347.2025.00140",
+      "url": "https://doi.org/10.1109/icse55347.2025.00140",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "AI Agents: Synchronous vs Asynchronous Coding Agents Benefits Comparison A Comprehensive Analysis of Architecture Paradigms in Autonomous Code Generation Systems",
+      "autores": [
+        "Rayarao, Surya Rao",
+        "Rao, Surya",
+        "Donikena, Naga"
+      ],
+      "ano": 2025,
+      "doi": "10.22541/au.175745546.68068093/v1",
+      "url": "https://doi.org/10.22541/au.175745546.68068093/v1",
+      "resumo": "<jats:p>The emergence of AI-powered coding agents has revolutionized software development, offering unprecedented capabilities in automated code generation, debugging, and optimization. This paper presents a comprehensive analysis of two fundamental architectural paradigms in AI coding agents: synchronous and asynchronous execution models. We examine the benefits, limitations, and trade-offs of each approach across multiple dimensions including performance, scalability, resource utilization, and user experience. Through detailed analysis of existing implementations and architectural patterns, we provide insights into when each paradigm is most beneficial and how they can be effectively combined in hybrid systems. Our findings indicate that synchronous agents excel in scenarios requiring immediate feedback and sequential task dependencies, while asynchronous agents demonstrate superior performance in complex, multi-threaded development environments and largescale code generation tasks. This research contributes to the understanding of AI agent architecture design and provides practical guidance for developers and organizations implementing autonomous coding systems.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Convergent Correctness in Stochastic Code Generation: A Generate-Verify-Repair Architecture for Deterministic Validation of Autonomous AI Coding Agents in Regulated Environments",
+      "autores": [
+        "Cadenas, Rafael"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.6754899",
+      "url": "https://doi.org/10.2139/ssrn.6754899",
+      "resumo": "<jats:p>Large language models (LLMs) are increasingly deployed as autonomous code-generation agents in enterprise software development. However, the stochastic nature of autoregressive token sampling introduces a fundamental tension with the zero-defect requirements of regulated industries such as retail banking and financial technology, where frameworks including the Sarbanes-Oxley Act (SOX), the Payment Card Industry Data Security Standard (PCI-DSS), and federal banking examination guidelines mandate demonstrable control over software change processes. This paper formalizes the problem as one of bounded stochastic generation and proposes a Generate-Verify-Repair (GVR) architecture that interposes a pipeline of deterministic verification oracles between the probabilistic generation function and the acceptance of its output. The architecture implements five independent verification layers-git state validation, stack-adaptive compilation, independent test execution, static application security testing (SAST), and structural schema validation-wired into a closed-loop error correction cycle that injects typed failure diagnostics as repair context for subsequent generation attempts. Preliminary evaluation through an in-depth single-case study within a proprietary enterprise monorepo suggests that the GVR loop achieves high detection reliability for mechanically verifiable defect classes (compilation errors, test regressions, phantom builds, known vulnerability patterns) while converting raw stochastic output into a convergent search process over the space of correct programs. The architecture preserves the generative model's full creative capacity while constraining its output space to the subset satisfying formal correctness predicates, establishing a defense-in-depth methodology for the safe adoption of AI-accelerated development in compliance-critical domains.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Code Generation by Example",
+      "autores": [
+        "Lano, Kevin",
+        "Xue, Qiaomu"
+      ],
+      "ano": 2022,
+      "doi": "10.5220/0010973600003119",
+      "url": "https://doi.org/10.5220/0010973600003119",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 10th International Conference on Model-Driven Engineering and Software Development",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Behavior-based code generation for robots and autonomous agents",
+      "autores": [
+        "Medina, Terrance",
+        "Hybinette, Maria",
+        "Balch, Tucker"
+      ],
+      "ano": 2014,
+      "doi": "10.4108/icst.simutools.2014.254642",
+      "url": "https://doi.org/10.4108/icst.simutools.2014.254642",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the Seventh International Conference on Simulation Tools and Techniques",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Proactive Multi-Agent Systems for Autonomous Code Generation and Software Maintenance",
+      "autores": [
+        "Elsayed, Saher",
+        "Abubaker, Samer",
+        "Ali, Mohamed",
+        "Elbtity, Mohammed"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/compsac69091.2026.00436",
+      "url": "https://doi.org/10.1109/compsac69091.2026.00436",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2026 IEEE 50th Annual Computers, Software, and Applications Conference (COMPSAC)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "agentTool III: from process definition to code generation",
+      "autores": [
+        "Garcia-Ojeda, Juan C.",
+        "DeLoach, Scott A.",
+        "Robby"
+      ],
+      "ano": 2009,
+      "doi": "10.65109/uamj1358",
+      "url": "https://doi.org/10.65109/uamj1358",
+      "resumo": "<jats:p>The agentTool III (aT3) development environment is built on the Eclipse platform and provides traditional model creation tools to support the analysis, design, and implementation of multiagent systems following the Organization-based Multiagent Systems Engineering (O-MaSE) methodology. It also provides the ability to compose, verify, and maintain customized O-MaSE complaint processes. Additionally, aT3 provides a verification framework which helps designers to maintain consistency between their O-MaSE models.</jats:p>",
+      "citacoes": null,
+      "periodico": "International Joint Conference on Autonomous Agents and Multiagent Systems",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Testing the Cooperation of Autonomous Robotic Agents",
+      "autores": [
+        "Lill, Raimar",
+        "Saglietti, Francesca"
+      ],
+      "ano": 2014,
+      "doi": "10.5220/0004990402870296",
+      "url": "https://doi.org/10.5220/0004990402870296",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 9th International Conference on Software Engineering and Applications",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Predicting Defective Code Clones in Autonomous Driving Software",
+      "autores": [
+        "Zhou, Chenyi",
+        "Mo, Ran",
+        "Hu, Weijun"
+      ],
+      "ano": 2025,
+      "doi": "10.18293/seke2025-101",
+      "url": "https://doi.org/10.18293/seke2025-101",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "International Conferences on Software Engineering and Knowledge Engineering",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Many AI analysts, one dataset: Navigating the agentic data science multiverse.",
+      "autores": [
+        "Bertran M",
+        "Fogliato R",
+        "Wu ZS"
+      ],
+      "ano": 2026,
+      "doi": "10.1073/pnas.2606495123",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42446982/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the National Academy of Sciences of the United States of America",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Autonomous biomedical research with an artificial intelligence agent.",
+      "autores": [
+        "Huang K",
+        "Zhang S",
+        "Wang H",
+        "Qu Y",
+        "Lu Y",
+        "Li R",
+        "Roohani Y",
+        "Qiu L",
+        "Cao S",
+        "Li G",
+        "Zhang J",
+        "Yin D",
+        "Wierenga R",
+        "Kavi D",
+        "Liu S",
+        "She T",
+        "Marwaha S",
+        "Carter JN",
+        "Zhou X",
+        "Wheeler MT",
+        "Bernstein JA",
+        "Wang M",
+        "He P",
+        "Zhou J",
+        "Snyder MP",
+        "Cong L",
+        "Regev A",
+        "Leskovec J"
+      ],
+      "ano": 2026,
+      "doi": "10.1126/science.adz4351",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42424436/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Science (New York, N.Y.)",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Agentomics: an agentic system that autonomously develops novel state-of-the-art solutions for biomedical machine learning tasks.",
+      "autores": [
+        "Martinek V",
+        "Gariboldi A",
+        "Tzimotoudis D",
+        "Galea M",
+        "Zacharopoulou E",
+        "Escudero AA",
+        "Blake E",
+        "Čechák D",
+        "Cassar L",
+        "Balestrucci A",
+        "Alexiou P"
+      ],
+      "ano": 2026,
+      "doi": "10.1093/bioinformatics/btag250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42412783/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Bioinformatics (Oxford, England)",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Global, regional, and national burden of tuberculosis and multidrug-resistant tuberculosis by HIV status, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023.",
+      "autores": [
+        "GBD 2023 TB HIV Collaborators"
+      ],
+      "ano": 2026,
+      "doi": "10.1016/S1473-3099(26)00295-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42385762/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "The Lancet. Infectious diseases",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "pyhgf: A neural network library for predictive coding.",
+      "autores": [
+        "Legrand N",
+        "Weber L",
+        "Waade PT",
+        "Møller Daugaard AH",
+        "Khodadadi M",
+        "Mikuš N",
+        "Mathys C"
+      ],
+      "ano": 2026,
+      "doi": "10.1371/journal.pcbi.1014340",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42330057/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "PLoS computational biology",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "SafeCodeRL: Security-Constrained Multi-Agent Reinforcement Learning for Trustworthy LLM-Generated IoT/CPS Software.",
+      "autores": [
+        "Wang Z",
+        "Chen J",
+        "Wei Z",
+        "Lin L",
+        "Tong G"
+      ],
+      "ano": 2026,
+      "doi": "10.3390/s26113502",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42281018/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Sensors (Basel, Switzerland)",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Chat-Driven Computational (Bio)chemistry: Using LLM Agents to Accelerate Bio- and Chemoinformatics.",
+      "autores": [
+        "Schott-Verdugo S",
+        "Gohlke H"
+      ],
+      "ano": 2026,
+      "doi": "10.1021/acs.jcim.6c00633",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41849500/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Journal of chemical information and modeling",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Rich Data Versus Quantity of Data in Code Generation AI: A Paradigm Shift for Healthcare.",
+      "autores": [
+        "Ramachandran M",
+        "Fouracre S"
+      ],
+      "ano": 2025,
+      "doi": "10.30953/bhty.v8.396",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41623338/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Blockchain in healthcare today",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Vibe Coding Omics Data Analysis Applications.",
+      "autores": [
+        "Meyer JG"
+      ],
+      "ano": 2026,
+      "doi": "10.1021/acs.jproteome.5c00984",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41492971/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Journal of proteome research",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "HAD-Gen: Human-like and diverse driving behavior modeling for controllable scenario generation.",
+      "autores": [
+        "Wang C",
+        "Kong L",
+        "Tamborski M",
+        "Albrecht SV"
+      ],
+      "ano": 2025,
+      "doi": "10.1016/j.aap.2025.108270",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41056668/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Accident; analysis and prevention",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Gödelian embodied self-referential genomic intelligence: lessons for AI and AGI from the genomic blockchain.",
+      "autores": [
+        "Markose S"
+      ],
+      "ano": 2025,
+      "doi": "10.3389/frobt.2025.1624695",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41031315/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Frontiers in robotics and AI",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "AI-HOPE: an AI-driven conversational agent for enhanced clinical and genomic data integration in precision medicine research.",
+      "autores": [
+        "Yang EW",
+        "Velazquez-Villarreal E"
+      ],
+      "ano": 2025,
+      "doi": "10.1093/bioinformatics/btaf359",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40577785/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Bioinformatics (Oxford, England)",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    }
+  ]
+}

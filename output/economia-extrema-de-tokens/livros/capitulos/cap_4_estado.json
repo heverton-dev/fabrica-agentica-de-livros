@@ -1,0 +1,23 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "4" },
+  "titulo": "Cache Inteligente e Memory: RTK-Memory + LiteLLM",
+  "estado_execucao": "concluido_autonomo",
+  "validacoes": {
+    "validar_codigo": "OK (3/3 blocos verificaveis, 2 nao_aplicaveis)",
+    "renderizar_diagramas": "OK (1/1 diagrama valido)",
+    "validar_metricas": "OK (0 violacoes, 3 metricas verbatim citadas)",
+    "validar_escala": "OK (0 violacoes)",
+    "validar_afirmacoes": "OK (0 violacoes apos 2 correcoes de superlativo/percentual sem citacao)",
+    "validar_referencias": "OK (9/9 URLs/DOIs validos)",
+    "r4_min_referencias": "9 >= 8 (min_referencias_por_capitulo)",
+    "r14_citacoes_orfas": "0 orfas, 0 nao usadas, 0 empilhadas"
+  },
+  "rodadas_correcao_internas": 1,
+  "expansao_r2": {
+    "motivo": "auditar-obra.py reprovou R2 (livro < 200000 chars)",
+    "caracteres_antes": 16557,
+    "caracteres_depois": 25404,
+    "conteudo_adicionado": "2a analogia complementar (concierge/cache semantico), nuance de invalidacao em cascata multi-agente (Explica), 3o bloco de codigo (estimar_economia_cache.py), 2a cena Erro Comum vs Pratica Correta (pipeline multi-agente) e reforco de conclusao"
+  }
+}

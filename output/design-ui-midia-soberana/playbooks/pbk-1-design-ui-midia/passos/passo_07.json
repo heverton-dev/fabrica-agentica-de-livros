@@ -1,0 +1,40 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Síntese de Voz: Kokoro e áudio neural local",
+  "estagio": "Estágio 2",
+  "estagio_indice": 2,
+  "objetivo": "No Capítulo 6, você aprendeu a orquestrar pipelines visuais autônomos no ComfyUI , assumindo o controle total sobre a geração sintética de imagens sem depender de plataformas fechadas ou pagamentos por requisição. Essa autonomia gráfica é um pilar indispensável para o designer…",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [
+    "dist/áudio/"
+  ],
+  "execucao": [
+    {
+      "titulo": "Instalação e Execução via CLI",
+      "linguagem": "bash",
+      "comandos": [
+        "curl -L -O https://github.com/OHF-Voice/piper1-gpl/releases/download/v1.0.0/piper_linux_x86_64.tar.gz"
+      ],
+      "codigo": "# Criar diretorio para o motor de audio neural local\nmkdir -p ~/audio-soberano && cd ~/audio-soberano\n\n# Baixar o executavel e o modelo neural leve da engine piper1-gpl\ncurl -L -O https://github.com/OHF-Voice/piper1-gpl/releases/download/v1.0.0/piper_linux_x86_64.tar.gz\ntar -xzf piper_linux_x86_64.tar.gz\n\n# Gerar o primeiro arquivo de audio de narração local\necho \"Soberania tecnológica na síntese de voz neural.\" | ./piper --model pt_BR-faber-medium.onnx --output_file narracao.wav"
+    },
+    {
+      "titulo": "Automação em Python para Pipelines de Mídia",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import os\nimport subprocess\nimport time\nfrom typing import Dict, Any\n\nclass SintetizadorVozSoberano:\n    \"\"\"\n    Gerenciador local de sintese de voz neural baseado em piper1-gpl.\n    \"\"\"\n    def __init__(self, caminho_binario: str, caminho_modelo: str):\n        self.caminho_binario = caminho_binario\n        self.caminho_modelo = caminho_modelo\n        \n        if not os.path.exists(self.caminho_binario):\n            raise FileNotFoundError(f\"Binario nao encontrado: {self.caminho_binario}\")\n        if not os.path.exists(self.caminho_modelo):\n            raise FileNotFoundError(f\"Modelo neural nao encontrado: {self.caminho_modelo}\")\n\n    def sintetizar(self, texto: str, arquivo_saida: str) -> Dict[str, Any]:\n        \"\"\"\n        Sintetiza uma frase e retorna métricas de tempo de inferência.\n        \"\"\"\n        inicio = time.perf_counter()\n        \n        comando = [\n            self.caminho_binario,\n            \"--model\", self.caminho_modelo,\n            \"--output_file\", arquivo_saida\n        ]\n        \n        processo = subprocess.Popen(\n            comando,\n            stdin=subprocess.PIPE,\n            stdout=subprocess.PIPE,\n            stderr=subprocess.PIPE,\n            text=True,\n            encoding=\"utf-8\"\n        )\n        \n        stdout, stderr = processo.communicate(input=texto)\n        fim = time.perf_counter()\n        \n        duracao_execucao = fim - inicio\n        sucesso = processo.returncode == 0\n        \n        return {\n            \"sucesso\": sucesso,\n            \"tempo_segundos\": round(duracao_execucao, 4),\n            \"arquivo\": arquivo_saida,\n        "
+    }
+  ],
+  "gate": "curl -L -O https://github.com/OHF-Voice/piper1-gpl/releases/download/v1.0.0/piper_linux_x86_64.tar.gz",
+  "comandos": [
+    "curl -L -O https://github.com/OHF-Voice/piper1-gpl/releases/download/v1.0.0/piper_linux_x86_64.tar.gz"
+  ],
+  "feito_quando": [],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 7 — Síntese de Voz: Kokoro e áudio neural local",
+  "lacunas": [
+    "sem_secao_aplica",
+    "feito_quando_insuficiente",
+    "sem_armadilhas"
+  ]
+}

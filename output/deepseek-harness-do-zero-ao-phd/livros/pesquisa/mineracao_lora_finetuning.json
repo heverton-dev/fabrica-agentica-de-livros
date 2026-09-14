@@ -1,0 +1,626 @@
+{
+  "tema": "LoRA QLoRA low rank adaptation parameter efficient fine-tuning",
+  "gerado_em": "23 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=LoRA+QLoRA+low+rank+ -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=LoRA+QLoRA+low+rank+adaptation+parameter+eff -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 3
+    }
+  },
+  "total_unicos": 32,
+  "registros": [
+    {
+      "titulo": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "autores": [
+        "Tim Dettmers",
+        "Artidoro Pagnoni",
+        "Ari Holtzman",
+        "Luke Zettlemoyer"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2305.14314",
+      "url": "http://arxiv.org/abs/2305.14314",
+      "resumo": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.",
+      "citacoes": 506,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models",
+      "autores": [
+        "Yaowei Zheng",
+        "Richong Zhang",
+        "Junhao Zhang",
+        "YeYanhan YeYanhan",
+        "Zheyan Luo"
+      ],
+      "ano": 2024,
+      "doi": "10.18653/v1/2024.acl-demos.38",
+      "url": "https://doi.org/10.18653/v1/2024.acl-demos.38",
+      "resumo": "Efficient fine-tuning is vital for adapting large language models (LLMs) to downstream tasks.However, it requires non-trivial efforts to implement these methods on different models.We present LLAMAFACTORY, a unified framework that integrates a suite of cutting-edge efficient training methods.It provides a solution for flexibly customizing the fine-tuning of 100+ LLMs without the need for coding through the built-in web UI LLAMABOARD.We empirically validate the efficiency and effectiveness of our framework on language modeling and text generation tasks.It has been released at https://github.com/hiyouga/LLaMA-Factoryand received over 25,000 stars and 3,000 forks.",
+      "citacoes": 361,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning",
+      "autores": [
+        "Mingyang Zhang",
+        "H. S. Chen",
+        "Chunhua Shen",
+        "Zhen Yang",
+        "Linlin Ou",
+        "Xinyi Yu",
+        "Bohan Zhuang"
+      ],
+      "ano": 2024,
+      "doi": "10.18653/v1/2024.findings-acl.178",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.178",
+      "resumo": "Large Language Models (LLMs), such as LLaMA and T5, have shown exceptional performance across various tasks through finetuning.Although low-rank adaption (LoRA) has emerged to cheaply fine-tune these LLMs on downstream tasks, their deployment is still hindered by the vast model scale and computational costs.Post-training model pruning offers a way to compress LLMs.However, the current pruning methods designed for LLMs are not compatible with LoRA.This is due to their utilization of unstructured pruning on LLMs, impeding the merging of LoRA weights, or their dependence on the gradients of pre-trained weights to guide pruning, which can impose significant memory overhead.To this end, we propose LoRAPrune, a new framework that delivers an accurate structured pruned model in a highly memory-efficient manner.Specifically, we first design a LoRA-guided pruning criterion, which uses the weights and gradients of LoRA, rather than the gradients of pre-trained weights for importance estimation.We subsequently integrate this criterion into an iterative pruning process, effectively removing redundant channels and heads.Extensive experimental results demonstrate the superior performance of our LoRAPrune over existing approaches on the LLaMA series models.At a 50% compression rate, LoRAPrune demonstrates superior performance over LLM-Pruner, achieving a reduction in perplexity by 4.81 on WikiText2 and 3.46 on PTB, while also decreasing memory usage by 52.6%.Besides, LoRAPrune also matches semi-structural pruning across multiple LLMs, proving its wide applicability.The code is available at https: //github.com/aim-uofa/LoRAPrune.",
+      "citacoes": 52,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Democratizing protein language models with parameter-efficient fine-tuning",
+      "autores": [
+        "Samuel Sledzieski",
+        "Meghana Kshirsagar",
+        "Minkyung Baek",
+        "Rahul Dodhia",
+        "Juan Lavista Ferres",
+        "Bonnie Berger"
+      ],
+      "ano": 2024,
+      "doi": "10.1073/pnas.2405840121",
+      "url": "https://doi.org/10.1073/pnas.2405840121",
+      "resumo": "Proteomics has been revolutionized by large protein language models (PLMs), which learn unsupervised representations from large corpora of sequences. These models are typically fine-tuned in a supervised setting to adapt the model to specific downstream tasks. However, the computational and memory footprint of fine-tuning (FT) large PLMs presents a barrier for many research groups with limited computational resources. Natural language processing has seen a similar explosion in the size of models, where these challenges have been addressed by methods for parameter-efficient fine-tuning (PEFT). In this work, we introduce this paradigm to proteomics through leveraging the parameter-efficient method LoRA and training new models for two important tasks: predicting protein-protein interactions (PPIs) and predicting the symmetry of homooligomer quaternary structures. We show that these approaches are competitive with traditional FT while requiring reduced memory and substantially fewer parameters. We additionally show that for the PPI prediction task, training only the classification head also remains competitive with full FT, using five orders of magnitude fewer parameters, and that each of these methods outperform state-of-the-art PPI prediction methods with substantially reduced compute. We further perform a comprehensive evaluation of the hyperparameter space, demonstrate that PEFT of PLMs is robust to variations in these hyperparameters, and elucidate where best practices for PEFT in proteomics differ from those in natural language processing. All our model adaptation and evaluation code is available open-source at https://github.com/microsoft/peft_proteomics. Thus, we provide a blueprint to democratize the power of PLM",
+      "citacoes": 86,
+      "periodico": "Proceedings of the National Academy of Sciences",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
+      "autores": [
+        "Zeyu Han",
+        "Chao Gao",
+        "Jinyang Liu",
+        "Jeff",
+        "Zhang"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2403.14608",
+      "url": "http://arxiv.org/abs/2403.14608",
+      "resumo": "Large models represent a groundbreaking advancement in multiple application fields, enabling remarkable achievements across various tasks. However, their unprecedented scale comes with significant computational costs. These models, often consisting of billions of parameters, require vast amounts of computational resources for execution. Especially, the expansive scale and computational demands pose considerable challenges when customizing them for particular downstream tasks, particularly over the hardware platforms constrained by computational capabilities. Parameter Efficient Fine-Tuning (PEFT) provides a practical solution by efficiently adjusting the large models over the various downstream tasks. In particular, PEFT refers to the process of adjusting the parameters of a pre-trained large model to adapt it to a specific task or domain while minimizing the number of additional parameters introduced or computational resources required. This approach is particularly important when dealing with large-scale language models with high parameter counts, as fine-tuning these models from scratch can be computationally expensive and resource-intensive, posing considerable challenges in the supporting system platform design. In this survey, we present comprehensive studies of various PEFT algorithms, examining their performance and computational overhead. Moreover, we provide an overview of applications developed using different PEFT algorithms and discuss common techniques employed to mitigate computation costs for PEFT. In addition to providing an extensive survey from an algorithmic standpoint, we also examine various real-world system designs to investigate the implementation costs associated with different PEFT approaches. This survey serves as a valuable resource for researchers aiming to understand both the PEFT algorithm and its system implementation, offering detailed ......",
+      "citacoes": 94,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A survey on LoRA of large language models",
+      "autores": [
+        "Yuren Mao",
+        "Yuhang Ge",
+        "Yijiang Fan",
+        "Wenyi Xu",
+        "Yu Mi",
+        "Zhonghao Hu",
+        "Yunjun Gao"
+      ],
+      "ano": 2024,
+      "doi": "10.1007/s11704-024-40663-9",
+      "url": "https://doi.org/10.1007/s11704-024-40663-9",
+      "resumo": "Abstract Low-Rank Adaptation (LoRA), which updates the dense neural network layers with pluggable low-rank matrices, is one of the best performed parameter efficient fine-tuning paradigms. Furthermore, it has significant advantages in cross-task generalization and privacy-preserving. Hence, LoRA has gained much attention recently, and the number of related literature demonstrates exponential growth. It is necessary to conduct a comprehensive overview of the current progress on LoRA. This survey categorizes and reviews the progress from the perspectives of (1) downstream adaptation improving variants that improve LoRA’s performance on downstream tasks; (2) cross-task generalization methods that mix multiple LoRA plugins to achieve cross-task generalization; (3) efficiency-improving methods that boost the computation-efficiency of LoRA; (4) data privacy-preserving methods that use LoRA in federated learning; (5) application. Besides, this survey also discusses the future directions in this field.",
+      "citacoes": 109,
+      "periodico": "Frontiers of Computer Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning",
+      "autores": [
+        "Vladislav Lialin",
+        "Vijeta Deshpande",
+        "Yao, Xiaowei",
+        "Rumshisky, Anna"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2303.15647",
+      "url": "http://arxiv.org/abs/2303.15647",
+      "resumo": "This paper presents a systematic overview of parameter-efficient fine-tuning methods, covering over 50 papers published between early 2019 and mid-2024. These methods aim to address the challenges of fine-tuning large language models by training only a small subset of parameters. We provide a taxonomy that covers a broad range of methods and present a detailed method comparison with a specific focus on real-life efficiency in fine-tuning multibillion-scale language models. We also conduct an extensive head-to-head experimental comparison of 15 diverse PEFT methods, evaluating their performance and efficiency on models up to 11B parameters. Our findings reveal that methods previously shown to surpass a strong LoRA baseline face difficulties in resource-constrained settings, where hyperparameter optimization is limited and the network is fine-tuned only for a few epochs. Finally, we provide a set of practical recommendations for using PEFT methods and outline potential future research directions.",
+      "citacoes": 69,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+      "autores": [
+        "Shih-Yang Liu",
+        "Chien-Yi Wang",
+        "Hongxu Yin",
+        "Pavlo Molchanov",
+        "Yu-Chiang Frank Wang",
+        "Kwang‐Ting Cheng",
+        "Min-Hung Chen"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2402.09353",
+      "url": "http://arxiv.org/abs/2402.09353",
+      "resumo": "Among the widely used parameter-efficient fine-tuning (PEFT) methods, LoRA and its variants have gained considerable popularity because of avoiding additional inference costs. However, there still often exists an accuracy gap between these methods and full fine-tuning (FT). In this work, we first introduce a novel weight decomposition analysis to investigate the inherent differences between FT and LoRA. Aiming to resemble the learning capacity of FT from the findings, we propose Weight-Decomposed Low-Rank Adaptation (DoRA). DoRA decomposes the pre-trained weight into two components, magnitude and direction, for fine-tuning, specifically employing LoRA for directional updates to efficiently minimize the number of trainable parameters. By employing \\ours, we enhance both the learning capacity and training stability of LoRA while avoiding any additional inference overhead. \\ours~consistently outperforms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruction tuning, and image/video-text understanding. Code is available at https://github.com/NVlabs/DoRA.",
+      "citacoes": 38,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Machine Translation with Large Language Models: Prompting, Few-shot Learning, and Fine-tuning with QLoRA",
+      "autores": [
+        "Xuan Zhang",
+        "Navid Rajabi",
+        "Kevin Duh",
+        "Philipp Koehn"
+      ],
+      "ano": 2023,
+      "doi": "10.18653/v1/2023.wmt-1.43",
+      "url": "https://doi.org/10.18653/v1/2023.wmt-1.43",
+      "resumo": "While large language models have made remarkable advancements in natural language generation, their potential in machine translation, especially when fine-tuned, remains underexplored. In our study, we conduct comprehensive experiments, evaluating 15 publicly available language models on machine translation tasks. We compare the performance across three methodologies: zero-shot prompting, fewshot learning, and fine-tuning. Central to our approach is the use of QLoRA, an efficient finetuning method. On French-English, QLoRA fine-tuning outperforms both few-shot learning and models trained from scratch. This superiority is highlighted in both sentence-level and document-level translations, with a significant BLEU score improvement of 28.93 over the prompting method. Impressively, with QLoRA, the enhanced performance is achieved by finetuning a mere 0.77% of the model's parameters.",
+      "citacoes": 42,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Sparse Low-rank Adaptation of Pre-trained Language Models",
+      "autores": [
+        "Ning Ding",
+        "Xingtai Lv",
+        "Qiaosen Wang",
+        "Yulin Chen",
+        "Bowen Zhou",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "ano": 2023,
+      "doi": "10.18653/v1/2023.emnlp-main.252",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.252",
+      "resumo": "Fine-tuning pre-trained large language models in a parameter-efficient manner is widely studied for its effectiveness and efficiency. The popular method of low-rank adaptation (LoRA) offers a notable approach, hypothesizing that the adaptation process is intrinsically low-dimensional. Although LoRA has demonstrated commendable performance, it is implemented with a fixed and unalterable intrinsic rank that might not always be the ideal choice. Recognizing the need for more flexible adaptation, we extend the methodology of LoRA to an innovative approach we call sparse low-rank adaptation (SoRA) that enables dynamic adjustments to the intrinsic rank during the adaptation process. We achieve this through the incorporation of a gate unit optimized with proximal gradient method in the training stage, controlling the cardinality of rank under the sparsity of the gate. In the subsequent inference stage, we eliminate the parameter blocks corresponding to the zeroed-out ranks, to reduce each SoRA module back to a concise yet rankoptimal LoRA. Our approach strengthens the representation power of LoRA by initializing it with a higher rank, while efficiently taming a temporarily increased number of parameters via updating in a sparse way. We further introduce a sparsifying scheduler for SoRA, aiming to examine the impact of the number of nonzero parameters on the model's memorization and generalization. Our experimental results demonstrate that SoRA can outperform other baselines even with 70% retained parameters and 70% training time.",
+      "citacoes": 50,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "LoRA-TTA: Efficient Test-Time Adaptation via Low-Rank Fine-Tuning with Theoretical Guarantees and Empirical Validation",
+      "autores": [
+        "Sun, Jianzhong"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.7087581",
+      "url": "https://doi.org/10.2139/ssrn.7087581",
+      "resumo": "<jats:p>Test-Time Adaptation (TTA) enables models to adapt to unseen target domains without access to source data. However, existing TTA methods update all model parameters during adaptation, incurring computational costs and memory overhead that preclude deployment on resource-constrained devices.We propose LoRA-TTA, a parameter-efficient TTA framework that applies Low-Rank Adaptation (LoRA) to parameterize model updates. Instead of optimizing millions of parameters, LoRA-TTA learns low-rank decomposition matrices with only thousands of trainable parameters. Theoretical analysis establishes a generalization bound with O(1/√r) dependence on rank and derives an optimal rank formula r* proportional to domain shift magnitude to the power of 2/3.Experiments across 24 domain pairs on two datasets (Office-Home and PACS) and two architectures (ResNet-50 and ViT-B/16) demonstrate consistent improvement. LoRA-TTA updates only 0.033-0.22% of model parameters (462-3029x reduction) while achieving 101-105% of baseline performance. The scaling law is empirically validated with alpha approx 0.74, consistent with the theoretical prediction 2/3, and statistical significance is confirmed across 5 independent runs (p&lt;0.0001). These results demonstrate that LoRA-TTA enables efficient TTA on resource-constrained devices without performance compromise.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "La-LoRA: Parameter-efficient fine-tuning with layer-wise adaptive low-rank adaptation",
+      "autores": [
+        "Gu, Jiancheng",
+        "Yuan, Jiabin",
+        "Cai, Jiyuan",
+        "Zhou, Xianfa",
+        "Fan, Lili"
+      ],
+      "ano": 2026,
+      "doi": "10.1016/j.neunet.2025.108095",
+      "url": "https://doi.org/10.1016/j.neunet.2025.108095",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Neural Networks",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Parameter-Efficient Adaptation of Qwen2.5 for Aspect-Based Sentiment Analysis Using Low-Rank Adaptation and Parameter-Efficient Fine-Tuning",
+      "autores": [
+        "Lim, Pei Ying",
+        "Ho, Chuk Fong",
+        "Tan, Chi Wee"
+      ],
+      "ano": 2026,
+      "doi": "10.3390/engproc2026128015",
+      "url": "https://doi.org/10.3390/engproc2026128015",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "IEEE ICCBE 2025",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Table 2: Ablation study comparing full fine-tuning, LoRA, QLoRA and LoRA + QLoRA configurations of the CodeT5 model.",
+      "autores": [],
+      "ano": null,
+      "doi": "10.7717/peerj-cs.3467/table-2",
+      "url": "https://doi.org/10.7717/peerj-cs.3467/table-2",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Revolutionizing Large Model Fine-Tuning: The Role of LoRA in Parameter-Efficient Adaptation",
+      "autores": [
+        "Shun, Jianhong",
+        "Zheng, Chang"
+      ],
+      "ano": 2025,
+      "doi": "10.36227/techrxiv.174015835.57150536/v1",
+      "url": "https://doi.org/10.36227/techrxiv.174015835.57150536/v1",
+      "resumo": "<jats:p>Fine-tuning large-scale neural networks for specific tasks often requires significant computational power and memory, making it an expensive and resource-intensive process. To address this issue, Parameter-Efficient Fine-Tuning (PEFT) methods have been introduced, enabling adaptation with a reduced number of trainable parameters. Among these techniques, Low-Rank Adaptation (LoRA) has gained widespread recognition for its efficiency and ease of integration. This survey provides a thorough exploration of LoRA, covering its mathematical principles, implementation techniques, and real-world applications. By comparing LoRA to traditional full fine-tuning and other PEFT methods, we highlight its ability to maintain strong performance while significantly cutting down on computational overhead. Empirical evaluations across various NLP benchmarks further demonstrate its effectiveness in reducing memory consumption without sacrificing accuracy. Beyond its advantages, we also examine the challenges associated with LoRA, such as rank selection sensitivity, compatibility with different model architectures, and potential hardware optimizations. Additionally, we discuss promising future directions, including hybrid fine-tuning strategies, dynamic rank adjustment, and expansion into multi-modal learning. By enabling more efficient adaptation of complex models, LoRA represents a crucial advancement in scalable fine-tuning. This survey aims to serve as a valuable resource for researchers and practitioners looking to leverage LoRA for optimized model training across diverse applications.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Parameter-Efficient Fine-Tuning for Photovoltaic Cell Defect Classification: A Systematic Comparison of LoRA, QLoRA, and Full Fine-Tuning on ConvNeXt-Tiny",
+      "autores": [
+        "Bayat Toksöz, Seda",
+        "Işık, Gültekin",
+        "Şahin, Gökhan",
+        "Akin, Erdal"
+      ],
+      "ano": 2026,
+      "doi": "10.3390/s26123659",
+      "url": "https://doi.org/10.3390/s26123659",
+      "resumo": "<jats:p>Automated visual inspection of photovoltaic (PV) cells is an important component of solar-module quality assurance. However, adapting modern pre-trained vision backbones to PV defect classification remains challenging because full fine-tuning requires substantial memory, naturally imbalanced datasets can reduce sensitivity to rare defect classes, and edge-oriented inspection workflows impose computational constraints. Parameter-efficient fine-tuning (PEFT) methods, such as Low-Rank Adaptation (LoRA) and Quantized LoRA (QLoRA), have been widely studied in natural language processing, but their use for PV defect classification remains underexplored. This study presents a controlled benchmark of LoRA and QLoRA against full fine-tuning for PV cell defect classification. Four adaptation strategies—full fine-tuning, LoRA with rank 8, LoRA with rank 16, and 4-bit QLoRA with rank 16—are evaluated using a ConvNeXt-Tiny backbone on a 17,377-image polycrystalline PV cell electroluminescence dataset referred to as POLY, covering five classes: intact, cracked, broken, surface-diffuse, and surface-point. The natural 6.7× class imbalance is preserved without synthetic resampling, and a group-aware StratifiedGroupKFold protocol based on available cell or panel-image identifiers is used to reduce identifiable leakage across folds. All PEFT variants slightly outperform full fine-tuning in macro-F1 while training 26–52× fewer parameters. QLoRA_r16 achieves the highest macro-F1 score of 79.92 ± 0.75%, compared with 78.26 ± 0.94% for full fine-tuning, while training the same number of parameters as LoRA_r16 (1.060 M; 3.67% of the adapted model). QLoRA_r16 also improves F1 on the intact (+4.75 points) and surface-diffuse (+2.62 points) classes relative to full fine-tuning. This class-wise pattern suggests that quantized low-rank adaptation may influence minority and visually ambiguous categories; however, the present experiments do not isolate the independent effect of NF4 quantization from adapter rank, batch size, or optimization dynamics. Under the training configuration used, QLoRA_r16 records the lowest observed peak training GPU memory, approximately 30% below full fine-tuning (1727 MB versus 2478 MB). Because QLoRA_r16 was trained with batch size 16 whereas the other methods used batch size 32, this reduction should be interpreted as an end-to-end configuration effect rather than as the isolated effect of 4-bit quantization. Overall, the results indicate that PEFT is a promising and resource-efficient alternative to full fine-tuning for PV defect classification, although batch-matched memory experiments, direct embedded-device profiling, and cross-dataset validation remain necessary before making deployment-level claims.</jats:p>",
+      "citacoes": null,
+      "periodico": "Sensors",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "LoLDU: Low-Rank Adaptation via Lower-Diag-Upper Decomposition for Parameter-Efficient Fine-Tuning",
+      "autores": [
+        "Shi, Yiming",
+        "Wei, Jiwei",
+        "Wu, Yujia",
+        "Ran, Ran",
+        "Sun, Chengwei"
+      ],
+      "ano": 2024,
+      "doi": "10.32388/in8jl4",
+      "url": "https://doi.org/10.32388/in8jl4",
+      "resumo": "<jats:p>The rapid growth of model scale has necessitated substantial computational resources for fine-tuning. Existing approach such as Low-Rank Adaptation (LoRA) has sought to address the problem of handling the large updated parameters in full fine-tuning. However, LoRA utilize random initialization and optimization of low-rank matrices to approximate updated weights, which can result in suboptimal convergence and an accuracy gap compared to full fine-tuning. To address these issues, we propose LoLDU, a Parameter-Efficient Fine-Tuning (PEFT) approach that significantly reduces trainable parameters by 2600 times compared to regular PEFT methods while maintaining comparable performance. LoLDU leverages Lower-Diag-Upper Decomposition (LDU) to initialize low-rank matrices for faster convergence and orthogonality. We focus on optimizing the diagonal matrix for scaling transformations. To the best of our knowledge, LoLDU has the fewest parameters among all PEFT approaches. We conducted extensive experiments across 4 instruction-following datasets, 6 natural language understanding (NLU) datasets, 8 image classification datasets, and image generation datasets with multiple model types (LLaMA2, RoBERTa, ViT, and Stable Diffusion), providing a comprehensive and detailed analysis. Our open-source code can be accessed at https://github.com/SKDDJ/LoLDU.\n</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Activation-Guided Low-Rank Parameter Adaptation for Efficient Model Fine-Tuning",
+      "autores": [
+        "Wang, Qingchen",
+        "Shen, Shengyu"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/access.2025.3533701",
+      "url": "https://doi.org/10.1109/access.2025.3533701",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "IEEE Access",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Matrix-Transformation Based Low-Rank Adaptation (MTLoRA): A Brain-Inspired Method for Parameter-Efficient Fine-Tuning",
+      "autores": [
+        "Liang, Yao",
+        "Wang, Yuwei",
+        "Li, Yang",
+        "Zeng, Yi"
+      ],
+      "ano": 2024,
+      "doi": "10.2139/ssrn.4773592",
+      "url": "https://doi.org/10.2139/ssrn.4773592",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Impact of Low Rank Adaptation with Parameter Efficient Fine-Tuning Techniques on Transformer Models",
+      "autores": [
+        "Kalra, Manish",
+        "Sharma, Vasuda"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/incet64471.2025.11139894",
+      "url": "https://doi.org/10.1109/incet64471.2025.11139894",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 6th International Conference for Emerging Technology (INCET)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Parameter-Efficient Fine-Tuning for HAR: Integrating LoRA and QLoRA into Transformer Models",
+      "autores": [
+        "Irina Seregina",
+        "Philippe Lalanda",
+        "German Vega"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2512.17983v1",
+      "resumo": "Human Activity Recognition is a foundational task in pervasive computing. While recent advances in self-supervised learning and transformer-based architectures have significantly improved HAR performance, adapting large pretrained models to new domains remains a practical challenge due to limited computational resources on target devices. This papers investigates parameter-efficient fine-tuning techniques, specifically Low-Rank Adaptation (LoRA) and Quantized LoRA, as scalable alternatives to full model fine-tuning for HAR. We propose an adaptation framework built upon a Masked Autoencoder backbone and evaluate its performance under a Leave-One-Dataset-Out validation protocol across five open HAR datasets. Our experiments demonstrate that both LoRA and QLoRA can match the recognition performance of full fine-tuning while significantly reducing the number of trainable parameters, memory usage, and training time. Further analyses reveal that LoRA maintains robust performance even under limited supervision and that the adapter rank provides a controllable trade-off between accuracy and efficiency. QLoRA extends these benefits by reducing the memory footprint of frozen weights through quantization, with minimal impact on classification quality.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Text to Trust: Evaluating Fine-Tuning and LoRA Trade-offs in Language Models for Unfair Terms of Service Detection",
+      "autores": [
+        "Noshitha Padma Pratyusha Juttu",
+        "Sahithi Singireddy",
+        "Sravani Gona",
+        "Sujal Timilsina"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.22531v1",
+      "resumo": "Large Language Models (LLMs) have transformed text understanding, yet their adaptation to specialized legal domains remains constrained by the cost of full fine-tuning. This study provides a systematic evaluation of fine tuning, parameter efficient adaptation (LoRA, QLoRA), and zero-shot prompting strategies for unfair clause detection in Terms of Service (ToS) documents, a key application in legal NLP. We finetune BERT and DistilBERT, apply 4-bit Low-Rank Adaptation (LoRA) to models such as TinyLlama, LLaMA 3B/7B, and SaulLM, and evaluate GPT-4o and O-versions in zero-shot settings. Experiments on the CLAUDETTE-ToS benchmark and the Multilingual Scraper Corpus show that full fine-tuning achieves the strongest precision recall balance, while LoRA-based models provide competitive recall with up to 3x lower memory cost. These findings highlight practical design trade-offs for efficient and domain-adapted LLMs, contributing open baselines for fine-tuning research in legal text processing.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Adapting Large Language Models to a Low-Resource Agglutinative Language: A Comparative Study of LoRA and QLoRA for Bashkir",
+      "autores": [
+        "Mullosharaf K. Arabov",
+        "Svetlana S. Khaybullina"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2605.04948v2",
+      "resumo": "This paper presents a comparative study of parameter-efficient fine-tuning (PEFT) methods, including LoRA and QLoRA, applied to the task of adapting large language models to the Bashkir language, a low-resource agglutinative language of the Turkic family. Experimental evaluation is conducted on a Bashkir text corpus of 71k documents (46.9M tokens) using models of various architectures: DistilGPT2, GPT-2 (base, medium), Phi-2, Qwen2.5-7B, DeepSeek-7B, and Mistral-7B. To improve the reliability of results, each configuration was trained with three different random seeds.\n  The lowest perplexity on the test set was obtained for GPT-2 medium with full fine-tuning (3.34). Meanwhile, QLoRA applied to Mistral-7B (3.79) and Phi-2 (3.81) achieved comparable quality with over 40 times fewer trainable parameters. However, we also observed cases of significant quality degradation when using PEFT for certain architectures (e.g., DeepSeek-7B with rank 8, perplexity = 129.55), indicating that the outcome depends critically on the choice of the base model and its tokenizer.\n  Additionally, a qualitative analysis of generated texts based on Bashkir prompts revealed that models with the best perplexity do not necessarily produce the most coherent outputs: QLoRA-tuned models generated monolingual Bashkir continuations, whereas the fully fine-tuned model with the lowest perplexity frequently switched to English. The results suggest that QLoRA on 7B-scale models offers an effective compromise between quality and computational cost for Bashkir. To ensure reproducibility, open data, code, and trained adapters will be released upon acceptance.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Efficient Ensemble for Fine-tuning Language Models on Multiple Datasets",
+      "autores": [
+        "Dongyue Li",
+        "Ziniu Zhang",
+        "Lu Wang",
+        "Hongyang R. Zhang"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2505.21930v1",
+      "resumo": "This paper develops an ensemble method for fine-tuning a language model to multiple datasets. Existing methods, such as quantized LoRA (QLoRA), are efficient when adapting to a single dataset. When training on multiple datasets of different tasks, a common setup in practice, it remains unclear how to design an efficient adaptation for fine-tuning language models. We propose to use an ensemble of multiple smaller adapters instead of a single adapter per task. We design an efficient algorithm that partitions $n$ datasets into $m$ groups, where $m$ is typically much smaller than $n$ in practice, and train one adapter for each group before taking a weighted combination to form the ensemble. The algorithm leverages a first-order approximation property of low-rank adaptation to quickly obtain the fine-tuning performances of dataset combinations since methods like LoRA stay close to the base model. Hence, we use the gradients of the base model to estimate its behavior during fine-tuning. Empirically, this approximation holds with less than $1\\%$ error on models with up to $34$ billion parameters, leading to an estimation of true fine-tuning performances under $5\\%$ error while speeding up computation compared to base fine-tuning by $105$ times. When applied to fine-tune Llama and GPT models on ten text classification tasks, our approach provides up to $10\\%$ higher average test accuracy over QLoRA, with only $9\\%$ more FLOPs. On a Llama model with $34$ billion parameters, an ensemble of QLoRA increases test accuracy by $3\\%$ compared to QLoRA, with only $8\\%$ more FLOPs.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Evolution of meta's llama models and parameter-efficient fine-tuning of large language models: a survey",
+      "autores": [
+        "Abdulhady Abas Abdullah",
+        "Arkaitz Zubiaga",
+        "Seyedali Mirjalili",
+        "Amir H. Gandomi",
+        "Fatemeh Daneshfar",
+        "Mohammadsadra Amini",
+        "Alan Salam Mohammed",
+        "Hadi Veisi"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.12178v1",
+      "resumo": "This review surveys the rapid evolution of Meta AI's LLaMA (Large Language Model Meta AI) series - from LLaMA 1 through LLaMA 4 and the specialized parameter-efficient fine-tuning (PEFT) methods developed for these models. We first describe the LLaMA family of foundation models (7B-65B to 288B parameters), their architectures (including native multimodal and Mixtureof-Experts variants), and key performance characteristics. We then describe and discuss the concept of PEFT, which adapts large pre-trained models by updating only a small subset of parameters, and review five PEFT methods that have been applied to LLaMA: LoRA (Low-Rank Adaptation), LLaMA-Adapter V1 and V2, LLaMA-Excitor, and QLoRA (Quantized LoRA). We discuss each method's mechanism, parameter savings, and example application to LLaMA (e.g., instruction tuning, multimodal tasks). We provide structured discussion and analysis of model and adapter architectures, parameter counts, and benchmark results (including examples where fine-tuned LLaMA models outperform larger baselines). Finally, we examine real-world use cases where LLaMA-based models and PEFT have been successfully applied (e.g., legal and medical domains), and we discuss ongoing challenges and future research directions (such as scaling to even larger contexts and improving robustness). This survey paper provides a one-stop resource for ML researchers and practitioners interested in LLaMA models and efficient fine-tuning strategies.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Enhancing Low-Rank Adaptation with Structured Nonlinear Transformations",
+      "autores": [
+        "Guanzhi Deng",
+        "Mingyang Liu",
+        "Dapeng Wu",
+        "Yinqiao Li",
+        "Linqi Song"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2509.21870v1",
+      "resumo": "Low-Rank Adaptation (LoRA) is a widely adopted parameter-efficient fine-tuning method for large language models. However, its linear nature limits expressiveness. We propose LoRAN, a non-linear extension of LoRA that applies lightweight transformations to the low-rank updates. We further introduce Sinter, a sine-based activation that adds structured perturbations without increasing parameter count. Experiments across summarization and classification tasks show that LoRAN consistently improves over QLoRA. Ablation studies reveal that Sinter outperforms standard activations such as Sigmoid, ReLU, and Tanh, highlighting the importance of activation design in lowrank tuning.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Fine-tuning of Large Language Models for Domain-Specific Cybersecurity Knowledge",
+      "autores": [
+        "Yuan Huang"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2509.25241v1",
+      "resumo": "Recent advancements in training paradigms for Large Language Models (LLMs) have unlocked their remarkable capabilities in natural language processing and cross-domain generalization. While LLMs excel in tasks like programming and mathematical problem-solving, their zero-shot performance in specialized domains requiring expert knowledge, such as cybersecurity, is often suboptimal. This limitation arises because foundational LLMs are designed for general-purpose applications, constraining their ability to encapsulate domain-specific expertise within their parameter space. To address this, we explore fine-tuning strategies to embed cybersecurity knowledge into LLMs, enhancing their performance in cybersecurity question-answering (Q\\&A) tasks while prioritizing computational efficiency. Specifically, we investigate Supervised Fine-Tuning (SFT), Low-Rank Adaptation (LoRA), and Quantized Low-Rank Adaptation (QLoRA) using a cybersecurity Q\\&A dataset. Our results demonstrate that these fine-tuning approaches significantly outperform the foundational model in cybersecurity Q\\&A tasks. Moreover, LoRA and QLoRA achieve comparable performance to SFT with substantially lower computational costs, offering an efficient pathway for adapting LLMs to specialized domains. Our work highlights the potential of low-rank fine-tuning strategies to bridge the gap between general-purpose LLMs and domain-specific applications.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "How Small Can You Go? A Controlled Study of LoRA Rank, Target Modules, and Quantization Trade-offs for Text-to-SQL on a 60M-Parameter Model",
+      "autores": [
+        "Mahendra Singh Rathor",
+        "Anagheem Azzam"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2607.25583v1",
+      "resumo": "Parameter-efficient fine-tuning (PEFT) and low-bit quantization are now standard tools for adapting language models under tight compute budgets, yet their interaction is most often studied on billion-parameter models where the design space is expensive to explore. We ask a complementary question: on a specific, fully reproducible 60M-parameter encoder-decoder model (T5-small) and a single-table text-to-SQL benchmark (WikiSQL), how much task accuracy does each efficiency knob actually cost? We run a controlled, single-variable study over (i) LoRA rank r in {2, 4, 8, 16, 32}, (ii) the set of adapted modules, and (iii) numerical precision. We report task accuracy alongside system-level metrics including trainable parameters, peak training memory, inference latency, and throughput, and frame adaptation as a constrained trade-off rather than an accuracy-only objective. Our results show that LoRA with r=16 recovers within 11.6 percentage points of full fine-tuning accuracy (59.6% vs. 71.2% exact-match) while training fewer than 1% of parameters and consuming 31% less peak GPU memory. Within this setting, rank beyond r=16 yields no measurable accuracy gain. QLoRA with INT8 and NF4 quantization achieves comparable accuracy (52.8% and 53.2%) at dramatically lower memory cost (0.60 GB each), demonstrating a compelling trade-off for memory-constrained deployments. All code, configurations, and logs are released for full reproducibility.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "GRIT -- Geometry-Aware PEFT with K-FACPreconditioning, Fisher-Guided Reprojection, andDynamic Rank Adaptation",
+      "autores": [
+        "Pritish Saha",
+        "Chandrav Rajbangshi",
+        "Rudra Goyal",
+        "Mohit Goyal",
+        "Anurag Deo",
+        "Biswajit Roy",
+        "Ningthoujam Dhanachandra Singh",
+        "Raxit Goswami",
+        "Amitava Das"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2601.00231v1",
+      "resumo": "Parameter-efficient fine-tuning (PEFT) is the default way to adapt LLMs, but widely used LoRA and QLoRA are largely geometry-agnostic: they optimize in fixed, randomly oriented low-rank subspaces with first-order descent, mostly ignoring local loss curvature. This can inflate the effective update budget and amplify drift along weakly constrained directions. We introduce GRIT, a dynamic, curvature-aware LoRA procedure that preserves the LoRA parameterization but: (1) preconditions gradients in rank space using K-FAC as a natural-gradient proxy; (2) periodically reprojects the low-rank basis onto dominant Fisher eigendirections to suppress drift; and (3) adapts the effective rank from the spectrum so capacity concentrates where signal resides. Across instruction-following, comprehension, and reasoning benchmarks on LLaMA backbones, GRIT matches or surpasses LoRA and QLoRA while reducing trainable parameters by 46% on average (25--80% across tasks), without practical quality loss across prompt styles and data mixes. To model forgetting, we fit a curvature-modulated power law. Empirically, GRIT yields lower drift and a better updates-vs-retention frontier than strong PEFT-optimizer baselines (Orthogonal-LoRA, IA3, DoRA, Eff-FT, Shampoo).",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Random Initialization of Gated Sparse Adapters",
+      "autores": [
+        "Vi Retault",
+        "Yohaï-Eliel Berreby"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2511.01794v1",
+      "resumo": "When fine-tuning language models on new tasks, catastrophic forgetting -- performance degradation on previously-learned tasks -- is a ubiquitous problem. While Parameter-Efficient Fine-Tuning (PEFT) methods like LoRA address this through low-rank adapters, sparse adaptation offers an alternative that doesn't impose rank constraints. We introduce Random Initialization of Gated Sparse Adapters (RIGSA), which starts from randomly-initialized full-rank adapters, gates them with a ReZero analog, and sparsifies them with iterative magnitude pruning. We evaluate RIGSA on SmolLM2-1.7B-Instruct using a novel vision-in-text task (Textual MNIST) and measure forgetting on PIQA, HellaSwag, and GSM8k. SmolLM2-1.7B-Instruct initially performs around chance level on Textual MNIST, and is capable of learning the task through RIGSA, 4-bit QLoRA and random masking. In spite of having more trainable parameters than QLoRA, the RIGSA configurations that we studied displayed less forgetting than QLoRA, particularly on GSM8k, though it performs comparably to random masking.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "An efficient strategy for fine-tuning large language models.",
+      "autores": [
+        "Marsh B",
+        "Michaleas A",
+        "Ricke DO",
+        "Monera S",
+        "Zembruski S"
+      ],
+      "ano": 2026,
+      "doi": "10.3389/frai.2026.1665992",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41783256/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Frontiers in artificial intelligence",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "For clinical data extraction, QLoRA attains accuracy close to LoRA while requiring lower compute resources.",
+      "autores": [
+        "Shakya PR",
+        "Khaneja A",
+        "Wagholikar KB"
+      ],
+      "ano": 2025,
+      "doi": "10.1101/2025.10.21.25338506",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41282707/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "medRxiv : the preprint server for health sciences",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    }
+  ]
+}

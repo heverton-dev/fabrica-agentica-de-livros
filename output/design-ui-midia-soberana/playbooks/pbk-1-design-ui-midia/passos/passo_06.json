@@ -1,0 +1,48 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Geração de Imagens: ComfyUI e o controle total da difusão",
+  "estagio": "Estágio 2",
+  "estagio_indice": 2,
+  "objetivo": "No Capítulo 5, você dominou o upscaling local com ferramentas como Real-ESRGAN  e Upscayl , aprendendo a ampliar e restaurar ativos visuais diretamente no seu computador sem depender de APIs proprietárias ou servidores em nuvem. Essa capacidade de aprimorar imagens já existentes…",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [
+    "models/checkpoints/"
+  ],
+  "execucao": [
+    {
+      "titulo": "Instalação e Execução Local",
+      "linguagem": "bash",
+      "comandos": [
+        "git clone https://github.com/Comfy-Org/ComfyUI.git",
+        "python3 -m venv venv",
+        "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121",
+        "pip install -r requirements.txt",
+        "python3 main.py --listen 127.0.0.1 --port 8188"
+      ],
+      "codigo": "# Clonar o repositorio oficial da engine\ngit clone https://github.com/Comfy-Org/ComfyUI.git\ncd ComfyUI\n\n# Criar e ativar o ambiente virtual Python\npython3 -m venv venv\nsource venv/bin/activate\n\n# Instalar as dependencias de aceleração de hardware (PyTorch e TorchVision)\npip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121\npip install -r requirements.txt\n\n# Iniciar o servidor local na porta padrao 8188\npython3 main.py --listen 127.0.0.1 --port 8188"
+    },
+    {
+      "titulo": "Estrutura do Grafo e Metadados no PNG",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"id\": 3,\n  \"type\": \"KSampler\",\n  \"inputs\": {\n    \"seed\": 428910482,\n    \"steps\": 25,\n    \"cfg\": 7.5,\n    \"sampler_name\": \"euler_ancestral\",\n    \"scheduler\": \"karras\",\n    \"denoise\": 1.0,\n    \"model\": [\"1\", 0],\n    \"positive\": [\"6\", 0],\n    \"negative\": [\"7\", 0],\n    \"latent_image\": [\"5\", 0]\n  },\n  \"outputs\": {\n    \"LATENT\": [\"4\", 0]\n  }\n}"
+    }
+  ],
+  "gate": "git clone https://github.com/Comfy-Org/ComfyUI.git",
+  "comandos": [
+    "git clone https://github.com/Comfy-Org/ComfyUI.git",
+    "python3 -m venv venv",
+    "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121",
+    "pip install -r requirements.txt",
+    "python3 main.py --listen 127.0.0.1 --port 8188"
+  ],
+  "feito_quando": [],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 6 — Geração de Imagens: ComfyUI e o controle total da difusão",
+  "lacunas": [
+    "sem_secao_aplica",
+    "feito_quando_insuficiente",
+    "sem_armadilhas"
+  ]
+}

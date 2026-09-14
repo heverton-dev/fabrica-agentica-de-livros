@@ -1,0 +1,18 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "1" },
+  "estado_execucao": "concluido_autonomo",
+  "titulo": "O Manual Suspeito: Por Que Comandos Bonitos Enganam",
+  "callback_capitulo_anterior": null,
+  "validacoes": {
+    "validar_codigo": "OK (2/2 blocos verificaveis, sintaxe e execucao)",
+    "renderizar_diagramas": "OK (1/1 diagrama mermaid valido)",
+    "validar_metricas": "OK (4 metricas, 0 violacoes)",
+    "validar_escala": "OK (limite de escala declarado na secao Aplica)",
+    "validar_afirmacoes": "OK (0 violacoes apos correcao de 3 paragrafos)",
+    "validar_fontes": "OK (A+B = 84%, minimo 70%)",
+    "validar_referencias_sem_rede": "OK (24 referencias, 0 reprovadas)",
+    "r4_min_referencias": "24 >= 20 (min_referencias_por_capitulo)",
+    "r14_sem_orfaos": "OK (24 citados no corpo == 24 na secao 7, bijecao exata)"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "Modelos DeepSeek: Escolhendo o Motor da Sua Oficina",
+  "estagio": "Kit de pecas",
+  "estagio_indice": 1,
+  "objetivo": "Compreender a familia de modelos e hardware necessario.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Instalando e Testando Modelos com Ollama",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Instalar modelos de diferentes tamanhos\nollama pull deepseek-v4:7b      # ~4.7GB download\nollama pull deepseek-r1:14b     # ~9GB download\nollama pull deepseek-r1:32b     # ~19GB download\n\n# Listar modelos instalados\nollama list\n# NAME                    ID            SIZE      MODIFIED\n# deepseek-v4:7b          a1b2c3d4      4.7 GB    2 minutes ago\n# deepseek-r1:14b         e5f6g7h8      9.0 GB    5 minutes ago\n# deepseek-r1:32b         i9j0k1l2      19.0 GB   10 minutes ago\n\n# Testar cada modelo\nollama run deepseek-v4:7b \"Explique o que é um plugin em 3 frases\"\nollama run deepseek-r1:14b \"Resolva: qual é a derivada de x^3 + 2x?\"\nollama run deepseek-r1:32b \"Escreva uma função Python que valida CPF\""
+    },
+    {
+      "titulo": "Monitorando VRAM em Tempo Real",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# NVIDIA (Linux)\nwatch -n 1 nvidia-smi\n\n# macOS (Apple Silicon)\nsudo powermetrics --samplers gpu_power -n 1 -i 1000\n\n# Windows\nnvidia-smi -l 1"
+    },
+    {
+      "titulo": "Conectando o Modelo ao DeepSeek Harness",
+      "linguagem": "bash",
+      "comandos": [
+        "curl http://localhost:11434/api/tags"
+      ],
+      "codigo": "# Verificar que o Ollama está rodando\ncurl http://localhost:11434/api/tags\n\n# Configurar o DeepSeek Harness para usar Ollama\ndsh config set-model ollama deepseek-v4:7b\n\n# Iniciar o harness com o modelo local\ndsh --mode standard\n\n# Testar no harness\ndsh> Escreva uma função Python que calcula Fibonacci"
+    },
+    {
+      "titulo": "Exportando Modelo Quantizado do HuggingFace",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Baixar modelo GGUF do HuggingFace (exemplo: 7B)\nhuggingface-cli download deepseek-ai/DeepSeek-V4-7B-GGUF \\\n  --include \"deepseek-v4-7b-q4_k_m.gguf\" \\\n  --local-dir ./models/\n\n# Testar com llama.cpp\n./llama-cli -m ./models/deepseek-v4-7b-q4_k_m.gguf \\\n  -p \"Explique plugins em IA\" -n 200"
+    }
+  ],
+  "gate": "curl http://localhost:11434/api/tags",
+  "comandos": [
+    "curl http://localhost:11434/api/tags"
+  ],
+  "feito_quando": [
+    "O modelo carregou parcialmente",
+    "Cada resposta levava 45 segundos em vez de 2",
+    "Ele gastou três horas tentando otimizar parâmetros do Ollama antes de perceber que simplesmente não tinha VRAM suficiente para aquele modelo [4]",
+    "A solução: ele trocou para o DeepSeek-R1-14B em quantização Q4_K_M",
+    "O modelo cabia inteiro na GPU"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 3 — Modelos DeepSeek: Escolhendo o Motor da Sua Oficina",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

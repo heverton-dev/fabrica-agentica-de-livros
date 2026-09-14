@@ -1,0 +1,62 @@
+{
+  "numero": "12",
+  "capitulo_fonte": "12",
+  "titulo": "Super-Auditoria e Entrega Soberana: O Certificado de Confiabilidade",
+  "estagio": "Circuito de segurança",
+  "estagio_indice": 3,
+  "objetivo": "Fechar o ciclo com a auditoria final determinística, o pacote de entrega verificável e a evolução contínua da fábrica sem dívida técnica silenciosa.",
+  "pre_requisito": "Passo 11 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Auditor do pacote de entrega",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Auditor do pacote de entrega: prova que cada item existe e abre.\"\"\"\n\nimport json\nimport sys\nimport zipfile\nfrom pathlib import Path\nfrom typing import Dict, List\n\nLEITORES = {\n    \".md\": lambda p: p.read_text(encoding=\"utf-8\"),\n    \".json\": lambda p: json.loads(p.read_text(encoding=\"utf-8\")),\n    \".txt\": lambda p: p.read_text(encoding=\"utf-8\"),\n    \".html\": lambda p: p.read_text(encoding=\"utf-8\"),\n    \".csv\": lambda p: p.read_text(encoding=\"utf-8\"),\n}\n\n\ndef abre(caminho: Path) -> Dict[str, str]:\n    \"\"\"Confirma que o arquivo existe e que o conteudo e legivel no formato.\"\"\"\n    if not caminho.exists():\n        return {\"item\": caminho.name, \"status\": \"ausente\", \"detalhe\": \"nao encontrado\"}\n    if caminho.stat().st_size == 0:\n        return {\"item\": caminho.name, \"status\": \"vazio\", \"detalhe\": \"zero bytes\"}\n\n    extensao = caminho.suffix.lower()\n    if extensao == \".pdf\":\n        cabecalho = caminho.open(\"rb\").read(5)\n        ok = cabecalho == b\"%PDF-\"\n        return {\"item\": caminho.name, \"status\": \"ok\" if ok else \"corrompido\",\n                \"detalhe\": \"cabecalho PDF valido\" if ok else \"cabecalho invalido\"}\n    if extensao in (\".epub\", \".zip\"):\n        try:\n            with zipfile.ZipFile(caminho) as pacote:\n                nomes = pacote.namelist()\n            return {\"item\": caminho.name, \"status\": \"ok\" if nomes else \"vazio\",\n                    \"detalhe\": f\"{len(nomes)} entrada(s)\"}\n        except zipfile.BadZipFile:\n            return {\"item\": caminho.name, \"status\": \"corrompido\", \"detalhe\": \"zip invalido\"}\n\n    leitor ="
+    },
+    {
+      "titulo": "4.2 Manifesto de entrega com omissões declaradas",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"obra\": \"O Tratado das 4 Camadas da Fabrica Agentica\",\n  \"edicao\": \"v3.0 — Edicao Expandida e Definitiva\",\n  \"gerado_em\": \"2026-09-12\",\n  \"entregues\": [\n    { \"item\": \"livro_final.pdf\", \"formato\": \"pdf\", \"verificacao\": \"cabecalho PDF valido\" },\n    { \"item\": \"livro_final.md\", \"formato\": \"markdown\", \"verificacao\": \"abre em utf-8\" },\n    { \"item\": \"playbook.pdf\", \"formato\": \"pdf\", \"verificacao\": \"cabecalho PDF valido\" }\n  ],\n  \"nao_entregues\": [\n    { \"item\": \"campanhas/\", \"motivo\": \"nao solicitado pelo operador na fase 0\" },\n    { \"item\": \"maquina/\", \"motivo\": \"nao solicitado pelo operador na fase 0\" }\n  ],\n  \"garantias_medidas\": [\n    { \"afirmacao\": \"auditoria de requisitos contratuais\", \"comando\": \"auditar-obra --estrito\", \"resultado\": \"exit 0\" },\n    { \"afirmacao\": \"sintaxe de todos os blocos de codigo\", \"comando\": \"validar-codigo\", \"resultado\": \"100% aprovados\" }\n  ]\n}"
+    },
+    {
+      "titulo": "4.3 Sessão de encerramento",
+      "linguagem": "console",
+      "comandos": [
+        "python auditar-obra.py --estrito",
+        "python auditar-pacote.py distribuicao"
+      ],
+      "codigo": "$ python auditar-obra.py --estrito\n[FALHA] R4  Minimo 20 referencias ABNT por capitulo\n        -> capitulos abaixo: 7\n[REPROVADO] exit 1 — 1 requisito nao conforme.\nRelatorio: revisao/relatorio_auditoria.json\n\n$ python auditar-obra.py --estrito\n[OK] R3 7 secoes EITA-V2 por capitulo\n[OK] R4 Minimo 20 referencias ABNT por capitulo\n[OK] R13 Sem truncamento nem pendencias\n[OK] R14 Rastreabilidade [N] texto <-> referencias\n[CONFORME] exit 0 — nenhum requisito pendente.\n\n$ python auditar-pacote.py distribuicao\n[           OK] livro_final.pdf — cabecalho PDF valido\n[           OK] livro_final.md — conteudo legivel\n[           OK] playbook.pdf — cabecalho PDF valido\n--------------------------------------------------------------\n[APROVADO] exit 0 — pacote integro e verificavel."
+    },
+    {
+      "titulo": "4.5 Gerador do certificado de confiabilidade",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Gerador do certificado de confiabilidade a partir de verificacoes executadas.\"\"\"\n\nimport json\nimport sys\nfrom dataclasses import dataclass, asdict\nfrom pathlib import Path\nfrom typing import List, Optional\n\nAPROVADO = \"aprovado\"\nREPROVADO = \"reprovado\"\nNAO_VERIFICADO = \"nao-verificavel\"\n\n\n@dataclass(frozen=True)\nclass Verificacao:\n    afirmacao: str\n    comando: str\n    exit_code: Optional[int]\n\n    def status(self) -> str:\n        if self.exit_code is None:\n            return NAO_VERIFICADO\n        return APROVADO if self.exit_code == 0 else REPROVADO\n\n    def linha(self) -> str:\n        marca = self.status().upper()\n        codigo = \"-\" if self.exit_code is None else str(self.exit_code)\n        return f\"[{marca:>15}] {self.afirmacao} (comando: {self.comando}, exit {codigo})\"\n\n\ndef semaforo(verificacoes: List[Verificacao]) -> str:\n    \"\"\"Veredito binario: uma reprovacao bloqueia; nao verificavel vira ressalva.\"\"\"\n    if any(v.status() == REPROVADO for v in verificacoes):\n        return \"NAO CONFORME\"\n    if any(v.status() == NAO_VERIFICADO for v in verificacoes):\n        return \"CONFORME COM RESSALVA\"\n    return \"CONFORME\"\n\n\ndef validar_certificado(verificacoes: List[Verificacao]) -> List[str]:\n    problemas: List[str] = []\n    if not verificacoes:\n        problemas.append(\"certificado vazio: nenhuma verificacao executada\")\n    for v in verificacoes:\n        if not v.comando.strip():\n            problemas.append(f\"afirmacao sem comando de medicao: {v.afirmacao!r}\")\n        if len(v.afirmacao.split()) < 4:\n            proble"
+    }
+  ],
+  "gate": "python auditar-obra.py --estrito",
+  "comandos": [
+    "python auditar-obra.py --estrito",
+    "python auditar-pacote.py distribuicao"
+  ],
+  "feito_quando": [
+    "Aceitar veredito com ressalvas em requisito bloqueante. Ressalva em requisito é requisito não cumprido com nome diferente",
+    "Confiar em benchmark público como certificado. A evidência é clara: em conjuntos com casos não publicados, a resolução dos mesmos modelos recua para a casa dos 17% [3]",
+    "Escrever a verdade sem medi-la. Toda afirmação de cobertura precisa do comando que a produziu; sem isso, ela é hipótese",
+    "Entregar pacote sem declarar omissões. O que fica de fora em silêncio é indistinguível de esquecimento",
+    "Não inspecionar o que a leitura não vê. Sobreposição, terminologia e truncamento são invisíveis a olho nu e triviais para o auditor [15]"
+  ],
+  "armadilhas": [
+    "Aceitar veredito com ressalvas em requisito bloqueante. Ressalva em requisito é requisito não cumprido com nome diferente",
+    "Confiar em benchmark público como certificado. A evidência é clara: em conjuntos com casos não publicados, a resolução dos mesmos modelos recua para a casa dos 17% [3]",
+    "Escrever a verdade sem medi-la. Toda afirmação de cobertura precisa do comando que a produziu; sem isso, ela é hipótese",
+    "Entregar pacote sem declarar omissões. O que fica de fora em silêncio é indistinguível de esquecimento",
+    "Não inspecionar o que a leitura não vê. Sobreposição, terminologia e truncamento são invisíveis a olho nu e triviais para o auditor [15]"
+  ],
+  "referencia_cruzada": "Cap. 12 — Super-Auditoria e Entrega Soberana: O Certificado de Confiabilidade",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

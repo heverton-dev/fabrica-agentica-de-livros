@@ -1,0 +1,60 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "Probabilismo e determinismo: onde cada um manda",
+  "estagio": "Cabine",
+  "estagio_indice": 1,
+  "objetivo": "Estabelecer a fronteira de responsabilidade entre o que deve ser decidido pelo modelo e o que deve ser garantido por código.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Movimento 1: um gate mínimo que reprova por contrato",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Gate minimo: valida o esquema de um JSON de configuracao.\"\"\"\nimport json\nimport sys\nfrom pathlib import Path\n\nCAMPOS_OBRIGATORIOS = (\"tema\", \"tipo_obra\", \"min_referencias_por_capitulo\")\n\n\ndef validar(caminho):\n    erros = []\n    try:\n        dados = json.loads(Path(caminho).read_text(encoding=\"utf-8\"))\n    except json.JSONDecodeError as exc:\n        return [f\"JSON invalido em {caminho}:{exc.lineno}: {exc.msg}\"]\n\n    for campo in CAMPOS_OBRIGATORIOS:\n        if campo not in dados:\n            erros.append(f\"{caminho}: campo obrigatorio ausente -> {campo}\")\n\n    refs = dados.get(\"min_referencias_por_capitulo\")\n    if isinstance(refs, int) and not (1 <= refs <= 20):\n        erros.append(f\"{caminho}: min_referencias_por_capitulo fora de 1..20 -> {refs}\")\n\n    return erros\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 2:\n        print(\"uso: python gate_config.py <arquivo.json>\")\n        sys.exit(2)\n    problemas = validar(sys.argv[1])\n    for p in problemas:\n        print(f\"[REPROVADO] {p}\")\n    sys.exit(1 if problemas else 0)"
+    },
+    {
+      "titulo": "Movimento 3: meça o que o gate já evitou",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"gate\": \"gate_estrutura_eita\",\n  \"artefato\": \"cap_07.md\",\n  \"data\": \"2026-09-12\",\n  \"resultado\": \"reprovado\",\n  \"motivos\": [\"secao 4 com 0 blocos de codigo\", \"citacao orfa [19]\"],\n  \"custo_evitado_estimado_usd\": 0.42,\n  \"tempo_evitado_min\": 11\n}"
+    },
+    {
+      "titulo": "Movimento 4: fixe a ordem de execução",
+      "linguagem": "bash",
+      "comandos": [
+        "python scripts/validar-forma.py \"$ARTEFATO\" || exit 1",
+        "python scripts/validar-contrato.py \"$ARTEFATO\" || exit 1",
+        "python scripts/validar-merito.py \"$ARTEFATO\" || exit 1"
+      ],
+      "codigo": "# Esteira de verificacao: para no primeiro erro, do mais barato ao mais caro\npython scripts/validar-forma.py \"$ARTEFATO\" || exit 1\npython scripts/validar-contrato.py \"$ARTEFATO\" || exit 1\npython scripts/validar-merito.py \"$ARTEFATO\" || exit 1\necho \"[OK] artefato liberado para revisao humana\""
+    },
+    {
+      "titulo": "Instrumentação: um painel de reprovações",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "registro_reprovacao:\n  campos:\n    - data\n    - gate\n    - artefato\n    - motivo_localizado\n    - corrigido_em: \"numero de turnos ate a correcao\"\n    - custo_evitado_estimado_usd\n  leitura_semanal:\n    - reprovacoes_por_gate\n    - tempo_medio_ate_correcao\n    - gates_sem_reprovacao_ha_30_dias"
+    }
+  ],
+  "gate": "python scripts/validar-forma.py \"$ARTEFATO\" || exit 1",
+  "comandos": [
+    "python scripts/validar-forma.py \"$ARTEFATO\" || exit 1",
+    "python scripts/validar-contrato.py \"$ARTEFATO\" || exit 1",
+    "python scripts/validar-merito.py \"$ARTEFATO\" || exit 1"
+  ],
+  "feito_quando": [
+    "Fixar o entorno antes de ajustar o modelo.** A maior parte da variação não vem da amostragem",
+    "Meça desvio, não só média.** Duas execuções que divergem indicam entorno solto",
+    "Estabilidade não é acerto.** Um erro estável continua sendo erro",
+    "Confundir temperatura baixa com determinismo.** A amostragem é apenas uma das fontes de variação; ordem de busca, truncamento e concorrência produzem divergência com a temperatura já em zero",
+    "Medir acerto sem medir desvio.** Uma média de sucesso sem dispersão esconde se o sistema é estável ou sortudo — e sortudo não escala",
+    "Colocar verificação só no fim.** O determinismo que importa é o que bloqueia antes da entrega. Gate tardio confirma o erro em vez de impedi-lo"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 2 — Probabilismo e determinismo: onde cada um manda",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "Prompt Caching de Verdade: Como o Provedor Cobra Menos por Repeticao",
+  "estagio": "Pericia",
+  "estagio_indice": 1,
+  "objetivo": "O leitor entende o mecanismo real de cache de prompt (desconto de ate 90% em leitura) e onde ele de fato se configura, sem o caminho de arquivo fabricado do manual original.",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [
+    "~/.config/claude-code/settings.json",
+    "~/.claude/settings.json",
+    ".claude/settings.json",
+    ".claude/settings.local.json",
+    "CLAUDE.md",
+    "~/.aider.conf.yml"
+  ],
+  "execucao": [
+    {
+      "titulo": "Onde a configuração de verdade mora, por ferramenta",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"model\": \"claude-sonnet-4-5\",\n  \"env\": {\n    \"ANTHROPIC_MODEL\": \"claude-sonnet-4-5\"\n  },\n  \"permissions\": {\n    \"allow\": [\"Bash(git log:*)\", \"Read(**)\"]\n  },\n  \"cleanupPeriodDays\": 30\n}\n# ... (trecho completo no Capitulo 02 do livro)"
+    }
+  ],
+  "gate": "npx ccusage@latest session --json",
+  "comandos": [
+    "npx ccusage@latest session --json",
+    "npx ccusage@latest session --json | jq '.[] | {sessionId, cacheHitRate}'"
+  ],
+  "feito_quando": [
+    "Localize o arquivo real de configuração do Claude Code na sua máquina (`~/.claude/settings.json`) e liste os campos existentes — confirme que não há `cacheControl` nem `systemPrompt`",
+    "Rode `npx ccusage@latest session --json` em um projeto com Claude Code já usado e identifique os valores de `cacheCreationTokens`, `cacheReadTokens` e `cacheHitRate`",
+    "Se você usa Aider, adicione `cache-prompts: true` ao `~/.aider.conf.yml` e rode duas chamadas seguidas sobre o mesmo arquivo para observar a diferença de custo",
+    "Escreva, para o seu próprio `CLAUDE.md`, uma lista dos elementos que poderiam variar de uma execução para outra (data, hora, IDs aleatórios) e remova qualquer um deles do topo do arquivo"
+  ],
+  "armadilhas": [
+    "Copiar caminho de config de outra ferramenta ou SO sem confirmar o real do Claude Code",
+    "Confundir cache de escrita (mais caro) com cache de leitura (desconto de ate 90%)",
+    "Mudar qualquer parte do prefixo cacheado sem perceber que isso invalida o cache inteiro"
+  ],
+  "referencia_cruzada": "Cap. 2 — Prompt Caching de Verdade: Como o Provedor Cobra Menos por Repeticao",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

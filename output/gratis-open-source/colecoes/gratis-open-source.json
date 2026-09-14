@@ -1,0 +1,74 @@
+{
+  "colecao": "gratis-open-source",
+  "cor_accent": "#f0b429",
+  "atualizado_em": "2026-08-20",
+  "nucleo": {
+    "slug": "livros/gratis-open-source",
+    "tipo": "livro",
+    "titulo": "Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "A Oficina Digital",
+      "descricao": "Cada ferramenta paga é tratada como uma peça alugada de uma loja de aluguel de equipamentos (o SaaS); cada alternativa open source é a mesma peça comprada, montada e mantida na própria oficina do leitor — o aluguel recorrente vira posse com responsabilidade de manutenção.",
+      "vocabulario": [
+        "oficina",
+        "bancada",
+        "ferramenta",
+        "peça",
+        "aluguel",
+        "manutenção",
+        "estoque",
+        "prateleira",
+        "montagem",
+        "garantia"
+      ],
+      "persona_leitor": "Artesão Digital"
+    }
+  },
+  "total_membros": 2,
+  "por_tipo": {
+    "livro": 1,
+    "playbook": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/gratis-open-source",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "compilado",
+      "artefatos": [
+        "gratis-open-source.pdf",
+        "livro_final.pdf"
+      ]
+    },
+    {
+      "slug": "gratis-open-source/playbooks/pbk-1-gratis-substitua",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+      "obra_mae": "gratis-open-source",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "extraido",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

@@ -1,0 +1,74 @@
+{
+  "colecao": "otimizacao-tokens-ide-agentica",
+  "cor_accent": "#58a6ff",
+  "atualizado_em": "2026-08-20",
+  "nucleo": {
+    "slug": "otimizacao-tokens-ide-agentica/livros/otimizacao-tokens-ide-agentica",
+    "tipo": "livro",
+    "titulo": "Tokens Sob Pericia",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "A Pericia Forense de Configuracoes",
+      "descricao": "Todo comando, caminho de config ou nome de modelo que chega ate voce e um documento suspeito: pode ter letra timbrada real (a ferramenta existe) e assinatura falsificada (a sintaxe foi inventada). O leitor assume o papel de perito que nunca aceita um documento sem cruzar contra a fonte primaria.",
+      "vocabulario": [
+        "pericia",
+        "laudo",
+        "fonte primaria",
+        "cadeia de custodia",
+        "autenticacao",
+        "falsificacao",
+        "evidencia",
+        "assinatura",
+        "contraprova",
+        "letra timbrada"
+      ],
+      "persona_leitor": "Perito de Configuracao Agentica"
+    }
+  },
+  "total_membros": 2,
+  "por_tipo": {
+    "livro": 1,
+    "playbook": 1
+  },
+  "membros": [
+    {
+      "slug": "otimizacao-tokens-ide-agentica/livros/otimizacao-tokens-ide-agentica",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "Tokens Sob Pericia",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": null,
+      "estado": "compilado",
+      "artefatos": [
+        "livro_final.pdf",
+        "otimizacao-tokens-ide-agentica.pdf"
+      ]
+    },
+    {
+      "slug": "otimizacao-tokens-ide-agentica/playbooks/pbk-1-tokens-sob-pericia",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — Tokens Sob Pericia",
+      "obra_mae": "otimizacao-tokens-ide-agentica",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "extraido",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

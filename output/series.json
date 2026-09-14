@@ -1,0 +1,91 @@
+{
+  "deepseek-harness-do-zero-ao-phd": {
+    "cor": "#58a6ff",
+    "membros": [
+      "livros/deepseek-harness-do-zero-ao-phd"
+    ]
+  },
+  "design-ui-midia-soberana": {
+    "cor": "#7c6cf0",
+    "membros": [
+      "livros/design-ui-midia-soberana"
+    ]
+  },
+  "devops": {
+    "cor": "#a855f7",
+    "membros": [
+      "devops",
+      "livros/devops"
+    ]
+  },
+  "economia-extrema-de-tokens": {
+    "cor": "#f0b429",
+    "membros": [
+      "livros/economia-extrema-de-tokens",
+      "playbooks/pbk-1-economia-extrema-tokens"
+    ]
+  },
+  "ecossistema-aidd": {
+    "cor": "#58a6ff",
+    "membros": [
+      "ecossistema-aidd"
+    ]
+  },
+  "engenharia-agentica": {
+    "cor": "#58a6ff",
+    "membros": [
+      "livros/engenharia-agentica"
+    ]
+  },
+  "gratis-open-source": {
+    "cor": "#f0b429",
+    "membros": [
+      "livros/gratis-open-source",
+      "playbooks/pbk-1-gratis-substitua",
+      "gratis-open-source"
+    ]
+  },
+  "livros": {
+    "cor": "#37c3d6",
+    "membros": [
+      "gratis-open-source/livros",
+      "economia-extrema-de-tokens/livros",
+      "design-ui-midia-soberana/livros",
+      "tratado-4-camadas/livros",
+      "devops/livros",
+      "engenharia-agentica/livros"
+    ]
+  },
+  "manual-provedores-01": {
+    "cor": "#f0b429",
+    "membros": [
+      "manual-provedores-01"
+    ]
+  },
+  "orca-ade": {
+    "cor": "#a855f7",
+    "membros": [
+      "livros/orca-ade"
+    ]
+  },
+  "otimizacao-tokens-ide-agentica": {
+    "cor": "#58a6ff",
+    "membros": [
+      "livros/otimizacao-tokens-ide-agentica",
+      "otimizacao-tokens-ide-agentica/playbooks/pbk-1-tokens-sob-pericia"
+    ]
+  },
+  "tratado-4-camadas": {
+    "cor": "#a855f7",
+    "membros": [
+      "livros/tratado-4-camadas",
+      "playbooks/pbk-1-tratado-4-camadas"
+    ]
+  },
+  "tratado-4-camadas-v2": {
+    "cor": "#37c3d6",
+    "membros": [
+      "livros/tratado-4-camadas-v2"
+    ]
+  }
+}

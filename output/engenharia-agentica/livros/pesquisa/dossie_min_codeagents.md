@@ -1,0 +1,52 @@
+# Mineracao Academica - autonomous software engineering agents code generation
+
+Mineracao deterministic a (custo LLM zero) via APIs abertas
+(`scripts/fontes_academicas.py`). Gerado em: 12 set. 2026.
+
+## Fontes consultadas
+
+- OpenAlex: 12 resultados (ok)
+- Crossref: 12 resultados (ok)
+- arXiv: 0 resultados (erro)
+- Semantic Scholar: 0 resultados (erro)
+- SciELO: 0 resultados (erro)
+- PubMed: 12 resultados (ok)
+
+## Fontes brutas (mineracao academica - classe A)
+
+- WANG, Lei et al. *A survey on large language model based autonomous agents*. In: Frontiers of Computer Science. 2024. Disponível em: https://doi.org/10.1007/s11704-024-40231-1. Acesso em: 12 set. 2026. (A)
+- YURTSEVER, Ekim et al. *A Survey of Autonomous Driving: Common Practices and Emerging Technologies*. In: IEEE Access. 2020. Disponível em: https://doi.org/10.1109/access.2020.2983149. Acesso em: 12 set. 2026. (A)
+- PARK, Joon Sung et al. *Generative Agents: Interactive Simulacra of Human Behavior*. 2023. Disponível em: https://doi.org/10.1145/3586183.3606763. Acesso em: 12 set. 2026. (A)
+- MCARTHUR, S.D.J. et al. *Multi-Agent Systems for Power Engineering Applications—Part I: Concepts, Approaches, and Technical Challenges*. In: IEEE Transactions on Power Systems. 2007. Disponível em: https://doi.org/10.1109/tpwrs.2007.908471. Acesso em: 12 set. 2026. (A)
+- BOIKO, Daniil A. et al. *Autonomous chemical research with large language models*. In: Nature. 2023. Disponível em: https://doi.org/10.1038/s41586-023-06792-0. Acesso em: 12 set. 2026. (A)
+- JENNINGS, Nicholas R. et al. *Autonomous agents for business process management*. In: Applied Artificial Intelligence. 2000. Disponível em: https://doi.org/10.1080/088395100117106. Acesso em: 12 set. 2026. (A)
+- LARANJO, Liliana et al. *Conversational agents in healthcare: a systematic review*. In: Journal of the American Medical Informatics Association. 2018. Disponível em: https://doi.org/10.1093/jamia/ocy072. Acesso em: 12 set. 2026. (A)
+- SZYMANSKI, Nathan J. et al. *An autonomous laboratory for the accelerated synthesis of inorganic materials*. In: Nature. 2023. Disponível em: https://doi.org/10.1038/s41586-023-06734-w. Acesso em: 12 set. 2026. (A)
+- MARTIN, David L.; CHEYER, Adam; MORAN, Douglas B. *The open agent architecture: A framework for building distributed software systems*. In: Applied Artificial Intelligence. 1999. Disponível em: https://doi.org/10.1080/088395199117504. Acesso em: 12 set. 2026. (A)
+- SALLAB, Ahmad EL et al. *Deep Reinforcement Learning framework for Autonomous Driving*. In: Electronic Imaging. 2017. Disponível em: https://doi.org/10.2352/issn.2470-1173.2017.19.avm-023. Acesso em: 12 set. 2026. (A)
+- BELLEMARE, M. G. et al. *The Arcade Learning Environment: An Evaluation Platform for General Agents*. In: Journal of Artificial Intelligence Research. 2013. Disponível em: https://doi.org/10.1613/jair.3912. Acesso em: 12 set. 2026. (A)
+- QIAN, Chen et al. *ChatDev: Communicative Agents for Software Development*. 2024. Disponível em: https://doi.org/10.18653/v1/2024.acl-long.810. Acesso em: 12 set. 2026. (A)
+- SARATHE, Saurabh; SHARMA, Gaurav. *Designing Autonomous AI Agents for Code Generation, Refactoring, and Maintenance in Agile Software Engineering*. In: 2026 3rd International Conference on Emerging Trends in Engineering and Medical Sciences (ICETEMS). 2026. Disponível em: https://doi.org/10.1109/icetems66917.2026.11469540. Acesso em: 12 set. 2026. (A)
+- INSAURRALDE, Carlos C. *Software Programmed by Artificial Agents toward an Autonomous Development Process for Code Generation*. In: 2013 IEEE International Conference on Systems, Man, and Cybernetics. 2013. Disponível em: https://doi.org/10.1109/smc.2013.561. Acesso em: 12 set. 2026. (A)
+- THATIKONDA, Vamsi Krishna. *Autonomous AI Agents for Software Development: A Framework for Intelligent Code Generation and Maintenance*. In: Journal of Artificial Intelligence and Technological Development. 2026. Disponível em: https://doi.org/10.59324/jaitd.2026.2(2).16. Acesso em: 12 set. 2026. (A)
+- LIN, Feng; KIM, Dong Jae; CHEN, Tse-Hsun. *SOEN-101: Code Generation by Emulating Software Process Models Using Large Language Model Agents*. In: 2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE). 2025. Disponível em: https://doi.org/10.1109/icse55347.2025.00140. Acesso em: 12 set. 2026. (A)
+- RAYARAO, Surya Rao; RAO, Surya; DONIKENA, Naga. *AI Agents: Synchronous vs Asynchronous Coding Agents Benefits Comparison A Comprehensive Analysis of Architecture Paradigms in Autonomous Code Generation Systems*. 2025. Disponível em: https://doi.org/10.22541/au.175745546.68068093/v1. Acesso em: 12 set. 2026. (A)
+- CADENAS, Rafael. *Convergent Correctness in Stochastic Code Generation: A Generate-Verify-Repair Architecture for Deterministic Validation of Autonomous AI Coding Agents in Regulated Environments*. 2026. Disponível em: https://doi.org/10.2139/ssrn.6754899. Acesso em: 12 set. 2026. (A)
+- LANO, Kevin; XUE, Qiaomu. *Code Generation by Example*. In: Proceedings of the 10th International Conference on Model-Driven Engineering and Software Development. 2022. Disponível em: https://doi.org/10.5220/0010973600003119. Acesso em: 12 set. 2026. (A)
+- MEDINA, Terrance; HYBINETTE, Maria; BALCH, Tucker. *Behavior-based code generation for robots and autonomous agents*. In: Proceedings of the Seventh International Conference on Simulation Tools and Techniques. 2014. Disponível em: https://doi.org/10.4108/icst.simutools.2014.254642. Acesso em: 12 set. 2026. (A)
+- ELSAYED, Saher et al. *Proactive Multi-Agent Systems for Autonomous Code Generation and Software Maintenance*. In: 2026 IEEE 50th Annual Computers, Software, and Applications Conference (COMPSAC). 2026. Disponível em: https://doi.org/10.1109/compsac69091.2026.00436. Acesso em: 12 set. 2026. (A)
+- GARCIA-OJEDA, Juan C.; DELOACH, Scott A.; ROBBY. *agentTool III: from process definition to code generation*. In: International Joint Conference on Autonomous Agents and Multiagent Systems. 2009. Disponível em: https://doi.org/10.65109/uamj1358. Acesso em: 12 set. 2026. (A)
+- LILL, Raimar; SAGLIETTI, Francesca. *Testing the Cooperation of Autonomous Robotic Agents*. In: Proceedings of the 9th International Conference on Software Engineering and Applications. 2014. Disponível em: https://doi.org/10.5220/0004990402870296. Acesso em: 12 set. 2026. (A)
+- ZHOU, Chenyi; MO, Ran; HU, Weijun. *Predicting Defective Code Clones in Autonomous Driving Software*. In: International Conferences on Software Engineering and Knowledge Engineering. 2025. Disponível em: https://doi.org/10.18293/seke2025-101. Acesso em: 12 set. 2026. (A)
+- M, Bertran; R, Fogliato; ZS, Wu. *Many AI analysts, one dataset: Navigating the agentic data science multiverse.*. In: Proceedings of the National Academy of Sciences of the United States of America. 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/42446982/. Acesso em: 12 set. 2026. (A)
+- K, Huang et al. *Autonomous biomedical research with an artificial intelligence agent.*. In: Science (New York, N.Y.). 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/42424436/. Acesso em: 12 set. 2026. (A)
+- V, Martinek et al. *Agentomics: an agentic system that autonomously develops novel state-of-the-art solutions for biomedical machine learning tasks.*. In: Bioinformatics (Oxford, England). 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/42412783/. Acesso em: 12 set. 2026. (A)
+- COLLABORATORS, GBD 2023 TB HIV. *Global, regional, and national burden of tuberculosis and multidrug-resistant tuberculosis by HIV status, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023.*. In: The Lancet. Infectious diseases. 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/42385762/. Acesso em: 12 set. 2026. (A)
+- N, Legrand et al. *pyhgf: A neural network library for predictive coding.*. In: PLoS computational biology. 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/42330057/. Acesso em: 12 set. 2026. (A)
+- Z, Wang et al. *SafeCodeRL: Security-Constrained Multi-Agent Reinforcement Learning for Trustworthy LLM-Generated IoT/CPS Software.*. In: Sensors (Basel, Switzerland). 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/42281018/. Acesso em: 12 set. 2026. (A)
+- S, Schott-Verdugo; H, Gohlke. *Chat-Driven Computational (Bio)chemistry: Using LLM Agents to Accelerate Bio- and Chemoinformatics.*. In: Journal of chemical information and modeling. 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/41849500/. Acesso em: 12 set. 2026. (A)
+- M, Ramachandran; S, Fouracre. *Rich Data Versus Quantity of Data in Code Generation AI: A Paradigm Shift for Healthcare.*. In: Blockchain in healthcare today. 2025. Disponível em: https://pubmed.ncbi.nlm.nih.gov/41623338/. Acesso em: 12 set. 2026. (A)
+- JG, Meyer. *Vibe Coding Omics Data Analysis Applications.*. In: Journal of proteome research. 2026. Disponível em: https://pubmed.ncbi.nlm.nih.gov/41492971/. Acesso em: 12 set. 2026. (A)
+- C, Wang et al. *HAD-Gen: Human-like and diverse driving behavior modeling for controllable scenario generation.*. In: Accident; analysis and prevention. 2025. Disponível em: https://pubmed.ncbi.nlm.nih.gov/41056668/. Acesso em: 12 set. 2026. (A)
+- S, Markose. *Gödelian embodied self-referential genomic intelligence: lessons for AI and AGI from the genomic blockchain.*. In: Frontiers in robotics and AI. 2025. Disponível em: https://pubmed.ncbi.nlm.nih.gov/41031315/. Acesso em: 12 set. 2026. (A)
+- EW, Yang; E, Velazquez-Villarreal. *AI-HOPE: an AI-driven conversational agent for enhanced clinical and genomic data integration in precision medicine research.*. In: Bioinformatics (Oxford, England). 2025. Disponível em: https://pubmed.ncbi.nlm.nih.gov/40577785/. Acesso em: 12 set. 2026. (A)

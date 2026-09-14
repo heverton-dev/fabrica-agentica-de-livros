@@ -1,0 +1,26 @@
+{
+  "titulo_obra": "Design, UI e Mídia Soberana",
+  "subtitulo": "Soberania Tecnológica e Autonomia no Design",
+  "partes": [
+    {
+      "parte": "1",
+      "titulo": "Fundamentos da Mídia Soberana e Design Independente",
+      "capitulos": [
+        {"capitulo": "1", "titulo": "Introdução à Soberania Tecnológica no Design e UI", "meta_referencias": 12},
+        {"capitulo": "2", "titulo": "A Geopolítica da Nuvem: Por que o software local importa?", "meta_referencias": 12},
+        {"capitulo": "3", "titulo": "Design Vetorial e UI: Penpot como alternativa ao Figma", "meta_referencias": 12},
+        {"capitulo": "4", "titulo": "Tipografia Sob Controle: Auto-hospedagem com Fontsource", "meta_referencias": 12}
+      ]
+    },
+    {
+      "parte": "2",
+      "titulo": "Mídia Visual e Automação Local",
+      "capitulos": [
+        {"capitulo": "5", "titulo": "Upscaling Local: Real-ESRGAN e Upscayl para criativos", "meta_referencias": 12},
+        {"capitulo": "6", "titulo": "Geração de Imagens: ComfyUI e o controle total da difusão", "meta_referencias": 12},
+        {"capitulo": "7", "titulo": "Síntese de Voz: Kokoro e áudio neural local", "meta_referencias": 12},
+        {"capitulo": "8", "titulo": "Documentação Soberana: Stirling-PDF e fluxos de trabalho autônomos", "meta_referencias": 12}
+      ]
+    }
+  ]
+}

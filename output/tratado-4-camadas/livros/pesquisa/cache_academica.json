@@ -1,0 +1,349 @@
+{
+  "arxiv|Inteligência Artificial agentes autônomos engenharia de software arquitetura de software": {
+    "em": "25 ago. 2026",
+    "registros": []
+  },
+  "crossref|Inteligência Artificial agentes autônomos engenharia de software arquitetura de software": {
+    "em": "25 ago. 2026",
+    "registros": [
+      {
+        "titulo": "IDENTIFICAÇÃO, DELEGAÇÃO AUTENTICADA E RESPONSABILIDADE: UMA PROPOSTA CONSTITUCIONAL PARA A GOVERNANÇA DE AGENTES AUTÔNOMOS DE INTELIGÊNCIA ARTIFICIAL NO BRASIL",
+        "autores": [
+          "ROBERTO SANTOS, CLÁUDIO"
+        ],
+        "ano": null,
+        "doi": "10.17771/pucrio.acad.77233",
+        "url": "https://doi.org/10.17771/pucrio.acad.77233",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": null,
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Uma proposta de arquitetura de software para a simulação e experimentação de veículos autônomos",
+        "autores": [
+          "Santos, Tiago Cesar dos"
+        ],
+        "ano": null,
+        "doi": "10.11606/d.55.2016.tde-12122016-103140",
+        "url": "https://doi.org/10.11606/d.55.2016.tde-12122016-103140",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": null,
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "INTELIGÊNCIA ARTIFICIAL APLICADA EM ENGENHARIA DE SOFTWARE",
+        "autores": [
+          "Fernandes, Robson dos Santos"
+        ],
+        "ano": 2025,
+        "doi": "10.63330/aurumpub.005-009",
+        "url": "https://doi.org/10.63330/aurumpub.005-009",
+        "resumo": "<jats:p>Este trabalho aborda a aplicação da Inteligência Artificial (IA) na engenharia de software, destacando como diferentes técnicas podem contribuir para melhorar processos de desenvolvimento, reduzir riscos e estimar custos de forma mais precisa. O objetivo principal desta produção foi investigar e apresentar as principais metodologias de IA utilizadas na engenharia de software, com foco especial nas redes neurais, lógica fuzzy e redes bayesianas, analisando seus conceitos, aplicações práticas e resultados obtidos em estudos de caso. A metodologia empregada foi a pesquisa bibliográfica, fundamentada em obras e artigos científicos de diversos autores renomados da área, como Pfleeger, Pressman, Haykin, Barros e Cozman, entre outros. Como resultado, verificou-se que as redes neurais são eficazes na estimativa de custos e esforços de projetos de software, utilizando dados históricos para aprimorar a acurácia das previsões. A lógica fuzzy se mostrou uma ferramenta adequada para avaliar a qualidade de software, considerando fatores subjetivos e imprecisos típicos de ambientes reais. As redes bayesianas, por sua vez, se destacaram pela capacidade de modelar incertezas e estabelecer relações causais entre variáveis, proporcionando simulações úteis na tomada de decisão. Conclui-se que a incorporação dessas técnicas de IA na engenharia de software representa uma evolução significativa, promovendo ganhos em eficiência, qualidade e confiabilidade dos sistemas desenvolvidos. Além disso, observa-se a necessidade de aprofundar pesquisas e aplicações práticas, visando maximizar o potencial dessas ferramentas no contexto do desenvolvimento de software.</jats:p>",
+        "citacoes": null,
+        "periodico": "Inovações Multidisciplinares na Engenharia",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Delegação de Trabalho de Governança de Segurança da Informação a Agentes Autônomos de Inteligência Artificial: Critérios de Delegabilidade, Níveis de Autonomia e Responsabilização",
+        "autores": [
+          "Cruz, Mathews Henrique da"
+        ],
+        "ano": 2026,
+        "doi": "10.37497/opsbrazil.42",
+        "url": "https://doi.org/10.37497/opsbrazil.42",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": null,
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Um estudo sobre aplicação de técnicas de inteligência artificial e engenharia de software à construção de um sistema de supervisão e controle",
+        "autores": [
+          "Maia, Leticia Toledo"
+        ],
+        "ano": null,
+        "doi": "10.26512/2007.d.1453",
+        "url": "https://doi.org/10.26512/2007.d.1453",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": null,
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "AUTOMAÇÃO DE PROCESSOS LOGÍSTICOS COM AGENTES DE INTELIGÊNCIA  ARTIFICIAL",
+        "autores": [
+          "SILVA, ANDRÉ AZEVEDO DA"
+        ],
+        "ano": 2025,
+        "doi": "10.14488/enegep2025_tn_st_425_2082_51150",
+        "url": "https://doi.org/10.14488/enegep2025_tn_st_425_2082_51150",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Anais do Encontro Nacional de Engenharia de Produção",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Software Design Baseado em Subsistemas Autônomos - Focalizando o Reuso",
+        "autores": [
+          "Sanchez, Maria Luiza d’Almeida",
+          "Maffeo, Bruno"
+        ],
+        "ano": 1996,
+        "doi": "10.5753/sbes.1996.24449",
+        "url": "https://doi.org/10.5753/sbes.1996.24449",
+        "resumo": "<jats:p>This work focus on reuse features of a design method for real-time process-control systems. The method is based on \"Information Hiding and Exchange of Messages between Independent Subsystems\". It employs information hiding and concepts inherited from development techniques using Configuration Languages. It allows the partition of a complex system into more manageable subsystems intended for reuse in other systems that have to perform similar functions.</jats:p>",
+        "citacoes": null,
+        "periodico": "Anais do X Simpósio Brasileiro de Engenharia de Software (SBES 1996)",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "ARQUITETURA DE SOFTWARE PARA UM TIME DE FUTEBOL DE ROBÔS AUTÔNOMOS",
+        "autores": [
+          "Conceição, Gabriel Borges da"
+        ],
+        "ano": 2024,
+        "doi": "10.47879/ed.ep.2024653p24",
+        "url": "https://doi.org/10.47879/ed.ep.2024653p24",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "CAMINHOS DA CIÊNCIA: PRODUÇÕES ACADÊMICAS EM DESTAQUE",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "AGENTES DE SOFTWARE COM TRAÇOS DE PERSONALIDADE BASEADOS NA ARQUITETURA BDI PARA TOMADA DE DECISÕES NORMATIVAS",
+        "autores": [
+          "HENRIQUE CARDOSO ALVES, PAULO"
+        ],
+        "ano": null,
+        "doi": "10.17771/pucrio.acad.32008",
+        "url": "https://doi.org/10.17771/pucrio.acad.32008",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": null,
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Uma arquitetura de software para reuso de componentes",
+        "autores": [
+          "Kroth, Eduardo",
+          "Heuser, Carlos Alberto"
+        ],
+        "ano": 2000,
+        "doi": "10.5753/sbes.2000.25929",
+        "url": "https://doi.org/10.5753/sbes.2000.25929",
+        "resumo": "<jats:p>O artigo trata do reuso de software, mais especificamente do problema de construção de aplicações a partir de componentes de software pré-existentes. Estes componentes possuem métodos concretos e \"template\" que oferecem uma funcionalidade especifica para ser usada na aplicação em construção. Este artigo apresenta uma técnica que permite que o construtor de uma aplicação especifique a relação desejada entre as classes da aplicação e um conjunto de componentes pré-existentes. Nesta relação, identificam-se dois tipos de contratos de reuso: uso e implementação. O tipo de contrato uso estabelece regras para o uso de métodos de um componente e o tipo de contrato implementação estabelece regras para a implementação de métodos abstratos de um componente. Para permitir a implementação dos tipos de contratos, é proposta uma arquitetura de integração, formada por componentes, classes da aplicação e classes de integração. As classes de integração possuem especificações como padrões de projeto. O artigo descreve a arquitetura de aplicações que utilizam componentes e mostra como a arquitetura integração deve ser construída.</jats:p>",
+        "citacoes": null,
+        "periodico": "Anais do XIV Simpósio Brasileiro de Engenharia de Software (SBES 2000)",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      }
+    ]
+  },
+  "pubmed|Inteligência Artificial agentes autônomos engenharia de software arquitetura de software": {
+    "em": "25 ago. 2026",
+    "registros": []
+  },
+  "openalex|Inteligência Artificial agentes autônomos engenharia de software arquitetura de software": {
+    "em": "25 ago. 2026",
+    "registros": [
+      {
+        "titulo": "inteligência artificial e os seus impactos no mundo do trabalho",
+        "autores": [
+          "Fábia Melo de Araújo",
+          "Rayane Araújo Castelo Branco Rayol"
+        ],
+        "ano": 2024,
+        "doi": "10.70405/rtst.v90i3.90",
+        "url": "https://doi.org/10.70405/rtst.v90i3.90",
+        "resumo": "A Indústria 4.0, também denominada de Quarta Revolução Industrial, traz um mundo em que os sistemas virtuais e físicos comunicam-se entre si na busca de inovações tecnológicas, em especial, da Inteligência Artificial (IA). O artigo analisa os avanços tecnológicos e a presença marcante da Inteligência Artificial no meio ambiente do trabalho e em que medida impactará o futuro do trabalho. Nesse sentido, analisa seus aspectos negativos, com fundamento em uma possível ameaça à substituição da mão de obra humana futura e, também os positivos, sobretudo no que se refere ao auxílio das máquinas inteligentes para o desenvolvimento do meio ambiente do trabalho, na maior agilidade e eficácia na realização das tarefas e no possível surgimento de novos postos de trabalho. Desse modo, apresentam-se possíveis alternativas de soluções para essa problemática, como a criação de programas de capacitação e requalificação de mão de obra para aprender a utilizar a inteligência artificial aliada à inteligência humana, de forma a evitar que o trabalhador se torne vítima do desemprego estrutural.",
+        "citacoes": 9,
+        "periodico": "Revista do Tribunal Superior do Trabalho.",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Uma proposta de arquitetura de software baseada em agentes",
+        "autores": [
+          "Elisa Hatsue Moriya Huzita",
+          "Hélio Marci de Oliveira",
+          "Jean Marcos Laine"
+        ],
+        "ano": 2000,
+        "doi": "10.4025/actascitechnol.v22i0.3131",
+        "url": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+        "resumo": "Agent-based software development has been the object of several studies which analyze its application to distributed systems and look for techniques capable of minimizing the difficulties inherent to this new approach. A suggestion of software architecture for multi-agent systems has been provided. It has been elaborated from studies on software agents, multi-agent systems and agent-based software architectures. Some of these concepts have been given, including the main pitfalls found in the construction of agent-based architectures. Further, two models that served as subsidy for their elaboration have also been described",
+        "citacoes": 1,
+        "periodico": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Engenharias e inteligência artificial – arquiteturas cognitivas para projetos, tomada de decisão, gestão de riscos e soluções sistêmicas",
+        "autores": [
+          "Gustavo Guilherme de Souza Ferreira",
+          "Kleberson Ricardo de Oliveira Pereira",
+          "Renato Ribeiro Dos Santos",
+          "Jefferson Fellipe Jahnke",
+          "Heverton Barbosa do Nascimento",
+          "Matheus Martins Cabral",
+          "C. A. Pantoja",
+          "Tatiane Caroline Ferrari",
+          "Marcelo Martins Farias",
+          "Camila Sarmento",
+          "Ketlen Pinto da Silva Fonseca",
+          "Ricardo Moraes Pavani",
+          "Lays Fernanda Franklin de Queiroz Cardoso Nascimento",
+          "Cristian da Silva",
+          "Mauro José Araújo de Melo",
+          "Maria Aparecida da Silva Buss"
+        ],
+        "ano": 2025,
+        "doi": "10.55905/oelv23n7-097",
+        "url": "https://doi.org/10.55905/oelv23n7-097",
+        "resumo": "Em um cenário marcado por transformações tecnológicas cada vez mais aceleradas, a convergência entre as engenharias e a inteligência artificial tem se mostrado não apenas necessária, mas estratégica para lidar com problemas complexos, dinâmicos e interdependentes. E ainda, à medida que os sistemas sociotécnicos se tornam mais sofisticados, cresce a demanda por ferramentas que integrem raciocínio computacional, tomada de decisão informada e aprendizagem adaptativa. Dessa forma, este artigo propõe uma análise compreensiva e aplicada das arquiteturas cognitivas voltadas para projetos de engenharia, com ênfase nos processos decisórios, na gestão de riscos e na formulação de soluções sistêmicas que dialoguem com contextos reais. Convém observar que o foco da pesquisa está em compreender como tais arquiteturas inspiradas em modelos mentais humanos e organizadas em estruturas híbridas entre algoritmos, sensores e simulações podem auxiliar engenheiros a atuarem de maneira mais inteligente, autônoma e ética diante dos desafios do século XXI. Assim sendo, o objeto deste estudo é constituído pelas arquiteturas cognitivas de inteligência artificial aplicadas ao campo das engenharias, especialmente em suas interfaces com projetos multidimensionais, prevenção de falhas críticas e diagnósticos operacionais complexos. Com o objetivo de identificar os fundamentos, os potenciais e os limites dessas aplicações, o artigo realiza uma investigação teórica e analítica com base em autores clássicos e contemporâneos da engenharia sistêmica, da ciência da computação e da teoria de decisões. Em consequência disso, o estudo visa também oferecer diretrizes metodológicas para o uso dessas tecnologias em contextos de alto impacto, como infraestrutura urbana, energia, transporte e meio ambiente. Por isso, não se trata apenas de discutir inovação tecnológica, mas de refletir criticamente sobre as implicações éticas, organizacionais e epistemológicas desse novo paradigma. Nesse contexto, a pergunta de partida que norteia a pesquisa é a seguinte: de que modo às arquiteturas cognitivas baseadas em inteligência artificial pode contribuir para aprimorar a tomada de decisão, a gestão de riscos e o desenvolvimento de soluções sistêmicas nos projetos de engenharia contemporâneos, sem abrir mão da responsabilidade social e da sustentabilidade? Para isso, utilizamos o repertório teórico de Anderson (1990; 2007; 2015), Aminzadeh et al. (2022), Aven (2003; 2015), Beck (1992; 2013), Floridi (2014), Franklin (2008), Garvey (2009), Goertzel (2007a; 2007b; 2008), Haimes (2015; 2019), Hopgood (2021), Kahneman (2011), Kumar et al. (2021), Krishnamoorthy e Rajeev (1996), Langley et al. (1987), Laymert (2011), Maier e Rechtin (2009), Minsky (1986; 2006), Pennachin (2007), Quaschning (2005), Sage e Rouse (2009), Santos (2011), Simon (1996; 2019), Taleb (2010; 2012), Tong (1992), Verbeek (2011), Warwick et al. (1997), Zuboff (2019), entre outros. A pesquisa é de cunho qualitativa (Minayo, 2007), bibliográfica e descritiva (Gil, 2008) e com o viés analítico compreensivo (Weber, 1949). Evidenciou-se que as arquiteturas cognitivas de inteligência artificial, quando alinhadas a princípios éticos e à responsabilidade social, podem aprimorar significativamente a tomada de decisão, a gestão de riscos e o desenvolvimento de soluções sistêmicas nas engenharias. Verificou-se que tais sistemas potencializam a antecipação de falhas críticas, otimizam processos operacionais complexos e ampliam a capacidade adaptativa em contextos incertos. Contudo, o estudo também identificou desafios epistemológicos, culturais e orgnizacionais que exigem reconfigurações institucionais. A IA não substitui o juízo humano, mas o amplia, quando orientada por uma visão crítica e sustentável.",
+        "citacoes": 1,
+        "periodico": "OBSERVATÓRIO DE LA ECONOMÍA LATINOAMERICANA",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Desenvolvimento e Implementação do Método dos MQR-FE Acoplado a um Sistema de CAMR",
+        "autores": [
+          "Henrique Coldebella",
+          "Flávio Luiz Rossini"
+        ],
+        "ano": 2023,
+        "doi": "10.37423/230107095",
+        "url": "https://doi.org/10.37423/230107095",
+        "resumo": "Controle LQI Aplicado A Um Conversor CC-Ccboost Em Um Sistema FV Autônomo 1 Resumo: Os sistemas fotovoltaicos (FV) autônomos sem armazenamento de energia são muito utilizados em áreas rurais.Neste tipo de sistemas, a tensão de saída deve ser regulada para estar em um valor fixo, independente de mudanças nas condições climáticas ou variações na carga de saída.Portanto, este artigo apresenta um controle Linear Quadrático Integral (LQI) aplicado a um conversor CC-CC boost com o objetivo de regular a tensão de saída em um sistema FV autônomo, reduzindo o impacto de fatores externos.Ainda, a modelagem matemática do conversor boost utilizado é introduzida no trabalho.O projeto do controlador LQI foi desenvolvido a partir da modelagem anterior, utilizando os valores do circuito de potência.Finalmente, a proposta é validada por simulações e resultados experimentais obtidos através do protótipo desenvolvido.Para isso, foram realizados testes diferentes, mudando os valores de irradiação no painel FV, mudando a carga CC na saída do conversor e inserindo sombreamento no painel FV.Palavras-chaves: Sistemas FV autônomos; tensão de saída; conversor CC-CC boost; controle LQI; projeto do controlador.Onde além das matrizes de estados, se define um estado adicional xe, como sendo a integral do erro.Já u é o sinal de controle, que no caso o sistema seja controlável a realimentação de estados pode ser obtida por: onde KI refere-se ao ganho do integrador referente ao estado xe.A partir desta análise, a Fig. 3 apresenta um diagrama do conversor boost com controle LQI.Logo, as matrizes do sistema para o controle LQI sofreram ajustes devido a adição de mais um estado para o sistema.Assim, as novas matrizes de estado As e Bs do novo modelo, substituindo com os valores das Tabelas 1 e 2 e escolhendo o D = 0,5, são: Os valores das matrizes Q e R devem ser escolhidos pela análise dos sinais provenientes do sistema, de modo que a resposta do sistema controlado seja admissível.Esse é um fator preponderante no projeto do controlador LQI, pois tais modificações, em Q e R, pode modificar de maneira significativa a dinâmica do sistema em malha fechada.Então, seguindo a metodologia desenvolvida por Farias et al. (2014), onde foi utilizado o método de Bryson, as matrizes Q e R, podem ser representadas como: Conhecendo que o sistema é controlável, os valores dos ganhos ótimos, no tempo contínuo,",
+        "citacoes": 25,
+        "periodico": "Editora Conhecimento Livre eBooks",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "FERRAMENTAS DE INTELIGÊNCIA ARTIFICIAL GENERATIVA NA EDUCAÇÃO: UM ESTUDO COMPARATIVO",
+        "autores": [
+          "Leticia Vieira Gonçalves",
+          "Anderson Mateus de Souza",
+          "Samara Martins Nascimento Gonçalves",
+          "Reudismam Rolim de Sousa",
+          "Verônica Maria Lima Silva"
+        ],
+        "ano": 2026,
+        "doi": "10.47820/recima21.v7i2.7247",
+        "url": "https://doi.org/10.47820/recima21.v7i2.7247",
+        "resumo": "The Generative Artificial Intelligence (GAI) in the educational context raises the need for a systematic mapping of its applications and implications. This work aims to conduct a comparative analysis of the performance of four GAI tools for knowledge discovery, such as ChatGPT (OpenAI), Gemini (Google), NotebookLM (Google), and DeepSeek (DeepSeek AI). The methodology consists of a comparative case use analysis, of a qualitative and exploratory-descriptive nature, based on the standardized execution of five pedagogical tasks (deep research for lesson planning, creation of slide structures, image generation, quiz elaboration, and podcast production) in each tool, totaling 20 analyzed interactions. The results demonstrate that the tools have distinct vocations: Gemini stood out for its native multimodality and resources for research and active learning (Canvas, Deep Research); ChatGPT established itself as an intellectual partner for writing and textual refinement; NotebookLM showed high reliability for academic research, with source citation; and DeepSeek presented good performance in text generation but with multimodal limitations. It is concluded that there is no single ideal tool, but an ecosystem of assistants with complementary specializations, whose effective use requires pedagogical mediation and teacher training for an ethical and critical integration into the educational process.",
+        "citacoes": 2,
+        "periodico": "RECIMA21 - Revista Científica Multidisciplinar - ISSN 2675-6218",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Linguagens de programação orientadas a agentes: uma introdução baseada em AgentSpeak(L)",
+        "autores": [
+          "Rafael H. Bordini",
+          "Renata Vieira"
+        ],
+        "ano": 2003,
+        "doi": null,
+        "url": "http://hdl.handle.net/10183/19885",
+        "resumo": "Este artigo apresenta uma introdução ao paradigma de programação orientada a agentes com base em uma linguagem particular chamada AgentSpeak(L). Exemplos de agentes programados nessa linguagem são fornecidos para facilitar a compreensão da linguagem. Conceitos básicos de sistemas multiagente e agentes inteligentes são dados de forma a fornecer ao leitor um material auto-contido. O artigo apresenta ainda um apanhado geral dos diversos trabalhos de pesquisa sobre AgentSpeak(L) que estão em desenvolvimento, bem como referências a diversas outras linguagens de programação orientadas a agentes.",
+        "citacoes": 8,
+        "periodico": "Lume (Universidade Federal do Rio Grande do Sul)",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "\"SemanticAgent, uma plataforma para desenvolvimento de agentes inteligentes\"",
+        "autores": [
+          "Percival Lucena"
+        ],
+        "ano": 2003,
+        "doi": "10.11606/d.55.2003.tde-01082003-102927",
+        "url": "https://doi.org/10.11606/d.55.2003.tde-01082003-102927",
+        "resumo": "Agentes inteligentes é um termo guarda-chuva que agrega diversas pesquisas no desenvolvimento de softwares autônomos que utilizam técnicas de Inteligência Artificial a fim de satisfazer metas estabelecidas por seus usuários.A construção de sistemas baseados em agentes inteligentes é uma tarefa complexa que envolve aspectos como comunicação entre agentes, planejamento, divisão de tarefas, coordenação, representação e manipulação de conhecimento e comportamentos, entre outras tarefas.Plataformas para agentes prevêem alguns serviços que permitem a desenvolvedores construir soluções sem a necessidade de se preocupar com todos detalhes da implementação.Um novo modelo para criação de agentes chamado 'agentes atômicos' é proposto com o objetivo de oferecer flexibilidade para o gerenciamento de conhecimento e implementação de comportamentos.A arquitetura Agentes Semânticos provê um framework para a implementação de tal modelo,",
+        "citacoes": 2,
+        "periodico": null,
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "ÁREAS DE PESQUISA E TÉCNICAS DE INTELIGÊNCIA ARTIFICIAL EM JOGOS DIGITAIS",
+        "autores": [
+          "Mariana De Luca Reis",
+          "Kleber de Oliveira Andrade"
+        ],
+        "ano": 2022,
+        "doi": "10.47283/244670492022100171",
+        "url": "https://doi.org/10.47283/244670492022100171",
+        "resumo": "The Artificial Intelligence (AI) is a resource widely used in Digital Games. The goal of this article is to present an analysis about different approaches that can be used to implement Artificial Intelligence in Games. To accomplish that, a literature review about the subject is made, briefly highlighting the history and evolution of AI, how AI and games are related, listing the main research areas on this topic and which are the different approaches and application techniques. Furthermore, the article brings discussions about whether the AI that currently exists may or may not be considered actual Intelligence and how the development of AI techniques used in games can contribute with the development of General Artificial Intelligence. Keywords: Artificial Intelligence. Digital Games. Artificial Intelligence Techniques.",
+        "citacoes": 1,
+        "periodico": "Revista Tecnológica da Fatec Americana",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Uma arquitetura distribuída de hardware e software para controle de um robô móvel autônomo",
+        "autores": [
+          "Ricardo Britto",
+          "Adelardo Adelino Dantas de Medeiros",
+          "Pablo Javier Alsina"
+        ],
+        "ano": 2007,
+        "doi": null,
+        "url": "https://www.rcaap.pt/detail.jsp?id=oai:agregador.ibict.br.RI_UFRN:oai:repositorio:1/6117",
+        "resumo": "BRITTO, Ricardo S.; MEDEIROS, Adelardo A. D.; ALSINA, Pablo J. Uma arquitetura distribuída de hardware e software para controle de um robô móvel autônomo. In: SIMPÓSIO BRASILEIRO DE AUTOMAÇÃO INTELIGENTE,8., 2007, Florianópolis. Anais... Florianópolis: SBAI, 2007.",
+        "citacoes": 1,
+        "periodico": "Portuguese National Funding Agency for Science, Research and Technology (RCAAP Project by FCT)",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Uma arquitetura de apoio à interoperabilidade de modelos de reputação de agentes.",
+        "autores": [
+          "Luis G. Nardin"
+        ],
+        "ano": 2009,
+        "doi": "10.11606/d.3.2009.tde-13072009-154149",
+        "url": "https://doi.org/10.11606/d.3.2009.tde-13072009-154149",
+        "resumo": "Agradeço primeiramente ao meu orientador, Prof. Dr. Jaime Simão Sichman, por suas diretrizes sempre claras e criteriosas que possibilitaram a realização deste trabalho.Aos meus colegas do Laboratório de Técnicas Inteligentes (LTI), em especial à: Dra.Anarosa Brandão, por suas sugestões e apoio no direcionamento deste trabalho, bem como na sua disponibilidade na revisão técnica de diversos artigos; e Priscilla Avegliano, pela sua contribuição na disponibilização de material de apoio a este trabalho.Agradeço ao Prof. Dr. Laurent Vercouter por sua disponibilidade de tempo para responder minhas inúmeras questões a respeito do funcionamento das plataformas de simulação.Gostaria de agradecer ao Guillaume Müller e ao Jomi Hübner pelos esclarecimentos quanto ao funcionamento da plataforma de simulação, bem como pelo apoio no desenvolvimento dos experimentos.Agradecimentos especiais aos meus pais e irmãs, por todo seu apoio despendido durante o período de elaboração deste trabalho.Agradeço ainda uma pessoa especial que foi essencial para que atingisse mais este objetivo.Gostaria ainda de agradecer a todos meus amigos, que próximos ou à distância, foram de extrema importância para que eu atingisse mais este objetivo. ResumoEm sistemas multiagentes (SMA), a impossibilidade de controle do comportamento interno dos agentes propicia a emergência de dilemas sociais.Uma das possíveis abordagens para resolver tais dilemas é a abordagem social, que tem no conceito de reputação seu principal mecanismo de controle.Para agilizar a obtenção da reputação, torna-se essencial que os agentes cooperem, trocando informações a respeito de reputação.Assim, a partir de diversas observações, avaliações e troca de informações sobre reputação pode-se observar o surgimento da ordem social no sistema global.Entretanto, a heterogeneidade semântica entre os diferentes modelos de reputação torna a interação de agentes um problema, principalmente em SMA abertos.Este trabalho propõe uma arquitetura baseada em serviços, denominada SOARI, para o tratamento deste problema.Esta arquitetura apóia o mapeamento e tradução de conceitos entre ontologias de modelos de reputação distintos através do uso de uma ontologia comum no domínio da reputação.Para ilustrar o uso da arquitetura, foram realizados diversos experimentos nos domínios de comércio eletrônico e de avaliação de obras de arte.Neste último caso, analisou-se os impactos causados nos agentes como conseqüência da habilitação de uma maior expressividade e heterogeneidade na comunicação sobre reputação.",
+        "citacoes": 1,
+        "periodico": null,
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      }
+    ]
+  }
+}

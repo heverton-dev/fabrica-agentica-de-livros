@@ -1,0 +1,714 @@
+{
+  "arxiv|DevOps": {
+    "em": "26 ago. 2026",
+    "registros": [
+      {
+        "titulo": "Embedded DevOps: A Survey on the Application of DevOps Practices in Embedded Software and Firmware Development",
+        "autores": [
+          "Parthiv Katapara",
+          "Anand Sharma"
+        ],
+        "ano": 2025,
+        "doi": null,
+        "url": "http://arxiv.org/abs/2507.00421v1",
+        "resumo": "The adoption of DevOps practices in embedded systems and firmware development is emerging as a response to the growing complexity of modern hardware--software co-designed products. Unlike cloud-native applications, embedded systems introduce challenges such as hardware dependency, real-time constraints, and safety-critical requirements. This literature review synthesizes findings from 20 academic and industrial sources to examine how DevOps principles--particularly continuous integration, continuous delivery, and automated testing--are adapted to embedded contexts. We categorize efforts across tooling, testing strategies, pipeline automation, and security practices. The review highlights current limitations in deployment workflows and observability, proposing a roadmap for future research. This work offers researchers and practitioners a consolidated understanding of Embedded DevOps, bridging fragmented literature with a structured perspective.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps Adoption: Eight Emergent Perspectives",
+        "autores": [
+          "Mauro Lourenço Pedra",
+          "Mônica Ferreira da Silva",
+          "Leonardo Guerreiro Azevedo"
+        ],
+        "ano": 2021,
+        "doi": null,
+        "url": "http://arxiv.org/abs/2109.09601v1",
+        "resumo": "DevOps is an approach based on lean and agile principles in which business, development, operations, and quality teams cooperate to deliver software continuously aiming at reducing time to market, and receiving constant feedback from customers. However, implementing DevOps can be a complex and challenging mission due it requires significant paradigm shift. Consequently, many failures and misconceptions can occur about DevOps adoption by organizations, despite its numerous benefits. This work identifies, describes, and compares different perspectives related to DevOps adoption in academy and industry. The perspectives can be understood as factors or variables that influence or help to understand the DevOps journey. We employed a sequential multi-method research approach, including Systematic Literature Review (SLR) and Case Study. As a result, eight perspectives were found: concepts, models, principles, practices, difficulties, challenges, benefits, and strategies. More specifically, the SLR produced 390 items, which can be understood as occurrences of a perspective. The conducted case study confirmed 75 items, corroborating the SLR findings, while another 29 items emerged. This global view on DevOps adoption may guide beginners, both theorists, and practitioners, to make the necessary organizational transformation less painful.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "How is Performance Addressed in DevOps? A Survey on Industrial Practices",
+        "autores": [
+          "Cor-Paul Bezemer",
+          "Simon Eismann",
+          "Vincenzo Ferme",
+          "Johannes Grohmann",
+          "Robert Heinrich",
+          "Pooyan Jamshidi",
+          "Weiyi Shang",
+          "André van Hoorn",
+          "Monica Villaviencio",
+          "Jürgen Walter",
+          "Felix Willnecker"
+        ],
+        "ano": 2018,
+        "doi": null,
+        "url": "http://arxiv.org/abs/1808.06915v1",
+        "resumo": "DevOps is a modern software engineering paradigm that is gaining widespread adoption in industry. The goal of DevOps is to bring software changes into production with a high frequency and fast feedback cycles. This conflicts with software quality assurance activities, particularly with respect to performance. For instance, performance evaluation activities -- such as load testing -- require a considerable amount of time to get statistically significant results.\n  We conducted an industrial survey to get insights into how performance is addressed in industrial DevOps settings. In particular, we were interested in the frequency of executing performance evaluations, the tools being used, the granularity of the obtained performance data, and the use of model-based techniques. The survey responses, which come from a wide variety of participants from different industry sectors, indicate that the complexity of performance engineering approaches and tools is a barrier for wide-spread adoption of performance analysis in DevOps. The implication of our results is that performance analysis tools need to have a short learning curve, and should be easy to integrate into the DevOps pipeline.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "Final Service Provider DevOps concept and evaluation",
+        "autores": [
+          "Guido Marchetto",
+          "Riccardo Sisto",
+          "Wolfgang John",
+          "Pontus Sköldström",
+          "Bertrand Pechenot",
+          "Felicián Németh",
+          "István Pelle",
+          "Juhoon Kim",
+          "Xuejun Cai",
+          "Chunyan Fu",
+          "Catalin Meirosu",
+          "Kostas Pentikousis",
+          "Sachin Sharma",
+          "Ioanna Papafili",
+          "Serena Spinoso",
+          "Matteo Virgilio",
+          "Rebecca Steinert",
+          "Per Kreuger",
+          "Shaoteng Liu",
+          "Jan Ekman",
+          "Antonio Manzalini",
+          "Apoorv Shukla"
+        ],
+        "ano": 2016,
+        "doi": null,
+        "url": "http://arxiv.org/abs/1610.02387v2",
+        "resumo": "This report presents the results of the UNIFY Service Provider DevOps activities. First, we present the final definition and assessment of the concept. SP-DevOps is realized by a combination of various functional components facilitating integrated service verification, efficient and programmable observability, and automated troubleshooting processes. Our assessment shows that SP-DevOps can help providers to reach a medium level of DevOps maturity and allows significant reduction in OPEX. Second, we focus on the evaluation of the proposed SP-DevOps components. The set of tools proposed supports ops and devs across all stages, with a focus on the deployment, operation and debugging phases, and allows to activate automated processes for operating NFV environments. Finally, we present use-cases and our demonstrators for selected process implementions, which allowed the functional validation of SP-DevOps.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "Service Provider DevOps network capabilities and tools",
+        "autores": [
+          "Rebecca Steinert",
+          "Wolfgang John",
+          "Pontus Sköldström",
+          "Bertrand Pechenot",
+          "András Gulyás",
+          "István Pelle",
+          "Tamás Lévai",
+          "Felicián Németh",
+          "Juhoon Kim",
+          "Catalin Meirosu",
+          "Xuejun Cai",
+          "Chunyan Fu",
+          "Kostas Pentikousis",
+          "Sachin Sharma",
+          "Ioanna Papafili",
+          "Guido Marchetto",
+          "Riccardo Sisto",
+          "Fulvio Risso",
+          "Per Kreuger",
+          "Jan Ekman",
+          "Shaoteng Liu",
+          "Antonio Manzalini",
+          "Apoorv Shukla",
+          "Stefan Schmid"
+        ],
+        "ano": 2015,
+        "doi": null,
+        "url": "http://arxiv.org/abs/1510.02818v2",
+        "resumo": "This report provides an understanding of how the UNIFY Service Provider (SP)-DevOps concept can be applied and integrated with a combined cloud and transport network NFV architecture. Specifically, the report contains technical descriptions of a set of novel SP-DevOps tools and support functions that facilitate observability, troubleshooting, verification, and VNF development processes. The tools and support functions are described in detail together with their architectural mapping, giving a wider understanding of the SP-DevOps concept as a whole, and how SP-DevOps tools can be used for supporting orchestration and programmability in the UNIFY NFV framework. The concept is further exemplified in a case study for deployment and scaling of an Elastic Firewall.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "Initial Service Provider DevOps concept, capabilities and proposed tools",
+        "autores": [
+          "Wolfgang John",
+          "Catalin Meirosu",
+          "Pontus Sköldström",
+          "Felician Nemeth",
+          "Andras Gulyas",
+          "Mario Kind",
+          "Sachin Sharma",
+          "Ioanna Papafili",
+          "George Agapiou",
+          "Guido Marchetto",
+          "Riccardo Sisto",
+          "Rebecca Steinert",
+          "Per Kreuger",
+          "Henrik Abrahamsson",
+          "Antonio Manzalini",
+          "Nadi Sarrar"
+        ],
+        "ano": 2015,
+        "doi": null,
+        "url": "http://arxiv.org/abs/1510.02220v2",
+        "resumo": "This report presents a first sketch of the Service Provider DevOps concept including four major management processes to support the roles of both service and VNF developers as well as the operator in a more agile manner. The sketch is based on lessons learned from a study of management and operational practices in the industry and recent related work with respect to management of SDN and cloud. Finally, the report identifies requirements for realizing SP-DevOps within an combined cloud and transport network environment as outlined by the UNIFY NFV architecture.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "From Agile to DevOps, Holistic Approach for Faster and Efficient Software Product Release Management",
+        "autores": [
+          "Fatih Bildirici",
+          "Ömür Akdemir"
+        ],
+        "ano": 2023,
+        "doi": null,
+        "url": "http://arxiv.org/abs/2301.09429v1",
+        "resumo": "Release management is one of the most important software processes and is a set of processes that includes the compilation, configuration, and management of software versions in different environments. In recent years, changes in processes, technologies, and tools and changes in practices and understanding have paved the way for more effective, efficient, sustainable, reusable models and methods in this field. The purpose of this study is to examine the DevOps idea to produce a flow, highlight their benefits, and investigate with a model how these philosophies, which are two of the most important processes and methods in software development today, can reveal an effective release management process. What has been learned from the research is how the agile and DevOps practices, which have become widespread in recent years, can be positioned in a general flow in the release management process, although there are different practices, flows, disciplines, and technology. Sharing a case study on these issues in future studies and an experience sharing research where the flow is applied as a case study will reveal positive feedback on the real-life application and results of the flow and the model. Further, a literature review studies in which deficiencies in the literature are identified will be useful in determining the gaps in the process.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "From DevOps to DevDataOps: Data Management in DevOps processes",
+        "autores": [
+          "Antonio Capizzi",
+          "Salvatore Distefano",
+          "Manuel Mazzara"
+        ],
+        "ano": 2019,
+        "doi": null,
+        "url": "http://arxiv.org/abs/1910.03066v1",
+        "resumo": "DevOps is a quite effective approach for managing software development and operation, as confirmed by plenty of success stories in real applications and case studies. DevOps is now becoming the main-stream solution adopted by the software industry in development, able to reduce the time to market and costs while improving quality and ensuring evolvability and adaptability of the resulting software architecture. Among the aspects to take into account in a DevOps process, data is assuming strategic importance, since it allows to gain insights from the operation directly into the development, the main objective of a DevOps approach. Data can be therefore considered as the fuel of the DevOps process, requiring proper solutions for its management. Based on the amount of data generated, its variety, velocity, variability, value and other relevant features, DevOps data management can be mainly framed into the BigData category. This allows exploiting BigData solutions for the management of DevOps data generated throughout the process, including artefacts, code, documentation, logs and so on. This paper aims at investigating data management in DevOps processes, identifying related issues, challenges and potential solutions taken from the BigData world as well as from new trends adopting and adapting DevOps approaches in data management, i.e. DataOps.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps A Historical Review and Future Works",
+        "autores": [
+          "Mayank Gokarna",
+          "Raju Singh"
+        ],
+        "ano": 2020,
+        "doi": null,
+        "url": "http://arxiv.org/abs/2012.06145v1",
+        "resumo": "DevOps is an emerging practice to be followed in Software Development life cycle. The name DevOps indicates that its an integration of Development and Operations team. It is followed to integrate the various stages of the development lifecycle. DevOps is an extended version of the existing Agile method. DevOps aims at Continuous Integration, Continuous Delivery, Continuous Improvement, faster Feedback and Security. This paper reviews the building blocks of DevOps, challenges in adopting DevOps, models to improve DevOps practices and Future works on DevOps.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      },
+      {
+        "titulo": "Foundational DevOps Patterns",
+        "autores": [
+          "Paulo Marques",
+          "Filipe F. Correia"
+        ],
+        "ano": 2023,
+        "doi": null,
+        "url": "http://arxiv.org/abs/2302.01053v1",
+        "resumo": "Adopting DevOps practices is nowadays a recurring task in the industry. DevOps is a set of practices intended to reduce the friction between the software development (Dev) and the IT operations (Ops), resulting in higher quality software and a shorter development lifecycle. Even though many resources are talking about DevOps practices, they are often inconsistent with each other on the best DevOps practices. Furthermore, they lack the needed detail and structure for beginners to the DevOps field to quickly understand them.\n  In order to tackle this issue, this paper proposes four foundational DevOps patterns: Version Control Everything, Continuous Integration, Deployment Automation, and Monitoring. The patterns are both detailed enough and structured to be easily reused by practitioners and flexible enough to accommodate different needs and quirks that might arise from their actual usage context. Furthermore, the patterns are tuned to the DevOps principle of Continuous Improvement by containing metrics so that practitioners can improve their pattern implementations.",
+        "citacoes": null,
+        "periodico": "arXiv",
+        "fonte": "arxiv",
+        "fonte_nome": "arXiv",
+        "classe": "A"
+      }
+    ]
+  },
+  "crossref|DevOps": {
+    "em": "26 ago. 2026",
+    "registros": [
+      {
+        "titulo": "DevOps Basics and Variations",
+        "autores": [
+          "K K, Ambily"
+        ],
+        "ano": 2020,
+        "doi": "10.1007/978-1-4842-6412-6_1",
+        "url": "https://doi.org/10.1007/978-1-4842-6412-6_1",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Azure DevOps for Web Developers",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "The Professional-Grade DevOps Environment",
+        "autores": [
+          "Palermo, Jeffrey"
+        ],
+        "ano": 2019,
+        "doi": "10.1007/978-1-4842-5343-4_3",
+        "url": "https://doi.org/10.1007/978-1-4842-5343-4_3",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": ".NET DevOps for Azure",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps Architecture Blueprints",
+        "autores": [
+          "K K, Ambily"
+        ],
+        "ano": 2020,
+        "doi": "10.1007/978-1-4842-6412-6_8",
+        "url": "https://doi.org/10.1007/978-1-4842-6412-6_8",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Azure DevOps for Web Developers",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Adopting DevOps",
+        "autores": [],
+        "ano": 2017,
+        "doi": "10.1002/9781119310778.ch2",
+        "url": "https://doi.org/10.1002/9781119310778.ch2",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "The DevOps Adoption Playbook",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Case Study: Example DevOps Adoption Roadmap",
+        "autores": [],
+        "ano": 2017,
+        "doi": "10.1002/9781119310778.app",
+        "url": "https://doi.org/10.1002/9781119310778.app",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "The DevOps Adoption Playbook",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "DBAs for DevOps",
+        "autores": [
+          "Cuppett, Michael S."
+        ],
+        "ano": 2016,
+        "doi": "10.1007/978-1-4842-2208-9_2",
+        "url": "https://doi.org/10.1007/978-1-4842-2208-9_2",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "DevOps, DBAs, and DBaaS",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Introducing DevOps",
+        "autores": [
+          "Hüttermann, Michael"
+        ],
+        "ano": 2012,
+        "doi": "10.1007/978-1-4302-4570-4_2",
+        "url": "https://doi.org/10.1007/978-1-4302-4570-4_2",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "DevOps for Developers",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps",
+        "autores": [
+          "Kissoon, Tara"
+        ],
+        "ano": 2024,
+        "doi": "10.1201/9781003404354-2",
+        "url": "https://doi.org/10.1201/9781003404354-2",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Optimal Spending on Cybersecurity Measures",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Test Management Using Azure DevOps",
+        "autores": [
+          "K K, Ambily"
+        ],
+        "ano": 2020,
+        "doi": "10.1007/978-1-4842-6412-6_5",
+        "url": "https://doi.org/10.1007/978-1-4842-6412-6_5",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Azure DevOps for Web Developers",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      },
+      {
+        "titulo": "Project Management Using Azure DevOps",
+        "autores": [
+          "K K, Ambily"
+        ],
+        "ano": 2020,
+        "doi": "10.1007/978-1-4842-6412-6_2",
+        "url": "https://doi.org/10.1007/978-1-4842-6412-6_2",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Azure DevOps for Web Developers",
+        "fonte": "crossref",
+        "fonte_nome": "Crossref",
+        "classe": "A"
+      }
+    ]
+  },
+  "pubmed|DevOps": {
+    "em": "26 ago. 2026",
+    "registros": [
+      {
+        "titulo": "An empirical dataset combining repository metrics and pipeline workflows for predictive software analytics.",
+        "autores": [
+          "Sanusi FA",
+          "Faruna JO"
+        ],
+        "ano": 2026,
+        "doi": "10.1016/j.dib.2026.113128",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42643204/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Data in brief",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "Lightweight Container Orchestration for Reproducible AI and Deep Learning Segmentation of Coronary Arteries and the Aorta in Coronary CT Angiography.",
+        "autores": [
+          "Iwanski M",
+          "Regulski P",
+          "Wendykier P"
+        ],
+        "ano": 2026,
+        "doi": "10.3390/diagnostics16142214",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42510077/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Diagnostics (Basel, Switzerland)",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "HoST: integrating Heuristic knowledge with attention-based LSTM networks for Thunderstorm prediction.",
+        "autores": [
+          "Chatterjee K",
+          "Khan M",
+          "Bala B",
+          "Altaf M",
+          "Chitla A",
+          "Kadurka RS",
+          "Reddy KN",
+          "Menshawi A",
+          "Prasad M",
+          "Jyothi KA"
+        ],
+        "ano": 2026,
+        "doi": "10.1038/s41598-026-57889-1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42414394/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Scientific reports",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "Comment on \"Effectiveness of AI-assisted ESI triage on accuracy and selected outcomes in emergency nursing: A systematic review\".",
+        "autores": [
+          "Narasimharao Davuluri PSL",
+          "Segireddy AR",
+          "Sheelam GK"
+        ],
+        "ano": 2026,
+        "doi": "10.1016/j.ienj.2026.101846",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42361539/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "International emergency nursing",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "Transferable Migration Framework Derived from a Large-scale Tertiary Hospital EHR System.",
+        "autores": [
+          "Yu H",
+          "Lee K",
+          "Lee S",
+          "Kim Y"
+        ],
+        "ano": 2026,
+        "doi": "10.4258/hir.2026.32.2.145",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42167737/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Healthcare informatics research",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "AI-augmented reliability in CI/CD: a framework for predictive, adaptive, and self-correcting pipelines.",
+        "autores": [
+          "Dhawan R",
+          "Dhawan M"
+        ],
+        "ano": 2026,
+        "doi": "10.3389/frai.2026.1776546",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41994557/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Frontiers in artificial intelligence",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "PASTA-4-PHT: a pipeline for automated security and technical audits for the personal health train.",
+        "autores": [
+          "Welten S",
+          "Kindermann K",
+          "Polat A",
+          "Görz M",
+          "Jugl M",
+          "Neumann L",
+          "Neumann A",
+          "Lohmöller J",
+          "Pennekamp J",
+          "Decker S"
+        ],
+        "ano": 2026,
+        "doi": "10.1186/s12911-026-03489-y",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41992288/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "BMC medical informatics and decision making",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      },
+      {
+        "titulo": "PreventativeTestPro: A Scalable Hybrid Testing Framework Utilizing Observability and Generative AI for Proactive Software Quality Engineering.",
+        "autores": [
+          "Patel S",
+          "Patil K",
+          "Meshram V",
+          "Chumchu P"
+        ],
+        "ano": 2026,
+        "doi": "10.3791/69316",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41973708/",
+        "resumo": null,
+        "citacoes": null,
+        "periodico": "Journal of visualized experiments : JoVE",
+        "fonte": "pubmed",
+        "fonte_nome": "PubMed",
+        "classe": "A"
+      }
+    ]
+  },
+  "openalex|DevOps": {
+    "em": "26 ago. 2026",
+    "registros": [
+      {
+        "titulo": "DevOps",
+        "autores": [
+          "Christof Ebert",
+          "Gorka Gallardo",
+          "Josune Hernantes",
+          "Nicolás Serrano"
+        ],
+        "ano": 2016,
+        "doi": "10.1109/ms.2016.68",
+        "url": "https://doi.org/10.1109/ms.2016.68",
+        "resumo": "Building on lean and agile practices, DevOps means end-to-end automation in software development and delivery. Hardly anybody will be able to approach it with a cookbook-style approach, but most developers will benefit from better connecting the previously isolated silos of development and operations. Many DevOps tools exist that can help them do this.",
+        "citacoes": 496,
+        "periodico": "IEEE Software",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Devops: A Software Architect's Perspective",
+        "autores": [
+          "Len Bass",
+          "Ingo Weber",
+          "Liming Zhu"
+        ],
+        "ano": 2015,
+        "doi": null,
+        "url": "http://cds.cern.ch/record/2034028",
+        "resumo": "The First Complete Guide to DevOps for Software Architects DevOps promises to accelerate the release of new software features and improve monitoring of systems in production, but its crucial implications for software architects and architecture are often ignored. In DevOps: A Software Architects Perspective, three leading architects address these issues head-on. The authors review decisions software architects must make in order to achieve DevOps goals and clarify how other DevOps participants are likely to impact the architects work. They also provide the organizational, technical, and operational context needed to deploy DevOps more efficiently, and review DevOps impact on each development phase. The authors address cross-cutting concerns that link multiple functions, offering practical insights into compliance, performance, reliability, repeatability, and security. This guide demonstrates the authors ideas in action with three real-world case studies: datacenter replication for business continuity, management of a continuous deployment pipeline, and migration to a microservice architecture. Comprehensive coverage includes Why DevOps can require major changes in both system architecture and IT roles How virtualization and the cloud can enable DevOps practices Integrating operations and its service lifecycle into DevOps Designing new systems to work well with DevOps practices Integrating DevOps with agile methods and TDD Handling failure detection, upgrade planning, and other key issues Managing consistency issues arising from DevOps independent deployment models Integrating security controls, roles, and audits into DevOps Preparing a business plan for DevOps adoption, rollout, and measurement",
+        "citacoes": 550,
+        "periodico": "CERN Document Server (European Organization for Nuclear Research)",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "Microservices Architecture Enables DevOps: Migration to a Cloud-Native Architecture",
+        "autores": [
+          "Armin Balalaie",
+          "Abbas Heydarnoori",
+          "Pooyan Jamshidi"
+        ],
+        "ano": 2016,
+        "doi": "10.1109/ms.2016.64",
+        "url": "https://doi.org/10.1109/ms.2016.64",
+        "resumo": "This article reports on experiences and lessons learned during incremental migration and architectural refactoring of a commercial mobile back end as a service to microservices architecture. It explains how the researchers adopted DevOps and how this facilitated a smooth migration.",
+        "citacoes": 735,
+        "periodico": "IEEE Software",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "A Survey of DevOps Concepts and Challenges",
+        "autores": [
+          "Leonardo Leite",
+          "Carla Rocha",
+          "Fabio Kon",
+          "Dejan Milojicic",
+          "Paulo Meirelles"
+        ],
+        "ano": 2019,
+        "doi": "10.1145/3359981",
+        "url": "https://doi.org/10.1145/3359981",
+        "resumo": "DevOpsis a collaborative and multidisciplinary organizational effort to automate continuous delivery of new software updates while guaranteeing their correctness and reliability. The present survey investigates and discusses DevOps challenges from the perspective of engineers, managers, and researchers. We review the literature and develop a DevOps conceptual map, correlating the DevOps automation tools with these concepts. We then discuss their practical implications for engineers, managers, and researchers. Finally, we critically explore some of the most relevant DevOps challenges reported by the literature.",
+        "citacoes": 384,
+        "periodico": "ACM Computing Surveys",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "What is DevOps?",
+        "autores": [
+          "Ramtin Jabbari",
+          "Nauman bin Ali",
+          "Kai Petersen",
+          "Binish Tanveer"
+        ],
+        "ano": 2016,
+        "doi": "10.1145/2962695.2962707",
+        "url": "https://doi.org/10.1145/2962695.2962707",
+        "resumo": "Context: DevOps, the combination of Development and Operations, is a new way of thinking in the software engineering domain that recently received much attention. Given that DevOps is a new term and novel concept recently introduced, no common understanding of what it entails has been achieved yet. Consequently, definitions of DevOps often only represent a part that is relevant to the concept.",
+        "citacoes": 229,
+        "periodico": null,
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps for Developers",
+        "autores": [
+          "Michael Hüttermann"
+        ],
+        "ano": 2012,
+        "doi": "10.1007/978-1-4302-4570-4",
+        "url": "https://doi.org/10.1007/978-1-4302-4570-4",
+        "resumo": "DevOps for Developers delivers a practical, thorough introduction to approaches, processes and tools to foster collaboration between software development and operations. Efforts of Agile software development often end at the transition phase from development to operations. This book covers the delivery of software, this means “the last mile”, with lean practices for shipping the software to production and making it available to the end users, together with the integration of operations with earlier project phases (elaboration, construction, transition). DevOps for Developers describes how to streamline the software delivery process and improve the cycle time (that is the time from inception to delivery). It will enable you to deliver software faster, in better quality and more aligned with individual requirements and basic conditions. And above all, work that is aligned with the “DevOps” approach makes even more fun! Provides patterns and toolchains to integrate software development and operations Delivers an one-stop shop for kick-starting with DevOps Provides guidance",
+        "citacoes": 162,
+        "periodico": "Apress eBooks",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "A qualitative study of DevOps usage in practice",
+        "autores": [
+          "Floris Erich",
+          "Chintan Amrit",
+          "Maya Daneva"
+        ],
+        "ano": 2017,
+        "doi": "10.1002/smr.1885",
+        "url": "https://doi.org/10.1002/smr.1885",
+        "resumo": "Abstract Organizations are introducing agile and lean software development techniques in operations to increase the pace of their software development process and to improve the quality of their software. They use the term DevOps, a portmanteau of development and operations, as an umbrella term to describe their efforts. In this paper, we describe the ways in which organizations implement DevOps and the outcomes they experience. We first summarize the results of a systematic literature review that we performed to discover what researchers have written about DevOps. We then describe the results of an exploratory interview‐based study involving 6 organizations of various sizes that are active in various industries. As part of our findings, we observed that all organizations were positive about their experiences and only minor problems were encountered while adopting",
+        "citacoes": 204,
+        "periodico": "Journal of Software Evolution and Process",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps and Its Practices",
+        "autores": [
+          "Liming Zhu",
+          "Len Bass",
+          "George Champlin-Scharff"
+        ],
+        "ano": 2016,
+        "doi": "10.1109/ms.2016.81",
+        "url": "https://doi.org/10.1109/ms.2016.81",
+        "resumo": "DevOps aims to reduce the time between committing a system change and placing the change into normal production, while ensuring high quality. The article topics in this theme issue include using DevOps to migrate to microservices, adopting DevOps, and DevOps tools. The Web extra at https://youtu.be/NzX6JmwDS0s is an audio recording of Davide Falessi speaking with Len Bass and George Champlin-Scharff about the IEEE Software May/June 2016 theme issue on DevOps and its practices.",
+        "citacoes": 150,
+        "periodico": "IEEE Software",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps and software quality: A systematic mapping",
+        "autores": [
+          "Alok Mishra",
+          "Ziadoon Otaiwi"
+        ],
+        "ano": 2020,
+        "doi": "10.1016/j.cosrev.2020.100308",
+        "url": "https://doi.org/10.1016/j.cosrev.2020.100308",
+        "resumo": "Quality pressure is one of the factors affecting processes for software development in its various stages. DevOps is one of the proposed solutions to such pressure. The primary focus of DevOps is to increase the deployment speed, frequency and quality. DevOps is a mixture of different developments and operations to its multitudinous ramifications in software development industries, DevOps have attracted the interest of many researchers. There are considerable literature surveys on this critical innovation in software development, yet, little attention has been given to DevOps impact on software quality. This research is aimed at analyzing the implications of DevOps features on software quality. DevOps can also be referred to a change in organization cultures aimed at removal of gaps between the development and operations of an organization. The adoption of DevOps in an organization provides many benefits including quality but also brings challenges to an organization. This study presents systematic mapping of the impact of DevOps on software quality. The results of this study provide a better understanding of DevOps on software quality for both professionals and researchers working in this area. The study shows research was mainly focused in automation, culture, continuous delivery, fast feedback of DevOps. There is need of further research in many areas of DevOps (for instance: measurement, development of metrics of different stages to assess its performance, culture, practices toward ensuring quality assurance, and quality factors such as usability, efficiency, software maintainability and portability).",
+        "citacoes": 174,
+        "periodico": "Computer Science Review",
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      },
+      {
+        "titulo": "DevOps for Developers",
+        "autores": [
+          "Michael Httermann"
+        ],
+        "ano": 2012,
+        "doi": null,
+        "url": "https://core.ac.uk/display/157897360",
+        "resumo": "DevOps for Developers delivers a practical, thorough introduction to approaches, processes and tools to foster collaboration between software development and operations. Efforts of Agile software development often end at the transition phase from development to operations. This book covers the delivery of software, this means the last mile, with lean practices for shipping the software to production and making it available to the end users, together with the integration of operations with earlier project phases (elaboration, construction, transition). DevOps for Developers describes how to streamline the software delivery process and improve the cycle time (that is the time from inception to delivery). It will enable you to deliver software faster, in better quality and more aligned with individual requirements and basic conditions. And above all, work that is aligned with the DevOps approach makes even more fun! Provides patterns and toolchains to integrate software development and operations Delivers an one-stop shop for kick-starting with DevOps Provides guidance how to streamline the software delivery process What youll learn Know what DevOps is and how it can result in better and faster delivered software Apply patterns to improve collaboration between development and operations Introduce unified processes and incentives to support shared goals Start with or extend a tool infrastructure that spans projects roles and phases Address pain points in your individual environment with appropriate recipes Break down existing walls that make up an unnecessarily sluggish delivery process Who this book is for DevOps for Developers is for motivated software engineers, particularly programmers, testers, QA, system admins, database admins, both beginners and experts, who want to improve their software delivery process. Its the perfect choice for engineers who want to go the next step by integrating their approaches for development and delivery of software. This book is for engineers who want to shape their processes and decide on and integrate open source tools and seek for guidance how to integrate standard tools in advanced real world use cases. Table of Contents Beginning DevOps for Developers Introducing DevOps Building Blocks of DevOps Quality and Testing Introduce Shared Incentives Gain Fast Feedback Unified and Holistic Approach Automatic Releasing Infrastructure as Code Specification by Example",
+        "citacoes": 135,
+        "periodico": null,
+        "fonte": "openalex",
+        "fonte_nome": "OpenAlex",
+        "classe": "A"
+      }
+    ]
+  }
+}

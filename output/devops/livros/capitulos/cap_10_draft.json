@@ -1,0 +1,39 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "C", "capitulo": "10" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 9: o conceito de Pipeline de CI/CD automatizado, agora estendido com observabilidade e segurança",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Observabilidade: Métricas, Logs e Traces",
+        "escopo": "Fundamentos dos três pilares da observabilidade (métricas, logs, traces), ferramentas principais (Prometheus, Grafana, ELK, Jaeger, OpenTelemetry) e como implementar instrumentação básica. Fora do escopo: configuração avançada de alertas complexos, ML para anomalias.",
+        "ancora_visual": "flowchart LR do fluxo de telemetria: aplicação gera métricas/logs/traces -> coletores (Prometheus/Fluentd/Jaeger) -> armazenamento -> visualização (Grafana/Kibana) -> alertas",
+        "entrega_tecnica": "Python: script simples que instrumenta uma aplicação FastAPI com OpenTelemetry, exporta métricas para Prometheus e logs estruturados em JSON",
+        "evolucao_leitor": "De 'não sei o que acontece em produção' para 'consigo ver latência, erros e fluxos de requisição em tempo real'",
+        "conceito_denso": false
+      },
+      {
+        "nome": "DevSecOps: Segurança Integrada (Shift-Left)",
+        "escopo": "Princípios de Shift-Left Security, ferramentas de SAST/SCA/container scanning (Bandit, Safety, Trivy), integração no pipeline CI/CD, políticas de gate de segurança. Fora do escopo: compliance avançado (SOC2, PCI-DSS), threat modeling formal.",
+        "ancora_visual": "sequenceDiagram do pipeline seguro: commit -> SAST -> SCA -> Container Scan -> Gate de Política -> Deploy homologação -> Gate manual -> Produção",
+        "entrega_tecnica": "YAML: workflow GitHub Actions com jobs de SAST (Bandit), SCA (Safety), Container Scan (Trivy) e gate de falha em vulnerabilidades HIGH/CRITICAL",
+        "evolucao_leitor": "De 'segurança é problema do time de infra' para 'eu integro verificações de segurança no meu pipeline e bloqueio vulnerabilidades antes do deploy'",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Escalabilidade e Resiliência: Kubernetes e Padrões de Produção",
+        "escopo": "Conceitos de HPA/VPA, probes (liveness/readiness/startup), circuit breaker, retry com backoff, chaos engineering básico (Litmus/Gremlin). Fora do escopo: service mesh (Istio/Linkerd), multi-cluster, GitOps avançado (ArgoCD).",
+        "ancora_visual": "stateDiagram-v2 do ciclo de vida de um pod com probes: Pending -> ContainerCreating -> Running -> (liveness/readiness checks) -> Ready -> Terminating",
+        "entrega_tecnica": "YAML: deployment Kubernetes com HPA, probes configurados, resource limits/requests, e ConfigMap para feature flags de resiliência",
+        "evolucao_leitor": "De 'minha aplicação cai quando tem pico' para 'configuro escalabilidade automática e a aplicação se auto-cura com probes e circuit breakers'",
+        "conceito_denso": false
+      }
+    ],
+    "metricas_obrigatorias": [
+      { "metrica": "MTTR (Mean Time to Recovery)", "valor": "menos de 1 hora" },
+      { "metrica": "Change Failure Rate", "valor": "abaixo de 15%" },
+      { "metrica": "Deployment Frequency", "valor": "múltiplos deploys por dia" }
+    ]
+  }
+}

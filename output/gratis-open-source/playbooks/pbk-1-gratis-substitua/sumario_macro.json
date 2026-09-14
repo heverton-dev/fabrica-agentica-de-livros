@@ -1,0 +1,46 @@
+{
+  "titulo_obra": "Playbook — Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "gratis-open-source",
+  "motivo_condutor": {
+    "nome": "A Oficina Digital",
+    "descricao": "Cada ferramenta paga é tratada como uma peça alugada de uma loja de aluguel de equipamentos (o SaaS); cada alternativa open source é a mesma peça comprada, montada e mantida na própria oficina do leitor — o aluguel recorrente vira posse com responsabilidade de manutenção.",
+    "vocabulario": [
+      "oficina",
+      "bancada",
+      "ferramenta",
+      "peça",
+      "aluguel",
+      "manutenção",
+      "estoque",
+      "prateleira",
+      "montagem",
+      "garantia"
+    ],
+    "persona_leitor": "Artesão Digital"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Oficina",
+      "titulo_parte": "Monte a Sua Bancada",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Bancada",
+      "titulo_parte": "A Oficina Completa",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ]
+}

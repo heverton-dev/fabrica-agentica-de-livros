@@ -1,0 +1,575 @@
+{
+  "tema": "LLM cost optimization token efficiency model routing",
+  "gerado_em": "12 set. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 12
+    },
+    "arxiv": {
+      "status": "erro",
+      "erro": "http://export.arxiv.org/api/query?search_query=all:LLM+AND+all:cost+AND+all:opti -> HTTP 429",
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=LLM+cost+optimizatio -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=LLM+cost+optimization+token+efficiency+model -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 24,
+  "registros": [
+    {
+      "titulo": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
+      "autores": [
+        "Kefallinos, Dionysios",
+        "Alexandris, Georgios",
+        "Maras, Alexis",
+        "Chaidos, Panagiotis",
+        "Gomony, Manil Dev",
+        "Corporaal, Henk",
+        "Soudris, Dimitrios",
+        "Xydis, Sotirios"
+      ],
+      "ano": 2018,
+      "doi": "10.4230/lipics.cosit.2022.18",
+      "url": "http://arxiv.org/abs/1810.04805",
+      "resumo": "Although geospatial question answering systems have received increasing attention in recent years, existing prototype systems struggle to properly answer qualitative spatial questions. In this work, we propose a unique framework for answering qualitative spatial questions, which comprises three main components: a geoparser that takes the input questions and extracts place semantic information from text, a reasoning system which is embedded with a crisp reasoner, and finally, answer extraction, which refines the solution space and generates final answers. We present an experimental design to evaluate our framework for point-based cardinal direction calculus (CDC) relations by developing an automated approach for generating three types of synthetic qualitative spatial questions. The initial evaluations of generated answers in our system are promising because a high proportion of answers were labelled correct.",
+      "citacoes": 46036,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Survey of Large Language Models",
+      "autores": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong",
+        "Yupeng Hou",
+        "Beichen Zhang",
+        "Yingqian Min",
+        "Junjie Zhang",
+        "Peiyu Liu",
+        "Xiaolei Wang",
+        "Yifan Du",
+        "Yushuo Chen",
+        "Yushuo Chen",
+        "Zhipeng Chen",
+        "Jinhao Jiang",
+        "Ruiyang Ren",
+        "Yifan Li",
+        "Xinyu Tang",
+        "Peiyu Liu",
+        "Yiwen Hu",
+        "Jian‐Yun Nie",
+        "Ji-Rong Wen"
+      ],
+      "ano": 2026,
+      "doi": "10.1007/s11704-026-60308-3",
+      "url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "resumo": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, architectural innovations, and data curation strategies; (2) post-training techniques, including supervised fine-tuning and reinforcement learning, which adapt foundational models to downstream tasks and enhance their alignment and safety; (3) utilization strategies, such as in-context learning, prompt engineering, and agentic reasoning, that optimize real-world deployment and enable effective interaction with external environments; and (4) evaluation methods, encompassing benchmarks for key ability dimensions such as core language capabilities, reasoning, and safety, which support comprehensive and reliable assessment of model performance. Additionally, we identify critical research issues, including those concerning theoretical foundations, efficient scaling, alignment, and agentic capability, and highlight the open challenges they present. By synthesizing state-of-the-art insights and emerging trends, this survey aims to provide a systematic and comprehensive framework for understanding the trajectory, current limitations, and future directions of LLM progress.",
+      "citacoes": 1526,
+      "periodico": "Frontiers of Computer Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "autores": [
+        "Jingfeng Yang",
+        "Hongye Jin",
+        "Ruixiang Tang",
+        "Xiaotian Han",
+        "Qizhang Feng",
+        "Haoming Jiang",
+        "Shaochen Zhong",
+        "Bing Yin",
+        "Xia Hu"
+      ],
+      "ano": 2024,
+      "doi": "10.1145/3649506",
+      "url": "https://doi.org/10.1145/3649506",
+      "resumo": "This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natural language processing tasks, such as knowledge-intensive tasks, traditional natural language understanding tasks, generation tasks, emergent abilities, and considerations for specific tasks. We present various use cases and non-use cases to illustrate the practical applications and limitations of LLMs in real-world scenarios. We also try to understand the importance of data and the specific challenges associated with each NLP task. Furthermore, we explore the impact of spurious biases on LLMs and delve into other essential considerations, such as efficiency, cost, and latency, to ensure a comprehensive understanding of deploying LLMs in practice. This comprehensive guide aims to provide researchers and practitioners with valuable insights and best practices for working with LLMs, thereby enabling the successful implementation of these models in a wide range of NLP tasks. A curated list of practical guide resources of LLMs, regularly updated, can be found at https://github.com/Mooler0410/LLMsPracticalGuide . An LLMs evolutionary tree, editable yet regularly updated, can be found at llmtree.ai",
+      "citacoes": 492,
+      "periodico": "ACM Transactions on Knowledge Discovery from Data",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "PaLM: Scaling Language Modeling with Pathways",
+      "autores": [
+        "Aakanksha Chowdhery",
+        "Sharan Narang",
+        "Jacob Devlin",
+        "Maarten Bosma",
+        "Gaurav Mishra",
+        "Adam Roberts",
+        "Paul Barham",
+        "Hyung Won Chung",
+        "Charles Sutton",
+        "Sebastian Gehrmann",
+        "Parker Schuh",
+        "Kensen Shi",
+        "Sasha Tsvyashchenko",
+        "Joshua Maynez",
+        "Abhishek S. Rao",
+        "Parker Barnes",
+        "Yi Tay",
+        "Noam Shazeer",
+        "Vinodkumar Prabhakaran",
+        "Emily Reif",
+        "Nan Du",
+        "Ben Hutchinson",
+        "Reiner Pope",
+        "James T. Bradbury",
+        "Jacob Austin",
+        "Michael Isard",
+        "Guy Gur-Ari",
+        "Pengcheng Yin",
+        "Toju Duke",
+        "Anselm Levskaya",
+        "Sanjay Ghemawat",
+        "Sunipa Dev",
+        "Henryk Michalewski",
+        "Xavier García",
+        "Vedant Misra",
+        "Kevin Robinson",
+        "Liam Fedus",
+        "Denny Zhou",
+        "Daphne Ippolito",
+        "David Luan",
+        "Hyeontaek Lim",
+        "Barret Zoph",
+        "Alexander Spiridonov",
+        "Ryan Sepassi",
+        "D. Dohan",
+        "Shivani Agrawal",
+        "Mark Omernick",
+        "Andrew M. Dai",
+        "Thanumalayan Sankaranarayana Pillai",
+        "Marie Pellat",
+        "Aitor Lewkowycz",
+        "Érica Rodrigues Moreira",
+        "Rewon Child",
+        "Oleksandr Polozov",
+        "Katherine Lee",
+        "Zongwei Zhou",
+        "Xuezhi Wang",
+        "Brennan Saeta",
+        "Mark Díaz",
+        "Orhan Fırat",
+        "Michele Catasta",
+        "Wei, Jason",
+        "Meier-Hellstern, Kathy",
+        "Douglas Eck",
+        "Jeff Dean",
+        "Slav Petrov",
+        "Noah Fiedel"
+      ],
+      "ano": 2022,
+      "doi": "10.48550/arxiv.2204.02311",
+      "url": "http://arxiv.org/abs/2204.02311",
+      "resumo": "Large language models have been shown to achieve remarkable performance across a variety of natural language tasks using few-shot learning, which drastically reduces the number of task-specific training examples needed to adapt the model to a particular application. To further our understanding of the impact of scale on few-shot learning, we trained a 540-billion parameter, densely activated, Transformer language model, which we call Pathways Language Model PaLM. We trained PaLM on 6144 TPU v4 chips using Pathways, a new ML system which enables highly efficient training across multiple TPU Pods. We demonstrate continued benefits of scaling by achieving state-of-the-art few-shot learning results on hundreds of language understanding and generation benchmarks. On a number of these tasks, PaLM 540B achieves breakthrough performance, outperforming the finetuned state-of-the-art on a suite of multi-step reasoning tasks, and outperforming average human performance on the recently released BIG-bench benchmark. A significant number of BIG-bench tasks showed discontinuous improvements from model scale, meaning that performance steeply increased as we scaled to our largest model. PaLM also has strong capabilities in multilingual tasks and source code generation, which we demonstrate on a wide array of benchmarks. We additionally provide a comprehensive analysis on bias and toxicity, and study the extent of training data memorization with respect to model scale. Finally, we discuss the ethical considerations related to large language models and discuss potential mitigation strategies.",
+      "citacoes": 2136,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "autores": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan",
+        "Yuxi Bi",
+        "Yi Dai",
+        "Jiawei Sun",
+        "Wang, Meng",
+        "Wang, Haofen"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2312.10997",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "resumo": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development.",
+      "citacoes": 733,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Training Compute-Optimal Large Language Models",
+      "autores": [
+        "Jordan Hoffmann",
+        "Sebastian Borgeaud",
+        "Arthur Mensch",
+        "Elena Buchatskaya",
+        "Trevor Cai",
+        "Eliza Rutherford",
+        "Diego de Las Casas",
+        "Lisa Anne Hendricks",
+        "Johannes Welbl",
+        "Aidan Clark",
+        "Tom Hennigan",
+        "Eric Noland",
+        "Katie Millican",
+        "George van den Driessche",
+        "Bogdan Damoc",
+        "Aurelia Guy",
+        "Simon Osindero",
+        "Karen Simonyan",
+        "Erich Elsen",
+        "Jack W. Rae",
+        "Oriol Vinyals",
+        "Laurent Sifre"
+      ],
+      "ano": 2022,
+      "doi": "10.48550/arxiv.2203.15556",
+      "url": "http://arxiv.org/abs/2203.15556",
+      "resumo": "We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant. By training over 400 language models ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and the number of training tokens should be scaled equally: for every doubling of model size the number of training tokens should also be doubled. We test this hypothesis by training a predicted compute-optimal model, Chinchilla, that uses the same compute budget as Gopher but with 70B parameters and 4$\\times$ more more data. Chinchilla uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks. This also means that Chinchilla uses substantially less compute for fine-tuning and inference, greatly facilitating downstream usage. As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5% on the MMLU benchmark, greater than a 7% improvement over Gopher.",
+      "citacoes": 671,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+      "autores": [
+        "Albert Gu",
+        "Tri Dao"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2312.00752",
+      "url": "http://arxiv.org/abs/2312.00752",
+      "resumo": "Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. Many subquadratic-time architectures such as linear attention, gated convolution and recurrent models, and structured state space models (SSMs) have been developed to address Transformers' computational inefficiency on long sequences, but they have not performed as well as attention on important modalities such as language. We identify that a key weakness of such models is their inability to perform content-based reasoning, and make several improvements. First, simply letting the SSM parameters be functions of the input addresses their weakness with discrete modalities, allowing the model to selectively propagate or forget information along the sequence length dimension depending on the current token. Second, even though this change prevents the use of efficient convolutions, we design a hardware-aware parallel algorithm in recurrent mode. We integrate these selective SSMs into a simplified end-to-end neural network architecture without attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5$\\times$ higher throughput than Transformers) and linear scaling in sequence length, and its performance improves on real data up to million-length sequences. As a general sequence model backbone, Mamba achieves state-of-the-art performance across several modalities such as language, audio, and genomics. On language modeling, our Mamba-3B model outperforms Transformers of the same size and matches Transformers twice its size, both in pretraining and downstream evaluation.",
+      "citacoes": 1057,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Comprehensive Overview of Large Language Models",
+      "autores": [
+        "Humza Naveed",
+        "Asad Ullah Khan",
+        "Shi Qiu",
+        "Muhammad Saqib",
+        "Saeed Anwar",
+        "Muhammad Usman",
+        "Akhtar, Naveed",
+        "Nick Barnes",
+        "Ajmal Mian"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2307.06435",
+      "url": "http://arxiv.org/abs/2307.06435",
+      "resumo": "Large Language Models (LLMs) have recently demonstrated remarkable capabilities in natural language processing tasks and beyond. This success of LLMs has led to a large influx of research contributions in this direction. These works encompass diverse topics such as architectural innovations, better training strategies, context length improvements, fine-tuning, multi-modal LLMs, robotics, datasets, benchmarking, efficiency, and more. With the rapid development of techniques and regular breakthroughs in LLM research, it has become considerably challenging to perceive the bigger picture of the advances in this direction. Considering the rapidly emerging plethora of literature on LLMs, it is imperative that the research community is able to benefit from a concise yet comprehensive overview of the recent developments in this field. This article provides an overview of the existing literature on a broad range of LLM-related concepts. Our self-contained comprehensive overview of LLMs discusses relevant background concepts along with covering the advanced topics at the frontier of research in LLMs. This review article is intended to not only provide a systematic survey but also a quick comprehensive reference for the researchers and practitioners to draw insights from extensive informative summaries of the existing works to advance the LLM research.",
+      "citacoes": 368,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A review of large language models and autonomous agents in chemistry",
+      "autores": [
+        "Mayk Caldas Ramos",
+        "Christopher J. Collison",
+        "Andrew Dickson White"
+      ],
+      "ano": 2024,
+      "doi": "10.1039/d4sc03921a",
+      "url": "https://doi.org/10.1039/d4sc03921a",
+      "resumo": "Large language models (LLMs) have emerged as powerful tools in chemistry, significantly impacting molecule design, property prediction, and synthesis optimization. This review highlights LLM capabilities in these domains and their potential to accelerate scientific discovery through automation. We also review LLM-based autonomous agents: LLMs with a broader set of tools to interact with their surrounding environment. These agents perform diverse tasks such as paper scraping, interfacing with automated laboratories, and synthesis planning. As agents are an emerging topic, we extend the scope of our review of agents beyond chemistry and discuss across any scientific domains. This review covers the recent history, current capabilities, and design of LLMs and autonomous agents, addressing specific challenges, opportunities, and future directions in chemistry. Key challenges include data quality and integration, model interpretability, and the need for standard benchmarks, while future directions point towards more sophisticated multi-modal agents and enhanced collaboration between agents and experimental methods. Due to the quick pace of this field, a repository has been built to keep track of the latest studies: https://github.com/ur-whitelab/LLMs-in-science.",
+      "citacoes": 239,
+      "periodico": "Chemical Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Large Language Models: A Survey",
+      "autores": [
+        "Shervin Minaee",
+        "Tomas Mikolov",
+        "Nikzad, Narjes",
+        "Meysam Chenaghlu",
+        "Richard Socher",
+        "Xavier Amatriain",
+        "Jianfeng Gao"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2402.06196",
+      "url": "http://arxiv.org/abs/2402.06196",
+      "resumo": "Large Language Models (LLMs) have drawn a lot of attention due to their strong performance on a wide range of natural language tasks, since the release of ChatGPT in November 2022. LLMs' ability of general-purpose language understanding and generation is acquired by training billions of model's parameters on massive amounts of text data, as predicted by scaling laws \\cite{kaplan2020scaling,hoffmann2022training}. The research area of LLMs, while very recent, is evolving rapidly in many different ways. In this paper, we review some of the most prominent LLMs, including three popular LLM families (GPT, LLaMA, PaLM), and discuss their characteristics, contributions and limitations. We also give an overview of techniques developed to build, and augment LLMs. We then survey popular datasets prepared for LLM training, fine-tuning, and evaluation, review widely used LLM evaluation metrics, and compare the performance of several popular LLMs on a set of representative benchmarks. Finally, we conclude the paper by discussing open challenges and future research directions.",
+      "citacoes": 226,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Large Language Models as Optimizers",
+      "autores": [
+        "Chengrun Yang",
+        "Xuezhi Wang",
+        "Yifeng Lu",
+        "Hanxiao Liu",
+        "Quoc V. Le",
+        "Denny Zhou",
+        "Xinyun Chen"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2309.03409",
+      "url": "http://arxiv.org/abs/2309.03409",
+      "resumo": "Optimization is ubiquitous. While derivative-based algorithms have been powerful tools for various problems, the absence of gradient imposes challenges on many real-world applications. In this work, we propose Optimization by PROmpting (OPRO), a simple and effective approach to leverage large language models (LLMs) as optimizers, where the optimization task is described in natural language. In each optimization step, the LLM generates new solutions from the prompt that contains previously generated solutions with their values, then the new solutions are evaluated and added to the prompt for the next optimization step. We first showcase OPRO on linear regression and traveling salesman problems, then move on to our main application in prompt optimization, where the goal is to find instructions that maximize the task accuracy. With a variety of LLMs, we demonstrate that the best prompts optimized by OPRO outperform human-designed prompts by up to 8% on GSM8K, and by up to 50% on Big-Bench Hard tasks. Code at https://github.com/google-deepmind/opro.",
+      "citacoes": 95,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Token-Budget-Aware LLM Reasoning",
+      "autores": [
+        "Tingxu Han",
+        "Zhenting Wang",
+        "Chunrong Fang",
+        "Shiyu Zhao",
+        "Shiqing Ma",
+        "Zhenyu Chen"
+      ],
+      "ano": 2025,
+      "doi": "10.18653/v1/2025.findings-acl.1274",
+      "url": "https://doi.org/10.18653/v1/2025.findings-acl.1274",
+      "resumo": "Reasoning is critical for large language models (LLMs) to excel in a wide range of tasks.While methods like Chain-of-Thought (CoT) reasoning and enhance LLM performance by decomposing problems into intermediate steps, they also incur significant overhead in token usage, leading to increased costs.We find that the reasoning process of current LLMs is unnecessarily lengthy and it can be compressed by including a reasonable token budget in the prompt, but the choice of token budget plays a crucial role in the actual compression effectiveness.We then propose a tokenbudget-aware LLM reasoning framework that dynamically adjusts the number of reasoning tokens based on the reasoning complexity of each problem.Experiments show that our method effectively reduces token costs in CoT reasoning with only a slight performance reduction, offering a practical solution to balance efficiency and accuracy in LLM reasoning.Code:",
+      "citacoes": 23,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "An Efficient LLM Agent Framework for Cost Optimization through Token Optimization and Trajectory Reduction",
+      "autores": [
+        "Ashok, Nipuna",
+        "George, Jossy",
+        "Singh, Monisha"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/icndsa68777.2026.11652295",
+      "url": "https://doi.org/10.1109/icndsa68777.2026.11652295",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2026 International Conference on NextGen Data Science and Analytics (ICNDSA)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Token Cost Optimization in an LLM Agent for JSON-Based System Modeling from Dialogue History",
+      "autores": [
+        "Lavrentiev, Saveliy",
+        "Dukhanov, Alexey"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/smartindustrycon68821.2026.11493004",
+      "url": "https://doi.org/10.1109/smartindustrycon68821.2026.11493004",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2026 International Russian Smart Industry Conference (SmartIndustryCon)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Adaptive Token Routing for Heterogeneous LLM Inference in Edge-Cloud Continuum",
+      "autores": [
+        "Patel, Tejas Pravinbhai"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/southeastcon63549.2026.11476596",
+      "url": "https://doi.org/10.1109/southeastcon63549.2026.11476596",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "SoutheastCon 2026",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "GIT-DPO: Gradient-Informed Token-Weighted Direct Preference Optimization for LLM Alignment",
+      "autores": [
+        "Gora, Saimir"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.7149198",
+      "url": "https://doi.org/10.2139/ssrn.7149198",
+      "resumo": "<jats:p>Direct Preference Optimization (DPO) has emerged as a popular alternative to Reinforcement Learning from Human Feedback (RLHF) for aligning Large Language Models (LLMs) with human preferences, eliminating the need for explicit reward modeling. However, DPO and most of its variants treat all tokens in a response uniformly during preference optimization, assigning equal optimization pressure to every token regardless of its actual contribution to the preference judgment. This uniform treatment is suboptimal because only a small subset of tokens, such as factual claims, safety-critical terms, or key instruction-following phrases, typically determines the preference label, while the remaining tokens act as noise that dilutes the optimization signal. We propose GIT-DPO, a novel token-level preference optimization framework that combines two complementary innovations: a gradient-based token attribution mechanism that dynamically computes fine-grained importance weights by measuring the sensitivity of the DPO loss to perturbations in each token's log-probability, and a contrastive dual-pair loss that simultaneously pulls the policy toward preferred responses, pushes it away from dispreferred responses, and regularizes low-importance tokens toward the reference model. Extensive experiments on Al-pacaEval 2.0, Arena-Hard, and MT-Bench across three backbone LLMs (Llama-3-8B-Instruct, Mistral-7B-Instruct, Qwen2.5-7B-Instruct) demonstrate that GIT-DPO consistently outperforms nine strong baselines including DPO, SimPO, TDPO, ORPO, KTO, ConfPO, Selective-DPO, and AlignDistil. On Llama-3-8B-Instruct, GIT-DPO achieves a length-controlled win rate of 22.84 percent on AlpacaEval 2.0, outperforming the strongest baseline by 2.74 percentage points, while converging 1.5 times faster than standard DPO with only 5 to 8 percent additional training time per step.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Quantum-Enhanced LLM Cascade Routing: A QAOA Approach to Cost-Optimal Model Selection in Multi-Agent Systems",
+      "autores": [
+        "Patole, Amit"
+      ],
+      "ano": 2026,
+      "doi": "10.20944/preprints202604.0413.v2",
+      "url": "https://doi.org/10.20944/preprints202604.0413.v2",
+      "resumo": "<jats:p>The rapid proliferation of large language model (LLM) powered multi-agent systems creates a non-trivial combinatorial optimization problem: routing heterogeneous tasks to the most cost-effective model tier while maintaining quality guarantees. Current production systems rely on static lookup tables, which over-provision expensive models and waste computational budget. We formalize the LLM Cascade Routing Problem (LCRP) as a Quadratic Unconstrained Binary Optimization (QUBO) problem and solve it using the Quantum Approximate Optimization Algorithm (QAOA). We benchmark QAOA against greedy heuristics and simulated annealing using both Google Cirq simulation and real IBM Quantum hardware (156-qubit Heron processors).  Experiments across three IBM backends (ibm_fez, ibm_kingston, ibm_marrakesh) on problem instances from 6 to 18 qubits reveal three key findings: (i) shallow QAOA circuits (p=1, depth 52) achieve 15.4% valid assignment rate on real hardware versus 0.8% for deeper circuits (p=2, depth 101), demonstrating that NISQ noise favors shallow ansatze; (ii) hardware constraint satisfaction degrades steeply with problem size, dropping from 37-43% at 6 qubits to 0.2-0.3% at 18 qubits; and (iii) results are reproducible across all three backends with consistent valid rates within plus or minus 1.5%. To our knowledge, this is the first quantum computing formulation of the LLM model routing problem. We provide an open-source implementation and discuss the projected quantum advantage horizon.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Quantum-Enhanced LLM Cascade Routing: A QAOA Approach to Cost-Optimal Model Selection in Multi-Agent Systems",
+      "autores": [
+        "Patole, Amit"
+      ],
+      "ano": 2026,
+      "doi": "10.20944/preprints202604.0413.v1",
+      "url": "https://doi.org/10.20944/preprints202604.0413.v1",
+      "resumo": "<jats:p>The rapid proliferation of large language model (LLM) powered multi-agent systems creates a non-trivial combinatorial optimization problem: routing heterogeneous tasks to the most cost-effective model tier while maintaining quality guarantees. Current production systems rely on static lookup tables, which over-provision expensive models and waste computational budget. We formalize the LLM Cascade Routing Problem (LCRP) as a Quadratic Unconstrained Binary Optimization (QUBO) problem and solve it using the Quantum Approximate Optimization Algorithm (QAOA). We benchmark QAOA against greedy heuristics and simulated annealing using both Google Cirq simulation and real IBM Quantum hardware (156-qubit Heron processors).  Experiments across three IBM backends (ibm_fez, ibm_kingston, ibm_marrakesh) on problem instances from 6 to 18 qubits reveal three key findings: (i) shallow QAOA circuits (p=1, depth 52) achieve 15.4% valid assignment rate on real hardware versus 0.8% for deeper circuits (p=2, depth 101), demonstrating that NISQ noise favors shallow ansatze; (ii) hardware constraint satisfaction degrades steeply with problem size, dropping from 37-43% at 6 qubits to 0.2-0.3% at 18 qubits; and (iii) results are reproducible across all three backends with consistent valid rates within plus or minus 1.5%. To our knowledge, this is the first quantum computing formulation of the LLM model routing problem. We provide an open-source implementation and discuss the projected quantum advantage horizon.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Edge-Based Token Optimization for Large Language Model Applications: A Proposal for Cost-Efficient Context Management",
+      "autores": [
+        "Rao K, Amogha"
+      ],
+      "ano": 2025,
+      "doi": "10.2139/ssrn.5585050",
+      "url": "https://doi.org/10.2139/ssrn.5585050",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "When to Revise: Cost-Aware Adaptive Routing for LLM Reasoning",
+      "autores": [
+        "Vahidi, Soroush"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.6510975",
+      "url": "https://doi.org/10.2139/ssrn.6510975",
+      "resumo": "<jats:p>Additional test-time computation can improve large language model (LLM) reasoning, but applying expensive inference uniformly to all queries is often inefficient. This paper studies cost-aware adaptive routing for budgeted LLM reasoning, where the system decides whether to keep a cheaper reasoning route or escalate to a more expensive revise-based route. We formulate this as an inference-time decision problem under an average-compute budget and evaluate it with an artifact-grounded pipeline built from stored outputs, oracle routing summaries, matched policy comparisons, and budget-aware analyses. Experiments on four 100-query GSM8K- and MATH-based regimes show that the usefulness of adaptive routing is strongly regime-dependent. In an easy GSM8K regime, revise-helpful cases are rare and routing headroom is limited. In harder GSM8K regimes, adaptive routing becomes substantially more useful: the best practical policy improves over the cheap baseline while using much less average computation than always revising, and in the strongest hard regime it matches the accuracy of always revising at markedly lower cost. Budget-aware analyses further show that modest cost increases can yield large gains when routing headroom is present, but that these gains quickly saturate. The results position adaptive routing as a practical inference-control mechanism for intelligent reasoning systems and highlight that effective test-time compute allocation depends on workload difficulty rather than uniform escalation.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "TCRA-LLM: Token Compression Retrieval Augmented Large Language Model for Inference Cost Reduction",
+      "autores": [
+        "Liu, Junyi",
+        "Li, Liangzhi",
+        "Xiang, Tong",
+        "Wang, Bowen",
+        "Qian, Yiming"
+      ],
+      "ano": 2023,
+      "doi": "10.18653/v1/2023.findings-emnlp.655",
+      "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.655",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Findings of the Association for Computational Linguistics: EMNLP 2023",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "COST-GOV: An Operational Decision Framework for Governance-Aware LLM Routing in Enterprises",
+      "autores": [
+        "Marineni, Malathi"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.6965739",
+      "url": "https://doi.org/10.2139/ssrn.6965739",
+      "resumo": "<jats:p>Enterprise large language model (LLM) deployments face the dual challenge of controlling escalating token costs while ensuring governance compliance with organizational policies and regulatory requirements. In addition, economic evaluation research demonstrates that model selection decisions involve complex cost-performance tradeoffs that vary by task type and workload characteristics [1]. While existing research addresses these concerns-including governance frameworks for AI FinOps [2], emerging risk-aware routing systems, and compliance-focused governance approaches-opportunities remain to strengthen their integration through operational decision architectures that enable unified cost-governance evaluation. This paper introduces COST-GOV, a six-layer architecture that provides a systematic approach to integrating cost optimization and governance enforcement for enterprise LLM management. The framework's Decision Engine evaluates every request against both financial constraints and policy requirements simultaneously, ensuring that optimization decisions respect organizational requirements and governance decisions consider financial implications. COST-GOV builds upon AI FinOps governance principles by providing operational routing architecture, extends model routing through systematic policy-aware optimization, and enhances governance frameworks through integrated cost awareness. Scenario-based evaluation suggests that the framework addresses enterprise requirements for cost-constrained compliance, multi-department resource allocation, regulatory compliance with performance requirements, and dynamic policy enforcement. The paper presents a comprehensive evaluation methodology for future empirical validation in production environments. Our contribution is a design science artifact: we provide a systematic integration architecture that combines existing cost and governance capabilities into a unified framework, addressing important integration challenges in current enterprise LLM management. Following design science research methodology, we develop COST-GOV as a prescriptive framework artifact evaluated through scenario-based analysis with a comprehensive methodology for future empirical validation.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING",
+      "autores": [
+        "Teng, Dai"
+      ],
+      "ano": 2025,
+      "doi": "10.61784/adsj03036",
+      "url": "https://doi.org/10.61784/adsj03036",
+      "resumo": "<jats:p>Production platforms that serve large language models (LLMs) must continuously decide how many GPU replicas to keep online. Conventional autoscalers inherited from microservice stacks scale on request rate or coarse utilization, but LLM requests differ by up to three orders of magnitude in the number of tokens they process, arrive in extreme bursts, and run on replicas whose cold start takes minutes and whose idle power remains a large fraction of peak. We present TEAS (Token- and Energy-Aware Scaling), a horizontal autoscaler for LLM serving that (i) measures load in phase-weighted effective tokens rather than requests, (ii) forecasts load over the replica cold-start horizon with an empirical-residual safety margin, (iii) adapts its utilization headroom to the measured burstiness of the arrival process, and (iv) applies an energy-aware asymmetric hysteresis that delays scale-in until the projected idle-energy waste exceeds the energy cost of a replica restart. We evaluate TEAS in a trace-driven cluster simulator with a calibrated power and cost model, replaying real production traces from Azure LLM inference services alongside synthetic diurnal and composition-drift workloads derived from the real token distributions. Across all four workloads TEAS is the only dynamic policy that sustains at least 96% SLO attainment; on a bursty production code-assistant trace it improves attainment by 32 percentage points over a Kubernetes-HPA-style baseline and by 11 points over static peak provisioning, and on a 24-hour diurnal workload it meets a 95% SLO target at 11.6% lower monetary cost than peak provisioning. We release the simulator, policies, and experiment scripts.</jats:p>",
+      "citacoes": null,
+      "periodico": "AI and Data Science Journal",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING",
+      "autores": [
+        "Teng, Dai"
+      ],
+      "ano": 2025,
+      "doi": "10.61784/adsj3036",
+      "url": "https://doi.org/10.61784/adsj3036",
+      "resumo": "<jats:p>Production platforms that serve large language models (LLMs) must continuously decide how many GPU replicas to keep online. Conventional autoscalers inherited from microservice stacks scale on request rate or coarse utilization, but LLM requests differ by up to three orders of magnitude in the number of tokens they process, arrive in extreme bursts, and run on replicas whose cold start takes minutes and whose idle power remains a large fraction of peak. We present TEAS (Token- and Energy-Aware Scaling), a horizontal autoscaler for LLM serving that (i) measures load in phase-weighted effective tokens rather than requests, (ii) forecasts load over the replica cold-start horizon with an empirical-residual safety margin, (iii) adapts its utilization headroom to the measured burstiness of the arrival process, and (iv) applies an energy-aware asymmetric hysteresis that delays scale-in until the projected idle-energy waste exceeds the energy cost of a replica restart. We evaluate TEAS in a trace-driven cluster simulator with a calibrated power and cost model, replaying real production traces from Azure LLM inference services alongside synthetic diurnal and composition-drift workloads derived from the real token distributions. Across all four workloads TEAS is the only dynamic policy that sustains at least 96% SLO attainment; on a bursty production code-assistant trace it improves attainment by 32 percentage points over a Kubernetes-HPA-style baseline and by 11 points over static peak provisioning, and on a 24-hour diurnal workload it meets a 95% SLO target at 11.6% lower monetary cost than peak provisioning. We release the simulator, policies, and experiment scripts.</jats:p>",
+      "citacoes": null,
+      "periodico": "AI and Data Science Journal",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

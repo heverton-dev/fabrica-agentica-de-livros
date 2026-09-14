@@ -1,0 +1,83 @@
+{
+  "slug": "livros/economia-extrema-de-tokens",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 6,
+  "resumo": {
+    "nao_aplicavel": 3,
+    "ok": 3
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "python": {
+      "total": 2,
+      "ok": 2,
+      "falha": 0
+    },
+    "console": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "json": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_3",
+      "linha": 31,
+      "linguagem": "mermaid",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 47,
+      "linguagem": "mermaid",
+      "linhas_codigo": 10,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 67,
+      "linguagem": "python",
+      "linhas_codigo": 41,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 116,
+      "linguagem": "console",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 140,
+      "linguagem": "json",
+      "linhas_codigo": 13,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 161,
+      "linguagem": "python",
+      "linhas_codigo": 31,
+      "status": "ok",
+      "detalhe": ""
+    }
+  ]
+}

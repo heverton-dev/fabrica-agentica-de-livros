@@ -1,0 +1,48 @@
+{
+  "numero": "09",
+  "capitulo_fonte": "09",
+  "titulo": "Criando seu Primeiro Plugin personalizado",
+  "estagio": "Estacao de trabalho",
+  "estagio_indice": 3,
+  "objetivo": "Desenvolver um plugin do zero para o harness.",
+  "pre_requisito": "Passo 8 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Criando o Plugin: Contador de Repositórios",
+      "linguagem": "bash",
+      "comandos": [
+        "npm init -y"
+      ],
+      "codigo": "# Criar estrutura\nmkdir repo-stats-plugin\ncd repo-stats-plugin\nnpm init -y"
+    },
+    {
+      "titulo": "Testando o Plugin",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Instalar localmente\ndsh plugins install ./repo-stats-plugin\n\n# Testar no harness\ndsh> Use a ferramenta repo-stats no diretório /home/user/projetos\n# Resultado:\n# {\n#   \"totalRepos\": 5,\n#   \"repos\": [\n#     { \"name\": \"projeto-a\", \"commits\": 234, \"branches\": 3 },\n#     { \"name\": \"projeto-b\", \"commits\": 89, \"branches\": 1 }\n#   ],\n#   \"scanDirectory\": \"/home/user/projetos\"\n# }"
+    },
+    {
+      "titulo": "Escrevendo Testes",
+      "linguagem": "javascript",
+      "comandos": [],
+      "codigo": "// test/index.test.js\nimport { describe, it, expect } from 'vitest';\nimport repoStatsPlugin from '../index.js';\n\ndescribe('repo-stats plugin', () => {\n  it('deve retornar stats de repositórios', async () => {\n    const mockCtx = {\n      service: (name, impl) => {\n        if (name === 'repo-stats') return impl;\n      },\n      effect: () => {}\n    };\n    \n    // Mock dos serviços\n    mockCtx.service('filesystem', { exists: () => Promise.resolve(true) });\n    mockCtx.service('shell', { execute: (cmd) => '/path/to/repo/.git' });\n    \n    const plugin = repoStatsPlugin(mockCtx);\n    const result = await plugin.execute({ directory: '/path/to' });\n    \n    expect(result.totalRepos).toBe(1);\n  });\n});"
+    }
+  ],
+  "gate": "npm init -y",
+  "comandos": [
+    "npm init -y"
+  ],
+  "feito_quando": [
+    "Responsabilidade única:** cada plugin faz UMA coisa bem feita",
+    "Performance:** plugins não devem adicionar latência perceptível",
+    "Graceful degradation:** se um serviço dependência não estiver disponível, o plugin deve funcionar parcialmente, não quebrar",
+    "Testes:** todo plugin deve ter testes unitários antes de ser publicado"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 9 — Criando seu Primeiro Plugin personalizado",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

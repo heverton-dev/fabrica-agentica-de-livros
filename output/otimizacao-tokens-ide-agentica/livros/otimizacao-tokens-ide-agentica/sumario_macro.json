@@ -1,0 +1,108 @@
+{
+  "titulo_obra": "Tokens Sob Pericia",
+  "subtitulo": "Guia verificado de economia de tokens em IDEs agenticas",
+  "tipo_obra": "livro",
+  "tamanho_obra": "M",
+  "motivo_condutor": {
+    "nome": "A Pericia Forense de Configuracoes",
+    "descricao": "Todo comando, caminho de config ou nome de modelo que chega ate voce e um documento suspeito: pode ter letra timbrada real (a ferramenta existe) e assinatura falsificada (a sintaxe foi inventada). O leitor assume o papel de perito que nunca aceita um documento sem cruzar contra a fonte primaria.",
+    "vocabulario": ["pericia", "laudo", "fonte primaria", "cadeia de custodia", "autenticacao", "falsificacao", "evidencia", "assinatura", "contraprova", "letra timbrada"],
+    "persona_leitor": "Perito de Configuracao Agentica"
+  },
+  "introducao": "Apresentar o caso: um manual de 15 LABs sobre economia de tokens circula com autoridade, mas metade dos comandos nunca funcionaria se copiados e colados. Estabelecer o metodo do livro (hierarquia de fontes A/B/C, cruzamento contra documentacao oficial) e o achado central que orienta tudo: ferramenta real com sintaxe fabricada e mais perigoso que uma fabricacao total, porque o nome familiar destrava a confianca do operador.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos: Separando Fato de Fabricacao",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "O Manual Suspeito: Por Que Comandos Bonitos Enganam",
+          "objetivo": "O leitor entende o padrao de erro central (ferramenta real + sintaxe inventada) e aprende o metodo de pericia que vai aplicar no resto do livro.",
+          "pilares_previstos": [
+            "O caso: anatomia de um manual que mistura tecnica real com comando fabricado",
+            "O metodo de pericia: hierarquia de fontes A/B/C e a regra de nunca confiar em comando sem checar --help ou doc oficial",
+            "O motivo condutor: por que 'nome familiar' e o gatilho psicologico que faz o operador baixar a guarda"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Prompt Caching de Verdade: Como o Provedor Cobra Menos por Repeticao",
+          "objetivo": "O leitor entende o mecanismo real de cache de prompt (desconto de ate 90% em leitura) e onde ele de fato se configura, sem o caminho de arquivo fabricado do manual original.",
+          "pilares_previstos": [
+            "O mecanismo real: cache de leitura vs. cache de escrita, prefixo identico byte-a-byte",
+            "Onde a configuracao de verdade mora (settings.json do Claude Code, hooks reais) versus o arquivo/campo inventado do manual auditado",
+            "Como medir cache hit de verdade nos campos reais de uso, sem inventar metrica"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "Modelos Gratuitos Sem Lenda: o Catalogo Real Por Tras do Gateway",
+          "objetivo": "O leitor entende que o gateway de modelos gratuitos existe de fato, mas que nomes de modelo e tabelas de especificacao precisam ser conferidos no catalogo vigente, nunca copiados de um manual estatico.",
+          "pilares_previstos": [
+            "O gateway real: o que ele e, e por que a curadoria de modelos gratuitos muda com frequencia",
+            "Autopsia da tabela fabricada: como 7 modelos com nomes plausiveis foram inventados e por que a tabela de specs associada nao podia ser real",
+            "Protocolo de verificacao de catalogo antes de publicar ou automatizar qualquer escolha de modelo"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Compressao e Cache Semantico Sob a Lupa: Bibliotecas, Nao Comandos",
+          "objetivo": "O leitor aprende a diferenca entre uma biblioteca Python real e uma interface de linha de comando inventada, usando as duas ferramentas de compressao/cache semantico do manual como caso pratico.",
+          "pilares_previstos": [
+            "A classe real por tras da API inventada: como confirmar o nome certo direto no repositorio/pacote",
+            "Por que 'instalar com pipx' nao cria magicamente um comando de terminal quando a ferramenta e so uma lib importavel",
+            "Reescrevendo o wrapper de compressao e o hook de cache semantico com a API real, testavel linha a linha"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "Pericia Aplicada: Construindo o Sistema Verificado",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Paralelismo e Resiliencia Que Sempre Funcionaram",
+          "objetivo": "O leitor implementa, com confianca total, os padroes de engenharia do manual que passaram na pericia sem ressalva: paralelismo controlado, circuit breaker e backoff exponencial.",
+          "pilares_previstos": [
+            "asyncio.gather com semaphore e xargs -P/GNU parallel: paralelismo real, testado, sem pegadinha",
+            "Circuit breaker (fechado/aberto/semiaberto) como protecao contra falha em cascata",
+            "Backoff exponencial com jitter para nao amplificar rate limit"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Orcamento e Fallback: Medir Antes de Limitar",
+          "objetivo": "O leitor monta um sistema de controle de gasto e um fallback para modelo local usando os subcomandos e nomes de modelo reais, corrigindo os que o manual errou.",
+          "pilares_previstos": [
+            "Os subcomandos reais de medicao de uso (diario/semanal/por sessao) no lugar do comando fabricado do manual",
+            "Modelos locais reais e suas tags confirmadas, com o binario e as flags atualizadas do motor de inferencia",
+            "Hard limit como circuit breaker financeiro: script corrigido de ponta a ponta"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "O Agente Avancado e as Outras Sete Ferramentas: Produto Real, Sintaxe Fabricada",
+          "objetivo": "O leitor aplica a pericia em um caso denso: um agente de automacao real cujos comandos de skill, cron, memoria e sessao foram todos documentados de memoria, mais um panorama das outras sete ferramentas citadas no manual original.",
+          "pilares_previstos": [
+            "O agente existe: mapeando cada comando fabricado para o verbo/subcomando real documentado pelo projeto",
+            "As outras sete ferramentas do manual: quais sao produtos reais com nome impreciso e quais caminhos de config seguem sem confirmacao",
+            "Regra geral para qualquer CLI nova: rodar --help antes de automatizar, nunca depois"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "O Perito Permanente: Seu Protocolo Para Qualquer Manual Novo",
+          "objetivo": "O leitor consolida um protocolo pessoal de verificacao reutilizavel, versiona suas configuracoes confirmadas e se ve, ao fechar o livro, como o profissional que audita ferramentas de IA em vez de apenas copia-las.",
+          "pilares_previstos": [
+            "O checklist de pericia: hierarquia de fontes, sinais de alerta, e o que fazer quando nao ha fonte primaria (nao verificavel != aprovado)",
+            "Versionando o que foi confirmado (dotfiles reais) para nao repetir a pericia do zero a cada maquina nova",
+            "Do consumidor de manuais ao perito de configuracao: o papel que o leitor agora ocupa no proprio time"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Fechar o arco recapitulando o resumo quantitativo da pericia (nucleo real relevante, mas erros sistematicos de nomenclatura de modelo, caminho de configuracao e sintaxe de CLI) e reforcar que o proprio leitor agora possui o metodo para auditar o proximo manual que aparecer, sem depender de terceiros para separar fato de fabricacao."
+}

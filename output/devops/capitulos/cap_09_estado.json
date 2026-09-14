@@ -1,0 +1,18 @@
+{
+  "coordenadas": { "parte": "C", "capitulo": "9" },
+  "estado_execucao": "concluido_autonomo",
+  "desfecho": {
+    "capitulo": "Infraestrutura como Código e Contêineres",
+    "caracteres": 9702,
+    "diagramas": 1,
+    "blocos_codigo": 4,
+    "referencias": 8,
+    "citacoes_corpo": 19,
+    "validacao": {
+      "codigo": "OK",
+      "diagramas": "OK",
+      "metricas": "OK",
+      "referencias": "OK"
+    }
+  }
+}

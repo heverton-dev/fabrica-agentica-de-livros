@@ -1,0 +1,43 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "titulo": "Governança em Produção: 4 Pilares + Checklist",
+  "senioridade_obra": "iniciante",
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 7: o compilador DSPy que otimiza prompts iterativamente contra um validador, tratando prompt como programa compilável. Este capítulo assume que as 8 ferramentas (Cap 1-7) já estão rodando e pergunta: quem garante que elas continuam economizando amanhã, sem ninguém olhando? Também resolve o gancho deixado no Capítulo 1: a auditoria manual de custos que, em algum volume de tráfego, precisa virar pipeline automatizado de logging e alertas.",
+  "metricas_obrigatorias": [
+    { "metrica": "corte de custo com LLMs quando as 8 ferramentas do livro operam em conjunto", "valor": "até 85%" },
+    { "metrica": "redução de fatura de API via AI Gateway com cache/roteamento (LiteLLM)", "valor": "-40% a -60% (~US$ 500/mês)" },
+    { "metrica": "overhead de contexto redundante sem nenhuma skill de eficiência aplicada", "valor": "80% a 100% do custo mensal em ruído" },
+    { "metrica": "overhead de contexto redundante com skills de eficiência aplicadas", "valor": "15% a 30% do custo mensal" }
+  ],
+  "limite_e_contorno_sugerido": "Governança em excesso é o contorno mais comum: exigir aprovação manual para toda chamada de modelo recria a lentidão que a economia de tokens tentava eliminar, e equipes tendem a contornar o processo por fora quando ele emperra a entrega. Os 4 pilares só funcionam com limites claros de escala — abaixo de um certo volume de chamadas/dia, dashboard e circuit breaker automatizados são desperdício de engenharia (planilha revisada à mão já resolve, como visto no Cap. 1); acima desse volume, a ausência deles é que vira o risco. Fallback automático também tem limite: alternar para um modelo mais barato sem validar a qualidade da resposta troca custo visível por dívida de qualidade invisível — precisa de métrica de qualidade mínima acoplada ao circuit breaker, não só métrica de custo.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Pilar 1+2 — Ver o dinheiro em tempo real: Mensuração e Observabilidade",
+        "escopo": "Entra: por que mensuração (quanto custou) e observabilidade (o que aconteceu em cada chamada) são a mesma camada de visibilidade vista de dois ângulos — custo por chamada/usuário/modelo, logs estruturados, traces distribuídos que ligam uma resposta cara a exatamente qual prompt e qual usuário a gerou. Fica de fora: o que fazer quando a métrica estoura (reservado ao Pilar 3) e quem aprova mudanças (reservado ao Pilar 4).",
+        "ancora_visual": "flowchart LR do fluxo de uma chamada LLM em produção até o dashboard do Engenheiro de Custos com IA: chamada → middleware de logging estruturado (captura tokens de entrada/saída, modelo, usuário, latência) → trace exportado → agregador de custo → dashboard com custo por chamada/usuário/modelo, com um ramo lateral mostrando o alerta disparado quando o custo por chamada foge do baseline.",
+        "entrega_tecnica": "Python: hook/middleware comentado que envolve uma chamada de API, mede tokens de entrada/saída e latência, grava um registro estruturado (JSON por linha) com custo estimado por chamada/usuário/modelo, pronto para alimentar um dashboard ou alerta.",
+        "evolucao_leitor": "De 'eu só vejo o total da fatura no fim do mês' para 'eu vejo, por chamada, quanto custou, quem pediu e qual modelo respondeu — o extrato bancário do meu consumo de tokens'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Pilar 3 — Sobreviver à falha sem sangrar: Fallback Inteligente",
+        "escopo": "Entra: circuit breaker que corta chamadas para um provedor/modelo quando custo ou taxa de erro ultrapassa o baseline, fallback para modelo mais barato ou resposta cacheada como respaldo, e por que fallback automático precisa de uma métrica de qualidade mínima acoplada (não só de custo). Fica de fora: a mensuração que alimenta o gatilho do circuit breaker (Pilar 1+2) e quem autoriza a política de fallback (Pilar 4).",
+        "ancora_visual": "stateDiagram-v2 do circuit breaker de custo: estado FECHADO (chamadas normais ao modelo principal) → transição para ABERTO quando custo/erro ultrapassa o limite → estado ABERTO (chamadas desviadas para modelo local/cache, modelo principal poupado) → transição MEIO-ABERTO após um intervalo de teste → volta a FECHADO se a amostra de teste ficar dentro do limite, ou retorna a ABERTO se ainda estourar.",
+        "entrega_tecnica": "Python: implementação enxuta de um circuit breaker de custo (classe com estados fechado/aberto/meio-aberto) que decide, chamada a chamada, se manda para o modelo principal, para um modelo de fallback mais barato, ou devolve uma resposta cacheada — com comentários linha a linha explicando cada transição de estado.",
+        "evolucao_leitor": "De 'se o modelo principal falhar ou ficar caro demais, alguém percebe na fatura do mês seguinte' para 'o sistema já desviou o tráfego sozinho antes de o custo sair do controle, e eu só reviso o log depois'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Pilar 4 — Quem decide e quem responde: Governança e o Checklist de Produção",
+        "escopo": "Entra: política de aprovação de novo modelo, limite de gasto por equipe/projeto, auditoria periódica (reabrir amostras de chamadas e conferir se o gasto bate com o esperado), automação de alertas (Slack/e-mail) quando o custo desvia do baseline, e a consolidação de tudo isso em um checklist de produção que une os 4 pilares. Fica de fora: a implementação técnica de logging e circuit breaker (já cobertos nos Pilares 1+2 e 3) — aqui o foco é o processo e a responsabilidade organizacional em torno deles.",
+        "ancora_visual": "flowchart TD do fluxo de governança de ponta a ponta: 'novo modelo proposto' → 'aprovação registrada (quem, quando, limite de gasto)' → 'roda em produção sob mensuração+observabilidade (Pilar 1+2)' → 'protegido por fallback (Pilar 3)' → 'auditoria periódica confere amostra de chamadas' → bifurcação 'dentro do baseline?' → SIM volta ao fluxo normal, NÃO dispara alerta automático (Slack/e-mail) e abre revisão.",
+        "entrega_tecnica": "YAML/Markdown: checklist de produção pronto para copiar (política de aprovação de modelo, limite de gasto por projeto, cadência de auditoria, canais de alerta) mais um trecho Python pequeno que dispara um alerta (webhook) quando o custo diário foge do baseline configurado.",
+        "evolucao_leitor": "De 'cada pessoa da equipe decide sozinha qual modelo usar e quanto gastar' para 'existe um processo nomeado — com dono, limite e auditoria — que sustenta a economia que as 8 ferramentas dos capítulos anteriores conquistaram'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

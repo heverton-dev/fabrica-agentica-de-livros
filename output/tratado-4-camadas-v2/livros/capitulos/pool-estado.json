@@ -1,0 +1,86 @@
+{
+  "slug": "livros/tratado-4-camadas-v2",
+  "lote": 4,
+  "capitulos": {
+    "1": {
+      "tentativas": 1,
+      "ultimo_erro": "reescrita edicao pratica v4.0",
+      "estado": "concluido_autonomo"
+    },
+    "2": {
+      "tentativas": 1,
+      "ultimo_erro": "reescrita edicao pratica v4.0",
+      "estado": "concluido_autonomo"
+    },
+    "3": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "4": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "5": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "6": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "7": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "8": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "9": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "10": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "11": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "12": {
+      "tentativas": 1,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "13": {
+      "tentativas": 0,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "14": {
+      "tentativas": 0,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "15": {
+      "tentativas": 0,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    },
+    "16": {
+      "tentativas": 0,
+      "ultimo_erro": "aguardando reescrita edicao pratica",
+      "estado": "pendente"
+    }
+  }
+}

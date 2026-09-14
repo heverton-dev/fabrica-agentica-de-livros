@@ -1,0 +1,55 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "Anotações e Produtividade: Saindo do Aluguel do Notion e do Evernote",
+  "estagio": "Oficina",
+  "estagio_indice": 1,
+  "objetivo": "Apresentar a lógica geral da troca (o que se ganha, o que se perde) através do caso mais comum — notas e produtividade — e guiar a instalação da primeira alternativa self-hosted.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [
+    "docker-compose.yml"
+  ],
+  "execucao": [
+    {
+      "titulo": "Preparando a Bancada: Requisitos Antes de Montar Qualquer Peça",
+      "linguagem": "console",
+      "comandos": [
+        "docker --version",
+        "docker compose version"
+      ],
+      "codigo": "$ docker --version\nDocker version 24.0.7, build afdd53b\n$ docker compose version\nDocker Compose version v2.23.0"
+    },
+    {
+      "titulo": "Montando o AppFlowy Self-Hosted",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose up -d",
+        "docker compose ps"
+      ],
+      "codigo": "# docker-compose.yml — AppFlowy self-hosted (referência mínima de produção)\nversion: \"3.9\"\n\nservices:\n  appflowy_postgres:\n    image: postgres:15-alpine\n    restart: unless-stopped\n    environment:\n      POSTGRES_USER: appflowy\n      POSTGRES_PASSWORD: \"troque-esta-senha\"\n      POSTGRES_DB: appflowy\n    volumes:\n      - appflowy_pg_data:/var/lib/postgresql/data\n\n  appflowy_redis:\n    image: redis:7-alpine\n    restart: unless-stopped\n    volumes:\n      - appflowy_redis_data:/data\n\n  appflowy_minio:\n    image: minio/minio:latest\n    restart: unless-stopped\n    command: server /data --console-address \":9001\"\n    environment:\n      MINIO_ROOT_USER: appflowy\n      MINIO_ROOT_PASSWORD: \"troque-esta-senha-tambem\"\n    volumes:\n      - appflowy_minio_data:/data\n\n  appflowy_gotrue:\n    image: appflowyinc/gotrue:latest\n    restart: unless-stopped\n    depends_on:\n      - appflowy_postgres\n    environment:\n      GOTRUE_SITE_URL: \"https://notas.suaoficina.dev\"\n      GOTRUE_DB_DRIVER: postgres\n\n  appflowy_cloud:\n    image: appflowyinc/appflowy_cloud:latest\n    restart: unless-stopped\n    depends_on:\n      - appflowy_postgres\n      - appflowy_redis\n      - appflowy_minio\n      - appflowy_gotrue\n    ports:\n      - \"8000:8000\"\n    environment:\n      APPFLOWY_DATABASE_URL: \"postgres://appflowy:troque-esta-senha@appflowy_postgres/appflowy\"\n      APPFLOWY_REDIS_URI: \"redis://appflowy_redis:6379\"\n      APPFLOWY_S3_ENDPOINT: \"http://appflowy_minio:9000\"\n\nvolumes:\n  appflowy_pg_data:\n  appflowy_redis_data:\n  appflowy_minio_data:"
+    },
+    {
+      "titulo": "As Outras Cinco Peças da Bancada",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# docker-compose.yml — Joplin Server\nversion: \"3.9\"\n\nservices:\n  joplin_db:\n    image: postgres:15-alpine\n    restart: unless-stopped\n    environment:\n      POSTGRES_USER: joplin\n      POSTGRES_PASSWORD: \"troque-esta-senha\"\n      POSTGRES_DB: joplin\n    volumes:\n      - joplin_pg_data:/var/lib/postgresql/data\n\n  joplin_server:\n    image: joplin/server:latest\n    restart: unless-stopped\n    depends_on:\n      - joplin_db\n    ports:\n      - \"22300:22300\"\n    environment:\n      APP_BASE_URL: \"https://notas.suaoficina.dev\"\n      DB_CLIENT: pg\n      POSTGRES_HOST: joplin_db\n      POSTGRES_USER: joplin\n      POSTGRES_PASSWORD: \"troque-esta-senha\"\n      POSTGRES_DATABASE: joplin\n\nvolumes:\n  joplin_pg_data:"
+    }
+  ],
+  "gate": "docker --version",
+  "comandos": [
+    "docker --version",
+    "docker compose version",
+    "docker compose up -d",
+    "docker compose ps"
+  ],
+  "feito_quando": [
+    "Colaboração em tempo real polida** é onde toda a categoria perde para o Notion. AppFlowy até cobre parte disso, mas Logseq, Trilium Notes e Standard Notes são desenhados como local-first e não escalam para edição multiusuário simultânea — no caso do Trilium, essa limitação nem é um roadmap futuro, é uma decisão de design definitiva do mantenedor [26]. Não force esse uso: equipes que dependem de colaboração ao vivo devem manter a ferramenta paga para esse fluxo específico, mesmo adotando alternativas abertas para o resto [5]",
+    "Apps mobile maduros** são o segundo limite real. O comparativo entre AppFlowy e Notion aponta especificamente o aplicativo mobile como sensivelmente menos polido que o do concorrente pago [19], e o Trilium Notes simplesmente não tem app mobile oficial [26]. Se sua equipe trabalha primariamente em celular, teste esse fluxo específico antes de migrar — não assuma que a experiência desktop se repete lá",
+    "OCR e busca em anexos de nível Evernote** ainda não têm equivalente maduro nesta lista. O Joplin oferece um plugin de OCR desde a versão 2.14, mas com desempenho fraco em imagens complexas, e sem a busca full-text robusta em anexos que o Evernote entrega nativamente [10][9]. Quem depende de digitalizar recibos, cartões de visita ou documentos escaneados como parte do fluxo de trabalho principal ainda sente essa lacuna"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 1 — Anotações e Produtividade: Saindo do Aluguel do Notion e do Evernote",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

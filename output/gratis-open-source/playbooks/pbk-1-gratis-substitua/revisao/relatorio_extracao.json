@@ -1,0 +1,76 @@
+{
+  "slug_mae": "livros/gratis-open-source",
+  "slug_playbook": "gratis-open-source/playbooks/pbk-1-gratis-substitua",
+  "total_passos": 8,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "Anotações e Produtividade: Saindo do Aluguel do Notion e do Evernote",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "E-mail Marketing: Enviando Campanhas Sem Depender do Mailchimp",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "CRM: Vendendo e Atendendo Sem Pagar Salesforce",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Automação de Fluxos: Trocando o Zapier pelo n8n",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Design Gráfico e Edição de Imagem: Sem Canva, Sem Photoshop, Sem Illustrator",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Vídeo e Nuvem: Editando e Guardando Seus Arquivos Sem Assinatura",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Análise de Dados e Gestão de Projetos: BI e Kanban Sem Licença por Usuário",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Comunicação em Equipe e a Infraestrutura Que Sustenta Tudo",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 2,
+    "com_gate": 8,
+    "com_feito_quando": 8,
+    "com_armadilhas": 0
+  }
+}

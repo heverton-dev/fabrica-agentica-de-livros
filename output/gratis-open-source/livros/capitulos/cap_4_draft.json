@@ -1,0 +1,43 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "4" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 3: o conceito de Lacuna Honesta (onde Salesforce/HubSpot ainda ganham por integração e maturidade de mercado), agora aplicado à automação de fluxos — onde a lacuna encolhe, mas não desaparece",
+  "metricas_obrigatorias": [
+    { "metrica": "estrelas no GitHub do n8n", "valor": "201 mil+" },
+    { "metrica": "integrações nativas do n8n vs. catálogo do Zapier", "valor": "~400 vs. 9.000+" },
+    { "metrica": "RAM/vCPU mínimos do n8n em produção", "valor": "8-16GB RAM / 4+ vCPU" },
+    { "metrica": "organizações com estratégia formal de OSS", "valor": "34%" },
+    { "metrica": "organizações com OSPO formal", "valor": "26%" },
+    { "metrica": "estrelas no GitHub do Huginn / issues abertas", "valor": "~49,8 mil estrelas / ~600 issues" }
+  ],
+  "limite_escala_aplica": "n8n cobre bem ~400 integrações nativas e cargas de dev/teste (2GB RAM/2vCPU); a solução quebra quando o negócio depende de uma integração nichada que só existe no catálogo de 9.000+ do Zapier, ou quando a operação escala para produção (8-16GB RAM/4+vCPU) sem ninguém com expertise em PostgreSQL/Node.js para tunar o gargalo do event loop.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "A paridade real: por que automação de fluxos já não é 'gambiarra open source'",
+        "escopo": "Entra: comparação honesta n8n vs. Node-RED vs. Huginn vs. Activepieces contra Zapier/Make, com números reais de maturidade (estrelas, integrações, cadência de release). Sai: tutorial de instalação (fica no Pilar 2) e detalhe de custo de operação (fica no Pilar 3).",
+        "ancora_visual": "flowchart LR mostrando a 'prateleira de ferramentas' da Oficina Digital: 4 peças (n8n, Node-RED, Huginn, Activepieces) lado a lado com um rótulo de maturidade cada, convergindo para uma bancada central 'Zapier/Make' com seta de comparação bidirecional — vocabulário do motivo condutor (peça, prateleira, bancada).",
+        "entrega_tecnica": "Tabela de decisão (formato yaml ou markdown) comparando as 4 ferramentas por critério (integrações, RAM mínima, maturidade de release, isolamento multi-tenant) — modo operacional, sem código de programação.",
+        "evolucao_leitor": "De 'open source em automação deve ser capenga' para 'sei exatamente qual das 4 peças pegar na prateleira e por quê'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "A esteira de montagem: gatilho, nó, credencial e deploy",
+        "escopo": "Entra: o modelo mental universal de qualquer automação (trigger → node → credential → deploy) construído com um fluxo real no n8n via Docker Compose. Sai: comparação entre ferramentas (Pilar 1) e monitoramento pós-deploy (Pilar 3).",
+        "ancora_visual": "flowchart TB do primeiro fluxo montado na bancada: Gatilho (Webhook) --> No de Transformacao --> No de Credencial (Cofre de Chaves) --> Deploy (Publicar na Esteira), com um ramo de decisão para erro de credencial.",
+        "entrega_tecnica": "docker-compose.yml real para subir n8n + PostgreSQL, um export JSON de workflow do n8n (gatilho webhook -> nó HTTP Request -> nó Set) e uma sessão console mostrando o comando de subida e o teste do webhook via curl.",
+        "evolucao_leitor": "De 'não sei nem por onde começar a montar um fluxo' para 'eu mesmo subo, configuro credencial e publico minha primeira automação de ponta a ponta'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Quem fica de guarda: o custo real de administrar sua própria automação",
+        "escopo": "Entra: o que a assinatura do Zapier escondia (monitoramento, backup, patch, plantão) e como isso reaparece como responsabilidade do Artesão Digital; retoma a Lacuna Honesta do Capítulo 3. Sai: escolha de ferramenta (Pilar 1) e passo a passo de instalação (Pilar 2).",
+        "ancora_visual": "sequenceDiagram mostrando o ciclo de vida de uma falha de fluxo em produção: Fluxo->>Servidor: executa; Servidor->>Artesao: alerta de falha; Artesao->>Fluxo: diagnostica e corrige — contraste com o SaaS, onde esse ciclo é invisível ao cliente.",
+        "entrega_tecnica": null,
+        "evolucao_leitor": "De 'só preciso instalar e esquecer' para 'sei que assumi o plantão da minha própria oficina, e sei orçar isso em tempo e VPS'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

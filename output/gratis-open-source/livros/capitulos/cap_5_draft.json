@@ -1,0 +1,60 @@
+{
+  "capitulo": "5",
+  "parte": "II",
+  "titulo": "Design Gráfico e Edição de Imagem: Sem Canva, Sem Photoshop, Sem Illustrator",
+  "senioridade": "iniciante",
+  "estilo_tecnica": "operacional",
+  "motivo_condutor_aplicado": "A Oficina Digital — Canva, Photoshop e Illustrator são peças ALUGADAS da loja de equipamentos (acesso temporário, mensalidade recorrente, dados e arquivos sob custódia do alugador); GIMP, Inkscape, Krita e Penpot são as mesmas peças COMPRADAS, montadas e mantidas na bancada do leitor (posse, instalação local, manutenção de atualizações e garantia documentada pela comunidade).",
+  "callback_capitulo_anterior": "Capítulo 4 — automação de fluxos com n8n: a bancada ganhou a primeira peça que trabalha sozinha; agora vamos montar as peças que produzem as artes",
+  "pilares": [
+    {
+      "numero": 1,
+      "nome": "O que GIMP, Inkscape e Krita cobrem bem — e onde a curva de aprendizado assusta o iniciante",
+      "objetivo": "Mapear o trio de desktop nativo (raster, vetor e pintura digital), com requisitos de hardware honestos, cobertura real de fluxo e as três lacunas que permanecem (CMYK, RAW, IA generativa).",
+      "conceito_denso": true,
+      "secoes_eita_foco": ["Introdução", "Explica"],
+      "ancora_visual": {
+        "tipo_mermaid": "flowchart",
+        "direcao": "TB",
+        "legenda": "Rota da peça de marketing na Oficina Digital: do vetor no Inkscape ao raster no GIMP, com o Krita como opção de pintura e o Penpot na colaboração de interface",
+        "nos_max": 11,
+        "descricao": "Nó de entrada (ideia da peça de marketing) passa por um losango de decisão (o que a peça precisa?), ramifica para os quatro caminhos (vetor Inkscape, raster GIMP, pintura Krita, interface colaborativa Penpot), todos convergindo em 'exportar e revisar' e terminando em 'peça pronta na bancada do Artesão Digital'."
+      },
+      "entrega_tecnica": null
+    },
+    {
+      "numero": 2,
+      "nome": "Penpot como alternativa colaborativa ao Figma e ao Canva para design de interface",
+      "objetivo": "Apresentar o Penpot (MPL-2.0, repositório ativo, self-host via Docker Compose ou nuvem oficial gratuita) com comando reais de deploy e a comparação honesta com Figma/Canva.",
+      "conceito_denso": false,
+      "secoes_eita_foco": ["Ilustra", "Técnica"],
+      "ancora_visual": null,
+      "entrega_tecnica": {
+        "tipo": "docker-compose.yml + sessão console",
+        "artefato_principal": "docker-compose.yml de referência para Penpot self-hosted (Postgres + backend + frontend + volume de assets)",
+        "artefatos_secundarios": [
+          "sessão console com docker compose up e verificação de saúde",
+          "bloco bash com winget/choco/apt para instalar GIMP, Inkscape e Krita",
+          "tabela de decisão (ferramenta x licença x modelo x melhor uso x quando evitar)"
+        ]
+      }
+    },
+    {
+      "numero": 3,
+      "nome": "Fluxo de trabalho completo: do zero a uma peça de marketing pronta, sem gastar um centavo de licença",
+      "objetivo": "Narrar o fluxo operacional ponta a ponta (vetor no Inkscape, composição no GIMP, revisão no Penpot, exportação final) e o cenário Erro Comum vs. Prática Correta da seção Aplica.",
+      "conceito_denso": false,
+      "secoes_eita_foco": ["Aplica", "Conclusão"],
+      "ancora_visual": null,
+      "entrega_tecnica": null
+    }
+  ],
+  "metricas_obrigatorias": [
+    {"metrica": "tamanho de tela de canvas de design no Penpot", "valor": "até 1600x1600 px no free tier da nuvem oficial"},
+    {"metrica": "limite de camadas/espaço de trabalho em arquivos vetoriais grandes do Inkscape", "valor": "instabilidade documentada em arquivos muito grandes"},
+    {"metrica": "memória RAM exigida pelo Krita (recomendação oficial)", "valor": "8 GB (16 GB para telas 4K)"},
+    {"metrica": "memória RAM recomendada pelo GIMP", "valor": "8 GB ou mais"}
+  ],
+  "fontes_autorizadas_dossie": [26, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124],
+  "observacao_editorial": "Nenhuma ressalva factual necessária. Lacunas honestas confirmadas pelo dossiê: CMYK nativo ausente em GIMP e Inkscape, RAW nativo ausente no GIMP, IA generativa sem equivalente maduro nas quatro ferramentas, e Inkscape com instabilidade em arquivos muito grandes."
+}

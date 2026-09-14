@@ -1,0 +1,60 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "1" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "senioridade_obra": "iniciante",
+  "callback_capitulo_anterior": null,
+  "motivo_condutor": {
+    "nome": "O Perito de Custos com IA",
+    "persona_leitor": "Engenheiro de Custos com IA",
+    "vocabulario": ["token", "custo", "fluxo de caixa", "otimização", "governança", "auditoria", "compressão", "cache", "memória", "resiliência"]
+  },
+  "fontes_autorizadas": [
+    "ZHAO, Wayne Xin et al. A Survey of Large Language Models. Frontiers of Computer Science, 2026. https://doi.org/10.1007/s11704-026-60308-3",
+    "NAVEED, Humza et al. A Comprehensive Overview of Large Language Models. arXiv, 2023. http://arxiv.org/abs/2307.06435",
+    "HAN, Tingxu et al. Token-Budget-Aware LLM Reasoning. 2025. https://doi.org/10.18653/v1/2025.findings-acl.1274",
+    "ALIZADEH, Keivan et al. LLM in a Flash: Efficient Large Language Model Inference with Limited Memory. 2024. https://doi.org/10.18653/v1/2024.acl-long.678",
+    "JIANG, Huiqiang et al. LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models. 2023. https://doi.org/10.18653/v1/2023.emnlp-main.825",
+    "YUAN, Jiayi et al. KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches. arXiv, 2024. http://arxiv.org/abs/2407.01527v2",
+    "AUTOR. Prompt Context Caching Architecture for Cost Reduction in Large Language Model Systems. International Journal of Intelligent Systems and Applications in Engineering, 2026. https://doi.org/10.17762/ijisae.v14i1s.8385",
+    "MOHANDOSS, Ramaswami. Context-based Semantic Caching for LLM Applications. 2024 IEEE Conference on Artificial Intelligence (CAI), 2024. https://doi.org/10.1109/cai59869.2024.00075",
+    "FAN, Wenqi et al. A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models. 2024. https://doi.org/10.1145/3637528.3671470",
+    "ECONOMIA EXTREMA DE TOKENS: contexto e skills de eficiência. Compêndio técnico. Curadoria de Elite — Open Source Initiative (OSI), Linux Foundation, CNCF Landscape, 2026. Documento técnico interno (dossiê de pesquisa da obra)."
+  ],
+  "metricas_obrigatorias": [
+    { "metrica": "overhead de contexto sem skills de eficiência", "valor": "80-100% do custo mensal em ruído" },
+    { "metrica": "overhead de contexto com skills de eficiência aplicadas", "valor": "15-30% do custo mensal" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Anatomia do Token como Unidade Monetária",
+        "escopo": "Entra: definição operacional de token, diferença entre tokens de entrada e de saída, como os provedores cobram por milhão de tokens, por que o token de saída custa mais que o de entrada. Fica de fora: mecânica interna de tokenização BPE/SentencePiece (não é o foco de um capítulo de abertura para leitor iniciante).",
+        "ancora_visual": "flowchart LR do caminho de uma requisição do Engenheiro de Custos com IA até a fatura: Prompt do usuário -> Tokens de Entrada -> Motor do Modelo -> Tokens de Saída -> Medidor de Consumo -> Fatura Mensal (fluxo de caixa). Usa o vocabulário do motivo_condutor (token, custo, fluxo de caixa).",
+        "entrega_tecnica": "Python (script único, comentado linha a linha, nível iniciante): calculo_custo_chamada.py recebe contagem de tokens de entrada e saída e uma tabela de preços por milhão de tokens, e imprime o custo da chamada em reais/dólares.",
+        "evolucao_leitor": "De 'token é uma abstração técnica que não me diz respeito' para 'cada token é uma linha no meu fluxo de caixa, e eu sei calcular seu valor'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "A Curva de Escalada Silenciosa",
+        "escopo": "Entra: como volume de usuários, tamanho de contexto reenviado e frequência de chamadas se multiplicam até formar uma curva exponencial de custo; 3 cenários compostos (fiéis à experiência típica descrita no dossiê) mostrando a passagem de projeto experimental a despesa corporativa; o erro de configuração mais comum (reenviar o histórico inteiro a cada turno). Fica de fora: as soluções técnicas de correção (compressão, cache) — reservadas aos Capítulos 2 a 7.",
+        "ancora_visual": "flowchart TD da linha do tempo de escalada em 3 estágios (Mês 1: contexto curto, poucos usuários, ~$100; Mês 2: contexto crescente reenviado por turno, mais usuários, ~$1.200; Mês 3: contexto integral acumulado + concorrência de usuários, ~$10.000+), com anotações do fator multiplicador em cada seta. Usa vocabulário 'custo' e 'fluxo de caixa' do motivo_condutor.",
+        "entrega_tecnica": "Python/CLI (nível iniciante, comentado): calculadora_projecao_custos.py recebe número de usuários, tokens médios por chamada, taxa de crescimento mensal do contexto reenviado e chamadas/dia, e projeta o custo mês a mês por 3 meses, imprimindo tabela no terminal.",
+        "evolucao_leitor": "De 'a fatura veio e eu não sei por quê' para 'eu vejo a curva de custo antes que ela aconteça, porque entendo os fatores que a multiplicam'.",
+        "conceito_denso": true,
+        "analogias_sugeridas": [
+          "Mecânica geral: bola de neve descendo a ladeira — cada volta soma mais massa (contexto) e ganha velocidade (frequência de chamadas).",
+          "Ponto mais difícil (por que o crescimento é exponencial e não linear): juros compostos — quando o contexto de um turno inclui o contexto do turno anterior, cada nova chamada paga 'juros' sobre o histórico acumulado, não apenas o valor novo."
+        ]
+      },
+      {
+        "nome": "Visibilidade como Ativo — Auditoria Antes da Otimização",
+        "escopo": "Entra: por que 'modelo mais barato por token' é uma ilusão quando o volume multiplica o preço unitário; checklist de auditoria do próprio projeto (quantos tokens por chamada, quantas chamadas por dia, quanto do contexto é redundante); como essa postura de auditoria prepara o terreno para as ferramentas de otimização dos capítulos seguintes. Fica de fora: implementação de dashboards e alertas em produção (reservada ao Capítulo 8, Governança).",
+        "ancora_visual": "flowchart LR do ciclo de auditoria do Perito de Custos com IA: Medir -> Diagnosticar -> Priorizar -> (seta pontilhada) Otimizar nos Capítulos 2-8. Reforça vocabulário 'auditoria' e 'governança' do motivo_condutor.",
+        "entrega_tecnica": "Extensão do script anterior (Python, nível iniciante): calculadora_projecao_custos.py ganha um modo --auditar que lê um CSV simples de chamadas (data, tokens_entrada, tokens_saida, modelo) e imprime um resumo de custo por dia e por modelo.",
+        "evolucao_leitor": "De 'reajo à fatura depois que ela chega' para 'audito meu consumo antes que a fatura exploda — é isso que separa quem apenas usa IA de quem gerencia custo de IA'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

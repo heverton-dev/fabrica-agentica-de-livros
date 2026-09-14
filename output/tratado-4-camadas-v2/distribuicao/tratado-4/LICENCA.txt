@@ -1,0 +1,26 @@
+LICENCA — TODOS OS DIREITOS RESERVADOS
+Copyright (c) 2026 Heverton Eduardo Peres
+
+Todos os direitos reservados.
+
+Nenhuma parte desta colecao — incluindo, sem limitacao, o texto integral, os
+capitulos, os cards de playbook, os lead magnets, os slides, as sequencias de
+e-mail, as ilustracoes, as capas graficas, os diagramas e os arquivos PDF, EPUB,
+HTML e PPTX — pode ser reproduzida, armazenada em sistema de recuperacao,
+adaptada ou transmitida, sob qualquer forma ou por qualquer meio (eletronico,
+mecanico, fotocopia, gravacao ou outro), sem autorizacao previa e por escrito do
+autor.
+
+E permitida a distribuicao deste pacote em sua forma INTEGRAL e INALTERADA para
+fins de avaliacao e uso pessoal. Sao expressamente vedados, sem contrato de
+licenciamento firmado com o autor:
+
+  - uso comercial de qualquer parte da colecao;
+  - revenda, sublicenciamento ou redistribuicao parcial;
+  - republicacao, integral ou parcial, em qualquer meio;
+  - uso do conteudo como material didatico de curso pago;
+  - uso do conteudo para treinar modelos de aprendizado de maquina.
+
+As marcas, nomes e identidade visual da Editora Agentica pertencem ao autor.
+
+Para licenciamento e permissoes, contate o autor.

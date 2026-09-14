@@ -1,0 +1,27 @@
+{
+  "tema": "Arquitetura Agêntica, Spec-Driven Development & Skills de Engenharia",
+  "tipo_obra": "livro",
+  "min_referencias_por_capitulo": 20,
+  "tamanho_obra": "GG",
+  "senioridade_obra": "iniciante",
+  "serie": null,
+  "cor_primaria": "#0A0F1D",
+  "subtitulo": "Orquestração de Agentes, Contratos & Skills",
+  "edition_tag": "v1.0",
+  "estilo_tecnica": "hibrido",
+  "gerar_artigos": true,
+  "qtd_artigos": 3,
+  "gerar_ebooks": true,
+  "qtd_ebooks": 2,
+
+  "gerar_playbook": true,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "cta_url": null,
+  "cta_texto": null,
+
+  "modo_producao": "obra-unica",
+  "obra_raiz": null
+}

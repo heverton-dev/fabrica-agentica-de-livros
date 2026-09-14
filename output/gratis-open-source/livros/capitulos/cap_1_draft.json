@@ -1,0 +1,59 @@
+{
+  "capitulo": "1",
+  "parte": "I",
+  "titulo": "Anotações e Produtividade: Saindo do Aluguel do Notion e do Evernote",
+  "senioridade": "iniciante",
+  "estilo_tecnica": "operacional",
+  "motivo_condutor_aplicado": "A Oficina Digital — Notion/Evernote são a peça alugada da loja de equipamentos; AppFlowy/Logseq/Joplin/Outline/Trilium/Standard Notes são a mesma peça comprada e montada na bancada do leitor.",
+  "callback_capitulo_anterior": null,
+  "pilares": [
+    {
+      "numero": 1,
+      "nome": "Do aluguel para a posse",
+      "objetivo": "Explicar o que muda de fato ao trocar uma ferramenta SaaS por uma auto-hospedada: propriedade dos dados, custo de manutenção, e o que 'open source' garante e não garante.",
+      "conceito_denso": true,
+      "secoes_eita_foco": ["Introdução", "Explica"],
+      "ancora_visual": {
+        "tipo_mermaid": "flowchart",
+        "direcao": "TB",
+        "legenda": "Fluxo de decisão na Oficina Digital: da ferramenta alugada à peça própria montada na bancada",
+        "nos_max": 11,
+        "descricao": "Nó de entrada (ferramenta alugada) passa por um losango de decisão (colaboração tempo real / mobile crítico), ramifica para 'manter aluguel' ou para as 5 peças candidatas (AppFlowy, Logseq/Trilium, Joplin, Outline, Standard Notes), todas convergindo em 'montar via Docker Compose' e terminando em 'peça própria: bancada, manutenção e garantia do leitor'."
+      },
+      "entrega_tecnica": null
+    },
+    {
+      "numero": 2,
+      "nome": "Montagem prática",
+      "objetivo": "Guiar a instalação real de AppFlowy via Docker Compose como caso de referência, e mapear rapidamente as demais alternativas (Logseq, Joplin, Outline, Trilium Notes, Standard Notes) com requisitos e comandos reais.",
+      "conceito_denso": false,
+      "secoes_eita_foco": ["Ilustra", "Técnica"],
+      "ancora_visual": null,
+      "entrega_tecnica": {
+        "tipo": "docker-compose.yml + sessão console",
+        "artefato_principal": "docker-compose.yml de referência para AppFlowy self-hosted (Postgres + Redis + MinIO + GoTrue + API)",
+        "artefatos_secundarios": [
+          "sessão console de 'docker compose up -d' e verificação de saúde dos serviços",
+          "tabela de decisão (ferramenta x licença x modelo x melhor uso x quando evitar)"
+        ]
+      }
+    },
+    {
+      "numero": 3,
+      "nome": "Quando NÃO vale a troca",
+      "objetivo": "Estabelecer com honestidade os limites reais das alternativas: colaboração em tempo real, apps mobile maduros e OCR de qualidade Evernote — e narrar o erro comum de migrar times inteiros sem testar esses limites antes.",
+      "conceito_denso": false,
+      "secoes_eita_foco": ["Aplica", "Conclusão"],
+      "ancora_visual": null,
+      "entrega_tecnica": null
+    }
+  ],
+  "metricas_obrigatorias": [
+    {"metrica": "cobertura de casos de uso do Notion pelo AppFlowy", "valor": "85%"},
+    {"metrica": "limite de grafo do Logseq antes de travar", "valor": "~300 MB"},
+    {"metrica": "limite padrão de upload do Outline", "valor": "1 MB"},
+    {"metrica": "requisito de VPS do Standard Notes self-hosted v2", "valor": "2 GB RAM / 1 vCPU"}
+  ],
+  "fontes_autorizadas_dossie": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27],
+  "observacao_editorial": "Nenhuma ressalva factual necessária neste capítulo (não é o caso do DaVinci Resolve/EmailEngine, tratados nos capítulos 2 e 6)."
+}

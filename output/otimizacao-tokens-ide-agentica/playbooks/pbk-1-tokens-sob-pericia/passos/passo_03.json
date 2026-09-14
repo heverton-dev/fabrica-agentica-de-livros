@@ -1,0 +1,42 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "Modelos Gratuitos Sem Lenda: o Catalogo Real Por Tras do Gateway",
+  "estagio": "Pericia",
+  "estagio_indice": 1,
+  "objetivo": "O leitor entende que o gateway de modelos gratuitos existe de fato, mas que nomes de modelo e tabelas de especificacao precisam ser conferidos no catalogo vigente, nunca copiados de um manual estatico.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [
+    "opencode.json",
+    "~/.config/opencode/opencode.json",
+    "./opencode.json",
+    "provider/model-id",
+    "~/.aider.conf.yml",
+    "~/.codex/config.toml"
+  ],
+  "execucao": [
+    {
+      "titulo": "A configuração real: opencode.json",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"model\": \"opencode/big-pickle\",\n  \"agent\": {\n    \"build\": {\n      \"model\": \"opencode/grok-code-fast-1\"\n    }\n  }\n}\n# ... (trecho completo no Capitulo 03 do livro)"
+    }
+  ],
+  "gate": "curl -s -o /dev/null -w \"%{http_code}\" https://opencode.ai/docs/zen/",
+  "comandos": [],
+  "feito_quando": [
+    "Confiar em tabelas de benchmark encontradas em posts sem link para a medição original — trate como não verificado até achar a fonte primária",
+    "Presumir que uma convenção de nome \"bonita\" (tiny/small/medium) é sinal de autenticidade — muitas vezes é o oposto",
+    "Automatizar a escolha de modelo sem registrar a data da última checagem de catálogo — sem isso, você não sabe quando reconferir"
+  ],
+  "armadilhas": [
+    "Fixar nome de modelo em automacao sem checar o catalogo Zen vigente",
+    "Supor env var universal de troca de modelo em vez do mecanismo real de cada ferramenta",
+    "Reusar tabela de benchmark de terceiros sem medir de novo no seu proprio hardware"
+  ],
+  "referencia_cruzada": "Cap. 3 — Modelos Gratuitos Sem Lenda: o Catalogo Real Por Tras do Gateway",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

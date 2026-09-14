@@ -1,0 +1,51 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Turnos agênticos: anatomia de um loop e por que ele custa dinheiro",
+  "estagio": "Painel",
+  "estagio_indice": 2,
+  "objetivo": "Mostrar que o custo de um agente é o custo dos turnos, e que cada turno recomeça do mesmo prefixo de contexto.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: registre cada turno com números",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"sessao\": \"corrigir-bug-1042\",\n  \"turno\": 7,\n  \"tokens_entrada\": 48210,\n  \"tokens_saida\": 1420,\n  \"tokens_cache_leitura\": 41984,\n  \"ferramenta\": \"run_tests\",\n  \"linhas_resultado\": 38,\n  \"duracao_s\": 8.4,\n  \"custo_estimado_usd\": 0.0231\n}"
+    },
+    {
+      "titulo": "Passo 2: calcule o custo da sessão, não do turno",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Resume o custo de uma sessao a partir dos registros por turno.\"\"\"\nimport json\nfrom pathlib import Path\n\nPRECO_ENTRADA = 3.00 / 1_000_000      # por token\nPRECO_SAIDA = 15.00 / 1_000_000\nPRECO_CACHE = 0.30 / 1_000_000\n\n\ndef resumir(caminho):\n    turnos = [json.loads(l) for l in Path(caminho).read_text(encoding=\"utf-8\").splitlines() if l.strip()]\n    entrada = sum(t[\"tokens_entrada\"] for t in turnos)\n    saida = sum(t[\"tokens_saida\"] for t in turnos)\n    cache = sum(t.get(\"tokens_cache_leitura\", 0) for t in turnos)\n    custo = entrada * PRECO_ENTRADA + saida * PRECO_SAIDA + cache * PRECO_CACHE\n    return {\n        \"turnos\": len(turnos),\n        \"tokens_entrada\": entrada,\n        \"tokens_saida\": saida,\n        \"tokens_cache\": cache,\n        \"proporcao_cache\": round(cache / entrada, 3) if entrada else 0.0,\n        \"custo_usd\": round(custo, 4),\n        \"custo_por_turno\": round(custo / len(turnos), 4) if turnos else 0.0,\n    }\n\n\nif __name__ == \"__main__\":\n    import sys\n    print(json.dumps(resumir(sys.argv[1]), ensure_ascii=False, indent=2))"
+    },
+    {
+      "titulo": "Passo 3: aplique teto a toda saída de ferramenta",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def comprimir_saida(texto, primeiras=3, ultimas=4, limite_linhas=200):\n    \"\"\"Mantem cabeca e cauda; resume o meio. Padrao identico ao usado em logs.\"\"\"\n    linhas = texto.splitlines()\n    if len(linhas) <= limite_linhas:\n        return texto\n    cabeca = linhas[:primeiras]\n    cauda = linhas[-ultimas:]\n    omitidas = len(linhas) - primeiras - ultimas\n    return \"\\n\".join(cabeca + [f\"... [{omitidas} linhas omitidas] ...\"] + cauda)"
+    },
+    {
+      "titulo": "Passo 4: elimine turnos de retrabalho com contrato explícito",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "tarefa: corrigir-bug-1042\ncriterio_de_pronto:\n  - \"suite completa executa sem falha\"\n  - \"teste novo cobre o caso relatado\"\n  - \"nenhum arquivo fora de app/ foi alterado\"\nlimite_de_tentativas: 3\nao_atingir_limite: \"parar e reportar o bloqueio com a ultima falha\""
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Contabilidade de uma sessão.** Reconstrua o custo de uma sessão real e classifique cada turno em: necessário, confirmação ou retrabalho. A proporção entre as três classes é o retrato da eficiência do harness",
+    "Orçamento projetado.** Antes de rodar, estime o consumo de uma tarefa — número de turnos previstos multiplicado pelo contexto médio. Compare com o real e registre o erro da projeção",
+    "Corte de vazamento.** Escolha um dos nove vazamentos do capítulo e elimine-o. Meça o efeito na sessão seguinte, mantendo a tarefa equivalente",
+    "Teto com resumo.** Implemente um limite de saída que, ao ser atingido, produz um resumo em vez de truncar. Verifique que o turno seguinte não precisa reler nada do que ficou de fora"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 5 — Turnos agênticos: anatomia de um loop e por que ele custa dinheiro",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

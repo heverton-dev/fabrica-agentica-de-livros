@@ -1,0 +1,20 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 7: a regra geral de rodar --help antes de automatizar qualquer CLI nova (nunca depois), extraída da autópsia da sintaxe fabricada do Hermes Agent, agora generalizada em um checklist permanente",
+  "validacao": {
+    "validar_codigo": "OK (2/2 blocos verificaveis, 2 nao_aplicavel = console + mermaid)",
+    "renderizar_diagramas": "OK (1 diagrama valido)",
+    "validar_metricas": "OK (4 metricas, 0 violacoes)",
+    "validar_escala": "OK (0 violacoes, limite do protocolo declarado na secao Aplica)",
+    "validar_afirmacoes": "OK (0 violacoes)",
+    "validar_referencias_sem_rede": "OK (25/25 nao_verificado, 0 reprovado)",
+    "referencias_secao7": 25,
+    "min_referencias_exigido": 20,
+    "r14_orfaos": 0,
+    "r14_refs_nao_citadas": 0,
+    "citacoes_empilhadas": 0
+  },
+  "pool_registro": "sucesso (tentativa 1)"
+}

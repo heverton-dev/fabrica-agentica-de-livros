@@ -1,0 +1,46 @@
+{
+  "slug": "livros/design-ui-midia-soberana",
+  "lote": 4,
+  "capitulos": {
+    "1": {
+      "tentativas": 2,
+      "ultimo_erro": "",
+      "estado": "pendente"
+    },
+    "2": {
+      "tentativas": 3,
+      "ultimo_erro": "",
+      "estado": "esgotado"
+    },
+    "3": {
+      "tentativas": 1,
+      "ultimo_erro": "",
+      "estado": "concluido_autonomo"
+    },
+    "4": {
+      "tentativas": 2,
+      "ultimo_erro": "",
+      "estado": "concluido_autonomo"
+    },
+    "5": {
+      "tentativas": 2,
+      "ultimo_erro": "",
+      "estado": "concluido_autonomo"
+    },
+    "6": {
+      "tentativas": 1,
+      "ultimo_erro": "",
+      "estado": "pendente"
+    },
+    "7": {
+      "tentativas": 2,
+      "ultimo_erro": "",
+      "estado": "pendente"
+    },
+    "8": {
+      "tentativas": 2,
+      "ultimo_erro": "",
+      "estado": "concluido_autonomo"
+    }
+  }
+}

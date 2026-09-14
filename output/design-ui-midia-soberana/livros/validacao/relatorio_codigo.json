@@ -1,0 +1,351 @@
+{
+  "slug": "livros/design-ui-midia-soberana",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 35,
+  "resumo": {
+    "nao_aplicavel": 11,
+    "ok": 21,
+    "nao_verificado": 3
+  },
+  "por_linguagem": {
+    "(sem tag)": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "mermaid": {
+      "total": 8,
+      "ok": 0,
+      "falha": 0
+    },
+    "yaml": {
+      "total": 2,
+      "ok": 2,
+      "falha": 0
+    },
+    "env": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "console": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "bash": {
+      "total": 15,
+      "ok": 15,
+      "falha": 0
+    },
+    "css": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "typescript": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "javascript": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    },
+    "json": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    },
+    "python": {
+      "total": 2,
+      "ok": 2,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_01",
+      "linha": 17,
+      "linguagem": "(sem tag)",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_01",
+      "linha": 42,
+      "linguagem": "mermaid",
+      "linhas_codigo": 16,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_01",
+      "linha": 66,
+      "linguagem": "yaml",
+      "linhas_codigo": 32,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_01",
+      "linha": 102,
+      "linguagem": "env",
+      "linhas_codigo": 8,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_01",
+      "linha": 114,
+      "linguagem": "console",
+      "linhas_codigo": 16,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_01",
+      "linha": 134,
+      "linguagem": "bash",
+      "linhas_codigo": 3,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_01",
+      "linha": 139,
+      "linguagem": "css",
+      "linhas_codigo": 10,
+      "status": "nao_verificado",
+      "detalhe": "sem validador para 'css'"
+    },
+    {
+      "origem": "cap_02",
+      "linha": 25,
+      "linguagem": "mermaid",
+      "linhas_codigo": 18,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_02",
+      "linha": 51,
+      "linguagem": "bash",
+      "linhas_codigo": 25,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_03",
+      "linha": 47,
+      "linguagem": "mermaid",
+      "linhas_codigo": 16,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_03",
+      "linha": 79,
+      "linguagem": "bash",
+      "linhas_codigo": 4,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_03",
+      "linha": 87,
+      "linguagem": "yaml",
+      "linhas_codigo": 13,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_03",
+      "linha": 106,
+      "linguagem": "bash",
+      "linhas_codigo": 2,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_03",
+      "linha": 112,
+      "linguagem": "bash",
+      "linhas_codigo": 2,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_03",
+      "linha": 120,
+      "linguagem": "bash",
+      "linhas_codigo": 2,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_04",
+      "linha": 45,
+      "linguagem": "mermaid",
+      "linhas_codigo": 28,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_04",
+      "linha": 85,
+      "linguagem": "bash",
+      "linhas_codigo": 2,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_04",
+      "linha": 95,
+      "linguagem": "typescript",
+      "linhas_codigo": 19,
+      "status": "nao_verificado",
+      "detalhe": "tsc ausente (npm i -g typescript para habilitar)"
+    },
+    {
+      "origem": "cap_04",
+      "linha": 118,
+      "linguagem": "css",
+      "linhas_codigo": 17,
+      "status": "nao_verificado",
+      "detalhe": "sem validador para 'css'"
+    },
+    {
+      "origem": "cap_05",
+      "linha": 67,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_05",
+      "linha": 100,
+      "linguagem": "bash",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_05",
+      "linha": 140,
+      "linguagem": "bash",
+      "linhas_codigo": 16,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_05",
+      "linha": 179,
+      "linguagem": "bash",
+      "linhas_codigo": 4,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_05",
+      "linha": 191,
+      "linguagem": "javascript",
+      "linhas_codigo": 22,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_05",
+      "linha": 219,
+      "linguagem": "bash",
+      "linhas_codigo": 2,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_05",
+      "linha": 223,
+      "linguagem": "bash",
+      "linhas_codigo": 2,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_05",
+      "linha": 256,
+      "linguagem": "bash",
+      "linhas_codigo": 19,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_06",
+      "linha": 32,
+      "linguagem": "mermaid",
+      "linhas_codigo": 35,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_06",
+      "linha": 77,
+      "linguagem": "bash",
+      "linhas_codigo": 15,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_06",
+      "linha": 103,
+      "linguagem": "json",
+      "linhas_codigo": 20,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_07",
+      "linha": 34,
+      "linguagem": "mermaid",
+      "linhas_codigo": 21,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_07",
+      "linha": 65,
+      "linguagem": "bash",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_07",
+      "linha": 86,
+      "linguagem": "python",
+      "linhas_codigo": 65,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_08",
+      "linha": 39,
+      "linguagem": "mermaid",
+      "linhas_codigo": 11,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_08",
+      "linha": 66,
+      "linguagem": "python",
+      "linhas_codigo": 70,
+      "status": "ok",
+      "detalhe": ""
+    }
+  ]
+}

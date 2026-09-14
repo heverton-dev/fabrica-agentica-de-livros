@@ -1,0 +1,27 @@
+{
+  "tema": "Gratis: Substitua ferramentas pagas por opensource de verdade",
+  "tipo_obra": "livro",
+  "min_referencias_por_capitulo": 16,
+  "tamanho_obra": "M",
+  "senioridade_obra": "iniciante",
+  "serie": null,
+  "gerar_artigos": false,
+  "qtd_artigos": 0,
+  "gerar_ebooks": false,
+  "qtd_ebooks": 0,
+
+  "gerar_playbook": true,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "cta_url": "",
+  "cta_texto": "",
+
+  "modo_producao": "obra-unica",
+  "obra_raiz": null,
+  "cor_primaria": "#58a6ff",
+  "subtitulo": "Sua oficina digital sem assinaturas: notas, e-mail, CRM, design, vídeo, nuvem, BI, projetos, chat, infra — tudo open source, rodando na sua VPS",
+  "edition_tag": "v1.0 · 2026",
+  "estilo_tecnica": "operacional"
+}

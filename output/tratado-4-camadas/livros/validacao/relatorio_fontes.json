@@ -1,0 +1,42 @@
+{
+  "dossies": [
+    "dossie_tratado-4-camadas.md",
+    "mineracao_academica_tratado-4-camadas.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_tratado-4-camadas.md",
+      "classes": {
+        "A": 35,
+        "B": 10,
+        "C": 5
+      },
+      "linhas_fonte": 50
+    },
+    {
+      "arquivo": "mineracao_academica_tratado-4-camadas.md",
+      "classes": {
+        "A": 20,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 20
+    }
+  ],
+  "classes": {
+    "A": 55,
+    "B": 10,
+    "C": 5
+  },
+  "linhas_fonte_total": 70,
+  "classificadas": 70,
+  "proporcao_ab": 0.929,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "livros/tratado-4-camadas"
+}

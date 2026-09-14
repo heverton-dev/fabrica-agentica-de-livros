@@ -1,0 +1,66 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Análise de Dados e Gestão de Projetos: BI e Kanban Sem Licença por Usuário",
+  "estagio": "Bancada",
+  "estagio_indice": 2,
+  "objetivo": "Cobrir ferramentas de BI self-hosted e de gestão de projetos, incluindo o alerta de risco de longevidade de projetos com manutenção incerta.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Subindo o Metabase",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose up -d",
+        "curl -sI http://localhost:3000 | head -1"
+      ],
+      "codigo": "# docker-compose.yml — Metabase (referência mínima de produção)\nversion: \"3.9\"\n\nservices:\n  metabase:\n    image: metabase/metabase:latest\n    restart: unless-stopped\n    ports:\n      - \"3000:3000\"\n    environment:\n      MB_DB_TYPE: postgres\n      MB_DB_DBNAME: metabase\n      MB_DB_PORT: 5432\n      MB_DB_USER: metabase\n      MB_DB_PASS: troque-esta-senha\n      MB_DB_HOST: db\n    volumes:\n      - metabase-data:/metabase.db\n    depends_on:\n      - db\n\n  db:\n    image: postgres:15-alpine\n    restart: unless-stopped\n    environment:\n      POSTGRES_DB: metabase\n      POSTGRES_USER: metabase\n      POSTGRES_PASSWORD: troque-esta-senha\n    volumes:\n      - db-data:/var/lib/postgresql/data\n\nvolumes:\n  metabase-data:\n  db-data:"
+    },
+    {
+      "titulo": "A Bancada de Gestão: OpenProject",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose up -d"
+      ],
+      "codigo": "# docker-compose.yml — OpenProject (Community Edition)\nversion: \"3.9\"\n\nservices:\n  openproject:\n    image: openproject/openproject:16\n    restart: unless-stopped\n    ports:\n      - \"8080:80\"\n    environment:\n      OPENPROJECT_HOST: projetos.suaoficina.com\n      OPENPROJECT_SECRET_KEY_BASE: troque-esta-chave\n    volumes:\n      - op-pgdata:/var/lib/postgresql/14/main\n      - op-assets:/var/db/openproject\n    command: docker/production/install\n\nvolumes:\n  op-pgdata:\n  op-assets:"
+    },
+    {
+      "titulo": "O Caminho do Superset: Quando o Analytics Precisa de Profundidade",
+      "linguagem": "console",
+      "comandos": [
+        "docker compose -f docker-compose.yml up -d",
+        "docker compose exec superset_app superset init"
+      ],
+      "codigo": "$ docker compose -f docker-compose.yml up -d\n[+] Running 4/4\n ✔ Container superset_db         Started\n ✔ Container superset_cache      Started\n ✔ Container superset_worker     Started\n ✔ Container superset_app        Started\n$ docker compose exec superset_app superset fab create-admin \\\n    --username artesao --firstname Artesao --lastname Digital \\\n    --email artesao@oficina.com --password troque-esta-senha\n$ docker compose exec superset_app superset init"
+    },
+    {
+      "titulo": "O Ciclo de Vida de um Relatório: Do Banco ao E-mail Agendado",
+      "linguagem": "console",
+      "comandos": [],
+      "codigo": "$ curl -s -X POST http://localhost:3000/api/pulse \\\n  -H \"X-Metabase-Session: SESS_ID\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"name\":\"Relatorio semanal de vendas\",\"channel_specs\":{\"email\":{\"recipients\":[\"gestor@oficina.com\"]}},\"cards\":[{\"id\":1,\"include_csv\":true}],\"schedule_type\":\"weekly\",\"schedule_day\":\"mon\",\"schedule_hour\":8}'\n{\"id\":42,\"name\":\"Relatorio semanal de vendas\",\"schedule_type\":\"weekly\"}"
+    }
+  ],
+  "gate": "docker compose up -d",
+  "comandos": [
+    "docker compose up -d",
+    "curl -sI http://localhost:3000 | head -1",
+    "docker compose -f docker-compose.yml up -d",
+    "docker compose exec superset_app superset init"
+  ],
+  "feito_quando": [
+    "A jornada prática deste capítulo é a primeira semana do Artesão Digital medindo",
+    "O cenário: você tem vendas acontecendo — o produto digital que o livro deu condições de criar —",
+    "Os dados estão espalhados entre uma planilha",
+    "Erro comum:** você escolhe o BI pelo nome — \"Tableau é o que as empresas usam\" — ou pelo preço zero",
+    "O primeiro erro paga mensalidade por assento para sempre",
+    "O segundo pendura na parede uma peça cuja manutenção morreu",
+    "É exatamente o que acontece com o Redash: quem montou a stack em 2019"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 7 — Análise de Dados e Gestão de Projetos: BI e Kanban Sem Licença por Usuário",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

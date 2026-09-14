@@ -1,0 +1,56 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Camada 1 — Contexto e Governança: Densidade, Localidade e Determinismo",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Ensinar os três princípios universais de contexto — Densidade de Shannon, Localidade de Contexto e Determinismo Declarativo — e a Constituição Viva que os materializa no repositório.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Medindo densidade de contexto com evidência",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Analisador de densidade de contexto para documentos de governanca.\"\"\"\n\nimport re\nimport sys\nfrom pathlib import Path\nfrom typing import Dict\n\nTERMOS_PROLIXOS = (\n    \"por favor\", \"gostaria\", \"poderia\", \"talvez\", \"se possivel\",\n    \"espero que\", \"bom dia\", \"boa tarde\", \"atenciosamente\", \"obrigado\",\n)\n\nLIMITE_APROVACAO = 80.0\n\n\ndef analisar(texto: str) -> Dict[str, float]:\n    palavras = re.findall(r\"\\b\\w+\\b\", texto.lower())\n    total = len(palavras)\n    if total == 0:\n        return {\"palavras\": 0.0, \"prolixos\": 0.0, \"densidade\": 0.0}\n\n    baixo = texto.lower()\n    prolixos = sum(\n        len(re.findall(r\"\\b\" + re.escape(t) + r\"\\b\", baixo))\n        for t in TERMOS_PROLIXOS\n    )\n    penalidade = (prolixos * 12) / total\n    densidade = max(0.0, min(100.0, 100.0 - penalidade * 100))\n    return {\"palavras\": float(total), \"prolixos\": float(prolixos),\n            \"densidade\": round(densidade, 2)}\n\n\ndef medir_blocos(texto: str) -> int:\n    \"\"\"Conta blocos separados por linha em branco — proxy de fragmentacao util.\"\"\"\n    return len([b for b in re.split(r\"\\n\\s*\\n\", texto) if b.strip()])\n\n\ndef main() -> int:\n    alvo = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(\"AGENTS.md\")\n    if not alvo.exists():\n        print(f\"[FALHA] documento nao encontrado: {alvo}\")\n        return 1\n\n    texto = alvo.read_text(encoding=\"utf-8\")\n    metricas = analisar(texto)\n    print(\"=\" * 60)\n    print(f\"DENSIDADE DE CONTEXTO — {alvo.name}\")\n    print(\"=\" * 60)\n    print(f\"  palavras          : {int(metricas['palavras'])}\")\n    print(f\"  termos prolix"
+    },
+    {
+      "titulo": "4.2 Separando prefixo estável de contexto volátil",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"prefixo_estavel\": {\n    \"ordem_fixa\": true,\n    \"conteudo\": [\n      \"AGENTS.md (constituicao)\",\n      \"docs/protocolos/convencoes.md\",\n      \"schemas/contratos.json\"\n    ],\n    \"politica_de_mudanca\": \"somente-por-revisao-com-justificativa\"\n  },\n  \"contexto_volatil\": {\n    \"conteudo\": [\n      \"diff do turno atual\",\n      \"saida do ultimo comando\",\n      \"lista de pendencias abertas\"\n    ],\n    \"politica_de_expurgo\": \"descartar-entre-fases\",\n    \"teto_por_turno_tokens\": 8000\n  },\n  \"proibido_no_contexto\": [\n    \"logs integrais sem filtro\",\n    \"transcricao de conversa anterior\",\n    \"saudacoes e preambulos\",\n    \"arquivo inteiro quando o diff basta\"\n  ]\n}"
+    },
+    {
+      "titulo": "4.3 Sessão real de diagnóstico de contexto",
+      "linguagem": "console",
+      "comandos": [
+        "python gates/densidade-contexto.py AGENTS.md",
+        "python gates/densidade-contexto.py docs/protocolos/tudo-junto.md"
+      ],
+      "codigo": "$ python gates/densidade-contexto.py AGENTS.md\n============================================================\nDENSIDADE DE CONTEXTO — AGENTS.md\n============================================================\n  palavras          : 1840\n  termos prolixos   : 14\n  blocos de conteudo: 62\n  indice de densidade: 90.87 / 100\n------------------------------------------------------------\n[APROVADO] exit 0 (limite 80.0)\n\n$ python gates/densidade-contexto.py docs/protocolos/tudo-junto.md\n  palavras          : 9120\n  termos prolixos   : 96\n  blocos de conteudo: 51\n  indice de densidade: 87.37 / 100\n  AVISO: 9120 palavras na bancada — mova o detalhe para as gavetas de modulo\n------------------------------------------------------------\n[APROVADO] exit 0 (limite 80.0)"
+    }
+  ],
+  "gate": "python gates/densidade-contexto.py AGENTS.md",
+  "comandos": [
+    "python gates/densidade-contexto.py AGENTS.md",
+    "python gates/densidade-contexto.py docs/protocolos/tudo-junto.md"
+  ],
+  "feito_quando": [
+    "Confundir densidade com brevidade. Frase curta e vaga tem menos informação que parágrafo preciso",
+    "Promover detalhe de módulo para a raiz. Isso dilui as leis que valem para todos no meio de regras que valem para poucos",
+    "Reordenar a constituição a cada edição. Estabilidade de ordem é o que habilita a economia de prefixo",
+    "Manter pedido enfático onde caberia portão binário. \"Por favor, não faça X\" não sobrevive a contexto saturado [3]",
+    "Guardar credencial no contexto. Regra de segurança que depende de o agente lembrar de não vazar não é regra de segurança"
+  ],
+  "armadilhas": [
+    "Confundir densidade com brevidade. Frase curta e vaga tem menos informação que parágrafo preciso",
+    "Promover detalhe de módulo para a raiz. Isso dilui as leis que valem para todos no meio de regras que valem para poucos",
+    "Reordenar a constituição a cada edição. Estabilidade de ordem é o que habilita a economia de prefixo",
+    "Manter pedido enfático onde caberia portão binário. \"Por favor, não faça X\" não sobrevive a contexto saturado [3]",
+    "Guardar credencial no contexto. Regra de segurança que depende de o agente lembrar de não vazar não é regra de segurança"
+  ],
+  "referencia_cruzada": "Cap. 6 — Camada 1 — Contexto e Governança: Densidade, Localidade e Determinismo",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

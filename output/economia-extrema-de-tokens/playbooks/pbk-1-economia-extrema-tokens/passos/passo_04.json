@@ -1,0 +1,55 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "Cache Inteligente e Memory: RTK-Memory + LiteLLM",
+  "estagio": "Token",
+  "estagio_indice": 1,
+  "objetivo": "O leitor configura cache real (não teórico) no seu fluxo de trabalho com IA, vê o desconto materializar e entende quando reutilizar contexto compensa mais que gerá-lo do zero.",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [
+    "CLAUDE.md",
+    "AGENTS.md",
+    "RTK-SCRATCHPAD.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "Medindo cache hit com um script simples",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# medir_cache_hit.py\n# Script simples, comentado passo a passo, para estimar a taxa de cache hit\n# a partir de um log de prompts (cada item da lista simula uma chamada).\n\ndef prefixo_estavel(prompt: str, tamanho: int = 40) -> str:\n    \"\"\"Retorna os primeiros N caracteres do prompt.\n\n    Na vida real, o 'prefixo estavel' e o system prompt (CLAUDE.md/AGENTS.md).\n    Aqui simplificamos pegando o inicio do texto para fins didaticos.\n    \"\"\"\n    return prompt[:tamanho]\n\n\ndef medir_taxa_cache_hit(log_de_chamadas: list) -> dict:\n    \"\"\"Conta quantas chamadas repetem o mesmo prefixo da chamada anterior.\n\n    Retorna um dicionario com o total de chamadas, os hits (prefixo repetido)\n    e a taxa de acerto em percentual.\n    \"\"\"\n    total = len(log_de_chamadas)\n    hits = 0\n    prefixo_anterior = None\n\n    for prompt in log_de_chamadas:\n        prefixo_atual = prefixo_estavel(prompt)\n        if prefixo_atual == prefixo_anterior:\n            hits += 1\n        prefixo_anterior = prefixo_atual\n\n    taxa = (hits / total * 100) if total > 0 else 0.0\n    return {\"total_chamadas\": total, \"cache_hits\": hits, \"taxa_hit_percentual\": round(taxa, 1)}\n\n\nif __name__ == \"__main__\":\n    # Cenario A: prompt-base fixo (RTK-Memory ativo) + pergunta variavel no final\n    log_com_rtk_memory = [\n        \"SYSTEM: Voce e um assistente de codigo. PERGUNTA: como criar uma lista?\",\n        \"SYSTEM: Voce e um assistente de codigo. PERGUNTA: como ler um arquivo?\",\n        \"SYSTEM: Voce e um assistente de codigo. PERGUNTA: como somar dois numeros?\",\n    ]\n\n    resultado = medir_taxa_cache_hit(log_com_rtk_memory)\n "
+    },
+    {
+      "titulo": "Configurando o LiteLLM como router com cache semântico",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker run -d -p 4000:4000 -v $(pwd)/litellm-config.yaml:/app/config.yaml ghcr.io/berriai/litellm:main-latest --config /app/config.yaml",
+        "curl http://localhost:4000/chat/completions -d '{\"model\": \"modelo-padrao\", \"messages\": [{\"role\": \"user\", \"content\": \"qual o preco do plano X?\"}]}'"
+      ],
+      "codigo": "# litellm-config.yaml\nmodel_list:\n  - model_name: modelo-padrao\n    litellm_params:\n      model: anthropic/claude-3-5-sonnet\n      api_key: \"os.environ/ANTHROPIC_API_KEY\"\n  - model_name: modelo-alternativo\n    litellm_params:\n      model: openai/gpt-4o-mini\n      api_key: \"os.environ/OPENAI_API_KEY\"\n\nlitellm_settings:\n  cache: true\n  cache_params:\n    type: redis\n    host: \"localhost\"\n    port: 6379\n    similarity_threshold: 0.95   # so reaproveita resposta acima de 95% de similaridade"
+    },
+    {
+      "titulo": "Traduzindo taxa de cache hit em economia real",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# estimar_economia_cache.py\n# Projeta a economia mensal a partir da taxa de cache hit medida\n# e do volume de chamadas do seu próprio fluxo.\n\ndef estimar_economia_mensal(\n    taxa_hit_percentual: float,\n    chamadas_por_dia: int,\n    tokens_prefixo_medio: int,\n    custo_por_1k_tokens: float,\n    desconto_cache: float = 0.90,\n) -> dict:\n    \"\"\"Estima quanto do custo de prefixo é evitado por mês graças ao cache.\n\n    taxa_hit_percentual: saida de medir_taxa_cache_hit() (0 a 100)\n    chamadas_por_dia: volume medio de chamadas do seu fluxo\n    tokens_prefixo_medio: tamanho medio, em tokens, do prompt-base\n    custo_por_1k_tokens: preco cheio por 1000 tokens processados\n    desconto_cache: fracao do custo evitada em cada hit (0.90 = 90%)\n    \"\"\"\n    chamadas_por_mes = chamadas_por_dia * 30\n    chamadas_com_hit = chamadas_por_mes * (taxa_hit_percentual / 100)\n\n    custo_cheio_por_chamada = (tokens_prefixo_medio / 1000) * custo_por_1k_tokens\n    economia_por_hit = custo_cheio_por_chamada * desconto_cache\n    economia_mensal_estimada = chamadas_com_hit * economia_por_hit\n\n    return {\n        \"chamadas_por_mes\": chamadas_por_mes,\n        \"chamadas_com_cache_hit\": round(chamadas_com_hit),\n        \"economia_mensal_estimada\": round(economia_mensal_estimada, 2),\n    }\n\n\nif __name__ == \"__main__\":\n    # Exemplo: fluxo com 80% de cache hit (RTK-Memory ativo),\n    # 500 chamadas/dia, prefixo de 2000 tokens, US$ 0,003 por 1k tokens\n    resultado = estimar_economia_mensal(\n        taxa_hit_percentual=80,\n        chamadas_por_dia=500,\n        tokens_prefixo_medio=2000,\n        custo_por_1k_t"
+    }
+  ],
+  "gate": "docker run -d -p 4000:4000 -v $(pwd)/litellm-config.yaml:/app/config.yaml ghcr.io/berriai/litellm:main-latest --config /app/config.yaml",
+  "comandos": [
+    "docker run -d -p 4000:4000 -v $(pwd)/litellm-config.yaml:/app/config.yaml ghcr.io/berriai/litellm:main-latest --config /app/config.yaml",
+    "curl http://localhost:4000/chat/completions -d '{\"model\": \"modelo-padrao\", \"messages\": [{\"role\": \"user\", \"content\": \"qual o preco do plano X?\"}]}'"
+  ],
+  "feito_quando": [
+    "Rode o `medir_cache_hit.py` com um log real de prompts do seu projeto (substitua o exemplo pelas suas últimas 10-20 chamadas)",
+    "Identifique, no seu `CLAUDE.md`/`AGENTS.md` atual, qualquer trecho que parece \"aprendizado de sessão\" e mova para um `RTK-SCRATCHPAD.md`",
+    "Suba o `litellm-config.yaml` localmente e confirme que o cache semântico responde em poucos milissegundos numa segunda chamada parecida",
+    "Documente, no seu repositório, a regra \"o que muda no prompt-base e o que vai para o scratchpad\"",
+    "Rode o `estimar_economia_cache.py` com os números reais do seu fluxo (volume diário de chamadas, tamanho médio do prefixo, custo por 1k tokens do seu provedor) e registre o valor projetado como meta de acompanhamento mensal",
+    "Se você opera mais de um agente com prompt próprio, liste onde há trechos de governança duplicados entre eles e planeje extraí-los para um módulo único e referenciado"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 4 — Cache Inteligente e Memory: RTK-Memory + LiteLLM",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

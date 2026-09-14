@@ -1,0 +1,35 @@
+{
+  "slug_livro_mae": "gratis-open-source",
+  "artigos": {
+    "total": 0,
+    "itens": []
+  },
+  "ebooks": {
+    "total": 0,
+    "itens": []
+  },
+  "playbooks": {
+    "total": 1,
+    "itens": [
+      {
+        "indice": 1,
+        "titulo": "Playbook — Grátis: Substitua Ferramentas Pagas por Open Source de Verdade",
+        "slug": "pbk-1-gratis-substitua",
+        "diretorio": "gratis-open-source/playbooks/pbk-1-gratis-substitua",
+        "estagios": 2
+      }
+    ]
+  },
+  "lead-magnets": {
+    "total": 0,
+    "itens": []
+  },
+  "decks": {
+    "total": 0,
+    "itens": []
+  },
+  "emails": {
+    "total": 0,
+    "itens": []
+  }
+}

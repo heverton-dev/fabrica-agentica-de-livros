@@ -1,0 +1,660 @@
+{
+  "slug": "livros/tratado-4-camadas-v2",
+  "modo": "capitulos",
+  "executado": true,
+  "total_blocos": 68,
+  "resumo": {
+    "nao_aplicavel": 27,
+    "ok": 41
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 16,
+      "ok": 0,
+      "falha": 0
+    },
+    "python": {
+      "total": 28,
+      "ok": 28,
+      "falha": 0
+    },
+    "json": {
+      "total": 4,
+      "ok": 4,
+      "falha": 0
+    },
+    "yaml": {
+      "total": 9,
+      "ok": 9,
+      "falha": 0
+    },
+    "text": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "markdown": {
+      "total": 5,
+      "ok": 0,
+      "falha": 0
+    },
+    "csv": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    },
+    "console": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "sql": {
+      "total": 1,
+      "ok": 0,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_1",
+      "linha": 76,
+      "linguagem": "mermaid",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 100,
+      "linguagem": "python",
+      "linhas_codigo": 35,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 154,
+      "linguagem": "json",
+      "linhas_codigo": 17,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 77,
+      "linguagem": "mermaid",
+      "linhas_codigo": 13,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_2",
+      "linha": 102,
+      "linguagem": "yaml",
+      "linhas_codigo": 20,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 130,
+      "linguagem": "python",
+      "linhas_codigo": 45,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do Windows (unidade:\\) (nao executado)"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 59,
+      "linguagem": "mermaid",
+      "linhas_codigo": 11,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 82,
+      "linguagem": "python",
+      "linhas_codigo": 45,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 135,
+      "linguagem": "text",
+      "linhas_codigo": 13,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 156,
+      "linguagem": "python",
+      "linhas_codigo": 40,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 75,
+      "linguagem": "mermaid",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 101,
+      "linguagem": "yaml",
+      "linhas_codigo": 24,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_4",
+      "linha": 133,
+      "linguagem": "python",
+      "linhas_codigo": 61,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do Windows (unidade:\\) (nao executado)"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 53,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 80,
+      "linguagem": "markdown",
+      "linhas_codigo": 19,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 107,
+      "linguagem": "json",
+      "linhas_codigo": 18,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_5",
+      "linha": 133,
+      "linguagem": "csv",
+      "linhas_codigo": 7,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 148,
+      "linguagem": "python",
+      "linhas_codigo": 46,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 51,
+      "linguagem": "mermaid",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 77,
+      "linguagem": "yaml",
+      "linhas_codigo": 19,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_6",
+      "linha": 102,
+      "linguagem": "python",
+      "linhas_codigo": 73,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do Windows (unidade:\\) (nao executado)"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 183,
+      "linguagem": "python",
+      "linhas_codigo": 39,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 49,
+      "linguagem": "mermaid",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 75,
+      "linguagem": "yaml",
+      "linhas_codigo": 21,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_7",
+      "linha": 102,
+      "linguagem": "python",
+      "linhas_codigo": 42,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 152,
+      "linguagem": "python",
+      "linhas_codigo": 61,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 221,
+      "linguagem": "python",
+      "linhas_codigo": 45,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 49,
+      "linguagem": "mermaid",
+      "linhas_codigo": 17,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 78,
+      "linguagem": "yaml",
+      "linhas_codigo": 24,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_8",
+      "linha": 108,
+      "linguagem": "python",
+      "linhas_codigo": 75,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 191,
+      "linguagem": "python",
+      "linhas_codigo": 44,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 243,
+      "linguagem": "json",
+      "linhas_codigo": 19,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_9",
+      "linha": 51,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_9",
+      "linha": 78,
+      "linguagem": "python",
+      "linhas_codigo": 50,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_9",
+      "linha": 136,
+      "linguagem": "console",
+      "linhas_codigo": 17,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_9",
+      "linha": 161,
+      "linguagem": "text",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_9",
+      "linha": 181,
+      "linguagem": "json",
+      "linhas_codigo": 22,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_10",
+      "linha": 57,
+      "linguagem": "mermaid",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 83,
+      "linguagem": "sql",
+      "linhas_codigo": 24,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 115,
+      "linguagem": "python",
+      "linhas_codigo": 88,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 211,
+      "linguagem": "python",
+      "linhas_codigo": 52,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 269,
+      "linguagem": "python",
+      "linhas_codigo": 34,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_10",
+      "linha": 307,
+      "linguagem": "markdown",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_11",
+      "linha": 59,
+      "linguagem": "mermaid",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_11",
+      "linha": 85,
+      "linguagem": "yaml",
+      "linhas_codigo": 23,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_11",
+      "linha": 116,
+      "linguagem": "console",
+      "linhas_codigo": 11,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_11",
+      "linha": 135,
+      "linguagem": "python",
+      "linhas_codigo": 49,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_11",
+      "linha": 192,
+      "linguagem": "python",
+      "linhas_codigo": 42,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_12",
+      "linha": 47,
+      "linguagem": "mermaid",
+      "linhas_codigo": 13,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_12",
+      "linha": 72,
+      "linguagem": "python",
+      "linhas_codigo": 57,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_12",
+      "linha": 137,
+      "linguagem": "python",
+      "linhas_codigo": 33,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_12",
+      "linha": 178,
+      "linguagem": "python",
+      "linhas_codigo": 47,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_13",
+      "linha": 51,
+      "linguagem": "mermaid",
+      "linhas_codigo": 17,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_13",
+      "linha": 80,
+      "linguagem": "python",
+      "linhas_codigo": 55,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_13",
+      "linha": 143,
+      "linguagem": "python",
+      "linhas_codigo": 28,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_13",
+      "linha": 179,
+      "linguagem": "yaml",
+      "linhas_codigo": 18,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_14",
+      "linha": 47,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_14",
+      "linha": 74,
+      "linguagem": "markdown",
+      "linhas_codigo": 24,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_14",
+      "linha": 104,
+      "linguagem": "python",
+      "linhas_codigo": 42,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_14",
+      "linha": 154,
+      "linguagem": "python",
+      "linhas_codigo": 37,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_15",
+      "linha": 49,
+      "linguagem": "mermaid",
+      "linhas_codigo": 14,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_15",
+      "linha": 75,
+      "linguagem": "yaml",
+      "linhas_codigo": 29,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_15",
+      "linha": 110,
+      "linguagem": "markdown",
+      "linhas_codigo": 18,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_15",
+      "linha": 134,
+      "linguagem": "python",
+      "linhas_codigo": 42,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_16",
+      "linha": 57,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_16",
+      "linha": 84,
+      "linguagem": "yaml",
+      "linhas_codigo": 20,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_16",
+      "linha": 110,
+      "linguagem": "python",
+      "linhas_codigo": 51,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_16",
+      "linha": 178,
+      "linguagem": "markdown",
+      "linhas_codigo": 6,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "slug": "livros/tratado-4-camadas-v2",
+  "capitulos": 16,
+  "total_blocos": 52,
+  "confirmados": 0,
+  "fabricados": 0,
+  "nao_verificados": 52,
+  "por_capitulo_com_falha": {},
+  "regras": {
+    "R-CLI-1": "bloco de código/CLI marcado confere=false (sintaxe fabricada ou parcialmente correta) reprova; sem marcação vira pendência, nunca reprova"
+  },
+  "violacoes": [],
+  "pendentes": [
+    {
+      "origem": "cap_1",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Inventario da conta: mede o custo do trabalho manual antes de automatizar.\"\"\" import json TAREFA = \"conferencia manual de pedidos\" PER"
+    },
+    {
+      "origem": "cap_1",
+      "secao": 4,
+      "linguagem": "json",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "{ \"tarefa\": \"conferencia manual de pedidos\", \"linha_de_base\": { \"minutos_por_semana\": 40, \"erros_por_mes\": 3, \"impacto\": \"pedido conferido errado chega ao clien"
+    },
+    {
+      "origem": "cap_2",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# vocabulario.yaml — dicionario de bancada do projeto versao: 1 termos: - termo: pedido definicao: linha do arquivo de origem que representa uma compra nao_e: n"
+    },
+    {
+      "origem": "cap_2",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Portao do vocabulario: reprova quando o codigo usa termo fora do dicionario.\"\"\" import re import sys from pathlib import Path TERMOS_D"
+    },
+    {
+      "origem": "cap_3",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Medidor de linha de base: registra execucoes da tarefa manual.\"\"\" import json from datetime import datetime, timedelta from pathlib im"
+    },
+    {
+      "origem": "cap_3",
+      "secao": 4,
+      "linguagem": "text",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "painel-de-pedidos/ objetivo.md # o que a tarefa entrega e qual o criterio de pronto caderno.json # decisoes, com data e motivo linha-de-base.json # medicao do a"
+    },
+    {
+      "origem": "cap_3",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Primeira lampada de teste: valida a forma do arquivo de entrada.\"\"\" import csv import sys from pathlib import Path COLUNAS_OBRIGATORIA"
+    },
+    {
+      "origem": "cap_4",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# regras.yaml — constituicao da bancada do projeto versao: 2 leis: - id: 1 lei: nada entra sem contrato fiscalizacao: comando verificador: verificacoes/conferir"
+    },
+    {
+      "origem": "cap_4",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Portao da constituicao: nenhuma lei sem fiscalizacao declarada e valida.\"\"\" import re import sys from pathlib import Path ARQUIVO = Pa"
+    },
+    {
+      "origem": "cap_5",
+      "secao": 4,
+      "linguagem": "markdown",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Especificacao: conferencia de pedidos do dia ## Objetivo Conferir o arquivo de pedidos recebido e produzir o resumo diario por forma de pagamento. ## Entrada "
+    },
+    {
+      "origem": "cap_5",
+      "secao": 4,
+      "linguagem": "json",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "{ \"titulo\": \"contrato de pedido\", \"versao\": 1, \"campos_obrigatorios\": [\"identificador\", \"cliente\", \"valor\", \"data\", \"forma_pagamento\"], \"tipos\": { \"identificado"
+    },
+    {
+      "origem": "cap_5",
+      "secao": 4,
+      "linguagem": "csv",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "identificador,cliente,valor,data,forma_pagamento 8842,Ana Souza,132.90,2026-09-14,pix 8843,Carlos Lima,58.00,2026-09-14,cartao 8842,Ana Souza,132.90,2026-09-14,"
+    },
+    {
+      "origem": "cap_5",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Medidor de contexto: avisa quando a mesa de trabalho passa do teto.\"\"\" import sys from pathlib import Path TETO_LINHAS = 400 STATUS = "
+    },
+    {
+      "origem": "cap_6",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# portoes.yaml — declaracao dos portoes do projeto portoes: - nome: entrada_conforme comando: python verificacoes/conferir_entrada.py dados/entrada/pedidos.csv "
+    },
+    {
+      "origem": "cap_6",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Harness minimo: roda os portoes declarados e devolve aprovado ou bloqueado.\"\"\" import json import runpy import tempfile from pathlib i"
+    },
+    {
+      "origem": "cap_6",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Disjuntor de escrita: recusa qualquer gravacao fora da pasta de estado.\"\"\" import sys from pathlib import Path PERMITIDO = Path(\"dados"
+    },
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# roteamento.yaml — tabela de decisao da bancada portas: - porta: script quando: o passo a passo completo pode ser escrito e testado recurso: codigo do projeto "
+    },
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Validador de contrato de resposta: aprovado ou bloqueado, sem meio-termo.\"\"\" import json import sys CAMPOS = {\"identificador\": str, \"t"
+    },
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Roteador minimo: decide a porta e executa a parte deterministica.\"\"\" import json from pathlib import Path LIMITE_PENDENCIAS = 20 def d"
+    },
+    {
+      "origem": "cap_7",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Medidor de custo: custo por tarefa, por porta de roteamento.\"\"\" import json from pathlib import Path REGISTRO = Path(\"dados/estado/exe"
+    },
+    {
+      "origem": "cap_8",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# ferramentas.yaml — catalogo da usina ferramentas: - nome: importar_pedidos faz: le o CSV da pasta de entrada e grava pedidos no banco de estado nao_faz: nao c"
+    },
+    {
+      "origem": "cap_8",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Importacao idempotente: rodar duas vezes nao duplica pedido.\"\"\" import sqlite3 import sys from pathlib import Path CRIAR_TABELA = \"\"\" "
+    },
+    {
+      "origem": "cap_8",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Le o registro de execucoes e mostra o que aconteceu no dia.\"\"\" import sqlite3 from pathlib import Path BANCO = Path(\"dados/estado/pedi"
+    },
+    {
+      "origem": "cap_8",
+      "secao": 4,
+      "linguagem": "json",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "{ \"servidor\": \"ferramentas-locais\", \"transporte\": \"stdio\", \"escopo\": { \"leitura\": [\"dados/entrada\"], \"escrita\": [\"dados/estado\"], \"proibido\": [\"dados/entrada\", "
+    },
+    {
+      "origem": "cap_9",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Inventario do repositorio: o que existe, o que preocupa e o que nao tem teste.\"\"\" import re from pathlib import Path INDICIOS = { \"stu"
+    },
+    {
+      "origem": "cap_9",
+      "secao": 4,
+      "linguagem": "console",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "$ mkdir -p dados/entrada dados/estado verificacoes exemplos $ git init && git add . && git commit -m \"estado inicial do projeto\" $ # Peca 1 - contexto $ printf "
+    },
+    {
+      "origem": "cap_9",
+      "secao": 4,
+      "linguagem": "text",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "painel-de-pedidos/ objetivo.md contrato.json vocabulario.yaml portoes.yaml ferramentas.yaml roteamento.yaml caderno.json linha-de-base.json dados/entrada/ (some"
+    },
+    {
+      "origem": "cap_9",
+      "secao": 4,
+      "linguagem": "json",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "{ \"ciclo\": 1, \"tarefa\": \"conferir arquivo do dia e gerar resumo por forma de pagamento\", \"planejado\": { \"criterio_de_pronto\": \"totais conferidos e nenhuma linha"
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "sql",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "CREATE TABLE IF NOT EXISTS pedidos ( identificador TEXT PRIMARY KEY, cliente TEXT NOT NULL, valor REAL NOT NULL, data TEXT NOT NULL, forma_pagamento TEXT, lote "
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Importacao com conferencia: le, confere, grava e registra.\"\"\" import csv import sqlite3 import tempfile from pathlib import Path COLUN"
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Relatorio do dia: escreve apenas se os totais conferirem.\"\"\" import json from pathlib import Path LOTE = { \"data\": \"2026-09-14\", \"linh"
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Teste de equivalencia: sistema e processo manual devem concordar.\"\"\" from pathlib import Path ESPERADO_MANUAL = {\"total\": 190.90, \"lin"
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "markdown",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Decisoes do Painel de Pedidos Data: 2026-09-14 | # | Decisao | Motivo | Consequencia | |---|---|---|---| | 1 | Identificador de origem como chave | permitir r"
+    },
+    {
+      "origem": "cap_11",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# frentes.yaml — plano de trabalho paralelo frentes: - nome: relatorio-por-periodo escopo: gerar relatorio consolidado por intervalo de datas arquivos_permitido"
+    },
+    {
+      "origem": "cap_11",
+      "secao": 4,
+      "linguagem": "console",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "$ git worktree add ../pedidos-relatorio -b frente/relatorio-periodo Preparing worktree (new branch 'frente/relatorio-periodo') $ cd ../pedidos-relatorio $ pytho"
+    },
+    {
+      "origem": "cap_11",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Fila de frentes com estados e limite de simultaneidade.\"\"\" import json from pathlib import Path ESTADOS = (\"pendente\", \"em_execucao\", "
+    },
+    {
+      "origem": "cap_11",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Conferencia de escopo: o que mudou esta dentro do que foi permitido?\"\"\" import fnmatch from pathlib import Path PERMITIDOS = [\"verific"
+    },
+    {
+      "origem": "cap_12",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Suite de comportamento: casos dificeis do dominio, sem depender do ambiente.\"\"\" import unittest def conferir_lote(linhas): \"\"\"Aprova o"
+    },
+    {
+      "origem": "cap_12",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Teste de equivalencia: o sistema reproduz a conferencia manual no lote de referencia?\"\"\" REFERENCIA = { \"lote\": \"2026-09-14\", \"total_m"
+    },
+    {
+      "origem": "cap_12",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Auditoria por evidencia: portoes, reprodutibilidade, limites e responsavel.\"\"\" from pathlib import Path EVIDENCIAS = { \"portoes_execut"
+    },
+    {
+      "origem": "cap_13",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Registro de custo por tarefa: onde o dinheiro esta indo.\"\"\" import json from pathlib import Path PRECO_POR_MILHAO_ENTRADA = 3.00 PRECO"
+    },
+    {
+      "origem": "cap_13",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Comparador de corte: quanto muda se a tarefa mudar de rota.\"\"\" CUSTO_AGENTE_POR_EXECUCAO = 0.2835 CUSTO_SCRIPT_POR_EXECUCAO = 0.0 EXEC"
+    },
+    {
+      "origem": "cap_13",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# contexto.yaml — ordem do bloco fixo e do bloco variavel bloco_fixo: - regras_do_projeto - objetivo_da_tarefa - contrato_de_dados - exemplo_minimo bloco_variav"
+    },
+    {
+      "origem": "cap_14",
+      "secao": 4,
+      "linguagem": "markdown",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Certificado de Bancada — Painel de Pedidos - Versao auditada: v1.0 (lote de referencia 2026-09-14) - Ambiente: Python 3.11, banco local em arquivo, sem depend"
+    },
+    {
+      "origem": "cap_14",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Teste de reprodutibilidade: a mesma entrada produz a mesma saida?\"\"\" import json from pathlib import Path ENTRADA = [ {\"identificador\""
+    },
+    {
+      "origem": "cap_14",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Conferencia por amostra: selecao declarada e registro do que foi conferido.\"\"\" import json from pathlib import Path LOTES = [\"2026-09-"
+    },
+    {
+      "origem": "cap_15",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# adocao.yaml — plano de adocao da bancada etapas: - ordem: 1 escopo: conferencia de pedidos do dia portao: totais_conferem responsavel: operacao prazo: duas se"
+    },
+    {
+      "origem": "cap_15",
+      "secao": 4,
+      "linguagem": "markdown",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Cerca — modulo de exportacao (herdado) ## O que o modulo faz hoje - Le a tabela de pedidos do dia e gera arquivo de exportacao. - Exclui pedidos cancelados do"
+    },
+    {
+      "origem": "cap_15",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Painel de adocao: o metodo saiu da mao do autor?\"\"\" import json from pathlib import Path REGISTRO = { \"bloqueios_por_portao\": 3, \"deci"
+    },
+    {
+      "origem": "cap_16",
+      "secao": 4,
+      "linguagem": "yaml",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# portabilidade.yaml — contrato de portabilidade permanece: - dados/entrada e dados/estado - contrato.json (formato de entrada e saida) - portoes.yaml e verific"
+    },
+    {
+      "origem": "cap_16",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 \"\"\"Teste de portabilidade: o mesmo caso passa pelos portoes em dois provedores.\"\"\" import json from pathlib import Path CASO = [ {\"identi"
+    },
+    {
+      "origem": "cap_16",
+      "secao": 4,
+      "linguagem": "markdown",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "## Decisoes de risco - Dado pessoal: cliente entra no contexto apenas por identificador; nome e telefone ficam fora. - Decisao com efeito sobre pessoa: desconto"
+    }
+  ]
+}

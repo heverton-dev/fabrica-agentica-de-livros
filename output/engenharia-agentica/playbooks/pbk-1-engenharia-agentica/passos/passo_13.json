@@ -1,0 +1,53 @@
+{
+  "numero": "13",
+  "capitulo_fonte": "13",
+  "titulo": "Roteamento inteligente de LLM: o modelo certo por turno",
+  "estagio": "Instrumento",
+  "estagio_indice": 4,
+  "objetivo": "Escolher modelo por tarefa em vez de por hábito, com critério econômico explícito.",
+  "pre_requisito": "Passo 12 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: escreva a matriz de roteamento como configuração",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "roteamento:\n  extracao-campos:\n    modelo: pequeno\n    verificacao: \"schema json obrigatorio\"\n  classificacao:\n    modelo: pequeno\n    verificacao: \"categoria pertence ao enum\"\n  resumo-curto:\n    modelo: pequeno\n    verificacao: \"limite de palavras + presenca de 3 entidades citadas\"\n  parecer-tecnico:\n    modelo: medio\n    verificacao: \"secoes obrigatorias + citacao de caminho:linha\"\n  escrita-longa:\n    modelo: grande\n    verificacao: \"estrutura + consistencia entre secoes\"\n  depuracao-multi-passo:\n    modelo: grande\n    verificacao: \"teste que falhava agora passa\"\n  decidir-arquitetura:\n    modelo: grande\n    verificacao: \"revisao humana obrigatoria\"\ncusto_maximo_por_tarefa_usd: 2.50"
+    },
+    {
+      "titulo": "Passo 2: implemente a cascata com escalonamento",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "DEGRAUS = [\"pequeno\", \"medio\", \"grande\"]\nMAX_TENTATIVAS = 2\n\n\ndef executar_com_cascata(tarefa, executar_modelo, verificar):\n    \"\"\"Tenta do mais barato ao mais caro, escalando apenas quando a verificacao falha.\"\"\"\n    inicio = DEGRAUS.index(tarefa.get(\"modelo_inicial\", \"pequeno\"))\n    historico = []\n    for tentativa in range(MAX_TENTATIVAS):\n        degrau = min(inicio + tentativa, len(DEGRAUS) - 1)\n        modelo = DEGRAUS[degrau]\n        saida = executar_modelo(modelo, tarefa)\n        veredito = verificar(tarefa, saida)\n        historico.append({\"modelo\": modelo, \"aprovado\": veredito[\"aprovado\"],\n                          \"motivo\": veredito.get(\"motivo\", \"\")})\n        if veredito[\"aprovado\"]:\n            return {\"saida\": saida, \"modelo_final\": modelo, \"historico\": historico}\n    return {\"saida\": None, \"modelo_final\": None, \"historico\": historico,\n            \"escalar_humano\": True}"
+    },
+    {
+      "titulo": "Passo 3: meça custo por resultado aceito",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "PRECOS = {\"pequeno\": 0.6, \"medio\": 3.0, \"grande\": 15.0}  # por milhão de tokens de saida\n\n\ndef custo_por_aceito(execucoes):\n    \"\"\"Custo medio por tarefa que passou na verificacao.\"\"\"\n    aceitas = [e for e in execucoes if e[\"aprovado\"]]\n    gasto_total = sum(e[\"custo\"] for e in execucoes)\n    return {\n        \"tarefas\": len(execucoes),\n        \"aceitas\": len(aceitas),\n        \"taxa_aceitacao\": round(len(aceitas) / len(execucoes), 3) if execucoes else 0.0,\n        \"gasto_total\": round(gasto_total, 4),\n        \"custo_por_aceita\": round(gasto_total / len(aceitas), 4) if aceitas else None,\n        \"tentativas_medias\": round(sum(e[\"tentativas\"] for e in execucoes) / len(execucoes), 2),\n    }"
+    },
+    {
+      "titulo": "Passo 4: valide o roteador antes de confiar nele",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"conjunto_avaliacao\": [\n    { \"tarefa\": \"extracao-campos\", \"entrada\": \"exemplo_01.json\", \"esperado\": \"schema valido\" },\n    { \"tarefa\": \"classificacao\", \"entrada\": \"ticket_07.txt\", \"esperado\": \"categoria=entrega\" },\n    { \"tarefa\": \"depuracao-multi-passo\", \"entrada\": \"bug_1042.md\", \"esperado\": \"teste passa\" }\n  ],\n  \"criterio_aprovacao\": {\n    \"taxa_minima_aceitacao\": 0.9,\n    \"custo_maximo_por_aceita_usd\": 0.35\n  }\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Determinístico antes de semântico.** Regra auditável só é substituída por classificador depois de evidência",
+    "Piso mínimo sempre.** Nenhuma economia justifica rotear tarefa de julgamento para baixo do piso",
+    "Fallback deixa marca.** Artefato produzido em degradação carrega o registro da degradação",
+    "Roteador promovido sem avaliação.** Sem conjunto de casos conhecidos, a economia medida no primeiro dia vira custo de revisão no segundo",
+    "Tarefa de julgamento roteada para baixo.** O resultado passa nos gates de forma e falha no mérito — a pior combinação possível, porque a falha não gera alarme",
+    "Fallback silencioso.** Quando o modelo escolhido não responde, a degradação precisa deixar marca no artefato. Sem marca, a revisão não sabe onde olhar"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 13 — Roteamento inteligente de LLM: o modelo certo por turno",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

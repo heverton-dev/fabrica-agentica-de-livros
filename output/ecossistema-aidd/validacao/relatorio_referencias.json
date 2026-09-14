@@ -1,0 +1,169 @@
+{
+  "slug": "ecossistema-aidd",
+  "total_referencias": 22,
+  "resumo": {
+    "ok": 15,
+    "nao_verificado": 7
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.computer.org/publications/ieee-software/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/postmortem-culture/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.jstor.org/stable/i40193390",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/testing-releases/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/testing-releases/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/postmortem-culture/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/testing-releases/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/testing-releases/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/testing-releases/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/continuousIntegration.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://sre.google/sre-book/testing-releases/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

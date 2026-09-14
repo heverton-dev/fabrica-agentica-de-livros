@@ -1,0 +1,26 @@
+{
+  "dossies": [],
+  "por_dossie": [],
+  "classes": {
+    "A": 0,
+    "B": 0,
+    "C": 0
+  },
+  "linhas_fonte_total": 0,
+  "classificadas": 0,
+  "proporcao_ab": null,
+  "status": "nao_verificado",
+  "violacoes": [
+    {
+      "regra": "R-FT-2",
+      "enunciado": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+      "detalhe": "nenhuma fonte com classificação (A)/(B)/(C) no dossiê — reclassificar com a skill pesquisador V5.3"
+    }
+  ],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "livros/devops"
+}

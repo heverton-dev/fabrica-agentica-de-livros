@@ -1,0 +1,41 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 5 — design e edição de imagem: a oficina já produz arte; agora vamos produzir vídeo e guardar tudo na própria prateleira",
+  "metricas_obrigatorias": [
+    { "metrica": "requisitos reais de hardware de edição de vídeo open source (Shotcut/Kdenlive)", "valor": "4-16 GB de RAM, GPU com OpenGL 2.0, Windows 10 64-bit ou Linux" },
+    { "metrica": "limites técnicos da versão gratuita do DaVinci Resolve frente à Studio paga", "valor": "free cobre até UHD 60fps sem marca d'água; Studio adiciona DCI 4K/6K/8K, IA, multi-GPU e HDR" },
+    { "metrica": "mínimo prático de memória do Nextcloud self-hosted", "valor": "2-4 GB de RAM para uso doméstico, 8 GB+ para equipes" },
+    { "metrica": "requisito mínimo da edição comunitária do Seafile", "valor": "2 núcleos de CPU e 2 GB de RAM" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Edição de vídeo real: Shotcut e Kdenlive — e por que o DaVinci Resolve é grátis, mas não é open source",
+        "escopo": "Entra: o que é edição não linear (timeline), o MLT Framework como motor comum de Shotcut/Kdenlive, requisitos de hardware honestos, os limites documentados de instabilidade em timelines longas. Fica de fora: análise jurídica de licenças e fluxos de correção de cor profissional de estádio.",
+        "ancora_visual": "flowchart LR do caminho do arquivo de vídeo desde o cartão de memória até a prateleira de armazenamento, passando pela bancada de montagem (Shotcut/Kdenlive) e pelo poste de decisão que separa edição simples da ilha pesada (DaVinci Resolve rotulado como aluguel gratuito, não posse)",
+        "entrega_tecnica": "yaml + console: instalação de Shotcut/Kdenlive no Linux (apt/flatpak) e da versão portable no Windows, mais sessão de verificação de hardware (lscpu/glxinfo) antes de instalar",
+        "evolucao_leitor": "De 'editar vídeo exige Premiere' para 'entendo que a edição é uma bancada de montagem com peças livres, e sei distinguir a ferramenta gratuita que é realmente sua da gratuita que é vitrine de outra loja'",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Nextcloud como sua própria nuvem: sincronização, compartilhamento e o que ele não substitui do Drive/Dropbox",
+        "escopo": "Entra: o modelo de sincronização com clientes em todas as plataformas, compartilhamento por link, controle de acesso, requisitos reais de infra (2-4GB doméstico, 8GB+ equipes), limitação de criptografia ponta-a-ponta. Fica de fora: hardening avançado de servidor e federação entre instâncias.",
+        "ancora_visual": "flowchart TB da estante de armazenamento: notebook, celular e PC da bancada sincronizando com o Nextcloud como estante central, com ramo separado mostrando que a cópia no disco externo de backup é a única coisa que sobrevive a um desastre",
+        "entrega_tecnica": "yaml: docker-compose.yml completo de Nextcloud + banco + volume persistente, mais console com os comandos occ de instalação e manutenção pós-deploy",
+        "evolucao_leitor": "De 'minha nuvem é a conta do Google' para 'minha nuvem é uma estante na minha oficina, com chave minha — e sei que estante e backup são mobílias diferentes'",
+        "conceito_denso": false
+      },
+      {
+        "nome": "O orçamento oculto: armazenamento, backup e banda que a assinatura escondia dentro da mensalidade",
+        "escopo": "Entra: a matemática real da troca — capacidade de disco, redundância (regra 3-2-1), banda de upload assimétrica de conexões domésticas, custo mensal de VPS, e o caso Seafile (2 núcleos/2GB RAM) e Syncthing (P2P, sem servidor central, e por que ele não é backup). Fica de fora: precificação detalhada de provedores de VPS específicos além de menções de ordem de grandeza.",
+        "ancora_visual": "flowchart LR da conta mensal: o que a mensalidade do Drive/Dropbox cobria silenciosamente (disco, replicação, banda e peças de reposição) destrinchado em três etiquetas de custo separadas na nova oficina",
+        "entrega_tecnica": "bash: script de backup automatizado com restic para a prateleira externa, com comentário por linha explicando a regra 3-2-1 na prática",
+        "evolucao_leitor": "De 'troquei a assinatura e acabei' para 'entendi que a mensalidade comprava infraestrutura — e agora essa infraestrutura é uma lista de itens que eu mesmo devo montar, medir e manter'",
+        "conceito_denso": false
+      }
+    ]
+  },
+  "observacao_editorial": "RESSALVA FACTUAL OBRIGATÓRIA: o DaVinci Resolve NÃO é open source — é software proprietário/freemium da Blackmagic Design, sem repositório de código aberto, e a versão gratuita impõe tetos técnicos (sem IA, sem DCI 4K/6K/8K, sem multi-GPU, sem HDR) para empurrar à Studio paga; deve ser apresentado no capítulo com essa ressalva explícita e rotulado como 'gratuito, mas alugado', nunca como open source. Mesma ressalva vale para o EmailEngine (capítulo 2): source-available comercial, trial de 14 dias, não é FOSS. Ambas as menções devem aparecer no corpo do texto, não só em nota."
+}

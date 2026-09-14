@@ -1,0 +1,1049 @@
+{
+  "slug": "livros/deepseek-harness-do-zero-ao-phd",
+  "tipo_obra": "livro",
+  "veredito": "CONFORME",
+  "total_capitulos": 16,
+  "caracteres_obra": 400006,
+  "paginas_estimadas": 160.0,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 16 capitulos",
+      "conforme": true,
+      "detalhe": "16 capitulo(s) (minimo 16)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 160 paginas (~400.000 caracteres)",
+      "conforme": true,
+      "detalhe": "400.006 caracteres (minimo 400.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 20 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": true,
+      "detalhe": "capitulos sem artefato: nenhum (estilo_tecnica=hibrido)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": true,
+      "detalhe": "capitulos suspeitos: nenhum"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "plugin",
+      "variantes": {
+        "plugin": 163,
+        "Plugin": 86,
+        "Plug-In": 3,
+        "plug-in": 1
+      },
+      "ocorrencias": 253
+    },
+    {
+      "termo_normalizado": "producao",
+      "variantes": {
+        "produção": 66,
+        "Produção": 8,
+        "Producao": 1
+      },
+      "ocorrencias": 75
+    },
+    {
+      "termo_normalizado": "sessoes",
+      "variantes": {
+        "sessões": 57,
+        "Sessões": 15,
+        "Sessoes": 1
+      },
+      "ocorrencias": 73
+    },
+    {
+      "termo_normalizado": "porque",
+      "variantes": {
+        "porque": 69,
+        "porquê": 3
+      },
+      "ocorrencias": 72
+    },
+    {
+      "termo_normalizado": "tres",
+      "variantes": {
+        "três": 47,
+        "Três": 3,
+        "Tres": 1
+      },
+      "ocorrencias": 51
+    },
+    {
+      "termo_normalizado": "configuracao",
+      "variantes": {
+        "configuração": 43,
+        "Configuração": 6,
+        "Configuracao": 1
+      },
+      "ocorrencias": 50
+    },
+    {
+      "termo_normalizado": "memoria",
+      "variantes": {
+        "memória": 40,
+        "Memória": 4,
+        "Memoria": 2
+      },
+      "ocorrencias": 46
+    },
+    {
+      "termo_normalizado": "instalacao",
+      "variantes": {
+        "instalação": 36,
+        "Instalação": 9,
+        "Instalacao": 1
+      },
+      "ocorrencias": 46
+    },
+    {
+      "termo_normalizado": "servico",
+      "variantes": {
+        "serviço": 40,
+        "Serviço": 1,
+        "servico": 1
+      },
+      "ocorrencias": 42
+    },
+    {
+      "termo_normalizado": "finetuning",
+      "variantes": {
+        "fine-tuning": 27,
+        "Fine-Tuning": 11,
+        "Fine-tuning": 2,
+        "Finetuning": 1
+      },
+      "ocorrencias": 41
+    },
+    {
+      "termo_normalizado": "seguranca",
+      "variantes": {
+        "segurança": 31,
+        "Segurança": 3,
+        "Seguranca": 1
+      },
+      "ocorrencias": 35
+    },
+    {
+      "termo_normalizado": "inferencia",
+      "variantes": {
+        "inferência": 24,
+        "Inferencia": 1,
+        "Inferência": 1
+      },
+      "ocorrencias": 26
+    },
+    {
+      "termo_normalizado": "pecas",
+      "variantes": {
+        "peças": 23,
+        "Peças": 1,
+        "Pecas": 1
+      },
+      "ocorrencias": 25
+    },
+    {
+      "termo_normalizado": "acoes",
+      "variantes": {
+        "ações": 20,
+        "Acoes": 2
+      },
+      "ocorrencias": 22
+    },
+    {
+      "termo_normalizado": "continua",
+      "variantes": {
+        "continua": 14,
+        "contínua": 4,
+        "Contínua": 1
+      },
+      "ocorrencias": 19
+    },
+    {
+      "termo_normalizado": "mantem",
+      "variantes": {
+        "mantém": 15,
+        "mantêm": 2,
+        "Mantêm": 1,
+        "Mantém": 1
+      },
+      "ocorrencias": 19
+    },
+    {
+      "termo_normalizado": "copia",
+      "variantes": {
+        "cópia": 10,
+        "copia": 2,
+        "Cópia": 1
+      },
+      "ocorrencias": 13
+    },
+    {
+      "termo_normalizado": "operacao",
+      "variantes": {
+        "operação": 11,
+        "Operacao": 1
+      },
+      "ocorrencias": 12
+    },
+    {
+      "termo_normalizado": "aquele",
+      "variantes": {
+        "aquele": 10,
+        "àquele": 1
+      },
+      "ocorrencias": 11
+    },
+    {
+      "termo_normalizado": "runtime",
+      "variantes": {
+        "Runtime": 5,
+        "runtime": 4,
+        "Run-Time": 1
+      },
+      "ocorrencias": 10
+    },
+    {
+      "termo_normalizado": "referencia",
+      "variantes": {
+        "referência": 4,
+        "referencia": 2,
+        "REFERÊNCIA": 1
+      },
+      "ocorrencias": 7
+    },
+    {
+      "termo_normalizado": "aquela",
+      "variantes": {
+        "aquela": 5,
+        "àquela": 1
+      },
+      "ocorrencias": 6
+    },
+    {
+      "termo_normalizado": "pagina",
+      "variantes": {
+        "página": 4,
+        "pagina": 2
+      },
+      "ocorrencias": 6
+    },
+    {
+      "termo_normalizado": "selfhosted",
+      "variantes": {
+        "self-hosted": 3,
+        "selfhosted": 2
+      },
+      "ocorrencias": 5
+    },
+    {
+      "termo_normalizado": "reexecutar",
+      "variantes": {
+        "reexecutar": 4,
+        "Re-executar": 1
+      },
+      "ocorrencias": 5
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": true,
+    "vocabulario_motivo_condutor": [
+      "kit de pecas",
+      "montagem",
+      "estacao de trabalho",
+      "calibracao",
+      "linha de montagem",
+      "testes de bancada",
+      "oficina",
+      "engrenagem",
+      "pilha",
+      "deploy"
+    ],
+    "capitulos_com_citacao_empilhada": [
+      {
+        "capitulo": "13",
+        "ocorrencias": [
+          "[4][23]",
+          "[21][22][24][25]",
+          "[21][6][8]",
+          "[3][24]",
+          "[6][9]",
+          "[27][28]",
+          "[4][11]"
+        ]
+      },
+      {
+        "capitulo": "14",
+        "ocorrencias": [
+          "[2][4]",
+          "[1][3]",
+          "[1][3]",
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "15",
+        "ocorrencias": [
+          "[1][3]",
+          "[3][4]",
+          "[3][4]"
+        ]
+      }
+    ],
+    "capitulos_sem_recorrencia_motivo_condutor": [
+      "5",
+      "7",
+      "12",
+      "14"
+    ],
+    "capitulos_sem_callback_capitulo_anterior": [],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 0
+    },
+    "validar-escala.py": {
+      "exit": 0
+    },
+    "validar-afirmacoes.py": {
+      "exit": 0
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "1",
+      "arquivo": "cap_1.md",
+      "caracteres": 39655,
+      "palavras": 5667,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 32,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "n Hub for DeepSeek Harness*. Disponível em: https://composio.dev. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 27.5,
+        "coeficiente_variacao": 1.106
+      }
+    },
+    {
+      "capitulo": "2",
+      "arquivo": "cap_2.md",
+      "caracteres": 31672,
+      "palavras": 3887,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 21,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 9,
+      "artefatos_tecnica": 9,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "i/skypage/en/deepseek-local-deployment-guide/2047582806721294336. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 10,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 25.7,
+        "coeficiente_variacao": 1.08
+      }
+    },
+    {
+      "capitulo": "3",
+      "arquivo": "cap_3.md",
+      "caracteres": 30458,
+      "palavras": 4081,
+      "secoes_faltantes": [],
+      "referencias": 29,
+      "citacoes_inline": 30,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 7,
+      "artefatos_tecnica": 7,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "niversity). 2024. Disponível em: http://arxiv.org/abs/2410.03613. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 11,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.0,
+        "coeficiente_variacao": 1.048
+      }
+    },
+    {
+      "capitulo": "4",
+      "arquivo": "cap_4.md",
+      "caracteres": 29290,
+      "palavras": 3789,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 20,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "vel em: https://github.com/huggingface/text-generation-inference. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 6,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 28.2,
+        "coeficiente_variacao": 1.233
+      }
+    },
+    {
+      "capitulo": "5",
+      "arquivo": "cap_5.md",
+      "caracteres": 26892,
+      "palavras": 3186,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 22,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 7,
+      "artefatos_tecnica": 7,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "adigm*. Disponível em: https://m.youtube.com/watch?v=Qjv8jdh4g38. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 25.1,
+        "coeficiente_variacao": 1.001
+      }
+    },
+    {
+      "capitulo": "6",
+      "arquivo": "cap_6.md",
+      "caracteres": 27754,
+      "palavras": 3241,
+      "secoes_faltantes": [],
+      "referencias": 21,
+      "citacoes_inline": 18,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 2,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": ". Disponível em: https://github.com/deepseek-ai/deepseek-harness. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 3,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.9,
+        "coeficiente_variacao": 1.233
+      }
+    },
+    {
+      "capitulo": "7",
+      "arquivo": "cap_7.md",
+      "caracteres": 24708,
+      "palavras": 3009,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 18,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": " Plugin*. Disponível em: https://springbrand.ai/deepseek-harness. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.8,
+        "coeficiente_variacao": 0.978
+      }
+    },
+    {
+      "capitulo": "8",
+      "arquivo": "cap_8.md",
+      "caracteres": 23904,
+      "palavras": 2890,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 11,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ned*. Disponível em: https://www.youtube.com/watch?v=24UCnAs7MVg. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 26.8,
+        "coeficiente_variacao": 1.174
+      }
+    },
+    {
+      "capitulo": "9",
+      "arquivo": "cap_9.md",
+      "caracteres": 23738,
+      "palavras": 2668,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 12,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "Disponível em: https://deepseekharnessai.com/categories/security. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 6,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.3,
+        "coeficiente_variacao": 0.784
+      }
+    },
+    {
+      "capitulo": "10",
+      "arquivo": "cap_10.md",
+      "caracteres": 22088,
+      "palavras": 2476,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 9,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 7,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.1,
+        "coeficiente_variacao": 0.95
+      }
+    },
+    {
+      "capitulo": "11",
+      "arquivo": "cap_11.md",
+      "caracteres": 20998,
+      "palavras": 2516,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 8,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "sponível em: https://github.com/0xsline/awesome-deepseek-harness. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 17,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.5,
+        "coeficiente_variacao": 1.034
+      }
+    },
+    {
+      "capitulo": "12",
+      "arquivo": "cap_12.md",
+      "caracteres": 21108,
+      "palavras": 2573,
+      "secoes_faltantes": [],
+      "referencias": 25,
+      "citacoes_inline": 14,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "niversity). 2023. Disponível em: http://arxiv.org/abs/2312.10997. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.5,
+        "coeficiente_variacao": 1.036
+      }
+    },
+    {
+      "capitulo": "13",
+      "arquivo": "cap_13.md",
+      "caracteres": 21469,
+      "palavras": 2569,
+      "secoes_faltantes": [],
+      "referencias": 28,
+      "citacoes_inline": 35,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 7,
+      "artefatos_tecnica": 7,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "ion\"*. 2025. Disponível em: https://doi.org/10.2139/ssrn.5044207. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[4][23]",
+        "[21][22][24][25]",
+        "[21][6][8]",
+        "[3][24]",
+        "[6][9]",
+        "[27][28]",
+        "[4][11]"
+      ],
+      "vocabulario_fora_ilustra": 2,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 22.6,
+        "coeficiente_variacao": 1.395
+      }
+    },
+    {
+      "capitulo": "14",
+      "arquivo": "cap_14.md",
+      "caracteres": 17606,
+      "palavras": 2102,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 24,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 5,
+      "artefatos_tecnica": 5,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "harness-when-the-agent-loop-itself-becomes-a-plugin-7fad0aa9de1c. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[2][4]",
+        "[1][3]",
+        "[1][3]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": 0,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.7,
+        "coeficiente_variacao": 0.949
+      }
+    },
+    {
+      "capitulo": "15",
+      "arquivo": "cap_15.md",
+      "caracteres": 18535,
+      "palavras": 2110,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 20,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 8,
+      "artefatos_tecnica": 8,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "sponível em: https://github.com/0xsline/awesome-deepseek-harness. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][3]",
+        "[3][4]",
+        "[3][4]"
+      ],
+      "vocabulario_fora_ilustra": 7,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.6,
+        "coeficiente_variacao": 0.969
+      }
+    },
+    {
+      "capitulo": "16",
+      "arquivo": "cap_16.md",
+      "caracteres": 20131,
+      "palavras": 2599,
+      "secoes_faltantes": [],
+      "referencias": 20,
+      "citacoes_inline": 8,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 6,
+      "artefatos_tecnica": 6,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "vening-in-the-deepseek-harness-activity-7493848102076882944-GGXB. Acesso em: 23 ago. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [],
+      "vocabulario_fora_ilustra": 20,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.4,
+        "coeficiente_variacao": 1.157
+      }
+    }
+  ]
+}

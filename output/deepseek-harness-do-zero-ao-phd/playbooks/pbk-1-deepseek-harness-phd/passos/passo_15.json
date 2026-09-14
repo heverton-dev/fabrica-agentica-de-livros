@@ -1,0 +1,45 @@
+{
+  "numero": "15",
+  "capitulo_fonte": "15",
+  "titulo": "Profiles e Configuracao Avancada: Afinando a Oficina",
+  "estagio": "Calibracao",
+  "estagio_indice": 4,
+  "objetivo": "Criar profiles personalizados e otimizar o harness.",
+  "pre_requisito": "Passo 14 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Criando Profiles",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Criar profile de coding\nmkdir -p ~/.dsh/profiles\ncat > ~/.dsh/profiles/coding.yaml << 'EOF'\nname: coding\ndescription: \"Profile para desenvolvimento de software\"\nconfig:\n  model: \"deepseek-v4:14b\"\n  mode: \"standard\"\n  tools:\n    - \"filesystem\"\n    - \"shell\"\n    - \"web-search\"\n  sandbox:\n    worktree: true\n    filesystem:\n      write: [\"./src/**\", \"./tests/**\"]\n      deny: [\"./.git/**\", \"./.env\"]\n  session:\n    auto-save: 5\n    max-turns: 100\nEOF\n\n# Criar profile de research\ncat > ~/.dsh/profiles/research.yaml << 'EOF'\nname: research\ndescription: \"Profile para pesquisa e análise\"\nconfig:\n  model: \"deepseek-r1:32b\"\n  mode: \"standard\"\n  tools:\n    - \"filesystem\"\n    - \"web-search\"\n  sandbox:\n    worktree: false\n    filesystem:\n      read: [\"./docs/**\", \"./research/**\"]\n      write: [\"./output/**\"]\n  session:\n    auto-save: 10\n    max-turns: 200\nEOF"
+    },
+    {
+      "titulo": "Usando Profiles",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Iniciar com profile específico\ndsh --profile coding\ndsh --profile research\n\n# Listar profiles disponíveis\ndsh profiles list\n\n# Verificar configuração ativa\ndsh config show"
+    },
+    {
+      "titulo": "Otimização de Performance",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# ~/.dsh/config.yaml — otimizações\nperformance:\n  # Cache de respostas\n  cache:\n    enabled: true\n    max-size: \"1GB\"\n    ttl: \"24h\"\n  \n  # Limites de contexto\n  context:\n    max-tokens: 8192\n    compress-threshold: 0.8  # Comprimir quando 80% cheio\n  \n  # RTK (memória de longo prazo)\n  rtk:\n    enabled: true\n    storage: \"~/.dsh/rtk/\"\n    max-entries: 1000"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Um profile por caso de uso** — não tente fazer um profile \"serve para tudo\"",
+    "Teste cada profile** antes de usar em produção",
+    "Documente** o que cada profile faz",
+    "Versione** seus profiles no Git"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 15 — Profiles e Configuracao Avancada: Afinando a Oficina",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

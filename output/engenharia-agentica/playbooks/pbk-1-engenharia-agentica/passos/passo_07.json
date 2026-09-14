@@ -1,0 +1,52 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Economia severa de tokens: as configurações reais",
+  "estagio": "Painel",
+  "estagio_indice": 2,
+  "objetivo": "Entregar o conjunto concreto de configurações e protocolos que cortam consumo sem cortar qualidade.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [
+    "AGENTS.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "Configuração 2: teto e compressão em toda ferramenta",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "LIMITE_SAIDA_PADRAO = 200\n\n\ndef teto(texto, primeiras=3, ultimas=4, limite=LIMITE_SAIDA_PADRAO):\n    linhas = texto.splitlines()\n    if len(linhas) <= limite:\n        return texto\n    omitidas = len(linhas) - primeiras - ultimas\n    return \"\\n\".join(linhas[:primeiras] + [f\"... [{omitidas} linhas omitidas] ...\"] + linhas[-ultimas:])"
+    },
+    {
+      "titulo": "Configuração 3: orçamento de saída por fase",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "orcamento_por_fase:\n  descoberta:\n    tokens_saida_alvo: 800\n    regra: \"listar achados, sem explicar\"\n  geracao:\n    tokens_saida_alvo: 6000\n    regra: \"conteudo real; nada de preambulo\"\n  verificacao:\n    tokens_saida_alvo: 300\n    regra: \"apenas veredito e localizacao de falhas\"\n  relato:\n    tokens_saida_alvo: 500\n    regra: \"telegrafico: caminho, numero, veredito\"\nteto_de_turnos_por_tarefa: 25"
+    },
+    {
+      "titulo": "Configuração 5: limpeza de resultado de ferramenta já consumido",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"politica_resultado_ferramenta\": {\n    \"apos_consumo\": \"substituir por resumo de 1 linha\",\n    \"exemplo\": \"[resultado de run_tests: 34 passaram, 0 falharam]\",\n    \"excecao\": \"se o agente declarar que precisara reusar, manter integral\"\n  }\n}"
+    },
+    {
+      "titulo": "Configuração 6: delegação comprimida",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "subagente:\n  papel: \"investigador\"\n  entrada: \"pergunta objetiva\"\n  saida_maxima_tokens: 250\n  formato_saida: \"lista de achados com caminho:linha\"\n  proibido: \"colar trechos de codigo; apenas referenciar\""
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Painel de quatro números.** Monte a planilha mínima por sessão — tokens de entrada, tokens de saída, chamadas de ferramenta e turnos até a primeira edição correta. Sem ela, toda otimização é palpite",
+    "Atribuição por origem.** Classifique o consumo da última sessão por origem — instrução, resultado de ferramenta, histórico, saída de modelo — e identifique a maior torneira aberta",
+    "Tesoura de boilerplate.** Encontre uma instrução duplicada em dois arquivos, escolha um dono e transforme o outro em ponteiro. Meça a diferença na leitura média por turno",
+    "Teto honesto.** Defina um teto por tarefa que, ao ser atingido, persiste o estado e devolve o controle ao operador com resumo — nunca deixa o repositório em estado ambíguo"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 7 — Economia severa de tokens: as configurações reais",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

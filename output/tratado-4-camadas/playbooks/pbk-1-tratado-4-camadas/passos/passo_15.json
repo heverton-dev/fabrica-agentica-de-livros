@@ -1,0 +1,33 @@
+{
+  "numero": "15",
+  "capitulo_fonte": "15",
+  "titulo": "Contratos Tipados e Registro Declarativo",
+  "estagio": "Roteador cognitivo",
+  "estagio_indice": 4,
+  "objetivo": "Ensinar JSON Schemas e registro declarativo de tipos.",
+  "pre_requisito": "Passo 14 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Exemplo Prático de Contrato Tipado em Python com Pydantic",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# contrato_tipado.py — Exemplo de Structured Output com Pydantic\nfrom pydantic import BaseModel, Field\nfrom typing import List, Literal\n\n# 1. Definição do Contrato Formal\nclass ItemRelatorio(BaseModel):\n    modulo: str = Field(description=\"Nome do módulo auditado\")\n    status: Literal[\"aprovado\", \"reprovado\", \"alerta\"] = Field(description=\"Estado de conformidade\")\n    erros_encontrados: int = Field(default=0, ge=0, description=\"Quantidade de bugs detectados\")\n    recomendacao: str = Field(description=\"Ação técnica recomendada\")\n\nclass RelatorioAuditoria(BaseModel):\n    projeto: str\n    versao: str\n    total_modulos: int\n    itens: List[ItemRelatorio]\n\n# 2. Exibição do JSON Schema gerado automaticamente\nif __name__ == \"__main__\":\n    print(\"=== JSON SCHEMA DO CONTRATO DE AUDITORIA ===\")\n    print(RelatorioAuditoria.schema_json(indent=2))"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Defina um JSON Schema para cadastrar um livro com `titulo` (texto), `paginas` (inteiro) e `categoria` (apenas \"tecnologia\", \"ficção\" ou \"negócios\")",
+    "Execute `python contrato_tipado.py` e observe o schema matemático gerado pela biblioteca Pydantic",
+    "Teste a validação: envie um JSON com campo inválido (ex: `paginas` como texto) e confirme que o Pydantic rejeita",
+    "Crie um contrato tipado para uma resposta de API sua e verifique que o modelo devolve exatamente a estrutura esperada"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 15 — Contratos Tipados e Registro Declarativo",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

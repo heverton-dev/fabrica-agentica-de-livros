@@ -1,0 +1,59 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "O agente não é o modelo: anatomia de um harness",
+  "estagio": "Cabine",
+  "estagio_indice": 1,
+  "objetivo": "Desmontar a confusão entre modelo e agente, mostrando o harness como o conjunto de peças que dá memória, ferramentas e política a um LLM stateless.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [
+    "AGENTS.md"
+  ],
+  "execucao": [
+    {
+      "titulo": "Passo 2: declare ferramentas estreitas",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"name\": \"run_tests\",\n  \"description\": \"Executa a suite de testes do projeto e devolve o resumo. Nao aceita argumentos arbitrarios.\",\n  \"input_schema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"modulo\": { \"type\": \"string\", \"description\": \"opcional: caminho do teste\" }\n    },\n    \"additionalProperties\": false\n  }\n}"
+    },
+    {
+      "titulo": "Passo 3: defina a política antes de sentir dor",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"permissions\": {\n    \"allow\": [\"Bash(python -m pytest*)\", \"Bash(git diff*)\", \"Read(**)\"],\n    \"deny\": [\"Bash(git push*)\", \"Bash(rm -rf*)\", \"Bash(curl*)\"]\n  },\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"matcher\": \"Bash\",\n        \"hooks\": [\n          { \"type\": \"command\", \"command\": \"python scripts/guard-comandos.py\" }\n        ]\n      }\n    ]\n  }\n}"
+    },
+    {
+      "titulo": "Passo 5: aplique o teste do desmonte",
+      "linguagem": "console",
+      "comandos": [
+        "python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo forte",
+        "python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo fraco"
+      ],
+      "codigo": "$ python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo forte\ntarefa............: corrigir-bug-1042\nturnos............: 14\ntokens_entrada....: 312.480\ntokens_saida......: 18.204\ncusto_estimado....: 4.81\ntestes............: 34 passaram, 0 falharam\n$ python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo fraco\ntarefa............: corrigir-bug-1042\nturnos............: 21\ntokens_entrada....: 298.117\ntokens_saida......: 24.900\ncusto_estimado....: 0.94\ntestes............: 34 passaram, 0 falharam"
+    },
+    {
+      "titulo": "Passo 6: inventarie o harness que você já tem",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Inventaria artefatos de harness presentes no repositorio.\"\"\"\nfrom pathlib import Path\n\nALVOS = [\n    (\"instrucao persistente\", [\"AGENTS.md\", \"CLAUDE.md\", \"CONTRIBUTING.md\"]),\n    (\"regras condicionais\", [\".cursor/rules\", \".agent/rules\"]),\n    (\"configuracao\", [\".agent/settings.json\", \".mcp.json\", \"opencode.json\"]),\n    (\"capacidades\", [\".claude/skills\", \".claude/agents\", \".claude/commands\"]),\n    (\"hooks\", [\"scripts/hooks\", \".git/hooks/pre-commit\"]),\n    (\"gates\", [\"scripts/gate_1_eita_structure.py\", \"tests\"]),\n]\n\n\ndef inventariar(raiz=\".\"):\n    base = Path(raiz)\n    linhas = []\n    for categoria, candidatos in ALVOS:\n        encontrados = [c for c in candidatos if (base / c).exists()]\n        linhas.append({\n            \"categoria\": categoria,\n            \"presentes\": encontrados,\n            \"cobertura\": f\"{len(encontrados)}/{len(candidatos)}\",\n        })\n    return linhas\n\n\nif __name__ == \"__main__\":\n    for linha in inventariar():\n        print(f\"{linha['categoria']:<22} {linha['cobertura']:<6} {', '.join(linha['presentes']) or '-'}\")"
+    }
+  ],
+  "gate": "python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo forte",
+  "comandos": [
+    "python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo forte",
+    "python scripts/medir-turno.py --tarefa corrigir-bug-1042 --modelo fraco"
+  ],
+  "feito_quando": [
+    "Separe motor de cabine.** Ao avaliar uma falha, pergunte primeiro qual instrumento faltava",
+    "Meça antes de trocar.** Trocar de modelo sem indicador é trocar peça por intuição",
+    "A cabine é do projeto.** Configuração que só existe na sua máquina não é arquitetura",
+    "Atribuir ao modelo um problema de instrumento.** Quando o agente não encontra o arquivo certo, a hipótese mais provável é busca mal configurada, não falta de capacidade do motor. Verifique o instrumento antes de trocar a peça maior",
+    "Descrever o harness sem medir.** Listar agentes, skills e servers é inventário; o que prova valor é indicador. Inventário bonito com resultado instável continua sendo sistema instável",
+    "Configurar para si e não para o time.** Um harness que só funciona na máquina de quem o montou não é arquitetura: é hábito pessoal. Versionar tudo o que define comportamento é a fronteira"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 1 — O agente não é o modelo: anatomia de um harness",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

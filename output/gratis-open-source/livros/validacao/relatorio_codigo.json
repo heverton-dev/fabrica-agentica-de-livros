@@ -1,0 +1,96 @@
+{
+  "slug": "gratis-open-source/livros",
+  "modo": "capitulos",
+  "executado": false,
+  "total_blocos": 7,
+  "resumo": {
+    "nao_aplicavel": 4,
+    "ok": 3
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "yaml": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    },
+    "console": {
+      "total": 2,
+      "ok": 0,
+      "falha": 0
+    },
+    "json": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    },
+    "bash": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 100.0,
+  "blocos": [
+    {
+      "origem": "cap_4",
+      "linha": 23,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 38,
+      "linguagem": "mermaid",
+      "linhas_codigo": 10,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 60,
+      "linguagem": "yaml",
+      "linhas_codigo": 37,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_4",
+      "linha": 103,
+      "linguagem": "console",
+      "linhas_codigo": 13,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 124,
+      "linguagem": "json",
+      "linhas_codigo": 60,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_4",
+      "linha": 190,
+      "linguagem": "console",
+      "linhas_codigo": 6,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 214,
+      "linguagem": "bash",
+      "linhas_codigo": 14,
+      "status": "ok",
+      "detalhe": ""
+    }
+  ]
+}

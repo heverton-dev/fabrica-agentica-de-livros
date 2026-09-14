@@ -1,0 +1,98 @@
+{
+  "slug_mae": "livros/tratado-4-camadas-v2",
+  "slug_playbook": "tratado-4-camadas-v2/playbooks/pbk-1-tratado-4-camadas",
+  "total_passos": 12,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "O Contexto Real de Origem: Do Projeto Arsenal ao Ecossistema AIDD",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "O Dicionário do Iniciante: Glossário Descomplicado",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "A Constituição Mestre: As 10 Leis Inegociáveis",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Visão Geral das 4 Camadas: A Arquitetura Completa",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Camada 1 — Contexto e Governança: Densidade, Localidade e Determinismo",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Camada 2 — Harness e Ciclo de Vida: Disjuntores, Worktrees e Quality Gates",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Camada 3 — Motor Cognitivo: Roteamento, Contratos Tipados e Economia de Tokens",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "09",
+      "titulo": "Camada 4 — Ferramentas, MCP e Persistência: A Usina Determinística",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "10",
+      "titulo": "Implementação e Réplica das 4 Camadas: O Manual de Montagem",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "11",
+      "titulo": "Orquestração Cross-Harness: Subagentes, Worktrees e o Protocolo ORCA ADE",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    },
+    {
+      "passo": "12",
+      "titulo": "Super-Auditoria e Entrega Soberana: O Certificado de Confiabilidade",
+      "lacunas": [
+        "sem_entregas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 0,
+    "com_gate": 12,
+    "com_feito_quando": 12,
+    "com_armadilhas": 12
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "titulo_obra": "ORCA ADE: O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+  "titulo_capa": "ORCA ADE",
+  "subtitulo": "O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+  "edition_tag": "v1.0 — Edição Completa e Ilustrada",
+  "tipo_obra": "livro",
+  "tamanho_obra": "GG",
+  "min_referencias_por_capitulo": 20,
+  "senioridade_obra": "iniciante",
+  "estilo_tecnica": "hibrido",
+  "motivo_condutor": {
+    "nome": "A Torre de Controle da Frota",
+    "descricao": "O leitor deixa de ser um único desenvolvedor digitando em um único checkout e assume o posto de operador de uma torre de controle: cada tarefa é um worktree isolado, cada worktree hospeda um agente, e cada agente é um veículo com estado observável, rádio próprio e diário de bordo. A obra ensina a montar essa torre, ler seus painéis, disparar e recolher veículos, e manter a frota voando sem sacrificar a revisão humana do que é entregue.",
+    "vocabulario": [
+      "torre de controle",
+      "frota de agentes",
+      "worktree como garagem isolada",
+      "painel de estado",
+      "linha de vida (heartbeat)",
+      "ordem de serviço (dispatch)",
+      "portão de decisão",
+      "diário de bordo da sessão",
+      "checkpoint de worktree",
+      "sala de revisão",
+      "procedência de linha",
+      "frota remota"
+    ],
+    "persona_leitor": "Operador de Frota Agêntica"
+  },
+  "introducao": "Apresentar a mudança de gargalo no desenvolvimento assistido por IA — da geração de código para a serialização do trabalho — e a proposta do Orca ADE como ambiente de desenvolvimento agêntico que transforma cada tarefa em um worktree isolado com agente próprio, sob revisão humana obrigatória.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos — Por Que Um Agente Só Não Basta",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "A Crise do Trabalho Serial: O Gargalo Mudou de Lugar",
+          "objetivo": "Estabelecer o problema que dá origem ao ADE: quando a geração de código deixa de ser o gargalo, o trabalho serial — um agente, um checkout, uma fila — passa a ser o limite real da entrega.",
+          "pilares_previstos": [
+            "O que o produto é e o que ele explicitamente não é: nem modelo, nem substituto do git, nem VPS hospedado",
+            "Os quatro cenários que justificam paralelismo: competir no mesmo bug, revisar diff de IA a sério, unificar assinaturas e rodar remoto",
+            "O público real: quem lê diffs e cuida de commits, não quem busca ausência de código"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "O Que É o Orca ADE: Definições, Fronteiras e o Fluxo em Sete Verbos",
+          "objetivo": "Fixar o vocabulário e o modelo mental do ambiente antes de qualquer botão: o fluxo add → worktree → agent → split → diff → ship como espinha dorsal de todo o resto.",
+          "pilares_previstos": [
+            "ADE como categoria: o objeto de trabalho é o agente em contexto isolado, não o arquivo",
+            "O fluxo canônico em sete verbos e o que cada verbo entrega",
+            "Fronteiras declaradas do produto e o que elas implicam para quem adota"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "Do Download ao PR: Instalação e Primeira Sessão com Três Agentes",
+          "objetivo": "Conduzir o leitor do zero absoluto até um pull request aberto, passando por instalação por plataforma, primeiro lançamento, criação do primeiro worktree e corrida de três agentes na mesma tarefa.",
+          "pilares_previstos": [
+            "Instalação e primeiro lançamento: canais de atualização, importação de configurações e notas por sistema operacional",
+            "Criação de worktree em segundo plano: seletor start-from, nomeação de branch e chips de progresso",
+            "Corrida de três agentes, escolha do vencedor, publicação e descarte das tentativas perdedoras"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Git Worktrees: A Fundação Técnica do Paralelismo Seguro",
+          "objetivo": "Explicar por que o isolamento físico por git worktree — e não stash, clonagem ou troca de branch — é a única base que torna seguro rodar agentes em paralelo, e resolver o problema mais traiçoeiro: dependências, caches e segredos ausentes em checkouts limpos.",
+          "pilares_previstos": [
+            "O modelo de três invariantes: base ref, start-from ref e ciclo de vida por funcionalidade",
+            "Diretórios compartilhados e arquivos gitignored: Shared Paths, worktree.sharedDirectories e .worktreeinclude",
+            "Hierarquia, filtros, multi-seleção e exclusão segura de worktrees na operação diária"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "O Ambiente — Interface, Agentes e Operação Diária",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Anatomia da Interface: Projetos, Abas, Painéis e o Gerenciamento Visual de Contexto",
+          "objetivo": "Ensinar a interface como um gerenciador visual de contexto: como abas, splits, fronteiras fixas e paletas de salto permitem assistir a vários agentes sem perder o estado de cada tarefa.",
+          "pilares_previstos": [
+            "Abas, grupos, splits aninhados e fronteiras persistentes por worktree",
+            "Barra lateral por projeto, quick open e Worktree Jump Palette como navegação primária",
+            "Edição, visualização, restauração de sessão e a barra de status como instrumento de medição"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Agentes Suportados: O Harness Agnóstico e o Catálogo de CLIs",
+          "objetivo": "Apresentar o catálogo de agentes e a decisão de arquitetura que o sustenta: qualquer CLI que roda em um terminal roda no Orca, com permissões, hooks, contas e rastreio de uso sob controle do operador.",
+          "pilares_previstos": [
+            "Agnosticismo radical: do catálogo de trinta e tantos agentes à assinatura que o operador já paga",
+            "Permissões em contexto: flags de bypass pré-aplicadas, o racional do worktree descartável e a migração por override",
+            "Integrações profundas, hooks de status, memória do agente e troca de contas a quente"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "O Terminal Agêntico: Estados, Ciclo de Vida, Hibernação e Histórico",
+          "objetivo": "Transformar o terminal de janela passiva em objeto gerenciado com ciclo de vida: estados observáveis, pausa automática de sessões ociosas, retomada e histórico auditável de tudo o que já foi executado.",
+          "pilares_previstos": [
+            "Glifos de estado, detecção por OSC e o Agent Dashboard como kanban da frota",
+            "Hibernação: condições de segurança, janela de ociosidade e retomada da mesma sessão",
+            "Terminal como instrumento: splits, OSC 52, busca, terminal flutuante, Quick Commands e histórico de sessões"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "O Ciclo de Revisão: Diff, Anotação, Atribuição e Publicação",
+          "objetivo": "Instalar a habilidade que define o operador de frota: revisar código gerado por IA com o mesmo rigor de um PR humano, comentar por linha, medir procedência e publicar sem sair do ambiente.",
+          "pilares_previstos": [
+            "Diff viewer de revisão séria: escopo contra start-from, staging por hunk, diffs de imagem e conflitos de merge",
+            "Annotate AI Diff e Attribution: revisão em lote e procedência de linha como ferramenta de auditoria",
+            "Commit, push, force-with-lease, PR com geração assistida e verificação no browser do worktree"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "Automação e Orquestração",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "O Orca CLI: De Espectador a Operador Programável",
+          "objetivo": "Fazer o leitor parar de clicar e começar a comandar: o CLI como cliente de um runtime vivo, com seletores, contratos de saída JSON e um mapa completo de worktrees, terminais, arquivos, browser e hosts.",
+          "pilares_previstos": [
+            "Runtime e registro: o CLI fala com um Orca em execução e a verificação é a primeira lição",
+            "Seletores, hosts e a regra de ouro do --json para automação confiável",
+            "Mapa de comandos: worktrees, terminais, arquivos, browser embutido, artefatos e emuladores"
+          ]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Orquestração Supervisionada: Runs, Tasks, Workers, Mensagens e Gates",
+          "objetivo": "Subir um nível de abstração: coordenar uma frota de agentes com propriedade explícita, rastreio de conclusão, contrato de comunicação e portões de decisão que impedem avanço sem resposta humana.",
+          "pilares_previstos": [
+            "Modelo de dados da coordenação: Run, Task, Dispatch, Message e Decision gate",
+            "O ciclo supervisionado: criar, despachar, esperar, reconhecer e liberar sem deixar recursos pendurados",
+            "Contrato do worker, mensageria de grupo, workers federados e os caminhos de recuperação"
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Skills, MCP, Memória e Checkpoints: Ensinando o Agente a Dirigir o ADE",
+          "objetivo": "Fechar o ciclo de simetria: se o agente pode dirigir o ambiente, ele precisa saber como; ensinar a instalar, atualizar, compartilhar e verificar skills, e a deixar rastro legível para humanos por meio de checkpoints.",
+          "pilares_previstos": [
+            "Skills como stubs híbridos: por que as flags vivem no binário e não no pacote instalado",
+            "Ciclo de vida de skills: instalar, atualizar, publicar bundle imutável e gerenciar cópias",
+            "Memória do agente, hooks e checkpoints de worktree como protocolo de coordenação humano-agente"
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Automações Agendadas, Notificações e Artefatos",
+          "objetivo": "Fazer a frota trabalhar sem plateia: agendar prompts recorrentes com pré-checagem barata, ser avisado quando algo termina e publicar resultados sem abrir um servidor.",
+          "pilares_previstos": [
+            "Automações: gatilhos, alvos, pré-checagem, grace de execução perdida e reuso de sessão",
+            "Notificações e sinais: do agente-concluído ao sino persistente e às categorias silenciáveis",
+            "Artefatos e compartilhamento: links públicos, limites de tamanho e o que não é enviado"
+          ]
+        },
+        {
+          "capitulo": "13",
+          "titulo": "Computer Use e Emuladores: Quando o Alvo Não É um Terminal",
+          "objetivo": "Cobrir a fronteira em que a tarefa exige operar interface gráfica: apps desktop por árvore de acessibilidade e simuladores mobile sob escopo do worktree, com o tratamento de risco que cada um exige.",
+          "pilares_previstos": [
+            "Computer use: permissões, loop snapshot-agir-snapshot e a semântica de índices de elemento",
+            "Ações, segredos por stdin e a escalada controlada para coordenadas",
+            "Emuladores mobile no escopo do worktree e as fronteiras entre browser, computer use e app nativo"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "IV",
+      "titulo_parte": "Escala e Soberania",
+      "capitulos": [
+        {
+          "capitulo": "14",
+          "titulo": "Rodando Remoto: SSH, Servidores Orca e Ambientes por Workspace",
+          "objetivo": "Tirar a frota do colo: os quatro modos de execução, o que cada um entrega em sobrevivência de sessão e multi-cliente, e como escolher sem transformar o operador em administrador de infraestrutura.",
+          "pilares_previstos": [
+            "SSH: alvos, verificação de host key, reconexão que preserva o trabalho e o período de graça de PTYs",
+            "Servidor Orca Remoto: pareamento por link, token revogável por cliente e a linha vermelha de exposição de porta",
+            "Ambientes por workspace: recipes em orca.yaml, provedores e a fronteira de que nuvem é do operador"
+          ]
+        },
+        {
+          "capitulo": "15",
+          "titulo": "Mobile, Configuração, Segurança e o Custo Real de uma Frota",
+          "objetivo": "Operar a frota em escala com decisões conscientes: acompanhar pelo celular, configurar como quem governa, tratar telemetria e risco de IA com seriedade e colocar as duas faturas na mesa.",
+          "pilares_previstos": [
+            "Mobile e continuidade: monitorar, ser avisado e responder fora do desktop",
+            "Configuração como governança: painéis, hooks, permissões, orçamento de API e telemetria",
+            "O custo real e o risco: assinaturas de agente, computação BYO, rede privada e vocabulário de gestão de risco"
+          ]
+        },
+        {
+          "capitulo": "16",
+          "titulo": "O Playbook do Operador: Manutenção, Diagnóstico e Evolução da Frota",
+          "objetivo": "Consolidar tudo em rotina: diagnosticar os sintomas mais comuns com a matriz oficial, conter consumo de memória, conviver com a cadência de releases e evoluir a frota sem dívida técnica silenciosa.",
+          "pilares_previstos": [
+            "A matriz de diagnóstico: do agente que não inicia ao rate limit do GitHub",
+            "Higiene de frota: hibernação, limites de worktree, checkpoints e permissões por agente",
+            "Cadência de releases, changelog como fonte de verdade e o que fazer quando a documentação envelhece"
+          ]
+        }
+      ]
+    }
+  ],
+  "metricas_obrigatorias": {
+    "1": [
+      {"metrica": "estrelas do repositório oficial do Orca", "valor": "67,2 mil"},
+      {"metrica": "forks do repositório oficial do Orca", "valor": "4,4 mil"}
+    ],
+    "2": [
+      {"metrica": "agentes embarcados no seletor pré-configurado", "valor": "mais de 30 CLIs"},
+      {"metrica": "URLs publicadas no sitemap oficial no momento da coleta", "valor": "61"}
+    ],
+    "3": [
+      {"metrica": "tempo declarado para a primeira sessão com três agentes", "valor": "menos de 5 minutos"},
+      {"metrica": "passos do fluxo canônico do produto", "valor": "6"}
+    ],
+    "4": [
+      {"metrica": "mecanismos de preenchimento de diretórios e arquivos gitignored", "valor": "3"}
+    ],
+    "5": [
+      {"metrica": "glifos de estado de sessão de agente", "valor": "6"},
+      {"metrica": "idiomas de interface suportados", "valor": "6"}
+    ],
+    "6": [
+      {"metrica": "agentes com integração profunda (uso, hot-swap, hooks)", "valor": "3"},
+      {"metrica": "flags distintas de bypass de permissão pré-aplicadas", "valor": "3"}
+    ],
+    "7": [
+      {"metrica": "janela padrão de ociosidade antes de hibernar um agente", "valor": "30 minutos"},
+      {"metrica": "faixa configurável da janela de hibernação", "valor": "1 minuto a 24 horas"},
+      {"metrica": "agentes com sessão retomável elegíveis à hibernação", "valor": "11"}
+    ],
+    "8": [
+      {"metrica": "atalhos dedicados no diff viewer", "valor": "8"},
+      {"metrica": "modos de comparação de imagem no diff", "valor": "3"}
+    ],
+    "9": [
+      {"metrica": "tipos de seletor aceitos pelos comandos do CLI", "valor": "6"},
+      {"metrica": "skills instaláveis no registro público do Orca", "valor": "7"}
+    ],
+    "10": [
+      {"metrica": "intervalo de heartbeat emitido no stderr durante uma espera ativa", "valor": "15 segundos"},
+      {"metrica": "status possíveis de uma task de orquestração", "valor": "6"},
+      {"metrica": "timeout usado nos exemplos oficiais de check --wait", "valor": "900000 ms"}
+    ],
+    "11": [
+      {"metrica": "status possíveis de um cartão de workspace", "valor": "4"},
+      {"metrica": "skills instaláveis no registro público do Orca", "valor": "7"}
+    ],
+    "12": [
+      {"metrica": "limite de tamanho por artefato compartilhado", "valor": "10 MiB"},
+      {"metrica": "formatos de som de notificação suportados", "valor": "6"},
+      {"metrica": "grace configurável para execução perdida de automação", "valor": "30 minutos"}
+    ],
+    "13": [
+      {"metrica": "ações de computer use documentadas", "valor": "9"},
+      {"metrica": "faixa das coordenadas do emulador mobile", "valor": "0 a 1"}
+    ],
+    "14": [
+      {"metrica": "modos de execução da frota", "valor": "4"},
+      {"metrica": "período de graça padrão de PTYs remotos após fechar o app", "valor": "5 minutos por alvo"},
+      {"metrica": "provedores de ambiente por workspace citados na documentação", "valor": "5"}
+    ],
+    "15": [
+      {"metrica": "versão do APK Android do companheiro mobile", "valor": "0.0.48"},
+      {"metrica": "idiomas de interface suportados", "valor": "6"}
+    ],
+    "16": [
+      {"metrica": "sintomas catalogados na página oficial de solução de problemas", "valor": "11"},
+      {"metrica": "janela declarada entre PR mesclado e release", "valor": "48 a 72 horas"},
+      {"metrica": "release mais recente no momento da coleta", "valor": "v1.4.200, de 11 de setembro de 2026"}
+    ]
+  },
+  "conclusao": "Consolidar a jornada de desenvolvedor serial a Operador de Frota Agêntica: o que muda no trabalho diário, quais hábitos precisam ser criados (revisar diffs, escrever checkpoints, conter a frota), e como manter o ambiente soberano quando a ferramenta, o modelo ou o provedor mudarem."
+}

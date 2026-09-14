@@ -1,0 +1,108 @@
+{
+  "titulo_obra": "GRÁTIS: SUBSTITUA FERRAMENTAS PAGAS POR OPEN SOURCE",
+  "subtitulo": "Sua oficina digital sem assinaturas: notas, e-mail, CRM, design, vídeo, nuvem, BI, projetos, chat, infra — tudo open source, rodando na sua VPS",
+  "tipo_obra": "livro",
+  "tamanho_obra": "M",
+  "motivo_condutor": {
+    "nome": "A Oficina Digital",
+    "descricao": "Cada ferramenta paga é tratada como uma peça alugada de uma loja de aluguel de equipamentos (o SaaS); cada alternativa open source é a mesma peça comprada, montada e mantida na própria oficina do leitor — o aluguel recorrente vira posse com responsabilidade de manutenção.",
+    "vocabulario": ["oficina", "bancada", "ferramenta", "peça", "aluguel", "manutenção", "estoque", "prateleira", "montagem", "garantia"],
+    "persona_leitor": "Artesão Digital"
+  },
+  "introducao": "Apresentar o argumento central do livro: o software 'grátis para sempre' que a internet promete geralmente cobra em outra moeda — tempo de administração —, e preparar o leitor para decidir, categoria por categoria, quando essa troca vale a pena e quando não vale.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Monte a Sua Bancada",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "Anotações e Produtividade: Saindo do Aluguel do Notion e do Evernote",
+          "objetivo": "Apresentar a lógica geral da troca (o que se ganha, o que se perde) através do caso mais comum — notas e produtividade — e guiar a instalação da primeira alternativa self-hosted.",
+          "pilares_previstos": [
+            "Do aluguel para a posse: o que realmente muda ao trocar Notion/Evernote por uma ferramenta própria",
+            "Montagem prática: instalando e configurando AppFlowy, Logseq, Joplin, Outline, Trilium Notes e Standard Notes",
+            "Quando NÃO vale a troca: colaboração em tempo real, app mobile e OCR são onde o open source ainda perde"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "E-mail Marketing: Enviando Campanhas Sem Depender do Mailchimp",
+          "objetivo": "Ensinar a montar uma stack própria de e-mail marketing e a lidar com o desafio real dessa categoria — reputação de domínio e deliverability.",
+          "pilares_previstos": [
+            "A conta oculta do e-mail marketing 'grátis': SMTP, reputação de domínio e deliverability",
+            "Montando a stack própria: Listmonk, Mautic e Sendportal — o que cada um resolve",
+            "O contraexemplo que ensina a desconfiar de listas prontas: por que EmailEngine não é open source"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "CRM: Vendendo e Atendendo Sem Pagar Salesforce",
+          "objetivo": "Mostrar até onde um CRM open source cobre as funções essenciais de vendas e atendimento, e onde a lacuna com as soluções corporativas ainda é real.",
+          "pilares_previstos": [
+            "O que um CRM open source já cobre bem hoje: pipeline, contatos e automação básica",
+            "Montagem prática: EspoCRM, Twenty e SuiteCRM em produção",
+            "A lacuna honesta: onde Salesforce e HubSpot ainda ganham por integração e maturidade de mercado"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Automação de Fluxos: Trocando o Zapier pelo n8n",
+          "objetivo": "Demonstrar por que a automação de fluxos é a categoria mais madura da lista, guiando a construção do primeiro fluxo de ponta a ponta.",
+          "pilares_previstos": [
+            "Por que automação de fluxos já é paridade real: n8n, Node-RED, Huginn e Activepieces",
+            "Construindo o primeiro fluxo: gatilho, nó, credencial e deploy",
+            "O custo de administrar sua própria automação: quem fica de guarda quando o fluxo quebra"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "A Oficina Completa",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Design Gráfico e Edição de Imagem: Sem Canva, Sem Photoshop, Sem Illustrator",
+          "objetivo": "Apresentar as ferramentas open source de design e imagem com curva de aprendizado honesta, do zero até uma peça de marketing pronta.",
+          "pilares_previstos": [
+            "O que GIMP, Inkscape e Krita cobrem bem — e onde a curva de aprendizado assusta o iniciante",
+            "Penpot como alternativa colaborativa ao Figma/Canva para design de interface",
+            "Fluxo de trabalho completo: do zero a uma peça de marketing pronta, sem gastar um centavo de licença"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Vídeo e Nuvem: Editando e Guardando Seus Arquivos Sem Assinatura",
+          "objetivo": "Cobrir edição de vídeo e armazenamento em nuvem self-hosted, sinalizando com precisão os casos em que 'open source' é rótulo incorreto.",
+          "pilares_previstos": [
+            "Edição de vídeo real: Shotcut e Kdenlive — e por que o DaVinci Resolve é grátis, mas não é open source",
+            "Nextcloud como sua própria nuvem: sincronização, compartilhamento e o que ele não substitui do Drive/Dropbox",
+            "O orçamento oculto: armazenamento, backup e banda que a assinatura escondia dentro da mensalidade"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Análise de Dados e Gestão de Projetos: BI e Kanban Sem Licença por Usuário",
+          "objetivo": "Cobrir ferramentas de BI self-hosted e de gestão de projetos, incluindo o alerta de risco de longevidade de projetos com manutenção incerta.",
+          "pilares_previstos": [
+            "BI self-hosted que já é páreo: Metabase e Superset na prática, e o alerta de longevidade sobre o Redash",
+            "Gestão de projetos sem mensalidade por usuário: OpenProject, Taiga e Focalboard",
+            "Onde a comparação para: relatórios executivos prontos, integrações nativas e suporte corporativo"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Comunicação em Equipe e a Infraestrutura Que Sustenta Tudo",
+          "objetivo": "Encerrar a jornada mostrando a peça que sustenta todas as anteriores — a infraestrutura self-hosted —, e entregar ao leitor um balanço final de quando a troca vale o esforço.",
+          "pilares_previstos": [
+            "Mattermost e Rocket.Chat como substitutos reais do Slack, e onde a equipe sente a diferença",
+            "A peça que faltava: Docker, Coolify, CapRover e Dokku como a bancada que hospeda tudo o que você aprendeu até aqui",
+            "O balanço final: quando a soma de VPS, tempo de manutenção e risco de segurança ainda sai mais barata que a assinatura"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Sintetizar a jornada do leitor de consumidor de SaaS a Artesão Digital, capaz de decidir — ferramenta por ferramenta — quando a troca vale a pena, e entregar um checklist de decisão reutilizável para qualquer categoria futura."
+}

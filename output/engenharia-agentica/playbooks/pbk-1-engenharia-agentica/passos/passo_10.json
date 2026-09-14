@@ -1,0 +1,52 @@
+{
+  "numero": "10",
+  "capitulo_fonte": "10",
+  "titulo": "Hooks: a camada que intercepta o agente",
+  "estagio": "Checklist",
+  "estagio_indice": 3,
+  "objetivo": "Usar eventos de ciclo de vida para impor regras que nenhum prompt consegue garantir.",
+  "pre_requisito": "Passo 9 concluído",
+  "entregas": [
+    ".git/hooks/pre-commit"
+  ],
+  "execucao": [
+    {
+      "titulo": "Hook 1: guardião de comandos (antes da ferramenta)",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Guarda de comandos: bloqueia padroes destrutivos antes de executar.\"\"\"\nimport json\nimport sys\n\nPADROES_PROIBIDOS = [\n    \"rm -rf /\",\n    \"git push --force\",\n    \"dropdb\",\n    \"DROP TABLE\",\n    \"> /dev/sda\",\n]\n\nLIMITE_CARACTERES_COMANDO = 4000\n\n\ndef main():\n    try:\n        evento = json.load(sys.stdin)\n    except json.JSONDecodeError:\n        print(\"[guard] evento invalido na entrada\", file=sys.stderr)\n        sys.exit(2)\n\n    comando = (evento.get(\"tool_input\") or {}).get(\"command\", \"\")\n\n    for padrao in PADROES_PROIBIDOS:\n        if padrao in comando:\n            print(f\"[guard] BLOQUEADO: padrao proibido -> {padrao}\", file=sys.stderr)\n            sys.exit(2)\n\n    if len(comando) > LIMITE_CARACTERES_COMANDO:\n        print(\"[guard] BLOQUEADO: comando suspeito pelo tamanho\", file=sys.stderr)\n        sys.exit(2)\n\n    sys.exit(0)\n\n\nif __name__ == \"__main__\":\n    main()"
+    },
+    {
+      "titulo": "Hook 2: formatador pós-edição (depois da ferramenta)",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env bash\nset -euo pipefail\nARQUIVO=\"${1:-}\"\ncase \"$ARQUIVO\" in\n  *.py)  python -m ruff format \"$ARQUIVO\" >/dev/null 2>&1 || true ;;\n  *.ts|*.tsx) npx --no-install prettier --write \"$ARQUIVO\" >/dev/null 2>&1 || true ;;\nesac\nexit 0"
+    },
+    {
+      "titulo": "Hook 3: pre-commit que bloqueia suíte vermelha",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env bash\nset -euo pipefail\n\necho \"[pre-commit] rodando suite de testes...\"\nif ! python -m pytest -q; then\n  echo \"[pre-commit] BLOQUEADO: suite vermelha. Corrija e tente novamente.\" >&2\n  exit 1\nfi\n\necho \"[pre-commit] suite verde — commit liberado\""
+    },
+    {
+      "titulo": "Hook 4: injetor de contexto no início da sessão",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"evento\": \"SessionStart\",\n  \"hooks\": [\n    {\n      \"type\": \"command\",\n      \"command\": \"cat docs/estado-tarefa.md 2>/dev/null | head -40\"\n    }\n  ]\n}"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Guardião.** Escreva um hook que recusa um comando destrutivo antes da execução, com mensagem que diga qual comando foi barrado e por quê. A recusa precisa ser visível, não silenciosa",
+    "Formatador escopado.** Escreva um hook que formata apenas o arquivo tocado e apenas se for da linguagem alvo. Meça o tempo adicionado por edição — se passar de alguns segundos, ele será desligado",
+    "Auditoria.** Registre início e fim de sessão em um log com caminho, comando e veredito. Esse é o material bruto para descobrir, semanas depois, o que mudou o comportamento do sistema",
+    "Teste de falha.** Desabilite um hook de propósito e verifique se o trabalho continua correto. Se ele não é essencial, talvez esteja no lugar errado do ciclo de vida"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 10 — Hooks: a camada que intercepta o agente",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

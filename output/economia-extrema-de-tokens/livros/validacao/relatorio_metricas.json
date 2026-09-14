@@ -1,0 +1,21 @@
+{
+  "slug": "livros/economia-extrema-de-tokens",
+  "capitulos": 8,
+  "metricas_por_capitulo": {
+    "cap_1": 11,
+    "cap_2": 13,
+    "cap_3": 7,
+    "cap_4": 5,
+    "cap_5": 1,
+    "cap_6": 4,
+    "cap_7": 7,
+    "cap_8": 8
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

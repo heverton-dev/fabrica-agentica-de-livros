@@ -1,0 +1,211 @@
+{
+  "titulo_obra": "Engenharia Agêntica",
+  "subtitulo": "Configurações, segredos e arquitetura dos agentes reais",
+  "tipo_obra": "livro",
+  "tamanho_obra": "GG",
+  "motivo_condutor": {
+    "nome": "A Cabine e a Torre",
+    "descricao": "O agente é o piloto: potente, adaptativo e probabilístico. O harness é a cabine — painel, checklist, alarmes, piloto automático e caixa-preta — onde cada instrumento é determinístico por construção. Voar bem não é pilotar melhor: é instrumentar melhor.",
+    "vocabulario": [
+      "cabine",
+      "painel",
+      "checklist",
+      "instrumento",
+      "alarme",
+      "piloto automático",
+      "plano de voo",
+      "caixa-preta",
+      "torre de controle",
+      "combustível"
+    ],
+    "persona_leitor": "Engenheiro de Bordo"
+  },
+  "introducao": "Abrir a obra mostrando que a diferença entre um agente que impressiona numa demo e um agente que sustenta produção não está no modelo, e sim na cabine em volta dele: configurações, arquivos de instrução, ferramentas, hooks e gates. Instalar a pergunta que atravessa os 16 capítulos — o que eu controlo e o que eu delego ao modelo?",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "O Terreno — o que é um agente, de verdade",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "O agente não é o modelo: anatomia de um harness",
+          "objetivo": "Desmontar a confusão entre modelo e agente, mostrando o harness como o conjunto de peças que dá memória, ferramentas e política a um LLM stateless.",
+          "pilares_previstos": [
+            "o que exatamente o provedor entrega e o que ele não entrega",
+            "as peças do harness: sistema, ferramentas, contexto, estado e política",
+            "o teste do desmonte: trocar o modelo e manter o agente"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Probabilismo e determinismo: onde cada um manda",
+          "objetivo": "Estabelecer a fronteira de responsabilidade entre o que deve ser decidido pelo modelo e o que deve ser garantido por código.",
+          "pilares_previstos": [
+            "por que nenhuma configuração torna o LLM determinístico",
+            "determinismo de verificação: gates, hooks e scripts como juízes",
+            "o custo real de cada erro colocado na camada errada"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "O arquivo que todo agente lê: AGENTS.md, config.json e rules",
+          "objetivo": "Ensinar a escrever as instruções persistentes que sobrevivem entre sessões e entre harnesses diferentes.",
+          "pilares_previstos": [
+            "AGENTS.md como padrão aberto e porta de entrada portável",
+            "settings.json e config.json: precedência, escopo e armadilhas silenciosas",
+            "rules por projeto, por caminho e por framework — o que carrega quando"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Skills, MCPs e tools: o que o agente sabe fazer",
+          "objetivo": "Explicar como o agente descobre e carrega capacidade sob demanda, sem inflar a janela de contexto.",
+          "pilares_previstos": [
+            "divulgação progressiva: metadado barato hoje, instrução completa quando preciso",
+            "MCP como contrato: resources, prompts e tools sob um protocolo",
+            "escrita do gatilho: por que uma skill mal descrita nunca é carregada"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "A Bancada — configurando o que realmente custa dinheiro",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Turnos agênticos: anatomia de um loop e por que ele custa dinheiro",
+          "objetivo": "Mostrar que o custo de um agente é o custo dos turnos, e que cada turno recomeça do mesmo prefixo de contexto.",
+          "pilares_previstos": [
+            "o ciclo percepção, raciocínio, ferramenta e observação",
+            "o prefixo reenviado: onde o dinheiro vaza em silêncio",
+            "medindo antes de otimizar: telemetria mínima de uma sessão"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Cache hit: prompt caching e a ordem das partes",
+          "objetivo": "Dominar o mecanismo que mais barateia um agente de longa duração — e a fragilidade que o faz sumir.",
+          "pilares_previstos": [
+            "como o cache de prefixo é gravado, lido e invalidado",
+            "arquitetura estável de prompt: o que vai primeiro e nunca muda",
+            "hit, write e miss na prática: a conta de cada decisão de edição"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Economia severa de tokens: as configurações reais",
+          "objetivo": "Entregar o conjunto concreto de configurações e protocolos que cortam consumo sem cortar qualidade.",
+          "pilares_previstos": [
+            "compressão de saída de ferramenta: primeiras e últimas linhas, nunca o meio",
+            "grep antes de read: hierarquia de custo das operações de leitura",
+            "orçamento por fase: onde gastar tokens de propósito e onde fechar a torneira"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Otimização de contexto: selecionar, comprimir, isolar",
+          "objetivo": "Ensinar as quatro operações de contexto e quando cada uma compensa.",
+          "pilares_previstos": [
+            "escrever e selecionar: memória externa em vez de memória de conversa",
+            "comprimir: compactação, sumarização e limpeza de ferramentas",
+            "isolar: por que o subagente é a solução mais barata para leitura pesada"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "A Linha de Montagem — escala, scripts e frota",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "Scripts e gates: o determinismo que sustenta a esteira",
+          "objetivo": "Construir verificações que reprovam artefato ruim antes que ele contamine a fase seguinte.",
+          "pilares_previstos": [
+            "gate de contrato: o que se checa sem LLM nenhum",
+            "encadeamento: do gate de estrutura ao gate de mérito",
+            "o gate que nunca mente: exit code, cache e execução real"
+          ]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Hooks: a camada que intercepta o agente",
+          "objetivo": "Usar eventos de ciclo de vida para impor regras que nenhum prompt consegue garantir.",
+          "pilares_previstos": [
+            "os eventos que importam: antes da ferramenta, depois da edição, no fim da sessão",
+            "hook de comando, hook de prompt e hook de agente: quando usar cada um",
+            "pre-commit como lei: bloqueando o commit vermelho na origem"
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Agents e subagentes: delegação com contexto isolado",
+          "objetivo": "Projetar delegação que economiza contexto em vez de multiplicar o custo.",
+          "pilares_previstos": [
+            "contexto próprio, ferramentas próprias, retorno resumido",
+            "o que delegar, o que nunca delegar e por quê",
+            "subagente comprimido: protocolo de saída enxuta entre agentes"
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Orquestração: worktrees, paralelismo e o Orca ADE",
+          "objetivo": "Rodar uma frota de agentes em paralelo sem que eles se atropelem.",
+          "pilares_previstos": [
+            "worktree como fronteira: um branch, um agente, um diretório",
+            "o ambiente de desenvolvimento de agentes: terminal, browser e artefato por tarefa",
+            "coordenação e gate de conclusão: quem espera por quem"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "IV",
+      "titulo_parte": "O Ofício — decisões de arquiteto",
+      "capitulos": [
+        {
+          "capitulo": "13",
+          "titulo": "Roteamento inteligente de LLM: o modelo certo por turno",
+          "objetivo": "Escolher modelo por tarefa em vez de por hábito, com critério econômico explícito.",
+          "pilares_previstos": [
+            "forte e fraco: o que a literatura de roteamento realmente mede",
+            "roteamento por fase do trabalho: extração barata, geração cara",
+            "contratos que sobrevivem à troca de modelo"
+          ]
+        },
+        {
+          "capitulo": "14",
+          "titulo": "Configurações que nunca te contam",
+          "objetivo": "Auditar as chaves silenciosas que mudam custo, segurança e comportamento sem nenhum aviso.",
+          "pilares_previstos": [
+            "ordem de precedência e o arquivo que ganha sem você saber",
+            "limites invisíveis: timeout, tamanho de saída, retenção e telemetria",
+            "checklist de auditoria de harness em oito perguntas"
+          ]
+        },
+        {
+          "capitulo": "15",
+          "titulo": "Os segredos universais aplicáveis a qualquer harness",
+          "objetivo": "Extrair os princípios que permanecem verdadeiros quando o produto, o modelo e o padrão mudarem.",
+          "pilares_previstos": [
+            "instrução estável, ferramenta estreita, verificação externa",
+            "o que é moda e o que é invariante de engenharia",
+            "portabilidade: escrever hoje para o harness que ainda não existe"
+          ]
+        },
+        {
+          "capitulo": "16",
+          "titulo": "Arquitetura para desenvolvimento com IA: o sistema que constrói sistemas",
+          "objetivo": "Fechar a obra com o desenho completo de uma esteira agêntica auditável, do tema à entrega.",
+          "pilares_previstos": [
+            "fases, contratos e artefatos: o desenho macro de uma esteira",
+            "governança: custo, segurança, retenção e responsabilidade",
+            "o Engenheiro de Bordo: a carreira de quem instrumenta em vez de improvisar"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Sintetizar a travessia: da cabine desmontada ao painel auditado. Retomar cada instrumento apresentado, mostrar como ele se encaixa em uma única arquitetura e devolver ao leitor a decisão central — o que eu controlo por código e o que eu entrego ao modelo."
+}

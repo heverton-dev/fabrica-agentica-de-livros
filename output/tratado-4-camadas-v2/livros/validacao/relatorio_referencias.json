@@ -1,0 +1,2436 @@
+{
+  "slug": "livros/tratado-4-camadas-v2",
+  "total_referencias": 346,
+  "resumo": {
+    "nao_verificado": 346
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2510.12399",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.174681482.27435614/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6755658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://octoverse.github.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.23589741.v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://link.springer.com/article/10.1007/s44163-026-01980-z",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2510.04618",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/792e745f4068bb0557ed2a4c6601812b3e3baf5e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/worktrees",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.1145/3786167.3788429",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.1002/j.1538-7305.1948.tb01338.x",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://checkmarx.com/zero-post/11-emerging-ai-security-risks-with-mcp-model-context-protocol/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.23589741.v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://openai.com/index/introducing-swe-bench-verified/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.sqlite.org/wal.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://sqlite.org/lockingv3.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://octoverse.github.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.sqlite.org/wal.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://openai.com/index/introducing-swe-bench-verified/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://link.springer.com/article/10.1007/s44163-026-01980-z",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2510.12399",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://sqlite.org/lockingv3.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.1002/j.1538-7305.1948.tb01338.x",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.23589741.v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6755658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2510.04618",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://openai.com/index/introducing-swe-bench-verified/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.1002/j.1538-7305.1948.tb01338.x",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/792e745f4068bb0557ed2a4c6601812b3e3baf5e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.23589741.v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://checkmarx.com/zero-post/11-emerging-ai-security-risks-with-mcp-model-context-protocol/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6755658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.swebench.com/verified.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/worktrees",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://link.springer.com/article/10.1007/s44163-026-01980-z",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2605.21384v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6755658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.swebench.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://link.springer.com/article/10.1007/s44163-026-01980-z",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.1002/j.1538-7305.1948.tb01338.x",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.1145/3786167.3788429",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.176978431.15223796/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.55041/ijsrem62689",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.23589741.v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://checkmarx.com/zero-post/11-emerging-ai-security-risks-with-mcp-model-context-protocol/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.55041/ijsrem62689",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-mcp-security-crisis-20260504-csa-styled/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.176978431.15223796/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.sqlite.org/wal.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://sqlite.org/lockingv3.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://openai.com/index/introducing-swe-bench-verified/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://checkmarx.com/zero-post/11-emerging-ai-security-risks-with-mcp-model-context-protocol/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.sqlite.org/wal.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://sqlite.org/lockingv3.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/worktrees",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6755658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://link.springer.com/article/10.1007/s44163-026-01980-z",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2605.21384v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://sqlite.org/lockingv3.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://link.springer.com/article/10.1007/s44163-026-01980-z",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2605.21384v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://openai.com/index/introducing-swe-bench-verified/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2510.04618",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://octoverse.github.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2605.21384v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2507.13334",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://openai.com/index/introducing-swe-bench-verified/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.swebench.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.traxtech.com/blog/20-of-ai-generated-code-dependencies-dont-exist-creating-supply-chain-security-risks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://octoverse.github.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.55041/ijsrem62689",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.semanticscholar.org/paper/792e745f4068bb0557ed2a4c6601812b3e3baf5e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.176978431.15223796/v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1145/3786167.3788429",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.34218/ijaieg_01_01_002",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1007/s10462-025-11422-4",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.36227/techrxiv.23589741.v1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1145/3822180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://survey.stackoverflow.co/2025/ai",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.pearson.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://continuousdelivery.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6755658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://checkmarx.com/zero-post/11-emerging-ai-security-risks-with-mcp-model-context-protocol/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.veracode.com/blog/ai-generated-code-security-risks/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.endorlabs.com/learn/the-most-common-security-vulnerabilities-in-ai-generated-code",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.swebench.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.2139/ssrn.6294900",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/books/eaa.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://git-scm.com/book/en/v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://dora.dev/dora-report-2025/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

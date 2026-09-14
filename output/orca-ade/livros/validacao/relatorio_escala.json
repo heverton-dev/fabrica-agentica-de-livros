@@ -1,0 +1,10 @@
+{
+  "slug": "livros/orca-ade",
+  "capitulos": 1,
+  "total_violacoes": 0,
+  "regras": {
+    "R-ES-1": "seção Aplica contém ao menos 1 termo de escala/limite",
+    "R-ES-2": "termo de escala em contexto de advertência (limite/contorno)"
+  },
+  "violacoes": []
+}

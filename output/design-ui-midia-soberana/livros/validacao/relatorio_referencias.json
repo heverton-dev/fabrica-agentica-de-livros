@@ -1,0 +1,820 @@
+{
+  "slug": "livros/design-ui-midia-soberana",
+  "total_referencias": 115,
+  "resumo": {
+    "ok": 54,
+    "nao_verificado": 61
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.iso.org/standard/75839.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://inkscape.org/about/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/qpdf/qpdf",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://fontsource.org/docs/getting-started/introduction",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://lucide.dev/guide/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2107.10833",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/Comfy-Org/ComfyUI",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/OHF-Voice/piper1-gpl",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/excalidraw/excalidraw",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://inkscape.org/about/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/excalidraw/excalidraw",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://lucide.dev/guide/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://fontsource.org/docs/getting-started/introduction",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/qpdf/qpdf",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/Comfy-Org/ComfyUI",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/upscayl/upscayl",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2107.10833",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/design-tokens/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://inkscape.org/about/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/file-format/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/getting-started/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot/blob/main/docs/ARCHITECTURE.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/collaboration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/design-tokens/export/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/flexbox-grid/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/developer-handoff/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/design-systems/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/api/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/getting-started/docker/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/security/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/configuration/smtp/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/projects/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/projects-files/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/pages/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/interface/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/responsive/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/colors/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/components/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/libraries/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/libraries/using/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/user-guide/components/updates/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://fontsource.org/docs/getting-started/introduction",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://fontsource.org/docs/getting-started/introduction",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/1809.00219",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2006.11239",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2112.10752",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://github.com/qpdf/qpdf",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://github.com/excalidraw/excalidraw",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://inkscape.org/about/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://lucide.dev/guide/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2107.10833",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://github.com/xinntao/Real-ESRGAN",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://github.com/upscayl/upscayl",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1109/TMM.2019.2919431",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/1609.04802",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/1809.00219",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://github.com/Tencent/ncnn",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://github.com/xinntao/Real-ESRGAN/releases",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://github.com/Aimarekin/Upscaler-for-GIMP",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2108.10257",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2107.10833",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://github.com/upscayl/upscayl",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://github.com/Comfy-Org/ComfyUI",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2112.10752",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2006.11239",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/1609.04802",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2106.06103",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://github.com/OHF-Voice/piper1-gpl",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2106.06103",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://github.com/OHF-Voice/piper1-gpl",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://github.com/coqui-ai/TTS",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.47191/etj/v9i05.10",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.15388/lmitt.2026.15",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.1016/j.csl.2024.101723",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://github.com/Comfy-Org/ComfyUI",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://fontsource.org/docs/getting-started/introduction",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://github.com/qpdf/qpdf",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://digital-strategy.ec.europa.eu/en/policies/strategy-data",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://www.w3.org/TR/SVG2/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2106.06103",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2006.11239",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2112.10752",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.3390/encyclopedia6020045",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.15388/lmitt.2026.15",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1016/j.csl.2024.101723",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.47191/etj/v9i05.10",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2308.14363",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

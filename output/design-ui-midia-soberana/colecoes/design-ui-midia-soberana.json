@@ -1,0 +1,42 @@
+{
+  "colecao": "design-ui-midia-soberana",
+  "cor_accent": "#7c6cf0",
+  "atualizado_em": "2026-08-25",
+  "nucleo": {
+    "slug": "livros/design-ui-midia-soberana",
+    "tipo": "livro",
+    "titulo": "Design, UI e Mídia Soberana",
+    "senioridade": "iniciante",
+    "motivo_condutor": {}
+  },
+  "total_membros": 1,
+  "por_tipo": {
+    "livro": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/design-ui-midia-soberana",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "Design, UI e Mídia Soberana",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": "https://exemplo.com/obra",
+      "estado": "redigido",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "playbook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

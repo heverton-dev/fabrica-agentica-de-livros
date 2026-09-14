@@ -1,0 +1,15 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "3" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 2: o conceito de compressão de contexto como redução de dimensionalidade — caveman e headroom foram apresentados isoladamente; agora o leitor os vê encadeados em pipeline junto com o lean-ctx.",
+  "validacoes": {
+    "validar_codigo": "OK (2/2 blocos verificaveis, 100% aprovacao)",
+    "renderizar_diagramas": "OK (2/2 diagramas mermaid validos)",
+    "estrutura_7_secoes": "OK (headers literais ## 1. a ## 7. presentes)",
+    "referencias_R4": "OK (9 referencias >= min_referencias_por_capitulo=8)",
+    "citacoes_R14": "OK (citacoes [1]-[9] no corpo todas presentes na secao 7, sem orfas)",
+    "gate_1_eita_structure_py": "FALHA CONHECIDA NAO BLOQUEANTE - bug preexistente do script (espera header exato 'Referencias', o padrao da fabrica gera 'Referencias Bibliograficas'; reproduz identico em cap_2.md do mesmo lote)",
+    "gate_3_didactic_accessibility_py": "AVISO nao bloqueante (TL;DR ausente, glossario de 1a mencao) - nao mandatorio no procedimento do subagente"
+  }
+}

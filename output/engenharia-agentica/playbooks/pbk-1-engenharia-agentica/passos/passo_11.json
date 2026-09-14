@@ -1,0 +1,51 @@
+{
+  "numero": "11",
+  "capitulo_fonte": "11",
+  "titulo": "Agents e subagentes: delegação com contexto isolado",
+  "estagio": "Checklist",
+  "estagio_indice": 3,
+  "objetivo": "Projetar delegação que economiza contexto em vez de multiplicar o custo.",
+  "pre_requisito": "Passo 10 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: escreva o contrato de delegação",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"papel\": \"investigador-de-consumidores\",\n  \"pergunta\": \"Quais modulos consomem o contrato de /login e como?\",\n  \"contexto_necessario\": [\n    \"contrato atual de /login: POST com {usuario, senha}\",\n    \"restricao: clientes moveis dependem do formato de resposta\"\n  ],\n  \"limite_retorno_tokens\": 250,\n  \"formato_retorno\": \"tabela: caminho:linha | tipo de consumo | risco (alto/medio/baixo)\",\n  \"obrigatorio\": [\"citacao de caminho e linha para cada afirmacao\"],\n  \"proibido\": [\n    \"colar trechos maiores que 3 linhas\",\n    \"sugerir implementacao\",\n    \"resumir arquivos nao consultados\"\n  ]\n}"
+    },
+    {
+      "titulo": "Passo 2: orquestre de forma simples antes de paralelizar",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import json\nfrom concurrent.futures import ThreadPoolExecutor\n\n\ndef delegar(contrato, executor_subagente):\n    \"\"\"Executa um contrato e devolve o retorno validado.\"\"\"\n    retorno = executor_subagente(contrato)\n    if len(retorno.split()) > contrato[\"limite_retorno_tokens\"]:\n        return {\"erro\": \"retorno acima do limite\", \"bruto\": retorno[:500]}\n    return {\"resultado\": retorno}\n\n\ndef delegar_em_paralelo(contratos, executor_subagente, max_workers=3):\n    with ThreadPoolExecutor(max_workers=max_workers) as pool:\n        futuros = [pool.submit(delegar, c, executor_subagente) for c in contratos]\n        return [f.result() for f in futuros]"
+    },
+    {
+      "titulo": "Passo 3: calcule a razão de compressão",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "def razao_compressao(registros):\n    \"\"\"Tokens lidos pelo subagente / tokens devolvidos por ele.\"\"\"\n    lidos = sum(r[\"tokens_lidos\"] for r in registros)\n    devolvidos = sum(r[\"tokens_devolvidos\"] for r in registros)\n    if not devolvidos:\n        return {\"razao\": float(\"inf\"), \"lidos\": lidos, \"devolvidos\": 0}\n    return {\n        \"razao\": round(lidos / devolvidos, 1),\n        \"lidos\": lidos,\n        \"devolvidos\": devolvidos,\n        \"veredito\": \"vale\" if lidos / devolvidos >= 8 else \"nao compensa\",\n    }"
+    },
+    {
+      "titulo": "Passo 5: reconfira procedência",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Reconfere uma afirmacao do subagente: caminho e linha citados realmente contem o termo?\nsed -n '142p' app/routes/legacy.py | grep -n \"login\" && echo \"[OK] procedencia confirmada\""
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Primeiro contrato.** Escreva o formato de retorno de um subagente antes de escrever o prompt dele. Com o formato nas mãos, o prompt fica mais curto e o resultado mais utilizável",
+    "Pergunta estreita.** Reformule uma delegação de área em uma delegação de pergunta verificável. Compare a proporção de resultado aproveitável nos dois formatos",
+    "Revisor adversarial.** Submeta um artefato pronto a um subagente cuja única instrução é refutá-lo com evidência. Registre quantos defeitos reais a revisão encontra que a auto-revisão não encontrou",
+    "Fronteira de autonomia.** Liste, por projeto, o que o subagente pode fazer sozinho e o que exige confirmação. Essa lista é o que separa delegação de terceirização de risco"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 11 — Agents e subagentes: delegação com contexto isolado",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

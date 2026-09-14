@@ -1,0 +1,54 @@
+{
+  "numero": "04",
+  "capitulo_fonte": "04",
+  "titulo": "Tipografia Sob Controle: Auto-hospedagem com Fontsource",
+  "estagio": "Estágio 1",
+  "estagio_indice": 1,
+  "objetivo": "No Capítulo 3, vimos como o design vetorial autônomo com o Penpot nos liberta do lock-in corporativo e garante a nossa independência sobre os arquivos nativos de interface . Contudo, há um componente fundamental no design de interfaces contemporâneas que frequentemente é…",
+  "pre_requisito": "Passo 3 concluído",
+  "entregas": [
+    "index.html",
+    "package.json",
+    "main.js",
+    "_app.tsx",
+    "index.ts",
+    "global.css"
+  ],
+  "execucao": [
+    {
+      "titulo": "Execução",
+      "linguagem": "bash",
+      "comandos": [
+        "npm install @fontsource/roboto"
+      ],
+      "codigo": "npm install @fontsource/roboto"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "typescript",
+      "comandos": [],
+      "codigo": "// Importando o CSS que define a regra @font-face do peso 400 (Regular)\nimport '@fontsource/roboto/400.css';\n\n// Importando o CSS que define a regra @font-face do peso 700 (Bold)\nimport '@fontsource/roboto/700.css';\n\nimport './global.css';\n\nfunction Application() {\n  return (\n    <div className=\"soberano\">\n      <h1>Tipografia Rápida e Auto-Hospedada</h1>\n      <p>Velocidade superior, zero impacto na privacidade.</p>\n    </div>\n  );\n}\n\nexport default Application;"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "css",
+      "comandos": [],
+      "codigo": ":root {\n  /* Declaramos a fonte instalada como a raiz de todo documento */\n  font-family: 'Roboto', system-ui, -apple-system, sans-serif;\n  background-color: #0e0e11;\n  color: #f0f0f5;\n  line-height: 1.6;\n}\n\nh1 {\n  font-weight: 700;\n  letter-spacing: -0.02em;\n}\n\np {\n  font-weight: 400;\n}"
+    }
+  ],
+  "gate": "npm install @fontsource/roboto",
+  "comandos": [
+    "npm install @fontsource/roboto"
+  ],
+  "feito_quando": [
+    "Você deleta sem hesitar as importações de CDN dos arquivos HTML raízes do projeto ativista",
+    "Em sua máquina local, instala ambas as tipografias via NPM: `npm install @fontsource/fira-sans @fontsource/merriweather`",
+    "Injeta a importação estrita dos pesos cruciais no ponto de entrada global da aplicação",
+    "Gera um novo deploy e envia para a infraestrutura de hospedagem criptografada da fundação [8]"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 4 — Tipografia Sob Controle: Auto-hospedagem com Fontsource",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

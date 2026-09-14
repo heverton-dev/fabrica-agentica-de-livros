@@ -1,0 +1,34 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "B", "capitulo": "8" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 7: Infraestrutura como Código (IaC) e Contêineres, agora aplicado à segurança e observabilidade",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Cultura de Segurança e Shift-Left",
+        "escopo": "Introdução aos conceitos de DevSecOps, importância do shift-left e práticas de segurança básicas para iniciantes.",
+        "ancora_visual": "flowchart LR\n    A[Entendimento da importância] --> B[Integração de segurança no início]\n    B --> C[Benefícios de falhas detectadas cedo]",
+        "entrega_tecnica": "bash script simples que executa bandit para escaneamento de vulnerabilidades em código Python.",
+        "evolucao_leitor": "De desconhecer práticas de segurança para incorporar verificações de segurança cedo no fluxo.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Observabilidade: Métricas, Logs e Traces",
+        "escopo": "Explicação da tríade de observabilidade, ferramentas básicas (Prometheus, Grafana, ELK, Jaeger) e como coletar dados.",
+        "ancora_visual": "stateDiagram-v2\n    [*] --> Métricas\n    Métricas --> Logs\n    Logs --> Traces\n    Traces --> [*]",
+        "entrega_tecnica": "yaml configuration example for Prometheus scrape config and a basic Grafana dashboard JSON.",
+        "evolucao_leitor": "De não saber como monitorar sistemas para configurar observabilidade simples.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Segurança Integrada ao CI/CD",
+        "escopo": "Como integrar scans de segurança (SAST, dependências, containers) ao pipeline CI/CD usando GitHub Actions.",
+        "ancora_visual": "sequenceDiagram\n    participant Dev as Desenvolvedor\n    participant CI as CI\n    participant Sec as Scanners\n    Dev->>CI: push código\n    CI->>Sec: executar bandit\n    CI->>Sec: executar trivy\n    Sec-->>CI: resultados\n    CI->>Dev: feedback de vulnerabilidades",
+        "entrega_tecnica": "yaml GitHub Actions workflow que inclui jobs bandit e trivy para segurança.",
+        "evolucao_leitor": "De executar pipelines sem segurança para pipelines com scans automáticos e feedback imediato.",
+        "conceito_denso": true
+      }
+    ]
+  }
+}

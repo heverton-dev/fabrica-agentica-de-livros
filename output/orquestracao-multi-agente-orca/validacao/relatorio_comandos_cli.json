@@ -1,0 +1,279 @@
+{
+  "slug": "orquestracao-multi-agente-orca",
+  "capitulos": 16,
+  "total_blocos": 33,
+  "confirmados": 0,
+  "fabricados": 0,
+  "nao_verificados": 33,
+  "por_capitulo_com_falha": {},
+  "regras": {
+    "R-CLI-1": "bloco de código/CLI marcado confere=false (sintaxe fabricada ou parcialmente correta) reprova; sem marcação vira pendência, nunca reprova"
+  },
+  "violacoes": [],
+  "pendentes": [
+    {
+      "origem": "cap_01",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Verificação de integridade do runtime ORCA orca --version # Inspeção do status operacional do daemon local orca status # Inicialização do daemon de orquestraç"
+    },
+    {
+      "origem": "cap_01",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Exemplo de saída estruturada do comando orca status # [ORCA] Daemon Runtime: ACTIVE (PID: 4128) # [ORCA] Engine Version: v2.4.1 # [ORCA] Monitored Repositorie"
+    },
+    {
+      "origem": "cap_01",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de verificação de prontidão para orquestração multi-agente ORCA. \"\"\" import shutil import subprocess i"
+    },
+    {
+      "origem": "cap_02",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Registrar repositório de backend no catálogo do ORCA orca repo add --path /home/dev/projetos/ecommerce-backend --alias backend # Registrar repositório de fron"
+    },
+    {
+      "origem": "cap_02",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de automação para cadastro e validação de repositórios no ORCA. \"\"\" import json import os import subpr"
+    },
+    {
+      "origem": "cap_03",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Criar uma nova worktree baseada na branch 'main' para implementar autenticação JWT orca worktree create --repo backend --branch feature/auth-jwt --base main -"
+    },
+    {
+      "origem": "cap_03",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Remover com segurança uma worktree após a conclusão e mesclagem da tarefa orca worktree rm --repo backend --branch feature/auth-jwt --force # Executar a poda "
+    },
+    {
+      "origem": "cap_03",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script utilitário para provisionamento determinístico de Git Worktrees via ORCA. \"\"\" import json import subpr"
+    },
+    {
+      "origem": "cap_04",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Criar a Mesa Pai que servirá como branch de consolidação do Épico de Pagamentos orca worktree create --repo billing-service --branch epic/payment-refactor "
+    },
+    {
+      "origem": "cap_04",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Ajustar retroativamente o pai de uma worktree existente orca worktree set --repo billing-service --branch feat/pix-gateway --parent-worktree epic/payment-refa"
+    },
+    {
+      "origem": "cap_04",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script para despacho estruturado de épicos hierárquicos no ORCA. \"\"\" import json import subprocess import sys"
+    },
+    {
+      "origem": "cap_05",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Criar um terminal dedicado para rodar o motor Antigravity na worktree de autenticação orca terminal create --repo backend --worktree feature/auth-jwt --han"
+    },
+    {
+      "origem": "cap_05",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de automação para orquestração de terminais PTY via ORCA. \"\"\" import json import subprocess import tim"
+    },
+    {
+      "origem": "cap_06",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Lançar o Google Antigravity em modo autônomo completo na worktree de domínio orca terminal create --repo billing-system --worktree feature/billing-domain -"
+    },
+    {
+      "origem": "cap_06",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script para despacho declarativo de equipe heterogênea de agentes de IA. \"\"\" import json import subprocess im"
+    },
+    {
+      "origem": "cap_07",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Enviar prompt de comando simples para um terminal de agente orca terminal send --handle term_agy_domain --text \"Implementar entidade de domínio Subscriptio"
+    },
+    {
+      "origem": "cap_07",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de envio seguro e mitigação de bloqueios de terminal no ORCA. \"\"\" import re import subprocess import t"
+    },
+    {
+      "origem": "cap_08",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Provisionar a worktree isolada para o novo recurso orca worktree create --repo backend --branch feat/auth-service --base main # 2. Executar o bootstrap aut"
+    },
+    {
+      "origem": "cap_08",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de bootstrap automatizado de variáveis de ambiente e dependências. \"\"\" import os import shutil import "
+    },
+    {
+      "origem": "cap_09",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Visualizar o status tabular consolidado de todas as worktrees ativas orca worktree ps # 2. Monitorar continuamente em modo watch com atualização a cada 3 s"
+    },
+    {
+      "origem": "cap_09",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de vigilância e telemetria contínua de worktrees ORCA. \"\"\" import json import subprocess import time i"
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Inspecionar terminais que estão inativos há mais de 3 minutos orca terminal list --filter \"inactive > 180s\" --json # 2. Encerrar graciosamente um terminal "
+    },
+    {
+      "origem": "cap_10",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de Health Check e Expurgo Automatizado de Agentes Zumbis no ORCA. \"\"\" import json import subprocess im"
+    },
+    {
+      "origem": "cap_11",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Visualizar o diff resumido de uma worktree em relação ao branch base 'main' orca file diff --repo backend --worktree feature/auth-jwt --stat # 2. Exibir o "
+    },
+    {
+      "origem": "cap_11",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de auditoria e extração de diffs estruturados via ORCA. \"\"\" import json import os import subprocess im"
+    },
+    {
+      "origem": "cap_12",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Controlador assíncrono de co-agentes concorrentes com semáforos via ORCA. \"\"\" import asyncio import json impo"
+    },
+    {
+      "origem": "cap_13",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de Auditoria Empírica Contratual para Entregas de Agentes no ORCA. \"\"\" import os import subprocess imp"
+    },
+    {
+      "origem": "cap_13",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# Executar a auditoria empírica na worktree de autenticação python scripts/auditar_entrega_agente.py /home/dev/projetos/workspaces/backend/feat-auth-jwt # Verif"
+    },
+    {
+      "origem": "cap_14",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Obter o hash do commit final homologado na worktree do agente git -C /home/dev/projetos/workspaces/backend/feat-auth-jwt log -n 1 --format=\"%H\" # 2. Navega"
+    },
+    {
+      "origem": "cap_14",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script de Cherry-Pick Automatizado e Reconciliação de Worktrees no ORCA. \"\"\" import os import subprocess impo"
+    },
+    {
+      "origem": "cap_15",
+      "secao": 4,
+      "linguagem": "bash",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "# 1. Verificar o status de autenticação e escopo de permissões do usuário gh auth status # 2. Inspecionar os últimos 5 commits do branch main remoto sem fazer c"
+    },
+    {
+      "origem": "cap_15",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Script para publicação automatizada de Pull Requests e validação de CI via gh CLI. \"\"\" import json import sub"
+    },
+    {
+      "origem": "cap_16",
+      "secao": 4,
+      "linguagem": "python",
+      "status": "nao_verificado",
+      "fonte": null,
+      "trecho": "#!/usr/bin/env python3 # -*- coding: utf-8 -*- \"\"\" Orquestrador Mestre de Fábrica de Software Autônoma via ORCA. \"\"\" import json import subprocess import time i"
+    }
+  ]
+}

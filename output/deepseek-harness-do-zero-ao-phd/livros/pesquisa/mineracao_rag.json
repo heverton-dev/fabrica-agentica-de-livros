@@ -1,0 +1,750 @@
+{
+  "tema": "retrieval augmented generation RAG vector database embeddings",
+  "gerado_em": "23 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=retrieval+augmented+ -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=retrieval+augmented+generation+RAG+vector+da -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 8
+    }
+  },
+  "total_unicos": 38,
+  "registros": [
+    {
+      "titulo": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "autores": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan",
+        "Yuxi Bi",
+        "Yi Dai",
+        "Jiawei Sun",
+        "Wang, Meng",
+        "Wang, Haofen"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2312.10997",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "resumo": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development.",
+      "citacoes": 705,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "autores": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li",
+        "Dawei Yin",
+        "Tat‐Seng Chua",
+        "Qing Li"
+      ],
+      "ano": 2024,
+      "doi": "10.1145/3637528.3671470",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "resumo": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal knowledge. Given the powerful abilities of RAG in providing the latest and helpful auxiliary information, Retrieval-Augmented Large Language Models (RA-LLMs) have emerged to harness external and authoritative knowledge bases, rather than solely relying on the model's internal knowledge, to augment the quality of the generated content of LLMs. In this survey, we comprehensively review existing research studies in RA-LLMs, covering three primary technical perspectives: Furthermore, to deliver deeper insights, we discuss current limitations and several promising directions for future research. Updated information about this survey can be found at: https://advanced-recommender-systems.github.io/RAG-Meets-LLMs/",
+      "citacoes": 706,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Hybrid Retrieval-Augmented Generation (RAG) Systems with Embedding Vector Databases",
+      "autores": [
+        "S. Kiran"
+      ],
+      "ano": 2025,
+      "doi": "10.32628/cseit25112702",
+      "url": "https://doi.org/10.32628/cseit25112702",
+      "resumo": "This article explores the integration of embedding vector databases into Retrieval-Augmented Generation (RAG) systems to enhance the capabilities of large language models. The article explores how hybrid retrieval strategies combining dense vector search with traditional keyword-based methods can address the limitations of standalone LLMs, particularly regarding knowledge cutoff, hallucinations, and access to domain-specific information. The article presents a comprehensive framework covering theoretical foundations, methodological approaches, implementation considerations, and experimental results across multiple domains. By leveraging vector embeddings for semantic search alongside traditional retrieval techniques, the proposed system demonstrates significant improvements in accuracy, relevance, and factual correctness while maintaining reasonable query response times. The article provides valuable insights for enterprise-scale deployments of RAG systems across various application domains including healthcare, legal, technical support, and financial services.",
+      "citacoes": 5,
+      "periodico": "International Journal of Scientific Research in Computer Science Engineering and Information Technology",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The Power of Noise: Redefining Retrieval for RAG Systems",
+      "autores": [
+        "Florin Cuconasu",
+        "Giovanni Trappolini",
+        "Federico Siciliano",
+        "Simone Filice",
+        "Cesare Campagnano",
+        "Yoelle Maarek",
+        "Nicola Tonellotto",
+        "Fabrizio Silvestri"
+      ],
+      "ano": 2024,
+      "doi": "10.1145/3626772.3657834",
+      "url": "https://doi.org/10.1145/3626772.3657834",
+      "resumo": "Retrieval-Augmented Generation (RAG) has recently emerged as a method to extend beyond the pre-trained knowledge of Large Language Models by augmenting the original prompt with relevant passages or documents retrieved by an Information Retrieval (IR) system. RAG has become increasingly important for Generative AI solutions, especially in enterprise settings or in any domain in which knowledge is constantly refreshed and cannot be memorized in the LLM. We argue here that the retrieval component of RAG systems, be it dense or sparse, deserves increased attention from the research community, and accordingly, we conduct the first comprehensive and systematic examination of the retrieval strategy of RAG systems. We focus, in particular, on the type of passages IR systems within a RAG solution should retrieve. Our analysis considers multiple factors, such as the relevance of the passages included in the prompt context, their position, and their number. One counter-intuitive finding of this work is that the retriever's highest-scoring documents that are not directly relevant to the query (e.g., do not contain the answer) negatively impact the effectiveness of the LLM. Even more surprising, we discovered that adding random documents in the prompt improves the LLM accuracy by up to 35%. These results highlight the need to investigate the appropriate strategies when integrating retrieval with LLMs, thereby laying the groundwork for future research in this area.",
+      "citacoes": 202,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Almanac — Retrieval-Augmented Language Models for Clinical Medicine",
+      "autores": [
+        "Cyril Zakka",
+        "Rohan Shad",
+        "Akash Chaurasia",
+        "Alex R. Dalal",
+        "Jennifer L. Kim",
+        "Michael Moor",
+        "Robyn Fong",
+        "C. Phillips",
+        "Kevin Alexander",
+        "Euan A. Ashley",
+        "Jack Boyd",
+        "Kathleen Boyd",
+        "Karen G. Hirsch",
+        "Curt Langlotz",
+        "Rita Lee",
+        "Joanna Melia",
+        "Joanna Nelson",
+        "Karim Sallam",
+        "Stacey Tullis",
+        "Melissa A. Vogelsong",
+        "John P. Cunningham",
+        "William Hiesinger"
+      ],
+      "ano": 2024,
+      "doi": "10.1056/aioa2300068",
+      "url": "https://doi.org/10.1056/aioa2300068",
+      "resumo": "BACKGROUND: Large language models (LLMs) have recently shown impressive zero-shot capabilities, whereby they can use auxiliary data, without the availability of task-specific training examples, to complete a variety of natural language tasks, such as summarization, dialogue generation, and question answering. However, despite many promising applications of LLMs in clinical medicine, adoption of these models has been limited by their tendency to generate incorrect and sometimes even harmful statements. METHODS: We tasked a panel of eight board-certified clinicians and two health care practitioners with evaluating Almanac, an LLM framework augmented with retrieval capabilities from curated medical resources for medical guideline and treatment recommendations. The panel compared responses from Almanac and standard LLMs (ChatGPT-4, Bing, and Bard) versus a novel data set of 314 clinical questions spanning nine medical specialties. RESULTS: Almanac showed a significant improvement in performance compared with the standard LLMs across axes of factuality, completeness, user preference, and adversarial safety. CONCLUSIONS: Our results show the potential for LLMs with access to domain-specific corpora to be effective in clinical decision-making. The findings also underscore the importance of carefully testing LLMs before deployment to mitigate their shortcomings. (Funded by the National Institutes of Health, National Heart, Lung, and Blood Institute.).",
+      "citacoes": 371,
+      "periodico": "NEJM AI",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Retrieval-Augmented Generation (RAG)",
+      "autores": [
+        "Michael Klesel",
+        "H.F. Wittmann"
+      ],
+      "ano": 2025,
+      "doi": "10.1007/s12599-025-00945-3",
+      "url": "https://doi.org/10.1007/s12599-025-00945-3",
+      "resumo": "The necessity for information is a fundamental aspect of human nature, and as such, there are ongoing efforts to enhance information retrieval with information systems (Alavi and Leidner 2001 ; Alavi et al. 2024 ). Companies are particularly affected by this, as they have extensive data at their disposal, and employees need to access it. Unfortunately, current systems are not able to adequately meet employees’ expectations. In fact, studies have shown that 79% of employees are dissatisfied with the user interfaces of enterprise search systems (Cleverley and Burnett 2019 ). This has led to a need for new approaches that can better address the information needs of organizations.",
+      "citacoes": 63,
+      "periodico": "Business & Information Systems Engineering",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "CareerX: A Retrieval-Augmented Generation Framework for Personalized AI-Driven Career Guidance",
+      "autores": [
+        "Asai, Akari",
+        "Zeqiu Wu",
+        "Wang, Yizhong",
+        "Sil, Avirup",
+        "Hannaneh Hajishirzi"
+      ],
+      "ano": 2023,
+      "doi": "10.48550/arxiv.2310.11511",
+      "url": "http://arxiv.org/abs/2310.11511",
+      "resumo": "Career guidance systems must adapt to rapidly shifting labor markets, yet traditional platforms rely on static databases while standalone large language models (LLMs) are limited by training data cutoffs and prone to hallucination. This paper presents CareerX, a web-based career guidance system that augments LLM generation with live web retrieval through a SearXNG-based meta-search pipeline. The system dynamically generates personalized intake questionnaires via LLM-driven schema generation, formulates targeted search queries, scrapes and cleans live web sources, and synthesizes structured career dashboards through Zod-enforced schema-constrained generation. Unlike canonical RAG architectures that retrieve from pre-built vector stores, CareerX performs direct web retrieval — live search results are scraped and injected into the LLM context window, trading embedding-based semantic precision for real-time data currency. The system produces location-specific salary data, source-attributed university recommendations, and traceable URL citations that standalone LLMs cannot provide without retrieval augmentation. Initial measurements across three successful test profiles indicate a mean end-to-end pipeline time of 66.7 seconds (SD = 6.2s), of which LLM synthesis accounts for approximately 15–20 seconds, with an average of 37.7 web sources retrieved per session and 79% schema completeness.",
+      "citacoes": 92,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+      "autores": [
+        "Zirui Guo",
+        "Lianghao Xia",
+        "Yanhua Yu",
+        "Tu Ao",
+        "Chao Huang"
+      ],
+      "ano": 2025,
+      "doi": "10.18653/v1/2025.findings-emnlp.568",
+      "url": "https://doi.org/10.18653/v1/2025.findings-emnlp.568",
+      "resumo": "Retrieval-Augmented Generation (RAG) systems enhance large language models (LLMs) by integrating external knowledge sources, enabling more accurate and contextually relevant responses tailored to user needs.However, existing RAG systems have significant limitations, including reliance on flat data representations and inadequate contextual awareness, which can lead to fragmented answers that fail to capture complex interdependencies.To address these challenges, we propose Ligh-tRAG, a novel framework that incorporates graph structures into text indexing and retrieval processes.This innovative approach employs a dual-level retrieval system that enhances comprehensive information retrieval from both lowand high-level knowledge discovery.Additionally, the integration of graph structures with vector representations facilitates efficient retrieval of related entities and their relationships, significantly improving response times while maintaining contextual relevance.This capability is further enhanced by an incremental update algorithm that ensures the timely integration of new data, allowing the system to remain effective and responsive in rapidly changing data environments.Extensive experimental validation demonstrates considerable improvements in retrieval accuracy and efficiency compared to existing approaches.",
+      "citacoes": 130,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction",
+      "autores": [
+        "Bhaskarjit Sarmah",
+        "Dhagash Mehta",
+        "Benika Hall",
+        "Rohan Rao",
+        "Sunil Patel",
+        "Stefano Pasquali"
+      ],
+      "ano": 2024,
+      "doi": "10.1145/3677052.3698671",
+      "url": "https://doi.org/10.1145/3677052.3698671",
+      "resumo": "Extraction and interpretation of intricate information from unstructured text data arising in financial applications, such as earnings call transcripts, present substantial challenges to large language models (LLMs) even using the current best practices to use Retrieval Augmented Generation (RAG) (referred to as VectorRAG techniques which utilize vector databases for information retrieval) due to challenges such as domain specific terminology and complex formats of the documents. We introduce a novel approach based on a combination, called HybridRAG, of the Knowledge Graphs (KGs) based RAG techniques (called GraphRAG) and VectorRAG techniques to enhance question-answer (Q&A) systems for information extraction from financial documents that is shown to be capable of generating accurate and contextually relevant answers. Using experiments on a set of financial earning call transcripts documents which come in the form of Q&A format, and hence provide a natural set of pairs of ground-truth Q&As, we show that HybridRAG which retrieves context from both vector database and KG outperforms both traditional VectorRAG and GraphRAG individually when evaluated at both the retrieval and generation stages in terms of retrieval accuracy and answer generation. The proposed technique has applications beyond the financial domain.",
+      "citacoes": 117,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The Good and The Bad: Exploring Privacy Issues in Retrieval-Augmented Generation (RAG)",
+      "autores": [
+        "Shenglai Zeng",
+        "Jiankun Zhang",
+        "Pengfei He",
+        "Yiding Liu",
+        "Yue Xing",
+        "Xu Han",
+        "Jie Ren",
+        "Chang Yi",
+        "Shuaiqiang Wang",
+        "Dawei Yin",
+        "Jiliang Tang"
+      ],
+      "ano": 2024,
+      "doi": "10.18653/v1/2024.findings-acl.267",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.267",
+      "resumo": "Shenglai Zeng, Jiankun Zhang, Pengfei He, Yiding Liu, Yue Xing, Han Xu, Jie Ren, Yi Chang, Shuaiqiang Wang, Dawei Yin, Jiliang Tang. Findings of the Association for Computational Linguistics: ACL 2024.",
+      "citacoes": 92,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Multi-Document Retrieval-Augmented Generation (RAG) Framework for Accelerated Research Synthesis using Groq API and Vector Embeddings",
+      "autores": [
+        "Sujal Jaiswal, Sujal Jaiswal"
+      ],
+      "ano": 2026,
+      "doi": "10.55041/ijsrem62585",
+      "url": "https://doi.org/10.55041/ijsrem62585",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "International Journal of Scientific Research in Engineering and Management",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Evaluation of Vector Database and LLM Models in Retrieval-Augmented Generation (RAG) Systems",
+      "autores": [
+        "Tekgöz, Hilal",
+        "Erdoğan, Halit",
+        "Uz, Harun",
+        "Altınok, Hatice"
+      ],
+      "ano": 2025,
+      "doi": "10.1109/ubmk67458.2025.11206778",
+      "url": "https://doi.org/10.1109/ubmk67458.2025.11206778",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "2025 10th International Conference on Computer Science and Engineering (UBMK)",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "RAG with Database and Text2SQL",
+      "autores": [],
+      "ano": 2026,
+      "doi": "10.1142/9789819827602_0013",
+      "url": "https://doi.org/10.1142/9789819827602_0013",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Retrieval Augmented Generation in Production",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Efficient Information Retrieval and Response Generation with Retrieval-Augmented Generation (RAG)",
+      "autores": [
+        "Pi, Wenyi"
+      ],
+      "ano": 2024,
+      "doi": "10.59350/r9dj1-zkx52",
+      "url": "https://doi.org/10.59350/r9dj1-zkx52",
+      "resumo": "<jats:p>&lt;strong&gt; How to efficiently retrieve information for different applications &lt;/strong&gt; Author Wenyi Pi (ORCID: 0009-0002-2884-2771) This article aims to explore various ways in which Retrieval-Augmented Generation (RAG) can be utilised to retrieve information and generate responses effectively within the dialogue system. The rationale behind utilising RAG as well as potential ways in which it can be employed effectively will be covered.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Efficient Information Retrieval and Response Generation with Retrieval-Augmented Generation (RAG)",
+      "autores": [
+        "Pi, Wenyi"
+      ],
+      "ano": 2024,
+      "doi": "10.59350/q2pq3-0fv85",
+      "url": "https://doi.org/10.59350/q2pq3-0fv85",
+      "resumo": "<jats:p>&lt;strong&gt; How to efficiently retrieve information for different applications &lt;/strong&gt; Author Wenyi Pi (ORCID: 0009-0002-2884-2771) This article aims to explore various ways in which Retrieval-Augmented Generation (RAG) can be utilised to retrieve information and generate responses effectively within the dialogue system. The rationale behind utilising RAG as well as potential ways in which it can be employed effectively will be covered.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Retrieval Augmented Generation (RAG) Model",
+      "autores": [
+        "Mishra, Ankit",
+        "Gupta, Aniket"
+      ],
+      "ano": 2025,
+      "doi": "10.55248/gengpi.6.0125.0635",
+      "url": "https://doi.org/10.55248/gengpi.6.0125.0635",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "International Journal of Research Publication and Reviews",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Implementation of an Academic Information Chatbot Based on Retrieval-Augmented Generation (RAG) Using LLaMA 3.1",
+      "autores": [
+        "Bustomy, Muhammad Saddam Heykal",
+        "Rosid, Mochamad Alfan"
+      ],
+      "ano": 2026,
+      "doi": "10.21070/ups.9995",
+      "url": "https://doi.org/10.21070/ups.9995",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Cross-Reflection Evaluator-Optimizer Feedback Retrieval-Augmented Generation (RAG) Framework",
+      "autores": [
+        "Atreya, Udayan"
+      ],
+      "ano": null,
+      "doi": "10.31979/etd.3psf-m7aj",
+      "url": "https://doi.org/10.31979/etd.3psf-m7aj",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Understanding Retrieval Pitfalls: Challenges Faced by Retrieval Augmented Generation (RAG) models",
+      "autores": [
+        "Kau, Amanda"
+      ],
+      "ano": 2024,
+      "doi": "10.59350/wek8b-sbj84",
+      "url": "https://doi.org/10.59350/wek8b-sbj84",
+      "resumo": "<jats:p>Introduction Large language models (LLMs) like GPT-4, the engine of products like ChatGPT, have taken centre stage in recent years due to their astonishing capabilities. Yet, they are far from perfect. Many of us have since learnt — perhaps when asking ChatGPT a question or employing it to write our reports — that LLMs can hallucinate.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Prospects of Retrieval Augmented Generation (RAG) for Academic Library Search and Retrieval",
+      "autores": [
+        "Lund, Brady"
+      ],
+      "ano": 2025,
+      "doi": "10.2139/ssrn.5295044",
+      "url": "https://doi.org/10.2139/ssrn.5295044",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Progressive Searching for Retrieval in RAG",
+      "autores": [
+        "Taehee Jeong",
+        "Xingzhe Zhao",
+        "Peizu Li",
+        "Markus Valvur",
+        "Weihua Zhao"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2602.07297v1",
+      "resumo": "Retrieval Augmented Generation (RAG) is a promising technique for mitigating two key limitations of large language models (LLMs): outdated information and hallucinations. RAG system stores documents as embedding vectors in a database. Given a query, search is executed to find the most related documents. Then, the topmost matching documents are inserted into LLMs' prompt to generate a response. Efficient and accurate searching is critical for RAG to get relevant information. We propose a cost-effective searching algorithm for retrieval process. Our progressive searching algorithm incrementally refines the candidate set through a hierarchy of searches, starting from low-dimensional embeddings and progressing into a higher, target-dimensionality. This multi-stage approach reduces retrieval time while preserving the desired accuracy. Our findings demonstrate that progressive search in RAG systems achieves a balance between dimensionality, speed, and accuracy, enabling scalable and high-performance retrieval even for large databases.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "4bit-Quantization in Vector-Embedding for RAG",
+      "autores": [
+        "Taehee Jeong"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2501.10534v1",
+      "resumo": "Retrieval-augmented generation (RAG) is a promising technique that has shown great potential in addressing some of the limitations of large language models (LLMs). LLMs have two major limitations: they can contain outdated information due to their training data, and they can generate factually inaccurate responses, a phenomenon known as hallucinations. RAG aims to mitigate these issues by leveraging a database of relevant documents, which are stored as embedding vectors in a high-dimensional space. However, one of the challenges of using high-dimensional embeddings is that they require a significant amount of memory to store. This can be a major issue, especially when dealing with large databases of documents. To alleviate this problem, we propose the use of 4-bit quantization to store the embedding vectors. This involves reducing the precision of the vectors from 32-bit floating-point numbers to 4-bit integers, which can significantly reduce the memory requirements. Our approach has several benefits. Firstly, it significantly reduces the memory storage requirements of the high-dimensional vector database, making it more feasible to deploy RAG systems in resource-constrained environments. Secondly, it speeds up the searching process, as the reduced precision of the vectors allows for faster computation. Our code is available at https://github.com/taeheej/4bit-Quantization-in-Vector-Embedding-for-RAG",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Context-augmented Retrieval: A Novel Framework for Fast Information Retrieval based Response Generation using Large Language Model",
+      "autores": [
+        "Sai Ganesh",
+        "Anupam Purwar",
+        "Gautam B"
+      ],
+      "ano": 2024,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2406.16383v2",
+      "resumo": "Generating high-quality answers consistently by providing contextual information embedded in the prompt passed to the Large Language Model (LLM) is dependent on the quality of information retrieval. As the corpus of contextual information grows, the answer/inference quality of Retrieval Augmented Generation (RAG) based Question Answering (QA) systems declines. This work solves this problem by combining classical text classification with the Large Language Model (LLM) to enable quick information retrieval from the vector store and ensure the relevancy of retrieved information. For the same, this work proposes a new approach Context Augmented retrieval (CAR), where partitioning of vector database by real-time classification of information flowing into the corpus is done. CAR demonstrates good quality answer generation along with significant reduction in information retrieval and answer generation time.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "RAGe: A Retrieval-Augmented Generation Evaluation Framework",
+      "autores": [
+        "Larissa Guder",
+        "João Pedro de Moura",
+        "Arthur Accorsi",
+        "Gustavo Losch do Amaral",
+        "Maurício Cecílio Magnaguagno",
+        "Felipe Meneguzzi",
+        "Marcio Sorraglia Pinho",
+        "Dalvan Griebler"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2605.27445v1",
+      "resumo": "Deploying Large Language Model (LLM) applications, particularly those relying on Retrieval-Augmented Generation (RAG), remains challenging due to high computational demands, outdated knowledge bases, and the need to manually select optimal pipeline components. In this work, we propose a modular framework for benchmarking and guiding the efficient development of RAG applications by focusing on resource telemetry and component recommendation, suggesting the best components for a domain-specific dataset. Our approach leverages core techniques in LLM applications, including document chunking, vector databases, embedding models, and retrievers, to evaluate trade-offs among accuracy, efficiency, and scalability. By directly correlating retrieval and generation quality with underlying hardware constraints, RAGe supports researchers to identify the most effective, domain-specific RAG setups for their specific operational needs, facilitating rapid prototyping even on consumer-grade hardware.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Cost-Governed RAG: Unified Per-Tenant Cost Attribution Across Retrieval and Generation in Multi-Tenant LLM Systems",
+      "autores": [
+        "Navnit Shukla"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2607.12188v1",
+      "resumo": "Enterprise Retrieval-Augmented Generation (RAG) deployments face a critical governance gap: while LLM generation cost is metered per token, the retrieval layer - vector memory, similarity compute, and embedding API calls - remains an unattributed shared cost, enabling invisible cross-subsidization among tenants. We present Cost-Governed RAG, an architecture that integrates a codebook-oblivious vector index (TurboVec) with a multi-tenant LLM governance gateway, creating a unified observability stack where embedding, retrieval, and generation costs are jointly attributable per tenant. The architecture exploits TurboVec's deterministic, closed-form memory formula to enable near-exact per-tenant retrieval cost calculation - a property unavailable in graph-based indexes with non-linear memory overhead. Deployed on Snowpark Container Services within a cloud data platform's governance boundary, the system achieves 99.96% end-to-end cost attribution accuracy across 100 simulated tenants (10M vectors, log-normal size distribution) with telemetry overhead below 0.04% of query latency. The architecture reduces retrieval infrastructure cost by 3.1-9.0x compared to managed vector database services under the pricing assumptions detailed in Section IV. We formalize a three-layer cost model and demonstrate that codebook-oblivious quantization enables deterministic per-tenant cost attribution while also removing the shared-codebook leakage surface present in trained quantizers - the latter observation being exploratory and subject to the limitations described in Section VII.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "RAR: Setting Knowledge Tripwires for Retrieval Augmented Rejection",
+      "autores": [
+        "Tommaso Mario Buonocore",
+        "Enea Parimbelli"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2505.13581v1",
+      "resumo": "Content moderation for large language models (LLMs) remains a significant challenge, requiring flexible and adaptable solutions that can quickly respond to emerging threats. This paper introduces Retrieval Augmented Rejection (RAR), a novel approach that leverages a retrieval-augmented generation (RAG) architecture to dynamically reject unsafe user queries without model retraining. By strategically inserting and marking malicious documents into the vector database, the system can identify and reject harmful requests when these documents are retrieved. Our preliminary results show that RAR achieves comparable performance to embedded moderation in LLMs like Claude 3.5 Sonnet, while offering superior flexibility and real-time customization capabilities, a fundamental feature to timely address critical vulnerabilities. This approach introduces no architectural changes to existing RAG systems, requiring only the addition of specially crafted documents and a simple rejection mechanism based on retrieval results.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "RAGdb: A Zero-Dependency, Embeddable Architecture for Multimodal Retrieval-Augmented Generation on the Edge",
+      "autores": [
+        "Ahmed Bin Khalid"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2602.22217v1",
+      "resumo": "Retrieval-Augmented Generation (RAG) has established itself as the standard paradigm for grounding Large Language Models (LLMs) in domain-specific, up-to-date data. However, the prevailing architecture for RAG has evolved into a complex, distributed stack requiring cloud-hosted vector databases, heavy deep learning frameworks (e.g., PyTorch, CUDA), and high-latency embedding inference servers. This ``infrastructure bloat'' creates a significant barrier to entry for edge computing, air-gapped environments, and privacy-constrained applications where data sovereignty is paramount.\n  This paper introduces RAGdb, a novel monolithic architecture that consolidates automated multimodal ingestion, ONNX-based extraction, and hybrid vector retrieval into a single, portable SQLite container. We propose a deterministic Hybrid Scoring Function (HSF) that combines sublinear TF-IDF vectorization with exact substring boosting, eliminating the need for GPU inference at query time. Experimental evaluation on an Intel i7-1165G7 consumer laptop demonstrates that RAGdb achieves 100\\% Recall@1 for entity retrieval and an ingestion efficiency gain of 31.6x during incremental updates compared to cold starts. Furthermore, the system reduces disk footprint by approximately 99.5\\% compared to standard Docker-based RAG stacks, establishing the ``Single-File Knowledge Container'' as a viable primitive for decentralized, local-first AI.\n  Keywords: Edge AI, Retrieval-Augmented Generation, Vector Search, Green AI, Serverless Architecture, Knowledge Graphs, Efficient Computing.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Beyond Nearest Neighbors: Semantic Compression and Graph-Augmented Retrieval for Enhanced Vector Search",
+      "autores": [
+        "Rahul Raja",
+        "Arpita Vats"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2507.19715v1",
+      "resumo": "Vector databases typically rely on approximate nearest neighbor (ANN) search to retrieve the top-k closest vectors to a query in embedding space. While effective, this approach often yields semantically redundant results, missing the diversity and contextual richness required by applications such as retrieval-augmented generation (RAG), multi-hop QA, and memory-augmented agents. We introduce a new retrieval paradigm: semantic compression, which aims to select a compact, representative set of vectors that captures the broader semantic structure around a query. We formalize this objective using principles from submodular optimization and information geometry, and show that it generalizes traditional top-k retrieval by prioritizing coverage and diversity. To operationalize this idea, we propose graph-augmented vector retrieval, which overlays semantic graphs (e.g., kNN or knowledge-based links) atop vector spaces to enable multi-hop, context-aware search. We theoretically analyze the limitations of proximity-based retrieval under high-dimensional concentration and highlight how graph structures can improve semantic coverage. Our work outlines a foundation for meaning-centric vector search systems, emphasizing hybrid indexing, diversity-aware querying, and structured semantic retrieval. We make our implementation publicly available to foster future research in this area.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "Developing Visual Augmented Q&A System using Scalable Vision Embedding Retrieval & Late Interaction Re-ranker",
+      "autores": [
+        "Rachna Saxena",
+        "Abhijeet Kumar",
+        "Suresh Shanmugam"
+      ],
+      "ano": 2025,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2507.12378v1",
+      "resumo": "Traditional information extraction systems face challenges with text only language models as it does not consider infographics (visual elements of information) such as tables, charts, images etc. often used to convey complex information to readers. Multimodal LLM (MLLM) face challenges of finding needle in the haystack problem i.e., either longer context length or substantial number of documents as search space. Late interaction mechanism over visual language models has shown state of the art performance in retrieval-based vision augmented Q&A tasks. There are yet few challenges using it for RAG based multi-modal Q&A. Firstly, many popular and widely adopted vector databases do not support native multi-vector retrieval. Secondly, late interaction requires computation which inflates space footprint and can hinder enterprise adoption. Lastly, the current state of late interaction mechanism does not leverage the approximate neighbor search indexing methods for large speed ups in retrieval process. This paper explores a pragmatic approach to make vision retrieval process scalable and efficient without compromising on performance quality. We propose multi-step custom implementation utilizing widely adopted hybrid search (metadata & embedding) and state of the art late interaction re-ranker to retrieve best matching pages. Finally, MLLM are prompted as reader to generate answers from contextualized best matching pages. Through experiments, we observe that the proposed design is scalable (significant speed up) and stable (without degrading performance quality), hence can be used as production systems at enterprises.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "HyEm: Query-Adaptive Hyperbolic Retrieval for Biomedical Ontologies via Euclidean Vector Indexing",
+      "autores": [
+        "Ou Deng",
+        "Shoji Nishimura",
+        "Atsushi Ogihara",
+        "Qun Jin"
+      ],
+      "ano": 2026,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2604.09550v1",
+      "resumo": "Retrieval-augmented generation (RAG) for biomedical knowledge faces a hierarchy-aware ontology grounding challenge: resources like HPO, DO, and MeSH use deep ``is-a\" taxonomies, yet production stacks rely on Euclidean embeddings and ANN indexes. While hyperbolic embeddings suit hierarchical representation, they face two barriers: (i) lack of native vector database support, and (ii) risk of underperforming on entity-centric queries where hierarchy is irrelevant. We present HyEm, a lightweight retrieval layer integrating hyperbolic ontology embeddings into existing Euclidean ANN infrastructure. HyEm learns radius-controlled hyperbolic embeddings, stores origin log-mapped vectors in standard Euclidean databases for candidate retrieval, then applies exact hyperbolic reranking. A query-adaptive gate outputs continuous mixing weights, combining Euclidean semantic similarity with hyperbolic hierarchy distance at reranking time. Our bi-Lipschitz analysis under radius constraints provides practical guidance for ANN oversampling and dimensionality.Experiments on biomedical ontology subsets demonstrate HyEm preserves 94-98% of Euclidean baseline performance on entity-centric queries while substantially improving hierarchy-navigation and mixed-intent queries, maintaining indexability at moderate oversampling.",
+      "citacoes": null,
+      "periodico": "arXiv",
+      "fonte": "arxiv",
+      "fonte_nome": "arXiv",
+      "classe": "A"
+    },
+    {
+      "titulo": "MMCRAG-Resp: a multi-modal corrective retrieval-augmented generation framework for explainable respiratory disease reasoning.",
+      "autores": [
+        "Anny Leema A",
+        "Rajashri S",
+        "Sriram M",
+        "Girish M",
+        "Balakrishnan P"
+      ],
+      "ano": 2026,
+      "doi": "10.3389/frai.2026.1850832",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42534923/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Frontiers in artificial intelligence",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Evaluation of a Retrieval-Augmented Generation Chatbot for Antimicrobial Resistance Research: Comparative Analysis of Large Language Models.",
+      "autores": [
+        "Escudero-Arnanz O",
+        "Valero-Méndez ME",
+        "Sánchez-Ramos N",
+        "Soguero-Ruíz C"
+      ],
+      "ano": 2026,
+      "doi": "10.2196/83206",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41875309/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "JMIR AI",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "JADE: jawbone lesion diagnosis and decision supporting system.",
+      "autores": [
+        "Baseri Saadi S",
+        "Ver Berne J",
+        "Cavalcante Fontenele R",
+        "Claes P",
+        "Jacobs R"
+      ],
+      "ano": 2026,
+      "doi": "10.1093/dmfr/twag017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41872013/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Dento maxillo facial radiology",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "[Development and validation of PhenoRAG: A visualization tool for automated human phenotype ontology term annotation based on large language models and retrieval-augmented generation technology].",
+      "autores": [
+        "Zhong W",
+        "Yan Y",
+        "Yang K",
+        "Liu Y",
+        "Fu X",
+        "Yao Z",
+        "Yin C"
+      ],
+      "ano": 2026,
+      "doi": "10.3760/cma.j.cn511374-20250923-00564",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41621843/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Zhonghua yi xue yi chuan xue za zhi = Zhonghua yixue yichuanxue zazhi = Chinese journal of medical genetics",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "RadOncRAG: A Novel Retrieval-Augmented Generation Framework Improves Large Language Model Benchmark Performance in Radiation Oncology.",
+      "autores": [
+        "Thaker NG",
+        "Redjal N",
+        "Dicker A",
+        "Loaiza-Bonilla A",
+        "Royce T",
+        "Subbiah V",
+        "Deendyal V",
+        "Gabriel JR",
+        "Shetty N",
+        "Choudhri A",
+        "Thaker GH"
+      ],
+      "ano": 2025,
+      "doi": "10.1200/CCI-25-00220",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41237352/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "JCO clinical cancer informatics",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Improving postoperative length of stay forecasting with retrieval-augmented prediction.",
+      "autores": [
+        "Park BH",
+        "Hsu CN",
+        "Nguyen A",
+        "Zhou YQ",
+        "Gabriel RA"
+      ],
+      "ano": 2025,
+      "doi": "10.1093/jamia/ocaf154",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40973169/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Journal of the American Medical Informatics Association : JAMIA",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Context-Aware Retrieval-Augmented Generation for Artificial Intelligence in Urology.",
+      "autores": [
+        "Sriram A",
+        "N M",
+        "Sundan B",
+        "Krishnamoorthy S"
+      ],
+      "ano": 2025,
+      "doi": "10.7759/cureus.88167",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40821282/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Cureus",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    },
+    {
+      "titulo": "Precision Grounding: Augmenting Large Language Models with Evidence-Based Databases for Trustworthy Genetic Variant Summarization.",
+      "autores": [
+        "Du X",
+        "Nagy A",
+        "Oates MF",
+        "Wang Y",
+        "Wang X",
+        "Plasek JM",
+        "Aronson SJ",
+        "Lebo MS",
+        "Zhou L"
+      ],
+      "ano": 2025,
+      "doi": "10.1101/2025.06.09.25329279",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40585076/",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "medRxiv : the preprint server for health sciences",
+      "fonte": "pubmed",
+      "fonte_nome": "PubMed",
+      "classe": "A"
+    }
+  ]
+}

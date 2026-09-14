@@ -1,0 +1,66 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Camada 2 — Harness e Ciclo de Vida: Disjuntores, Worktrees e Quality Gates",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Blindar o ambiente de execução com os três princípios do harness: isolamento de execução, interceptação de ciclo de vida e agnosticismo operacional.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Disjuntor de terminal com lista de bloqueio e teto de tempo",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Disjuntor de terminal: inspecao pre-comando, lista de bloqueio e teto de tempo.\"\"\"\n\nimport re\nimport subprocess\nimport sys\nfrom typing import List, Tuple\n\nTIMEOUT_PADRAO_S = 30\n\n# (padrao, motivo) — inspecionado sobre o comando normalizado\nBLOQUEIOS: List[Tuple[str, str]] = [\n    (r\"rm\\s+-(?:rf|fr)\\s+[/~]\", \"remocao recursiva em raiz ou home\"),\n    (r\"remove-item\\s+.*-recurse.*-force\", \"remocao recursiva forcada\"),\n    (r\"drop\\s+database\", \"destruicao de banco de dados\"),\n    (r\"git\\s+push\\s+.*--force\", \"envio forcado de branch\"),\n    (r\"git\\s+commit\\s+.*--no-verify\", \"tentativa de pular portoes de qualidade\"),\n    (r\"format\\s+[a-z]:\", \"formatacao de unidade\"),\n    (r\":\\(\\)\\s*\\{.*\\};\\s*:\", \"fork bomb\"),\n]\n\nBLOCOS = [re.compile(p, re.IGNORECASE) for p, _ in BLOQUEIOS]\n\n\ndef inspecionar(comando: str) -> Tuple[bool, str]:\n    for (padrao, motivo), compilado in zip(BLOQUEIOS, BLOCOS):\n        if compilado.search(comando.strip()):\n            return False, f\"DISJUNTOR ABERTO: {motivo} (padrao {padrao!r})\"\n    return True, \"comando liberado\"\n\n\ndef executar(comando: str, timeout: int = TIMEOUT_PADRAO_S) -> int:\n    liberado, motivo = inspecionar(comando)\n    if not liberado:\n        print(f\"[BLOQUEIO] {motivo}\")\n        print(f\"[BLOQUEIO] comando rejeitado: {comando!r}\")\n        return 1\n\n    print(f\"[EXECUTANDO] {comando!r} (timeout {timeout}s)\")\n    try:\n        processo = subprocess.run(comando, shell=True, capture_output=True,\n                                  text=True, timeout=timeout)\n    except subprocess.TimeoutExpired:\n  "
+    },
+    {
+      "titulo": "4.2 Configuração de contenção do harness",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"harness\": {\n    \"isolamento\": {\n      \"modo\": \"worktree-por-tarefa\",\n      \"diretorio_base\": \".worktrees\",\n      \"descartar_em_reprovacao\": true\n    },\n    \"execucao\": {\n      \"timeout_padrao_s\": 30,\n      \"timeout_maximo_s\": 120,\n      \"teto_repeticao_erro\": 2,\n      \"teto_turnos_sem_checkpoint\": 8\n    },\n    \"bloqueios\": [\"rm -rf /\", \"drop database\", \"git push --force\", \"git commit --no-verify\"],\n    \"pre_commit\": {\n      \"ordem\": [\"segredos\", \"sintaxe\", \"anti-stub\", \"dependencias\", \"testes\", \"honestidade\"],\n      \"bloquear_em_falha\": true,\n      \"tempo_maximo_s\": 20\n    }\n  }\n}"
+    },
+    {
+      "titulo": "4.3 Sessão de operação com isolamento",
+      "linguagem": "console",
+      "comandos": [
+        "python orquestrador.py --tarefa migracao-v12",
+        "python disjuntor.py \"git commit -m 'ajuste' --no-verify\"",
+        "python disjuntor.py \"pytest -q tests/test_migracao.py\"",
+        "python orquestrador.py --concluir tarefa-12"
+      ],
+      "codigo": "$ python orquestrador.py --tarefa migracao-v12\n[ORCA] criando ambiente isolado .worktrees/tarefa-12 (branch agent/tarefa-12)\n[OK] worktree criado a partir de main\n$ python disjuntor.py \"git commit -m 'ajuste' --no-verify\"\n[BLOQUEIO] DISJUNTOR ABERTO: tentativa de pular portoes de qualidade\n[BLOQUEIO] comando rejeitado: \"git commit -m 'ajuste' --no-verify\"\n$ python disjuntor.py \"pytest -q tests/test_migracao.py\"\n[EXECUTANDO] 'pytest -q tests/test_migracao.py' (timeout 30s)\n  .....................\n  21 passed in 1.84s\n[RETORNO] exit 0\n$ python orquestrador.py --concluir tarefa-12\n[PORTAO] 6/6 aprovados -> merge em main\n[ORCA] worktree .worktrees/tarefa-12 removido; planta central intacta"
+    },
+    {
+      "titulo": "4.5 Teste negativo da contenção",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Teste negativo da contencao: prova que o disjuntor barra o que deve barrar.\"\"\"\n\nimport re\nimport sys\nfrom typing import List, Tuple\n\nBLOQUEIOS: List[Tuple[str, str]] = [\n    (r\"rm\\s+-(?:rf|fr)\\s+[/~]\", \"remocao recursiva em raiz ou home\"),\n    (r\"drop\\s+database\", \"destruicao de banco de dados\"),\n    (r\"git\\s+push\\s+.*--force\", \"envio forcado de branch\"),\n    (r\"git\\s+commit\\s+.*--no-verify\", \"pular portoes de qualidade\"),\n]\n\nCOMPILADOS = [re.compile(p, re.IGNORECASE) for p, _ in BLOQUEIOS]\n\n# (comando, deve_ser_bloqueado)\nCASOS: List[Tuple[str, bool]] = [\n    (\"rm -rf /var/lib/dados\", True),\n    (\"mysql -e 'DROP DATABASE producao'\", True),\n    (\"git push origin main --force\", True),\n    (\"git commit -m 'fix' --no-verify\", True),\n    (\"rm -rf ./build\", False),\n    (\"git push origin feature/nova-tela\", False),\n    (\"pytest -q tests/test_frete.py\", False),\n    (\"psql --single-transaction -f migracao_v12.sql\", False),\n]\n\n\ndef bloqueado(comando: str) -> bool:\n    return any(p.search(comando) for p in COMPILADOS)\n\n\ndef executar_suite() -> Tuple[int, List[str]]:\n    falhas: List[str] = []\n    for comando, esperado in CASOS:\n        obtido = bloqueado(comando)\n        if obtido != esperado:\n            direcao = \"nao barrou\" if esperado else \"barrou por engano\"\n            falhas.append(f\"{direcao}: {comando!r}\")\n    return len(CASOS), falhas\n\n\ndef main() -> int:\n    total, falhas = executar_suite()\n    print(\"=\" * 62)\n    print(f\"TESTE NEGATIVO DA CONTENCAO — {total} caso(s)\")\n    print(\"=\" * 62)\n    for falha in falhas:\n        p"
+    }
+  ],
+  "gate": "python disjuntor.py \"pytest -q tests/test_migracao.py\"",
+  "comandos": [
+    "python orquestrador.py --tarefa migracao-v12",
+    "python disjuntor.py \"git commit -m 'ajuste' --no-verify\"",
+    "python disjuntor.py \"pytest -q tests/test_migracao.py\"",
+    "python orquestrador.py --concluir tarefa-12"
+  ],
+  "feito_quando": [
+    "Desencorajar em vez de impossibilitar. Se pular o portão é possível, alguém vai pular sob pressão — e será justamente no commit que quebra produção",
+    "Confundir lista de bloqueio longa com segurança. Lista exaustiva não é revisada; lista curta é confiável",
+    "Deixar diretórios de trabalho órfãos. Ambiente órfão é estado fantasma que confunde o próximo agente",
+    "Testar a contenção apenas no caminho felizes. Portão precisa ser testado com entrada hostil, senão você não sabe se ele funciona",
+    "Tratar teto de repetição como detalhe. É o controle que separa um erro barato de uma fatura inesperada [4]"
+  ],
+  "armadilhas": [
+    "Desencorajar em vez de impossibilitar. Se pular o portão é possível, alguém vai pular sob pressão — e será justamente no commit que quebra produção",
+    "Confundir lista de bloqueio longa com segurança. Lista exaustiva não é revisada; lista curta é confiável",
+    "Deixar diretórios de trabalho órfãos. Ambiente órfão é estado fantasma que confunde o próximo agente",
+    "Testar a contenção apenas no caminho felizes. Portão precisa ser testado com entrada hostil, senão você não sabe se ele funciona",
+    "Tratar teto de repetição como detalhe. É o controle que separa um erro barato de uma fatura inesperada [4]"
+  ],
+  "referencia_cruzada": "Cap. 7 — Camada 2 — Harness e Ciclo de Vida: Disjuntores, Worktrees e Quality Gates",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

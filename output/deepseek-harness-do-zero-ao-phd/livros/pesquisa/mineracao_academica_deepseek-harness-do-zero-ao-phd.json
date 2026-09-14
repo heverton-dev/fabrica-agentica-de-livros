@@ -1,0 +1,411 @@
+{
+  "tema": "DeepSeek Harness self-hosted LLM local deployment configuration",
+  "gerado_em": "23 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 10
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=DeepSeek+Harness+sel -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=DeepSeek+Harness+self-hosted+LLM+local+deplo -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 20,
+  "registros": [
+    {
+      "titulo": "When LLMs meet cybersecurity: a systematic literature review",
+      "autores": [
+        "Jie Zhang",
+        "H. Bu",
+        "Hui Wen",
+        "Yongji Liu",
+        "Haiqiang Fei",
+        "Rongrong Xi",
+        "Lun Li",
+        "Yun Yang",
+        "Hongsong Zhu",
+        "Dan Meng"
+      ],
+      "ano": 2025,
+      "doi": "10.1186/s42400-025-00361-w",
+      "url": "https://doi.org/10.1186/s42400-025-00361-w",
+      "resumo": "Abstract The rapid development of large language models (LLMs) has opened new avenues across various fields, including cybersecurity, which faces an evolving threat landscape and demand for innovative technologies. Despite initial explorations into the application of LLMs in cybersecurity, there is a lack of a comprehensive overview of this research area. This paper addresses this gap by providing a systematic literature review, covering the analysis of over 300 works, encompassing 25 LLMs and more than 10 downstream scenarios. Our comprehensive overview addresses three key research questions: the construction of cybersecurity-oriented LLMs, the application of LLMs to various cybersecurity tasks, the challenges and further research in this area. This study aims to shed light on the extensive potential of LLMs in enhancing cybersecurity practices and serve as a valuable resource for applying LLMs in this field. We also maintain and regularly update a list of practical guides on LLMs for cybersecurity at https://github.com/tmylla/Awesome-LLM4Cybersecurity .",
+      "citacoes": 198,
+      "periodico": "Cybersecurity",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+      "autores": [
+        "Mengwei Xu",
+        "Wangsong Yin",
+        "Dongqi Cai",
+        "Rongjie Yi",
+        "Daliang Xu",
+        "Qipeng Wang",
+        "Bingyang Wu",
+        "Yihao Zhao",
+        "Chen Yang",
+        "Shihe Wang",
+        "Qiyang Zhang",
+        "Zhen-Yan Lu",
+        "Li Zhang",
+        "Shangguang Wang",
+        "Yuanchun Li",
+        "Yunxin Liu",
+        "Xin Jin",
+        "Xuanzhe Liu"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2401.08092",
+      "url": "http://arxiv.org/abs/2401.08092",
+      "resumo": "Large foundation models, including large language models (LLMs), vision transformers (ViTs), diffusion, and LLM-based multimodal models, are revolutionizing the entire machine learning lifecycle, from training to deployment. However, the substantial advancements in versatility and performance these models offer come at a significant cost in terms of hardware resources. To support the growth of these large models in a scalable and environmentally sustainable way, there has been a considerable focus on developing resource-efficient strategies. This survey delves into the critical importance of such research, examining both algorithmic and systemic aspects. It offers a comprehensive analysis and valuable insights gleaned from existing literature, encompassing a broad array of topics from cutting-edge model architectures and training/serving algorithms to practical system designs and implementations. The goal of this survey is to provide an overarching understanding of how current approaches are tackling the resource challenges posed by large foundation models and to potentially inspire future breakthroughs in this field.",
+      "citacoes": 32,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference",
+      "autores": [
+        "Yufeng Gu",
+        "Alireza Khadem",
+        "Sumanth Umesh",
+        "Ning Liang",
+        "Xavier Servot",
+        "Onur Mutlu",
+        "Ravishankar Iyer",
+        "Reetuparna Das"
+      ],
+      "ano": 2025,
+      "doi": "10.1145/3676641.3716267",
+      "url": "https://doi.org/10.1145/3676641.3716267",
+      "resumo": "Large Language Model (LLM) inference uses an autoregressive manner to generate one token at a time, which exhibits notably lower operational intensity compared to earlier Machine Learning (ML) models such as encoder-only transformers and Convolutional Neural Networks. At the same time, LLMs possess large parameter sizes and use key-value caches to store context information. Modern LLMs support context windows with up to 1 million tokens to generate versatile text, audio, and video content. A large key-value cache unique to each prompt requires a large memory capacity, limiting the inference batch size. Both low operational intensity and limited batch size necessitate a high memory bandwidth. However, contemporary hardware systems for ML model deployment, such as GPUs and TPUs, are primarily optimized for compute throughput. This mismatch challenges the efficient deployment of advanced LLMs and makes users to pay for expensive compute resources that are poorly utilized for the memory-bound LLM inference tasks.",
+      "citacoes": 42,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Artificial Intelligence Adoption in SMEs: Survey Based on TOE–DOI Framework, Primary Methodology and Challenges",
+      "autores": [
+        "Elsa Delgado-Sánchez",
+        "Reyes Calderón",
+        "Francisco Herrera"
+      ],
+      "ano": 2025,
+      "doi": "10.3390/app15126465",
+      "url": "https://doi.org/10.3390/app15126465",
+      "resumo": "Despite the transformative potential of artificial intelligence (AI), small and medium-sized enterprises (SMEs) continue to face significant challenges in its effective adoption. While prior studies have emphasized strategic benefits and readiness models, there remains a lack of operational guidance tailored to SME realities—particularly regarding implementation barriers, resource constraints, and emerging demands for responsible AI use. This study presents an analysis of AI adoption in SMEs by integrating the technology–organization–environment (TOE) framework with selected attributes from the diffusion of innovations (DOI) theory to examine adoption dynamics through a dual structural and perceptual lens. Empirical insights from sectoral and regional contexts are also incorporated. Ten critical challenges are identified and analyzed across the TOE dimensions, ranging from data access and skill shortages to cultural resistance, infrastructure limitations, and weak governance practices. Notably, the framework is expanded to incorporate responsible AI governance and democratized access to generative AI—particularly open-weight large language models (LLMs) such as LLaMA, DeepSeek-R1, Mistral, and FALCON—as emerging technological and ethical imperatives. Each challenge is paired with actionable, context-sensitive solutions. The paper is a structured, literature-based conceptual analysis enriched by empirical case study insights. As a key contribution, it introduces a structured, six-phase roadmap methodology to guide SMEs through AI adoption—offering step-by-step recommendations aligned with technological, organizational, and strategic readiness. While this roadmap is conceptual and has yet to be validated through field data, it sets a foundation for future diagnostic tools and practical assessments. The resulting study bridges theoretical insight and implementation strategy—empowering inclusive, responsible, and scalable AI transformation in SMEs. By offering both analytical clarity and practical relevance, this study contributes to a more grounded understanding of AI integration and calls for policies, ecosystems, and leadership models that support SMEs in adopting AI not merely as a tool, but as a strategic enabler of sustainable and inclusive innovation.",
+      "citacoes": 82,
+      "periodico": "Applied Sciences",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Evaluating large language models on business process modeling: framework, benchmark, and self-improvement analysis",
+      "autores": [
+        "Humam Kourani",
+        "Alessandro Berti",
+        "Daniel Schuster",
+        "Wil M. P. van der Aalst"
+      ],
+      "ano": 2025,
+      "doi": "10.1007/s10270-025-01318-w",
+      "url": "https://doi.org/10.1007/s10270-025-01318-w",
+      "resumo": "Abstract Large language models (LLMs) are rapidly transforming various fields, including the field of business process management (BPM). LLMs provide new ways for analyzing and improving operational processes. This paper assesses the capabilities of LLMs on business process modeling using a framework for automating this task and a robust evaluation approach. We design a comprehensive benchmark, consisting of 20 diverse business processes, and we demonstrate our evaluation approach by assessing 16 current state-of-the-art LLMs from major AI vendors. Our analysis highlights significant performance variations across LLMs and reveals a positive correlation between efficient error handling and the quality of generated models. It also shows consistent performance trends within similar LLM groups. Furthermore, we use our evaluation approach to investigate LLM self-improvement techniques, encompassing self-evaluation, input optimization, and output optimization. Our findings indicate that output optimization, in particular, offers promising potential for enhancing quality, especially in models with initially lower performance. Our contributions provide insights for leveraging LLMs in BPM, paving the way for more advanced and automated process modeling techniques.",
+      "citacoes": 22,
+      "periodico": "Software & Systems Modeling",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "When LLMs Meet Cybersecurity: A Systematic Literature Review",
+      "autores": [
+        "Jie Zhang",
+        "H. Bu",
+        "Hui Wen",
+        "Liu, Yongji",
+        "Fei, Haiqiang",
+        "Xi, Rongrong",
+        "Li, Lun",
+        "Yang, Yun",
+        "Zhu, Hongsong",
+        "Meng, Dan"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2405.03644",
+      "url": "http://arxiv.org/abs/2405.03644",
+      "resumo": "The rapid development of large language models (LLMs) has opened new avenues across various fields, including cybersecurity, which faces an evolving threat landscape and demand for innovative technologies. Despite initial explorations into the application of LLMs in cybersecurity, there is a lack of a comprehensive overview of this research area. This paper addresses this gap by providing a systematic literature review, covering the analysis of over 300 works, encompassing 25 LLMs and more than 10 downstream scenarios. Our comprehensive overview addresses three key research questions: the construction of cybersecurity-oriented LLMs, the application of LLMs to various cybersecurity tasks, the challenges and further research in this area. This study aims to shed light on the extensive potential of LLMs in enhancing cybersecurity practices and serve as a valuable resource for applying LLMs in this field. We also maintain and regularly update a list of practical guides on LLMs for cybersecurity at https://github.com/tmylla/Awesome-LLM4Cybersecurity.",
+      "citacoes": 11,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Robust Clinical Querying with Local LLMs: Lexical Challenges in NL2SQL and Retrieval-Augmented QA on EHRs",
+      "autores": [
+        "Luka Blašković",
+        "Nikola Tanković",
+        "Ivan Lorencin",
+        "Sandi Baressi Šegota"
+      ],
+      "ano": 2025,
+      "doi": "10.3390/bdcc9100256",
+      "url": "https://doi.org/10.3390/bdcc9100256",
+      "resumo": "Electronic health records (EHRs) are typically stored in relational databases, making them difficult to query for nontechnical users, especially under privacy constraints. We evaluate two practical clinical NLP workflows, natural language to SQL (NL2SQL) for EHR querying and retrieval-augmented generation for clinical question answering (RAG-QA), with a focus on privacy-preserving deployment. We benchmark nine large language models, spanning open-weight options (DeepSeek V3/V3.1, Llama-3.3-70B, Qwen2.5-32B, Mixtral-8 × 22B, BioMistral-7B, and GPT-OSS-20B) and proprietary APIs (GPT-4o and GPT-5). The models were chosen to represent a diverse cross-section spanning sparse MoE, dense general-purpose, domain-adapted, and proprietary LLMs. On MIMICSQL (27,000 generations; nine models × three runs), the best NL2SQL execution accuracy (EX) is 66.1% (GPT-4o), followed by 64.6% (GPT-5). Among open-weight models, DeepSeek V3.1 reaches 59.8% EX, while DeepSeek V3 reaches 58.8%, with Llama-3.3-70B at 54.5% and BioMistral-7B achieving only 11.8%, underscoring a persistent gap relative to general-domain benchmarks. We introduce SQL-EC, a deterministic SQL error-classification framework with adjudication, revealing string mismatches as the dominant failure (86.3%), followed by query-join misinterpretations (49.7%), while incorrect aggregation-function usage accounts for only 6.7%. This highlights lexical/ontology grounding as the key bottleneck for NL2SQL in the biomedical domain. For RAG-QA, evaluated on 100 synthetic patient records across 20 questions (54,000 reference–generation pairs; three runs), BLEU and ROUGE-L fluctuate more strongly across models, whereas BERTScore remains high on most, with DeepSeek V3.1 and GPT-4o among the top performers; pairwise t-tests confirm that significant differences were observed among the LLMs. Cost–performance analysis based on measured token usage shows per-query costs ranging from USD 0.000285 (GPT-OSS-20B) to USD 0.005918 (GPT-4o); DeepSeek V3.1 offers the best open-weight cost–accuracy trade-off, and GPT-5 provides a balanced API alternative. Overall, the privacy-conscious RAG-QA attains strong semantic fidelity, whereas the clinical NL2SQL remains brittle under lexical variation. SQL-EC pinpoints actionable failure modes, motivating ontology-aware normalization and schema-linked prompting for robust clinical querying.",
+      "citacoes": 4,
+      "periodico": "Big Data and Cognitive Computing",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "DecLLM: LLM-Augmented Recompilable Decompilation for Enabling Programmatic Use of Decompiled Code",
+      "autores": [
+        "Wai Kin Wong",
+        "Daoyuan Wu",
+        "Huaijin Wang",
+        "Zongjie Li",
+        "Zhibo Liu",
+        "Shuai Wang",
+        "Qiyi Tang",
+        "Sen Nie",
+        "Shi Wu"
+      ],
+      "ano": 2025,
+      "doi": "10.1145/3728958",
+      "url": "https://doi.org/10.1145/3728958",
+      "resumo": "Decompilers are widely used in reverse engineering (RE) to convert compiled executables into human-readable pseudocode and support various security analysis tasks. Existing decompilers, such as IDA Pro and Ghidra, focus on enhancing the readability of decompiled code rather than its recompilability, which limits further programmatic use, such as for CodeQL-based vulnerability analysis that requires compilable versions of the decompiled code. Recent LLM-based approaches for enhancing decompilation results, while useful for human RE analysts, unfortunately also follow the same path. In this paper, we explore, for the first time, how off-the-shelf large language models (LLMs) can be used to enable recompilable decompilation—automatically correcting decompiler outputs into compilable versions. We first show that this is non-trivial through a pilot study examining existing rule-based and LLM-based approaches. Based on the lessons learned, we design DecLLM, an iterative LLM-based repair loop that utilizes both static recompilation and dynamic runtime feedback as oracles to iteratively fix decompiler outputs. We test DecLLM on popular C benchmarks and real-world binaries using two mainstream LLMs, GPT-3.5 and GPT-4, and show that off-the-shelf LLMs can achieve an upper bound of around 70% recompilation success rate, i.e., 70 out of 100 originally non-recompilable decompiler outputs are now recompilable. We also demonstrate the practical applicability of the recompilable code for CodeQL-based vulnerability analysis, which is impossible to perform directly on binaries. For the remaining 30% of hard cases, we further delve into their errors to gain insights for future improvements in decompilation-oriented LLM design.",
+      "citacoes": 13,
+      "periodico": "Proceedings of the ACM on software engineering.",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "o3-mini vs DeepSeek-R1: Which One is Safer?",
+      "autores": [
+        "Aitor Arrieta",
+        "Miriam Ugarte",
+        "Pablo Valle",
+        "José Antonio Parejo",
+        "Sergio Segura"
+      ],
+      "ano": 2025,
+      "doi": "10.48550/arxiv.2501.18438",
+      "url": "http://arxiv.org/abs/2501.18438",
+      "resumo": "The irruption of DeepSeek-R1 constitutes a turning point for the AI industry in general and the LLMs in particular. Its capabilities have demonstrated outstanding performance in several tasks, including creative thinking, code generation, maths and automated program repair, at apparently lower execution cost. However, LLMs must adhere to an important qualitative property, i.e., their alignment with safety and human values. A clear competitor of DeepSeek-R1 is its American counterpart, OpenAI's o3-mini model, which is expected to set high standards in terms of performance, safety and cost. In this technical report, we systematically assess the safety level of both DeepSeek-R1 (70b version) and OpenAI's o3-mini (beta version). To this end, we make use of our recently released automated safety testing tool, named ASTRAL. By leveraging this tool, we automatically and systematically generated and executed 1,260 test inputs on both models. After conducting a semi-automated assessment of the outcomes provided by both LLMs, the results indicate that DeepSeek-R1 produces significantly more unsafe responses (12%) than OpenAI's o3-mini (1.2%).",
+      "citacoes": 3,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review",
+      "autores": [
+        "Mohamed Amine Ferrag",
+        "Norbert Tihanyi",
+        "Mérouane Debbah"
+      ],
+      "ano": 2026,
+      "doi": "10.1109/access.2026.3698694",
+      "url": "https://doi.org/10.1109/access.2026.3698694",
+      "resumo": "Large language models and autonomous AI agents have evolved rapidly, resulting in a diverse array of evaluation benchmarks, frameworks, and collaboration protocols. Driven by the growing need for standardized evaluation and integration, we systematically consolidate these fragmented efforts into a unified framework. However, the landscape remains fragmented and lacks a unified taxonomy or comprehensive survey. Therefore, we present a side-by-side comparison of benchmarks developed between 2019 and 2025 that evaluate these models and agents across multiple domains. In addition, we propose a taxonomy of approximately 60 benchmarks that cover general and academic knowledge reasoning, mathematical problem-solving, code generation and software engineering, factual grounding and retrieval, domain-specific evaluations, multimodal and embodied tasks, task orchestration, and interactive assessments. Furthermore, we review AI-agent frameworks introduced between 2023 and 2025 that integrate large language models with modular toolkits to enable autonomous decision-making and multi-step reasoning. Moreover, we present real-world applications of autonomous AI agents in materials science, biomedical research, academic ideation, software engineering, synthetic data generation, chemical reasoning, mathematical problem-solving, geographic information systems, multimedia, healthcare, and finance. We then survey key agent-to-agent collaboration protocols, namely the Agent Communication Protocol (ACP), the Model Context Protocol (MCP), and the Agent-to-Agent Protocol (A2A). Finally, we discuss recommendations for future research, focusing on advanced reasoning strategies, failure modes in multi-agent LLM systems, automated scientific discovery, dynamic tool integration via reinforcement learning, integrated search capabilities, and security vulnerabilities in agent",
+      "citacoes": 7,
+      "periodico": "IEEE Access",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The DeepSeek Prompt Library",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-11",
+      "url": "https://doi.org/10.1201/9781003674702-11",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "DeepSeek in Action",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702",
+      "url": "https://doi.org/10.1201/9781003674702",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Introduction to DeepSeek-V3 Model-Based Development",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-4",
+      "url": "https://doi.org/10.1201/9781003674702-4",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "DeepSeek Open Platform and API Development Details",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-7",
+      "url": "https://doi.org/10.1201/9781003674702-7",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "A First Look at the DeepSeek-V3 Big Model",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-6",
+      "url": "https://doi.org/10.1201/9781003674702-6",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "DeepSeek-V3 Core Architecture and Its Training Techniques in Detail",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-3",
+      "url": "https://doi.org/10.1201/9781003674702-3",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Integration Practice 3",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-15",
+      "url": "https://doi.org/10.1201/9781003674702-15",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Integration Practice 1",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-13",
+      "url": "https://doi.org/10.1201/9781003674702-13",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Integration Hands-on 2",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-14",
+      "url": "https://doi.org/10.1201/9781003674702-14",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Callback Functions and Contextual Disk Caching",
+      "autores": [
+        "Dai, Jing"
+      ],
+      "ano": 2025,
+      "doi": "10.1201/9781003674702-10",
+      "url": "https://doi.org/10.1201/9781003674702-10",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "DeepSeek in Action",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

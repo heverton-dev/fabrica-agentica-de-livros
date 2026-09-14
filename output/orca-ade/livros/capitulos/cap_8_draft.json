@@ -1,0 +1,38 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 7: o Agent Dashboard e os glifos de estado do terminal agêntico — agora usados para saber QUANDO abrir o diff de um worktree, e não apenas para saber se o agente está vivo",
+  "metricas_obrigatorias": [
+    { "metrica": "atalhos dedicados no diff viewer", "valor": "8" },
+    { "metrica": "modos de comparação de imagem no diff", "valor": "3" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O Diff Viewer como Sala de Revisão Séria",
+        "escopo": "Entra: propósito declarado do diff viewer (revisão séria, não olhada rápida), diff contra o start-from ref por padrão e troca de referência, diff combinado de staged/unstaged/untracked, números de linha em ambos os lados, diffs de imagem em 3 modos, UI de conflito de merge com visão de três vias, staging por hunk ou por linha (equivalente visual do git add -p), Show Whitespace, os 8 atalhos de teclado. Fica fora: geração de PR e atribuição de linha (pilares seguintes).",
+        "ancora_visual": "flowchart LR de alto nível, vocabulário 'sala de revisão' do motivo condutor: worktree (garagem) -> diff viewer (sala de revisão) com três portas de entrada rotuladas staged/unstaged/untracked convergindo num único painel, e um ramal lateral apontando para 'conflito de merge -> resolução inline'. Fluxo simples, poucos nós, leitura da esquerda para a direita, sem termos técnicos nos rótulos dos nós.",
+        "entrega_tecnica": "Bash: script simples e comentado passo a passo (sem funções aninhadas) que roda `git diff --stat` contra um start-from ref informado por parâmetro e imprime uma lista legível de arquivos alterados antes de abrir o diff viewer — um 'checklist de bolso' para o operador iniciante conferir o escopo antes de revisar.",
+        "evolucao_leitor": "De 'eu olho o diff por cima e clico em aprovar' para 'eu sei exatamente contra o que este diff está comparando, e uso staging por hunk para aceitar só o que já confio'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Annotate AI Diff e Attribution: Comentar em Lote e Ver Quem Escreveu o Quê",
+        "escopo": "Entra: o fluxo de comentário por linha (hover, tecla c, Markdown, Cmd-Enter), o envio em lote via Send to Agent / Send Review Notes to Agent, a justificativa de design contra o vaivém de comentário único, o pós-revisão com threads fixadas e Resolve; e, em paralelo, a mecânica de Attribution (rastreio de procedência por linha, marcador na calha, devolução de atribuição quando humano edita código de IA), sua importância para auditoria/conformidade e seu escopo local (não commitada, exportável). Fica fora: os detalhes de commit/push (pilar seguinte).",
+        "ancora_visual": "flowchart TB batizado na metáfora 'sala de revisão' e 'diário de bordo da sessão': linhas do diff entram por uma esteira, cada linha carimbada com uma etiqueta de origem (humano/IA) antes de chegar à mesa de revisão; da mesa saem comentários individuais que se acumulam numa caixa 'um lote' e só então seguem, em uma única seta, de volta ao agente. Este é o pilar mais denso do capítulo: o diagrama precisa mostrar separadamente (a) o carimbo de procedência por linha e (b) o acúmulo em lote antes do envio — duas ideias, dois blocos visuais distintos, não uma mistura.",
+        "entrega_tecnica": "Bash: script comentado linha a linha que simula, em miniatura, o agrupamento de comentários por linha em um único payload de texto antes do envio — um `for` simples lendo um arquivo de anotações e concatenando em um só bloco, ilustrando por que 'lote' é melhor que 'um por vez' mesmo fora do produto.",
+        "evolucao_leitor": "De 'eu escrevo um comentário, mando, espero, escrevo outro' para 'eu junto todas as observações de um diff inteiro e mando uma vez só — e eu sei, olhando a calha, quais linhas o agente escreveu e quais eu mesmo editei depois'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Do Commit ao PR Sem Sair do Worktree",
+        "escopo": "Entra: o painel de commit ao lado do diff, Generate with AI para mensagem de commit, hooks de pre-commit e Fix with AI com prompt de reparo restrito, Push com upstream automático e recusa de force silencioso, Force push with lease como ação explícita e separada, Generate pull request details with AI, o vínculo com GitHub/Linear/Jira, e o browser por worktree como janela real de verificação (endereço, devtools, abas escopadas) antes de declarar o trabalho pronto. Fica fora: detalhes de orquestração remota (capítulos de CLI/orquestração).",
+        "ancora_visual": "flowchart LR curto retomando 'sala de revisão -> ordem de serviço encerrada': revisão aprovada -> commit (com Fix with AI como desvio condicional só quando hook falha) -> push (com ramal explícito para force-with-lease) -> PR assistido -> aba do browser do worktree como último carimbo de 'verificado antes de publicar'.",
+        "entrega_tecnica": "Bash: sequência de comandos comentados (git status, git add -p simulando staging por hunk, git commit, git push, e o uso de --force-with-lease em vez de --force) com uma explicação em comentário do porquê de cada flag, no nível de quem nunca usou --force-with-lease.",
+        "evolucao_leitor": "De 'eu confio no botão de publicar' para 'eu sei por que o ambiente nunca faz force-push silencioso, e eu mesmo escolho quando um force-with-lease explícito é seguro'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

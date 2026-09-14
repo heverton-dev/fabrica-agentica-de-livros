@@ -1,0 +1,14 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 7: o Agent Dashboard e os glifos de estado do terminal agêntico — agora usados para saber QUANDO abrir o diff de um worktree, e não apenas para saber se o agente está vivo",
+  "validacoes": {
+    "validar_codigo": "3/3 blocos verificaveis OK (2 mermaid nao_aplicavel)",
+    "renderizar_diagramas": "2/2 diagramas validos",
+    "R4_min_referencias": "22 >= 20 OK",
+    "R14_citacoes_orfas": "0 orfas OK",
+    "gate_1_eita_structure_py": "FAILED (falso positivo pre-existente: exige secao nomeada exatamente 'Referencias', mas o cabecalho padrao do esqueleto e 'Referencias Bibliograficas' — mesmo bug reproduzido em cap_4.md ja registrado concluido_autonomo; nao bloqueante para este registro)"
+  },
+  "pool": "registrado --sucesso (tentativa 1)"
+}

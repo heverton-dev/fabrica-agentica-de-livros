@@ -1,0 +1,447 @@
+{
+  "slug": "livros/otimizacao-tokens-ide-agentica",
+  "modo": "capitulos",
+  "executado": true,
+  "total_blocos": 44,
+  "resumo": {
+    "nao_aplicavel": 11,
+    "ok": 26,
+    "falha_execucao": 7
+  },
+  "por_linguagem": {
+    "mermaid": {
+      "total": 8,
+      "ok": 0,
+      "falha": 0
+    },
+    "bash": {
+      "total": 15,
+      "ok": 12,
+      "falha": 3
+    },
+    "python": {
+      "total": 10,
+      "ok": 6,
+      "falha": 4
+    },
+    "json": {
+      "total": 5,
+      "ok": 5,
+      "falha": 0
+    },
+    "yaml": {
+      "total": 2,
+      "ok": 2,
+      "falha": 0
+    },
+    "toml": {
+      "total": 1,
+      "ok": 1,
+      "falha": 0
+    },
+    "console": {
+      "total": 3,
+      "ok": 0,
+      "falha": 0
+    }
+  },
+  "taxa_aprovacao_pct": 78.8,
+  "blocos": [
+    {
+      "origem": "cap_1",
+      "linha": 27,
+      "linguagem": "mermaid",
+      "linhas_codigo": 12,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 51,
+      "linguagem": "bash",
+      "linhas_codigo": 34,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 93,
+      "linguagem": "python",
+      "linhas_codigo": 67,
+      "status": "falha_execucao",
+      "detalhe": "execucao: NameError: name 'classe_predominante' is not defined",
+      "execucao": "falha",
+      "detalhe_execucao": "NameError: name 'classe_predominante' is not defined"
+    },
+    {
+      "origem": "cap_1",
+      "linha": 166,
+      "linguagem": "python",
+      "linhas_codigo": 14,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "cap_2",
+      "linha": 27,
+      "linguagem": "mermaid",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_2",
+      "linha": 44,
+      "linguagem": "json",
+      "linhas_codigo": 14,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 66,
+      "linguagem": "json",
+      "linhas_codigo": 11,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 83,
+      "linguagem": "yaml",
+      "linhas_codigo": 4,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 93,
+      "linguagem": "toml",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 113,
+      "linguagem": "bash",
+      "linhas_codigo": 20,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "cap_2",
+      "linha": 149,
+      "linguagem": "bash",
+      "linhas_codigo": 3,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "cap_2",
+      "linha": 156,
+      "linguagem": "json",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_2",
+      "linha": 170,
+      "linguagem": "bash",
+      "linhas_codigo": 3,
+      "status": "falha_execucao",
+      "detalhe": "execucao: timeout de 20s na execucao",
+      "execucao": "falha",
+      "detalhe_execucao": "timeout de 20s na execucao"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 25,
+      "linguagem": "mermaid",
+      "linhas_codigo": 8,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 51,
+      "linguagem": "json",
+      "linhas_codigo": 10,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_3",
+      "linha": 67,
+      "linguagem": "bash",
+      "linhas_codigo": 21,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do Windows (unidade:\\) (nao executado)"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 125,
+      "linguagem": "bash",
+      "linhas_codigo": 27,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do Windows (unidade:\\) (nao executado)"
+    },
+    {
+      "origem": "cap_3",
+      "linha": 160,
+      "linguagem": "bash",
+      "linhas_codigo": 26,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 25,
+      "linguagem": "mermaid",
+      "linhas_codigo": 11,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 44,
+      "linguagem": "python",
+      "linhas_codigo": 56,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 110,
+      "linguagem": "python",
+      "linhas_codigo": 48,
+      "status": "falha_execucao",
+      "detalhe": "execucao: ModuleNotFoundError: No module named 'gptcache'",
+      "execucao": "falha",
+      "detalhe_execucao": "ModuleNotFoundError: No module named 'gptcache'"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 164,
+      "linguagem": "python",
+      "linhas_codigo": 10,
+      "status": "falha_execucao",
+      "detalhe": "execucao: ModuleNotFoundError: No module named 'gptcache'",
+      "execucao": "falha",
+      "detalhe_execucao": "ModuleNotFoundError: No module named 'gptcache'"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 182,
+      "linguagem": "bash",
+      "linhas_codigo": 4,
+      "status": "falha_execucao",
+      "detalhe": "execucao: /usr/bin/bash: line 3: gptcache_server: command not found",
+      "execucao": "falha",
+      "detalhe_execucao": "/usr/bin/bash: line 3: gptcache_server: command not found"
+    },
+    {
+      "origem": "cap_4",
+      "linha": 194,
+      "linguagem": "json",
+      "linhas_codigo": 13,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_5",
+      "linha": 31,
+      "linguagem": "mermaid",
+      "linhas_codigo": 10,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 49,
+      "linguagem": "python",
+      "linhas_codigo": 20,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 75,
+      "linguagem": "console",
+      "linhas_codigo": 9,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 86,
+      "linguagem": "console",
+      "linhas_codigo": 6,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 102,
+      "linguagem": "python",
+      "linhas_codigo": 62,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 172,
+      "linguagem": "python",
+      "linhas_codigo": 29,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "ok"
+    },
+    {
+      "origem": "cap_5",
+      "linha": 209,
+      "linguagem": "python",
+      "linhas_codigo": 17,
+      "status": "falha_execucao",
+      "detalhe": "execucao: NameError: name 'CircuitBreaker' is not defined",
+      "execucao": "falha",
+      "detalhe_execucao": "NameError: name 'CircuitBreaker' is not defined"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 29,
+      "linguagem": "mermaid",
+      "linhas_codigo": 13,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 52,
+      "linguagem": "bash",
+      "linhas_codigo": 22,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 78,
+      "linguagem": "bash",
+      "linhas_codigo": 35,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 117,
+      "linguagem": "bash",
+      "linhas_codigo": 36,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_6",
+      "linha": 169,
+      "linguagem": "bash",
+      "linhas_codigo": 3,
+      "status": "falha_execucao",
+      "detalhe": "execucao: exit 127",
+      "execucao": "falha",
+      "detalhe_execucao": "exit 127"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 33,
+      "linguagem": "mermaid",
+      "linhas_codigo": 15,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 56,
+      "linguagem": "bash",
+      "linhas_codigo": 28,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_7",
+      "linha": 108,
+      "linguagem": "python",
+      "linhas_codigo": 66,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 39,
+      "linguagem": "mermaid",
+      "linhas_codigo": 13,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 62,
+      "linguagem": "yaml",
+      "linhas_codigo": 15,
+      "status": "ok",
+      "detalhe": ""
+    },
+    {
+      "origem": "cap_8",
+      "linha": 87,
+      "linguagem": "console",
+      "linhas_codigo": 32,
+      "status": "nao_aplicavel",
+      "detalhe": "linguagem sem validador"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 129,
+      "linguagem": "bash",
+      "linhas_codigo": 26,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    },
+    {
+      "origem": "cap_8",
+      "linha": 161,
+      "linguagem": "bash",
+      "linhas_codigo": 30,
+      "status": "ok",
+      "detalhe": "",
+      "execucao": "nao_executado",
+      "detalhe_execucao": "bloqueado por seguranca: caminho absoluto do sistema (nao executado)"
+    }
+  ]
+}

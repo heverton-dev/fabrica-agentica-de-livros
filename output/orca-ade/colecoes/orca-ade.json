@@ -1,0 +1,73 @@
+{
+  "colecao": "orca-ade",
+  "cor_accent": "#a855f7",
+  "atualizado_em": "2026-09-12",
+  "nucleo": {
+    "slug": "livros/orca-ade",
+    "tipo": "livro",
+    "titulo": "ORCA ADE: O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+    "senioridade": "iniciante",
+    "motivo_condutor": {
+      "nome": "A Torre de Controle da Frota",
+      "descricao": "O leitor deixa de ser um único desenvolvedor digitando em um único checkout e assume o posto de operador de uma torre de controle: cada tarefa é um worktree isolado, cada worktree hospeda um agente, e cada agente é um veículo com estado observável, rádio próprio e diário de bordo. A obra ensina a montar essa torre, ler seus painéis, disparar e recolher veículos, e manter a frota voando sem sacrificar a revisão humana do que é entregue.",
+      "vocabulario": [
+        "torre de controle",
+        "frota de agentes",
+        "worktree como garagem isolada",
+        "painel de estado",
+        "linha de vida (heartbeat)",
+        "ordem de serviço (dispatch)",
+        "portão de decisão",
+        "diário de bordo da sessão",
+        "checkpoint de worktree",
+        "sala de revisão",
+        "procedência de linha",
+        "frota remota"
+      ],
+      "persona_leitor": "Operador de Frota Agêntica"
+    }
+  },
+  "total_membros": 2,
+  "por_tipo": {
+    "livro": 1,
+    "playbook": 1
+  },
+  "membros": [
+    {
+      "slug": "livros/orca-ade",
+      "tipo": "livro",
+      "rotulo": "Livro",
+      "titulo": "ORCA ADE: O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+      "obra_mae": null,
+      "natureza": "geracao",
+      "custo_llm": "alto",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "planejado",
+      "artefatos": []
+    },
+    {
+      "slug": "orca-ade/playbooks/pbk-1-orca-ade-guia",
+      "tipo": "playbook",
+      "rotulo": "Playbook",
+      "titulo": "Playbook — ORCA ADE: O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+      "obra_mae": "orca-ade",
+      "natureza": "extracao",
+      "custo_llm": "zero",
+      "senioridade": "iniciante",
+      "cta_url": "",
+      "estado": "planejado",
+      "artefatos": []
+    }
+  ],
+  "derivados_ausentes": [
+    "artigo",
+    "ebook",
+    "lead-magnet",
+    "deck",
+    "emails"
+  ],
+  "membros_sem_cta": [],
+  "maquina": null,
+  "maquinas_legadas": []
+}

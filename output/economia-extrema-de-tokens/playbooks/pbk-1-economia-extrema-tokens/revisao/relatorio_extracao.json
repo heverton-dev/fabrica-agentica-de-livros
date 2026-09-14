@@ -1,0 +1,75 @@
+{
+  "slug_mae": "livros/economia-extrema-de-tokens",
+  "slug_playbook": "economia-extrema-de-tokens/playbooks/pbk-1-economia-extrema-tokens",
+  "total_passos": 8,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "A Crise de Custos com LLMs: De $100 para $10k Sem Aviso",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "Como Funciona a Economia de Tokens: Caveman e Headroom",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "Skills Agênticas de Compressão: Caveman, Headroom, Lean-CTX",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Cache Inteligente e Memory: RTK-Memory + LiteLLM",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Empacotamento de Contexto: Repomix",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Refatoração Estrutural com AST: ast-grep",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Otimização de Prompts: DSPy",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Governança em Produção: 4 Pilares + Checklist",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 6,
+    "com_gate": 5,
+    "com_feito_quando": 8,
+    "com_armadilhas": 0
+  }
+}

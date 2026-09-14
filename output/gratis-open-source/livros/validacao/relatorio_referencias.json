@@ -1,0 +1,1477 @@
+{
+  "slug": "gratis-open-source/livros",
+  "total_referencias": 209,
+  "resumo": {
+    "nao_verificado": 209
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/installing-with-docker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.appflowy.io/docs/guides/appflowy",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/AppFlowy-IO/AppFlowy-Cloud",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/AppFlowy-IO/AppFlowy",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://contabo.com/blog/docmost-vs-outline-vs-notion/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://dasroot.net/posts/2026/03/obsidian-logseq-notion-pkm-systems-compared-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/laurent22/joplin",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://joplinapp.org/plugins/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://discourse.joplinapp.org/t/still-some-way-to-go-for-ocr/42964",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.logseq.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/logseq/logseq/issues/8544",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/logseq/logseq",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/outline/outline",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.getoutline.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.pistack.xyz/posts/2026-04-21-joplin-vs-trilium-vs-affine-self-hosted-note-taking-guide-2026/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://mrkaran.dev/posts/setting-outline/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/SolvoHQ/awesome-self-host-saas-alternatives",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://stackalts.com/appflowy-vs-notion.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://standardnotes.com/blog/introducing-self-hosting-v2",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://standardnotes.com/help/self-hosting/docker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/standardnotes/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://standardnotes.com/blog/standard-notes-security-audits-2021",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.techjockey.com/us/compare/evernote-vs-joplin",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.triliumnotes.org/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://docs.triliumnotes.org/user-guide/faq",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/TriliumNext/Trilium",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.validity.com/resource-center/2025-email-deliverability-benchmark-report/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://6sense.com/tech/marketing-automation/activecampaign-vs-mautic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/SolvoHQ/awesome-self-host-saas-alternatives",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://blog.octabyte.io/posts/open-source-alternative-to-mailchimp/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://listmonk.app/docs/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://docs.postalserver.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/postalsys/emailengine",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/knadh/listmonk",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://leinss.xyz/blog/en/listmonk-vs-mailchimp/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.saashub.com/compare-mailtrain-vs-mailchimp",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/Mailtrain-org/mailtrain",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://mautic.org/mautic-requirements/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://mauteam.org/mautic/mautic-admins/mautic-hosting-mautic-self-hosted-best-practices/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/mautic/mautic",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/postalserver/postal",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://docs.postalserver.io/getting-started/prerequisites/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://learn.emailengine.app/docs/licensing",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/SuiteCRM/SuiteCRM",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/espocrm/espocrm",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/twentyhq/twenty",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://marmelab.com/blog/2026/01/09/open-source-crm-benchmark-2026.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.espocrm.com/administration/server-configuration/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://crm.org/news/suitecrm-review",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.suitecrm.com/admin/installation-guide/downloading-installing/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.suitecrm.com/admin/compatibility-matrix/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.espocrm.com/administration/installation/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.twenty.com/developers/self-host/capabilities/docker-compose",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://news.ycombinator.com/item?id=37805520",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/twentyhq/twenty/issues",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://docs.twenty.com/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.g2.com/compare/espocrm-vs-hubspot-sales-hub",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.capterra.com/compare/61368-136101/Salesforce-vs-EspoCRM",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.capterra.com/compare/61368-136373/Salesforce-vs-SuiteCRM",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.g2.com/products/suitecrm/reviews",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/odoo/odoo",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.odoo.com/documentation/19.0/applications/sales/crm.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.odoo.com/documentation/19.0/legal/licenses.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.g2.com/compare/odoo-crm-vs-salesforce-salesforce-sales-cloud",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.peerspot.com/products/odoo-reviews",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.odoo.com/page/odoo-vs-salesforce-crm",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/krayin/laravel-crm",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://devdocs.krayincrm.com/2.2/introduction/requirements.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/krayin/laravel-crm/releases",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/activepieces/activepieces",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.activepieces.com/docs/install/architecture/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.cnx-software.com/2025/04/05/huginn-is-a-self-hosted-open-source-alternative-to-ifttt-and-zapier/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.cherryservers.com/blog/n8n-self-hosting-requirements",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://coderevue.net/posts/zapier-alternative-node-red/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://blog.hardill.me.uk/2020/10/01/multi-tenant-node-red/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/huginn/huginn",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/huginn/huginn/releases",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.linuxfoundation.org/blog/the-state-of-open-source-software-in-2025",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://docs.n8n.io/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/n8n-io/n8n",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.openlogic.com/resources/state-of-open-source-report",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://github.com/node-red/node-red",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://n8n.reviews/n8n-at-scale/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://betterstack.com/community/guides/ai/activepieces-workflow-automation/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://zapier.com/blog/n8n-vs-zapier/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/penpot/penpot",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://penpot.app/self-host",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/getting-started/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://help.penpot.app/technical-guide/getting-started/docker/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.xda-developers.com/tried-free-open-source-browser-based-alternative-figma/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.xda-developers.com/replaced-figma-with-open-source-alternatives-only-one-stuck/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://slashdot.org/software/comparison/Canva-vs-Figma-vs-penpot/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.gimp.org/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://docs.gimp.org/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://gitlab.gnome.org/GNOME/gimp",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.creativebloq.com/photography/photo-editing-software/gimp-3-0-review-20-years-on-from-2-0-has-gimp-kept-up-with-the-times",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.creativebloq.com/photography/photo-editing-software/how-i-really-feel-about-gimp-now-the-dust-has-settled",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.geeksforgeeks.org/blogs/gimp-vs-photoshop/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://inkscape.org/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://gitlab.com/inkscape/inkscape",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://wiki.inkscape.org/wiki/Installing_Inkscape",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.vecteezy.com/blog/design-tips/inkscape-vs-illustrator",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.creativebloq.com/art/digital-art-software/tired-of-adobe-and-the-big-tech-giants-i-created-my-ideal-open-source-creative-workstation-p-s-its-very-cheap",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/KDE/krita",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://invent.kde.org/graphics/krita",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://krita.org/en/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://docs.krita.org/en/user_manual/getting_started/installation.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.creativebloq.com/reviews/krita",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://github.com/SolvoHQ/awesome-self-host-saas-alternatives",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.shotcut.org/FAQ/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.pcworld.com/article/407690/shotcut-review.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.techradar.com/reviews/shotcut",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/mltframework/shotcut/issues/1786",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/KDE/kdenlive",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.kdenlive.org/en/getting_started/installation.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://kdenlive.org/news/releases/25.08.1/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://bugs.kde.org/show_bug.cgi?id=462777",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://fixthephoto.com/kdenlive-vs-adobe-premiere-pro.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.techradar.com/pro/software-services/davinci-resolve-21-2026-video-editing-software-review",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.toolfarm.com/tutorial/in-depth-davinci-resolve-studio-vs-the-free-version/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.digitalcameraworld.com/buying-guides/davinci-resolve-18-free-vs-resolve-studio-18-which-is-the-best-option-for-you",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/nextcloud/server",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.nextcloud.com/server/stable/admin_manual/installation/system_requirements.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.nextcloud.com/server/stable/admin_manual/installation/index.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://cyberinsider.com/cloud-storage/reviews/nextcloud/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://contabo.com/blog/nextcloud-vs-competitors/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/haiwen/seafile-server",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://manual.seafile.com/13.0/setup/system_requirements/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://proprivacy.com/cloud/review/seafile",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://cloudbasedbackup.com/en/blog/nextcloud-vs-seafile-which-cloud-storage-is-better",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/syncthing/syncthing",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.syncthing.net/intro/getting-started.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://docs.syncthing.net/users/security.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.xda-developers.com/replaced-dropbox-with-syncthing-learned-these-things/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://speed-drain.com/blog/best-self-hosted-cloud-storage-2026-nextcloud-seafile-syncthing/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/metabase/metabase",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.metabase.com/docs/latest/installation-and-operation/installing-metabase",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://ikemo.io/blog/power-bi-vs-tableau-vs-looker-vs-metabase",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://edana.ch/en/2025/04/20/business-intelligence-comparison-of-power-bi-tableau-superset-metabase/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://discourse.metabase.com/t/metabase-failing-to-fetch-large-dataset/5789",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/metabase/metabase/issues/21985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/apache/superset",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://superset.apache.org/admin-docs/installation/docker-compose/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://superset.apache.org/admin-docs/installation/installation-methods/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://preset.io/blog/apache-superset-vs-tableau/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.peerspot.com/products/comparisons/apache-superset_vs_tableau",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/getredash/redash",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://redash.io/help/open-source/setup/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/getredash/setup",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://redash.io/help/faq/eol/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://saasrat.com/products/redash",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/getredash/redash/blob/master/CHANGELOG.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/opf/openproject",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.openproject.org/docs/installation-and-operations/system-requirements/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.openproject.org/docs/installation-and-operations/installation/docker/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://thenewstack.io/install-openproject-with-linux-and-docker/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://stackshare.io/stackups/monday-vs-openproject",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/taigaio/taiga-back",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/taigaio/taiga-docker",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://community.taiga.io/t/setting-up-taiga-self-hosted-from-scratch/893",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://en.wikipedia.org/wiki/Taiga_(project_management",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.howtogeek.com/3-open-source-trello-alternatives-you-can-self-host-and-keep-your-data/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/wekan/wekan",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://wekan.github.io/wekan-doc/installation/docker-compose.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/wekan/wekan/wiki/Install-Wekan-Docker-in-production",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://meetrix.io/blogs/wekan-vs-trello/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://homelabcompass.com/alternatives/self-hosted-alternative-to-trello",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/mattermost/mattermost",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://mattermost.com/blog/mattermost-server-surpasses-20000-stars-on-github/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://docs.mattermost.com/deployment-guide/server/deploy-containers.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://docs.mattermost.com/deployment-guide/server/containers/install-docker.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://sourceforge.net/software/compare/Mattermost-vs-Microsoft-Teams-vs-Slack/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.brightscout.com/insight/mattermost-vs-microsoft-teams-which-is-better",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/RocketChat/Rocket.Chat",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://docs.rocket.chat/deploy/prepare-for-your-deployment/docker-and-docker-compose",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://linuxhandbook.com/rocket-chat-docker/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://itsfoss.com/rocket-chat-vs-slack/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://alphaefficiency.com/rocket-chat-vs-slack",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/zulip/zulip",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://zulip.readthedocs.io/en/stable/production/install.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://zulip.com/self-hosting/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://markaicode.com/vs/zulip-vs-slack/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/zulip/zulip/issues/11119",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://news.ycombinator.com/item?id=10280901",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/portainer/portainer",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://docs.portainer.io/start/requirements-and-prerequisites",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://docs.portainer.io/start/install-ce/server/docker/linux",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://institute.sfeir.com/en/kubernetes-training/rancher-vs-lens-vs-portainer-dashboard-kubernetes/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://northflank.com/blog/portainer-alternatives",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/coollabsio/coolify",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://coolify.io/docs/get-started/installation",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://community.hetzner.com/tutorials/install-and-configure-coolify-on-linux/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://getautonoma.com/blog/coolify-vs-vercel",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://getautonoma.com/blog/open-source-alternatives-vercel",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/dokku/dokku",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://dokku.com/docs/getting-started/installation/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://blog.localops.co/p/self-hosted-heroku-alternatives-build-vs-buy",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://sliplane.io/blog/dokku-self-hosted-heroku-alternative",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/caprover/caprover",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://caprover.com/docs/get-started.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/caprover/one-click-apps",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://ownkube.io/blog/self-hosted-paas-comparison-2026",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://betterstack.com/community/guides/web-servers/digitalocean-vs-hetzner/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.vpsbenchmarks.com/compare/docean_vs_hetzner",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

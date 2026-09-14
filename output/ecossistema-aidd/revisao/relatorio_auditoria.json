@@ -1,0 +1,747 @@
+{
+  "slug": "ecossistema-aidd",
+  "tipo_obra": "livro",
+  "veredito": "NAO CONFORME",
+  "total_capitulos": 11,
+  "caracteres_obra": 150428,
+  "paginas_estimadas": 60.2,
+  "requisitos": [
+    {
+      "id": "R1",
+      "nome": "Minimo 8 capitulos",
+      "conforme": true,
+      "detalhe": "11 capitulo(s) (minimo 8)"
+    },
+    {
+      "id": "R2",
+      "nome": "Minimo 80 paginas (~200.000 caracteres)",
+      "conforme": false,
+      "detalhe": "150.428 caracteres (minimo 200.000)"
+    },
+    {
+      "id": "R3",
+      "nome": "7 secoes EITA-V2 por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos incompletos: nenhum"
+    },
+    {
+      "id": "R4",
+      "nome": "Minimo 5 referencias ABNT por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R9",
+      "nome": "Ausencia de horizontal rules nos capitulos",
+      "conforme": true,
+      "detalhe": "capitulos com ---: nenhum"
+    },
+    {
+      "id": "R10",
+      "nome": "Minimo 3 citacoes inline [N] por capitulo",
+      "conforme": true,
+      "detalhe": "capitulos abaixo: nenhum"
+    },
+    {
+      "id": "R11",
+      "nome": "Minimo 1 diagrama Mermaid na secao Ilustra",
+      "conforme": true,
+      "detalhe": "capitulos sem diagrama: nenhum"
+    },
+    {
+      "id": "R12",
+      "nome": "Artefato tecnico na secao Tecnica",
+      "conforme": false,
+      "detalhe": "capitulos sem artefato: 1, 9, 10, 11 (estilo_tecnica=codigo)"
+    },
+    {
+      "id": "R13",
+      "nome": "Sem truncamento nem pendencias (TODO/placeholder)",
+      "conforme": false,
+      "detalhe": "capitulos suspeitos: 6"
+    },
+    {
+      "id": "R14",
+      "nome": "Rastreabilidade [N] texto <-> referencias",
+      "conforme": true,
+      "detalhe": "capitulos com citacao orfa: nenhum"
+    },
+    {
+      "id": "R15",
+      "nome": "Referencias em ordem numerica ascendente na secao 7 (NBR 6023)",
+      "conforme": true,
+      "detalhe": "capitulos fora de ordem: nenhum"
+    }
+  ],
+  "sobreposicao_entre_capitulos": [],
+  "inconsistencia_terminologica": [
+    {
+      "termo_normalizado": "critico",
+      "variantes": {
+        "crítico": 17,
+        "Crítico": 2,
+        "critico": 1
+      },
+      "ocorrencias": 20
+    },
+    {
+      "termo_normalizado": "numero",
+      "variantes": {
+        "número": 15,
+        "numero": 1
+      },
+      "ocorrencias": 16
+    },
+    {
+      "termo_normalizado": "separacao",
+      "variantes": {
+        "separação": 12,
+        "Separacao": 1
+      },
+      "ocorrencias": 13
+    }
+  ],
+  "alertas_estilo": {
+    "motivo_condutor_avaliado": false,
+    "vocabulario_motivo_condutor": [],
+    "capitulos_com_citacao_empilhada": [
+      {
+        "capitulo": "1",
+        "ocorrencias": [
+          "[1][2]",
+          "[1][7]"
+        ]
+      },
+      {
+        "capitulo": "2",
+        "ocorrencias": [
+          "[1][2]",
+          "[4][5]",
+          "[6][7]",
+          "[1][7]",
+          "[2][3]",
+          "[5][6]",
+          "[1][7]",
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "3",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[6][7]",
+          "[1][2]",
+          "[3][6]",
+          "[1][7]",
+          "[4][5]",
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "4",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[6][7]",
+          "[1][3]",
+          "[2][4]",
+          "[5][6]",
+          "[1][3]",
+          "[4][7]",
+          "[2][5]",
+          "[3][6]",
+          "[1][4]"
+        ]
+      },
+      {
+        "capitulo": "5",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][4]",
+          "[3][5]",
+          "[4][6]",
+          "[1][5]",
+          "[2][7]",
+          "[3][6]",
+          "[4][7]",
+          "[1][5]",
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "6",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][4]",
+          "[5][6]",
+          "[3][5]",
+          "[6][7]",
+          "[1][4]",
+          "[2][7]",
+          "[3][5]",
+          "[6][7]",
+          "[1][4]",
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "7",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][3]",
+          "[4][5]",
+          "[1][6]",
+          "[3][7]",
+          "[2][5]",
+          "[1][7]",
+          "[3][6]",
+          "[2][4]",
+          "[1][7]",
+          "[3][5]"
+        ]
+      },
+      {
+        "capitulo": "8",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][4]",
+          "[3][6]",
+          "[1][5]",
+          "[2][7]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][5]",
+          "[3][6]",
+          "[1][7]",
+          "[2][4]"
+        ]
+      },
+      {
+        "capitulo": "9",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][4]",
+          "[3][6]",
+          "[1][4]",
+          "[2][5]",
+          "[3][7]",
+          "[1][4]",
+          "[2][6]",
+          "[3][5]"
+        ]
+      },
+      {
+        "capitulo": "10",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][4]",
+          "[3][6]",
+          "[1][5]",
+          "[2][7]",
+          "[3][5]",
+          "[1][7]",
+          "[4][6]",
+          "[2][3]"
+        ]
+      },
+      {
+        "capitulo": "11",
+        "ocorrencias": [
+          "[1][2]",
+          "[3][4]",
+          "[5][6]",
+          "[1][7]",
+          "[2][4]",
+          "[3][5]",
+          "[4][6]",
+          "[1][5]",
+          "[2][7]",
+          "[3][6]",
+          "[1][4]",
+          "[5][7]",
+          "[2][3]"
+        ]
+      }
+    ],
+    "capitulos_sem_recorrencia_motivo_condutor": [],
+    "capitulos_sem_callback_capitulo_anterior": [
+      "9"
+    ],
+    "capitulos_ritmo_monotono": []
+  },
+  "gates_conteudo": {
+    "validar-referencias.py": {
+      "exit": 0
+    },
+    "validar-metricas.py": {
+      "exit": 1
+    },
+    "validar-escala.py": {
+      "exit": 1
+    },
+    "validar-afirmacoes.py": {
+      "exit": 0
+    },
+    "validar-fontes.py": {
+      "exit": 0
+    },
+    "validar-comandos-cli.py": {
+      "exit": 0,
+      "skip": "categoria_tecnica=false"
+    }
+  },
+  "capitulos": [
+    {
+      "capitulo": "1",
+      "arquivo": "cap_1.md",
+      "caracteres": 10063,
+      "palavras": 1543,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 10,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 0,
+      "artefatos_tecnica": 0,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[1][7]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.7,
+        "coeficiente_variacao": 1.211
+      }
+    },
+    {
+      "capitulo": "2",
+      "arquivo": "cap_2.md",
+      "caracteres": 14311,
+      "palavras": 1800,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 18,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[4][5]",
+        "[6][7]",
+        "[1][7]",
+        "[2][3]",
+        "[5][6]",
+        "[1][7]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.9,
+        "coeficiente_variacao": 1.345
+      }
+    },
+    {
+      "capitulo": "3",
+      "arquivo": "cap_3.md",
+      "caracteres": 12826,
+      "palavras": 1421,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 17,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[6][7]",
+        "[1][2]",
+        "[3][6]",
+        "[1][7]",
+        "[4][5]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.2,
+        "coeficiente_variacao": 0.908
+      }
+    },
+    {
+      "capitulo": "4",
+      "arquivo": "cap_4.md",
+      "caracteres": 14377,
+      "palavras": 1364,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 23,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 1,
+      "artefatos_tecnica": 1,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[6][7]",
+        "[1][3]",
+        "[2][4]",
+        "[5][6]",
+        "[1][3]",
+        "[4][7]",
+        "[2][5]",
+        "[3][6]",
+        "[1][4]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.9,
+        "coeficiente_variacao": 1.217
+      }
+    },
+    {
+      "capitulo": "5",
+      "arquivo": "cap_5.md",
+      "caracteres": 17463,
+      "palavras": 1577,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 26,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][4]",
+        "[3][5]",
+        "[4][6]",
+        "[1][5]",
+        "[2][7]",
+        "[3][6]",
+        "[4][7]",
+        "[1][5]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 23.9,
+        "coeficiente_variacao": 0.886
+      }
+    },
+    {
+      "capitulo": "6",
+      "arquivo": "cap_6.md",
+      "caracteres": 16536,
+      "palavras": 1558,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 28,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 3,
+      "artefatos_tecnica": 3,
+      "horizontal_rules": 0,
+      "pendencias": [
+        "TODO"
+      ],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][4]",
+        "[5][6]",
+        "[3][5]",
+        "[6][7]",
+        "[1][4]",
+        "[2][7]",
+        "[3][5]",
+        "[6][7]",
+        "[1][4]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.5,
+        "coeficiente_variacao": 0.937
+      }
+    },
+    {
+      "capitulo": "7",
+      "arquivo": "cap_7.md",
+      "caracteres": 17537,
+      "palavras": 1424,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 28,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 4,
+      "artefatos_tecnica": 4,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "de to the Automated Business Process*. 1. ed. Berkeley: Apress, 2019. ISBN 978-1484256140.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][3]",
+        "[4][5]",
+        "[1][6]",
+        "[3][7]",
+        "[2][5]",
+        "[1][7]",
+        "[3][6]",
+        "[2][4]",
+        "[1][7]",
+        "[3][5]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24,
+        "coeficiente_variacao": 0.931
+      }
+    },
+    {
+      "capitulo": "8",
+      "arquivo": "cap_8.md",
+      "caracteres": 16067,
+      "palavras": 1641,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 30,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 2,
+      "artefatos_tecnica": 2,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "vel em: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks. Acesso em: 09 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][4]",
+        "[3][6]",
+        "[1][5]",
+        "[2][7]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][5]",
+        "[3][6]",
+        "[1][7]",
+        "[2][4]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.8,
+        "coeficiente_variacao": 0.916
+      }
+    },
+    {
+      "capitulo": "9",
+      "arquivo": "cap_9.md",
+      "caracteres": 9799,
+      "palavras": 1577,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 24,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 0,
+      "artefatos_tecnica": 0,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][4]",
+        "[3][6]",
+        "[1][4]",
+        "[2][5]",
+        "[3][7]",
+        "[1][4]",
+        "[2][6]",
+        "[3][5]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": false,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 18.9,
+        "coeficiente_variacao": 0.686
+      }
+    },
+    {
+      "capitulo": "10",
+      "arquivo": "cap_10.md",
+      "caracteres": 11712,
+      "palavras": 1797,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 24,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 0,
+      "artefatos_tecnica": 0,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "vel em: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks. Acesso em: 09 set. 2026.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][4]",
+        "[3][6]",
+        "[1][5]",
+        "[2][7]",
+        "[3][5]",
+        "[1][7]",
+        "[4][6]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 24.6,
+        "coeficiente_variacao": 0.751
+      }
+    },
+    {
+      "capitulo": "11",
+      "arquivo": "cap_11.md",
+      "caracteres": 9737,
+      "palavras": 1470,
+      "secoes_faltantes": [],
+      "referencias": 7,
+      "citacoes_inline": 26,
+      "diagramas_ilustra": 1,
+      "diagramas_total": 1,
+      "blocos_codigo_tecnica": 0,
+      "artefatos_tecnica": 0,
+      "horizontal_rules": 0,
+      "pendencias": [],
+      "truncado": false,
+      "ultima_linha": "uild, Test, and Deployment Automation*. Boston: Addison-Wesley, 2010. ISBN 978-0321601945.",
+      "refs_orfas": [],
+      "refs_nao_citadas": [],
+      "refs_ordem_correta": true,
+      "citacoes_empilhadas": [
+        "[1][2]",
+        "[3][4]",
+        "[5][6]",
+        "[1][7]",
+        "[2][4]",
+        "[3][5]",
+        "[4][6]",
+        "[1][5]",
+        "[2][7]",
+        "[3][6]",
+        "[1][4]",
+        "[5][7]",
+        "[2][3]"
+      ],
+      "vocabulario_fora_ilustra": null,
+      "callback_presente": true,
+      "ritmo_frase": {
+        "media_palavras_por_frase": 21.6,
+        "coeficiente_variacao": 0.586
+      }
+    }
+  ]
+}

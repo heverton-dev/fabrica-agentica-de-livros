@@ -1,0 +1,39 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "3" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 2: a conta oculta do 'grátis' (reputação de domínio e deliverability escondidas dentro da mensalidade do Mailchimp), agora aplicada ao CRM — a conta oculta troca de nome para tuning de servidor e maturidade de integração",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O balcão de vendas que já cabe na sua bancada: pipeline, contatos e automação básica",
+        "escopo": "Entra: o que é um CRM na prática (funil/pipeline, ficha de contato, histórico de interação, automação simples tipo 'se o negócio ficar 7 dias sem toque, avisa o vendedor'). Fica de fora: qualquer promessa de IA generativa nativa, scoring preditivo ou CPQ — isso é o pilar 3.",
+        "ancora_visual": "flowchart LR do vocabulário da Oficina Digital: um 'pedido de peça' (lead) entra na bancada, passa por gavetas de status (Novo → Em negociação → Fechado) até a prateleira de clientes atendidos, com um ponto de decisão de automação (alerta se ficar parado na gaveta)",
+        "entrega_tecnica": "operacional — tabela de decisão (estágio do funil → ação automática) e um arquivo de config .env comentado simulando a automação de alerta de negócio parado",
+        "evolucao_leitor": "de 'CRM é uma caixa preta cara' para 'eu sei nomear as 4 peças que todo CRM tem e reconhecer quando uma alternativa livre já entrega isso'",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Montagem prática: EspoCRM, Twenty e SuiteCRM em produção",
+        "escopo": "Entra: requisitos de servidor reais de cada ferramenta (PHP/MySQL para EspoCRM e SuiteCRM, Docker Compose com PostgreSQL+Redis para Twenty), o comando de deploy, e o critério prático de escolha entre as três. Fica de fora: Odoo e Krayin (citados como alternativas, não instalados passo a passo — a bancada tem espaço limitado neste capítulo).",
+        "ancora_visual": "flowchart TB comparando as 3 bancadas de montagem lado a lado (EspoCRM, Twenty, SuiteCRM), cada uma com seu 'kit de ferramentas' (stack de servidor) e chegando ao mesmo balcão de atendimento",
+        "entrega_tecnica": "operacional — docker-compose.yml comentado para deploy do EspoCRM via Docker oficial + sessão console do comando de deploy com saída esperada + tabela de decisão de escolha entre as 3 ferramentas",
+        "evolucao_leitor": "de 'não sei por onde instalar um CRM' para 'eu sei qual das 3 ferramentas cabe no meu servidor e como colocá-la de pé'",
+        "conceito_denso": true
+      },
+      {
+        "nome": "A lacuna honesta: onde Salesforce e HubSpot ainda ganham por integração e maturidade de mercado",
+        "escopo": "Entra: débito técnico dos projetos (issues abertas, cadência de release), ausência de SLA formal, AppExchange/ecossistema de integrações prontas, e o benchmark independente comparando nota de mercado. Fica de fora: negociação de preço de licença Salesforce/HubSpot (tema de outro livro).",
+        "ancora_visual": "flowchart LR do 'catálogo de peças prontas na prateleira da loja de aluguel' (AppExchange/App Marketplace) versus a 'peça que você mesmo terá que fabricar ou encomendar' na oficina própria — mostrando o ponto de decisão de quando a integração pronta pesa mais que o custo de aluguel",
+        "entrega_tecnica": "operacional — tabela de decisão (critério de negócio → CRM próprio vale / CRM próprio não vale) cruzando os dados reais de avaliação de mercado",
+        "evolucao_leitor": "de 'open source é sempre melhor porque é grátis' para 'eu sei justificar com dados quando a integração pronta da Salesforce/HubSpot ainda paga a mensalidade'",
+        "conceito_denso": false
+      }
+    ]
+  },
+  "metricas_obrigatorias": [
+    { "metrica": "estrelas no GitHub do Twenty CRM", "valor": "55,1 mil" },
+    { "metrica": "avaliação G2 do Odoo CRM vs. Salesforce Sales Cloud", "valor": "4,0/5 (166 avaliações) vs. 4,4/5 (25.397 avaliações)" },
+    { "metrica": "issues abertas do SuiteCRM", "valor": "1.366" }
+  ]
+}

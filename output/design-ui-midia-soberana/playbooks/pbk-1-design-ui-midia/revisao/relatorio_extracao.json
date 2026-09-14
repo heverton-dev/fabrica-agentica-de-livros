@@ -1,0 +1,81 @@
+{
+  "slug_mae": "livros/design-ui-midia-soberana",
+  "slug_playbook": "playbooks/design-ui/pbk-1-design-ui-midia",
+  "total_passos": 8,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "Introdução à Soberania Tecnológica no Design e UI",
+      "lacunas": [
+        "sem_secao_aplica",
+        "feito_quando_insuficiente",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "A Geopolítica da Nuvem: Por que o software local importa?",
+      "lacunas": [
+        "sem_secao_aplica",
+        "feito_quando_insuficiente",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "Design Vetorial e UI: Penpot como alternativa ao Figma",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Tipografia Sob Controle: Auto-hospedagem com Fontsource",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Upscaling Local: Real-ESRGAN e Upscayl para criativos",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Geração de Imagens: ComfyUI e o controle total da difusão",
+      "lacunas": [
+        "sem_secao_aplica",
+        "feito_quando_insuficiente",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Síntese de Voz: Kokoro e áudio neural local",
+      "lacunas": [
+        "sem_secao_aplica",
+        "feito_quando_insuficiente",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Documentação Soberana: Stirling-PDF e fluxos de trabalho autônomos",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [
+    "sem_secao_aplica"
+  ],
+  "cobertura": {
+    "com_entregas": 8,
+    "com_gate": 7,
+    "com_feito_quando": 4,
+    "com_armadilhas": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "5" },
+  "titulo": "Empacotamento de Contexto: Repomix",
+  "estado_execucao": "concluido_autonomo",
+  "validacoes": {
+    "validar_codigo": "OK (3/3 blocos verificaveis, 2 nao_aplicaveis, 100% aprovacao)",
+    "renderizar_diagramas": "OK (1/1 diagrama valido)",
+    "r4_min_referencias": "8 >= 8 (min_referencias_por_capitulo)",
+    "r14_citacoes_orfas": "0 orfas, 0 empilhadas (corpo cita [1][4][5][6], todas presentes na secao 7)",
+    "r9_hr": "OK (nenhum '---' isolado no corpo; '---' restante e separador de tabela Markdown)",
+    "r11_diagrama_legenda": "OK ('%% legenda:' na primeira linha do mermaid)",
+    "r12_codigo_com_linguagem": "OK (console, json, python, yaml declarados)",
+    "callback_capitulo_anterior": "OK (Capitulo 4 / cache de prefixo estavel citado na Introducao)",
+    "persona_leitor": "OK (Engenheiro de Custos com IA, reforcada em multiplos pontos)",
+    "cena_erro_vs_pratica": "OK (secao Aplica, 2 cenarios em 2a pessoa: bug em producao + onboarding em repo legado)"
+  },
+  "expansao_r2": {
+    "motivo": "auditar-obra.py reprovou R2 (minimo 200000 caracteres no livro)",
+    "caracteres_antes": 15292,
+    "caracteres_depois": 25054,
+    "acrescimo": 9762
+  },
+  "rodadas_correcao_internas": 0
+}

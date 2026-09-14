@@ -1,0 +1,38 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "8" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 7: a regra geral de rodar --help antes de automatizar qualquer CLI nova (nunca depois), extraída da autópsia da sintaxe fabricada do Hermes Agent, agora generalizada em um checklist permanente",
+  "metricas_obrigatorias": [
+    { "metrica": "proporção de itens do manual auditado confirmados corretos (núcleo real)", "valor": "26 de 61 itens (cerca de 40%)" },
+    { "metrica": "desconto de cache de leitura preservado quando o prefixo do CLAUDE.md permanece idêntico byte a byte", "valor": "90%" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O checklist de perícia portátil: hierarquia de fontes A/B/C e sinais de alerta de fabricação",
+        "escopo": "Entra: a hierarquia de fontes (A = documentação oficial do fornecedor, B = repositório oficial/PyPI/npm, C = terceiros/blogs/imprensa), os sinais de alerta recorrentes nos 8 capítulos anteriores (comando com flags formatadas demais, caminho de config que 'soa certo' mas nunca aparece na doc oficial, produto real citado com verbo/sintaxe de outro produto), e a regra mais contraintuitiva do livro: NÃO VERIFICÁVEL não é sinônimo de aprovado — é uma pendência que exige tratamento como hipótese, nunca como comando pronto para produção. Fica de fora: ferramentas específicas não cobertas nos Capítulos 1-7 (o checklist é deliberadamente genérico, para caber em qualquer manual futuro).",
+        "ancora_visual": "flowchart TD do checklist de perícia: do 'Documento chega até você' até o veredito final, passando por 'classificar a fonte (A/B/C)', 'checar sinal de alerta' e bifurcação final em três laudos possíveis — Aprovado / Pendente (não verificável) / Rejeitado (fabricado) — reaproveitando o vocabulário de laudo/evidência/contraprova do motivo condutor da obra.",
+        "entrega_tecnica": "YAML: modelo reutilizável protocolo-pericia.yaml (checklist estruturado com os campos fonte_primaria, classe, sinal_de_alerta, veredito) que o leitor preenche a cada novo comando suspeito de um manual futuro.",
+        "evolucao_leitor": "De 'confio em qualquer comando com flags bem formatadas e nome de produto real' para 'aplico um checklist replicável de 4 perguntas antes de rodar qualquer comando novo, e trato NÃO VERIFICÁVEL como pendência, não como aprovação'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Versionando o cofre confirmado: CLAUDE.md estático, chezmoi (com a sintaxe real) e 1Password",
+        "escopo": "Entra: por que CLAUDE.md estático com ordem fixa de blocos maximiza cache hit (mecânica real: prefixo idêntico byte a byte, retomando o Capítulo 2) e por que hash SHA-256 é a forma correta e genérica de detectar mudança nesse arquivo; chezmoi init/chezmoi add como comandos reais para versionar dotfiles; a correção do instalador (git.io é encurtador legado descontinuado desde 2022 — usar get.chezmoi.io) e a correção do 'commit' (chezmoi não tem subcomando commit nativo — usar chezmoi cd && git commit, chezmoi git commit -- -m, ou autoCommit: true); 1Password CLI (op signin, op item create, op read \"op://vault/item/field\") como cofre real de segredo, nunca hardcoded no CLAUDE.md versionado. Fica de fora: templating avançado do chezmoi (variáveis por máquina) e criptografia GPG de dotfiles.",
+        "ancora_visual": "sequenceDiagram do fluxo 'Notebook novo -> chezmoi init --apply <repo-de-dotfiles> -> CLAUDE.md e settings.json restaurados byte a byte -> conferência de hash SHA-256 -> op read injeta o segredo em tempo de uso -> cache hit preservado desde a primeira sessão', com o vocabulário de cadeia de custódia do motivo condutor.",
+        "entrega_tecnica": "bash/console: sessão real de setup encadeando chezmoi init, chezmoi add ~/.claude/CLAUDE.md, chezmoi add ~/.claude/settings.json, sha256sum de verificação, chezmoi cd && git commit -m \"...\" (nunca chezmoi commit), e op read \"op://Private/API Key/credential\" para injetar segredo sem versionar em texto puro.",
+        "evolucao_leitor": "De 'refaço a perícia inteira e recopio configs à mão em cada notebook novo' para 'clono um repositório de dotfiles já confirmado e restauro em minutos, com o segredo vindo do cofre, nunca do arquivo versionado'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Do consumidor de manuais ao Perito de Configuração Agêntica: fechando o caso",
+        "escopo": "Entra: o resumo quantitativo final da perícia sobre o manual v3.1 (26 CONFIRMADO, 13 PARCIALMENTE CORRETO, 18 FABRICADO, 4 NÃO VERIFICÁVEL, num total de 61 itens auditados — cerca de 40% de núcleo real relevante) como prova de que o método funciona; a lição central do livro (ferramenta real + sintaxe fabricada é o padrão de erro mais perigoso, porque o nome familiar destrava a confiança antes de qualquer checagem); uma cena concreta em 2ª pessoa do leitor aplicando o checklist sozinho, sem este livro, diante de um manual novo. Fica de fora: qualquer ferramenta ou LAB novo — este pilar é síntese e virada de protagonismo, não conteúdo técnico inédito.",
+        "ancora_visual": "stateDiagram-v2 da transição de identidade do leitor: Operador Consumidor -> Aprendiz de Pericia -> Perito de Configuracao Agentica, com os gatilhos de transição sendo 'aplica o checklist de fontes' e 'versiona o cofre confirmado', fechando no estado final que dá nome à persona da obra.",
+        "entrega_tecnica": "bash: script curto auditar-comando.sh que varre um trecho de manual em busca de padrões suspeitos (nome de flag não documentada, caminho de config com formato plausível demais) e imprime um lembrete do checklist do Pilar 1 — consolidação final, não ferramenta nova.",
+        "evolucao_leitor": "De 'li um manual de terceiro e confiei porque parecia técnico' para 'sou eu que audito o próximo manual antes de deixar minha equipe copiar um único comando dele'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "tema": "digital sovereignty self-hosting open source design tools text-to-speech VITS",
+  "gerado_em": "25 ago. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 6
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 6
+    },
+    "arxiv": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "erro",
+      "erro": "https://api.semanticscholar.org/graph/v1/paper/search?query=digital+sovereignty+ -> HTTP 429",
+      "n": 0
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=digital+sovereignty+self-hosting+open+source -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 12,
+  "registros": [
+    {
+      "titulo": "Open challenges and opportunities in federated foundation models towards biomedical healthcare",
+      "autores": [
+        "Xingyu Li",
+        "Peng Lu",
+        "Yu‐Ping Wang",
+        "Weihua Zhang"
+      ],
+      "ano": 2025,
+      "doi": "10.1186/s13040-024-00414-9",
+      "url": "https://doi.org/10.1186/s13040-024-00414-9",
+      "resumo": "This survey explores the transformative impact of foundation models (FMs) in artificial intelligence, focusing on their integration with federated learning (FL) in biomedical research. Foundation models such as ChatGPT, LLaMa, and CLIP, which are trained on vast datasets through methods including unsupervised pretraining, self-supervised learning, instructed fine-tuning, and reinforcement learning from human feedback, represent significant advancements in machine learning. These models, with their ability to generate coherent text and realistic images, are crucial for biomedical applications that require processing diverse data forms such as clinical reports, diagnostic images, and multimodal patient interactions. The incorporation of FL with these sophisticated models presents a promising strategy to harness their analytical power while safeguarding the privacy of sensitive medical data. This approach not only enhances the capabilities of FMs in medical diagnostics and personalized treatment but also addresses critical concerns about data privacy and security in healthcare. This survey reviews the current applications of FMs in federated settings, underscores the challenges, and identifies future research directions including scaling FMs, managing data diversity, and enhancing communication efficiency within FL frameworks. The objective is to encourage further research into the combined potential of FMs and FL, laying the groundwork for healthcare innovations.",
+      "citacoes": 52,
+      "periodico": "BioData Mining",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Speech Generation for Indigenous Language Education",
+      "autores": [
+        "Aidan Pine",
+        "Erica Cooper",
+        "David Guzmán",
+        "Eric Joanis",
+        "Anna Kazantseva",
+        "Ross Krekoski",
+        "Roland Kühn",
+        "Samuel Larkin",
+        "Patrick Littell",
+        "Delaney Lothian",
+        "Akwiratékha’ Martin",
+        "Korin Richmond",
+        "M. Tessier",
+        "Cassia Valentini-Botinhao",
+        "Dan Wells",
+        "Junichi Yamagishi"
+      ],
+      "ano": 2024,
+      "doi": "10.1016/j.csl.2024.101723",
+      "url": "https://doi.org/10.1016/j.csl.2024.101723",
+      "resumo": "As the quality of contemporary speech synthesis improves, so too does the interest from language communities in developing text-to-speech (TTS) systems for a variety of real-world applications. Much of the work on TTS has focused on high-resource languages, resulting in implicitly resource-intensive paths to building such systems. The goal of this paper is to provide signposts and points of reference for future low-resource speech synthesis efforts, with insights drawn from the Speech Generation for Indigenous Language Education (SGILE) project. Funded and coordinated by the National Research Council of Canada (NRC), this multi-year, multi-partner project has the goal of producing high-quality text-to-speech systems that support the teaching of Indigenous languages in a variety of educational contexts. We provide background information and motivation for the project, as well as details about our approach and project structure, including results from a multi-day requirements-gathering session. We discuss some of our key challenges, including building models with appropriate controls for educators, improving model data efficiency, and strategies for low-resource transfer learning and evaluation. Finally, we provide a detailed survey of existing speech synthesis software and introduce EveryVoice TTS, a toolkit designed specifically for low-resource speech synthesis. • We provide background and points of reference for future low-resource TTS projects • We describe four main technical challenges for low-resource speech synthesis • We introduce the EveryVoice TTS Toolkit designed specifically for low-resource TTS • We compare the EveryVoice TTS Toolkit with six other existing toolkits",
+      "citacoes": 5,
+      "periodico": "Computer Speech & Language",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Advances and Open Challenges in Federated Foundation Models",
+      "autores": [
+        "Chao Ren",
+        "Han Yu",
+        "Hongyi Peng",
+        "X Tang",
+        "Bo Zhao",
+        "Yi, Liping",
+        "Alysa Ziying Tan",
+        "Yulan Gao",
+        "Anran Li",
+        "Xiaoxiao Li",
+        "Zengxiang Li",
+        "Qiang Yang"
+      ],
+      "ano": 2024,
+      "doi": "10.48550/arxiv.2404.15381",
+      "url": "http://arxiv.org/abs/2404.15381",
+      "resumo": "The integration of Foundation Models (FMs) with Federated Learning (FL) presents a transformative paradigm in Artificial Intelligence (AI). This integration offers enhanced capabilities, while addressing concerns of privacy, data decentralization and computational efficiency. This paper provides a comprehensive survey of the emerging field of Federated Foundation Models (FedFM), elucidating their synergistic relationship and exploring novel methodologies, challenges, and future directions that the FL research field needs to focus on in order to thrive in the age of FMs. A systematic multi-tiered taxonomy is proposed, categorizing existing FedFM approaches for model training, aggregation, trustworthiness, and incentivization. Key challenges, including how to enable FL to deal with high complexity of computational demands, privacy considerations, contribution evaluation, and communication efficiency, are thoroughly discussed. Moreover, this paper explores the intricate challenges of communication, scalability and security inherent in training/fine-tuning FMs via FL. It highlights the potential of quantum computing to revolutionize the processes of training, inference, optimization and security. This survey also introduces the implementation requirement of FedFM and some practical FedFM applications. It highlights lessons learned with a clear understanding of our findings for FedFM. Finally, this survey not only provides insights into the current state and challenges of FedFM, but also offers a blueprint for future research directions, emphasizing the need for developing trustworthy solutions. It serves as a foundational guide for researchers and practitioners interested in contributing to this interdisciplinary and rapidly advancing field.",
+      "citacoes": 5,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Save the nation! : A social psychological study of political blogs as a medium for nationalist communication and persuasion",
+      "autores": [
+        "Katarina Pettersson"
+      ],
+      "ano": 2017,
+      "doi": null,
+      "url": "http://hdl.handle.net/10138/180424",
+      "resumo": "This doctoral dissertation explores how populist radical right politicians in Finland and Sweden use political blogs for the purpose of nationalist political communication and persuasion. The study builds upon research that has highlighted the growing importance of social media in the transmission of radical right, nationalist and anti-immigration political discourse, and to the central role of these media in the gradual normalisation of such discourse. Moreover, the study acknowledges the potential indicated by previous research of political blogs to function as tools for voter persuasion and mobilisation. The study aims to contribute with insights on how social psychological dynamics such as self-presentation, identity-constructions, discursive divisions between ingroups and outgroups , strategies of persuasion, and appeals to emotions and nostalgic memories are involved in these processes. The dissertation examines blog-entries by members of the populist radical right parties the Finns Party (Perussuomalaiset) in Finland and the Sweden Democrats (Sverigedemokraterna) in Sweden during 2007-2015. The bloggers who are the focus of the study represent, first, the parties extreme anti-immigration factions, comprised first and foremost of white men (Studies I and IV); second, the parties women s leagues (Study II); and third, politicians with immigrant or other ethnic minority background who have chosen to join a populist radical right party (Study III). The critical discursive and rhetorical psychological study explores the nationalist political blog discourse at three levels: it investigates the arguments it contains; by what verbal, visual and digital means these arguments are presented in order to seem convincing; and what implications these formulations might have in a social and political sense. In so doing, the study approaches the political blog-discourse as part and parcel of its broader argumentative context. This dissertation contributes to social psychological research on nationalist political communication and persuasion in three central ways. First, by delving into the discourse of both white men, women and ethnic minority members in populist radical right parties, it provides an understanding of the diversity of voices within such parties. Women and immigrants within these parties seem to be faced with particular dilemmas: the former ones with that between societal norms of gender equality and the patriarchal politics of the populist radical right; and the latter ones with that of being an immigrant in an anti-immigration political party. The critical discursive and rhetorical analyses of this study are able to show how these politicians strive to reconcile such dilemmas in their blog-discourse in ways that nevertheless remain faithful to the promotion of patriarchal and nationalist political causes. Second, this dissertation extends the critical discursive and rhetorical approach with analytical tools from narrative psychology, social semiotic studies of images and studies of online political communication. Thus moving beyond the text in its analytical approach, the study is able to explore the multitude of (audio-)visual, digital and communicative features contained in political blogs, and how these interact with classical rhetorical strategies, narrative structures, and socially and culturally rooted discursive resources in the construction of nationalist political arguments. Third, the study shows that the (audio-)visual, digital and communicative features of the blogs allow for the presentation of socially sensitive and even racist political views without the individual blogger having to express an explicit personal opinion on the matter at hand. Because of these features political blogs seem to constitute an optimal sphere for nationalist political communication and persuasion: they enable the conveying of powerful, credible and emotion-provoking messages, yet they concomitantly protect the blogger from charges of holding racist views. Discourse contained in political blogs does not remain in the blogosphere, but becomes circulated in mainstream media and thus influences the broader societal and political debate. In order to grasp the character and societal implications of contemporary political communication and persuasion, this dissertation thus encourages social psychological research to develop its tools for critically studying discourse contained in political blogs.",
+      "citacoes": 13,
+      "periodico": "Työväentutkimus Vuosikirja",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Sustainable Development Goals in SAARC Countries: Key Issues, Opportunities and Challenges",
+      "autores": [
+        "Lal Mervin Dharmasiri",
+        "Praveen G. Saptarshi",
+        "Prof. Dr. S. D. Shinde",
+        "F. M. Nadaf",
+        "B. M. Bhanje",
+        "Jyotiram More",
+        "Harish. B. Tipe",
+        "Babalola Ayodele Samuel",
+        "Santosh P. Mane"
+      ],
+      "ano": 2023,
+      "doi": "10.5281/zenodo.8249545",
+      "url": "https://zenodo.org/record/8249545",
+      "resumo": "Ladies and gentlemen, I am honored to be here today to speak to you about the issues, challenges, and opportunities for providing renewable energy towards the sustainable development goals in the SAARC counties, in particularly in Sri Lanka. I will also suggest some possible solutions for overcoming the key issues, challenges and opportunities for sustaining the energy sector of the SAARC countries. And also, it is a pleasure to address this important international conference in beautiful Mudhoji College, in Padmavati Nagar, Maharashtra, India. As we know the SAARC, or the South Asian Association for Regional Cooperation, which is a regional organization that comprises, Afghanistan, Bangladesh, Bhutan, India, the Maldives, Nepal, Pakistan, and Sri Lanka. These countries may have common historical, cultural, and Geographical linkages, as well as common challenges and opportunities for development. The sustainable development goals (SDGs) are a set of 17 global goals that aim to end poverty, protect the world, and ensure peace and prosperity for all by 2030. They include several objectives which are related to energy access, energy efficiency, renewable energy, and actions against climate change. The SDG goals of 7 stand for affordable and clean energy. It aims to ensure access to reliable, sustainable, and clean energy for all by 2030. Further, it emphasized increasing renewable energy, improving energy efficiency and expanding infrastructure and technology for clean energy. Achieving SDG 7 would be able to reduce greenhouse gas emissions, mitigate climate change and finally it helps to promote economic and social development of the World, in particularly, the SAARC countries. According to the available data, more than 75% of the total energy production of India, Sri Lanka, Bangladesh and Afghanistan are come from fossil fuels, i.e., non-renewable energy. It is 100% in Maldives. In Pakistan, it is 63%. But in Bhutan and Nepal the non-renewable fossil fuel usage is much lower than 10% of their total energy production. They produce energy from renewable sources such as biomass, hydroelectricity and so on. One of the most serious issues facing our South Asian region is the lack of access to affordable, and clean energy for millions of people. According to the World Bank, about 255 million people in South Asia still live without electricity, and many more people use biomass to fulfill their energy requirement, which causes indoor air pollution and health problems. In addition, it is estimated that the energy demand of the SAARC countries will increase by 3.4% annually due to population growth, urbanization, economic development and so on. Renewable energy is a good opportunity for SAARC countries to achieve sustainable development goals. It can provide low cost and clean energy for all. It provides more employment opportunities, income generation, reduces poverty and inequality, improves health and well-being, as well as protecting the environment. At present all SAARC countries face the provision of adequate and affordable energy for their growing demand of the populations and other economic activities. As we know, energy is essential for economic growth, social development, and environmental protection. However, SAARC countries face several key issues in meeting their energy needs, such as: 1. High dependence on fossil fuels, which are costly, and contribute to greenhouse gas emissions and local air pollution, 2. Low access to modern energy sources, especially in rural areas, where millions of people still depend on traditional systems, 3. Lack of infrastructure for generating, transmitting, and providing adequate power for the rural sector, 4. Lack of adequate investment for energy production, 5. Limited opportunities and cooperation in the energy sector, for generating and sharing with the SAARC nations. Challenges are the situation that requires efforts, skills, and commitments to overcome. In the context of renewable energy, issues may be a topic of concern, such as the environmental impact under the different technology. Accordingly, several Challenges could be found in providing renewable energy for the SAARC countries, which are as follows. How to reduce dependency on energy imports and enhance energy security? How to produce environmentally friendly energy, which reduces greenhouse gas emissions and reduces air pollution? How to reduce production cost for renewable energy which helps to reduce expenses for fossil fuels? What is the possibility to provide clean energy for the people living in remote areas in SAARC countries? What is the possibility to share surplus energy with the energy deficit countries? As we knew that the SAARC countries face several constraints to transform from nonrenewable to renewable sector, such as in adequate infrastructure, investment, appropriate technology, suitable policy frameworks, and public awareness etc. Obviously, the SAARC countries need to shift towards a renewable energy source, such as hydropower, solar, wind, geothermal, wave, tidal and modern biofuels, which have more advantages over fossil fuels. Accordingly, there are many opportunities to overcome these challenges and achieve the sustainable development goals (SDGs). Some of the significant opportunities are as follows. Adopting a policy framework for establishing Government, Public and private partnership programs, Provide an incentive to promote renewable energy production and development in terms of tax exemption, subsidies, and tariffs, Strengthening human resources and technical capacities to design, implement and operate renewable energy systems, Invest more money in research and development activities to novel innovation and technology transfer in renewable energy, Enhance regional cooperation to coordinate, facilitate and enforce regulations, as well as to facilitate trans-boundary energy trade and interconnection of renewable energy systems. It would be interesting to have a look at our country. i.e. Sri Lanka. As you know that the Sri Lanka is a beautiful island with rich natural resources. However, Sri Lanka is also facing many issues, such as increasing energy demand, high dependence on fossil fuels, unbearable energy cost and adverse environmental impacts. These issues have been adversely affecting the economic development of the country. As you may know, Sri Lanka is a developing country with a population of about 22 million people and a per capita income of about 4,000 US dollars. The country has achieved remarkable progress in human development indicators such as literacy and life expectancy. However, it also faces many challenges in achieving economic growth, social equity, and environmental sustainability against the present economic crises. On this background, Sri Lankan has already identified the importance of renewable energy and has set a goal of achieving 70 percent electricity generation by renewable sources by 2030 under the SDG. An apex institution was set up to achieve this goal, i.e., Sustainable Energy Authority (SLSEA). There are several specific issues could be identified in the SAARC countries related to sustainable energy. Some specific issues are as follows. High upfront costs and lack of financing options due to economic constraint of the country, Inadequate policy and regulatory",
+      "citacoes": 8,
+      "periodico": "Zenodo (CERN European Organization for Nuclear Research)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Exploring model-as-a-service for generative ai on cloud platforms",
+      "autores": [
+        "Harshad Pitkar",
+        "Sanjay Bauskar",
+        "Dharmendra Parmar",
+        "Hemlatha Kaur Saran"
+      ],
+      "ano": 2024,
+      "doi": "10.18488/76.v11i4.4017",
+      "url": "https://doi.org/10.18488/76.v11i4.4017",
+      "resumo": "This study examines the exploration of Model-as-a-Service for generative AI on cloud platforms. Model-as-a-Service (MaaS) could revolutionize generative AI; thus, we examine its impact on sectors, implementation best practices, and future trends. Business usage of generative AI for content development, predictive modelling, and consumer engagement is flexible and scalable using Software as a Service (SaaS). We explore how MaaS lets companies access, train, and deploy complex generative models like Generative Adversarial Networks (GAN), Variational Autoencoders (VAE), and Transformers without expensive in-house AI infrastructure. Lifecycle management in MaaS simplifies model training, deployment, versioning, and continuous improvement for iterative development in dynamic business contexts. MaaS security and compliance are crucial in highly regulated areas, including healthcare, finance, and law. Encryption, network isolation, and access control protect data and models. Generative AI models handle sensitive data; hence, industry standards and data sovereignty must be followed. Ethical AI, edge computing, and low-code/no-code platforms will enable more people to use models in real time and follow responsible AI guidelines, making MaaS's future bright. Generative AI applications and real-world case studies in healthcare, banking, retail, and entertainment demonstrate how MaaS can create value and stimulate innovation. Our study finds that using MaaS for generative AI, businesses can immensely benefit and explains how developers can speed up development, improve customer experiences, and remain ahead in the ever-changing digital landscape.",
+      "citacoes": 2,
+      "periodico": "Review of Computer Engineering Research",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Speech Cloning: Text-To-Speech Using VITS",
+      "autores": [
+        "R, Dr. Padmanaban"
+      ],
+      "ano": 2024,
+      "doi": "10.47191/etj/v9i05.10",
+      "url": "https://doi.org/10.47191/etj/v9i05.10",
+      "resumo": "<jats:p>Voice is one of the most common and natural communication methods for humans. Voice is becoming the primary interface for AI voice assistants like Amazon Alexa, as well as in autos and smart home devices. Homes and so on. As human-machine communication becomes more common, researchers are exploring technology that mimics genuine speech. Speech cloning is the practice of copying or mimicking another person's speech, usually utilizing modern technology and artificial intelligence (AI). This entails producing a synthetic or cloned version of someone's voice that sounds very similar to the actual speaker. The objective is to produce speech that is indistinguishable from the genuine person, both in tone and intonation. Instant Voice Cloning (IVC) in text-to-speech (TTS) synthesis refers to the TTS model's capacity to copy the voice of any reference speaker based on a short audio sample, without requiring extra speaker-specific training. This method is usually referred to as zero-shot TTS. IVC provides users with the flexibility to tailor the generated voice, offering significant value across diverse real-world applications. Examples include media content creation, personalized chatbots, and multi-modal interactions between humans and computers or extensive language models.</jats:p>",
+      "citacoes": null,
+      "periodico": "Engineering and Technology Journal",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Investigation of VITS Text-to-Speech for the Lithuanian Language",
+      "autores": [
+        "Lėveris, Vytautas",
+        "Korvel, Gražina"
+      ],
+      "ano": 2026,
+      "doi": "10.15388/lmitt.2026.15",
+      "url": "https://doi.org/10.15388/lmitt.2026.15",
+      "resumo": "<jats:p>This study investigates the performance of the VITS model for Lithuanian speech synthesis under different training configurations. Experiments were conducted using datasets with phoneme-based and grapheme-based text representations, accented text, and both single-speaker and multi-speaker setups. The goal was to evaluate how linguistic pre-processing and speaker diversity influence synthesis quality. Model outputs were compared using objective measures. The results provide insights into the impact of phoneme representation and accent information on the quality of Lithuanian neural TTS systems.</jats:p>",
+      "citacoes": null,
+      "periodico": "Vilnius University Open Series",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Digital Forensics with Open Source Tools",
+      "autores": [
+        "Altheide, Cory",
+        "Carvey, Harlan"
+      ],
+      "ano": 2011,
+      "doi": "10.1016/b978-1-59749-586-8.00001-7",
+      "url": "https://doi.org/10.1016/b978-1-59749-586-8.00001-7",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Digital Forensics with Open Source Tools",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Open Source Tools for Text Processing",
+      "autores": [
+        "Rybička, Jiří"
+      ],
+      "ano": 2022,
+      "doi": "10.11118/978-80-7509-880-1",
+      "url": "https://doi.org/10.11118/978-80-7509-880-1",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Core Technology Considerations: Equipment, Authoring Tools, Digital Editing Tools, and Hosting Platforms",
+      "autores": [
+        "Hai-Jew, Shalin"
+      ],
+      "ano": 2018,
+      "doi": "10.1007/978-3-030-02713-1_5",
+      "url": "https://doi.org/10.1007/978-3-030-02713-1_5",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Designing Instruction For Open Sharing",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Free, Non-open Tools of Note",
+      "autores": [],
+      "ano": 2011,
+      "doi": "10.1016/b978-1-59749-586-8.00012-1",
+      "url": "https://doi.org/10.1016/b978-1-59749-586-8.00012-1",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Digital Forensics with Open Source Tools",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    }
+  ]
+}

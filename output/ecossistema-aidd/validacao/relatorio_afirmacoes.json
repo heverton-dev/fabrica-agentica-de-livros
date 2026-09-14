@@ -1,0 +1,10 @@
+{
+  "slug": "ecossistema-aidd",
+  "capitulos": 11,
+  "total_violacoes": 0,
+  "por_capitulo": {},
+  "regras": {
+    "R-AF-1": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

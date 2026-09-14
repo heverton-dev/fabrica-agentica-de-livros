@@ -1,0 +1,42 @@
+{
+  "dossies": [
+    "dossie_economia-extrema-de-tokens.md",
+    "mineracao_academica_economia-extrema-de-tokens.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "dossie_economia-extrema-de-tokens.md",
+      "classes": {
+        "A": 40,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 40
+    },
+    {
+      "arquivo": "mineracao_academica_economia-extrema-de-tokens.md",
+      "classes": {
+        "A": 40,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 40
+    }
+  ],
+  "classes": {
+    "A": 80,
+    "B": 0,
+    "C": 0
+  },
+  "linhas_fonte_total": 80,
+  "classificadas": 80,
+  "proporcao_ab": 1.0,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "livros/economia-extrema-de-tokens"
+}

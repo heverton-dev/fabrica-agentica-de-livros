@@ -1,0 +1,63 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": {
+    "parte": "I",
+    "capitulo": "3"
+  },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 2: o caminho de configuração fantasma ~/.config/claude-code/settings.json com campo cacheControl inexistente — aplicado agora à mesma lógica de nomenclatura fabricada no catálogo de modelos gratuitos",
+  "metricas_obrigatorias": [
+    {
+      "metrica": "modelos fabricados citados pelo manual auditado",
+      "valor": "7 nomes (opencode-zen-free-tiny/small/medium/large/xlarge/prompt/coder), fonte [24]"
+    },
+    {
+      "metrica": "formato real de identificação de modelo no catálogo Zen",
+      "valor": "provider/model-id (campo 'model' de opencode.json), fonte [8]"
+    },
+    {
+      "metrica": "referências bibliográficas do capítulo",
+      "valor": "24 (mínimo exigido pelo config_obra: 20)"
+    }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "O gateway real: o que ele é, e por que a curadoria de modelos gratuitos muda com frequência",
+        "escopo": "Entra: OpenCode como IDE agêntica real, Zen como gateway/marketplace de modelos gratuito sem cartão, rotatividade do catálogo por natureza promocional, campo real 'model' (provider/model-id) em opencode.json. Fica de fora: nomes específicos de modelo (tratados no pilar 2) e sintaxe de troca de modelo via variável de ambiente (não verificável, citada apenas como alerta no protocolo).",
+        "ancora_visual": "flowchart LR da cadeia de custódia: requisição do agente -> opencode.json/campo model -> catálogo Zen vigente -> autenticado (provider/model-id real) ou falsificação (descartar e reconferir).",
+        "entrega_tecnica": "opencode.json real comentado com campo model no formato provider/model-id.",
+        "evolucao_leitor": "De 'o gateway existe, então qualquer nome de modelo dele deve ser real' para 'o gateway existir só autentica a empresa, não a lista de nomes'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Autópsia da tabela fabricada: como 7 modelos com nomes plausíveis foram inventados e por que a tabela de specs associada não podia ser real",
+        "escopo": "Entra: a convenção fabricada tiny/small/medium/large/xlarge imitando porte de nuvem, os nomes reais do catálogo (Big Pickle, Grok Code Fast 1, MiMo-V2 Flash Free, Nemotron 3 Free), o motivo pelo qual uma tabela de benchmark para modelo inexistente é irrecuperável. Fica de fora: qualquer tentativa de 'corrigir' a tabela fabricada ajustando números — a lição é descartar, não remendar.",
+        "ancora_visual": "diagrama comparativo mermaid: documento falsificado (nomes tiny..xlarge, sem fonte primária) vs documento autenticado (provider/model-id real, resiste a contraprova).",
+        "entrega_tecnica": "par de blocos JSON/bash: config fabricada (opencode-errado.json) vs config real confirmada (opencode-correto.json).",
+        "evolucao_leitor": "De 'nome familiar = confiança automática' para 'ferramenta real + sintaxe fabricada é o erro mais perigoso, porque destrava a guarda do operador'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Protocolo de verificação de catálogo antes de publicar ou automatizar qualquer escolha de modelo",
+        "escopo": "Entra: checklist de 4 passos (doc oficial, copiar model-id exato, registrar data da checagem, desconfiar de benchmark sem link rastreável), tabela de onde checar em 10+ ferramentas reais (Aider, Codex, ccusage, agenttrace, agentlytics, Ollama, llama.cpp, vLLM, Hermes Agent, Gemini CLI, Grok Build, chezmoi, Orca ADE), script de hash para detectar mudança de catálogo. Fica de fora: aprofundamento técnico de cada ferramenta (fica para capítulos 5-7).",
+        "ancora_visual": null,
+        "entrega_tecnica": "script bash verificar-catalogo.sh reaproveitando a técnica de hash sha256 já usada no Capítulo 2 para CLAUDE.md, aplicada à página de documentação do catálogo.",
+        "evolucao_leitor": "De 'confio na minha memória sobre o nome de um comando/modelo' para 'eu tenho um protocolo repetível para qualquer CLI nova antes de automatizar'.",
+        "conceito_denso": false
+      }
+    ]
+  },
+  "validacao": {
+    "blocos_codigo": 4,
+    "blocos_verificaveis_ok": 3,
+    "diagramas_mermaid": 1,
+    "diagramas_validos": 1,
+    "referencias_secao_7": 24,
+    "citacoes_corpo": 24,
+    "citacoes_orfas": 0,
+    "citacoes_empilhadas": 0,
+    "secoes_eita_presentes": 7,
+    "horizontal_rules_internas": 0
+  }
+}

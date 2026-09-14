@@ -1,0 +1,43 @@
+{
+  "numero": "08",
+  "capitulo_fonte": "08",
+  "titulo": "O Perito Permanente: Seu Protocolo Para Qualquer Manual Novo",
+  "estagio": "Laudo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor consolida um protocolo pessoal de verificacao reutilizavel, versiona suas configuracoes confirmadas e se ve, ao fechar o livro, como o profissional que audita ferramentas de IA em vez de apenas copia-las.",
+  "pre_requisito": "Passo 7 concluído",
+  "entregas": [
+    "CLAUDE.md",
+    "~/.config/<produto>/",
+    "auditar-comando.sh"
+  ],
+  "execucao": [
+    {
+      "titulo": "O Protocolo de perícia em Formato Portátil",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# protocolo-pericia.yaml\n# Preencha um bloco destes por comando suspeito de um manual/tutorial novo.\ncomando_sob_suspeita: \"chezmoi commit -m \\\"atualiza dotfiles\\\"\"\nproduto_citado: \"chezmoi\"\nfonte_classificada:\n  classe: \"A\"          # A = doc oficial | B = repo/pacote oficial | C = terceiro\n  origem: \"https://www.chezmoi.io/install/\"\nsinais_de_alerta:\n  - \"subcomando nao aparece na lista de comandos do --help oficial\"\n  - \"nome do produto e real, o que reduz a desconfianca natural do operador\"\ncontraprova_realizada: true\nveredito: \"rejeitado\"   # aprovado | pendente | rejeitado\ncorrecao_aplicada: \"chezmoi cd && git commit -m \\\"atualiza dotfiles\\\"\"\nobservacao: \"chezmoi nao tem subcomando commit nativo; commit acontece no repositorio git do diretorio-fonte\"\n# ... (trecho completo no Capitulo 08 do livro)"
+    }
+  ],
+  "gate": "sh -c \"$(curl -fsLS https://get.chezmoi.io)\"",
+  "comandos": [
+    "sh -c \"$(curl -fsLS https://get.chezmoi.io)\"",
+    "git commit -am \"cofre confirmado: CLAUDE.md e settings.json do Capitulo 8\""
+  ],
+  "feito_quando": [
+    "Rode `--help` (ou equivalente) numa ferramenta de agente que você já usa antes de copiar qualquer comando novo de um tutorial está semana",
+    "Classifique 3 fontes que você consulta no trabalho hoje como Classe A, B ou C, usando os critérios deste capítulo",
+    "Preencha um `protocolo-perícia.yaml` para 1 comando que você copiou de algum lugar sem checar nos últimos 30 dias",
+    "Rode `chezmoi init` num diretório de teste e confirme o hash SHA-256 do seu próprio `CLAUDE.md` antes e depois de uma edição",
+    "Identifique, no seu ambiente de trabalho, algo que você trata hoje como \"aprovado\" mas que na verdade nunca teve fonte primária confirmando — reclassifique como pendente"
+  ],
+  "armadilhas": [
+    "Usar `chezmoi commit` esperando um subcomando nativo que nao existe",
+    "Instalar chezmoi pelo link curto `git.io` descontinuado desde 2022",
+    "Versionar um dotfile com segredo sem rodar grep de protecao antes do commit"
+  ],
+  "referencia_cruzada": "Cap. 8 — O Perito Permanente: Seu Protocolo Para Qualquer Manual Novo",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

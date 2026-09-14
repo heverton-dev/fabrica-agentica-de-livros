@@ -1,0 +1,24 @@
+{
+  "capitulo": "7",
+  "titulo": "Pipeline DevOps: Integração Contínua e Entrega Contínua",
+  "parte": "B",
+  "estado": "concluido_autonomo",
+  "tentativas": 1,
+  "ultimo_erro": "",
+  "arquivo": "cap_7.md",
+  "caracteres": 6800,
+  "validacoes": {
+    "ci_codigo": "ok",
+    "diagrama_mermaid": "ok",
+    "metricas": "ok",
+    "escala": "ok",
+    "afirmacoes": "ok",
+    "fontes": "ok",
+    "referencias": {
+      "total_secao7": 16,
+      "citacoes_corpo": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "orphans": 0
+    },
+    "caminho_md": "output/devops/livros/capitulos/cap_7.md"
+  }
+}

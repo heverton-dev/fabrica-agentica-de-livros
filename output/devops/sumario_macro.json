@@ -1,0 +1,48 @@
+{
+  "titulo_obra": "DevOps Essencial: Cultura, automacao e entrega continua",
+  "subtitulo": "Cultura e praticas na estrada da entrega continua",
+  "tipo_obra": "livro",
+  "tamanho_obra": "G",
+  "paginas_estimadas": 120,
+  "motivo_condutor": {
+    "nome": "A Jornada do Desenvolvedor",
+    "descricao": "Evolucao de silos para alta performance.",
+    "vocabulario": [
+      "automacao",
+      "feedback",
+      "seguranca"
+    ],
+    "persona_leitor": "Desenvolvedor"
+  },
+  "introducao": "Panorama geral do DevOps.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "Introducao ao DevOps",
+          "resumo": "Compreender origens do DevOps.",
+          "objetivo": "Apresentar DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Evolucao",
+            "Silos"
+          ],
+          "ancora_visual": "flowchart TD\n    A --> B",
+          "entrega_tecnica": "Checklist",
+          "secoes_eita": [
+            "Introducao: Historica",
+            "Explica: Silos",
+            "Ilustra: Diagrama",
+            "Tecnica: Template",
+            "Aplica: Exercicio",
+            "Conclusao: Cultura",
+            "Referencias: [1]"
+          ]
+        }
+      ]
+    }
+  ]
+}

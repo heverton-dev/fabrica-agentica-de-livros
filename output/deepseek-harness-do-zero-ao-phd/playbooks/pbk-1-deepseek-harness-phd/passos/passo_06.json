@@ -1,0 +1,51 @@
+{
+  "numero": "06",
+  "capitulo_fonte": "06",
+  "titulo": "Tool Pipeline: Como o Agente Executa Acoes",
+  "estagio": "Montagem",
+  "estagio_indice": 2,
+  "objetivo": "Entender o fluxo de ferramentas de ponta a ponta.",
+  "pre_requisito": "Passo 5 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Configurando Policy Rules",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# dsh.config.yaml\ntools:\n  policy:\n    # Bloquear comandos perigosos\n    blocked:\n      - \"git push --force\"\n      - \"rm -rf /\"\n      - \"sudo *\"\n    \n    # Permitir apenas em modo read\n    read-only:\n      - \"filesystem:read\"\n      - \"web:search\"\n    \n    # Exigir aprovação humana\n    require-approval:\n      - \"shell:execute\"\n      - \"filesystem:write\""
+    },
+    {
+      "titulo": "Configurando Filesystem Guards",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# dsh.config.yaml\nsandbox:\n  filesystem:\n    # Permitir leitura em qualquer lugar\n    read:\n      - \"/home/user/**\"\n      - \"/tmp/**\"\n    \n    # Permitir escrita apenas no projeto\n    write:\n      - \"/home/user/projeto/**\"\n      - \"/tmp/output/**\"\n    \n    # Bloquear绝对amente\n    deny:\n      - \"/etc/**\"\n      - \"/root/**\"\n      - \"/home/user/.ssh/**\""
+    },
+    {
+      "titulo": "Hooks de Auditoria",
+      "linguagem": "javascript",
+      "comandos": [],
+      "codigo": "// plugin de auditoria\nexport default function auditPlugin(ctx) {\n  ctx.on('tool:pre-execute', (event) => {\n    console.log(`[AUDIT] ${event.tool} executada por ${event.session}`);\n  });\n\n  ctx.on('tool:post-execute', (event) => {\n    console.log(`[AUDIT] ${event.tool} retornou ${event.result.length} chars`);\n  });\n}"
+    },
+    {
+      "titulo": "Monitorando o Pipeline em Tempo Real",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Habilitar verbose mode\ndsh --mode standard --verbose\n\n# Output:\n# [TOOL] policy: shell:execute -> permitido\n# [TOOL] pre-execute: sandbox isolado ativado\n# [TOOL] execute: ls -la /home/user/projeto\n# [TOOL] post-execute: resultado comprimido de 2048 para 512 chars\n# [TOOL] observation: resultado entregue ao modelo"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Nunca rode agentes com acesso total ao filesystem",
+    "Sempre teste em um diretório temporário primeiro",
+    "Mantenha backups antes de qualquer operação de agente",
+    "Use approval mode para qualquer coisa que você não pode desfazer"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 6 — Tool Pipeline: Como o Agente Executa Acoes",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,903 @@
+{
+  "slug": "orquestracao-multi-agente-orca",
+  "total_referencias": 127,
+  "resumo": {
+    "nao_verificado": 127
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.21489",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.15221",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.27416",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2604.01658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2602.22480",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2602.22480",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.21489",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.15376",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2608.21156",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.15376",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.27416",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.03108",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.15221",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.27416",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.29632",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2602.22480",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.21489",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2608.21156",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.21489",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.27416",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00062",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010042522104",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2608.21156",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.15221",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.21489",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.15376",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.15221",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2602.22480",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2603.21489",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.20563",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.15376",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1023/a:1024176820874",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2604.01658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.5220/0014456800004052",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2606.03108",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2608.21156",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2605.15221",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1023/a:1010008305297",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.65109/hxka2256",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.5220/0012239100003598",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2604.01658",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.51244/ijrsi.2026.1303000020",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1109/asew67777.2025.00059",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2602.22480",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1023/b:agnt.0000038028.66672.1e",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

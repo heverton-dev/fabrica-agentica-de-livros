@@ -1,0 +1,40 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "C", "capitulo": "12" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 11: o conceito de Segurança em DevOps, agora aplicado à observabilidade",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Fundamentos da Observabilidade",
+        "escopo": "Definição de observabilidade, seus três pilares (métricas, logs, traces) e diferença entre monitoramento tradicional e observabilidade.",
+        "ancora_visual": "flowchart LR subgraph A[Application] --> B[Instrumentation]; B --> C[Metrics] --> D[Prometheus]; B --> E[Logs] --> F[ELK Stack]; B --> G[Traces] --> H[Jaeger]; end",
+        "entrega_tecnica": "Python script usando prometheus_client para expor métricas simples (contador de requisições) em endpoint /metrics",
+        "evolucao_leitor": "de não saber o que é observabilidade para compreender seus três pilares e por que é essencial para detectar problemas em sistemas distribuídos",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Implementação Prática com Ferramentas Open-Source",
+        "escopo": "Configuração de stack de observabilidade: Prometheus para métricas, Grafana para visualização, ELK para logs, Jaeger para traces.",
+        "ancora_visual": "sequenceDiagram participant App; App->>Prometheus: métricas; App->>ELK: logs; App->>Jaeger: traces; Prometheus->>Grafana: dashboards",
+        "entrega_tecnica": "docker-compose.yml que orquestra containers de Prometheus, Grafana, ELK e Jaeger, além de uma aplicação de exemplo que expõe métricas e logs",
+        "evolucao_leitor": "de entender os conceitos para saber como colocar em prática um ambiente de observabilidade básico usando ferramentas de código aberto",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Observabilidade Avançada e Boas Práticas",
+        "escopo": "Escalabilidade em Kubernetes, definição de SLIs e SLOs, alertas eficazes, observabilidade de serviços serverless e correlação de sinais.",
+        "ancora_visual": "flowchart TD subgraph K8s[Kubernetes Cluster] -->|ServiceMonitor| PrometheusOperator --> Prometheus; Prometheus -->|Alertmanager| Alertmanager; Alertmanager -->|notifications| Email; Email -->|actions| Team; end",
+        "entrega_tecnica": "Manifesto Kubernetes (YAML) para deploy do Prometheus Operator e criação de ServiceMonitor para uma aplicação de exemplo",
+        "evolucao_leitor": "de configurar um stack básico para saber como aplicar observabilidade em ambientes de nuvem complexos e alinhar com objetivos de negócio via SLOs",
+        "conceito_denso": false
+      }
+    ],
+    "metricas_obrigatorias": [
+      {
+        "metrica": "quantidade de ferramentas de observabilidade citadas no dossiê",
+        "valor": "6"
+      }
+    ]
+  }
+}

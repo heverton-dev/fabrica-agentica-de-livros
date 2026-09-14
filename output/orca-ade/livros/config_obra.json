@@ -1,0 +1,31 @@
+{
+  "tema": "ORCA ADE — O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+  "tipo_obra": "livro",
+  "tamanho_obra": "GG",
+  "senioridade_obra": "iniciante",
+  "min_referencias_por_capitulo": 20,
+  "serie": null,
+  "cor_primaria": "#1f2937",
+  "subtitulo": "O Guia Definitivo do Ambiente de Desenvolvimento Agêntico",
+  "edition_tag": "v1.0 — Edição Completa e Ilustrada",
+  "estilo_tecnica": "hibrido",
+  "gerar_artigos": false,
+  "qtd_artigos": 0,
+  "gerar_ebooks": false,
+  "qtd_ebooks": 0,
+
+  "gerar_playbook": true,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "cta_url": "",
+  "cta_texto": "",
+
+  "gerar_campanha": false,
+  "gerar_maquina": false,
+
+  "categoria_tecnica": true,
+  "modo_producao": "obra-unica",
+  "obra_raiz": null
+}

@@ -1,0 +1,27 @@
+{
+  "tema": "Otimizacao real de tokens em IDEs agenticas locais (Claude Code, OpenCode, Aider, Codex e afins), rodando em notebook sem Docker/proxy/servidor. Material de referencia obrigatorio: 'C:\\Users\\trcnologia\\Desktop\\agent-token-optimization-manual-v3.1.md' (manual v3.1, 15 LABs: cache de prompt, roteamento de modelos, prompt compression, response caching semantico, paralelismo, context engineering, orcamento/hard limits, fallback/resiliencia, automacao tipo 'Hermes', dotfiles, benchmarks, modelos locais offline, troubleshooting). MANDATO EDITORIAL: o livro so pode afirmar como pratica valida aquilo que for VERIFICAVEL e COMPROVADO (ferramenta existe e faz o que se diz, comando/flag real, caminho de config real, mecanismo documentado pelo fornecedor). Toda tecnica, ferramenta, nome de modelo, caminho de arquivo ou comando do manual de referencia deve ser auditado contra fontes primarias (documentacao oficial de Claude Code/Anthropic, OpenCode, Aider, Codex, Ollama, llmlingua, gptcache, chezmoi, cron/systemd) antes de entrar no texto. Fabricacoes identificadas no material de referencia (ex.: modelos/servicos inventados, caminhos de configuracao inexistentes, IDE fictícia 'Hermes', flags de CLI que nao existem, numeros de economia sem lastro) devem ser expostas em uma secao explicita de 'Mitos e Fabricacoes Descartadas' com o motivo da reprovacao, nunca silenciadas. Cada tecnica aprovada precisa vir com: comando/config exato e testavel, fonte oficial citada [N], e limite/contorno conhecido.",
+  "tipo_obra": "livro",
+  "min_referencias_por_capitulo": 20,
+  "tamanho_obra": "M",
+  "senioridade_obra": "iniciante",
+  "serie": null,
+  "cor_primaria": "#2563EB",
+  "subtitulo": "Guia verificado de economia de tokens em IDEs agenticas",
+  "edition_tag": "v1.0",
+  "estilo_tecnica": "hibrido",
+  "gerar_artigos": false,
+  "qtd_artigos": 0,
+  "gerar_ebooks": false,
+  "qtd_ebooks": 0,
+
+  "gerar_playbook": true,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "cta_url": null,
+  "cta_texto": null,
+
+  "modo_producao": "obra-unica",
+  "obra_raiz": null
+}

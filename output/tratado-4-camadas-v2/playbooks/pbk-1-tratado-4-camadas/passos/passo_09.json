@@ -1,0 +1,56 @@
+{
+  "numero": "09",
+  "capitulo_fonte": "09",
+  "titulo": "Camada 4 — Ferramentas, MCP e Persistência: A Usina Determinística",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Construir o braço físico da fábrica: servidores MCP sob escopo mínimo, scripts determinísticos idempotentes e persistência de estado auditável.",
+  "pre_requisito": "Passo 8 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Ferramenta idempotente com escopo e validação de saída",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Ferramenta idempotente de sincronizacao com escopo minimo e auditoria.\"\"\"\n\nimport hashlib\nimport json\nimport sqlite3\nimport sys\nfrom dataclasses import dataclass, asdict\nfrom pathlib import Path\nfrom typing import Optional\n\nESQUEMA_REGISTRO = {\"origem\", \"destino\", \"hash\", \"status\"}\nBANCO = Path(\"data/estado.db\")\n\n\n@dataclass(frozen=True)\nclass Resultado:\n    origem: str\n    destino: str\n    hash: str\n    status: str\n\n\ndef escopo_permitido(destino: Path, raizes: list) -> bool:\n    \"\"\"Escopo minimo: a ferramenta so escreve dentro das raizes autorizadas.\"\"\"\n    try:\n        resolvido = destino.resolve()\n    except OSError:\n        return False\n    return any(resolvido.is_relative_to(Path(r).resolve()) for r in raizes)\n\n\ndef calcular_hash(conteudo: bytes) -> str:\n    return hashlib.sha256(conteudo).hexdigest()[:16]\n\n\ndef sincronizar(origem: Path, destino: Path, raizes: list) -> Optional[Resultado]:\n    if not origem.is_file():\n        return None\n    if not escopo_permitido(destino, raizes):\n        raise PermissionError(f\"destino fora do escopo autorizado: {destino}\")\n\n    dados = origem.read_bytes()\n    digest = calcular_hash(dados)\n\n    # Idempotencia: se o hash atual ja e o desejado, nada a fazer.\n    if destino.exists() and calcular_hash(destino.read_bytes()) == digest:\n        return Resultado(str(origem), str(destino), digest, \"inalterado\")\n\n    destino.parent.mkdir(parents=True, exist_ok=True)\n    destino.write_bytes(dados)\n    return Resultado(str(origem), str(destino), digest, \"sincronizado\")\n\n\ndef validar_saida(regist"
+    },
+    {
+      "titulo": "4.2 Declaração de ferramentas com permissão mínima",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"servidores\": [\n    {\n      \"nome\": \"estado-interno\",\n      \"transporte\": \"stdio\",\n      \"escopo\": {\n        \"leitura\": [\"data/\", \"config/\"],\n        \"escrita\": [\"data/estado.db\"],\n        \"proibido\": [\"..\", \"/etc\", \"variaveis-de-ambiente-sensiveis\"]\n      },\n      \"validacao_de_saida\": \"esquema-registro.json\",\n      \"exige_autorizacao\": false\n    },\n    {\n      \"nome\": \"publicacao\",\n      \"transporte\": \"stdio\",\n      \"escopo\": {\n        \"leitura\": [\"dist/\"],\n        \"escrita\": [\"dist/\"],\n        \"proibido\": [\"producao\", \"secrets\", \"..\"]\n      },\n      \"validacao_de_saida\": \"esquema-publicacao.json\",\n      \"exige_autorizacao\": true,\n      \"motivo_autorizacao\": \"efeito irreversivel em ambiente publico\"\n    }\n  ]\n}"
+    },
+    {
+      "titulo": "4.3 Sessão real de operação",
+      "linguagem": "console",
+      "comandos": [
+        "python ferramenta.py README.md dist/README.md",
+        "python ferramenta.py README.md producao/README.md"
+      ],
+      "codigo": "$ python ferramenta.py README.md dist/README.md\n{\n  \"origem\": \"README.md\",\n  \"destino\": \"dist/README.md\",\n  \"hash\": \"9f2c41ab77de0310\",\n  \"status\": \"sincronizado\"\n}\n\n$ python ferramenta.py README.md dist/README.md\n{\n  \"origem\": \"README.md\",\n  \"destino\": \"dist/README.md\",\n  \"hash\": \"9f2c41ab77de0310\",\n  \"status\": \"inalterado\"\n}\n\n$ python ferramenta.py README.md producao/README.md\n[BLOQUEIO] destino fora do escopo autorizado: producao/README.md\n\n$ sqlite3 data/estado.db \"SELECT id, status, registrado_em FROM acoes ORDER BY id DESC LIMIT 2;\"\n2|inalterado|2026-09-12 14:22:07\n1|sincronizado|2026-09-12 14:21:51"
+    }
+  ],
+  "gate": "python ferramenta.py README.md dist/README.md",
+  "comandos": [
+    "python ferramenta.py README.md dist/README.md",
+    "python ferramenta.py README.md producao/README.md"
+  ],
+  "feito_quando": [
+    "Confiar em ferramenta pela descrição. A descrição é texto; o comportamento é código, e os dois podem divergir sem aviso [3]",
+    "Consumir saída sem validar esquema. Campo inesperado quebra pipeline silenciosamente, e o sintoma aparece longe da causa",
+    "Conceder escopo de escrita amplo \"por conveniência\". Conveniência de hoje é incidente de amanhã",
+    "Escrever ferramenta não idempotente e recuperar falha manualmente. Toda recuperação manual é uma oportunidade de erro sob pressão",
+    "Tratar o banco de estado como banco de aplicação. Ele guarda decisão e telemetria, com retenção declarada — não dados de negócio [14]"
+  ],
+  "armadilhas": [
+    "Confiar em ferramenta pela descrição. A descrição é texto; o comportamento é código, e os dois podem divergir sem aviso [3]",
+    "Consumir saída sem validar esquema. Campo inesperado quebra pipeline silenciosamente, e o sintoma aparece longe da causa",
+    "Conceder escopo de escrita amplo \"por conveniência\". Conveniência de hoje é incidente de amanhã",
+    "Escrever ferramenta não idempotente e recuperar falha manualmente. Toda recuperação manual é uma oportunidade de erro sob pressão",
+    "Tratar o banco de estado como banco de aplicação. Ele guarda decisão e telemetria, com retenção declarada — não dados de negócio [14]"
+  ],
+  "referencia_cruzada": "Cap. 9 — Camada 4 — Ferramentas, MCP e Persistência: A Usina Determinística",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

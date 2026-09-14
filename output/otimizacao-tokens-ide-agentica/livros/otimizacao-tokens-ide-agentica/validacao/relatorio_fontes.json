@@ -1,0 +1,42 @@
+{
+  "dossies": [
+    "auditoria_manual_v3.1.md",
+    "dossie_otimizacao-tokens-ide-agentica.md"
+  ],
+  "por_dossie": [
+    {
+      "arquivo": "auditoria_manual_v3.1.md",
+      "classes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "linhas_fonte": 0
+    },
+    {
+      "arquivo": "dossie_otimizacao-tokens-ide-agentica.md",
+      "classes": {
+        "A": 22,
+        "B": 16,
+        "C": 7
+      },
+      "linhas_fonte": 45
+    }
+  ],
+  "classes": {
+    "A": 22,
+    "B": 16,
+    "C": 7
+  },
+  "linhas_fonte_total": 45,
+  "classificadas": 45,
+  "proporcao_ab": 0.844,
+  "status": "conforme",
+  "violacoes": [],
+  "regras": {
+    "R-FT-1": ">= 70% das fontes com classificação explícita são A ou B",
+    "R-FT-2": "dossiê sem classificação explícita => nao_verificado (não reprova)",
+    "R-FT-3": "fontes não classificadas não contam na proporção"
+  },
+  "slug": "livros/otimizacao-tokens-ide-agentica"
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "orquestracao-multi-agente-orca",
+  "capitulos": 16,
+  "metricas_por_capitulo": {
+    "cap_01": 3,
+    "cap_02": 6,
+    "cap_03": 1,
+    "cap_04": 1,
+    "cap_05": 4,
+    "cap_06": 2,
+    "cap_07": 4,
+    "cap_08": 5,
+    "cap_09": 9,
+    "cap_10": 10,
+    "cap_11": 1,
+    "cap_12": 4,
+    "cap_13": 11,
+    "cap_14": 4,
+    "cap_15": 3,
+    "cap_16": 4
+  },
+  "total_violacoes": 0,
+  "regras": {
+    "R-MT-1": "todo capítulo tem ao menos 1 métrica (número + unidade)",
+    "R-MT-2": "métrica declarada em metricas_obrigatorias aparece no capítulo",
+    "R-MT-3": "métrica declarada tem citação [N] no mesmo parágrafo"
+  },
+  "violacoes": []
+}

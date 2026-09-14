@@ -1,0 +1,40 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "senioridade_obra": "iniciante",
+  "callback_capitulo_anterior": "Capítulo 5: o conceito de empacotamento estruturado de contexto (o snapshot do Repomix), agora aplicado um passo antes — reduzindo o próprio código-fonte para que sobre menos volume a empacotar.",
+  "metricas_obrigatorias": [
+    { "metrica": "tempo de reescrita estrutural em lote (50 arquivos)", "valor": "2 ms" },
+    { "metrica": "custo operacional do binário ast-grep", "valor": "< 10 MB RAM" }
+  ],
+  "sugestao_limite_contorno": "ast-grep resolve padrões estruturais sintáticos (forma da árvore); não resolve duplicação SEMÂNTICA (dois trechos que fazem a mesma coisa com estrutura diferente) nem decide SE uma refatoração em massa é semanticamente segura — o commit ainda precisa de revisão humana e testes antes do merge.",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "AST vs. Texto: por que grep encontra strings e ast-grep encontra estrutura",
+        "escopo": "Entra: a diferença entre correspondência textual (regex/grep, compara caracteres) e correspondência estrutural (AST via Tree-sitter, compara nós de uma árvore); como o parser transforma código-fonte em árvore sintática; por que reformatação, quebra de linha ou renomeação de variável não enganam o ast-grep. Fora: teoria de compiladores completa, gramáticas formais, escrita de parsers do zero.",
+        "ancora_visual": "flowchart LR comparando o mesmo trecho de código em duas formatações diferentes passando por dois caminhos: grep (compara texto linha a linha, falha ao reconhecer o padrão reformatado) e ast-grep (converte em árvore Tree-sitter, casa a estrutura e reconhece o mesmo padrão independente da formatação) — usar vocabulário de 'auditoria' e 'custo escondido' do motivo condutor.",
+        "entrega_tecnica": "bash/console comentado passo a passo (nível iniciante): instalar ast-grep (npm ou cargo), rodar o primeiro comando `sg run -p 'pattern'` contra um arquivo de exemplo e comparar com o mesmo `grep` falhando no trecho reformatado.",
+        "evolucao_leitor": "De 'eu uso grep e torço para o código estar formatado do jeito que eu esperava' para 'eu penso em padrões estruturais que sobrevivem a qualquer estilo de código, indentação ou nome de variável'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Refatoração automática em massa: renomear, mudar assinatura, remover código morto",
+        "escopo": "Entra: escrever uma regra ast-grep em YAML (sgconfig.yml + regra de rewrite), usar wildcards estruturais ($$$ARGS) para casar qualquer quantidade de argumentos, rodar com --update-all para aplicar a reescrita em lote; casos de uso: renomear função em dezenas de arquivos, mudar assinatura, remover import não usado. Fora: regras relacionais avançadas (constraints entre múltiplos nós), regras que dependem de análise de tipos.",
+        "ancora_visual": "flowchart TD do pipeline: código-fonte do repositório --> parser Tree-sitter (gera árvore) --> regra YAML com wildcard $$$ARGS --> nós casados na árvore --> reescrita aplicada --> arquivos atualizados; anotar ao lado de 'reescrita aplicada' o custo evitado (fluxo de caixa: horas de engenharia manual não gastas).",
+        "entrega_tecnica": "YAML comentado (sgconfig.yml + regra-rename.yml) definindo uma regra de rename/mudança de assinatura, mais o comando `sg scan -r regra-rename.yml --update-all` explicado linha a linha (nível iniciante, sem regras relacionais avançadas).",
+        "evolucao_leitor": "De 'editar arquivo por arquivo manualmente, ou pedir pro LLM reescrever a base inteira' para 'escrever uma regra uma única vez e aplicá-la ao repositório inteiro em milissegundos, sem gastar um token de LLM na tarefa'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Detecção de duplicação e anti-patterns com gate em CI",
+        "escopo": "Entra: usar ast-grep para detectar padrões estruturais repetidos (código duplicado) e anti-patterns simples (ex.: função com excesso de parâmetros, chamada insegura recorrente); integrar a varredura como etapa de CI que bloqueia merge se o padrão proibido aparecer. Fora: ferramentas dedicadas de clone-detection (ex. jscpd), métricas de complexidade ciclomática, comparação exaustiva com outras ferramentas de qualidade.",
+        "ancora_visual": "flowchart TD do pipeline de CI: Pull Request aberto --> etapa 'sg scan --error-on match' roda como step do workflow --> decisão: padrão proibido/duplicado encontrado? --> caminho 'sim' bloqueia o merge --> caminho 'não' libera o merge; enquadrar como o 'auditor automático' do fluxo de caixa de engenharia.",
+        "entrega_tecnica": "YAML de workflow de CI (GitHub Actions) comentado, rodando `sg scan` com uma regra de anti-pattern como step obrigatório antes do merge.",
+        "evolucao_leitor": "De 'esperar o revisor humano notar a duplicação por acaso' para 'ter um gate automático e determinístico que nunca deixa dívida técnica óbvia entrar no repositório' — conexão direta com a governança em produção que fecha a Parte II no Capítulo 8.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

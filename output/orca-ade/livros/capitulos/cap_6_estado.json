@@ -1,0 +1,24 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "6" },
+  "estado_execucao": "concluido",
+  "callback_capitulo_anterior": "Capítulo 4: o worktree como checkout físico isolado e descartável, agora usado como o racional de segurança que autoriza o Orca a pré-aplicar o bypass de permissão de cada agente sem pedir confirmação a cada comando.",
+  "validacao": {
+    "secoes_completas": true,
+    "diagramas_mermaid": 3,
+    "diagramas_validos": 3,
+    "blocos_codigo": 3,
+    "blocos_codigo_ok": 3,
+    "referencias_secao7": 22,
+    "citacoes_inline": 30,
+    "citacoes_orfas": 0,
+    "citacoes_empilhadas_sem_prosa": 0,
+    "horizontal_rules": 0,
+    "pendencias_todo": 0,
+    "gate_metricas": "OK",
+    "gate_afirmacoes": "OK",
+    "gate_escala": "OK",
+    "gate_fontes": "OK",
+    "gate_comandos_cli": "OK"
+  }
+}

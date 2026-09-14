@@ -1,0 +1,11 @@
+%% legenda: Fluxo de requisição através do OmniRoute
+flowchart LR
+  A[Sua App<br/>Claude Code] -->|POST /chat/completions| B[OmniRoute<br/>Proxy]
+  B -->|Load Balance| C{Provedor<br/>Disponível?}
+  C -->|Vertex AI<br/>OK| D["Vertex AI<br/>Gemini Pro"]
+  C -->|OpenCode<br/>OK| E["OpenCode<br/>Llama 2"]
+  C -->|Anthropic<br/>OK| F["Anthropic<br/>Claude 3"]
+  D --> G[Resposta<br/>Unificada]
+  E --> G
+  F --> G
+  G --> H[Sua App<br/>Recebe Resultado]

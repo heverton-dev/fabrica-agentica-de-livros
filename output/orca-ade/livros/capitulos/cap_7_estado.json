@@ -1,0 +1,18 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "II", "capitulo": "7" },
+  "estado_execucao": "concluido_autonomo",
+  "callback_capitulo_anterior": "Capítulo 6: o conceito de agnosticismo radical (qualquer CLI que roda em um terminal roda no Orca), agora aplicado ao ciclo de vida observável dessa mesma CLI dentro do terminal",
+  "validacoes": {
+    "validar-codigo.py": "OK (3/3 blocos verificaveis, 100%)",
+    "renderizar-diagramas.py --validar": "OK (1/1 diagrama valido)",
+    "validar-metricas.py": "OK (0 violacoes)",
+    "validar-escala.py": "OK (0 violacoes)",
+    "validar-afirmacoes.py": "OK (0 violacoes)",
+    "validar-referencias.py": "OK (25/25 referencias)",
+    "validar-comandos-cli.py": "OK (0 fabricados; 3 blocos nao marcados, nao bloqueante)",
+    "R4_min_referencias": "25 >= 20 (min_referencias_por_capitulo)",
+    "R14_citacoes_orfas": "0 orfas (corpo/secao7 100% cruzados)"
+  },
+  "arquivo_saida": "output/orca-ade/livros/capitulos/cap_7.md"
+}

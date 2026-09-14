@@ -1,0 +1,2899 @@
+{
+  "slug": "livros/tratado-4-camadas",
+  "total_referencias": 412,
+  "resumo": {
+    "ok": 411,
+    "nao_verificado": 1
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.ibm.com/think/topics/model-context-protocol",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_1",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.flexera.com/blog/ai/prompt-caching-breakdown/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/llm/lost-in-the-middle-problem/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://sylphai.substack.com/p/the-complete-guide-to-prompt-caching",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://tianpan.co/blog/2025-10-13-prompt-caching-cut-llm-costs",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/news/model-context-protocol",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.ibm.com/think/topics/model-context-protocol",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_2",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://dora.dev",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_3",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://dora.dev",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_4",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://mathshistory.st-andrews.ac.uk/Biographies/Shannon/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://sylphai.substack.com/p/the-complete-guide-to-prompt-caching",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.flexera.com/blog/ai/prompt-caching-breakdown/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://tianpan.co/blog/2025-10-13-prompt-caching-cut-llm-costs",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://medium.com/@michael.hannecke/prompt-caching-explained",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_5",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_6",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://sylphai.substack.com/p/the-complete-guide-to-prompt-caching",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.flexera.com/blog/ai/prompt-caching-breakdown/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://tianpan.co/blog/2025-10-13-prompt-caching-cut-llm-costs",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_8",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_9",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_17",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://github.com/orgs/community/discussions/158668",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.mindstudio.ai/blog/portable-ai-agent-stack-avoid-vendor-lock-in",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_18",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/news/model-context-protocol",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.ibm.com/think/topics/model-context-protocol",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_19",
+      "tipo": "url",
+      "valor": "https://trufflesecurity.com/blog/do-pre-commit-hooks-prevent-secrets-leakage",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://martinfowler.com/articles/harness-engineering.html",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/news/model-context-protocol",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2307.03172",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.swebench.com",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "http://www.periodicos.uem.br/ojs/index.php/ActaSciTechnol/article/view/3131",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "http://hdl.handle.net/10183/19885",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "doi",
+      "valor": "10.63330/aurumpub.005-009",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "doi",
+      "valor": "10.17771/pucrio.acad.77233",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2510.19692v2",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2606.28791v1",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.codecentric.de/en/knowledge-hub/blog/loop-harness-context-engineering-explained",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.databricks.com/blog/ai-harness",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.kunalganglani.com/blog/ai-agent-memory-state-management",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://engineering.salesforce.com/agentforces-agentscript-building-deterministic-control-for-enterprise-ai-workflows/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://atlan.com/know/harness-engineering-vs-prompt-engineering/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://introl.com/blog/prompt-caching-infrastructure-llm-cost-latency-reduction-guide-2025",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.digitalapplied.com/blog/prompt-caching-2026-cut-llm-costs-engineering-guide",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_20",
+      "tipo": "url",
+      "valor": "https://www.augmentcode.com/guides/harness-engineering-ai-coding-agents",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    }
+  ]
+}

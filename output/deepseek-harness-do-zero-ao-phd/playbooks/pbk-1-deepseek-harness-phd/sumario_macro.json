@@ -1,0 +1,68 @@
+{
+  "titulo_obra": "Playbook — DeepSeek Harness: Do zero ao PhD",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "deepseek-harness-do-zero-ao-phd",
+  "motivo_condutor": {
+    "nome": "A Oficina de Agentes",
+    "descricao": "O leitor e um engenheiro que recebe um kit de pecas e vai montando sua propria oficina de agentes de IA ao longo do livro.",
+    "vocabulario": [
+      "kit de pecas",
+      "montagem",
+      "estacao de trabalho",
+      "calibracao",
+      "linha de montagem",
+      "testes de bancada",
+      "oficina",
+      "engrenagem",
+      "pilha",
+      "deploy"
+    ],
+    "persona_leitor": "Engenheiro de Agentes"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Kit de pecas",
+      "titulo_parte": "Fundamentos â€” Montando a Primeira Estacao",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Montagem",
+      "titulo_parte": "Componentes â€” Conhecendo Cada Peca da Oficina",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "indice": 3,
+      "nome": "Estacao de trabalho",
+      "titulo_parte": "Construcao â€” Montando Pecas Personalizadas",
+      "capitulos": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "indice": 4,
+      "nome": "Calibracao",
+      "titulo_parte": "Producao â€” A Oficina Pronta Para o Mundo",
+      "capitulos": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    }
+  ]
+}

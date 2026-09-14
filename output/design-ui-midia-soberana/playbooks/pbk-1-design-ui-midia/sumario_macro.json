@@ -1,0 +1,30 @@
+{
+  "titulo_obra": "Playbook — Design, UI e Mídia Soberana",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "design-ui-midia-soberana",
+  "motivo_condutor": {},
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Estágio 1",
+      "titulo_parte": "",
+      "capitulos": [
+        "Introdução à Soberania Tecnológica no Design e UI",
+        "A Geopolítica da Nuvem: Por que o software local importa?",
+        "Design Vetorial e UI: Penpot como alternativa ao Figma",
+        "Tipografia Sob Controle: Auto-hospedagem com Fontsource"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Estágio 2",
+      "titulo_parte": "",
+      "capitulos": [
+        "Upscaling Local: Real-ESRGAN e Upscayl para criativos",
+        "Geração de Imagens: ComfyUI e o controle total da difusão",
+        "Síntese de Voz: Kokoro e áudio neural local",
+        "Documentação Soberana: Stirling-PDF e fluxos de trabalho autônomos"
+      ]
+    }
+  ]
+}

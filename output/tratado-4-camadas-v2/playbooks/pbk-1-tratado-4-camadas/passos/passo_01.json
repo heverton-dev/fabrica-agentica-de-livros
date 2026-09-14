@@ -1,0 +1,58 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "O Contexto Real de Origem: Do Projeto Arsenal ao Ecossistema AIDD",
+  "estagio": "Sala de controle",
+  "estagio_indice": 1,
+  "objetivo": "Situar historicamente a passagem do programador manual ao Engenheiro Agêntico, apresentar o Projeto Arsenal Open Source como campo de batalha real e o Ecossistema AIDD como plataforma resultante.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Primeiro mandamento operacional: inventariar o ambiente",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Inventario do ambiente AIDD: verifica instrumentos antes de acionar agentes.\"\"\"\n\nimport shutil\nimport sqlite3\nimport subprocess\nimport sys\nfrom pathlib import Path\n\nMIN_PYTHON = (3, 10)\nITENS_CANONICOS = [\"AGENTS.md\", \"ecossistema.py\", \"gates\"]\n\n\ndef checar_python() -> bool:\n    ok = sys.version_info[:2] >= MIN_PYTHON\n    marca = \"OK\" if ok else \"FALHA\"\n    print(f\"[{marca}] Python {sys.version.split()[0]} (minimo {MIN_PYTHON[0]}.{MIN_PYTHON[1]})\")\n    return ok\n\n\ndef checar_ferramenta(nome: str) -> bool:\n    caminho = shutil.which(nome)\n    if not caminho:\n        print(f\"[FALHA] ausente no PATH: {nome}\")\n        return False\n    try:\n        saida = subprocess.run([nome, \"--version\"], capture_output=True,\n                               text=True, timeout=5)\n        versao = (saida.stdout or nome).splitlines()[0].strip()[:40]\n        print(f\"[OK] {nome}: {versao}\")\n        return True\n    except (OSError, subprocess.SubprocessError) as erro:\n        print(f\"[AVISO] {nome} presente em {caminho}, mas nao respondeu: {erro}\")\n        return True\n\n\ndef checar_banco_local() -> bool:\n    try:\n        conexao = sqlite3.connect(\":memory:\")\n        modo = conexao.execute(\"PRAGMA journal_mode=WAL;\").fetchone()[0]\n        conexao.close()\n        print(f\"[OK] SQLite com journal {modo.upper()}\")\n        return True\n    except sqlite3.Error as erro:\n        print(f\"[FALHA] motor SQLite indisponivel: {erro}\")\n        return False\n\n\ndef checar_governanca() -> bool:\n    faltando = [item for item in ITENS_CANONICOS if not Path(item).exists()]"
+    },
+    {
+      "titulo": "4.2 A matriz de transposição vira arquivo",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"tema\": \"O Tratado das 4 Camadas da Fabrica Agentica\",\n  \"tipo_obra\": \"livro\",\n  \"tamanho_obra\": \"G\",\n  \"senioridade_obra\": \"iniciante\",\n  \"min_referencias_por_capitulo\": 20,\n  \"estilo_tecnica\": \"operacional\",\n  \"gerar_playbook\": true,\n  \"gerar_lead_magnets\": false,\n  \"gerar_deck\": false,\n  \"gerar_emails\": false,\n  \"gerar_campanha\": false,\n  \"gerar_maquina\": false,\n  \"modo_producao\": \"obra-unica\"\n}"
+    },
+    {
+      "titulo": "4.3 O contrato de interface da esteira",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "obra: livros/tratado-4-camadas-v2\nfluxo:\n  inventario: python scripts/parametros_obra.py livros/tratado-4-camadas-v2 --validar\n  mineracao: python scripts/minerar-fontes-academicas.py \"<tema>\" --slug livros/tratado-4-camadas-v2\n  indice: python scripts/indexar-dossie.py livros/tratado-4-camadas-v2 --indexar\n  auditoria: python scripts/auditar-obra.py livros/tratado-4-camadas-v2 --estrito\n  empacote: python scripts/empacotar-distribuicao.py livros/tratado-4-camadas-v2"
+    },
+    {
+      "titulo": "4.4 Uma sessão de operação real",
+      "linguagem": "console",
+      "comandos": [
+        "python preflight_check.py"
+      ],
+      "codigo": "$ python preflight_check.py\n============================================================\nINVENTARIO DE AMBIENTE — SALA DE CONTROLE AIDD\n============================================================\n[OK] Python 3.12.4 (minimo 3.10)\n[OK] git: git version 2.45.2.windows.1\n[FALHA] ausente no PATH: pandoc\n[OK] typst: typst 0.11.1\n[OK] SQLite com journal WAL\n[OK] governanca canonica presente na raiz\n------------------------------------------------------------\nSTATUS: REPROVADO — corrija os itens acima antes de acionar agentes.\n$ winget install --id JohnMacFarlane.Pandoc --accept-package-agreements\n$ python preflight_check.py\n------------------------------------------------------------\nSTATUS: APROVADO — sala de controle pronta para operar."
+    }
+  ],
+  "gate": "python preflight_check.py",
+  "comandos": [
+    "python preflight_check.py"
+  ],
+  "feito_quando": [
+    "Tratar a verificação de ambiente como burocracia opcional. Ela é o que separa um erro barato de descoberta (antes de gerar código) de um erro caro (depois de compilar)",
+    "Deixar a configuração de intenção em branco \"para decidir depois\". Decisão não registrada é decisão tomada por padrão, e o padrão raramente é o que você queria",
+    "Confundir volume de regras com qualidade de governança. A pesquisa sobre contexto é explícita: mais texto não significa mais aderência [12]",
+    "Instalar os guardiões depois de já ter código em produção. Portão de qualidade retroativo é auditoria de dívida, não prevenção"
+  ],
+  "armadilhas": [
+    "Tratar a verificação de ambiente como burocracia opcional. Ela é o que separa um erro barato de descoberta (antes de gerar código) de um erro caro (depois de compilar)",
+    "Deixar a configuração de intenção em branco \"para decidir depois\". Decisão não registrada é decisão tomada por padrão, e o padrão raramente é o que você queria",
+    "Confundir volume de regras com qualidade de governança. A pesquisa sobre contexto é explícita: mais texto não significa mais aderência [12]",
+    "Instalar os guardiões depois de já ter código em produção. Portão de qualidade retroativo é auditoria de dívida, não prevenção"
+  ],
+  "referencia_cruzada": "Cap. 1 — O Contexto Real de Origem: Do Projeto Arsenal ao Ecossistema AIDD",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

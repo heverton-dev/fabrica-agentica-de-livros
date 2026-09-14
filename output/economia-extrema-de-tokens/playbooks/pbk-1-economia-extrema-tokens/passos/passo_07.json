@@ -1,0 +1,41 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "Otimização de Prompts: DSPy",
+  "estagio": "Custo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor vira de quem copia prompts prontos para quem otimiza seus próprios prompts, economizando 20-40% em tokens de prompt + reduzindo hallucinations.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Execução",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "import dspy\n\n# 1. Signature: contrato de entrada/saida (o que preencher, nao como pensar)\nclass ExtrairDadosContrato(dspy.Signature):\n    \"\"\"Extrai nome do cliente, valor e data de vencimento de um texto de contrato.\"\"\"\n    texto_contrato: str = dspy.InputField()\n    nome_cliente: str = dspy.OutputField()\n    valor: str = dspy.OutputField()\n    vencimento: str = dspy.OutputField()\n\n\n# 2. Module: a estrategia de chamada que cumpre esse contrato\nclass ExtratorDeContrato(dspy.Module):\n    def __init__(self):\n        super().__init__()\n        self.extrair = dspy.Predict(ExtrairDadosContrato)\n\n    def forward(self, texto_contrato):\n        return self.extrair(texto_contrato=texto_contrato)\n\n\n# 3. Exemplos de treino: poucos casos ja revisados manualmente bastam\nexemplos_treino = [\n    dspy.Example(\n        texto_contrato=\"Contrato entre ACME LTDA e Joao Silva, valor R$ 4.500,00, vencimento 10/09/2026\",\n        nome_cliente=\"Joao Silva\",\n        valor=\"R$ 4.500,00\",\n        vencimento=\"10/09/2026\",\n    ).with_inputs(\"texto_contrato\"),\n    # ... mais 4 a 9 exemplos revisados a mao formam um conjunto de treino razoavel\n]\n\n\n# 4. Metrica: funcao objetiva que diz se a saida esta certa\ndef validador_extracao(exemplo, predicao, trace=None):\n    return (\n        predicao.nome_cliente.strip() == exemplo.nome_cliente.strip()\n        and predicao.valor.strip() == exemplo.valor.strip()\n    )\n\n\n# 5. Compilador: busca o prompt mais barato que ainda passa na metrica\nfrom dspy.teleprompt import BootstrapFewShot\n\ncompilador = BootstrapFewShot(metric=validador_extracao)\nextrator_otimizado = compil"
+    },
+    {
+      "titulo": "Execução",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# Passo extra: auditar o prompt que o compilador produziu antes de ir para producao\n# (nao para editar a mao - para confirmar que faz sentido e nao vaza dado sensivel)\nextrator_otimizado(\n    texto_contrato=\"Contrato entre Beta ME e Carlos Nunes, valor R$ 900,00, vencimento 01/11/2026\"\n)\n\n# Mostra a ultima chamada feita ao modelo, incluindo o prompt final montado\ndspy.inspect_history(n=1)\n\n# Boa pratica: salvar o modulo compilado em disco para nao recompilar a cada deploy\nextrator_otimizado.save(\"extrator_contrato_compilado.json\")\n\n# Em producao, so carregar o artefato ja compilado - sem chamar o compilador de novo\nextrator_producao = ExtratorDeContrato()\nextrator_producao.load(\"extrator_contrato_compilado.json\")"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Escolha um prompt do seu projeto que roda pelo menos algumas centenas de vezes por mês",
+    "Escreva a Signature dele: quais campos realmente entram e quais devem sair",
+    "Separe de 5 a 10 casos reais já revisados manualmente como exemplos de treino",
+    "Escreva uma função de métrica objetiva (não \"parece certo\", mas um critério comparável)",
+    "Rode o compilador e compare o tamanho do prompt final com o prompt manual atual",
+    "Antes de colocar em produção, inspecione o prompt compilado (`dspy.inspect_history`) e confirme que nenhum exemplo de treino carrega dado sensível"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 7 — Otimização de Prompts: DSPy",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

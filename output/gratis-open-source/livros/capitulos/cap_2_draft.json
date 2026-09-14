@@ -1,0 +1,39 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "2" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 1: a lógica de 'do aluguel para a posse' ao trocar Notion/Evernote por uma ferramenta própria — agora aplicada ao e-mail marketing, mas com uma variável nova que as notas não têm: a reputação de domínio.",
+  "metricas_obrigatorias": [
+    { "metrica": "requisito mínimo de produção do Mautic", "valor": "4 GB de RAM / 2 vCPU / 40 GB de disco" },
+    { "metrica": "limite de segmento antes de estourar memória PHP", "valor": "50.000 contatos" },
+    { "metrica": "trial comercial do EmailEngine antes de exigir licença paga", "valor": "14 dias" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "A conta oculta do e-mail marketing \"grátis\": SMTP, reputação de domínio e deliverability",
+        "escopo": "Entra: o que é um relay SMTP, por que ferramenta de disparo (Listmonk/Mautic) não é a mesma coisa que infraestrutura de entrega (Postal/SES/Postmark), o papel de SPF/DKIM/DMARC e reputação de IP/domínio. Fica de fora: configuração passo a passo de DNS (fica para a seção Técnica) e comparação de preços de relay comercial.",
+        "ancora_visual": "flowchart LR do trajeto de uma campanha desde o clique em 'enviar' na bancada (Listmonk/Mautic) até a caixa de entrada do destinatário, passando pelo relay SMTP e pelo ponto de decisão SPF/DKIM/DMARC que separa 'inbox' de 'spam' — vocabulário da Oficina Digital (peça, esteira de entrega, selo de garantia).",
+        "entrega_tecnica": "yaml + console: registro DNS de exemplo (SPF/DKIM/DMARC) e sessão de verificação com dig/nslookup mostrando o registro publicado.",
+        "evolucao_leitor": "De 'só preciso instalar uma ferramenta de e-mail' para 'entendo por que a ferramenta é a peça menor do problema — a entrega depende de uma reputação que se constrói fora dela'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Montando a stack própria: Listmonk, Mautic e Postal — o que cada um resolve",
+        "escopo": "Entra: Listmonk (newsletter/mailing enxuto, binário Go, AGPLv3), Mautic (automação de marketing full-stack, requisitos de servidor), Postal (infraestrutura de envio, categoria separada de Listmonk/Mautic) e a combinação recomendada Postal+Listmonk. Fica de fora: Mailtrain entra apenas como ressalva de manutenção no pilar 3, não como opção recomendada.",
+        "ancora_visual": "flowchart TB comparando as três peças da bancada: Listmonk e Mautic como 'bancadas de montagem' (onde se desenha a campanha) e Postal como a 'esteira de entrega' por trás da parede — mostrando que nenhuma bancada substitui a esteira.",
+        "entrega_tecnica": "yaml: docker-compose.yml mínimo de Listmonk + Postgres, com o passo de instalação (`docker compose run --rm listmonk ./listmonk --install`) documentado em bloco console; tabela de decisão Listmonk vs. Mautic vs. Postal.",
+        "evolucao_leitor": "De 'preciso de UM programa de e-mail marketing' para 'sei separar as duas funções que o Mailchimp empacota disfarçadamente em uma só: campanha e entrega — e sei qual peça open source resolve cada uma'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "O contraexemplo que ensina a desconfiar de listas prontas: por que EmailEngine não é open source",
+        "escopo": "Entra: a diferença entre código aberto (AGPL/MIT/GPL) e source-available comercial (EmailEngine), o alerta de manutenção do Mailtrain (sem release desde 2021) e um checklist para o leitor auditar qualquer ferramenta antes de adotá-la. Fica de fora: análise jurídica detalhada de licenças (fica no nível prático de 'o que isso significa para você').",
+        "ancora_visual": "flowchart TD em formato de árvore de decisão: 'esta peça está no catálogo, mas é realmente sua depois de comprada, ou é aluguel disfarçado de posse?' — percorrendo licença, cadência de release e comunidade ativa.",
+        "entrega_tecnica": "console: checklist executável em forma de perguntas e um trecho de log/README simulando a mensagem de trial do EmailEngine para o leitor reconhecer o padrão no mundo real.",
+        "evolucao_leitor": "De 'se está no GitHub, é open source' para 'sei auditar a licença e a cadência de manutenção de qualquer ferramenta antes de apostar a minha oficina nela'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "slug": "livros/tratado-4-camadas",
+  "capitulos": 20,
+  "total_violacoes": 11,
+  "por_capitulo": {
+    "cap_1": 1,
+    "cap_2": 1,
+    "cap_5": 1,
+    "cap_7": 1,
+    "cap_8": 1,
+    "cap_9": 2,
+    "cap_11": 1,
+    "cap_13": 1,
+    "cap_14": 2
+  },
+  "regras": {
+    "R-AF-1": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo"
+  },
+  "violacoes": [
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_1",
+      "secao": 5,
+      "trecho": "**Limite de escala:** O modelo do Projeto Arsenal foi validado em 49 compêndios e 680+ motores; acima de ~2.000 documentos ou 50 GB de corpus, o índice RAG começa a degradar a precisão de recuperação e exige sharding por"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_2",
+      "secao": 5,
+      "trecho": "Você começou a usar Claude Code no seu projeto de desenvolvimento web. No primeiro dia, tudo parece mágico — a IA gera código, cria testes, até escreve documentação que parece profissional. Mas no terceiro dia, a conta d"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_5",
+      "secao": 5,
+      "trecho": "**Limite de escala:** A invariância de prefixo entrega 90% de desconto até contextos de ~200k tokens; acima disso, o KV-cache do provedor satura e o ganho cai para ~40%, exigindo janela de contexto rotativa."
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_7",
+      "secao": 5,
+      "trecho": "**Limite de escala:** As 5 skills de economia reduzem custo em até 90% em sessões de até ~500 interações; em sessões de milhares de turnos, o overhead de compressão supera o ganho e convém dividir em sub-sessões."
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_8",
+      "secao": 5,
+      "trecho": "**Limite de escala:** A réplica da TELA leva ~10 min por repositório até 5 projetos; acima de 20 repositórios, automatize a cópia via script de setup-links em vez de cópia manual."
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_9",
+      "secao": 3,
+      "trecho": "O **disjuntor** é o alarme de incêndio: quando detecta perigo (loop infinito), corta tudo automaticamente (interrompe o agente). Não espera alguém apertar o botão de emergência — ele detecta e reage sozinho. Na avaliação"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_9",
+      "secao": 5,
+      "trecho": "**Limite de escala:** O disjuntor de 25 iterações protege loops até tarefas de ~30 min; tarefas legítimas de horas exigem disjuntor por tempo (timeout de 1h) em vez de por contagem."
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_11",
+      "secao": 5,
+      "trecho": "**Limite de escala:** O pre-commit com 6 gates roda em <2s em repositórios de até ~100k linhas; acima disso, paralelizar os gates ou mover validação pesada para CI evita frustração do desenvolvedor."
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_13",
+      "secao": 5,
+      "trecho": "**Limite de escala:** O roteamento por Pareto entrega 80% de economia até ~50 modelos cadastrados; catálogos maiores exigem descoberta automática de modelos em vez de registro manual."
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_14",
+      "secao": 3,
+      "trecho": "A matriz é como o cardápio de um restaurante: A analogia do restaurante serve apenas para ilustrar a escala de custo relativo entre os tiers. e resolve a fome. O prato executivo (Tier 2) custa R$ 60 e é completo. O degus"
+    },
+    {
+      "regra": "R-AF-1",
+      "enunciado": "parágrafo com dado factual (%, unidade, superlativo) exige citação [N] no mesmo parágrafo",
+      "origem": "cap_14",
+      "secao": 5,
+      "trecho": "**Limite de escala:** A matriz de 3 tiers cobre ~90% dos casos até 1M tokens/mês; volumes maiores justificam um Tier 4 de batch assíncrono para tarefas não interativas."
+    }
+  ]
+}

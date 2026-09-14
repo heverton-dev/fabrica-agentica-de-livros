@@ -1,0 +1,27 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+  "estagio": "Central de comando",
+  "estagio_indice": 1,
+  "objetivo": "Detalhar cada um dos 4 problemas com exemplos reais e dados de mercado.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [],
+  "execucao": [],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Analise uma conversa recente com IA e identifique se houve amnésia (Lost in the Middle) — o agente esqueceu algo que foi dito anteriormente?",
+    "Calcule aproximadamente quanto gastou em tokens na última semana de uso de IA e compare com o que gastaria com Invariância de Prefixo ativa",
+    "Liste 3 códigos gerados por IA que precisaram de correção manual depois de o agente declarar \"sucesso\"",
+    "Documente 1 caso concreto de alucinação que já presenciou: o agente afirmou que algo estava pronto, mas não estava"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 3 — A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+  "lacunas": [
+    "sem_entregas",
+    "sem_execucao",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

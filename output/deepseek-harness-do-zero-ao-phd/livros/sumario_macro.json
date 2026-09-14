@@ -1,0 +1,211 @@
+{
+  "titulo_obra": "DeepSeek Harness: Do zero ao PhD",
+  "subtitulo": "Guia Completo para Configuracao, Customizacao e Deploy Local",
+  "tipo_obra": "livro",
+  "tamanho_obra": "GG",
+  "motivo_condutor": {
+    "nome": "A Oficina de Agentes",
+    "descricao": "O leitor e um engenheiro que recebe um kit de pecas e vai montando sua propria oficina de agentes de IA ao longo do livro.",
+    "vocabulario": [
+      "kit de pecas",
+      "montagem",
+      "estacao de trabalho",
+      "calibracao",
+      "linha de montagem",
+      "testes de bancada",
+      "oficina",
+      "engrenagem",
+      "pilha",
+      "deploy"
+    ],
+    "persona_leitor": "Engenheiro de Agentes"
+  },
+  "introducao": "Apresentar o DeepSeek Harness como o framework que democratiza agentes de IA autonomos.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos â€” Montando a Primeira Estacao",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "O Que e o DeepSeek Harness: O Agente que e Plugin",
+          "objetivo": "Entender a arquitetura plugin-first do DeepSeek Harness.",
+          "pilares_previstos": [
+            "Arquitetura Cordis",
+            "Modos de execucao",
+            "Profiles"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Instalacao Local: Do Zero ao Primeiro dsh",
+          "objetivo": "Instalar e executar o primeiro agente.",
+          "pilares_previstos": [
+            "Pre-requisitos",
+            "Instalacao via npm/source",
+            "Primeira execucao"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "Modelos DeepSeek: Escolhendo o Motor da Sua Oficina",
+          "objetivo": "Compreender a familia de modelos e hardware necessario.",
+          "pilares_previstos": [
+            "Familia DeepSeek",
+            "Requisitos de hardware",
+            "Quantizacao"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Ollama, vLLM e llama.cpp: Os Tres Motores de Inferencia Local",
+          "objetivo": "Configurar e comparar engines de inferencia local.",
+          "pilares_previstos": [
+            "Ollama",
+            "vLLM",
+            "llama.cpp"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "Componentes â€” Conhecendo Cada Peca da Oficina",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Sistema de Plugins: O Coracao do Harness",
+          "objetivo": "Dominar o ciclo de vida dos plugins Cordis.",
+          "pilares_previstos": [
+            "Ciclo de vida Cordis",
+            "Injecao de dependencia",
+            "Gerenciamento de plugins"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Tool Pipeline: Como o Agente Executa Acoes",
+          "objetivo": "Entender o fluxo de ferramentas de ponta a ponta.",
+          "pilares_previstos": [
+            "Pipeline de ferramentas",
+            "Policy e hooks",
+            "Filesystem guards"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Sessoes e Estado: Memoria do Agente",
+          "objetivo": "Configurar sessoes duraveis e manipular historico.",
+          "pilares_previstos": [
+            "Session events",
+            "Persistencia",
+            "Resume/fork/replay"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Sandbox e Seguranca: Isolando o Agente",
+          "objetivo": "Configurar sandboxes e guardrails de seguranca.",
+          "pilares_previstos": [
+            "Git worktree",
+            "Sandbox providers",
+            "Security plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "Construcao â€” Montando Pecas Personalizadas",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "Criando seu Primeiro Plugin personalizado",
+          "objetivo": "Desenvolver um plugin do zero para o harness.",
+          "pilares_previstos": [
+            "Estrutura de plugin",
+            "Desenvolvimento passo a passo",
+            "Testes e publicacao"
+          ]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Ferramentas Customizadas: Construindo Pecas Novas",
+          "objetivo": "Criar ferramentas personalizadas para o agente.",
+          "pilares_previstos": [
+            "Schema de ferramentas",
+            "Execucao segura",
+            "Composicao de tools"
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Pipelines de Ferramentas: Orquestrando Acoes Complexas",
+          "objetivo": "Construir pipelines de multiplas ferramentas.",
+          "pilares_previstos": [
+            "Patterns de pipeline",
+            "Hooks e middlewares",
+            "Orquestracao"
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "RAG Local: Memoria de Longo Prazo para Agentes",
+          "objetivo": "Construir pipeline RAG completo e self-hosted.",
+          "pilares_previstos": [
+            "Embedding models",
+            "Vector databases",
+            "Pipeline RAG completo"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "IV",
+      "titulo_parte": "Producao â€” A Oficina Pronta Para o Mundo",
+      "capitulos": [
+        {
+          "capitulo": "13",
+          "titulo": "Fine-Tuning Local: Personalizando o Modelo",
+          "objetivo": "Realizar fine-tuning com LoRA/QLoRA.",
+          "pilares_previstos": [
+            "LoRA vs QLoRA",
+            "Preparacao de dados",
+            "Pipeline completo de treino"
+          ]
+        },
+        {
+          "capitulo": "14",
+          "titulo": "Multi-Agente: Coordenando uma Equipe de Agentes",
+          "objetivo": "Configurar multiplos agentes em paralelo.",
+          "pilares_previstos": [
+            "Worktrees para paralelismo",
+            "Orquestracao",
+            "Comunicacao entre agentes"
+          ]
+        },
+        {
+          "capitulo": "15",
+          "titulo": "Profiles e Configuracao Avancada: Afinando a Oficina",
+          "objetivo": "Criar profiles personalizados e otimizar o harness.",
+          "pilares_previstos": [
+            "Camadas de configuracao",
+            "Criacao de profiles",
+            "Otimizacao"
+          ]
+        },
+        {
+          "capitulo": "16",
+          "titulo": "Deploy e Operacao: Levando a Oficina para Producao",
+          "objetivo": "Colocar o harness em producao com Docker e monitoramento.",
+          "pilares_previstos": [
+            "Docker e containerizacao",
+            "Monitoramento",
+            "Operacao em producao"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Consolidar a jornada do Engenheiro de Agentes da primeira instalacao a oficina completa em producao."
+}

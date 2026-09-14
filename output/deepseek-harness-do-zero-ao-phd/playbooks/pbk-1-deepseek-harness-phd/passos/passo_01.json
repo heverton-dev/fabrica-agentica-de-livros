@@ -1,0 +1,48 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "O Que e o DeepSeek Harness: O Agente que e Plugin",
+  "estagio": "Kit de pecas",
+  "estagio_indice": 1,
+  "objetivo": "Entender a arquitetura plugin-first do DeepSeek Harness.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Estrutura de um Plugin Cordis",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"name\": \"meu-plugin\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Plugin personalizado para o DeepSeek Harness\",\n  \"main\": \"index.js\",\n  \"cordis\": {\n    \"provides\": [\"tool\", \"service\"],\n    \"requires\": [\"model\"],\n    \"lifecycle\": {\n      \"ready\": \"onReady\",\n      \"dispose\": \"onDispose\"\n    }\n  }\n}"
+    },
+    {
+      "titulo": "Registro de um Plugin",
+      "linguagem": "javascript",
+      "comandos": [],
+      "codigo": "// index.js do plugin\nexport default function meuPlugin(ctx) {\n  // Registra um serviço no contexto compartilhado\n  ctx.service('minha-ferramenta', {\n    execute(params) {\n      // Lógica da ferramenta\n      return { resultado: `Processado: ${params.input}` };\n    }\n  });\n\n  // Escuta eventos de sessão\n  ctx.on('session:turn', (event) => {\n    console.log(`Novo turno iniciado: ${event.id}`);\n  });\n\n  // Registra efeito reversível\n  ctx.effect(() => {\n    // Setup\n    console.log('Plugin instalado');\n    return () => {\n      // Teardown (quando o plugin for removido)\n      console.log('Plugin removido');\n    };\n  });\n}"
+    },
+    {
+      "titulo": "Modos de Execução na Prática",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "# Modo Standard (padrão) — toolset completo\ndsh --mode standard\n\n# Modo Code — modelo gera código para orquestrar tools\ndsh --mode code\n\n# Modo Minimal — apenas shell + editor\ndsh --mode minimal\n\n# Modo Creator — usa profile personalizado\ndsh --mode creator --profile meu-profile"
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Você escolhe o modo Minimal porque \"é mais leve\"",
+    "Três horas depois",
+    "Você precisava do Standard o tempo todo",
+    "O erro não foi escolher o modo errado — foi não entender o que cada modo oferece antes de começar",
+    "O modo Minimal é excelente para benchmarks",
+    "Se vai medir algo isolado",
+    "Se vai repetir o mesmo workflow muitas vezes"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 1 — O Que e o DeepSeek Harness: O Agente que e Plugin",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

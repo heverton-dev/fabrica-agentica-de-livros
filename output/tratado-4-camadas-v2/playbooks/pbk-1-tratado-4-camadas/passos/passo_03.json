@@ -1,0 +1,62 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+  "estagio": "Sala de controle",
+  "estagio_indice": 1,
+  "objetivo": "Dissecar as quatro falhas estruturais que colapsam iniciativas amadoras de IA: amnésia de contexto, stubs/alucinação funcional, subagentes headless no vácuo e lock-in de harness.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 A valva 2 em detalhe: portão anti-stub por árvore sintática",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Portao anti-stub: inspecao estrutural do corpo das funcoes via AST.\"\"\"\n\nimport ast\nimport sys\nfrom pathlib import Path\nfrom typing import List, Tuple\n\nIGNORAR = {\".venv\", \"venv\", \"__pycache__\", \".git\", \"scratch\", \"node_modules\"}\n\n\nclass DetectorDeStubs(ast.NodeVisitor):\n    def __init__(self) -> None:\n        self.falhas: List[Tuple[int, str, str]] = []\n\n    def _corpo_util(self, node: ast.FunctionDef) -> list:\n        corpo = list(node.body)\n        if corpo and isinstance(corpo[0], ast.Expr) and isinstance(\n                corpo[0].value, ast.Constant) and isinstance(corpo[0].value.value, str):\n            corpo = corpo[1:]\n        return corpo\n\n    def visit_FunctionDef(self, node: ast.FunctionDef) -> None:\n        if any(isinstance(d, ast.Name) and d.id == \"abstractmethod\"\n               for d in node.decorator_list):\n            return\n        corpo = self._corpo_util(node)\n        if not corpo:\n            self.falhas.append((node.lineno, node.name, \"corpo vazio\"))\n        elif len(corpo) == 1:\n            unico = corpo[0]\n            if isinstance(unico, ast.Pass):\n                self.falhas.append((node.lineno, node.name, \"apenas 'pass'\"))\n            elif isinstance(unico, ast.Expr) and isinstance(unico.value, ast.Constant) \\\n                    and unico.value.value is Ellipsis:\n                self.falhas.append((node.lineno, node.name, \"apenas '...'\"))\n        self.generic_visit(node)\n\n\ndef verificar(caminho: Path) -> List[Tuple[int, str, str]]:\n    try:\n        arvore = ast.parse(caminho.read_text(encoding=\"utf"
+    },
+    {
+      "titulo": "4.2 A válvula 1 em detalhe: medindo o orçamento de contexto",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"orcamento_contexto\": {\n    \"teto_por_turno\": 8000,\n    \"teto_por_sessao\": 80000,\n    \"prefixo_estavel\": true,\n    \"cache_ttl\": \"5m\",\n    \"politica_ao_exceder\": \"comprimir-saida-e-expurgar-historico\"\n  },\n  \"limites_de_agente\": {\n    \"max_turnos_sem_checkpoint\": 8,\n    \"max_repeticoes_de_erro\": 2,\n    \"timeout_por_comando_s\": 30\n  }\n}"
+    },
+    {
+      "titulo": "4.3 Sessão real: o laço de erro que drena orçamento",
+      "linguagem": "console",
+      "comandos": [
+        "python agente.py --tarefa \"corrigir migracao\"",
+        "python agente.py --tarefa \"corrigir migracao\" --max-repeticoes 2 --timeout 30"
+      ],
+      "codigo": "$ python agente.py --tarefa \"corrigir migracao\"\n[14:02:11] tentativa 1/∞ -> FAIL (coluna 'cpf' nao existe)\n[14:02:19] tentativa 2/∞ -> FAIL (coluna 'cpf' nao existe)\n[14:02:27] tentativa 3/∞ -> FAIL (coluna 'cpf' nao existe)\n[14:02:35] tentativa 4/∞ -> FAIL (coluna 'cpf' nao existe)\n^C\n$ python agente.py --tarefa \"corrigir migracao\" --max-repeticoes 2 --timeout 30\n[14:05:02] tentativa 1/∞ -> FAIL (coluna 'cpf' nao existe)\n[14:05:10] tentativa 2/∞ -> FAIL (coluna 'cpf' nao existe)\n[14:05:10] TETO ATINGIDO -> execucao interrompida; diagnostico devolvido ao operador"
+    },
+    {
+      "titulo": "4.5 Verificando dependências fantasma antes do merge",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Detector de dependencias fantasma: import declarado que nao existe no ambiente.\"\"\"\n\nimport ast\nimport json\nimport sys\nfrom importlib.util import find_spec\nfrom pathlib import Path\nfrom typing import Dict, List, Set\n\nIGNORAR = {\".venv\", \"venv\", \"__pycache__\", \".git\", \"node_modules\", \"scratch\"}\n\n# Modulos da biblioteca padrao e locais nunca sao dependencias externas\nINTERNOS = {\"__future__\", \"os\", \"sys\", \"re\", \"json\", \"ast\", \"pathlib\", \"typing\",\n            \"dataclasses\", \"subprocess\", \"shutil\", \"sqlite3\", \"hashlib\", \"zipfile\",\n            \"importlib\", \"unicodedata\", \"collections\", \"itertools\", \"statistics\"}\n\n\ndef modulos_importados(arquivo: Path) -> Set[str]:\n    try:\n        arvore = ast.parse(arquivo.read_text(encoding=\"utf-8\"))\n    except SyntaxError:\n        return set()\n    nomes: Set[str] = set()\n    for no in ast.walk(arvore):\n        if isinstance(no, ast.Import):\n            nomes.update(alias.name.split(\".\")[0] for alias in no.names)\n        elif isinstance(no, ast.ImportFrom) and no.module and no.level == 0:\n            nomes.add(no.module.split(\".\")[0])\n    return nomes\n\n\ndef resolve(nome: str) -> bool:\n    if nome in INTERNOS:\n        return True\n    try:\n        return find_spec(nome) is not None\n    except (ImportError, ValueError, ModuleNotFoundError):\n        return False\n\n\ndef varrer(raiz: Path) -> Dict[str, List[str]]:\n    fantasma: Dict[str, List[str]] = {}\n    for arquivo in raiz.rglob(\"*.py\"):\n        if IGNORAR.intersection(arquivo.parts):\n            continue\n        for nome in sorted(modulos_importad"
+    }
+  ],
+  "gate": "python agente.py --tarefa \"corrigir migracao\"",
+  "comandos": [
+    "python agente.py --tarefa \"corrigir migracao\"",
+    "python agente.py --tarefa \"corrigir migracao\" --max-repeticoes 2 --timeout 30"
+  ],
+  "feito_quando": [
+    "Tratar sintoma como causa. \"O agente mudou de convenção\" é sintoma; \"o contexto saturou\" é causa. Corrigir o sintoma gera retrabalho eterno",
+    "Confiar em revisão manual como portão. Revisão humana é o filtro certo para intenção e o filtro errado para completude mecânica",
+    "Rodar agentes paralelos sem isolamento físico. Sem diretório próprio, o paralelismo produz conflito, não velocidade",
+    "Deixar execução autônoma sem teto de repetição e de turnos. O laço de erro é o modo de falha mais caro e mais fácil de prevenir",
+    "Guardar a governança na ferramenta. Regra que só existe dentro de um aplicativo é regra que expira com o aplicativo"
+  ],
+  "armadilhas": [
+    "Tratar sintoma como causa. \"O agente mudou de convenção\" é sintoma; \"o contexto saturou\" é causa. Corrigir o sintoma gera retrabalho eterno",
+    "Confiar em revisão manual como portão. Revisão humana é o filtro certo para intenção e o filtro errado para completude mecânica",
+    "Rodar agentes paralelos sem isolamento físico. Sem diretório próprio, o paralelismo produz conflito, não velocidade",
+    "Deixar execução autônoma sem teto de repetição e de turnos. O laço de erro é o modo de falha mais caro e mais fácil de prevenir",
+    "Guardar a governança na ferramenta. Regra que só existe dentro de um aplicativo é regra que expira com o aplicativo"
+  ],
+  "referencia_cruzada": "Cap. 3 — A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "numero": "10",
+  "capitulo_fonte": "10",
+  "titulo": "Implementação e Réplica das 4 Camadas: O Manual de Montagem",
+  "estagio": "Circuito de segurança",
+  "estagio_indice": 3,
+  "objetivo": "Fornecer o blueprint executável de montagem da fábrica: estrutura canônica de diretórios, sincronização agnóstica de componentes e blindagem de projetos legados.",
+  "pre_requisito": "Passo 9 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "4.1 Provisionador idempotente da estrutura canônica",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Provisionador idempotente da estrutura canonica das 4 camadas.\"\"\"\n\nimport json\nimport sys\nfrom pathlib import Path\nfrom typing import List, Tuple\n\nPASTAS = [\n    \"componentes/specs\",\n    \"componentes/ferramentas\",\n    \"componentes/ganchos\",\n    \"docs/protocolos\",\n    \"docs/decisoes\",\n    \"gates\",\n    \"schemas\",\n]\n\n# (caminho, conteudo, politica) — 'preservar' nunca sobrescreve; 'gerar' sempre reescreve\nARQUIVOS: List[Tuple[str, str, str]] = [\n    (\n        \"AGENTS.md\",\n        \"# Governanca Canonica\\n\\n\"\n        \"## Leis inegociaveis\\n\"\n        \"1. Determinismo primeiro: script antes de modelo.\\n\"\n        \"2. Qualidade binaria: exit 0 aprova, exit 1 bloqueia.\\n\"\n        \"3. Persistencia estruturada: decisao sempre em disco.\\n\"\n        \"4. Economia severa: prefixo estavel, saida densa, expurgo entre fases.\\n\"\n        \"5. Supremacia agnostica: nenhuma regra depende de ambiente.\\n\"\n        \"6. Desenvolvedor no controle: proibido agente headless invisivel.\\n\"\n        \"7. Zero stubs: proibido corpo vazio ou retorno ficticio.\\n\"\n        \"8. Anti-NIH: justificar antes de construir mecanismo generico.\\n\"\n        \"9. Honestidade de rotulo: nao alegar mais do que o teste provou.\\n\"\n        \"10. Comunicacao direta: sem preambulo nem repeticao.\\n\",\n        \"preservar\",\n    ),\n    (\"CLAUDE.md\", \"@AGENTS.md\\nSiga as diretivas canonicas da raiz.\\n\", \"gerar\"),\n    (\"GEMINI.md\", \"# Governanca centralizada\\nConsulte AGENTS.md na raiz.\\n\", \"gerar\"),\n    (\".cursorrules\", \"Consulte AGENTS.md na raiz.\\n\", \"gerar\"),\n    (\".windsurfrules\", \"Consult"
+    },
+    {
+      "titulo": "4.2 Plano de blindagem de legado",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "blindagem_de_legado:\n  principio: risco-decrescente\n  etapas:\n    - ordem: 1\n      acao: inventariar\n      altera_codigo: false\n      entregavel: relatorio de ausencias por camada\n    - ordem: 2\n      acao: instalar disjuntor de comando\n      altera_codigo: false\n      entregavel: gates/disjuntor.py\n    - ordem: 3\n      acao: instalar portao anti-stub\n      altera_codigo: false\n      entregavel: gates/anti-stub-ast.py\n    - ordem: 4\n      acao: declarar constituicao\n      altera_codigo: false\n      entregavel: AGENTS.md\n    - ordem: 5\n      acao: medir consumo por tarefa\n      altera_codigo: false\n      entregavel: relatorio de consumo\n    - ordem: 6\n      acao: isolar trabalho novo em worktree\n      altera_codigo: false\n      entregavel: politica de execucao\n  proibido: [reescrever-modulo-existente, migrar-banco, renomear-pacotes]"
+    },
+    {
+      "titulo": "4.3 Sessão de montagem",
+      "linguagem": "console",
+      "comandos": [
+        "python provisionar.py",
+        "python auditar-4-camadas.py"
+      ],
+      "codigo": "$ python provisionar.py\n==============================================================\nPROVISIONADOR IDEMPOTENTE — 4 CAMADAS\n==============================================================\n[PASTAS] criadas nesta execucao: 7\n   + componentes/specs\n   + componentes/ferramentas\n   + gates\n   + schemas\n[ARQUIVOS] gravados: 4 | preservados: 0\n--------------------------------------------------------------\n[OK] exit 0 — estrutura canonica pronta e reexecutavel.\n\n$ python provisionar.py\n[PASTAS] criadas nesta execucao: 0\n[ARQUIVOS] gravados: 0 | preservados: 1\n--------------------------------------------------------------\n[OK] exit 0 — estrutura canonica pronta e reexecutavel.\n\n$ python auditar-4-camadas.py\n[CAMADA 1 CONTEXTO E GOVERNANCA] OK\n[CAMADA 2 HARNESS E CICLO DE VIDA] INCONFORME\n   -> nenhum portao deterministico em gates/\n[CAMADA 3 MOTOR COGNITIVO] INCONFORME\n   -> politica de orcamento de contexto ausente\n[CAMADA 4 FERRAMENTAS E PERSISTENCIA] OK\n[REPROVADO] exit 1 — inconformidade em: 2 HARNESS, 3 MOTOR"
+    },
+    {
+      "titulo": "4.5 Auditoria de acoplamento entre camadas",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"Auditor de acoplamento: reprova import que viola a ordem das camadas.\"\"\"\n\nimport ast\nimport sys\nfrom pathlib import Path\nfrom typing import Dict, List, Tuple\n\n# Nivel 4 depende de 3, que depende de 2, que depende de 1 — e nunca o inverso.\nCAMADAS: Dict[int, str] = {\n    1: \"contexto\",\n    2: \"harness\",\n    3: \"motor\",\n    4: \"ferramentas\",\n}\n\n# Diretorio -> nivel. Camadas de nivel baixo nao podem importar niveis acima.\nDIRETORIOS: Dict[str, int] = {\n    \"contexto\": 1,\n    \"harness\": 2,\n    \"motor\": 3,\n    \"ferramentas\": 4,\n}\n\nIGNORAR = {\".venv\", \"venv\", \"__pycache__\", \".git\", \"tests\"}\n\n\ndef nivel_do_arquivo(caminho: Path) -> int:\n    for parte in caminho.parts:\n        if parte in DIRETORIOS:\n            return DIRETORIOS[parte]\n    return 0\n\n\ndef modulos_importados(arquivo: Path) -> List[str]:\n    try:\n        arvore = ast.parse(arquivo.read_text(encoding=\"utf-8\"))\n    except SyntaxError:\n        return []\n    nomes: List[str] = []\n    for no in ast.walk(arvore):\n        if isinstance(no, ast.Import):\n            nomes.extend(alias.name for alias in no.names)\n        elif isinstance(no, ast.ImportFrom) and no.module:\n            nomes.append(no.module)\n    return nomes\n\n\ndef nivel_do_import(nome: str) -> int:\n    raiz = nome.split(\".\")[0]\n    return DIRETORIOS.get(raiz, 0)\n\n\ndef auditar(raiz: Path) -> List[Tuple[str, str]]:\n    violacoes: List[Tuple[str, str]] = []\n    for arquivo in raiz.rglob(\"*.py\"):\n        if IGNORAR.intersection(arquivo.parts):\n            continue\n        origem = nivel_do_arquivo(arquivo)\n        if"
+    }
+  ],
+  "gate": "python auditar-4-camadas.py",
+  "comandos": [
+    "python provisionar.py",
+    "python auditar-4-camadas.py"
+  ],
+  "feito_quando": [
+    "Reescrever em vez de governar. Reescrever troca dívida conhecida por risco desconhecido e consome o cronograma inteiro",
+    "Começar a montagem pela camada mais visível. A ordem correta é freio, declaração, medição e isolamento — risco decrescente",
+    "Sobrescrever arquivo que contém decisão humana. Política de sobrescrita mal definida destrói trabalho sem aviso",
+    "Considerar a montagem pronta porque os arquivos existem. O critério é a auditoria transversal com capacidade operacional, não a presença de pasta",
+    "Editar configuração de ambiente à mão. Divergência local vira bug silencioso na próxima sincronização [7]"
+  ],
+  "armadilhas": [
+    "Reescrever em vez de governar. Reescrever troca dívida conhecida por risco desconhecido e consome o cronograma inteiro",
+    "Começar a montagem pela camada mais visível. A ordem correta é freio, declaração, medição e isolamento — risco decrescente",
+    "Sobrescrever arquivo que contém decisão humana. Política de sobrescrita mal definida destrói trabalho sem aviso",
+    "Considerar a montagem pronta porque os arquivos existem. O critério é a auditoria transversal com capacidade operacional, não a presença de pasta",
+    "Editar configuração de ambiente à mão. Divergência local vira bug silencioso na próxima sincronização [7]"
+  ],
+  "referencia_cruzada": "Cap. 10 — Implementação e Réplica das 4 Camadas: O Manual de Montagem",
+  "lacunas": [
+    "sem_entregas"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "titulo_obra": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "tratado-4-camadas",
+  "motivo_condutor": {
+    "nome": "A Central de Comando Autônoma",
+    "descricao": "O leitor é o comandante de uma central de controle onde quatro painéis operacionais (TELA, HARNESS, LLM, TOOLS) governam agentes de IA como se fossem equipes especializadas.",
+    "vocabulario": [
+      "central de comando",
+      "painel operacional",
+      "circuito de segurança",
+      "roteador cognitivo",
+      "usina determinística",
+      "disjuntor",
+      "sandbox reversível",
+      "exit code",
+      "hardlink de governança",
+      "protocolo universal"
+    ],
+    "persona_leitor": "Engenheiro de Sistemas Autônomos"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Central de comando",
+      "titulo_parte": "Fundamentos — O Campo de Batalha",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Painel operacional",
+      "titulo_parte": "Camada 1 — TELA: O Painel de Visibilidade",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "indice": 3,
+      "nome": "Circuito de segurança",
+      "titulo_parte": "Camada 2 — HARNESS: O Painel de Segurança",
+      "capitulos": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "indice": 4,
+      "nome": "Roteador cognitivo",
+      "titulo_parte": "Camada 3 — LLM: O Painel de Decisão",
+      "capitulos": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "indice": 5,
+      "nome": "Usina determinística",
+      "titulo_parte": "Camada 4 — TOOLS: A Usina Determinística",
+      "capitulos": [
+        "17",
+        "18",
+        "19",
+        "20"
+      ]
+    }
+  ]
+}

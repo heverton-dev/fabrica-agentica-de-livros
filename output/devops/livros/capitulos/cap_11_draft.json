@@ -1,0 +1,37 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "C", "capitulo": "11" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 10: o conceito de Automação de Processos, agora aplicado à orquestração de contêineres com Kubernetes",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Quebra de Silos e Cultura de Colaboração",
+        "escopo": "Entender a importância de eliminar barreiras entre desenvolvimento, operações, testes e segurança; promover responsabilidade compartilhada e aprendizado com falhas (blameless postmortems).",
+        "ancora_visual": "flowchart LR mostrando fluxo de trabalho com times de desenvolvimento, testes, segurança e operações integrados em torno de um pipeline de entrega contínua, com ciclos de feedback",
+        "entrega_tecnica": "Script de notificação via Slack webhook para alertar times sobre status de build em pipeline CI/CD",
+        "evolucao_leitor": "de trabalhar em silos isolados para compreender o valor da colaboração interfuncional na entrega de valor",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Automação de Processos com CI/CD e Infraestrutura como Código",
+        "escopo": "Como automatizar build, teste, provisionamento e deploy usando pipelines de CI/CD e tratando infraestrutura como código para garantir reproducibilidade e imutabilidade de ambientes.",
+        "ancora_visual": "block diagram of a CI/CD pipeline with stages: code commit, build, unit tests, integration tests, security scan, staging deploy, approval, production deploy, with feedback loops from monitoring",
+        "entrega_tecnica": "Pipeline básico em YAML para GitHub Actions que build, testa uma aplicação Node.js e faz deploy em um ambiente de staging usando Docker",
+        "evolucao_leitor": "de processos manuais e propensos a erros para automação confiável, repetível e escalável",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Observabilidade e Segurança (DevSecOps)",
+        "escopo": "Implementar monitoramento baseado nos três pilares da observabilidade (métricas, logs, traces) e integrar práticas de segurança desde o início do desenvolvimento (Shift-Left) para detecção precoce de vulnerabilidades.",
+        "ancora_visual": "3-column diagram showing: 1) Métricas (Prometheus/Grafana com painéis de latência, taxa de erro), 2) Logs (ELK Stack com busca e visualização), 3) Traces (Jaeger/OpenTelemetry com rastreamento distribuído de requisições)",
+        "entrega_tecnica": "Configuração básica do Prometheus em YAML para coletar métricas de uma aplicação exposta na porta 8080, incluindo job de scrape e rule de alerta",
+        "evolucao_leitor": "de monitoramento reativo e segurança como estágio final para observabilidade proativa e segurança integrada em todo o ciclo de vida",
+        "conceito_denso": false
+      }
+    ],
+    "metricas_obrigatorias": [
+      { "metrica": "Lead Time for Changes", "valor": "menos de 1 hora", "unidade": "hora" }
+    ]
+  }
+}

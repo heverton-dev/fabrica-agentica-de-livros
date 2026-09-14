@@ -1,0 +1,59 @@
+{
+  "numero": "05",
+  "capitulo_fonte": "05",
+  "titulo": "Empacotamento de Contexto: Repomix",
+  "estagio": "Custo",
+  "estagio_indice": 2,
+  "objetivo": "O leitor reduz tamanho de contexto em 40-70% mantendo cobertura, criando snapshots reutilizáveis que viram entradas padrão para o agente.",
+  "pre_requisito": "Passo 4 concluído",
+  "entregas": [
+    ".repomix.json"
+  ],
+  "execucao": [
+    {
+      "titulo": "Instalando e rodando o Repomix",
+      "linguagem": "console",
+      "comandos": [
+        "npx repomix --style xml --output-show-line-numbers"
+      ],
+      "codigo": "$ npx repomix --style xml --output-show-line-numbers\n$ cat repomix-output.xml | wc -c"
+    },
+    {
+      "titulo": "Configurando regras próprias com `.repomix.json`",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"output\": {\n    \"filePath\": \"repomix-output.xml\",\n    \"style\": \"xml\",\n    \"showLineNumbers\": true\n  },\n  \"include\": [\n    \"src/**/*.py\",\n    \"src/**/*.ts\",\n    \"docs/**/*.md\"\n  ],\n  \"ignore\": {\n    \"useGitignore\": true,\n    \"customPatterns\": [\n      \"**/*.test.fixture.*\",\n      \"**/dist/**\",\n      \"**/*.generated.*\",\n      \"**/CHANGELOG.md\"\n    ]\n  }\n}"
+    },
+    {
+      "titulo": "Medindo o ganho real: bytes e tokens estimados",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "# medir_ganho_repomix.py\n# Compara o tamanho do snapshot compactado com a soma dos arquivos originais.\nimport os\n\nCARACTERES_POR_TOKEN = 4  # heuristica aproximada para estimativa rapida\n\n\ndef tamanho_total_diretorio(caminho: str, extensoes: tuple) -> int:\n    \"\"\"Soma o tamanho em bytes de todos os arquivos com as extensoes dadas.\"\"\"\n    total = 0\n    for raiz, _dirs, arquivos in os.walk(caminho):\n        for nome in arquivos:\n            if nome.endswith(extensoes):\n                caminho_completo = os.path.join(raiz, nome)\n                total += os.path.getsize(caminho_completo)\n    return total\n\n\ndef estimar_tokens(bytes_totais: int) -> int:\n    \"\"\"Estimativa grosseira de tokens a partir do tamanho em bytes.\"\"\"\n    return bytes_totais // CARACTERES_POR_TOKEN\n\n\ndef comparar_ganho(caminho_projeto: str, caminho_snapshot: str) -> dict:\n    \"\"\"Retorna bytes/tokens do projeto original vs. do snapshot compactado.\"\"\"\n    bytes_original = tamanho_total_diretorio(caminho_projeto, (\".py\", \".ts\", \".md\"))\n    bytes_snapshot = os.path.getsize(caminho_snapshot)\n\n    return {\n        \"bytes_original\": bytes_original,\n        \"bytes_snapshot\": bytes_snapshot,\n        \"tokens_estimados_original\": estimar_tokens(bytes_original),\n        \"tokens_estimados_snapshot\": estimar_tokens(bytes_snapshot),\n        \"reducao_percentual\": round((1 - bytes_snapshot / bytes_original) * 100, 1)\n        if bytes_original > 0\n        else 0.0,\n    }\n\n\nif __name__ == \"__main__\":\n    import argparse\n    import sys\n\n    parser = argparse.ArgumentParser(description=\"Mede o ganho de empacotamento do Repomix.\""
+    },
+    {
+      "titulo": "Travando o orçamento de tokens em CI",
+      "linguagem": "yaml",
+      "comandos": [
+        "python medir_ganho_repomix.py --limite-tokens 60000 --falhar-se-exceder"
+      ],
+      "codigo": "# .github/workflows/orcamento-contexto.yml\nname: Orcamento de Contexto (Repomix)\non: [pull_request]\n\njobs:\n  medir-snapshot:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - name: Gerar snapshot Repomix\n        run: npx repomix --style xml --output-show-line-numbers\n      - name: Validar orcamento de tokens\n        run: |\n          python medir_ganho_repomix.py --limite-tokens 60000 --falhar-se-exceder"
+    }
+  ],
+  "gate": "npx repomix --style xml --output-show-line-numbers",
+  "comandos": [
+    "npx repomix --style xml --output-show-line-numbers",
+    "python medir_ganho_repomix.py --limite-tokens 60000 --falhar-se-exceder"
+  ],
+  "feito_quando": [
+    "Instale o Repomix com `npx repomix --style xml --output-show-line-numbers` no seu projeto atual",
+    "Escreva um `.repomix.json` com pelo menos 3 regras de `customPatterns` específicas do seu projeto",
+    "Rode `medir_ganho_repomix.py` e registre a redução percentual real obtida",
+    "Versione o `.repomix.json` no repositório e documente, em uma linha, quando ele deve ser revisado",
+    "Configure o gate de CI de orçamento de tokens (seção Técnica) com um limite calibrado pela calculadora de custo do Capítulo 1, não por um número redondo escolhido de improviso"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 5 — Empacotamento de Contexto: Repomix",
+  "lacunas": [
+    "sem_armadilhas"
+  ]
+}

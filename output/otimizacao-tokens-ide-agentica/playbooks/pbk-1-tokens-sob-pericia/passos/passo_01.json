@@ -1,0 +1,39 @@
+{
+  "numero": "01",
+  "capitulo_fonte": "01",
+  "titulo": "O Manual Suspeito: Por Que Comandos Bonitos Enganam",
+  "estagio": "Pericia",
+  "estagio_indice": 1,
+  "objetivo": "O leitor entende o padrao de erro central (ferramenta real + sintaxe inventada) e aprende o metodo de pericia que vai aplicar no resto do livro.",
+  "pre_requisito": "Nenhum — este é o ponto de partida",
+  "entregas": [
+    "settings.json",
+    "opencode/<model-id>"
+  ],
+  "execucao": [
+    {
+      "titulo": "Diagnosticando os dois casos de abertura",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env bash\n# Diagnostico dos dois casos de abertura do Capitulo 1.\n# Nao depende de rede: usa apenas checagens locais (command -v, teste de path).\n\necho \"=== CASO 1: instalar o ccusage ===\"\necho \"Comando do manual (fabricado): pipx install ccusage\"\nif command -v pipx >/dev/null 2>&1; then\n  echo \"pipx esta presente, mas ccusage e' um pacote Node/npm -- pipx so instala pacotes Python.\"\n  echo \"O comando do manual falharia com 'No matching distribution found'.\"\nelse\n  echo \"pipx nao esta instalado neste ambiente; de qualquer forma o comando falharia (pacote errado).\"\nfi\n\necho \"Comando real (documentado pelo projeto): npx ccusage@latest daily\"\nif command -v npx >/dev/null 2>&1; then\n  echo \"npx disponivel -- este e' o caminho real, sem instalacao previa necessaria.\"\nelse\n  echo \"npx nao esta instalado neste ambiente, mas e' o comando correto segundo a documentacao do projeto.\"\nfi\n\n# ... (trecho completo no Capitulo 01 do livro)"
+    }
+  ],
+  "gate": "python classificador_fonte.py --evidencia doc-oficial",
+  "comandos": [],
+  "feito_quando": [
+    "Escolha 1 comando de qualquer manual, tutorial ou post de blog que você usou nas últimas semanas sem checar a fonte oficial",
+    "Rode `<comando> --help` (ou o equivalente da ferramenta) e compare linha a linha com o que você havia copiado",
+    "Classifique o comando usando os 4 veredictos deste capítulo: CONFIRMADO, PARCIALMENTE CORRETO, FABRICADO ou NÃO VERIFICÁVEL",
+    "Se for PARCIALMENTE CORRETO ou FABRICADO, escreva a versão corrigida ao lado da original, com a fonte primária anotada"
+  ],
+  "armadilhas": [
+    "Confiar no comando so porque o nome da ferramenta e familiar, sem rodar --help",
+    "Parar de checar depois de confirmar 1 comando, assumindo que o resto do manual tambem esta certo",
+    "Tratar um veredito NAO VERIFICAVEL como se fosse APROVADO"
+  ],
+  "referencia_cruzada": "Cap. 1 — O Manual Suspeito: Por Que Comandos Bonitos Enganam",
+  "lacunas": [
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

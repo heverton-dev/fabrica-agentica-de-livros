@@ -1,0 +1,34 @@
+{
+  "numero": "02",
+  "capitulo_fonte": "02",
+  "titulo": "A Geopolítica da Nuvem: Por que o software local importa?",
+  "estagio": "Estágio 1",
+  "estagio_indice": 1,
+  "objetivo": "Imagine que todos os arquivos cruciais da sua empresa, desde a marca principal até os protótipos de produtos futuros, estejam armazenados em um cofre. Agora, imagine que esse cofre não fica na sua cidade, nem no seu país, mas em um servidor sujeito às leis e sanções comerciais…",
+  "pre_requisito": "Passo 1 concluído",
+  "entregas": [
+    "iniciar-estudio-seguro.sh"
+  ],
+  "execucao": [
+    {
+      "titulo": "Execução",
+      "linguagem": "bash",
+      "comandos": [
+        "docker network create --internal rede_soberana_estudio || echo \"A rede segura já está ativa.\""
+      ],
+      "codigo": "#!/bin/bash\n# Script operacional para iniciar um ambiente de design seguro com rede isolada da internet\n# Ferramenta orquestrada: Stirling-PDF para edição de documentos totalmente offline\n\necho \"Verificando e criando rede Docker isolada (internal: true)...\"\ndocker network create --internal rede_soberana_estudio || echo \"A rede segura já está ativa.\"\n\necho \"Iniciando o utilitário Stirling-PDF na rede hermética local...\"\n# O contêiner de documentação é conectado apenas à rede sem roteamento para a web aberta,\n# impedindo que qualquer relatório comercial trafegue para IPs não autorizados.\ndocker run -d \\\n  --name pdf_soberano_offline \\\n  --network rede_soberana_estudio \\\n  -p 8080:8080 \\\n  -v $(pwd)/documentos_sigilosos:/configs \\\n  -e DOCKER_ENABLE_SECURITY=false \\\n  -e SYSTEM_DEFAULTLOCALE=pt_BR \\\n  frooodle/s-pdf:latest\n\necho \"================================================================\"\necho \"Ambiente de Editoração Soberana em execução com sucesso!\"\necho \"Acesse o seu painel protegido de PDFs via navegador em: http://localhost:8080\"\necho \"Nenhum arquivo processado aqui cruzará as fronteiras da sua rede local.\"\necho \"================================================================\""
+    }
+  ],
+  "gate": "docker network create --internal rede_soberana_estudio || echo \"A rede segura já está ativa.\"",
+  "comandos": [
+    "docker network create --internal rede_soberana_estudio || echo \"A rede segura já está ativa.\""
+  ],
+  "feito_quando": [],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 2 — A Geopolítica da Nuvem: Por que o software local importa?",
+  "lacunas": [
+    "sem_secao_aplica",
+    "feito_quando_insuficiente",
+    "sem_armadilhas"
+  ]
+}

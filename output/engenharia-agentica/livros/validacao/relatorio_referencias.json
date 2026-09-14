@@ -1,0 +1,2254 @@
+{
+  "slug": "engenharia-agentica/livros",
+  "total_referencias": 320,
+  "resumo": {
+    "nao_verificado": 320
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2303.08774",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks-guide",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.infoq.com/news/2025/08/agents-md/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_01",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2303.08774",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks-guide",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_02",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://www.aihero.dev/a-complete-guide-to-agents-md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks-guide",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://www.infoq.com/news/2025/08/agents-md/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://tessl.io/blog/the-rise-of-agents-md-an-open-standard-and-single-source-of-truth-for-ai-coding-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_03",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2602.12430v3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/prompts",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_04",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://hidekazu-konishi.com/entry/anthropic_claude_api_prompt_caching_and_token_efficiency.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://vllm.ai/blog/2023-06-20-vllm",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_05",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://hidekazu-konishi.com/entry/anthropic_claude_api_prompt_caching_and_token_efficiency.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://vllm.ai/blog/2023-06-20-vllm",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://developers.redhat.com/articles/2025/07/24/how-pagedattention-resolves-memory-waste-llm-systems",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_06",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://hidekazu-konishi.com/entry/anthropic_claude_api_prompt_caching_and_token_efficiency.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2602.12430v3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_07",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://hidekazu-konishi.com/entry/anthropic_claude_api_prompt_caching_and_token_efficiency.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2602.12430v3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_08",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks-guide",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_09",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks-guide",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_10",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://arxiv.org/html/2602.12430v3",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_11",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/worktrees",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://github.com/stablyai/orca",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_12",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2406.18665",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://hidekazu-konishi.com/entry/anthropic_claude_api_prompt_caching_and_token_efficiency.html",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_13",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/context-window",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2406.18665",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_14",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2406.18665",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2309.06180",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_15",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/hooks",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1145/3605764.3623985",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/agent-sdk/subagents",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://code.claude.com/docs/en/settings-reference",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://github.com/agentsmd/agents.md",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://git-scm.com/docs/git-worktree",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://arxiv.org/abs/2406.18665",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1145/3711896.3736570",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1007/s11704-024-40231-1",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "http://arxiv.org/abs/2309.07864",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1007/s41019-025-00296-9",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "doi",
+      "valor": "10.1016/j.inffus.2025.103599",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/prompt-caching",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://sourcegraph.com/blog/context-engineering",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    },
+    {
+      "origem": "cap_16",
+      "tipo": "url",
+      "valor": "https://cursor.com/docs/rules",
+      "status": "nao_verificado",
+      "detalhe": "sem-rede (sem cache)"
+    }
+  ]
+}

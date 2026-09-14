@@ -1,0 +1,18 @@
+{
+  "tipo_obra": "playbook",
+  "min_referencias_por_capitulo": 0,
+  "tamanho_obra": null,
+  "gerar_artigos": false,
+  "qtd_artigos": 0,
+  "gerar_ebooks": false,
+  "qtd_ebooks": 0,
+  "gerar_playbook": false,
+  "gerar_lead_magnets": false,
+  "formatos_lm": [],
+  "gerar_deck": false,
+  "gerar_emails": false,
+  "livro_mae": "tratado-4-camadas",
+  "obra_mae": "tratado-4-camadas",
+  "tema": "Playbook — O Tratado das 4 Camadas da Fábrica Agêntica",
+  "senioridade_obra": "iniciante"
+}

@@ -1,0 +1,42 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": {
+    "parte": "C",
+    "capitulo": "9"
+  },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 8: o conceito de automação de pipelines de CI/CD, agora aplicado a IaC e contêineres",
+  "payload_estrategico": {
+    "metricas_obrigatorias": [
+      {
+        "metrica": "frequencia de integracao",
+        "valor": "várias vezes ao dia"
+      }
+    ],
+    "pilares": [
+      {
+        "nome": "Infraestrutura como Código (IaC): fundamentos e beneficios",
+        "escopo": "Definição de IaC, princípios de declaratividade, versionamento, imutabilidade e reproducibilidade; contraste com provisionamento manual ou imperativo.",
+        "ancora_visual": "flowchart LR\n    A[Código IaC (Terraform)] --> B[Provisionamento de Servidor]\n    B --> C[Provisionamento de Rede]\n    C --> D[Provisionamento de Balanceador]\n    %% legenda: Fluxo de provisionamento via IaC",
+        "entrega_tecnica": "HCL – arquivo main.tp com recurso aws_instance simples",
+        "evolucao_leitor": "De não conhecer IaC para entender como escrever e aplicar um script básico de provisionamento",
+        "conceito_denso": false
+      },
+      {
+        "nome": "Contêineres com Docker e orquestração básica com Kubernetes",
+        "escopo": "Conceitos de imagem, container, Dockerfile, rodar um container; introdução a pods, deployments e serviços no Kubernetes.",
+        "ancora_visual": "flowchart LR\n    A[Dockerfile] --> B[Imagem Docker]\n    B --> C[Container em Execução]\n    C --> D[Pod Kubernetes]\n    %% legenda: Do código fonte ao container rodando em k8s",
+        "entrega_tecnica": "Dockerfile para aplicacao Node.js + manifest YAML de pod nginx",
+        "evolucao_leitor": "De entender o que é container para saber como construir imagem e implantar em k8s",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Integracao de IaC e contêineres em pipeline de CI/CD",
+        "escopo": "Como usar Terraform para provisionar cluster k8s e então deploy de aplicacao via kubectl/helm dentro de um pipeline automatizado (ex: GitHub Actions).",
+        "ancora_visual": "flowchart LR\n    A[Commit código] --> B[Teste unitario]\n    B --> C[Terraform apply (infra)]\n    C --> D[Helm/kubectl deploy (app)]\n    D --> E[Monitoramento]\n    %% legenda: Pipeline CI/CD que provisiona infra e despliega app",
+        "entrega_tecnica": "Bash script simplificado: terraform apply && kubectl apply -f deploy.yaml",
+        "evolucao_leitor": "De saber cada peça isolada para ver como se encaixam em fluxo automatizado de entrega continua",
+        "conceito_denso": false
+    }
+  }
+}

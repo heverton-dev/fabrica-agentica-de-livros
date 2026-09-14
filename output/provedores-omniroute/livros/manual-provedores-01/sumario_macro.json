@@ -1,0 +1,121 @@
+{
+  "titulo": "Manual OmniRoute — 15 Provedores de IA Gratuitos para Máxima Confiabilidade",
+  "subtitulo": "Agregue Google Vertex AI, Claude, GPT-4 e mais em um único hub",
+  "slug": "manual-provedores-01",
+  "motivo_condutor": {
+    "nome": "Operador de Infraestrutura de IA",
+    "descricao": "Um DevOps ou desenvolvedor que precisa gerenciar múltiplos modelos de IA com máxima confiabilidade e mínimo custo",
+    "vocabulario": [
+      "provedor",
+      "load balancing",
+      "failover",
+      "créditos",
+      "rate limit",
+      "proxy",
+      "hub centralizado"
+    ],
+    "persona_leitor": "Desenvolvedor ou DevOps com experiência em APIs, familiar com curl/Python, buscando otimizar custos de IA"
+  },
+  "capitulos": [
+    {
+      "numero": 1,
+      "titulo": "OmniRoute — Seu Agregador de Modelos de IA",
+      "arquivo": "01-introducao.md",
+      "resumo": "Introdução ao OmniRoute: arquitetura, valor proposto, e por que múltiplos provedores são melhores que um único",
+      "tempo_leitura_minutos": 20,
+      "conceitos_chave": [
+        "Proxy OpenAI-compatível",
+        "Load balancing",
+        "Abstração de provedores",
+        "Resiliência em produção"
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Acessando e Navegando o Dashboard",
+      "arquivo": "02-dashboard.md",
+      "resumo": "Como acessar o dashboard OmniRoute, navegar suas abas principais (Providers, Models, Settings, Logs) e gerenciar usuários",
+      "tempo_leitura_minutos": 18,
+      "conceitos_chave": [
+        "Dashboard Web",
+        "Menu de Navegação",
+        "Status Overview",
+        "Health Check"
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "15 Provedores Gratuitos — Seleção, Setup e Comparação",
+      "arquivo": "03-provedores.md",
+      "resumo": "Visão geral dos 15 provedores com free tier (Vertex AI, OpenCode, Claude, OpenAI, Groq, etc.), comparação de custos, e procedimento idêntico de 5 passos para configurar qualquer um",
+      "tempo_leitura_minutos": 35,
+      "conceitos_chave": [
+        "Vertex AI",
+        "OpenCode Free",
+        "Anthropic Claude",
+        "OpenAI",
+        "Groq",
+        "Rate Limiting",
+        "Free Trial vs Free Tier"
+      ],
+      "secoes_eita": [
+        "Introdução",
+        "Explica (3 dimensões: modelo, custo, velocidade)",
+        "Ilustra (analogia de rotas)",
+        "Técnica (tabela 15 provedores, 5 passos idênticos, top 3)",
+        "Aplica (cenário multi-provedor)",
+        "Conclusão",
+        "Referências"
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Integrando OmniRoute com Claude Code",
+      "arquivo": "04-claude-code.md",
+      "resumo": "Como adicionar OmniRoute como provedor customizado em Claude Code (web) e Cursor (desktop), selecionar modelos, e começar a codificar",
+      "tempo_leitura_minutos": 18,
+      "conceitos_chave": [
+        "API Key Setup",
+        "Claude Code Integration",
+        "Cursor Configuration",
+        "Model Selection",
+        "Transparência de Rotamento"
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Troubleshooting — Resolvendo Problemas Comuns",
+      "arquivo": "05-troubleshooting.md",
+      "resumo": "Guia de diagnóstico para problemas comuns: conexão recusada, API Key inválida, modelo não encontrado, rate limits, créditos expirados. Inclui árv ore de decisão e soluções progressivas",
+      "tempo_leitura_minutos": 22,
+      "conceitos_chave": [
+        "Diagnóstico em Camadas",
+        "Metodologia de Troubleshooting",
+        "Testes com curl",
+        "Logs e Análise",
+        "Escalação"
+      ]
+    }
+  ],
+  "estrutura_arquivo": {
+    "raiz": "output/provedores-omniroute/livros/manual-provedores-01/",
+    "capitulos_dir": "capitulos/",
+    "arquivos_principais": [
+      "config_obra.json",
+      "sumario_macro.json"
+    ],
+    "distribuicao": "output/provedores-omniroute/distribuicao/"
+  },
+  "metricas_qualidade": {
+    "total_palavras_estimadas": 18000,
+    "densidade_citacao_minima": 0.05,
+    "cobertura_topicos": 1.0,
+    "validacoes_incluidas": [
+      "sintaxe_markdown",
+      "links_internos",
+      "diagrama_mermaid",
+      "blocos_codigo"
+    ]
+  },
+  "notas_editoriais": "Livro adaptado de manual técnico externo. Todos os capítulos seguem estrutura EITA com 7 seções obrigatórias. Estilo técnico: operacional (adequado para DevOps e desenvolvedores)."
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "livros/orca-ade",
+  "total_referencias": 25,
+  "resumo": {
+    "ok": 25
+  },
+  "regras": {
+    "R-RF-1": "referência com URL/DOI é conferida (ok ou não verificado)",
+    "R-RF-2": "URL/DOI com 4xx/5xx ou DNS/SSL é reprovada (fonte inexistente)",
+    "R-RF-3": "sem rede => nao_verificado, nunca falha"
+  },
+  "referencias": [
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/model/worktrees",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/model/agents-sessions",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/model/tabs-panes-splits",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/model/session-restore",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/supported",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/claude-code",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/codex",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/codex-hot-swap",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/hibernation",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/hooks-memory",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/native-chat",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/session-history",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/agents/usage-tracking",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/terminal",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/cli/reference",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/ssh",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/notifications",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/activity",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/settings",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.onorca.dev/docs/troubleshooting",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/stablyai/orca",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://github.com/stablyai/orca/releases",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://xtermjs.org/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    },
+    {
+      "origem": "cap_7",
+      "tipo": "url",
+      "valor": "https://www.electronjs.org/",
+      "status": "ok",
+      "detalhe": "HTTP 200"
+    }
+  ]
+}

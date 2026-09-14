@@ -1,0 +1,33 @@
+{
+  "numero": "07",
+  "capitulo_fonte": "07",
+  "titulo": "O Motor de Economia Severa de Tokens",
+  "estagio": "Painel operacional",
+  "estagio_indice": 2,
+  "objetivo": "Ensinar as 5 skills fundamentais com exemplos de redução de custo.",
+  "pre_requisito": "Passo 6 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Template Prático de Diretiva para Economia Severa",
+      "linguagem": "markdown",
+      "comandos": [],
+      "codigo": "## DIRETIVAS DE ECONOMIA SEVERA DE TOKENS (SISTEMA ARSENAL)\n\n1. **Caveman Thinking Obrigatório**:\n   - No bloco <thinking>, use apenas frases telegráficas e abreviações.\n   - Proibido repetir o prompt do usuário no pensamento interno.\n   - Máximo de 3 a 5 linhas de raciocínio para tarefas comuns.\n\n2. **Carregamento Tardio de Habilidades (Lazy Skills)**:\n   - Não carregue manuais de ferramentas até que a tarefa exija explicitamente.\n   - Ao precisar de especialidades, leia o arquivo .governance/skills/<nome_skill>/SKILL.md.\n\n3. **Truncamento de Saídas de Terminal**:\n   - Ao executar comandos que gerem mais de 50 linhas de saída, inspecione apenas o tail do log."
+    }
+  ],
+  "gate": "",
+  "comandos": [],
+  "feito_quando": [
+    "Converta um raciocínio prolixo seu para o formato Caveman Thinking e compare o custo estimado de tokens",
+    "Estruture a pasta `.governance/skills/` no seu projeto com pelo menos 1 skill carregada sob demanda (Lazy Loading)",
+    "Configure o truncamento de logs no seu ambiente: capture apenas as 20 primeiras e 20 últimas linhas de erros longos",
+    "Meça o custo de tokens de uma sessão antes e depois de aplicar as técnicas de economia severa"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 7 — O Motor de Economia Severa de Tokens",
+  "lacunas": [
+    "sem_entregas",
+    "sem_gate",
+    "sem_armadilhas"
+  ]
+}

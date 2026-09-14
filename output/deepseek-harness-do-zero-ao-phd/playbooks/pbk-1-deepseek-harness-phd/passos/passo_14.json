@@ -1,0 +1,42 @@
+{
+  "numero": "14",
+  "capitulo_fonte": "14",
+  "titulo": "Multi-Agente: Coordenando uma Equipe de Agentes",
+  "estagio": "Calibracao",
+  "estagio_indice": 4,
+  "objetivo": "Configurar multiplos agentes em paralelo.",
+  "pre_requisito": "Passo 13 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Configurando Multi-Agent com Worktrees",
+      "linguagem": "bash",
+      "comandos": [
+        "git -C \"$REPO\" worktree add \"../${agent}\" \"feature/${agent}\""
+      ],
+      "codigo": "# Script de setup multi-agente\n#!/bin/bash\nREPO=\"/home/user/projeto\"\nAGENTS=(\"frontend\" \"backend\" \"tests\")\n\nfor agent in \"${AGENTS[@]}\"; do\n  # Criar worktree\n  git -C \"$REPO\" worktree add \"../${agent}\" \"feature/${agent}\"\n  \n  # Criar sessão isolada\n  dsh session create --name \"agent-${agent}\" --worktree \"../${agent}\"\n  \n  # Configurar agente com foco específico\n  dsh config set agent.focus \"${agent}\" --session \"agent-${agent}\"\ndone\n\necho \"✅ ${#AGENTS[@]} agentes configurados\""
+    },
+    {
+      "titulo": "Orquestração com Pipeline",
+      "linguagem": "yaml",
+      "comandos": [],
+      "codigo": "# pipelines/multi-agente.yaml\nname: desenvolvimento-completo\norchestrator: standard\nagents:\n  - name: frontend\n    focus: \"React, TypeScript, UI components\"\n    worktree: \"feature/frontend\"\n    tools: [\"filesystem\", \"shell\"]\n    \n  - name: backend\n    focus: \"Python, FastAPI, database\"\n    worktree: \"feature/backend\"\n    tools: [\"filesystem\", \"shell\", \"database\"]\n    \n  - name: tests\n    focus: \"pytest, integration tests\"\n    worktree: \"feature/tests\"\n    tools: [\"filesystem\", \"shell\"]\n\ndispatch:\n  parallel: true\n  wait: all\n  aggregate: merge"
+    }
+  ],
+  "gate": "git -C \"$REPO\" worktree add \"../${agent}\" \"feature/${agent}\"",
+  "comandos": [
+    "git -C \"$REPO\" worktree add \"../${agent}\" \"feature/${agent}\""
+  ],
+  "feito_quando": [
+    "Isolamento total:** cada agente em seu próprio worktree",
+    "Divisão clara de responsabilidades:** agentes diferentes modificam arquivos diferentes",
+    "Merge com revisão:** sempre revisar conflitos antes de consolidar",
+    "Testes finais:** rodar suite de testes completa depois do merge"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 14 — Multi-Agente: Coordenando uma Equipe de Agentes",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

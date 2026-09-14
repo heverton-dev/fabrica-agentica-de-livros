@@ -1,0 +1,68 @@
+{
+  "titulo_obra": "Playbook — Engenharia Agêntica",
+  "tipo_obra": "playbook",
+  "slug_livro_mae": "engenharia-agentica",
+  "motivo_condutor": {
+    "nome": "A Cabine e a Torre",
+    "descricao": "O agente é o piloto: potente, adaptativo e probabilístico. O harness é a cabine — painel, checklist, alarmes, piloto automático e caixa-preta — onde cada instrumento é determinístico por construção. Voar bem não é pilotar melhor: é instrumentar melhor.",
+    "vocabulario": [
+      "cabine",
+      "painel",
+      "checklist",
+      "instrumento",
+      "alarme",
+      "piloto automático",
+      "plano de voo",
+      "caixa-preta",
+      "torre de controle",
+      "combustível"
+    ],
+    "persona_leitor": "Engenheiro de Bordo"
+  },
+  "estagios": [
+    {
+      "indice": 1,
+      "nome": "Cabine",
+      "titulo_parte": "O Terreno — o que é um agente, de verdade",
+      "capitulos": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "indice": 2,
+      "nome": "Painel",
+      "titulo_parte": "A Bancada — configurando o que realmente custa dinheiro",
+      "capitulos": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "indice": 3,
+      "nome": "Checklist",
+      "titulo_parte": "A Linha de Montagem — escala, scripts e frota",
+      "capitulos": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "indice": 4,
+      "nome": "Instrumento",
+      "titulo_parte": "O Ofício — decisões de arquiteto",
+      "capitulos": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "titulo_obra": "DevOps Essencial: Cultura, automação e entrega contínua para iniciantes",
+  "subtitulo": "Cultura, automação e entrega contínua na prática",
+  "tipo_obra": "livro",
+  "tamanho_obra": "G",
+  "paginas_estimadas": 120,
+  "motivo_condutor": {
+    "nome": "A Jornada do Desenvolvedor Ágil",
+    "descricao": "Um desenvolvedor que evolui de trabalhar em silos isolados para se tornar um profissional integrado em equipes de alta performance que entregam valor continuamente",
+    "vocabulario": [
+      "colaboração",
+      "automação",
+      "feedback",
+      "imutabilidade",
+      "observabilidade",
+      "segurança"
+    ],
+    "persona_leitor": "Desenvolvedor Agêntico"
+  },
+  "introducao": "Apresentar o panorama geral do DevOps, estabelecer expectativas para a jornada de aprendizagem e motivar o leitor a adotar uma mentalidade de colaboração e melhoria contínua",
+  "partes": [
+    {
+      "parte": "A",
+      "titulo_parte": "Parte A",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "Capítulo 1 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 1 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 1: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 11",
+            "Conceito 12"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 1.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "Capítulo 2 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 2 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 2: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 21",
+            "Conceito 22"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 2.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "Capítulo 3 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 3 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 3: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 31",
+            "Conceito 32"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 3.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Capítulo 4 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 4 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 4: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 41",
+            "Conceito 42"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 4.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "B",
+      "titulo_parte": "Parte B",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Capítulo 5 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 5 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 5: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 51",
+            "Conceito 52"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 5.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "Capítulo 6 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 6 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 6: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 61",
+            "Conceito 62"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 6.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "Capítulo 7 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 7 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 7: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 71",
+            "Conceito 72"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 7.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Capítulo 8 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 8 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 8: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 81",
+            "Conceito 82"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 8.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        }
+      ]
+    },
+    {
+      "parte": "C",
+      "titulo_parte": "Parte C",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "Capítulo 9 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 9 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 9: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 91",
+            "Conceito 92"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 9.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Capítulo 10 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 10 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 10: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 101",
+            "Conceito 102"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 10.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "Capítulo 11 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 11 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 11: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 111",
+            "Conceito 112"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 11.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Capítulo 12 - Tópico DevOps",
+          "resumo": "Resumo do capítulo 12 sobre DevOps.",
+          "objetivo": "Objetivo do capítulo 12: abordar conceito DevOps.",
+          "tempo_leitura_minutos": 20,
+          "conceitos_chave": [
+            "Conceito 121",
+            "Conceito 122"
+          ],
+          "ancora_visual": "flowchart TD\n    A[Início] --> B[Desenvolvimento]\n    B --> C[Entrega]\n",
+          "entrega_tecnica": "Checklist do capítulo 12.",
+          "secoes_eita": [
+            "Introdução: Apresentação do tópico",
+            "Explica: Explicação detalhada",
+            "Ilustra: Diagrama ilustrativo",
+            "Técnica: Template técnico",
+            "Aplica: Aplicação prática",
+            "Conclusão: Conclusão do capítulo",
+            "Referências: Referências bibliográficas"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "slug_mae": "livros/tratado-4-camadas",
+  "slug_playbook": "tratado-4-camadas/playbooks/pbk-1-tratado-4-camadas",
+  "total_passos": 20,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "O Contexto Real de Origem: O Projeto Arsenal Open Source",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "O Dicionário do Iniciante: Glossário Descomplicado",
+      "lacunas": [
+        "sem_execucao",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+      "lacunas": [
+        "sem_entregas",
+        "sem_execucao",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Visão Geral das 4 Camadas: A Arquitetura Completa",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Os 3 Princípios Universais da TELA",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "A Constituição Mestre: As 18 Regras Sagradas",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "O Motor de Economia Severa de Tokens",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Implementação e Réplica da Camada 1",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "09",
+      "titulo": "Os 3 Princípios Universais do HARNESS",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "10",
+      "titulo": "Configuração Industrial: Circuit Breakers e Sandbox",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "11",
+      "titulo": "O Guarda-Costas do Git: Pre-Commit com 6 Gates",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "12",
+      "titulo": "Implementação e Réplica da Camada 2",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "13",
+      "titulo": "Os 3 Princípios Universais do LLM",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "14",
+      "titulo": "A Matriz de 3 Tiers de Modelos",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "15",
+      "titulo": "Contratos Tipados e Registro Declarativo",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "16",
+      "titulo": "Implementação e Réplica da Camada 3",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "17",
+      "titulo": "Os 3 Princípios Universais de TOOLS",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "18",
+      "titulo": "O Banco de Estado Persistente: SQLite e a Esteira",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "19",
+      "titulo": "Servidores MCP e a Usina de Scripts Determinísticos",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "20",
+      "titulo": "O Super-Auditor e o Manual de Montagem Universal",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [
+    "sem_execucao"
+  ],
+  "cobertura": {
+    "com_entregas": 15,
+    "com_gate": 1,
+    "com_feito_quando": 20,
+    "com_armadilhas": 0
+  }
+}

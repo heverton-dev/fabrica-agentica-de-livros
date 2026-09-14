@@ -1,0 +1,16 @@
+{
+  "slug": "livros/deepseek-harness-do-zero-ao-phd",
+  "modo": "validar",
+  "arquivos": [],
+  "total": 17,
+  "renderizados": 0,
+  "cache": 0,
+  "falhas": [
+    {
+      "contexto": "16",
+      "erro": "    at fromText (https://mermaid-cli-intercept.invalid/C:/Users/trcnologia/AppData/Roaming/npm/node_modules/@mermaid-js/mermaid-cli/node_modules/mermaid/dist/mermaid.esm.mjs:1320:17)"
+    }
+  ],
+  "ignorados": [],
+  "validos": 16
+}

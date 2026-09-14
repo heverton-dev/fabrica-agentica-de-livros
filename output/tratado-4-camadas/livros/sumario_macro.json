@@ -1,0 +1,167 @@
+{
+  "titulo_obra": "O Tratado das 4 Camadas da Fábrica Agêntica",
+  "titulo_capa": "O Tratado das 4 Camadas",
+  "subtitulo": "Guia Definitivo de Arquitetura, Soberania e Engenharia de Software com IA",
+  "tipo_obra": "livro",
+  "tamanho_obra": "M",
+  "motivo_condutor": {
+    "nome": "A Central de Comando Autônoma",
+    "descricao": "O leitor é o comandante de uma central de controle onde quatro painéis operacionais (TELA, HARNESS, LLM, TOOLS) governam agentes de IA como se fossem equipes especializadas.",
+    "vocabulario": ["central de comando", "painel operacional", "circuito de segurança", "roteador cognitivo", "usina determinística", "disjuntor", "sandbox reversível", "exit code", "hardlink de governança", "protocolo universal"],
+    "persona_leitor": "Engenheiro de Sistemas Autônomos"
+  },
+  "introducao": "Apresentar a crise do desenvolvimento com IA e a solução das 4 Camadas.",
+  "partes": [
+    {
+      "parte": "I",
+      "titulo_parte": "Fundamentos — O Campo de Batalha",
+      "capitulos": [
+        {
+          "capitulo": "1",
+          "titulo": "O Contexto Real de Origem: O Projeto Arsenal Open Source",
+          "objetivo": "Apresentar o projeto Arsenal como campo de batalha real e a matriz de transposição universal.",
+          "pilares_previstos": ["Projeto Arsenal: 49 compêndios, 680+ motores", "As 4 dores reais: custo, amnésia, alucinação, lock-in", "Matriz de transposição universal"]
+        },
+        {
+          "capitulo": "2",
+          "titulo": "O Dicionário do Iniciante: Glossário Descomplicado",
+          "objetivo": "Garantir que qualquer pessoa domine os conceitos fundamentais de IA e engenharia.",
+          "pilares_previstos": ["Conceitos de IA e LLM para iniciantes", "Ferramentas de engenharia (Git, hooks, hardlinks)", "Protocolos e padrões (MCP, exit codes)"]
+        },
+        {
+          "capitulo": "3",
+          "titulo": "A Crise do Desenvolvimento com IA: Os 4 Problemas Catastróficos",
+          "objetivo": "Detalhar cada um dos 4 problemas com exemplos reais e dados de mercado.",
+          "pilares_previstos": ["Fatura explosiva: custos de tokens", "Amnésia progressiva: Lost in the Middle", "Alucinação de sucesso: validação falsa"]
+        },
+        {
+          "capitulo": "4",
+          "titulo": "Visão Geral das 4 Camadas: A Arquitetura Completa",
+          "objetivo": "Apresentar o modelo das 4 Camadas como solução definitiva.",
+          "pilares_previstos": ["Mapa das 4 Camadas e seus papéis", "Interação entre camadas", "Promessa da obra"]
+        }
+      ]
+    },
+    {
+      "parte": "II",
+      "titulo_parte": "Camada 1 — TELA: O Painel de Visibilidade",
+      "capitulos": [
+        {
+          "capitulo": "5",
+          "titulo": "Os 3 Princípios Universais da TELA",
+          "objetivo": "Ensinar os fundamentos de Prompt & Context Engineering.",
+          "pilares_previstos": ["Invariância de Prefixo: 90% de desconto", "Densidade de Shannon: zero ruído", "Localidade de Contexto: grep antes de read"]
+        },
+        {
+          "capitulo": "6",
+          "titulo": "A Constituição Mestre: As 18 Regras Sagradas",
+          "objetivo": "Detalhar cada uma das 18 regras com exemplos práticos.",
+          "pilares_previstos": ["Regras de comunicação (R1-R4)", "Regras de engenharia (R5-R12)", "Regras de higiene (R13-R18)"]
+        },
+        {
+          "capitulo": "7",
+          "titulo": "O Motor de Economia Severa de Tokens",
+          "objetivo": "Ensinar as 5 skills fundamentais com exemplos de redução de custo.",
+          "pilares_previstos": ["Caveman: raciocínio telegráfico", "Headroom e lean-ctx: compressão e busca", "RTK-memory e pre-flight-check"]
+        },
+        {
+          "capitulo": "8",
+          "titulo": "Implementação e Réplica da Camada 1",
+          "objetivo": "Guia passo a passo para implementar a Camada TELA.",
+          "pilares_previstos": ["Cópia para projetos novos", "Blindagem de legados", "Auditoria automatizada"]
+        }
+      ]
+    },
+    {
+      "parte": "III",
+      "titulo_parte": "Camada 2 — HARNESS: O Painel de Segurança",
+      "capitulos": [
+        {
+          "capitulo": "9",
+          "titulo": "Os 3 Princípios Universais do HARNESS",
+          "objetivo": "Ensinar os fundamentos de Harness & Loop Engineering.",
+          "pilares_previstos": ["Disjuntor: circuit breaker", "Sandbox reversível", "Hardlink de governança"]
+        },
+        {
+          "capitulo": "10",
+          "titulo": "Configuração Industrial: Circuit Breakers e Sandbox",
+          "objetivo": "Ensinar a configurar settings.json com proteções industriais.",
+          "pilares_previstos": ["Schema do settings.json", "Timeouts e limites", "Bloqueio de comandos destrutivos"]
+        },
+        {
+          "capitulo": "11",
+          "titulo": "O Guarda-Costas do Git: Pre-Commit com 6 Gates",
+          "objetivo": "Ensinar a implementar pre-commit hook com 6 gates.",
+          "pilares_previstos": ["Gates 1-2: segredos e pytest", "Gates 3-4: npm test e compilação", "Gates 5-6: dependências e MD5"]
+        },
+        {
+          "capitulo": "12",
+          "titulo": "Implementação e Réplica da Camada 2",
+          "objetivo": "Guia passo a passo para implementar a Camada HARNESS.",
+          "pilares_previstos": ["Cópia de settings e hooks", "Setup-links para junctions", "Auditoria automatizada"]
+        }
+      ]
+    },
+    {
+      "parte": "IV",
+      "titulo_parte": "Camada 3 — LLM: O Painel de Decisão",
+      "capitulos": [
+        {
+          "capitulo": "13",
+          "titulo": "Os 3 Princípios Universais do LLM",
+          "objetivo": "Ensinar os fundamentos de Model Layer & Semantic Routing.",
+          "pilares_previstos": ["Roteamento por Pareto", "Contrato tipado: JSON Schema", "Fallbacks: degradação graciosa"]
+        },
+        {
+          "capitulo": "14",
+          "titulo": "A Matriz de 3 Tiers de Modelos",
+          "objetivo": "Ensinar o roteamento inteligente entre 3 tiers de modelos.",
+          "pilares_previstos": ["Tier 1: rápido/barato", "Tier 2: código/testes", "Tier 3: raciocínio pesado"]
+        },
+        {
+          "capitulo": "15",
+          "titulo": "Contratos Tipados e Registro Declarativo",
+          "objetivo": "Ensinar JSON Schemas e registro declarativo de tipos.",
+          "pilares_previstos": ["JSON Schemas", "Registro declarativo", "Custos por tipo"]
+        },
+        {
+          "capitulo": "16",
+          "titulo": "Implementação e Réplica da Camada 3",
+          "objetivo": "Guia passo a passo para implementar o roteador LLM.",
+          "pilares_previstos": ["Cópia do roteador e schemas", "Registro em tipos.py", "Auditoria automatizada"]
+        }
+      ]
+    },
+    {
+      "parte": "V",
+      "titulo_parte": "Camada 4 — TOOLS: A Usina Determinística",
+      "capitulos": [
+        {
+          "capitulo": "17",
+          "titulo": "Os 3 Princípios Universais de TOOLS",
+          "objetivo": "Ensinar os fundamentos de MCP Servers & Determinismo Mecânico.",
+          "pilares_previstos": ["Separação de responsabilidades", "Idempotência algorítmica", "Paridade de hash MD5"]
+        },
+        {
+          "capitulo": "18",
+          "titulo": "O Banco de Estado Persistente: SQLite e a Esteira",
+          "objetivo": "Ensinar SQLite como banco de estado para agentes IA.",
+          "pilares_previstos": ["Schema do estado_esteira.db", "Módulo Python completo", "Integração com gates"]
+        },
+        {
+          "capitulo": "19",
+          "titulo": "Servidores MCP e a Usina de Scripts Determinísticos",
+          "objetivo": "Ensinar arquitetura MCP e scripts determinísticos.",
+          "pilares_previstos": ["Arquitetura MCP", "Scripts determinísticos", "Auditoria e saneamento"]
+        },
+        {
+          "capitulo": "20",
+          "titulo": "O Super-Auditor e o Manual de Montagem Universal",
+          "objetivo": "Super-Auditor e manual para novos e legados projetos.",
+          "pilares_previstos": ["Super-Auditor com certificado", "Projeto novo do zero", "Blindagem de legado"]
+        }
+      ]
+    }
+  ],
+  "conclusao": "Sintetizar a jornada de usuário a Arquiteto de Sistemas Autônomos de Alta Confiabilidade."
+}

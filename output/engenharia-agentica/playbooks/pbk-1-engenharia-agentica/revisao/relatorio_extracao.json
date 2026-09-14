@@ -1,0 +1,144 @@
+{
+  "slug_mae": "engenharia-agentica/livros",
+  "slug_playbook": "engenharia-agentica/playbooks/pbk-1-engenharia-agentica",
+  "total_passos": 16,
+  "passos_com_lacuna": [
+    {
+      "passo": "01",
+      "titulo": "O agente não é o modelo: anatomia de um harness",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "02",
+      "titulo": "Probabilismo e determinismo: onde cada um manda",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "03",
+      "titulo": "O arquivo que todo agente lê: AGENTS.md, config.json e rules",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "04",
+      "titulo": "Skills, MCPs e tools: o que o agente sabe fazer",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "05",
+      "titulo": "Turnos agênticos: anatomia de um loop e por que ele custa dinheiro",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "06",
+      "titulo": "Cache hit: prompt caching e a ordem das partes",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "07",
+      "titulo": "Economia severa de tokens: as configurações reais",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "08",
+      "titulo": "Otimização de contexto: selecionar, comprimir, isolar",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "09",
+      "titulo": "Scripts e gates: o determinismo que sustenta a esteira",
+      "lacunas": [
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "10",
+      "titulo": "Hooks: a camada que intercepta o agente",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "11",
+      "titulo": "Agents e subagentes: delegação com contexto isolado",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "12",
+      "titulo": "Orquestração: worktrees, paralelismo e o Orca ADE",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "13",
+      "titulo": "Roteamento inteligente de LLM: o modelo certo por turno",
+      "lacunas": [
+        "sem_entregas",
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "14",
+      "titulo": "Configurações que nunca te contam",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "15",
+      "titulo": "Os segredos universais aplicáveis a qualquer harness",
+      "lacunas": [
+        "sem_entregas",
+        "sem_armadilhas"
+      ]
+    },
+    {
+      "passo": "16",
+      "titulo": "Arquitetura para desenvolvimento com IA: o sistema que constrói sistemas",
+      "lacunas": [
+        "sem_gate",
+        "sem_armadilhas"
+      ]
+    }
+  ],
+  "lacunas_criticas": [],
+  "cobertura": {
+    "com_entregas": 6,
+    "com_gate": 8,
+    "com_feito_quando": 16,
+    "com_armadilhas": 0
+  }
+}

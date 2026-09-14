@@ -1,0 +1,371 @@
+{
+  "tema": "agentic software engineering: LLM coding agents, context engineering, token economy and deterministic quality gates",
+  "gerado_em": "12 set. 2026",
+  "fontes_consultadas": [
+    "openalex",
+    "crossref",
+    "arxiv",
+    "semantic_scholar",
+    "scielo",
+    "pubmed"
+  ],
+  "cobertura": {
+    "openalex": {
+      "status": "ok",
+      "erro": null,
+      "n": 8
+    },
+    "crossref": {
+      "status": "ok",
+      "erro": null,
+      "n": 8
+    },
+    "arxiv": {
+      "status": "erro",
+      "erro": "http://export.arxiv.org/api/query?search_query=all:agentic+AND+all:software+AND+ -> The read operation timed out",
+      "n": 0
+    },
+    "semantic_scholar": {
+      "status": "ok",
+      "erro": null,
+      "n": 1
+    },
+    "scielo": {
+      "status": "erro",
+      "erro": "https://search.scielo.org/api.php?q=agentic+software+engineering%3A+LLM+coding+a -> HTTP 403",
+      "n": 0
+    },
+    "pubmed": {
+      "status": "ok",
+      "erro": null,
+      "n": 0
+    }
+  },
+  "total_unicos": 17,
+  "registros": [
+    {
+      "titulo": "A Survey on Large Language Models: Applications, Challenges, Limitations, and Practical Usage",
+      "autores": [
+        "Muhammad Usman Hadi",
+        "qasem al tashi",
+        "Rizwan Qureshi",
+        "Abbas Shah",
+        "Amgad Muneer",
+        "Muhammad Irfan",
+        "Anas Zafar",
+        "Muhammad Bilal Shaikh",
+        "Naveed Akhtar",
+        "Syed Zohaib Hassan",
+        "Maged Shoman",
+        "Jia Wu",
+        "Seyedali Mirjalili",
+        "Mubarak Shah"
+      ],
+      "ano": 2023,
+      "doi": "10.36227/techrxiv.23589741.v1",
+      "url": "https://doi.org/10.36227/techrxiv.23589741.v1",
+      "resumo": "Within the vast expanse of computerized language processing, a revolutionary entity known as Large Language Models (LLMs) has emerged, wielding immense power in its capacity to comprehend intricate linguistic patterns and conjure coherent and contextually fitting responses. Large language models (LLMs) are a type of artificial intelligence (AI) that have emerged as powerful tools for a wide range of tasks, including natural language processing (NLP), machine translation, and question-answering. This survey paper provides a comprehensive overview of LLMs, including their history, architecture, training methods, applications, and challenges. The paper begins by discussing the fundamental concepts of generative AI and the architecture of generative pre- trained transformers (GPT). It then provides an overview of the history of LLMs, their evolution over time, and the different training methods that have been used to train them. The paper then discusses the wide range of applications of LLMs, including medical, education, finance, and engineering. It also discusses how LLMs are shaping the future of AI and how they can be used to solve real-world problems. The paper then discusses the challenges associated with deploying LLMs in real-world scenarios, including ethical considerations, model biases, interpretability, and computational resource requirements. It also highlights techniques for enhancing the robustness and controllability of LLMs, and addressing bias, fairness, and generation quality issues. Finally, the paper concludes by highlighting the future of LLM research and the challenges that need to be addressed in order to make LLMs more reliable and useful. This survey paper is intended to provide researchers, practitioners, and enthusiasts with a comprehensive understanding of LLMs, their evolution, applications, and challenges. By consolidating the state-of-the-art knowledge in the field, this survey serves as a valuable resource for further advancements in the development and utilization of LLMs for a wide range of real-world applications. The GitHub repo for this project is available at https://github.com/anas-zafar/LLM-Survey",
+      "citacoes": 373,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Agentic AI: a comprehensive survey of architectures, applications, and future directions",
+      "autores": [
+        "Mohamad Abou Ali",
+        "Fadi Dornaika",
+        "Jinan Charafeddine"
+      ],
+      "ano": 2025,
+      "doi": "10.1007/s10462-025-11422-4",
+      "url": "https://doi.org/10.1007/s10462-025-11422-4",
+      "resumo": "Abstract Agentic AI represents a transformative shift in artificial intelligence, but its rapid advancement has led to a fragmented understanding, often conflating modern neural systems with outdated symbolic models—a practice known as conceptual retrofitting . This survey cuts through this confusion by introducing a novel dual-paradigm framework that categorizes agentic systems into two distinct lineages: the symbolic/classical (relying on algorithmic planning and persistent state) and the neural/generative (leveraging stochastic generation and prompt-driven orchestration). Through a systematic PRISMA-based review of 90 studies (2018–2025), we provide a comprehensive analysis structured around this framework across three dimensions: (1) the theoretical foundations and architectural principles defining each paradigm; (2) domain-specific implementations in healthcare, finance, and robotics, demonstrating how application constraints dictate paradigm selection; and (3) paradigm-specific ethical and governance challenges, revealing divergent risks and mitigation strategies. Our analysis reveals that the choice of paradigm is strategic: symbolic systems dominate safety-critical domains (e.g., healthcare), while neural systems prevail in adaptive, data-rich environments (e.g., finance). Furthermore, we identify critical research gaps, including a significant deficit in governance models for symbolic systems and a pressing need for hybrid neuro-symbolic architectures. The findings culminate in a strategic roadmap arguing that the future of Agentic AI lies not in the dominance of one paradigm, but in their intentional integration to create systems that are both adaptable and reliable . This work provides the essential conceptual toolkit to guide future research, development, and policy toward robust and trustworthy hybrid intelligent systems.",
+      "citacoes": 133,
+      "periodico": "Artificial Intelligence Review",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "The Crowdless Future? Generative AI and Creative Problem-Solving",
+      "autores": [
+        "Léonard Boussioux",
+        "Jacqueline N. Lane",
+        "Miaomiao Zhang",
+        "Vladimir Jaćimović",
+        "Karim R. Lakhani"
+      ],
+      "ano": 2024,
+      "doi": "10.1287/orsc.2023.18430",
+      "url": "https://doi.org/10.1287/orsc.2023.18430",
+      "resumo": "The rapid advances in generative artificial intelligence (AI) open up attractive opportunities for creative problem-solving through human-guided AI partnerships. To explore this potential, we initiated a crowdsourcing challenge focused on sustainable, circular economy business ideas generated by the human crowd (HC) and collaborative human-AI efforts using two alternative forms of solution search. The challenge attracted 125 global solvers from various industries, and we used strategic prompt engineering to generate the human-AI solutions. We recruited 300 external human evaluators to judge a randomized selection of 13 out of 234 solutions, totaling 3,900 evaluator-solution pairs. Our results indicate that while human crowd solutions exhibited higher novelty—both on average and for highly novel outcomes—human-AI solutions demonstrated superior strategic viability, financial and environmental value, and overall quality. Notably, human-AI solutions cocreated through differentiated search, where human-guided prompts instructed the large language model to sequentially generate outputs distinct from previous iterations, outperformed solutions generated through independent search. By incorporating “AI in the loop” into human-centered creative problem-solving, our study demonstrates a scalable, cost-effective approach to augment the early innovation phases and lays the groundwork for investigating how integrating human-AI solution search processes can drive more impactful innovations. Funding: This work was supported by Harvard Business School (Division of Research and Faculty Development) and the Laboratory for Innovation Science at Harvard (LISH) at the Digital Data and Design (D 3 ) Institute at Harvard. Supplemental Material: The online appendix is available at https://doi.org/10.1287/orsc.2023.18430 .",
+      "citacoes": 284,
+      "periodico": "Organization Science",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "War of the chatbots: Bard, Bing Chat, ChatGPT, Ernie and beyond. The new AI gold rush and its impact on higher education",
+      "autores": [
+        "Jürgen Rudolph",
+        "Shannon Tan",
+        "Samson Tan"
+      ],
+      "ano": 2023,
+      "doi": "10.37074/jalt.2023.6.1.23",
+      "url": "https://doi.org/10.37074/jalt.2023.6.1.23",
+      "resumo": "Developments in the chatbot space have been accelerating at breakneck speed since late November 2022. Every day, there appears to be a plethora of news. A war of competitor chatbots is raging amidst an AI arms race and gold rush. These rapid developments impact higher education, as millions of students and academics have started using bots like ChatGPT, Bing Chat, Bard, Ernie and others for a large variety of purposes. In this article, we select some of the most promising chatbots in the English and Chinese-language spaces and provide their corporate backgrounds and brief histories. Following an up-to-date review of the Chinese and English-language academic literature, we describe our comparative method and systematically compare selected chatbots across a multi-disciplinary test relevant to higher education. The results of our test show that there are currently no A-students and no B-students in this bot cohort, despite all publicised and sensationalist claims to the contrary. The much-vaunted AI is not yet that intelligent, it would appear. GPT-4 and its predecessor did best, whilst Bing Chat and Bard were akin to at-risk students with F-grade averages. We conclude our article with four types of recommendations for key stakeholders in higher education: (1) faculty in terms of assessment and (2) teaching & learning, (3) students and (4) higher education institutions.",
+      "citacoes": 419,
+      "periodico": "Journal of Applied Learning & Teaching",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Large Language Models: A Comprehensive Survey of its Applications, Challenges, Limitations, and Future Prospects",
+      "autores": [
+        "Muhammad Usman Hadi",
+        "qasem al tashi",
+        "Rizwan Qureshi",
+        "Abbas Shah",
+        "Amgad Muneer",
+        "Muhammad Irfan",
+        "Anas Zafar",
+        "Muhammad Bilal Shaikh",
+        "Naveed Akhtar",
+        "Syed Zohaib Hassan",
+        "Maged Shoman",
+        "Jia Wu",
+        "Seyedali Mirjalili",
+        "Mubarak Shah"
+      ],
+      "ano": 2023,
+      "doi": "10.36227/techrxiv.23589741.v3",
+      "url": "https://doi.org/10.36227/techrxiv.23589741.v3",
+      "resumo": "Within the vast expanse of computerized language processing, a revolutionary entity known as Large Language Models (LLMs) has emerged, wielding immense power in its capacity to comprehend intricate linguistic patterns and conjure coherent and contextually fitting responses. Large language models (LLMs) are a type of artificial intelligence (AI) that have emerged as powerful tools for a wide range of tasks, including natural language processing (NLP), machine translation, and question-answering. This survey paper provides a comprehensive overview of LLMs, including their history, architecture, training methods, applications, and challenges. The paper begins by discussing the fundamental concepts of generative AI and the architecture of generative pre- trained transformers (GPT). It then provides an overview of the history of LLMs, their evolution over time, and the different training methods that have been used to train them. The paper then discusses the wide range of applications of LLMs, including medical, education, finance, and engineering. It also discusses how LLMs are shaping the future of AI and how they can be used to solve real-world problems. The paper then discusses the challenges associated with deploying LLMs in real-world scenarios, including ethical considerations, model biases, interpretability, and computational resource requirements. It also highlights techniques for enhancing the robustness and controllability of LLMs, and addressing bias, fairness, and generation quality issues. Finally, the paper concludes by highlighting the future of LLM research and the challenges that need to be addressed in order to make LLMs more reliable and useful. This survey paper is intended to provide researchers, practitioners, and enthusiasts with a comprehensive understanding of LLMs, their evolution, applications, and challenges. By consolidating the state-of-the-art knowledge in the field, this survey serves as a valuable resource for further advancements in the development and utilization of LLMs for a wide range of real-world applications. The GitHub repo for this project is available at https://github.com/anas-zafar/LLM-Survey",
+      "citacoes": 55,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Review on Vibe Coding: Fundamentals, State-of-the-art, Challenges and Future Directions",
+      "autores": [
+        "Partha Pratim Ray"
+      ],
+      "ano": 2025,
+      "doi": "10.36227/techrxiv.174681482.27435614/v1",
+      "url": "https://doi.org/10.36227/techrxiv.174681482.27435614/v1",
+      "resumo": "Vibe coding-where high-level natural-language directives orchestrate end-to-end software creation-has emerged as a transformative paradigm in modern development. Going beyond token-level autocomplete, vibe coding platforms employ multi-agent pipelines, Retrieval-Augmented Generation (RAG), and dynamic context management to autonomously scaffold entire projects: generating directory structures, Application Programming Interface (API) layers, user interfaces, test suites, and Continuous Integration/Continuous Delivery/Deployment (CI/CD) configurations from conversational prompts. In this review, we first introduce a unified taxonomy of interaction modalities-full delegation, guided delegation, active pairing, and expert consultation-mapped along a delegation-pairing continuum. We then survey leading implementations across IDE extensions, browser-based environments, and Command-Line Interface (CLI) agents, analyzing their architectures, integration strategies, and benchmarked performance. Building on these insights, we articulate the key benefits-accelerated prototyping, democratized software creation, and enriched collaboration-while prescribing best practices for adoption. We identify twelve critical challenges, including model hallucinations, technical debt, security and compliance risks, skill atrophy, and governance concerns. Finally, we propose fourteen concrete research directions, from standardized evaluation frameworks and adaptive \"vibe-aware\" agents to explainable AI, multimodal interfaces, and Development, Security, and Operations (DevSecOps) integration. This comprehensive roadmap equips researchers and practitioners to harness the promise of vibe coding with rigor, security, and inclusivity.",
+      "citacoes": 17,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "Large Language Models: A Comprehensive Survey of its Applications, Challenges, Limitations, and Future Prospects",
+      "autores": [
+        "Muhammad Usman Hadi",
+        "qasem al tashi",
+        "Rizwan Qureshi",
+        "Abbas Shah",
+        "Amgad Muneer",
+        "Muhammad Irfan",
+        "Anas Zafar",
+        "Muhammad Bilal Shaikh",
+        "Naveed Akhtar",
+        "Syed Zohaib Hassan",
+        "Maged Shoman",
+        "Jia Wu",
+        "Seyedali Mirjalili",
+        "Mubarak Shah"
+      ],
+      "ano": 2023,
+      "doi": "10.36227/techrxiv.23589741.v2",
+      "url": "https://doi.org/10.36227/techrxiv.23589741.v2",
+      "resumo": "Within the vast expanse of computerized language processing, a revolutionary entity known as Large Language Models (LLMs) has emerged, wielding immense power in its capacity to comprehend intricate linguistic patterns and conjure coherent and contextually fitting responses. Large language models (LLMs) are a type of artificial intelligence (AI) that have emerged as powerful tools for a wide range of tasks, including natural language processing (NLP), machine translation, and question-answering. This survey paper provides a comprehensive overview of LLMs, including their history, architecture, training methods, applications, and challenges. The paper begins by discussing the fundamental concepts of generative AI and the architecture of generative pre- trained transformers (GPT). It then provides an overview of the history of LLMs, their evolution over time, and the different training methods that have been used to train them. The paper then discusses the wide range of applications of LLMs, including medical, education, finance, and engineering. It also discusses how LLMs are shaping the future of AI and how they can be used to solve real-world problems. The paper then discusses the challenges associated with deploying LLMs in real-world scenarios, including ethical considerations, model biases, interpretability, and computational resource requirements. It also highlights techniques for enhancing the robustness and controllability of LLMs, and addressing bias, fairness, and generation quality issues. Finally, the paper concludes by highlighting the future of LLM research and the challenges that need to be addressed in order to make LLMs more reliable and useful. This survey paper is intended to provide researchers, practitioners, and enthusiasts with a comprehensive understanding of LLMs, their evolution, applications, and challenges. By consolidating the state-of-the-art knowledge in the field, this survey serves as a valuable resource for further advancements in the development and utilization of LLMs for a wide range of real-world applications. The GitHub repo for this project is available at https://github.com/anas-zafar/LLM-Survey",
+      "citacoes": 46,
+      "periodico": null,
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Survey of Vibe Coding with Large Language Models",
+      "autores": [
+        "Y.T. Ge",
+        "Lingrui Mei",
+        "Duan, Zenghao",
+        "Tianhao Li",
+        "Yujia Zheng",
+        "Yiwei Wang",
+        "Lexin Wang",
+        "Jiayu Yao",
+        "Tianyu Liu",
+        "Yujun Cai",
+        "Baolong Bi",
+        "Fangda Guo",
+        "Jiafeng Guo",
+        "Shenghua Liu",
+        "Xueqi Cheng"
+      ],
+      "ano": 2025,
+      "doi": "10.48550/arxiv.2510.12399",
+      "url": "http://arxiv.org/abs/2510.12399",
+      "resumo": "The advancement of large language models (LLMs) has catalyzed a paradigm shift from code generation assistance to autonomous coding agents, enabling a novel development methodology termed \"Vibe Coding\" where developers validate AI-generated implementations through outcome observation rather than line-by-line code comprehension. Despite its transformative potential, the effectiveness of this emergent paradigm remains under-explored, with empirical evidence revealing unexpected productivity losses and fundamental challenges in human-AI collaboration. To address this gap, this survey provides the first comprehensive and systematic review of Vibe Coding with large language models, establishing both theoretical foundations and practical frameworks for this transformative development approach. Drawing from systematic analysis of over 1000 research papers, we survey the entire vibe coding ecosystem, examining critical infrastructure components including LLMs for coding, LLM-based coding agent, development environment of coding agent, and feedback mechanisms. We first introduce Vibe Coding as a formal discipline by formalizing it through a Constrained Markov Decision Process that captures the dynamic triadic relationship among human developers, software projects, and coding agents. Building upon this theoretical foundation, we then synthesize existing practices into five distinct development models: Unconstrained Automation, Iterative Conversational Collaboration, Planning-Driven, Test-Driven, and Context-Enhanced Models, thus providing the first comprehensive taxonomy in this domain. Critically, our analysis reveals that successful Vibe Coding depends not merely on agent capabilities but on systematic context engineering, well-established development environments, and human-agent collaborative development models.",
+      "citacoes": 4,
+      "periodico": "arXiv (Cornell University)",
+      "fonte": "openalex",
+      "fonte_nome": "OpenAlex",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Design Science Approach for Agentic AI in Network Engineering: Autonomous Network Management Using AI Agents, Large Language Models (LLM) And Model Context Protocol (MCP) Mechanisms",
+      "autores": [
+        "Okula, Oghenekeno Hilkiah",
+        "Neeranjan, Chitare"
+      ],
+      "ano": 2026,
+      "doi": "10.36227/techrxiv.176978431.15223796/v1",
+      "url": "https://doi.org/10.36227/techrxiv.176978431.15223796/v1",
+      "resumo": "<jats:p>Networking industry is changing fast, with the complexity growing with the implementation of cloud computing, the Internet of things, and multi-vendor environments (Oswalt et al., 2023). Manual and semiautomated approaches to network management lack the capability to support the rigorous demands of real-time decision-making, scalability and responsiveness to dynamic situations. In this paper, a conference proposal has been presented, and it suggests a holistic framework that incorporates the Model Context Protocol (MCP), large language models (LLMs), retrieval-augmented generation (RAG), and autonomous AI agents, as a means of network management. Human-in-the-loop controls are provided in the framework to maintain compliance with regulatory and organizational requirements.     We created an ecosystem which integrates specialized  AI agents - Routing, Optimization, Implementation,  Monitoring, and Notification - coordinated through n8n  and anchored through Retrieval-Augmented Generation  (RAG) to provide factual accuracy in accordance with  enterprise network spaces. The system converts  operator intent in managing networks into verified  network settings, performs proactive optimization and  maintains audit trails, thus ensuring that enterprise  networks perform optimally.  This study adds value to the research area by showing  how machine-learning and LLM based techniques can be  practically applied to end-to-end network operations as  the blueprint to reliable autonomous networking. In  addition, this paper stresses that there are certain  computing requirements required to implement and  maintain an ecosystem of this kind.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "AgentMesh-MCP: A Secure and Governed Framework for Agentic AI Systems Using LLM Agents and Model Context Protocol Servers",
+      "autores": [
+        "Prudvi Saisaran Ponduru, Prudvi Saisaran Ponduru"
+      ],
+      "ano": 2026,
+      "doi": "10.55041/ijsrem62689",
+      "url": "https://doi.org/10.55041/ijsrem62689",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "International Journal of Scientific Research in Engineering and Management",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "A Comparative Evaluation of LLM-based Coding Agents for Automated Software development Tasks",
+      "autores": [
+        "Bellapukonda, Jahnavi"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.6755658",
+      "url": "https://doi.org/10.2139/ssrn.6755658",
+      "resumo": "<jats:p>Large language models are now being widely utilized for software engineering activities such as coding, debugging, testing, refactoring, and documentation. While basic prompts can be utilized to provide helpful code fragments, sophisticated programming agents can be employed to plan, run, test, and improve code with minimal human intervention. This paper presents a comparative evaluation of LLM-based coding agents for automated software development tasks. The study compares four approaches: baseline LLM prompting, agent-based coding, test-guided coding agents, and human-review-assisted coding agents. A structured set of programming tasks is used to evaluate the methods across functional correctness, test pass rate, execution success, code quality, revision rate, and response time. Results show that test-guided agents and human-review-assisted agents perform better than prompt-only methods because test feedback and human review improve code reliability and overall output quality. However, the study also shows that coding agents are not fully reliable for complicated tasks that require multi-file changes or involve ambiguous requirements when it comes to solving tasks that are complicated and require modification of several files due to ambiguities associated with task requirements.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Agentic Much? Adoption of Coding Agents on GitHub",
+      "autores": [
+        "Robbes, Romain",
+        "Matricon, Théo",
+        "Degueule, Thomas",
+        "Hora, Andre",
+        "Zacchiroli, Stefano"
+      ],
+      "ano": 2026,
+      "doi": "10.1145/3822180",
+      "url": "https://doi.org/10.1145/3822180",
+      "resumo": "<jats:p>\n                    In the first half of 2025,\n                    <jats:italic toggle=\"yes\">coding agents</jats:italic>\n                    have emerged as a category of development tools that have very quickly transitioned to the practice. Unlike “traditional” code completion LLMs such as Copilot, agents like Cursor, Claude Code, or Codex operate with high degrees of autonomy, up to generating complete pull requests starting from a developer-provided task description. This new mode of operation is poised to change the landscape in an even larger way than code completion LLMs did, making the need to study their impact critical. Also, unlike traditional LLMs, coding agents tend to leave more explicit traces in software engineering artifacts, such as co-authoring commits or pull requests. We leverage these traces to present the first large-scale study (128,018 projects) of the adoption of coding agents on GitHub, finding an estimated adoption rate of 22.20%–28.66% on February 21st, 2026, which is very high for a technology only a few months old–and increasing. We carry out an in-depth study of the adopters we identified, finding that adoption is broad: it spans the entire spectrum of project maturity; it includes established organizations; and it concerns diverse programming languages or project topics. At the commit level, we find that commits assisted by coding agents are larger than commits only authored by human developers, and have a large proportion of features and bug fixes. These findings highlight the need for further investigation into the practical use of coding agents.\n                  </jats:p>",
+      "citacoes": null,
+      "periodico": "ACM Transactions on Software Engineering and Methodology",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Von Vibe Coding zu Agentic Engineering",
+      "autores": [],
+      "ano": 2026,
+      "doi": "10.3139/9783446488540.fm",
+      "url": "https://doi.org/10.3139/9783446488540.fm",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Von Vibe Coding zu Agentic Engineering",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "LLM-X: A Scalable Negotiation-Oriented Exchange for Communication Among Personal LLM Agents",
+      "autores": [
+        "Lorenzoni, Giuliano",
+        "Alencar, Paulo",
+        "Cowan, Donald"
+      ],
+      "ano": 2026,
+      "doi": "10.1145/3786167.3788429",
+      "url": "https://doi.org/10.1145/3786167.3788429",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "Proceedings of the 2026 International Workshop on Agentic Engineering",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "MODERNIZING SOFTWARE TESTING: AI, TELEMETRY, AND AGENTIC QUALITY ENGINEERING",
+      "autores": [
+        "Rakshit, Yerram Sai"
+      ],
+      "ano": 2026,
+      "doi": "10.34218/ijaieg_01_01_002",
+      "url": "https://doi.org/10.34218/ijaieg_01_01_002",
+      "resumo": null,
+      "citacoes": null,
+      "periodico": "INTERNATIONAL JOURNAL OF AI ENGINEERING",
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Empirical Validation of Cognitive-Derived Coding Constraints and Tokenization Asymmetries in LLM-Assisted Software Engineering&amp;nbsp;",
+      "autores": [
+        "Pereira, Luciano"
+      ],
+      "ano": 2026,
+      "doi": "10.2139/ssrn.6294900",
+      "url": "https://doi.org/10.2139/ssrn.6294900",
+      "resumo": "<jats:p>Two prior theoretical works in this series identified an unresolved tension in AI-assisted software engineering. Pereira (2026a) argued that naming conventions commonly adopted for human readability impose a hidden economic cost on LLM workflows through byte-pair encoding (BPE) tokenization, but offered only analytical projections. Pereira (2026b) proposed that structural thresholds derived from cognitive science-the Cognitive-Derived Coding Constraints (CDCC)-should also define an efficiency frontier for LLM processing, a convergence hypothesis left without empirical support. This paper closes both gaps. We frame LLM output generation as an economic production function: given code artifacts as inputs, the LLM produces output tokens subject to a capacity constraint. We conduct three controlled experiments using a reproducible Python pipeline. Experiment 1 measures token count differentials across naming conventions for a corpus of 200 enterprise event identifiers.</jats:p>",
+      "citacoes": null,
+      "periodico": null,
+      "fonte": "crossref",
+      "fonte_nome": "Crossref",
+      "classe": "A"
+    },
+    {
+      "titulo": "Code2UML: Agentic LLMs with context engineering for scalable software visualization",
+      "autores": [
+        "A. Văduva",
+        "A. Andreescu",
+        "S. Oprea",
+        "A. Bâra"
+      ],
+      "ano": 2026,
+      "doi": "10.48550/arXiv.2605.24453",
+      "url": "https://www.semanticscholar.org/paper/792e745f4068bb0557ed2a4c6601812b3e3baf5e",
+      "resumo": "Large Language Model (LLM)-based code analysis tools are adopted to automate software documentation tasks. However, the scalability of these approaches to real codebases, where Intermediate Representations (IR) exceed LLM context limits, remains underexplored. This paper introduces an agentic architecture with context engineering for automated UML diagram generation from source code repositories. It employs a hierarchy of five specialized agents: PlannerAgent, AnalyzerAgent, DiagramAgent, CorrectorAgent and DependencyAnalyzerAgent, built on the Claude Agent SDK, each addressing a distinct cognitive subtask. A deterministic, importance-weighted IR compaction layer transforms full project IRs into diagram-specific views guaranteed to fit within token constraints, requiring no LLM calls and completing in milliseconds. Thus, we evaluate the system across 12 open-source repositories in 4 programming languages (Java, JavaScript, PHP, Python) and 7 UML diagram types, producing 84 observations assessed on 5 automated metrics. Results demonstrate high syntactic validity (mean: 91.5%, with component and deployment diagrams reaching 100%), strong relationship precision (mean: 0.858) and consistent structural quality (mean: 81.7/100, with cross-language variance of 3.1 points). Entity recall averaged 0.313, reflecting deliberate architectural prioritization over exhaustive coverage. A sensitivity analysis (31 to 4,578 IR entities) confirms that quality scores remain stable regardless of scale.",
+      "citacoes": 1,
+      "periodico": "arXiv.org",
+      "fonte": "semantic_scholar",
+      "fonte_nome": "Semantic Scholar",
+      "classe": "A"
+    }
+  ]
+}

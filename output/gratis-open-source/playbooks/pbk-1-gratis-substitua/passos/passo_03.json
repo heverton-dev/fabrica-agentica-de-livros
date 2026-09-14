@@ -1,0 +1,49 @@
+{
+  "numero": "03",
+  "capitulo_fonte": "03",
+  "titulo": "CRM: Vendendo e Atendendo Sem Pagar Salesforce",
+  "estagio": "Oficina",
+  "estagio_indice": 1,
+  "objetivo": "Mostrar até onde um CRM open source cobre as funções essenciais de vendas e atendimento, e onde a lacuna com as soluções corporativas ainda é real.",
+  "pre_requisito": "Passo 2 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "O que a gaveta de automação já resolve sem você escrever uma linha de código",
+      "linguagem": "json",
+      "comandos": [],
+      "codigo": "{\n  \"event\": \"Opportunity.stageChanged\",\n  \"entityId\": \"64f21a3b9c7d4\",\n  \"previousStage\": \"Negotiation\",\n  \"currentStage\": \"ClosedWon\",\n  \"daysInPreviousStage\": 9,\n  \"ownerId\": \"usr-0231\"\n}"
+    },
+    {
+      "titulo": "Colocando o EspoCRM de pé com Docker",
+      "linguagem": "yaml",
+      "comandos": [
+        "docker compose up -d",
+        "docker compose ps"
+      ],
+      "codigo": "version: \"3.8\"\nservices:\n  espocrm:\n    image: espocrm/espocrm:latest\n    ports:\n      - \"8080:80\"\n    environment:\n      ESPOCRM_DATABASE_HOST: espocrm-db\n      ESPOCRM_DATABASE_NAME: espocrm\n      ESPOCRM_DATABASE_USER: espocrm\n      ESPOCRM_DATABASE_PASSWORD: \"<sua-senha-forte>\"\n      ESPOCRM_ADMIN_USERNAME: admin\n      ESPOCRM_ADMIN_PASSWORD: \"<senha-do-admin>\"\n      ESPOCRM_SITE_URL: \"http://localhost:8080\"\n    volumes:\n      - espocrm-data:/var/www/html\n    depends_on:\n      - espocrm-db\n  espocrm-db:\n    image: mariadb:10.11\n    environment:\n      MARIADB_ROOT_PASSWORD: \"<senha-root>\"\n      MARIADB_DATABASE: espocrm\n      MARIADB_USER: espocrm\n      MARIADB_PASSWORD: \"<sua-senha-forte>\"\n    volumes:\n      - espocrm-db-data:/var/lib/mysql\nvolumes:\n  espocrm-data:\n  espocrm-db-data:"
+    },
+    {
+      "titulo": "Twenty: a bancada mais nova, com a fatura de infraestrutura mais alta",
+      "linguagem": "bash",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env bash\nRAM_MB=$(free -m 2>/dev/null | awk '/^Mem:/ {print $2}')\nRAM_MB=${RAM_MB:-0}\nif [ \"$RAM_MB\" -ge 2048 ]; then\n  echo \"RAM suficiente para o Twenty (Docker Compose oficial)\"\nelse\n  echo \"RAM insuficiente para o Twenty - prefira EspoCRM ou SuiteCRM neste servidor\"\nfi"
+    }
+  ],
+  "gate": "docker compose up -d",
+  "comandos": [
+    "docker compose up -d",
+    "docker compose ps"
+  ],
+  "feito_quando": [
+    "Migrar contatos e negócios de uma planilha ou de outro CRM sem mapear os campos personalizados antes — o resultado é um funil com metade dos negócios \"sem estágio definido\"",
+    "Subestimar o tempo de configuração de automação de e-mail transacional: o EspoCRM já inclui campanhas de e-mail na base gratuita [5], mas a configuração de SMTP e autenticação de domínio (o mesmo tema do Capítulo 2) continua sendo seu trabalho",
+    "Escolher a ferramenta pela nota de benchmark de código sem checar a nota de maturidade de mercado: o Twenty tem ótimo código [4], mas ainda carece de recursos que uma equipe de vendas grande considera básicos [11]"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 3 — CRM: Vendendo e Atendendo Sem Pagar Salesforce",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "4" },
+  "titulo": "Cache Inteligente e Memory: RTK-Memory + LiteLLM",
+  "senioridade_obra": "iniciante",
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 3: a cadeia de compressão caveman → headroom → lean-ctx. O cache é o próximo elo dessa cadeia, mas atua ANTES do envio da requisição (evita reprocessar o que já foi mandado), enquanto os três anteriores atuam DEPOIS (comprimem o que ainda vai ser enviado).",
+  "metricas_obrigatorias": [
+    { "metrica": "desconto em tokens lidos do cache de prompt", "valor": "até 90%" },
+    { "metrica": "redução de fatura de API com LiteLLM AI Gateway", "valor": "-40% a -60% (~US$ 500/mês)" },
+    { "metrica": "latência de resposta cacheada por similaridade semântica", "valor": "2 ms" },
+    { "metrica": "custo operacional do cache semântico em Redis", "valor": "~70 MB de RAM em repouso" }
+  ],
+  "limite_e_contorno_sugerido": "Cache de prompt exige prefixo byte-a-byte idêntico e expira após a janela do provedor (poucos minutos a poucas horas de ociosidade) — qualquer edição no system prompt (AGENTS.md/CLAUDE.md) invalida o cache inteiro e reencarece a próxima chamada. Cache semântico (LiteLLM) contorna a rigidez do prefixo, mas troca certeza por probabilidade: acima do limiar de similaridade (>0.95) ele pode devolver uma resposta 'quase certa' para uma pergunta na verdade diferente — não usar em respostas que exigem exatidão factual por chamada (ex.: cálculos financeiros, dados regulatórios).",
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "Mecânica do Cache de Prompt: o desconto automático",
+        "escopo": "Entra: o que é cache de prompt exato/determinístico, como o provedor compara o prefixo da requisição byte-a-byte, a janela de tempo em que o cache permanece 'quente', e o desconto que isso gera na fatura. Fica de fora: cache semântico e roteamento entre provedores (reservado ao Pilar 3).",
+        "ancora_visual": "flowchart LR do fluxo de uma requisição do Engenheiro de Custos com IA até o provedor: prompt chega → provedor compara o prefixo com o cache guardado → bifurcação 'prefixo idêntico?' → ramo SIM leva a 'cache hit: cobra centavos pelos tokens lidos' e ramo NÃO leva a 'cache miss: cobra o preço cheio e regrava o cache'.",
+        "entrega_tecnica": "Python: script simples e comentado passo a passo que lê um log de chamadas (lista de prompts) e conta quantos prefixos se repetem byte-a-byte, imprimindo a taxa de cache hit estimada e a economia em tokens.",
+        "evolucao_leitor": "De 'cache é uma configuração que eu talvez precise ligar' para 'cache é um desconto automático do provedor — meu trabalho é não quebrar o prefixo que o gera'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "RTK-Memory: preservando o prefixo estável sem perder o aprendizado",
+        "escopo": "Entra: por que editar o prompt de sistema (AGENTS.md/CLAUDE.md) invalida o cache inteiro; como o RTK-Memory separa o prompt-base imutável de um arquivo externo de aprendizados (RTK-SCRATCHPAD.md) consultado sob demanda; como medir cache hits reais antes/depois de adotar essa separação. Fica de fora: a configuração de roteamento entre provedores diferentes (Pilar 3).",
+        "ancora_visual": "flowchart TD comparando dois cenários lado a lado, no vocabulário do 'fluxo de caixa de tokens': cenário A 'sem RTK-Memory' — cada correção de sessão reescreve o CLAUDE.md → cache invalida → fatura sobe; cenário B 'com RTK-Memory' — correções vão para RTK-SCRATCHPAD.md → CLAUDE.md fica intocado → cache permanece quente → fatura estável.",
+        "entrega_tecnica": "Bash/Markdown: exemplo comentado de estrutura de arquivo RTK-SCRATCHPAD.md e do hook/regra que redireciona novos aprendizados para ele, mais um trecho Python que mede e compara a taxa de cache hit dos dois cenários (com e sem a separação).",
+        "evolucao_leitor": "De 'aprendizados de sessão viram edição direta no prompt de sistema' para 'aprendizados de sessão vivem em outro arquivo — meu prompt-base é sagrado porque ele é o que sustenta o desconto'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "LiteLLM: o router que decide onde e como cachear",
+        "escopo": "Entra: cache semântico (por similaridade, não byte-a-byte), o papel do LiteLLM como gateway entre múltiplos provedores (Anthropic, OpenAI), como ele decide qual provedor usar e quando servir uma resposta cacheada por similaridade de cosseno. Fica de fora: detalhes internos do algoritmo de embeddings.",
+        "ancora_visual": "sequenceDiagram do Engenheiro de Custos com IA → LiteLLM Gateway → Redis (cache semântico) → Provedor (Anthropic/OpenAI), com dois ramos temporais: um onde a similaridade encontrada no Redis é >0.95 e a resposta volta em 2ms sem tocar o provedor, e outro onde não há similaridade suficiente e o Gateway roteia a chamada para o provedor certo.",
+        "entrega_tecnica": "YAML: arquivo de configuração básico do LiteLLM proxy (docker-compose ou config.yaml) definindo dois provedores e habilitando o cache semântico com um limiar de similaridade.",
+        "evolucao_leitor": "De 'cada chamada de API é isolada e vai sempre para o mesmo provedor' para 'existe uma camada de decisão entre mim e os provedores que economiza sozinha, se eu configurar o roteador certo'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}

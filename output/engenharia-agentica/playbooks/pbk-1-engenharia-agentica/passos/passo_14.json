@@ -1,0 +1,44 @@
+{
+  "numero": "14",
+  "capitulo_fonte": "14",
+  "titulo": "Configurações que nunca te contam",
+  "estagio": "Instrumento",
+  "estagio_indice": 4,
+  "objetivo": "Auditar as chaves silenciosas que mudam custo, segurança e comportamento sem nenhum aviso.",
+  "pre_requisito": "Passo 13 concluído",
+  "entregas": [],
+  "execucao": [
+    {
+      "titulo": "Passo 1: descubra o valor efetivo, não o declarado",
+      "linguagem": "bash",
+      "comandos": [
+        "python - <<'EOF'"
+      ],
+      "codigo": "# Dump da configuracao efetiva do harness (adaptar ao seu)\nagent config dump --json > /tmp/efetiva.json\n\n# Compare com o que esta versionado no projeto\npython - <<'EOF'\nimport json\nfrom pathlib import Path\n\nefetiva = json.loads(Path(\"/tmp/efetiva.json\").read_text(encoding=\"utf-8\"))\nprojeto = json.loads(Path(\".agent/settings.json\").read_text(encoding=\"utf-8\"))\n\nfor chave, valor in sorted(projeto.items()):\n    real = efetiva.get(chave, \"<ausente>\")\n    marca = \"OK \" if real == valor else \"DIF\"\n    print(f\"[{marca}] {chave}: projeto={valor!r} efetiva={real!r}\")\nEOF"
+    },
+    {
+      "titulo": "Passo 3: transforme decisão em teste",
+      "linguagem": "python",
+      "comandos": [],
+      "codigo": "#!/usr/bin/env python3\n\"\"\"Testa invariantes de configuracao do harness.\"\"\"\nimport json\nfrom pathlib import Path\n\nINVARIANTES = [\n    (\"permissions.deny\", \"Bash(git push*)\", \"push deve ser proibido para agentes\"),\n    (\"permissions.deny\", \"Write(migrations/*)\", \"migracao nao pode ser editada a mao\"),\n    (\"limites.tokens_saida_max\", 8000, \"teto de saida precisa ser explicito\"),\n    (\"rede.allow\", False, \"rede deve estar negada por padrao\"),\n    (\"retencao.historico_dias\", 30, \"retencao declarada\"),\n]\n\n\ndef verificar(caminho=\".agent/settings.json\"):\n    cfg = json.loads(Path(caminho).read_text(encoding=\"utf-8\"))\n    falhas = []\n    for caminho_chave, esperado, motivo in INVARIANTES:\n        atual = cfg\n        for parte in caminho_chave.split(\".\"):\n            atual = atual.get(parte, {}) if isinstance(atual, dict) else {}\n        if esperado not in atual and esperado != atual:\n            falhas.append(f\"{caminho_chave}: esperado {esperado!r} ({motivo})\")\n    return falhas\n\n\nif __name__ == \"__main__\":\n    for f in verificar():\n        print(f\"[CONFIG] {f}\")\n    raise SystemExit(1 if verificar() else 0)"
+    }
+  ],
+  "gate": "python - <<'EOF'",
+  "comandos": [
+    "python - <<'EOF'"
+  ],
+  "feito_quando": [
+    "Padrão de fábrica não é decisão.** Toda chave herdada relevante precisa ser reavaliada uma vez",
+    "Retenção é risco, não operação.** Definir prazo e expurgo automático é parte do projeto",
+    "Matriz de exposição com linha em branco é pendência.** O que não foi decidido será decidido por acidente",
+    "Retenção de histórico sem prazo.** O padrão grava por tempo indeterminado o que ninguém decidiu guardar. Definir prazo e expurgo automático é decisão de risco, não de operação",
+    "Fronteira de execução ampla por conveniência.** Agente com acesso à pasta pessoal inteira tem uma superfície de leitura muito maior que a necessária para o trabalho",
+    "Matriz de exposição incompleta.** Linha em branco na matriz é pendência real: significa que aquela dimensão será decidida por acidente, provavelmente no dia do incidente"
+  ],
+  "armadilhas": [],
+  "referencia_cruzada": "Cap. 14 — Configurações que nunca te contam",
+  "lacunas": [
+    "sem_entregas",
+    "sem_armadilhas"
+  ]
+}

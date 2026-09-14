@@ -1,0 +1,38 @@
+{
+  "fase_atual": "fase_2_manufatura",
+  "coordenadas": { "parte": "I", "capitulo": "4" },
+  "estado_execucao": "draft_pronto_para_redacao",
+  "callback_capitulo_anterior": "Capítulo 3: o protocolo de verificação de catálogo (a autópsia da tabela fabricada de sete modelos do gateway OpenCode Zen), agora aplicado a duas bibliotecas Python reais",
+  "metricas_obrigatorias": [
+    { "metrica": "taxa de compressão máxima documentada do LLMLingua", "valor": "até 20x" },
+    { "metrica": "tokens mínimos de janela de contexto elegíveis a cache (referência cruzada ao mecanismo já auditado no Cap. 2)", "valor": "1024 tokens" }
+  ],
+  "payload_estrategico": {
+    "pilares": [
+      {
+        "nome": "A classe real por trás da API inventada (PromptCompressor, não Llmlingua)",
+        "escopo": "Entra: confirmação do pacote real (pip install llmlingua, Microsoft Research, EMNLP'23/ACL'24), a classe real PromptCompressor, o parâmetro real rate (não preservation_rate), e o esclarecimento de que LongLLMLingua é um modo de uso (rank_method) e não um pacote separado. Fica de fora: benchmarks de compressão por categoria de conteúdo (marcados NÃO VERIFICÁVEL na auditoria) e qualquer promessa de CLI standalone.",
+        "ancora_visual": "flowchart TD estilo 'exame pericial de documento': do Documento Suspeito (comando do manual) até o Laudo Final, passando por 'exame de letra timbrada' (o produto existe?), 'contraprova na fonte primária' (repositório oficial) e bifurcação 'assinatura confere / assinatura falsificada'.",
+        "entrega_tecnica": "Python: função compress_prompt() usando from llmlingua import PromptCompressor, com rate configurável e leitura de stdin.",
+        "evolucao_leitor": "De 'copio o nome de classe do manual e recebo ImportError' para 'confirmo o nome real de qualquer classe Python direto no repositório antes de escrever uma linha de código'.",
+        "conceito_denso": false
+      },
+      {
+        "nome": "pipx instala CLIs isoladas, não transforma lib importável em comando de terminal",
+        "escopo": "Entra: a distinção real entre pacote com entry_point de console (gera comando) e biblioteca puramente importável (llmlingua e gptcache caem nesta categoria); por que 'pipx install llmlingua'/'pipx install gptcache' 'funciona' (não dá erro de instalação) mas não cria nenhum comando utilizável, e por que python -m llmlingua falha (sem __main__.py documentado). Fica de fora: detalhes de packaging (setup.py/pyproject entry_points) além do necessário para o diagnóstico.",
+        "ancora_visual": "flowchart LR contrastando dois caminhos a partir de 'pipx install <pacote>': um caminho com entry_point real chegando em 'comando novo no PATH' (ex.: ccusage/chezmoi) e outro caminho sem entry_point chegando em 'pacote instalado, PATH inalterado, zero comando novo' (llmlingua, gptcache).",
+        "entrega_tecnica": "Nenhum artefato de código novo neste pilar — reaproveita o diagnóstico para justificar por que o Pilar 3 precisa escrever um wrapper próprio.",
+        "evolucao_leitor": "De 'a instalação não deu erro, então algo está errado com meu terminal' para 'eu sei diagnosticar, antes de instalar, se um pacote Python vai me dar um comando ou só uma biblioteca importável'.",
+        "conceito_denso": true
+      },
+      {
+        "nome": "Reescrevendo o wrapper de compressão e o hook de cache semântico com a API real",
+        "escopo": "Entra: script completo compress_prompt.py (CLI própria sobre PromptCompressor) e módulo semantic_cache.py sobre a API real do GPTCache (from gptcache import cache; cache.init(...) com Config(similarity_threshold=...), data_manager SQLite+FAISS, sem YAML externo, sem CLI de subcomandos); nota sobre o único binário real (gptcache_server) e sobre onde plugar isso na cadeia real de hooks do Claude Code (settings.json, evento documentado, não hooks.json/preProcess). Fica de fora: implementação de embedding customizado além do necessário para rodar o exemplo.",
+        "ancora_visual": "sequenceDiagram do fluxo Pergunta do Operador -> Hook de Cache Semântico -> (hit: Evidência já autenticada, devolve resposta arquivada) / (miss: chama o modelo, registra nova evidência no cofre de embeddings).",
+        "entrega_tecnica": "Python: dois módulos completos e executáveis — compress_prompt.py (wrapper CLI via argparse) e semantic_cache.py (inicialização e consulta ao GPTCache real).",
+        "evolucao_leitor": "De 'colo os subcomandos gptcache do manual e recebo command not found' para 'eu configuro e testo, linha a linha, um cache semântico real e um compressor de prompt real, sem depender de nenhuma CLI fabricada'.",
+        "conceito_denso": false
+      }
+    ]
+  }
+}
