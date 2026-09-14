@@ -29,6 +29,34 @@
       "cwd": "C:\\Users\\trcnologia\\Desktop\\01_Projetos_e_Desenvolvimento\\proj_fabrica-de-livros",
       "type": "stdio"
     },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
     "cloudflare": {
       "type": "remote",
       "url": "https://mcp.cloudflare.com/mcp"
